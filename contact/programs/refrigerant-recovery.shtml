@@ -1,0 +1,22 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+
+<title>DSNY - Contact - Refrigerant Recovery</title>
+
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h1>Refrigerant Recovery Forms</h1>
+<p>To comply with <a href ="/assets/dsny/zerowaste/businesses/refrigerants-take-back.shtml">refrigerant recovery requirements</a>:</p>
+<p>Manufacturers must fill out: <a href="/assets/dsny/downloads/pdf/contact/RefrigerantForm-CompanyForm.pdf">Company Profile Form</a>. <br /><br />Stewardship organizations must fill out: <a href="/assets/dsny/downloads/pdf/contact/RefrigerantForm-StewardshipForm.pdf">Stewardship Organization Profile Form</a>.</p>
+<p>Please note that if you are a manufacturer submitting as part of a stewardship organization, you&rsquo;ll need to submit a Company Profile, not a Stewardship Organization Profile Form.</p>
+<p>An <a href="/assets/dsny/docs/refrigerant-recovery-annual-report-form.pdf" title="Annual report form for refrigerant recovery">Annual Report</a> is due on July 1 from any manufacturer who elects to operate their own refrigerant recovery program, or participate in a refrigerant recovery program with other manufacturers.</p>
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

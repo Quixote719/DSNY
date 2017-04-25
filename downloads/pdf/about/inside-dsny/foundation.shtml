@@ -1,0 +1,43 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Foundation </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+		<div id="contentsection" class="about-main-image">
+	<div class="span6 about-description">
+
+				<h1><strong>Foundation for New York's Strongest</strong><br /></h1>
+<div class="row img-row">
+<div class="span6"></div>
+
+<div>
+<p>The Foundation for New York’s Strongest is a nonprofit organization dedicated to the work of the New York City Department of Sanitation. The Foundation, established in 2016, aims to educate
+ New Yorkers in protecting our environment, highlight DSNY workers’ service and commitment in keeping New York City healthy, safe and clean, and one day, create a new, educational DSNY museum.</p>
+
+
+
+<h3 style="color:#333333;">"Uniform" Heron Preston for DSNY Fashion Event</h3>
+
+
+<p><strong>Heron&rsquo;s Vision:</strong> Create a ready-to-wear collection repurposing DSNY uniforms – a fashion line that keeps used clothing from decomposing in landfill – 
+while celebrating the emergency responders who are often invisible to the 8.5 million people they serve.</p>
+
+<p><strong>The Result: UNIFORM</strong>, a unique fashion line comprised of one-of-a-kind pieces, to be presented at the critically acclaimed and closed-to-the-public 
+Spring Street salt shed – a venue that the New York Times called &ldquo;<a href="http://www.nytimes.com/2015/12/22/arts/design/in-sanitation-and-salt-complex-in-tribeca-a-salutary-lesson-in-urban-responsibility.html?_r=1" target="_blank">New  York&rsquo;s best new public sculpture</a>.&rdquo; </p>
+
+<p>Known for his collaborations  with Kanye West and design work at Nike, Heron&rsquo;s couture will draw tremendous  media coverage – from New York City news outlets 
+to significant fashion publications.</p>
+
+<p>To purchase tickets to the event that support the <strong>Foundation for New York&rsquo;s Strongest, Inc</strong>, visit 
+<a href="https://www.eventbrite.com/e/uniform-heron-preston-for-dsny-tickets-27098689911" target="_blank"> the event website</a>. The funds raised will help DSNY lead 
+New Yorkers to send zero  waste to landfills by 2030 – an initiative known as 0x30, or zero-by-thirty.  <p>
+
+<p>We also have sponsorship  opportunities, should your organization be interested in further supporting the  Foundation for New York's Strongest. Email <a href="mailto:Strongest@dsny.nyc.gov">Strongest@dsny.nyc.gov</a>.</p>
+<p>This will be a very special  event, and we hope that you will join us.</p>
+<P> <Strong> Thank you for making our kick-off event successful. Read our <a href="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/inside-dsny/FoundationLaunch.pdf"> press release </a> about the event. </strong> </p> 
+
+
+
+ 
+
+		</div> 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

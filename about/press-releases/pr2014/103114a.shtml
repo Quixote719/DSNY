@@ -1,0 +1,14 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><p>FOR IMMEDIATE RELEASE <br /> Press Release # 14-75 <br /> Friday, October 31, 2014<br /> Vito A. Turso/Belinda A. Mager</p>
+<h3>No Garbage, Recycling or Organics Collection or Street Cleaning on Election Day, Tuesday, November 4th</h3>
+<p>The New York City Department of Sanitation (DSNY) today reminded New Yorkers that there will be no garbage, recycling, or organics collection, or street cleaning, on Election Day, Tuesday, November 4<sup>th</sup>. In addition, all DSNY administrative offices will be closed on Tuesday, November 4<sup>th</sup>, in observance of the holiday.</p>
+<p>Residents who normally receive Tuesday garbage and organics collection should place their materials out at curbside Tuesday evening after 4 p.m. for collection. Those receiving Tuesday recycling collection will not have their recycling picked up until Wednesday, November 12<sup>th</sup>, because of the consecutive holidays.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at www.nyc.gov/sanitation.</p>
+<h3>About the New York City Department of Sanitation</h3>
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.<span style="font-size:11pt">&nbsp;</span></p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

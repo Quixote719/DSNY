@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage or Recycling Collection on Columbus Day, Monday, October 14th</h3>
+<div class="prs-subtitle">
+<p><strong>September 30, 2002&nbsp;</strong>| <em>Contact: Vito A. Turso / Ana Lafe (646) 885-5020</em></p>
+<p>Press Release # 02-45, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has announced that, in observance of Columbus Day, there <i><b>will be no</b></i> street cleaning, garbage, or recycling collection on Monday, October 14th. Residents who receive Monday garbage collection should instead place their trash out at curbside Monday evening, for pickup on Tuesday, October 15th. Residents who normally receive Monday recycling collection <i><b>will not</b></i> have their recycling material picked up until the following Monday, October 21st.</p>
+<p>Neighborhoods that regularly receive garbage or recycling collection on Tuesday should place their cans or bags out on Monday evening, as normal. Residences and commercial establishments that unlawfully leave trash or recyclables at curbside over the holiday weekend are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>All Sanitation Department administrative offices will be closed on Monday, October14th in observance of the holiday. For questions about Sanitation services and schedules over the holiday, contact the Sanitation Action Center at (212) 219-8090 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

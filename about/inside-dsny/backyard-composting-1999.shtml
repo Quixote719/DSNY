@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Backyard Composting, 1999 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		    <div class="span6 about-description">
+
+<h1>Backyard Composting, 1999</h1>
+<p>The June 1999 report, <b>Backyard Composting in New York City: A Comprehensive Program Evaluation</b>, presents the results of DSNY&rsquo;s one year Backyard Composting Pilot Program. DSNY worked with&nbsp;the City&rsquo;s botanical gardens to implement backyard composting in four test neighborhoods, researching residents&rsquo; receptivity, participation rates, and the waste composition impacts of the program.</p>
+<p>Through market research and waste analysis, DSNY developed realistic estimates regarding how widely a backyard composting program could be implemented in NYC, along with diversion impacts, costs, and benefits. The research found that backyard composting would have negligible consequences for collection, transportation, or disposal costs and impacts.</p>
+<p>However, backyard composting bin distribution programs could be cost-effective if outreach methods were streamlined and more purchasers are recruited. Backyard composting would also have educational benefits by promoting awareness of where waste goes and how it is managed.</p>
+<p><a href="/assets/dsny/docs/about_1999-backyard-composting_0815.pdf">Read the report</a></p>
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

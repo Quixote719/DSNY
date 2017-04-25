@@ -1,0 +1,30 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Batteries</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>Batteries</h1>
+
+<p>Batteries containing toxic substances cannot be discarded in the regular garbage or recycling. Alkaline batteries can be discarded with regular garbage because they are not listed as a hazardous waste.</p>
+<p>Common Types of Batteries:</p>
+<ul>
+<li>Alkaline batteries</li>
+<li>Dry batteries</li>
+<li>Lead-acid batteries</li>
+<li>Lithium batteries (including ion batteries)</li>
+<li>Nickel cadmium (NiCad) batteries</li>
+<li>Nickel metal hydride (NiMH) batteries</li>
+<li>Wet batteries</li>
+<li>Silver-zinc batteries</li>
+</ul>
+<p><a href="http://www.call2recycle.org/">Call2Recycle</a> collects and recycles many types of batteries at no cost.</p>
+<p>Mayoral agencies should use the <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-disposal.shtml">Agency Safe Handling contract</a> for batteries not accepted by Call2Recycle.</p>
+<p>Non-mayoral agencies and nonprofits should hire a certified vendor to handle batteries not accepted by Call2Recycle.</p>
+<p>Visit the <a href="http://www.dec.ny.gov/25.html">New York State Department of Environmental Conservation website</a> for additional information about battery recycling.</p>
+
+
+		 </div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

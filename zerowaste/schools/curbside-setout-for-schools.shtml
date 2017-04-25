@@ -1,0 +1,30 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Curbside Setout For Schools</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycling_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+<h1> Curbside Setout for Schools </h1>
+
+<h2>Setout Requirements</h2>
+<p>Set out clear bags of recyclables and garbage at the curb in separate piles according to your school&#39;s <a href="/assets/dsny/zerowaste/schools/collection-schedule-for-schools.shtml" title="collection schedule">collection schedule</a>. For instance, group all bags of clean paper and cardboard together in one pile, and all bags of garbage in another distinct pile.</p>
+<h2>Recycling Bins &amp; Bags</h2>
+<p>It &#39;s the responsibility of each school to purchase recycling bins for collection of recyclables and garbage inside the school. Any kind of receptacles can be used to collect recyclables inside your building &#150; even cardboard boxes &#150; as long as they are properly labeled. DSNY provides <a href="/assets/dsny/about/inside-dsny/school-recycling-materials.shtml" title="free decals">free decals</a> to label bins (blue for metal, glass, plastic and cartons; green for paper and cardboard).</p>
+<p>Don &#39;t set out recycling or garbage at the curb in cardboard boxes. Plastic bags for recycling must be clear, and 13- to 55-gallon capacity. Public schools use clear bags for garbage, too.</p>
+<p>Public school custodians may order bins and bags through the SDI catalog. In addition, <a href="http://www.grainger.com/content/ny-recycling" title="Grainger and Rubbermaid"  class="exitlink">Grainger and Rubbermaid</a> worked with DSNY to offer containers and lids in NYC&#39;s recycling program colors with slits and holes, properly labeled with the NYC logo.</p>
+<h2>NYC Organics Collection Bins</h2>
+<p>DSNY provides special brown food-scrap bins with latching lids to schools with NYC Organics Collection. If your school needs a replacement Organics bin, follow the appropriate procedure:</p>
+<ul>
+<li><a href="/assets/dsny/docs/zerowaste_schools-doe-nyc-organics-bin-replacement-policy_0815.pdf" title="NYC Organics Bin Replacement Policy for NYC DOE Schools" >NYC Organics Bin Replacement Policy for NYC DOE Schools (PDF)</a> </li>
+<li><a href="/assets/dsny/docs/zerowaste_schools-private-nyc-organics-bin-replacement-policy_0815.pdf" title="NYC Organics Bin Replacement Policy for Private Schools" >NYC Organics Bin Replacement Policy for Private Schools (PDF)</a> </li>
+</ul>
+<p><a href="/assets/dsny/about/inside-dsny/school-recycling-materials.shtml">Get free decals, signage, and education materials">Get free decals, signage, and education materials</a>.</p>
+<h2>Acceptable Bags &amp; Liners</h2>
+<p>You can dispose of organic material directly into your organics collection bin. However, bags and liners can help keep your collection container clean and increase participation.</p>
+<p>Public schools use clear plastic bags for garbage as well as for organics and recycling. Schools can use compostable bags instead of plastic bags in the brown Organics Collection bin.</p>
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

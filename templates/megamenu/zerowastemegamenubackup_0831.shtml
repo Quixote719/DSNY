@@ -1,0 +1,605 @@
+﻿	<div class="ls-cmp-wrap ls-1st" id="w1407802447993"><!--
+		ls:begin[component-
+		1407802447993
+		]
+	--><div class="iw_component" id="1407802447993">
+
+	<div class="row">
+
+
+
+ <div class="navbar navbar-inverse">
+      <div class="navbar-inner" id="desktop-orange">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style top-menu-orange" data-toggle="dropdown" href="/assets/dsny/zerowaste/residents/">Residents</a>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <div class="menu-style" style=""></div>
+                <ul class="dropdown-menu" role="menu">
+
+
+                    <li data-submenu-id="submenu-zerowaste-howtogetridof">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">How to get rid of</a>
+                        <!--
+                          jQuery-menu-aim: each class="popover" div defines submenu content. There are a million
+                          and one ways to do this, places to structure the HTML, etc. This is just one example.
+                          jQuery-menu-aim is agnostic to your HTML structure, it only fires events to be used
+                          as you please.
+                        -->
+
+                        <div id="submenu-zerowaste-howtogetridof" class="popover">
+                            <h3 class="popover-title">How to get rid of</h3>
+                            <div class="popover-content residents-howto">
+                                <table>
+                                   <tbody>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/antifreeze.shtml">Antifreeze</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/deposit-bottles.shtml">Deposit Bottles</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/motor-oil.shtml">Motor Oil</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/appliances.shtml">Appliances</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/electronics.shtml">Electronics</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/musical-instruments.shtml">Musical Instruments</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/art-supplies.shtml">Art Supplies</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/eyeglasses.shtml">Eyeglasses</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/non-recyclable-plastics.shtml">Non-Recyclable Plastics</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/asbestos.shtml">Asbestos</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/food-waste.shtml">Food Waste</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/plastic-bags-and-other-film-plastics.shtml">Other Film Plastics</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/auto-batteries.shtml">Auto Batteries</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/furniture.shtml">Furniture</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/packaging.shtml">Packaging</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/batteries.shtml">Batteries</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/gas-tanks.shtml">Gas Tanks</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/paint.shtml">Paint</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/books-and-media.shtml">Books & Media</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/home-improvement-waste.shtml">Home Improvement Waste</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/pesticides.shtml">Pesticides</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/cell-phones.shtml">Cell Phones</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/household-medical-waste.shtml">Household Medical Waste</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/plastic-bags-and-other-film-plastics.shtml">Plastic Bags</a></td>
+                                                
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/childrens-items.shtml">Children's Items</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/housewares.shtml">Housewares</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/smoke-detectors.shtml">Smoke Detectors</a></td>
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/christmas-trees.shtml">Christmas Trees</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/ink-and-toner-cartridges.shtml">Ink & Toner Cartridges</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/sport-equipment.shtml">Sport Equipment</a></td>
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/cleaning-products.shtml">Cleaning Products</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/junk-mail.shtml">Junk Mail</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/textiles.shtml">Textiles</a></td>
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/collectibles.shtml">Collectibles</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/lighting.shtml">Lighting</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/tires.shtml">Tires</a></td>
+                                         </tr>                                                                                             
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/corrosive-and-flammable.shtml">Corrosive & Flammable</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/medical-equipment.shtml">Medical Equipment</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/yard-waste.shtml">Yard Waste</a></td>
+                                         </tr>
+                                         <tr>
+                                                <td><a href="/assets/dsny/zerowaste/residents/cosmetics.shtml">Cosmetics</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/mercury-containing-devices.shtml">Mercury-Containing Devices</a></td>
+                                                <td><a href="/assets/dsny/zerowaste/residents/holiday-tips.shtml">Holiday Tips</a></td>
+                                         </tr>
+                                    </tbody>   
+                                </table>                        
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-recylcing">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Recycling</a>
+                        <div id="submenu-zerowaste-recylcing" class="popover">
+                            <h3 class="popover-title">Recycling</h3>
+                            <div class="popover-content content-two-col">
+                              <table>
+                                
+                                <tr>
+					 <td><a href="/assets/dsny/zerowaste/residents/apartment-building-recycling-initiative.shtml">Apartment Building Recycling Initiative</a></td> 
+                                  	 <td><a href="/assets/dsny/zerowaste/residents/recycling-in-nyc-apartment-buildings.shtml">Recycling in NYC Apartment Buildings</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml">Collection Schedule</a></td>
+                                	<td><a href="/assets/dsny/zerowaste/residents/residential-generators-of-private-carter-collected-waste.shtml">Residential Generators of Private Carter-Collected Waste</a></td>
+                                 
+                                  
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/curbside-setout-for-residents.shtml">Curbside Setout</a></td>
+                               
+                                  	<td><a href="/assets/dsny/zerowaste/residents/specially-handled-items.shtml">Specially Handled Items</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/nycha-partnership.shtml">NYCHA Partnership</a></td>
+                                  	<td><a href="/assets/dsny/zerowaste/residents/what-cant-go-in-recycling-and-garbage-for-residents.shtml">What Can’t Go in Recycling & Garbage</a></td>
+                                  
+                                </tr>      
+                                <tr>
+                                  	<td><a href="/assets/dsny/zerowaste/residents/public-spaces.shtml">Public Spaces</a></td>
+                                  	<td><a href="/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml">What To Recycle</a></td>
+                                </tr>
+								<tr>
+                                  
+								  <td></td>
+                                </tr>
+                              </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-foodscraps">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Food Scraps + Yard Waste</a>
+                        <div id="submenu-zerowaste-foodscraps" class="popover">
+                            <h3 class="popover-title">Food Scraps + Yard Waste</h3>
+                            <div class="popover-content content-two-col">
+                              <table>                                
+                                <tr>
+                                  	<td><a href="/assets/dsny/zerowaste/residents/food-scraps-and-yard-waste.shtml"> Food Scraps and Yard Waste </a> </td>
+					<td><a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml">NYC Compost Project</a></td>
+                                </tr>
+                                <tr>
+				  	<td><a href="/assets/dsny/zerowaste/residents/community-compost-sites-and-urban-farms.shtml">Community Compost Sites & Urban Farms</a></td>
+					<td><a href="/assets/dsny/zerowaste/residents/master-composter-certificate-program.shtml">Master Composter Certificate Program</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml">Contact NYC Compost Project</a></td>
+					<td><a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml">Residential Food Waste Drop-Off Sites</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/organics-collection-in-houses-and-small-buildings-1-9-units.shtml">Organics Collection In Houses & Small Buildings (1-9 Units)</a></td>
+					<td><a href="/assets/dsny/zerowaste/residents/what-food-waste-to-drop-off.shtml">What Food Waste To Drop Off</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/organics-collection-in-large-buildings-10-units.shtml">Organics Collection In Large Buildings (10+ Units)</a></td>
+                                  	<td><a href="/assets/dsny/zerowaste/residents/what-organics-to-recycle-at-the-curb.shtml">What Organics To Recycle at the Curb</a></td>
+                                </tr>								
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml">NYC Compost Project Education Programs</a></td>
+					<td><a href="/assets/dsny/zerowaste/residents/wood-debris-disposal.shtml">Wood Debris Disposal</a></td>
+                                </tr>
+                              </table>
+                            </div>
+                        </div>
+                    </li>                   
+                    <li data-submenu-id="submenu-zerowaste-electronics">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Electronics</a>
+                        <div id="submenu-zerowaste-electronics" class="popover">
+                            <h3 class="popover-title">Electronics</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">e-cycleNYC</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-safedisposal">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Safe Disposal</a>
+                        <div id="submenu-zerowaste-safedisposal" class="popover">
+                            <h3 class="popover-title">Safe Disposal</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/residents/handling-tips.shtml">Handling Tips</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml">Safe Disposal Events</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/special-waste-drop-off.shtml">Special Waste Drop-Off</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/safe-disposal.shtml">SAFE Disposal</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-donate">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Donate</a>
+                        <div id="submenu-zerowaste-donate" class="popover">
+                            <h3 class="popover-title">Donate</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">re-fashioNYC</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/nyc-stuff-exchange.shtml">NYC Stuff Exchange</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/nyc-wastematch.shtml">NYC WasteMatch</a><br/>
+                                <a href="/assets/dsny/zerowaste/residents/reuse.shtml">ReuseNYC</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style top-menu-orange" data-toggle="dropdown" href="/assets/dsny/zerowaste/businesses/">Businesses</a>
+                <div class="menu-style" style=""></div>
+
+                <ul class="dropdown-menu" role="menu">
+
+
+                    <li data-submenu-id="submenu-zerowaste-howtogetridofbusinesses">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">How to get rid of</a>
+
+                        <div id="submenu-zerowaste-howtogetridofbusinesses" class="popover">
+                            <h3 class="popover-title">How to get rid of</h3>
+                            <div class="popover-content residents-howto">
+                              <table>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/auto-batteries-take-back.shtml">Auto Batteries Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/food-waste.shtml">Food Waste</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/recyclables.shtml">Recyclables</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/auto-tires-take-back.shtml">Auto Tires Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/ink-and-toner-cartridge-take-back.shtml">Ink & Toner Cartridge Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/refrigerants-take-back.shtml">Refrigerants Take-Back</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/bottle-and-can-take-back.shtml">Bottle & Can Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/lighting.shtml">Lighting</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/regulated-medical-waste-disposal.shtml">Regulated Medical Waste Disposal</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/cell-phone-take-back.shtml">Cell Phone Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/mercury-take-back.shtml">Mercury Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/sharps-take-back.shtml">Sharps Take-Back</a></td>  
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/construction-and-demolition-waste-for-businesses.shtml">Construction & Demolition Waste</a></td>
+                                   <td><a href="/assets/dsny/zerowaste/businesses/motor-oil-take-back.shtml">Motor Oil Take-Back</a></td>
+                                   <td><a href="/assets/dsny/zerowaste/businesses/textiles.shtml">Textiles</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/electronics-take-back.shtml">Electronics Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/plastic-bag-take-back.shtml">Plastic Bag Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/unwanted-medication-take-back.shtml">Unwanted Medication Take-Back</td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/fluorescent-bulb-take-back.shtml">Fluorescent Bulb Take-Back</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/private-waste-hauler-requirements.shtml">Private Waste Hauler Requirements</a></td>
+                                  <td> </td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/foam-packaging-restrictions.shtml">Foam Packaging Restrictions</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/rechargeable-battery-take-back.shtml">Rechargeable Battery Take-Back</a></td>
+                                  <td> </td>
+                                </tr>
+                              </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-recylcingbusinesses">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Recycling</a>
+                        <div id="submenu-zerowaste-recylcingbusinesses" class="popover">
+                            <h3 class="popover-title">Recycling</h3>
+                            <div class="popover-content content-two-col">
+                              <table>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/Recycling.shtml">Recycling</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/private-carter-guidelines.shtml">Private Carter Guidelines</a></td>
+                                </tr>
+                                
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/street-events.shtml">Street Events</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/what-cant-go-in-recycling-and-garbage-for-businesses.shtml">What Can't Go in Recycling & Garbage</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-construction-projects.shtml">What To Recycle For Construction Projects</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-food-service-establishments.shtml">What To Recycle for Food Service Establishments</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-mixed-establishments.shtml">What To Recycle for Mixed Establishments</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-non-food-service-establishments.shtml">What To Recycle for Non-Food Service Establishments</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/businesses/who-picks-up-recycling-and-garbage-for-businesses.shtml">Who Picks Up Recycling & Garbage</a></td>
+                                  <td> </td>
+                                </tr>
+                              </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-foodscrapsbusinesses">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Food Scraps + Yard Waste</a>
+                        <div id="submenu-zerowaste-foodscrapsbusinesses" class="popover">
+                            <h3 class="popover-title">Food Scraps + Yard Waste</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/businesses/commercial-food-waste.shtml">Commercial Food Waste</a><br/>
+                                <a href="/assets/dsny/zerowaste/businesses/commercial-landscaper-waste.shtml">Commercial Landscaper Waste</a>
+                            </div>
+                        </div>
+                    </li>   
+                    <li data-submenu-id="submenu-zerowaste-donatebusinesses">
+                        <a href="/assets/dsny/zerowaste/businesses/donate.shtml">Donate</a>
+                        <div id="submenu-zerowaste-donatebusinesses" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-workingwithDSNY">
+                        <a href="/assets/dsny/zerowaste/businesses/Working with DSNY.shtml">Working With DSNY</a>
+                        <div id="submenu-zerowaste-workingwithDSNY" class="popover"></div>
+                    </li>
+                </ul>
+          </div>
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style top-menu-orange" data-toggle="dropdown" href="/assets/dsny/zerowaste/schools/">Schools</a>
+                <div class="menu-style" style=""></div>
+               <ul class="dropdown-menu" role="menu">
+
+
+                    <li data-submenu-id="submenu-zerowaste-wasteless">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Waste less</a>
+                        <!--
+                          jQuery-menu-aim: each class="popover" div defines submenu content. There are a million
+                          and one ways to do this, places to structure the HTML, etc. This is just one example.
+                          jQuery-menu-aim is agnostic to your HTML structure, it only fires events to be used
+                          as you please.
+                        -->
+
+                        <div id="submenu-zerowaste-wasteless" class="popover">
+                            <h3 class="popover-title">Waste less</h3>
+                            <div class="popover-content content-two-col">
+                              <table>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/schools/golden-apple-awards.shtml">Golden Apple Awards</a></td>
+					 <td><a href="/assets/dsny/zerowaste/schools/reduce-and-recycle.shtml">Reduce & Reuse</a></td>
+                                </tr>
+                                <tr>
+					<td><a href="/assets/dsny/zerowaste/schools/golden-apple-awards-entry-tips.shtml">Golden Apple Awards Entry Tips</a></td>
+                                   	<td><a href="/assets/dsny/zerowaste/schools/super-recyclers.shtml">Super Recyclers</a></td>                                  
+                                </tr>
+                                <tr>
+                                 	<td><a href="/assets/dsny/zerowaste/schools/previous-golden-apple-award-winners.shtml">Previous Golden Apple Award Winners</a></td>
+					<td><a href="/assets/dsny/zerowaste/schools/team-up-to-clean-up.shtml">Team Up To Clean Up</a></td>
+                                </tr>								
+                              </table>                          
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-recylcingschools">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Recycling</a>
+                        <div id="submenu-zerowaste-recylcingschools" class="popover">
+                            <h3 class="popover-title">Recycling</h3>
+                            <div class="popover-content content-two-col">
+                              <table>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/schools/collection-schedule-for-schools.shtml">Collection Schedule</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/schools/curbside-setout-for-schools.shtml">Curbside Setout</a></td>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/schools/recycling-setup-for-schools.shtml">Recycling Setup</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/schools/school-recycling-checklist.shtml">School Recycling Checklist</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/schools/school-sustainability-coordinators.shtml">School Sustainability Coordinators</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/schools/what-cant-go-in-recycling-and-garbage-for-schools.shtml">What Can't Go In Recycling and Garbage</a></td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/schools/what-to-recycle-for-schools.shtml">What To Recycle</a></td>                                                     
+                                  <td><a href="/assets/dsny/zerowaste/schools/who-picks-up-recycling-and-garbage-for-schools.shtml">Who Picks Up Recycling and Garbage</a></td>
+                                </tr>
+								<tr>                                  
+                                  <td><a href="/assets/dsny/zerowaste/schools/collection-questions-for-schools.shtml">Collection Questions</a></td>
+								  <td></td>
+                                </tr>
+                              </table>
+                                
+                                
+
+                                
+
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-foodscrapsschools">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Food Scraps + Yard Waste</a>
+                        <div id="submenu-zerowaste-foodscrapsschools" class="popover">
+                            <h3 class="popover-title">Food Scraps + Yard Waste</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/schools/what-food-waste-to-recycle-for-school.shtml">What Food Waste To Recycle</a><br/>
+                                <a href="/assets/dsny/zerowaste/schools/organics-setup-for-schools.shtml">Organics Setup</a><br/>                                                                                                               
+                                <a href="/assets/dsny/zerowaste/schools/on-site-composting-for-schools.shtml">On-Site Composting</a>
+                            </div>
+                        </div>
+                    </li>                   
+                    <li data-submenu-id="submenu-zerowaste-donateschools">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Donate</a>
+                        <div id="submenu-zerowaste-donateschools" class="popover">
+                            <h3 class="popover-title">Donate</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/schools/get-donations-for-schools.shtml">Get Donations</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+          </div>
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav last-dropdown-menu">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style top-menu-orange" data-toggle="dropdown" href="/assets/dsny/zerowaste/nonprofitsagencies/">Nonprofits + Agencies</a>
+                <div class="menu-style" style=""></div>
+               <ul class="dropdown-menu" role="menu">
+
+
+                    <li data-submenu-id="submenu-zerowaste-howtononprofits">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">How to get rid of</a>
+                      
+                        <div id="submenu-zerowaste-howtononprofits" class="popover">
+                            <h3 class="popover-title">How to get rid of</h3>
+                            <div class="popover-content content-two-col">
+                              <table>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/appliances.shtml">Appliances</a></td>    
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/automotive-products.shtml">Automotive Products</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/ballasts.shtml">Ballasts</a></td>    
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/batteries.shtml">Batteries</a></td>                                  
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/bulk.shtml">Bulk</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/construction-and-demolition-waste-for-nonprofits-and-agencies.shtml">Construction and Demolition Waste</a></td>
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/electronics.shtml">Electronics</a></td>  
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/harmful-products.shtml">Harmful Products</a></td>                                  
+                                </tr>
+
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/lighting.shtml">Lighting</a></td>    
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/mattresses.shtml">Mattresses</a></td>                                  
+                                </tr>
+                                <tr>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/mercury-containing-lamps-and-devices.shtml">Mercury Containing Lamps and Devices</a></td>
+                                  <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/regulated-medical-waste.shtml">Regulated Medical Waste</a></td>                                  
+                                </tr>
+                              </table> 
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-recylcingnonprofits">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Recycling</a>
+                        <div id="submenu-zerowaste-recylcingnonprofits" class="popover">
+                            <h3 class="popover-title">Recycling</h3>
+                            <div class="popover-content content-two-col">
+                                <table>
+                                  <tr>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/collection-schedule-for-nonprofits-and-agencies.shtml">Collection Schedule</a></td>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/curbside-setout-for-nonprofits-and-agencies.shtml">Curbside Setout</a></td>                                   
+                                  </tr>
+                                  <tr>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/nyc-agency-recycling-reporting-requirements.shtml">NYC Agency Recycling Reporting Requirements</a></td>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/recycling-set-up-for-nonprofits-and-agencies.shtml">Recycling Set-up</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/specially-handled-items-for-agencies.shtml">Specially Handled Items</a></td>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/what-can't-go-in-recycling-and-garbage-for-nonprofits-and-agencies.shtml">What Can't Go In Recycling and Garbage</a></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/what-food-waste-to-recycle-for-nonprofits-and-agencies.shtml">What Food Waste to Recycle</a></td>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/what-to-recycle-for-nonprofits-and-agencies.shtml">What to Recycle</a></td>                                    
+                                  </tr>
+                                  <tr>
+                                    <td><a href="/assets/dsny/zerowaste/nonprofitsagencies/who-picks-up-for-recycling-and-garbage-for-nonprofits-and-agencies.shtml">Who Picks Up for Recycling and Garbage</a></td>
+                                    <td></td>                               
+                                  </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-foodscrapsschoolsnonprofits">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Food Scraps + Yard Waste</a>
+                        <div id="submenu-zerowaste-foodscrapsschoolsnonprofits" class="popover">
+                            <h3 class="popover-title">Food Scraps + Yard Waste</h3>
+                            <div class="popover-content">
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/on-site-composting-for-nonprofits-and-agencies.shtml">On-site Composting</a><br/>
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/organics-for-nonprofits-and-agencies.shtml">Organics</a><br/>                                                                                                               
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/organics-set-up-for-nonprofits-and-agencies.shtml">Organics Set-up</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-zerowaste-safedisposalnonprofits">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Safe Disposal</a>
+                        <div id="submenu-zerowaste-safedisposalnonprofits" class="popover">
+                            <h3 class="popover-title">Safe Disposal</h3>
+                            <div class="popover-content">
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-handling.shtml">Safe Disposal Page</a><br/>
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/safety-training.shtml">Safety Training</a>
+                            </div>
+                        </div>
+                    </li>                   
+                    <li data-submenu-id="submenu-zerowaste-donatenonprofits">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Donate</a>
+                        <div id="submenu-zerowaste-donatenonprofits" class="popover">
+                            <h3 class="popover-title">Donate</h3>
+                            <div class="popover-content">                                
+                                <a href="/assets/dsny/zerowaste/nonprofitsagencies/get-donations-for-nonprofits-and-agencies.shtml">Get Donations</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+          </div>
+
+
+
+
+          <div class="menu-bar"></div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447993
+							]
+						--></div>

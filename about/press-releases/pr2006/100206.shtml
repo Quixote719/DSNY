@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No garbage, recycling collection or street cleaning on Columbus Day, Monday, October 9th</h3>
+<p><strong>October 2,2006</strong> | <em>Vito A. Turso/Matthew LiPani (646) 885-5020</em></p>
+<p>Press Release # 06-48, FOR IMMEDIATE RELEASE</p>
+</div>
+<p class="MsoNormal"><span>The New York City Department of Sanitation has announced that in observance of Columbus Day, there will be no garbage or recycling collection, or street cleaning on Monday, October 9th, 2006.&nbsp; Residents who receive Monday garbage collection should place their trash out at curbside Monday evening after 4 P.M. for pickup.&nbsp;</span></p>
+<p class="MsoNormal"><span>Neighborhoods that regularly receive garbage or recycling collection on Tuesday should place their cans or bags out on Monday evening, after 4 P.M. as normal.&nbsp; Residents who normally receive Monday recycling collection will not have their recycling material picked up until the following Monday, October 16th.&nbsp;</span></p>
+<p class="MsoNormal"><span>Residences and commercial establishments that unlawfully leave trash, recyclables, or dumpsters at curbside over the holiday are subject to a fine of up to $250.&nbsp; Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</span></p>
+<p class="MsoNormal"><span>In addition, all Sanitation Department administrative offices will be closed on Monday, October 9th in observance of the holiday.&nbsp; For questions about Sanitation services and schedules over the holiday, contact the NYC Citizens Service Center at 3-1-1 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.&nbsp;<br /> </span></p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

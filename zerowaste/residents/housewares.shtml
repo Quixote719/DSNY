@@ -1,0 +1,18 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Housewares </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Housewares</h1>
+<p><b>Recycling: </b>Place items that are predominantly metal or rigid plastic out with your metal, glass, plastic, and carton recycling. For exceptions, see <a href="/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml" title="What to Recycle">what to recycle</a>. Batteries must be removed from housewares prior to recycling to avoid fires.<br /><br /><b>Garbage: </b>Discard other items with regular trash. For safety, double-bag broken glass and tape large glass items before you set these out for collection.</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit the <a href="http://www.nyc.gov/html/stuffex/" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate gently used housewares and kitchen items. Or bring housewares to a community <a href="/assets/dsny/zerowaste/residents/donate.shtml" title="swap">swap</a>.</p>
+<h2>Take-Back or Drop-Off</h2>
+<p>If the item contains rechargeable batteries, try taking it back to any store in New York State that sells rechargeable batteries or products that contain them. These stores (with the exception of small food stores) are required to accept up to ten batteries of the same shape and size that they sell.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

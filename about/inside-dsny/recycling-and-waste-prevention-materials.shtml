@@ -1,0 +1,117 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Recycling Materials</title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+
+	<h1> Recycling and Waste Prevention Materials</h1>
+	<p>The NYC Department of Sanitation has created materials to assist and encourage NYC residents, agencies, and institutions to recycle, compost, and prevent waste.</p>
+	<p>The links below open pdfs of the current materials available for download, or order these free materials online: <a href="http://materials.bwprronline.org/">Recycling &amp; Waste Prevention Material Request</a>.</p>
+	<p><i>NOTE: These links open PDF (Portable Document Format) documents; you'll need the free <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a></i> to display and print them.</p>
+	<h2>Recycling Decals</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/blue-indoor-decal-06200-f.pdf">Blue Indoor Decal</a>: To label indoor recycling containers for metal, glass, plastic &amp; cartons. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/blue-decal-outdoor-08806-f.pdf">Blue Outdoor Decal</a>: To label outdoor recycling containers for metal, glass, plastic &amp; cartons. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/metal-glass-plastic-cartons-text-decals-tdmgpw-f.pdf">"Metal, Glass, Plastic &amp; Cartons" Text Decal</a>: (14" x 1.25") To label indoor recycling container lids. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/green-indoor-decal-06201-f.pdf">Green Indoor Decal</a>: To label indoor recycling containers for mixed paper &amp; cardboard. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/green-decal-outdoor-08804-f.pdf">Green Outdoor Decal</a>: To label outdoor paper recycling containers for mixed paper &amp; cardboard. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/mixed-paper-text-decal-tdmpw-f.pdf">"Mixed Paper" Text Decal</a>: (14" x 1.25") To label indoor recycling container lids. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/trash-only-text-decal-tdtob-f.pdf">"Trash Only" Text Decal</a>: (14" x 3") To label lids or sides of indoor trash containers. Not for individual apartments. </li>
+		<li><a href="/assets/dsny/docs/recycling-area-decal-08801-f.pdf">Recycling Area Decal</a>: To designate an area inside or outside the building where recyclables are stored. Not for individual apartments. </li>
+	</ul>
+	<h2>Recycling Signage</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/about_building-recycling-sign-english-spanish-06348-f_0815.pdf">Building Recycling Sign (English/Spanish)</a>: Fill in pdf, print, and post to tell residents where to bring recyclables. </li>
+		<li><a href="/assets/dsny/docs/about_building-recycling-sign-english-chinese-06348c-f_0815.pdf">Building Recycling Sign (English/Chinese)</a>: Fill in pdf, print, and post to tell residents where to bring recyclables. </li>
+		<li><a href="/assets/dsny/docs/building-recycling-sign-english-russian-06348r.pdf">Building Recycling Sign (English/Russian)</a>: Fill in pdf, print, and post to tell residents where to bring recyclables.</li>
+		<li><a href="/assets/dsny/docs/metal-glass-plastic-and-cartons-recycling-bin-sign-english-chinese-06380c-f.pdf">Metal, Glass, Plastic &amp; Cartons Recycling Bin Sign (English/Chinese)</a> </li>
+		<li><a href="/assets/dsny/docs/metal-glass-plastic-and-cartons-recycling-bin-sign-english-spanish-06380-f.pdf">Metal, Glass, Plastic &amp; Cartons Recycling Bin Sign (English/Spanish)</a> </li>
+		<li><a href="/assets/dsny/docs/paper-recycling-bin-sign-english-chinese-06360C-f.pdf">Paper Recycling Bin Sign (English/Chinese)</a> </li>
+		<li><a href="/assets/dsny/docs/paper-recycling-bin-sign-english-spanish-06360-f.pdf">Paper Recycling Bin Sign (English/Spanish)</a> </li>
+	</ul>
+	<h2>Recycling Info</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/how-to-recycle-removable-sticker-clsc-f.pdf">How To Recycle removable sticker</a> </li>
+		<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-spanish-06352-f.pdf">How To Recycle flyer (English/Spanish)</a> </li>
+		<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-chinese-06359-f.pdf">How To Recycle flyer (English/Chinese)</a> </li>
+		<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-korean-06352k.pdf">How To Recycle flyer (English/Korean) </a> </li>
+		<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-russian-06352r-f.pdf">How To Recycle flyer (English/Russian)</a></li>
+		<li><a href="/assets/dsny/docs/bookmark-nyc-zerowaste-zwbm-f.pdf">Bookmark - Zero Waste</a></li>
+	</ul>
+	<h2>Apartment Building Programs</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/e-cyclenyc-brochure-ec-bro-f.pdf">e-cycleNYC Brochure</a> </li>
+		<li><a href="/assets/dsny/docs/e-cyclenyc-super-and-manager-brochure-english-spanish-ec-embro-f.pdf">e-cycleNYC Super &amp; Manager Brochure (English/Spanish)</a> </li>
+		<li><a href="/assets/dsny/docs/re-fashionyc-brochure-re-fa-f.pdf">re-fashioNYC Brochure</a> </li>
+	</ul>
+	<h2>Harmful Products</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/electronics-disposal-ban-3-language-brochure-edb3l-f.pdf">E-Waste Disposal Ban</a> (in English/Spanish/Chinese)</li>
+		<li><a href="/assets/dsny/docs/harmful-products-brochure-06310-f.pdf">Harmful Products Brochure</a> </li>
+		<li><a href="/assets/dsny/docs/harmful-products-brochure-spanish-06310S-f.pdf">Harmful Products Brochure</a> (Spanish)</li>
+		<li><a href="/assets/dsny/docs/harmful-products-brochure-chinese-06310C-f.pdf">Harmful Products Brochure</a> (Chinese)</li>
+	</ul>
+	<h2>Reuse - Donate</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/donatenyc-brochure-dnbro-f.pdf">donateNYC brochure</a></li>
+	</ul>
+	<h2>Organics</h2>
+	<ul>
+		<li><a href="/assets/dsny/docs/about_organics-collection-program-brochure-ocp-pbrchf_0815.pdf">Organics Collection Program Brochure</a> </li>
+		<li><b>Organics Collection Instructions for Once a Week Pick Up:</b> 
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-3-language-once-a-week-pickup-OCPB-3L1.pdf"> English / Español (Spanish) / 中文 (Chinese)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-albanian-once-a-week-pickup-ocf-eal1.pdf"> shqiptar (Albanian)</a>	
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-arabic-once-a-week-pickup-ocf-ea1.pdf">العربية (Arabic)  </a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-bengali-once-a-week-pickup-opf-eb1.pdf">বাংলা (Bengali)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-greek-once-a-week-pickup-ocf-eg1.pdf">ελληνικά (Greek)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-hindi-once-a-week-pickup-ocf-eh1.pdf">हिंदी (Hindi)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-korean-once-a-week-pickup-ocf-ek1.pdf">한국어 (Korean)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-polish-once-a-week-pickup-ocf-ep1.pdf">polski (Polish)</a> 
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-russian-once-a-week-pickup-ocf-er1.pdf">ру́сский (Russian)</a> 
+		</li>
+		<li><b>Organics Collection Instructions for Twice a Week Pick Up:</b> 
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-3-language-twice-a-week-pickup-OCPB-3L2.pdf"> English / Español (Spanish) / 中文 (Chinese)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-albanian-twice-a-week-pickup-ocf-eal2.pdf"> shqiptar (Albanian)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-arabic-twice-a-week-pickup-ocf-ea2.pdf">العربية (Arabic)  </a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-bengali-twice-a week-pickup-opf-eb2.pdf">বাংলা (Bengali)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-greek-twice-a-week-pickup-ocf-eg2.pdf">ελληνικά (Greek)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-hindi-twice-a-week-pickup-ocf-eh2.pdf">हिंदी (Hindi)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-korean-twice-a-week-pickup-ocf-ek2.pdf">한국어 (Korean)</a>
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-polish-twice-a-week-pickup-ocf-ep2.pdf">polski (Polish)</a> 
+			<br> <a href="/assets/dsny/docs/organics-collection-instructions-english-russian-twice-a-week-pickup-ocf-er2.pdf">ру́сский (Russian)</a>  
+		</li>
+	</ul>
+	<p><b>Apartment Buildings</b>
+	<ul>
+		<li>
+		<b>Organics Collection Instructions for Three Times a Week Pick Up:</b><br>
+		<a href="/assets/dsny/docs/organics-collection-instructions-3-language-3-times-a-week-pickup-ocpb-3l3.pdf">Organics Collection Instructions for Supers in Manhattan (English / Español (Spanish) / 中文 (Chinese)</a> : Instructions in 3 languages for supers of Manhattan high rise buildings with organics collection Monday, Wednesday, Friday
+		</li>
+		<li>
+		<a href="/assets/dsny/docs/about_organic-waste-tenant-flyer-ocp-btf-f_0815.pdf">Organics Collection Tenant Brochure </a>
+		</li>
+	</ul>
+	<p><b>Decals and Signage</b>
+	<ul>
+		<li><a href="/assets/dsny/docs/yard-waste-only-decal-ywod.pdf">&ldquo;Yard Waste Only&rdquo; Decal</a>
+		</li>
+		<li><a href="/assets/dsny/docs/food-paper-yard-organics-decal-ocpbdfpy.pdf">Organics Bin Decal</a>: Orange food waste decal for residential brown bins 
+		</li>
+		<li><a href="/assets/dsny/docs/organics-bin-sign-english-spanish-OC-HR-SES.pdf">Organics Bin Sign (English/Spanish)</a>: To post over indoor organics bin
+		</li>
+		<li><a href="/assets/dsny/docs/organics-bin-sign-english-chinese-OC-HR-SEC.pdf">Organics Bin Sign (English/Chinese)</a>: To post over indoor organics bin
+		</li>
+		<li><a href="/assets/dsny/docs/indoor-organics-decal-oc-hr-id.pdf">Indoor Organics Bin Decal</a>
+		</li>
+	</ul>
+	<p><b>Food Scrap Drop-Off
+	<ul>
+		<li>
+		<a href="/assets/dsny/docs/nyc-food-scrap-drop-off-sites.pdf">NYC Food Scrap Drop-Off Sites</a>
+		</li>
+	</ul>
+	</div>
+</div>		 
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

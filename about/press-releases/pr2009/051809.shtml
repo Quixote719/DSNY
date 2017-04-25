@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Memorial Day, Monday, May 25th</h3>
+<div class="prs-subtitle">
+<p><strong>May 18,2009</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 09-20, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of  Sanitation (DSNY) announced today that in observance of Memorial Day, there will  be                                                                            no garbage or                 recycling collection, or street cleaning on Monday,  May 25, 2009.&nbsp; In addition, all Sanitation Department administrative offices  will be closed on Monday, May 25th, in observance of the holiday.</p>
+<p>Residents who normally receive Monday  garbage                                                                            collection should place                 their trash out at curbside Monday after  4 P.M. for pickup.&nbsp; Those receiving Monday recycling collection will  not have their recycling picked up until the following Monday, June 1st.&nbsp;</p>
+<p>For questions about Sanitation services and holiday  services, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.<br /></p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

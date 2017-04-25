@@ -1,0 +1,2287 @@
+				<!DOCTYPE html>
+				<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]--><!--[if IE 8]><html class="no-js lt-ie9"><![endif]--><!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]--><head><META http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>DSNY - About - Inside DSNY</title><!--
+									ls:begin[stylesheet]
+								--><link href="/iwov-resources/fixed-layout/3-Row Simple.css" type="text/css" rel="stylesheet"><!--
+									ls:end[stylesheet]
+								--><!--
+									ls:begin[meta-keywords]
+								--><meta name="keywords" content=""><!--
+									ls:end[meta-keywords]
+								--><!--
+									ls:begin[meta-description]
+								--><meta name="description" content=""><!--
+									ls:end[meta-description]
+								--><!--
+									ls:begin[meta-vpath]
+								--><meta name="vpath" content=""><!--
+									ls:end[meta-vpath]
+								--><!--
+									ls:begin[meta-page-locale-name]
+								--><meta name="page-locale-name" content=""><!--
+									ls:end[meta-page-locale-name]
+								--><!--
+									ls:begin[pre-head-injection]
+								--><!--
+									ls:end[pre-head-injection]
+								--><!--
+									ls:begin[social_media_injection]
+								--><!--
+									ls:end[social_media_injection]
+								--><!--
+									ls:begin[head-injection]
+								--><meta charset="utf-8" /><!--[if IE]>        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        <![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/><!-- Google Translate Plugin --><meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c"/><!--[if lt IE 9]>            <script src="/assets/home/js/libs/html5shiv.js" type="text/javascript"></script>        <![endif]--><!-- GLOBAL STYLES --><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link href="/assets/dsny/css/pages/webforms/global_dsny.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" /><!-- PRINT STYLE --><link rel="stylesheet" href="/assets/home/css/print.css" type="text/css" media="print" /><!-- PAGE SPECIFIC STYLES --><link href="/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/home/css/modules/news-panel.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/home/css/modules/share-icons.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/dsny/css/pages/webforms/agenciesaboutlinks_dsny.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/home/css/modules/programs-and-initiatives.css" media="screen" rel="stylesheet" type="text/css" /><!--<link href="/assets/test/css/pages/agencies/inside.css" media="screen" rel="stylesheet" type="text/css" />--><!-- centralized css --><link href="/assets/dsny/css/pages/webforms/inside_dsny.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/dsny/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/dsny/css/pages/agencies/megamenu/bootstrap.css?eu=10" media="screen" rel="stylesheet" type="text/css" />
+
+
+
+							    <style>
+							    	.popover
+							    	{
+							    		max-width: 700px;
+							    	}
+
+							        .navbar .popover {
+							            width: 578px;
+							            -webkit-border-top-left-radius: 0px;
+							            -webkit-border-bottom-left-radius: 0px;
+							            border-top-left-radius: 0px;
+							            border-bottom-left-radius: 0px;
+							            overflow: hidden;
+							        }
+
+							        .navbar .popover-content {
+							            /*text-align: center;*/
+							        }
+							        
+							        .navbar .popover-content a {
+							            /*text-align: center;*/
+							            color:gray;
+							        }
+
+							        .popover-content
+							        {
+							        	line-height: 25px;
+							        }
+
+							        .navbar
+							        {
+							        	margin-bottom: 0px;
+							        }
+
+
+							        .popover-title
+							        {
+							        	font-size:20px;
+							        	-webkit-border-radius: 0 0 0 0;
+  										-moz-border-radius: 0 0 0 0;
+  										background-color: rgb(211,211,211);
+  										color: #339933;
+  										font-weight: bold;
+  										line-height: 28px;
+							        }
+
+							        .navbar .popover-content img {
+							            height: 212px;
+							            max-width: 250px;
+							        }
+
+							        .navbar .dropdown-menu {
+							        	width:360px;
+							        	margin-top:84px;
+							            /*-webkit-border-top-right-radius: 0px;
+							            -webkit-border-bottom-right-radius: 0px;
+							            border-top-right-radius: 0px;
+							            border-bottom-right-radius: 0px;
+
+							            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+							            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+							            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);*/
+							        }
+
+
+							        .navbar-inverse .navbar-inner
+							        {
+							        	background-image: none;
+										background-color: #339933;
+										border: none;
+										padding: 20px 0 0 0;
+										margin-bottom:10px;
+							        }
+
+
+
+							        .navbar .dropdown-menu > li > a:hover {
+							            background-image: none;
+							            color: white !important;
+							            background-color: #50c550;
+							        }
+
+							        .navbar .dropdown-menu > li > a.maintainHover {
+							            color: white;
+							            background-color: #50c550;
+							        }
+
+
+
+							        /*.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus*/
+							        .top-menu-style
+							        {
+									  color: #ffffff;
+									  background-color: #339933;
+									  line-height: 51px;
+									  text-align: center;
+									  /*margin-right: 20px;
+									  width: 218px;*/
+									  font-size: 18px;
+									  font-weight: bold;
+									  border-width: 1px;
+									  border-style: solid;
+									  border-color: white;
+									  /*border: 1px solid transparent;*/
+									  /*-webkit-border-radius: 3px;*/
+									  border-radius:3px;
+							        }
+
+
+							        .open > .top-menu-style
+							        {
+										border-width:1px 1px 0 1px;
+							        	border-style:solid;
+							        	border-color:white;
+							        	border-bottom-right-radius: 0px;
+							        	border-bottom-left-radius: 0px;
+							        	background-color:#50c550;
+							        }
+
+
+							        .navbar .nav > li > a
+							        {
+							        	padding: 0 0 0 0;
+							        }
+
+							        .navbar .nav
+							        {
+							        	float: left;
+							        	width:25%;
+							        	margin:0 0 0 0;
+							        	position:initial;
+							        	width: 23.404255319149%;
+  										margin-right: 2.127659574468%;
+							        }
+
+							        
+									.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+									  /* color: #555555; */
+									  /* text-decoration: none; */
+									  /* background-color: #e5e5e5; */
+									  -webkit-box-shadow: none;
+									  -moz-box-shadow: none;
+									  box-shadow: none;
+									}
+
+
+									.last-dropdown-menu
+							        {
+							        	margin-right:0 !important;
+							        }
+
+							        .ls-canvas .ls-area
+							        {
+							        	overflow:visible;
+							        }
+
+							        .ls-canvas .ls-area-body
+							        {
+							        	overflow:visible;
+							        }
+
+
+							        a.dropdown-toggle:hover
+							        {
+							        	background-color:#3ab239;
+							        	color:white !important;
+							        }
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#339933;
+							        	text-shadow:none;
+							        }
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#3ab239;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#50c550;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#50c550;
+							        }
+
+							        .menu-style
+							        {
+							        	height: 20px; 
+							        	background-color: #339933; 
+							        	border-right-color: transparent;  
+							        	border-left-color: transparent;  
+							        	border-right-style: solid;  
+							        	border-right-width: 1px;  
+							        	border-left-width: 1px;  
+							        	border-left-style: solid;
+							        	/*border-bottom-color: transparent;
+							        	border-bottom-style: solid;
+							        	border-bottom-width: 1px;*/
+							        }
+
+							        .open > .menu-style
+							        {
+							        	border-right-color: white;  
+							        	border-left-color: white;
+							        	background-color: #50c550;
+							        	height: 22px;
+							        }
+
+
+									.menu-bar
+									{
+										width:99.79%; 
+										margin-top:74px; 
+										height:10px; 
+										background-color:#50c550; 
+										height:10px; 
+										border-width:0px 1px 0px 1px; 
+										border-color:white; 
+										border-style:solid;
+										display:none;
+									}
+
+
+									.dropdown-menu > li
+									{
+										border-top:solid 1px white;
+										margin-left: 1px;
+  										border-left: solid 1px #50c550;										
+									}
+
+									.dropdown-menu > li:first-child
+									{
+										border-top:0;
+
+									}
+
+									.main-header nav ul li
+									{
+										padding: 0 3% 0 3%;
+									}
+
+									.main-header nav ul li.nav-home
+									{
+										padding: 0 2.083333333333% 0 2.083333333333%;
+									}
+
+									@media only screen and (min-width: 768px) and (max-width: 800px){
+								        .navbar .popover {
+								            width: 426px;
+								        }
+
+								        .navbar .dropdown-menu {
+								        	width:300px;
+										}
+
+									}
+
+
+
+
+							        /* -------------------------------- 
+
+									Main Components
+
+									-------------------------------- */
+									header {
+									  height: 100px;
+									  background: #ffffff;
+									}
+
+									.cd-dropdown-wrapper {
+									  /*display: inline-block;*/
+									  /*position: relative;*/
+									  /*height: 40px;
+									  margin: 30px 0 0 5%;*/
+									  -webkit-font-smoothing: antialiased;
+									  -moz-osx-font-smoothing: grayscale;
+									}
+
+
+
+
+
+									.cd-dropdown-trigger {
+									  display: block;
+									  position: relative;
+									  padding: 0 36px 0 20px;
+									  line-height: 40px;
+									  background-color: #111433;
+									  color: #ffffff;
+									  border-radius: 3px;
+									}
+									.no-touch .cd-dropdown-trigger:hover {
+									  background-color: #171b46;
+									}
+									.cd-dropdown-trigger::before, .cd-dropdown-trigger::after {
+									  /* this is the arrow inside the dropdown trigger*/
+									  content: '';
+									  position: absolute;
+									  top: 50%;
+									  margin-top: -1px;
+									  height: 2px;
+									  width: 9px;
+									  background: #ffffff;
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transition: width 0.3s, -webkit-transform 0.3s;
+									  -moz-transition: width 0.3s, -moz-transform 0.3s;
+									  transition: width 0.3s, transform 0.3s;
+									}
+									.cd-dropdown-trigger::before {
+									  right: 22px;
+									  -webkit-transform: rotate(45deg);
+									  -moz-transform: rotate(45deg);
+									  -ms-transform: rotate(45deg);
+									  -o-transform: rotate(45deg);
+									  transform: rotate(45deg);
+									}
+									.cd-dropdown-trigger::after {
+									  right: 17px;
+									  -webkit-transform: rotate(-45deg);
+									  -moz-transform: rotate(-45deg);
+									  -ms-transform: rotate(-45deg);
+									  -o-transform: rotate(-45deg);
+									  transform: rotate(-45deg);
+									}
+
+									@media only screen and (min-width: 1024px) {
+									  .cd-dropdown-trigger {
+									    font-size: 1.5rem;
+									  }
+									  .cd-dropdown-trigger.dropdown-is-active {
+									    background-color: #3f8654;
+									  }
+									  .no-touch .cd-dropdown-trigger.dropdown-is-active:hover {
+									    background-color: #47975f;
+									  }
+									  .cd-dropdown-trigger.dropdown-is-active::before, .cd-dropdown-trigger.dropdown-is-active::after {
+									    /* transform the arrow into a 'X' */
+									    width: 14px;
+									  }
+									  .cd-dropdown-trigger.dropdown-is-active::before {
+									    /* transform the arrow into a 'X' */
+									    -webkit-transform: translateX(5px) rotate(-45deg);
+									    -moz-transform: translateX(5px) rotate(-45deg);
+									    -ms-transform: translateX(5px) rotate(-45deg);
+									    -o-transform: translateX(5px) rotate(-45deg);
+									    transform: translateX(5px) rotate(-45deg);
+									  }
+									  .cd-dropdown-trigger.dropdown-is-active::after {
+									    /* transform the arrow into a 'X' */
+									    -webkit-transform: rotate(45deg);
+									    -moz-transform: rotate(45deg);
+									    -ms-transform: rotate(45deg);
+									    -o-transform: rotate(45deg);
+									    transform: rotate(45deg);
+									  }
+
+									}
+
+									.cd-dropdown h2,
+									.cd-dropdown-content a,
+									.cd-dropdown-content ul a {
+									  height: 50px;
+									  line-height: 50px;
+									}
+									@media only screen and (min-width: 768px) {
+									  .cd-dropdown h2,
+									  .cd-dropdown-content a,
+									  .cd-dropdown-content ul a {
+									    height: 60px;
+									    line-height: 60px;
+									  }
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-dropdown h2,
+									  .cd-dropdown-content a,
+									  .cd-dropdown-content ul a {
+									    height: 50px;
+									    line-height: 50px;
+									  }
+									}
+
+									.cd-dropdown h2,
+									.cd-dropdown-content a,
+									.cd-dropdown-content ul a,
+									.cd-dropdown-content .cd-divider {
+									  padding: 0 20px;
+									}
+
+									.cd-dropdown {
+									  position: fixed;
+									  z-index: 1;
+									  top: 0;
+									  left: 0;
+									  width: 100%;
+									  height: 120%;
+									  background-color: #111433;
+									  color: #ffffff;
+									  visibility: hidden;
+									  /* Force Hardware Acceleration */
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transform: translateZ(0);
+									  -moz-transform: translateZ(0);
+									  -ms-transform: translateZ(0);
+									  -o-transform: translateZ(0);
+									  transform: translateZ(0);
+									  -webkit-transform: translateY(-100%);
+									  -moz-transform: translateY(-100%);
+									  -ms-transform: translateY(-100%);
+									  -o-transform: translateY(-100%);
+									  transform: translateY(-100%);
+									  -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0.5s;
+									  -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0.5s;
+									  transition: transform 0.5s 0s, visibility 0s 0.5s;
+									}
+									.cd-dropdown h2 {
+									  /* dropdown title - mobile version only */
+									  position: relative;
+									  z-index: 1;
+									  color: #585a70;
+									  background-color: #111433;
+									  border-bottom: 1px solid #242643;
+									  margin:0;
+									  font-size: 100%;
+									}
+									.cd-dropdown .cd-close {
+									  /* 'X' close icon - mobile version only */
+									  position: absolute;
+									  z-index: 1;
+									  right: 0;
+									  top: 0;
+									  height: 50px;
+									  width: 50px;
+									  /* image replacement */
+									  overflow: hidden;
+									  text-indent: 100%;
+									  white-space: nowrap;
+									  color: transparent;
+									}
+									.cd-dropdown .cd-close::after, .cd-dropdown .cd-close::before {
+									  /* this is the 'X' icon */
+									  content: '';
+									  position: fixed;
+									  left: 50%;
+									  top: 50%;
+									  bottom: auto;
+									  right: auto;
+									  -webkit-transform: translateX(-50%) translateY(-50%);
+									  -moz-transform: translateX(-50%) translateY(-50%);
+									  -ms-transform: translateX(-50%) translateY(-50%);
+									  -o-transform: translateX(-50%) translateY(-50%);
+									  transform: translateX(-50%) translateY(-50%);
+									  height: 20px;
+									  width: 2px;
+									  background-color: #ffffff;
+									}
+									.cd-dropdown .cd-close::after {
+									  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									}
+									.cd-dropdown .cd-close::before {
+									  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -o-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									}
+									.cd-dropdown.dropdown-is-active {
+									  visibility: visible;
+									  -webkit-transform: translateY(0);
+									  -moz-transform: translateY(0);
+									  -ms-transform: translateY(0);
+									  -o-transform: translateY(0);
+									  transform: translateY(0);
+									  -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0s;
+									  -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0s;
+									  transition: transform 0.5s 0s, visibility 0s 0s;
+									}
+									@media only screen and (min-width: 768px) {
+									  .cd-dropdown .cd-close {
+									    top: 5px;
+									  }
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-dropdown {
+									    position: fixed;
+									    top: calc(100% - 2px);
+									    /* reset style*/
+									    height: auto;
+									    width: auto;
+									    -webkit-transform: translateX(0);
+									    -moz-transform: translateX(0);
+									    -ms-transform: translateX(0);
+									    -o-transform: translateX(0);
+									    transform: translateX(0);
+									    background-color: #ffffff;
+									    color: #111433;
+									    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+									    opacity: 0;
+									    -webkit-transform: translateY(30px);
+									    -moz-transform: translateY(30px);
+									    -ms-transform: translateY(30px);
+									    -o-transform: translateY(30px);
+									    transform: translateY(30px);
+									    -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s, -webkit-transform 0.3s 0s;
+									    -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s, -moz-transform 0.3s 0s;
+									    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s;
+									  }
+									  .open-to-left .cd-dropdown {
+									    /* use the .open-to-left class if you want to open the dropdown on the left */
+									    right: 0;
+									    left: auto;
+									  }
+									  .cd-dropdown h2, .cd-dropdown .cd-close {
+									    /* on desktop - hide title and 'X' */
+									    display: none;
+									  }
+									  .cd-dropdown.dropdown-is-active {
+									    opacity: 1;
+									    -webkit-transform: translateY(0);
+									    -moz-transform: translateY(0);
+									    -ms-transform: translateY(0);
+									    -o-transform: translateY(0);
+									    transform: translateY(0);
+									    -webkit-transition: opacity 0.3s 0s, visibility 0.3s 0s, -webkit-transform 0.3s 0s;
+									    -moz-transition: opacity 0.3s 0s, visibility 0.3s 0s, -moz-transform 0.3s 0s;
+									    transition: opacity 0.3s 0s, visibility 0.3s 0s, transform 0.3s 0s;
+									  }
+									}
+
+									.cd-dropdown-content, .cd-dropdown-content ul {
+									  position: fixed;
+									  top: 0;
+									  left: 0;
+									  width: 100%;
+									  height: 85%;
+									  overflow-x: hidden;
+									  overflow-y: auto;
+									  -webkit-transition: -webkit-transform 0.3s;
+									  -moz-transition: -moz-transform 0.3s;
+									  transition: transform 0.3s;
+									  padding-top: 50px;
+									}
+									.cd-dropdown-content a, .cd-dropdown-content ul a {
+									  display: block;
+									  color: #ffffff;
+									  /* truncate text with ellipsis if too long */
+									  overflow: hidden;
+									  text-overflow: ellipsis;
+									  white-space: nowrap;
+									  border-top-width: 1px;
+									  border-color: #242643;
+									  border-style: solid;
+									}
+									.cd-dropdown-content li:first-of-type > a, .cd-dropdown-content ul li:first-of-type > a {
+									  border-top-width: 0;
+									}
+									.cd-dropdown-content li:last-of-type > a, .cd-dropdown-content ul li:last-of-type > a {
+									  border-bottom-width: 1px;
+									}
+									.cd-dropdown-content .cd-divider, .cd-dropdown-content ul .cd-divider {
+									  padding-top: 10px;
+									  padding-bottom: 10px;
+									  background-color: #0b0e23;
+									  font-size: 1.1rem;
+									  font-weight: bold;
+									  letter-spacing: 1px;
+									  color: #585a70;
+									  text-transform: uppercase;
+									}
+									.cd-dropdown-content .cd-divider + li > a, .cd-dropdown-content ul .cd-divider + li > a {
+									  border-top-width: 0;
+									}
+									.cd-dropdown-content a, .cd-dropdown-content .cd-search, .cd-dropdown-content .cd-divider, .cd-dropdown-content ul a, .cd-dropdown-content ul .cd-search, .cd-dropdown-content ul .cd-divider {
+									  /* Force Hardware Acceleration */
+									  -webkit-transform: translateZ(0);
+									  -moz-transform: translateZ(0);
+									  -ms-transform: translateZ(0);
+									  -o-transform: translateZ(0);
+									  transform: translateZ(0);
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+									  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+									  transition: opacity 0.3s, transform 0.3s;
+									}
+									.cd-dropdown-content.is-hidden, .cd-dropdown-content ul.is-hidden {
+									  /* push the secondary dropdown items to the right */
+									  -webkit-transform: translateX(100%);
+									  -moz-transform: translateX(100%);
+									  -ms-transform: translateX(100%);
+									  -o-transform: translateX(100%);
+									  transform: translateX(100%);
+									}
+									.cd-dropdown-content.is-hidden > li > a, .cd-dropdown-content.is-hidden > li > .cd-search, .cd-dropdown-content.is-hidden > .cd-divider, .cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider, .cd-dropdown-content ul.is-hidden > li > a, .cd-dropdown-content ul.is-hidden > li > .cd-search, .cd-dropdown-content ul.is-hidden > .cd-divider, .cd-dropdown-content ul.move-out > li > a, .cd-dropdown-content ul.move-out > li > .cd-search, .cd-dropdown-content ul.move-out > .cd-divider {
+									  /* lower down the dropdown items opacity - when secondary dropdown slides in or for dropdown items hidden on the right */
+									  opacity: 0;
+									}
+									.cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider, .cd-dropdown-content ul.move-out > li > a, .cd-dropdown-content ul.move-out > li > .cd-search, .cd-dropdown-content ul.move-out > .cd-divider {
+									  /* push the dropdown items to the left when secondary dropdown slides in */
+									  -webkit-transform: translateX(-100%);
+									  -moz-transform: translateX(-100%);
+									  -ms-transform: translateX(-100%);
+									  -o-transform: translateX(-100%);
+									  transform: translateX(-100%);
+									}
+									.dropdown-is-active .cd-dropdown-content, .dropdown-is-active .cd-dropdown-content ul {
+									  -webkit-overflow-scrolling: touch;
+									}
+									@media only screen and (min-width: 768px) {
+									  .cd-dropdown-content, .cd-dropdown-content ul {
+									    padding-top: 60px;
+									  }
+									  .cd-dropdown-content a, .cd-dropdown-content ul a {
+									    font-size: 1.8rem;
+									  }
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-dropdown-content, .cd-dropdown-content ul {
+									    padding-top: 0;
+									    overflow: visible;
+									  }
+									  .cd-dropdown-content a, .cd-dropdown-content ul a {
+									    color: #111433;
+									    height: 50px;
+									    line-height: 50px;
+									    font-size: 1.5rem;
+									    border-color: #ebebeb;
+									  }
+									  .cd-dropdown-content .cd-divider, .cd-dropdown-content ul .cd-divider {
+									    background-color: transparent;
+									    color: #b3b3b3;
+									    border-top: 1px solid #ebebeb;
+									  }
+									  .cd-dropdown-content .cd-divider + li > a, .cd-dropdown-content ul .cd-divider + li > a {
+									    border-top-width: 1px;
+									  }
+									  .cd-dropdown-content.is-hidden > li > a, .cd-dropdown-content.is-hidden > li > .cd-search, .cd-dropdown-content.is-hidden > .cd-divider, .cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider, .cd-dropdown-content ul.is-hidden > li > a, .cd-dropdown-content ul.is-hidden > li > .cd-search, .cd-dropdown-content ul.is-hidden > .cd-divider, .cd-dropdown-content ul.move-out > li > a, .cd-dropdown-content ul.move-out > li > .cd-search, .cd-dropdown-content ul.move-out > .cd-divider {
+									    /* reset mobile style */
+									    opacity: 1;
+									  }
+									}
+
+									.cd-dropdown-content .see-all a {
+									  /* different style for the See all links */
+									  color: #3f8654;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
+									  /* items with picture (or icon) and title */
+									  height: 80px;
+									  line-height: 80px;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item h3, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
+									  /* truncate text with ellipsis if too long */
+									  overflow: hidden;
+									  text-overflow: ellipsis;
+									  white-space: nowrap;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item {
+									  padding-left: 90px;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery img {
+									  position: absolute;
+									  display: block;
+									  height: 40px;
+									  width: auto;
+									  left: 20px;
+									  top: 50%;
+									  margin-top: -20px;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
+									  padding-left: 75px;
+									  /*position: relative;*/
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p {
+									  color: #111433;
+									  font-size: 1.3rem;
+									  /* hide description on small devices */
+									  display: none;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item::before {
+									  /* item icon */
+									  content: '';
+									  display: block;
+									  position: absolute;
+									  left: 20px;
+									  top: 50%;
+									  margin-top: -20px;
+									  width: 40px;
+									  height: 40px;
+									  background-repeat: no-repeat;
+									  background-position: center center;
+									  background-size: 40px 40px;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-1::before {
+									  background-image: url("../img/nucleo-icon-1.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-2::before {
+									  background-image: url("../img/nucleo-icon-2.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-3::before {
+									  background-image: url("../img/nucleo-icon-3.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-4::before {
+									  background-image: url("../img/nucleo-icon-4.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-5::before {
+									  background-image: url("../img/nucleo-icon-5.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-6::before {
+									  background-image: url("../img/nucleo-icon-6.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-7::before {
+									  background-image: url("../img/nucleo-icon-7.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-8::before {
+									  background-image: url("../img/nucleo-icon-8.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-9::before {
+									  background-image: url("../img/nucleo-icon-9.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-10::before {
+									  background-image: url("../img/nucleo-icon-10.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-11::before {
+									  background-image: url("../img/nucleo-icon-11.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-12::before {
+									  background-image: url("../img/nucleo-icon-12.svg");
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-dropdown-content {
+									    /* reset mobile style */
+									    position: static;
+									    height: auto;
+									    width: 280px;
+									  }
+									  .cd-dropdown-content > li:last-of-type a {
+									    border-bottom: none;
+									  }
+									  .no-touch .cd-dropdown-content > li:not(.has-children) a:hover {
+									    color: #3f8654;
+									  }
+									  .cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider {
+									    /* reset mobile style */
+									    -webkit-transform: translateX(0);
+									    -moz-transform: translateX(0);
+									    -ms-transform: translateX(0);
+									    -o-transform: translateX(0);
+									    transform: translateX(0);
+									    opacity: 1;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown, .cd-dropdown-content .cd-dropdown-gallery, .cd-dropdown-content .cd-dropdown-icons {
+									    -webkit-transform: translateX(0);
+									    -moz-transform: translateX(0);
+									    -ms-transform: translateX(0);
+									    -o-transform: translateX(0);
+									    transform: translateX(0);
+									    left: 100%;
+									    height: auto;
+									    background-color: #ffffff;
+									    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown::after, .cd-dropdown-content .cd-dropdown-gallery::after, .cd-dropdown-content .cd-dropdown-icons::after {
+									    clear: both;
+									    content: "";
+									    display: table;
+									  }
+									  .open-to-left .cd-dropdown-content .cd-secondary-dropdown, .open-to-left .cd-dropdown-content .cd-dropdown-gallery, .open-to-left .cd-dropdown-content .cd-dropdown-icons {
+									    /* use the .open-to-left class if you want to open the dropdown on the left */
+									    left: auto;
+									    right: 100%;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown.is-hidden, .cd-dropdown-content .cd-dropdown-gallery.is-hidden, .cd-dropdown-content .cd-dropdown-icons.is-hidden {
+									    /* reset mobile style */
+									    -webkit-transform: translateX(0);
+									    -moz-transform: translateX(0);
+									    -ms-transform: translateX(0);
+									    -o-transform: translateX(0);
+									    transform: translateX(0);
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown.fade-in, .cd-dropdown-content .cd-dropdown-gallery.fade-in, .cd-dropdown-content .cd-dropdown-icons.fade-in {
+									    /* animate secondary dropdown items when hovering over of of the .cd-dropdown-content list items */
+									    -webkit-animation: cd-fade-in 0.2s;
+									    -moz-animation: cd-fade-in 0.2s;
+									    animation: cd-fade-in 0.2s;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown.fade-out, .cd-dropdown-content .cd-dropdown-gallery.fade-out, .cd-dropdown-content .cd-dropdown-icons.fade-out {
+									    /* animate secondary dropdown items when hovering over of of the .cd-dropdown-content list items */
+									    -webkit-animation: cd-fade-out 0.2s;
+									    -moz-animation: cd-fade-out 0.2s;
+									    animation: cd-fade-out 0.2s;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > .go-back, .cd-dropdown-content .cd-dropdown-gallery > .go-back, .cd-dropdown-content .cd-dropdown-icons > .go-back {
+									    display: none;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > .see-all, .cd-dropdown-content .cd-dropdown-gallery > .see-all, .cd-dropdown-content .cd-dropdown-icons > .see-all {
+									    position: fixed;
+									    bottom: 20px;
+									    height: 45px;
+									    text-align: center;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > .see-all a, .cd-dropdown-content .cd-dropdown-gallery > .see-all a, .cd-dropdown-content .cd-dropdown-icons > .see-all a {
+									    margin: 0;
+									    height: 100%;
+									    line-height: 45px;
+									    background: #ebebeb;
+									    pointer-events: auto;
+									    -webkit-transition: color 0.2s, background-color 0.2s;
+									    -moz-transition: color 0.2s, background-color 0.2s;
+									    transition: color 0.2s, background-color 0.2s;
+									  }
+									  .no-touch .cd-dropdown-content .cd-secondary-dropdown > .see-all a:hover, .no-touch .cd-dropdown-content .cd-dropdown-gallery > .see-all a:hover, .no-touch .cd-dropdown-content .cd-dropdown-icons > .see-all a:hover {
+									    color: #ffffff;
+									    background-color: #111433;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown .cd-dropdown-item, .cd-dropdown-content .cd-secondary-dropdown a, .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-gallery a, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-icons a {
+									    border: none;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery, .cd-dropdown-content .cd-dropdown-icons {
+									    padding: 20px 30px 100px;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery > .see-all, .cd-dropdown-content .cd-dropdown-icons > .see-all {
+									    width: calc(100% - 60px);
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons > li, .cd-dropdown-content .cd-secondary-dropdown > li {
+									    width: 50%;
+									    float: left;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown {
+									    overflow: hidden;
+									    width: 550px;
+									    padding-bottom: 65px;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown::before {
+									    /* this is the separation line in the middle of the .cd-secondary-dropdown element */
+									    position: fixed;
+									    content: '';
+									    top: 290px;
+									    left: 15px;
+									    height: 1px;
+									    width: 520px;
+									    background-color: #ebebeb;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li > a {
+									    color: #3f8654;
+									    font-size: 1.6rem;
+									    margin-bottom: 10px;
+									    line-height: 30px;
+									    height: 30px;
+									    pointer-events: none;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li > a::after, .cd-dropdown-content .cd-secondary-dropdown > li > a::before {
+									    /* hide the arrow */
+									    display: none;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown.move-out > li > a {
+									    /* reset mobile style */
+									    -webkit-transform: translateX(0);
+									    -moz-transform: translateX(0);
+									    -ms-transform: translateX(0);
+									    -o-transform: translateX(0);
+									    transform: translateX(0);
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li {
+									    margin: 20px 0;
+									    border-right-width: 1px;
+									    border-color: #ebebeb;
+									    border-style: solid;
+									    padding: 0 30px;
+									    height: 250px;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li:nth-of-type(2n) {
+									    border-right-width: 0;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li > ul {
+									    /* reset mobile style */
+									    -webkit-transform: translate(0);
+									    -moz-transform: translate(0);
+									    -ms-transform: translate(0);
+									    -o-transform: translate(0);
+									    transform: translate(0);
+									    position: fixed;
+									    height: auto;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown > li > ul > .go-back {
+									    display: none;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown a {
+									    line-height: 25px;
+									    height: 25px;
+									    font-size: 1.3rem;
+									    padding-left: 0;
+									  }
+									  .no-touch .cd-dropdown-content .cd-secondary-dropdown a:hover {
+									    color: #3f8654;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown ul {
+									    padding-bottom: 25px;
+									    overflow: hidden;
+									    height: auto;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown .go-back a {
+									    padding-left: 20px;
+									    color: transparent;
+									  }
+									  .no-touch .cd-dropdown-content .cd-secondary-dropdown .go-back a:hover {
+									    color: transparent;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown .go-back a::before, .cd-dropdown-content .cd-secondary-dropdown .go-back a::after {
+									    left: 0;
+									  }
+									  .cd-dropdown-content .cd-secondary-dropdown .see-all {
+									    position: absolute;
+									    bottom: 0;
+									    left: 0;
+									    width: 100%;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery {
+									    width: 600px;
+									    padding-bottom: 100px;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery > li {
+									    width: 48%;
+									    float: left;
+									    margin-right: 4%;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery > li:nth-of-type(2n) {
+									    margin-right: 0;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item {
+									    padding: 0;
+									    height: auto;
+									    line-height: normal;
+									    color: #3f8654;
+									    margin-bottom: 2em;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery > li:nth-last-of-type(2) a,
+									  .cd-dropdown-content .cd-dropdown-gallery > li:last-of-type a {
+									    margin-bottom: 0;
+									  }
+									  .cd-dropdown-content .cd-dropdown-gallery img {
+									    position: static;
+									    height: auto;
+									    width: 100%;
+									    margin: 0 0 0.6em;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons {
+									    width: 600px;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
+									    height: 80px;
+									    line-height: 1.2;
+									    padding: 24px 0 0 85px;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item:hover {
+									    background: #ebebeb;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
+									    color: #3f8654;
+									    font-weight: bold;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p {
+									    display: block;
+									    font-size: 1.2rem;
+									  }
+									  .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item::before {
+									    left: 25px;
+									  }
+									  .cd-dropdown-content > .has-children > ul {
+									    visibility: hidden;
+									  }
+									  .cd-dropdown-content > .has-children > ul.is-active {
+									    /* when hover over .cd-dropdown-content items - show subnavigation */
+									    visibility: visible;
+									  }
+									  .cd-dropdown-content > .has-children > .cd-secondary-dropdown.is-active > li > ul {
+									    /* if .cd-secondary-dropdown is visible - show also subnavigation */
+									    visibility: visible;
+									  }
+									  .cd-dropdown-content > .has-children > a.is-active {
+									    /* hover effect for .cd-dropdown-content items with subnavigation */
+									    box-shadow: inset 2px 0 0 #3f8654;
+									    color: #3f8654;
+									  }
+									  .cd-dropdown-content > .has-children > a.is-active::before, .cd-dropdown-content > .has-children > a.is-active::after {
+									    background: #3f8654;
+									  }
+									  .open-to-left .cd-dropdown-content > .has-children > a.is-active {
+									    box-shadow: inset -2px 0 0 #3f8654;
+									  }
+									}
+
+									@-webkit-keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@-moz-keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@-webkit-keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									@-moz-keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									@keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									.cd-search input[type="search"] {
+									  width: 100%;
+									  height: 50px;
+									  padding: 0 20px;
+									  -webkit-appearance: none;
+									  -moz-appearance: none;
+									  -ms-appearance: none;
+									  -o-appearance: none;
+									  appearance: none;
+									  background-color: #242643;
+									  color: #ffffff;
+									  border: none;
+									  border-radius: 0;
+									}
+									.cd-search input[type="search"]::-webkit-input-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]::-moz-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:-moz-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:-ms-input-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:focus {
+									  background: #ffffff;
+									  color: #111433;
+									  outline: none;
+									}
+									.cd-search input[type="search"]:focus::-webkit-input-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus::-moz-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus:-moz-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus:-ms-input-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-search input[type="search"] {
+									    background-color: #ebebeb;
+									  }
+									  .cd-search input[type="search"]::-webkit-input-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]::-moz-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]:-moz-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]:-ms-input-placeholder {
+									    color: #b3b3b3;
+									  }
+									}
+
+									.has-children > a, .go-back a {
+									  position: relative;
+									}
+									.has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
+									  /* arrow icon in CSS - for element with nested unordered lists */
+									  content: '';
+									  position: absolute;
+									  top: 50%;
+									  margin-top: -1px;
+									  display: inline-block;
+									  height: 2px;
+									  width: 10px;
+									  background: #ffffff;
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									}
+									.has-children > a::before, .go-back a::before {
+									  -webkit-transform: rotate(45deg);
+									  -moz-transform: rotate(45deg);
+									  -ms-transform: rotate(45deg);
+									  -o-transform: rotate(45deg);
+									  transform: rotate(45deg);
+									}
+									.has-children > a::after, .go-back a::after {
+									  -webkit-transform: rotate(-45deg);
+									  -moz-transform: rotate(-45deg);
+									  -ms-transform: rotate(-45deg);
+									  -o-transform: rotate(-45deg);
+									  transform: rotate(-45deg);
+									}
+									@media only screen and (min-width: 1024px) {
+									  .has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
+									    background: #b3b3b3;
+									  }
+									}
+
+									.has-children > a {
+									  padding-right: 40px;
+									}
+									.has-children > a::before, .has-children > a::after {
+									  /* arrow goes on the right side - children navigation */
+									  right: 20px;
+									  -webkit-transform-origin: 9px 50%;
+									  -moz-transform-origin: 9px 50%;
+									  -ms-transform-origin: 9px 50%;
+									  -o-transform-origin: 9px 50%;
+									  transform-origin: 9px 50%;
+									}
+
+									@media only screen and (min-width: 1024px) {
+									  .open-to-left .cd-dropdown-content > .has-children > a {
+									    padding-left: 40px;
+									    padding-right: 20px;
+									  }
+									  .open-to-left .cd-dropdown-content > .has-children > a::before, .open-to-left .cd-dropdown-content > .has-children > a::after {
+									    right: auto;
+									    left: 20px;
+									    -webkit-transform-origin: 1px 50%;
+									    -moz-transform-origin: 1px 50%;
+									    -ms-transform-origin: 1px 50%;
+									    -o-transform-origin: 1px 50%;
+									    transform-origin: 1px 50%;
+									  }
+									}
+									.cd-dropdown-content .go-back a {
+									  padding-left: 40px;
+									}
+									.cd-dropdown-content .go-back a::before, .cd-dropdown-content .go-back a::after {
+									  /* arrow goes on the left side - go back button */
+									  left: 20px;
+									  -webkit-transform-origin: 1px 50%;
+									  -moz-transform-origin: 1px 50%;
+									  -ms-transform-origin: 1px 50%;
+									  -o-transform-origin: 1px 50%;
+									  transform-origin: 1px 50%;
+									}
+
+									.cd-main-content {
+									  background-color: #e6e6e6;
+									  min-height: 0px;
+									  padding: 2em 5%;
+									  line-height: 2;
+									}
+
+									.no-js .cd-dropdown-wrapper:hover .cd-dropdown {
+									  visibility: visible;
+									  opacity: 1;
+									  -webkit-transform: translateY(0);
+									  -moz-transform: translateY(0);
+									  -ms-transform: translateY(0);
+									  -o-transform: translateY(0);
+									  transform: translateY(0);
+									}
+
+									.no-js .cd-dropdown-wrapper .cd-close {
+									  display: none;
+									}
+
+
+									ul.cd-dropdown-content{
+										margin:0 0 0 0;
+									}
+
+									.cd-dropdown-content ul{
+										margin:0 0 0 0;
+									}
+
+									.row
+									{
+										margin-left:0;
+									}
+
+									.cd-dropdown-wrapper *, .cd-dropdown-wrapper *::after, .cd-dropdown-wrapper *::before {
+									  box-sizing: border-box;
+									}
+
+									form.cd-search
+									{
+										margin:0;
+									}
+
+
+							
+									@media only screen and (max-width: 767px) {
+										  .navbar-inverse {
+										    display:none; 
+											}
+
+										 .agency-logo
+										 {
+										 	display:none;
+										 }
+									}
+									
+
+									@media only screen and (min-width: 767px) {
+										.cd-dropdown-wrapper
+										{
+											display:none;
+										}
+									}
+
+
+							    </style>
+
+								<!--[if (gte IE 6)&(lte IE 8)]>        <script type="text/javascript" src="/assets/home/js/libs/selectivizr.js"></script>        <![endif]--><!--[if IE 8]>        <script type="text/javascript" src="/assets/home/js/libs/respond.min.js"></script>        <![endif]--><script src="/assets/home/js/libs/modernizr-2.6.2.min.js" type="text/javascript"></script><!--
+									ls:end[head-injection]
+								--><!--
+									ls:begin[script]
+								--><!--
+									ls:end[script]
+								--></head>
+
+								
+
+								<!--mobile-->
+<div class="cd-dropdown-wrapper">
+											<a class="cd-dropdown-trigger" style="display:none;" href="#0">Dropdown</a>
+											<nav class="cd-dropdown">				
+												<h2>Title</h2>
+												<a href="#0" class="cd-close">Close</a>
+												<ul class="cd-dropdown-content">
+													<li>
+														<form class="cd-search">
+															<input type="search" placeholder="Search...">
+														</form>
+													</li>													
+													<li class="has-children">
+														<a href="#">About</a>
+
+														<ul class="cd-secondary-dropdown is-hidden">
+															<li class="go-back"><a href="#0">Previous</a></li>
+															<li class="see-all"><a href="#">About Page</a></li>
+															<li class="has-children">
+																<a href="#">Inside DSNY</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Previous</a></li>
+																	<li class="see-all"><a href="#">Inside DSNY Page</a></li>
+																	<li><a href="#" class="">Leadership</a></li>
+																	<li class="has-children">
+																		<a href="#" class="">Bureaus &amp; Units</a>
+																		
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Bureaus &amp; Units Page</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Bureau of Cleaning &amp; Collection</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Bureau of Information Technology</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Bureau Operations Office</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Enforcement Division</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Engineering</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Engineering Audits</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Equal Employment Opportunity Office</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Fiscal Services</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Human Resources</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Labor Relations Office</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Legal Affairs</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Medical division</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Permit Inspection Unit &amp; Environment Police Unit</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Recycling &amp; Sustainability</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Safety &amp; Training</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Solid Waste Management</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Support Services</a></li>
+																			<li><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Work Experience Management</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Affiliations</a></li>	
+																	<li><a href="#" class="">History</a></li>	
+																	<li><a href="#" class="">Public Relations</a></li>	
+																	<li class="has-children">
+																		<a href="#" class="">Reports</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Reports Page</a></li>
+																			<li><a href="#">Diversion Goals</a></li>
+																			<li><a href="#">Annual &amp; Monthly Statistics</a></li>
+																			<li><a href="#">Public Space Recycling Pilot, 2007</a></li>
+																			<li><a href="#">Market Research, 2005</a></li>
+																			<li><a href="#">Market Research 1999</a></li>
+																			<li><a href="#">Processing &amp; Marketing Recyclables, 2004</a></li>
+																			<li><a href="#">Recycling in Context, 2001</a></li>
+																			<li><a href="#">Outreach Activities, 1999</a></li>
+																			<li><a href="#">Organics Collection Pilot Reports, 2014-2015</a></li>
+																			<li><a href="#">Community Composting Report, 2014</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Hunts Point Organics Recovery, 2005</a></li>
+																			<li><a href="#">Municipal Solid Waste Composting Report, 2004</a></li>
+																			<li><a href="#">Composting In NYC 2001</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Commercial Solid Waste Study &amp; Analysis, 2012</a></li>
+																			<li><a href="#">Waste Characterization, 2005</a></li>
+																			<li><a href="#">Commercial Waste Management Study, 2004</a></li>
+																			<li><a href="#">Waste Characterization, 1990</a></li>
+																			<li><a href="#">Backyard Composting, 1999</a></li>																	
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Newsletter</a></li>	
+																	<li><a href="#" class="">Public Relations</a></li>	
+																	<li class="has-children">
+																		<a href="#" class="">Videos</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Videos Page</a></li>
+																			<li><a href="#">Videos for Residents &amp; Institutions</a></li>
+																			<li><a href="#">Videos for Schools</a></li>																			
+																		</ul>
+																	</li>	
+																	<li class="has-children">
+																		<a href="#" class="">Educational Materials</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Educational Materials Page</a></li>
+																			<li><a href="#">Business Recycling Materials</a></li>
+																			<li><a href="#">Cleanup &amp; Gardening Activities For Students</a></li>
+																			<li><a href="#">Coloring &amp; Comic Books</a></li>
+																			<li><a href="#">Compost Project Materials</a></li>
+																			<li><a href="#">Field Trips &amp; Tours</a></li>
+																			<li><a href="#">General Sanitation Materials</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention</a></li>
+																			<li><a href="#">NYC's Recycling Curriculum</a></li>
+																			<li><a href="#">Promotional Materials</a></li>
+																			<li><a href="#">Public Presentations</a></li>
+																			<li><a href="#">Recycling Activities For Students</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention</a></li>
+																			<li><a href="#">NYC's Recycling Curriculum</a></li>
+																			<li><a href="#">Promotional Materials</a></li>
+																			<li><a href="#">Public Presentations</a></li>
+																			<li><a href="#">Resources for Schools</a></li>
+																			<li><a href="#">School Recycling Materials</a></li>																	
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#" style="" id="jobs-fixed">Jobs</a>
+																		<ul class="is-hidden" style="" id="jobs-fixed-testing">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Jobs Page</a></li>
+																			<li><a href="#">EEO Policy</a></li>
+																			<li><a href="#">Job Training Program</a></li>																			
+																		</ul>
+																	</li>	
+																	<li><a href="#" class="">Doing Business With DSNY</a></li>	
+																	<li><a href="#" class="">Memoranda of Understanding</a></li>	
+																	<li><a href="#" class="">Language Access Plan</a></li>	
+																	
+																																		
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Setout Rules for Residents</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Clothing</a></li>
+																	<li class="see-all"><a href="#">All Bottoms</a></li>
+																	<li><a href="#">Casual Trousers</a></li>
+																	<li class="has-children">
+																		<a href="#0">Jeans</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Bottoms</a></li>
+																			<li class="see-all"><a href="#">All Jeans</a></li>
+																			<li><a href="#">Ripped</a></li>
+																			<li><a href="#">Skinny</a></li>
+																			<li><a href="#">Slim</a></li>
+																			<li><a href="#">Straight</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#0">Leggings</a></li>
+																	<li><a href="#0">Shorts</a></li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Recycling Collection</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Clothing</a></li>
+																	<li class="see-all"><a href="#">All Jackets</a></li>
+																	<li><a href="#">Blazers</a></li>
+																	<li><a href="#">Bomber jackets</a></li>
+																	<li><a href="#">Denim Jackets</a></li>
+																	<li><a href="#">Duffle Coats</a></li>
+																	<li><a href="#">Leather Jackets</a></li>
+																	<li><a href="#">Parkas</a></li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Organics Collection</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Clothing</a></li>
+																	<li class="see-all"><a href="#">All Tops</a></li>
+																	<li><a href="#">Cardigans</a></li>
+																	<li><a href="#">Coats</a></li>
+																	<li><a href="#">Polo Shirts</a></li>
+																	<li><a href="#">Shirts</a></li>
+																	<li class="has-children">
+																		<a href="#0">T-Shirts</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Tops</a></li>
+																			<li class="see-all"><a href="#">All T-shirts</a></li>
+																			<li><a href="#">Plain</a></li>
+																			<li><a href="#">Print</a></li>
+																			<li><a href="#">Striped</a></li>
+																			<li><a href="#">Long sleeved</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#">Vests</a></li>
+																</ul>
+															</li>
+														</ul> <!-- .cd-secondary-dropdown -->
+													</li> <!-- .has-children -->
+
+													<li class="has-children">
+														<a href="#">Schools</a>
+
+														<ul class="cd-dropdown-gallery is-hidden">
+															<li class="go-back"><a href="#0">Menu</a></li>
+															<li class="see-all"><a href="#">Browse Gallery</a></li>
+															<li>
+																<a class="cd-dropdown-item" href="#">
+																	<img src="img/img.png" alt="Product Image">
+																	<h3>Product #1</h3>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item" href="#">
+																	<img src="img/img.png" alt="Product Image">
+																	<h3>Product #2</h3>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item" href="#">
+																	<img src="img/img.png" alt="Product Image">
+																	<h3>Product #3</h3>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item" href="#">
+																	<img src="img/img.png" alt="Product Image">
+																	<h3>Product #4</h3>
+																</a>
+															</li>
+														</ul> <!-- .cd-dropdown-gallery -->
+													</li> <!-- .has-children -->
+
+													<li class="has-children">
+														<a href="#">Nonprofits &amp; Agencies</a>
+														<ul class="cd-dropdown-icons is-hidden">
+															<li class="go-back"><a href="#0">Menu</a></li>
+															<li class="see-all"><a href="#">Browse Services</a></li>
+															<li>
+																<a class="cd-dropdown-item item-1" href="#">
+																	<h3>Service #1</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-2" href="#">
+																	<h3>Service #2</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-3" href="#">
+																	<h3>Service #3</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-4" href="#">
+																	<h3>Service #4</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-5" href="#">
+																	<h3>Service #5</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-6" href="#">
+																	<h3>Service #6</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-7" href="#">
+																	<h3>Service #7</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-8" href="#">
+																	<h3>Service #8</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-9" href="#">
+																	<h3>Service #9</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-10" href="#">
+																	<h3>Service #10</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-11" href="#">
+																	<h3>Service #11</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+															<li>
+																<a class="cd-dropdown-item item-12" href="#">
+																	<h3>Service #12</h3>
+																	<p>This is the item description</p>
+																</a>
+															</li>
+
+														</ul> <!-- .cd-dropdown-icons -->
+													</li> <!-- .has-children -->
+
+													<li class="cd-divider">Divider</li>
+
+													<li><a href="#">Page 1</a></li>
+													<li><a href="#">Page 2</a></li>
+													<li><a href="#">Page 3</a></li>
+												</ul> <!-- .cd-dropdown-content -->
+											</nav> <!-- .cd-dropdown -->
+										</div><!-- .cd-dropdown-wrapper -->
+								<!--end of mobile nav-->
+
+
+
+								<body id="page cd-main-content"><div class="ls-canvas page" id="outer-wrap"><div class="ls-row" id="inner-wrap"><div class="ls-fxr" id="ls-gen53820119-ls-fxr"><div class="ls-col" id="ls-row-1-col-1"><div class="ls-col-body" id="ls-gen53820120-ls-col-body"><div class="ls-row main-header" id="top"><div class="ls-fxr" id="ls-gen53820121-ls-fxr"><div class="ls-col block" id="ls-row-1-col-1-row-1-col-1"><div class="ls-col-body" id="ls-gen53820122-ls-col-body"><div class="ls-row" id="ls-row-1-col-1-row-1-col-1-row-1"><div class="ls-fxr" id="ls-gen53820123-ls-fxr"><div class="ls-area" id="ls-row-1-col-1-row-1-col-1-row-1-area-1"><div class="ls-area-body" id="ls-gen53820124-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1407802447991"><!--
+							ls:begin[component-
+							1407802447991
+							]
+						--><div class="iw_component" id="1407802447991">
+				</div><!--
+							ls:end[component-
+							1407802447991
+							]
+						--></div><div class="ls-cmp-wrap" id="w1407802447992"><!--
+							ls:begin[component-
+							1407802447992
+							]
+						--><div class="iw_component" id="1407802447992"><!--
+				Author: Mr Dan Jung
+				Purpose: Build agency navigation based on selections in Agency Generator java class.  QC 1396.  Moved to different jar. 
+				-->
+				<div class="agency-header">
+				<div class="upper-header-black">
+				<div class="container">
+				<span class="upper-header-left"><a href="http://www1.nyc.gov"><img src="/assets/home/images/global/nyc_white.png" alt="" class="small-nyc-logo"></a><img src="/assets/home/images/global/upper-header-divider.gif" alt=""><span class="upper-header-black-title">Department of Sanitation</span></span><span class="upper-header-padding"></span><span class="upper-header-right"><span class="upper-header-three-one-one"><a href="/311/index.page">311</a></span><img src="/assets/home/images/global/upper-header-divider.gif" alt=""><span class="upper-header-search"><a href="/home/search/index.page">Search all NYC.gov websites</a></span></span>
+				</div>
+				</div>
+				</div>
+				<div role="banner" id="top" class="main-header">
+				<div class="block">
+				<div class="header-top">
+				<div class="container">
+				<a href="#" class="toggle-mobile-side-nav visible-phone" id="nav-open-btn"></a><span class="welcome-text hidden-phone agency-header">Keeping New York City clean since 1881</span>
+
+				<a href="#" class="toggle-mobile-side-nav visible-phone" id="launch-mobile-nav" style="z-index:9999;"></a>
+				<div class="agency-logo-wrapper">
+				<a href="/sites/dsny/index.page"><img class="agency-logo" src="/assets/dsny/images/content/header/sanitation-logo.png" alt="Department of Sanitation"></a>
+				</div>
+				<div class="hidden-phone" id="header-links">
+				<div class="language-selector">
+				<div id="google_translate_element"></div>
+				</div>
+				<a class="text-size hidden-phone" href="http://www1.nyc.gov/home/text-size.page">Text-Size</a>
+				</div>
+				<a href="#" class="visible-phone nav-sprite-mobile" id="toggle-mobile-search"><span class="hidden"></span></a>
+				</div>
+				</div>
+				<div class="container nav-outer">
+				<nav role="navigation" class="hidden-phone" id="nav">
+				<div class="block">
+				<h2 class="block-title visible-phone">Keeping New York City clean since 1881</h2>
+				<ul>
+				<li class="nav-home hidden-phone">
+				<a href="/sites/dsny/index.page">
+				                      Home</a>
+				</li>
+				<li class="active">
+				<a href="/sites/dsny/about/inside-dsny.page">About</a>
+				</li>
+				<li>
+				<a href="/sites/dsny/recycling-and-garbage/residents.page">ZeroWaste</a>
+				</li>
+				<li>
+				<a href="/sites/dsny/streets-and-sidewalks/cleaning.page">Collection + Cleaning</a>
+				</li>
+				<li>
+				<a href="/sites/dsny/resources/initiatives.page">Snow</a>
+				</li>
+				<li>
+				<a href="/sites/dsny/contact/complaints.page">Contact</a>
+				</li>
+				<li class="hidden-phone toggle-search-wide-background-ico-search" id="toggle-search-wide"></li>
+				</ul>
+				</div>
+				</nav>
+				<div class="global-input-search">
+				<form method="GET" action="/home/search/index.page" name="filter-search-form" class="hidden hidden-phone" id="global-search-form1">
+				<div class="field-search">
+				<input value="" class="ico-search btn-filter-search" type="submit">
+				<div class="input-padding">
+				<input class="input-search input-black filter-item" placeholder="Search" name="search-terms" type="text"><input type="hidden" name="sitesearch" value="www1.nyc.gov/site/dsny">
+				</div>
+				</div>
+				</form>
+				</div>
+				<div class="global-input-search visible-phone hidden-phone" id="nav-top-searches">
+				<div class="block">
+				<form method="GET" action="/home/search/index.page" name="filter-search-form" id="global-search-form2">
+				<div class="field-search">
+				<input value="" class="ico-search btn-filter-search" type="submit">
+				<div class="input-padding">
+				<input class="input-search input-black filter-item" placeholder="Search all of NYC" name="search-terms" type="text"><input type="hidden" name="sitesearch">
+				</div>
+				</div>
+				</form>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447992
+							]
+						--></div></div></div><div class="ls-row-clr"></div></div></div></div></div><div class="ls-row-clr"></div></div></div><div class="ls-row main" id="main"><div class="ls-fxr" id="ls-gen53820125-ls-fxr"><div class="ls-area" id="ls-row-1-col-1-row-2-area-1"><div class="ls-area-body" id="ls-gen53820126-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1407802447993"><!--
+							ls:begin[component-
+							1407802447993
+							]
+						--><div class="iw_component" id="1407802447993">
+
+						<div class="row">
+
+
+
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Inside DSNY</a>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <div class="menu-style" style=""></div>
+                <ul class="dropdown-menu" role="menu">
+
+
+                    <li data-submenu-id="submenu-about-leadership">
+                        <a href="#">Leadership</a>
+                    </li>
+
+
+                    <li data-submenu-id="submenu-about-bureaus">
+                        <a href="#">Bureaus & Units</a>
+                        <!--
+                          jQuery-menu-aim: each class="popover" div defines submenu content. There are a million
+                          and one ways to do this, places to structure the HTML, etc. This is just one example.
+                          jQuery-menu-aim is agnostic to your HTML structure, it only fires events to be used
+                          as you please.
+                        -->
+
+                        <div id="submenu-about-bureaus" class="popover">
+                            <h3 class="popover-title">Bureaus & Units</h3>
+                            <div class="popover-content">
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Bureau of Cleaning & Collection</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Bureau of Information Technology</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Bureau Operations Office</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Enforcement Division</a>
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Engineering</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Engineering Audits</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Equal Employment Opportunity Office</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Fiscal Services</a><br />
+								<a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Human Resources</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Labor Relations Office</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Legal Affairs</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Medical division</a>
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/antifreeze.page">Permit Inspection Unit & Environment Police Unit</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/auto-batteries.page">Recycling & Sustainability</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Safety & Training</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Solid Waste Management</a>
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/motor-oil.page">Support Services</a><br />
+                                <a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents/tires.page">Work Experience Management</a>      
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-affiliations">
+                        <a href="#">Affiliations</a>
+                    </li>
+                    <li data-submenu-id="submenu-history">
+                        <a href="#">History</a>
+                    </li>
+                    <li data-submenu-id="submenu-publicrelations">
+                        <a href="#">Public Relations</a>
+                    </li>
+                    <li data-submenu-id="submenu-reports">
+                        <a href="#">Reports</a>
+                        <div id="submenu-reports" class="popover">
+                            <h3 class="popover-title">Reports</h3>
+                            <div class="popover-content">
+                        		<a href="#">Diversion Goals</a><br />
+                                <a href="#">Annual & Monthly Statistics</a><br />
+                                <a href="#">Public Space Recycling Pilot, 2007</a><br />
+                                <a href="#">Market Research, 2005</a><br />
+                                <a href="#">Market Research 1999</a><br />
+                                <a href="#">Processing & Marketing Recyclables, 2004</a><br />
+                                <a href="#">Recycling in Context, 2001</a><br />
+                                <a href="#">Outreach Activities, 1999</a><br />
+                                <a href="#">Organics Collection Pilot Reports, 2014-2015</a><br />
+                                <a href="#">Community Composting Report, 2014</a><br />
+                                <a href="#">Composting Opportunities, 2012</a><br />
+                                <a href="#">Hunts Point Organics Recovery, 2005</a><br />
+                                <a href="#">Municipal Solid Waste Composting Report, 2004</a><br />
+                                <a href="#">Composting In NYC 2001</a><br />
+                                <a href="#">Composting Opportunities, 2012</a><br />
+                                <a href="#">Commercial Solid Waste Study & Analysis, 2012</a><br />
+                                <a href="#">Waste Characterization, 2005</a><br />
+                                <a href="#">Commercial Waste Management Study, 2004</a><br />
+								<a href="#">Waste Characterization, 1990</a><br />
+                                <a href="#">Backyard Composting, 1999</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-newsletter">
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li data-submenu-id="submenu-videos">
+                        <a href="#">Videos</a>
+                        <div id="submenu-gabon" class="popover">
+                            <h3 class="popover-title">Videos</h3>
+                            <div class="popover-content">
+                        		<a href="#">Videos for Residents & Institutions</a><br />
+                                <a href="#">Videos for Schools</a><br />
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-educationalmaterials">
+                        <a href="#">Educational Materials</a>
+                        <div id="submenu-educationalmaterials" class="popover">
+                            <h3 class="popover-title">Educational Materials</h3>
+                            <div class="popover-content">
+                                <a href="#">Business Recycling Materials</a><br />
+                                <a href="#">Cleanup & Gardening Activities For Students</a><br />
+                                <a href="#">Coloring & Comic Books</a><br />
+                                <a href="#">Compost Project Materials</a><br />
+                                <a href="#">Field Trips & Tours</a><br />
+                                <a href="#">General Sanitation Materials</a><br />
+                                <a href="#">Recycling & Waste Prevention</a><br />
+                                <a href="#">NYC's Recycling Curriculum</a><br />
+								<a href="#">Promotional Materials</a><br />
+                                <a href="#">Public Presentations</a><br />
+                                <a href="#">Recycling Activities For Students</a><br />
+                                <a href="#">Recycling & Waste Prevention</a><br />
+                                <a href="#">NYC's Recycling Curriculum</a><br />
+								<a href="#">Promotional Materials</a><br />
+                                <a href="#">Public Presentations</a><br />
+                                <a href="#">Resources for Schools</a><br />
+                                <a href="#">School Recycling Materials</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-jobs">
+                        <a href="#">Jobs</a>
+                        <div id="submenu-jobs" class="popover">
+                            <h3 class="popover-title">Jobs</h3>
+                            <div class="popover-content">
+                        		<a href="#">EEO Policy</a><br />
+                                <a href="#">Job Training Program</a><br />
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-doing-business">
+                        <a href="#">Doing Business With DSNY</a>
+                    </li>
+                    <li data-submenu-id="submenu-memoranda-understanding">
+                        <a href="#">Memoranda of Understanding</a>
+                    </li>
+                    <li data-submenu-id="submenu-language-access">
+                        <a href="#">Language Access Plan</a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Laws</a>
+                <div class="menu-style" style=""></div>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <ul class="dropdown-menu" role="menu">
+                    <li data-submenu-id="submenu-proposed-rules">
+                        <a href="#">Proposed Rules</a>
+                    </li>
+                    <li data-submenu-id="submenu-solid-waste">
+                        <a href="#">Solid Waste Management Plan</a>
+                    </li>
+                    <li data-submenu-id="submenu-environmental">
+                        <a href="#">Environmental Review</a>
+                    </li>
+                    <li data-submenu-id="submenu-recycling-garbage-laws">
+                        <a href="#">Recycling & Garbage Laws</a>
+                        <div id="submenu-recycling-garbage-laws" class="popover">
+                            <h3 class="popover-title">Recycling & Garbage Laws</h3>
+                            <div class="popover-content">
+                                <a href="#">Setout Laws for Residents</a><br />
+                                <a href="#">Recycling Laws for Residents</a><br />
+                                <a href="#">Setout Laws for Schools</a><br />
+                                <a href="#">Recycling Laws for Schools</a><br />
+								<a href="#">Setout Laws for Nonprofits & Agencies</a><br />
+                                <a href="#">Recycling Laws for Nonprofits & Agencies</a><br />
+                                <a href="#">Harmful Products & Special Handling</a><br />
+                                <a href="#">Collection & Setout Laws for Businesses</a><br />
+                                <a href="#">Recycling Laws for Businesses</a><br />
+                                <a href="#">Retail & Servicer Provider Requirements</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-street-sidewalks-laws">
+                        <a href="#">Streets & Sidewalk Laws</a>
+                        <div id="submenu-street-sidewalks-laws" class="popover">
+                            <h3 class="popover-title">Streets & Sidewalk Laws</h3>
+                            <div class="popover-content">
+                                <a href="#">Cleaning Laws</a><br />
+								<a href="#">Dog Laws</a><br />
+                                <a href="#">Alternate Side Parking & Street Cleaning Laws</a><br />
+                                <a href="#">Illegal Dumping & Theft of Recycling</a><br />
+                                <a href="#">Posting & Graffiti Laws</a><br />
+                                <a href="#">Sidewalk & Street Obstruction Laws</a><br />
+                                <a href="#">Vehicle & Bike Laws</a><br />
+                                <a href="#">Snow Laws</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Press Releases</a>
+                <div class="menu-style" style=""></div>
+                <ul class="dropdown-menu" role="menu">
+                    <li data-submenu-id="2015">
+                        <a href="#">2015</a>
+                    </li>
+                    <li data-submenu-id="2014">
+                        <a href="#">2014</a>
+                    </li>
+                    <li data-submenu-id="2013">
+                        <a href="#">2013</a>
+                    </li>
+                    <li data-submenu-id="2012">
+                        <a href="#">2012</a>
+                    </li>
+                    <li data-submenu-id="2011">
+                        <a href="#">2011</a>
+                    </li>
+                    <li data-submenu-id="submenu-archive">
+                        <a href="#">Archives</a>
+                        <div id="submenu-archive" class="popover">
+                            <h3 class="popover-title">Archives</h3>
+                            <div class="popover-content">
+                                <a href="#">2010</a><br />
+								<a href="#">2009</a><br />
+                                <a href="#">2008</a><br />
+                                <a href="#">2007</a><br />
+								<a href="#">2006</a><br />
+                                <a href="#">2005</a><br />
+                                <a href="#">2004</a><br />
+								<a href="#">2003</a><br />
+                                <a href="#">2002</a><br />
+                                <a href="#">2001</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav last-dropdown-menu">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Operations</a>
+
+                <div class="menu-style" style=""></div>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+              </li>
+            </ul>
+          </div>
+
+
+
+
+          <div class="menu-bar"></div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447993
+							]
+						--></div><div class="ls-cmp-wrap" id="w1407802447995"><!--
+							ls:begin[component-
+							1407802447995
+							]
+						--><div class="iw_component" id="1407802447995"><!-- Left nav component --><div class="row">
+				<div class="container content-container">
+				<div class="about-main-image">
+
+
+
+
+
+				<div class="span6 about-description"><h2 id="InsideDSNY-InsideDSNY">Recyling & Garbage</h2>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents.page" target="_blank">Residents</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/schools.page" target="_blank">Schools</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/nonprofits-and-agencies.page" target="_blank">Nonprofits & Agencies</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/businesses.page" target="_blank">Businesses</a></p>
+
+				<p>The Department of Sanitation (DSNY) promotes a healthy NYC environment through efficient management of the City&rsquo;s solid waste, and environmentally sound long-range planning for handling the City&rsquo;s recycling and garbage.</p>
+				<p>DSNY is the world&rsquo;s largest sanitation department, collecting more than 10,500 tons of residential and institutional garbage and 1,760 tons of recyclables every day. NYC businesses generate another 13,000 tons of garbage daily, which is collected by private carting companies.</p>
+				<p>DSNY also clears litter, snow, and ice from some 6,000 miles of streets; removes debris from vacant lots; and clears abandoned vehicles from City streets.</p>
+				<p>To meet the challenge of keeping NYC clean, DSNY serves the City out of 59 districts, with resources that include:</p>
+				<ul>
+				<li>7,197 uniformed sanitation workers and supervisors</li>
+				<li>2,048 civilian workers</li>
+				<li>2,230 collection trucks</li>
+				<li>450 mechanical street sweepers</li>
+				<li>275 specialized collection trucks</li>
+				<li>365 salt/sand spreaders</li>
+				<li>298 front end loaders, and</li>
+				<li>2,360 various other support vehicles</li>
+				</ul>
+				<p>See a list of <a href="/assets/dsny/downloads/pdf/operations/dsny_garage_locations.pdf" target="_blank">DSNY garages.</a></p>
+				<p>Under the current leadership of DSNY Commissioner Kathryn Garcia, NYC streets are cleaner today than they have been in more than 35 years.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+				<div data-mce-bogus="1" id="_mcePaste" style="left: -40px; top: -25px; width: 1px; height: 1px; overflow: hidden; position: absolute;" class="mcePaste"></div></div>
+				</div>
+				</div>
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447995
+							]
+						--></div><div class="ls-cmp-wrap" id="w1407802447997"><!--
+							ls:begin[component-
+							1407802447997
+							]
+							ls:end[component-
+							1407802447997
+							]
+						--></div></div></div><div class="ls-row-clr"></div></div></div><div class="ls-row" id="ls-row-1-col-1-row-3"><div class="ls-fxr" id="ls-gen53820127-ls-fxr"><div class="ls-area" id="ls-row-1-col-1-row-3-area-1"><div class="ls-area-body" id="ls-gen53820128-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1407802447994"><!--
+							ls:begin[component-
+							1407802447994
+							]
+						--><div class="iw_component" id="1407802447994"><div class="row">
+				<footer>
+				<div class="container">
+				<div class="span9 footer-links">
+				<a href="/nyc-resources/agencies.page">Directory of City Agencies</a><a href="/home/contact-us.page">Contact NYC Government</a><a href="https://a127-ess.nyc.gov">City Employees</a><a href="http://www.nyc.gov/notifynyc">Notify NYC</a><a href="http://a856-citystore.nyc.gov/">CityStore</a><a href="/connect/social-media.page">Stay Connected</a><a href="/connect/applications.page">NYC Mobile Apps</a><a href="/nyc-resources/nyc-maps.page">Maps</a><a href="/nyc-resources/resident-toolkit.page">Resident Toolkit</a>
+				</div>
+				<div class="span3">
+				<span class="logo-nyc">NYC</span>
+				<form class="form-search" method="get" action="/home/search/index.page">
+				<input type="text" placeholder="Search" class="input-search placeholder" name="search-terms"><button class="ico-search">Search</button>
+				</form>
+				<div class="copyright"><p>City of New York. 2015 All Rights Reserved,</p> <p>NYC is a trademark and service mark of the City of New York</p> <p><a target="_blank" href="/home/privacy-policy.page" title="Privicy">Privacy Policy</a>. <a target="_blank" href="/home/terms-of-use.page" title="TOU">Terms of Use</a>.</p></div>
+				</div>
+				</div>
+				</footer>
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447994
+							]
+						--></div></div></div><div class="ls-row-clr"></div></div></div></div></div><div class="ls-row-clr"></div></div></div></div><!--
+									ls:end[body]
+								--></body><!--
+								ls:begin[foot-injection]
+							--><!-- GLOBAL JAVASCRIPT INCLUDES (/js/_global.js.html.erb) -->
+
+							<script src="/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>
+							<script src="/assets/home/js/libs/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+							<script src="/assets/home/js/libs/i18n/jquery-ui-i18n.js" type="text/javascript"></script>
+							<script src="/assets/home/js/utils.js" type="text/javascript"></script>
+							<script src="/assets/home/js/libs/class.js" type="text/javascript"></script>
+							<script src="/assets/home/js/classes/NYC.MainNav.js" type="text/javascript"></script>
+							<script src="/assets/home/js/classes/NYC.MobileNav.js" type="text/javascript"></script>
+							<script src="/assets/home/js/classes/NYC.Global.js" type="text/javascript"></script>
+							<script src="/assets/home/js/libs/ZeroClipboard.min.js" type="text/javascript"></script>
+							<script src="/assets/home/js/classes/NYC.InfoShare.js" type="text/javascript"></script>
+							<script src="/assets/home/js/classes/NYC.ProgramsAndInitiatives.js" type="text/javascript"></script>
+							<script src="/assets/home/js/share.js" type="text/javascript"></script>
+							<script src="/assets/home/js/libs/jquery.colorbox-min.js" type="text/javascript"></script>
+							<!-- IE7 support for JSON --><!--[if (gte IE 6)&(lte IE 8)]>        
+							<script src="/assets/home/js/libs/json2.js" type="text/javascript"></script>        
+							<![endif]--><!-- PAGE SPECIFIC JAVASCRIPT -->
+							<script src="/assets/home/js/pages/agencies/about.js" type="text/javascript"></script>
+							<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+							<!-- Google Translate Plugin -->
+							<script type="text/javascript">
+				            function googleTranslateElementInit() {                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');            }        </script>
+				            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+				            <!-- webtrends --><script type="text/javascript" src="/assets/dsny/js/agencies/agency-wt.js"></script>
+				            <script type="text/javascript" src="/assets/home/js/webtrends/webtrends_v10.js"></script><!-- End Analytics Tagging 8/4/14 TL. (NYC.gov Specific) -->
+
+							<script type="text/javascript" src="/assets/dsny/js/agencies/megamenu/jquery.menu-aim.js"></script>
+							<script type="text/javascript" src="/assets/dsny/js/agencies/megamenu/bootstrap.min.js"></script>
+							<script src="/assets/dsny/js/agencies/megamenu/main.js"></script>
+
+
+						   <script>
+
+						   		$('#launch-mobile-nav').click(function(){
+						   			$('.cd-dropdown-trigger').click();
+						   		});
+
+
+						   		$('.dropdown-toggle').click(function(){
+						   			$('.menu-bar').show();
+
+						   			if( $(this).parent().hasClass('open') )
+						   			{
+						   				$('.menu-bar').hide();
+						   			}
+						   		});
+
+						   		$('#jobs-fixed').click(function(){
+						   			$('#jobs-fixed-testing').css("position","fixed");
+						   			$('#jobs-fixed-testing').css("top","0");
+						   		});
+
+
+
+
+
+						        var $menu = $(".dropdown-menu");
+
+						        // jQuery-menu-aim: <meaningful part of the example>
+						        // Hook up events to be fired on menu row activation.
+						        $menu.menuAim({
+						            activate: activateSubmenu,
+						            deactivate: deactivateSubmenu
+						        });
+						        // jQuery-menu-aim: </meaningful part of the example>
+
+						        // jQuery-menu-aim: the following JS is used to show and hide the submenu
+						        // contents. Again, this can be done in any number of ways. jQuery-menu-aim
+						        // doesn't care how you do this, it just fires the activate and deactivate
+						        // events at the right times so you know when to show and hide your submenus.
+						        function activateSubmenu(row) {
+						            var $row = $(row),
+						                submenuId = $row.data("submenuId"),
+						                $submenu = $("#" + submenuId),
+						                height = $menu.outerHeight(),
+						                width = $menu.outerWidth();
+
+						            // Show the submenu
+						            $submenu.css({
+						                display: "block",
+						                top: 0,
+						                left: width, //- 3,  main should overlay submenu
+						                height: 'auto' // padding for main dropdown's arrow
+						            });
+
+						            // Keep the currently activated row's highlighted look
+						            $row.find("a").addClass("maintainHover");
+						        }
+
+						        function deactivateSubmenu(row) {
+						            var $row = $(row),
+						                submenuId = $row.data("submenuId"),
+						                $submenu = $("#" + submenuId);
+
+						            // Hide the submenu and remove the row's highlighted look
+						            $submenu.css("display", "none");
+						            $row.find("a").removeClass("maintainHover");
+						        }
+
+						        // Bootstrap's dropdown menus immediately close on document click.
+						        // Don't let this event close the menu if a submenu is being clicked.
+						        // This event propagation control doesn't belong in the menu-aim plugin
+						        // itself because the plugin is agnostic to bootstrap.
+						        $(".dropdown-menu li").click(function(e) {
+						            e.stopPropagation();
+						        });
+
+						        $(document).click(function() {
+						            // Simply hide the submenu on any click. Again, this is just a hacked
+						            // together menu/submenu structure to show the use of jQuery-menu-aim.
+						            $(".popover").css("display", "none");
+						            $("a.maintainHover").removeClass("maintainHover");
+						            $(".menu-bar").css("display", "none");
+						        });
+
+						    </script>
+							<!--
+								ls:end[foot-injection]
+							--></html>

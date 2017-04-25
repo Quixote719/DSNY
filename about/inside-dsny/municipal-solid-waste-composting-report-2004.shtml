@@ -1,0 +1,19 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Municipal Solid Waste Composting Report, 2004 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+<h1>Municipal Solid Waste Composting, 2004</h1>
+	<p>The 2004 <b>New York City MSW Composting Report: Summary of Research Project and Conceptual Pilot Facility Design </b>
+		presents the results of extensive research exploring the state of the alternative waste disposal method of municipal solid waste (MSW) composting. <b></b></p>
+	<p>The research concluded that MSW composting is a promising tool for waste management because it can exist alongside recycling operations, take advantage of certain collection efficiencies, 
+		and recover recyclables discarded with trash. While key questions about the feasibility of MSW composting in New York City remain to be investigated, 
+		the report proposes that the City seriously consider building a pilot facility to learn more about MSW-composting technology.</p>
+	<p><a href="/assets/dsny/docs/about_2004-municipal-solid-waste-composting-report_0815.pdf">Read the report</a></p>
+	</div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

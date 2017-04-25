@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Books &amp; Media </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Books &amp; Media </h1>
+
+<p><b>Recycling: </b>Recycle your paperback books with mixed paper and cardboard. CDs, DVDs, vinyl records, disks, and CD and DVD cases can be placed with your metal, glass, plastic, and carton recycling.<br /><br /><b>Garbage: </b>Discard hard cover books with your regular trash. Cassettes and VHS tapes are problematic to recycle, so place in your regular trash.</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit <a href="http://nyc.gov/stuffexchange" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate used media.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

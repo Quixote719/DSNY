@@ -1,0 +1,37 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What Food Waste To Recycle for School</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> What Food Waste To Recycle for Schools </h1> 
+<div class="fluid-wrapper"><iframe width="700" height="467" src="//www.youtube.com/embed/D6YgIG2356g" frameborder="0"></iframe></div>
+<h2>What To Put in the Liquids Bucket</h2>
+<p>Pour all unfinished drinks, such as milk, juice, and water, into the liquids bucket. Make sure that beverage containers are empty before placing them in the blue recycling bin.</p>
+<h2>What To Put in the Brown Food-Waste Bin</h2>
+<h3>Acceptable Food Waste</h3>
+<ul>
+<li>Vegetables and fruit</li>
+<li>Prepared foods</li>
+<li>Baked goods</li>
+<li>Cereal, flour, grains, pasta, and rice</li>
+<li>Eggs and eggshells</li>
+<li>Dairy products</li>
+<li>Nuts, meat, fish, and bones</li>
+</ul>
+<h2>Acceptable Food-Soiled Paper</h2>
+<ul>
+<li>Paper towels and napkins</li>
+<li>Paper plates</li>
+<li>Coffee filters and tea bags</li>
+<li>Paper bags</li>
+<li>Paper trays and plant-based compostable trays </li>
+<li>Paper food boats (used Citywide on <!--“<a href="http://schools.nyc.gov/Offices/mediarelations/NewsandSpeeches/2009-2010/trayless031610.htm" title="Trayless Tuesdays" >Trayless Tuesdays</a>”-->&#34;Trayless Tuesdays") </li>
+</ul>
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

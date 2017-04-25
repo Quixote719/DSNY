@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - On-site Composting for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1>On-Site Composting for Nonprofits &amp; Agencies</h1>
+
+<p>The <a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml">NYC Compost Project</a> provides composting education, including workshops and tours, to help NYC organizations learn how to compost indoors and outdoors.</p>
+<p><a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml">Contact the NYC Compost Project program in your borough</a> for information.</p>
+
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

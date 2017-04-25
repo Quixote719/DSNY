@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Gas Tanks  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Gas Tanks</h1>
+
+<p>Gas tanks can explode in DSNY compactor trucks and cause serious injury or damage. Follow specific guidelines below.</p>
+<p>All gas tanks are accepted at <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml">DSNY SAFE disposal events</a>.</p>
+<h2>Fire Extinguishers</h2>
+<p>If you are unsure about the type of fire extinguisher, check the label.</p>
+<p>Dioxide or CO2 extinguishers are refillable and should be refilled after each use. Contact a local fire extinguisher retailer to refill or dispose.</p>
+<p>Old (non-carbon dioxide or dry chemical) fire extinguishers may contain carbon tetrachloride, a known carcinogen. Contact a local fire extinguisher retailer to request that they dispose of your extinguisher.</p>
+<h2>Propane &amp; Helium Tanks</h2>
+<p>Exchange empty propane tanks (or other pressurized cylinders) for a full tank at any local dealer. If not exchanging your tank, ask dealer to recycle, or bring to a scrap metal dealer.</p>
+<p>Portable helium tanks can be recycled with other bulk metal items on your recycling collection day provided the valve has been removed.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

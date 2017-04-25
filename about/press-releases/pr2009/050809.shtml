@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">DSNY football to play the FDNY in a battle for the gridiron on Saturday, May 16th</h3>
+<div class="prs-subtitle">
+<p><strong>May 8,2009</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 09-19, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Are you ready for some football?&nbsp; Well, here comes  New York's Strongest against New York's Bravest! The DSNY Football Team - the  Department's only official team - will tackle the New York Fire Department  Football Team on Saturday, May 16th at 3:00 PM at Kings Bay Football Field,  located on Coyle Street between Voorhies Avenue and Avenue Z in Sheepshead Bay,  Brooklyn.&nbsp; Admission is $10 for adults, $5 for children.&nbsp; The game is  sanctioned                                                                            by the National                 Public Safety Football League (NPSFL).&nbsp; This year,  for the first time, Municipal Credit Union has become a  proud co-sponsor of the games as part of their Municipal Sports Series.</p>
+<p>At the end  of the season, a portion of the proceeds from the  team's season games will go to a charity of the team's choice.&nbsp;</p>
+<p>The  Strongest will also play the Philadelphia Police Department on Saturday, May 30th.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

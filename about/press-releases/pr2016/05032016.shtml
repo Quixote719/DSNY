@@ -1,0 +1,50 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	
+<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #16-18<br />
+  Tuesday, May 3, 2016 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>
+
+<p>  <strong> Nearly 5,000 Residents Attended Queens SAFE Disposal Event </strong> </p>
+
+<p>  <strong> Event Provided Residents Drop-Off Disposal of Potentially Harmful Household Items  </strong> </p>
+
+
+<p> Nearly 5,000 residents brought potentially harmful household materials to the Queens SAFE (Solvents, Automotive, Flammables, 
+and Electronics) Disposal event, held Saturday, April 30, at the Cunningham Park baseball field parking lot. Many residents 
+brought electronic waste, which due to a New York State law, cannot be disposed of at the curb. </p>
+
+<p>“We are pleased to see how popular our SAFE Disposal Events have become,” said Sanitation Commissioner Kathryn Garcia. “Many 
+of us have harmful products under the sink, in the back of a closet, or on a shelf in the garage. SAFE Events are a safe, responsible way to ensure these harmful items are disposed of properly.”</p>
+
+<p>Residents unable to attend these events should visit <a href=http://www.nyc.gov/safedisposal"> www.nyc.gov/safedisposal </a> or contact 311 for year-round options to handle 
+items such as automotive products, batteries, cell phones, electronics, fluorescent lamps, latex paint, mercury devices, and syringes. </p>
+
+<p>Materials collected are either recycled, blended for fuel, or sent to licensed hazardous waste treatment facilities for safe disposal.</p>
+
+<p>Electronics are responsibly recycled or refurbished for reuse through e-cycleNYC.</p>
+
+<p>Unwanted medications are managed by environmental police and incinerated to prevent unintentional poisonings or entry into the water supply. </p>
+
+
+
+
+
+<p><strong>About the New York City Department of Sanitation </strong><p> 
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid 
+waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. 
+The Department operates 59 district garages and manages a fleet of more than 2,000 rear-loading collection trucks, 
+450 mechanical brooms and 500 salt/sand spreaders. The Department clears litter, snow and ice from approximately 
+6,500 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets. </p>	<!-- Place the CONTENT HERE -->
+
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,49 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #16-59<br />
+  Monday, November 14, 2016 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>	
+
+
+<p> <strong> DSNY Releases 2017 Calendar featuring New York’s Strongest </strong></p> 
+
+<p>To celebrate the work of New York’s Strongest and bring attention to the work done every day to keep the city 
+healthy, safe and clean, the New York City Department of Sanitation has released its 2017 calendar featuring the
+ men and women of the department.</p> 
+
+<p>This year, the calendar was sponsored by the Municipal Credit Union, who is generously providing a calendar for 
+every Sanitation employee. The calendar will also be available for purchase at the New York CityStore at 1 Centre Street. </p> 
+
+<p>“We're pleased to be able to showcase some of New York’s Strongest on these beautifully designed calendars.  All too
+ often, these essential workers are invisible to the public, even as they work to collect tons of trash and recycling, 
+ sweep city streets, keep our fleet of vehicles moving and enforce our laws. This calendar puts a face on these vital 
+ workers,” said Sanitation Commissioner Kathryn Garcia. </p> 
+
+<p>There are 13 models in this year’s edition, which includes both uniformed and civilian employees. From Sanitation 
+Workers, to auto mechanics to Sanitation Police Officers to department administrators, all play a part in keeping 
+the city healthy, safe and clean.</p> 
+
+<p>“The DSNY and the men and women who work for DSNY are a great part of the MCU family and membership. We are proud of 
+them and the work they do to keep our city clean and protect our environment. We are happy to support the DSNY calendar
+ and highlight to everyone the great contributions New York City's Strongest makes to our city every day,” said James 
+ Durrah, Chair of the Board of Directors for the Municipal Credit Union.</p> 
+
+<p> <strong> About the New York City Department of Sanitation</strong></p>
+<p> The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste 
+and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department
+ operates 59 district garages and manages a fleet of more than 2,000 rear-loading collection trucks, 450 mechanical brooms 
+ and 689 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,500 miles of City streets and
+ removes debris from vacant lots as well as abandoned vehicles from City streets.</p>
+
+
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

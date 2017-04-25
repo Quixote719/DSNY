@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - ZeroWaste - Musical Instruments  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Musical Instruments</h1>
+
+<p><b>Recycling: </b>Recycle broken instruments that are mostly metal or rigid plastic on your recycling day. Batteries must be removed from musical instruments prior to recycling to avoid fires. <br /><br /><b>Garbage: </b>Discard broken instruments that are not predominantly metal or rigid plastic with your regular garbage.</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit <a href="http://www.nyc.gov/html/stuffex/html/home/home.shtml" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate gently used musical instruments.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

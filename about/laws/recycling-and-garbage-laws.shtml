@@ -1,0 +1,20 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Recycling + Garbage Laws </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+		<div id="contentsection" class="about-main-image">
+<div class="span6 about-description">
+<h1>Recycling + Garbage Laws</h1>
+<p><strong>Residents: </strong><a href="/assets/dsny/about/laws/setout-laws-for-residents.shtml">Setout</a>; <a href="/assets/dsny/about/laws/recycling-laws-for-residents.shtml">Recycling</a>; <a href="/assets/dsny/about/laws/harmful-products-and-special-handling-laws.shtml">Harmful Products + Special Handling</a></p>
+ <br>
+<p><strong>Businesses: </strong><a href="/assets/dsny/about/laws/collection-and-setout-laws-for-businesses.shtml">Collection + Setout</a>; <a href="/assets/dsny/about/laws/recycling-laws-for-businesses.shtml">Recycling</a>; <a href="/assets/dsny/about/laws/retail-and-service-provider-requirements.shtml">Retail + Service Providers</a>; <a href="http://www1.nyc.gov/assets/dsny/docs/zerowaste_avoiding-common-business-violations-Sanitation_0915.pdf">Avoiding Violations</a></p>
+ <br>
+<p><strong>Schools: </strong><a href="/assets/dsny/about/laws/setout-laws-for-schools.shtml">Setout</a>; <a href="/assets/dsny/about/laws/recycling-laws-for-schools.shtml">Recycling</a></p>
+ <br>
+<p><strong>Nonprofits + City Agencies: </strong><a href="/assets/dsny/about/laws/setout-laws-for-nonprofits-and-agencies.shtml">Setout</a>; <a href="/assets/dsny/about/laws/recycling-laws-for-nonprofits-and-agencies.shtml">Recycling</a></p>
+
+
+		 </div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

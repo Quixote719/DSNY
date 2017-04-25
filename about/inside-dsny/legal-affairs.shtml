@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Legal Affairs </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Legal Affairs</h1>
+				<p>The Bureau of Legal Affairs is DSNY&rsquo;s in-house legal department which is comprised of several different divisions, including Contracts, Environmental Affairs, Intergovernmental, the Advocate&rsquo;s Office and the Agency Chief Contracting Office (ACCO). These divisions provide legal counsel, advice, and assistance to the other bureaus in connection with procuring and managing contracts, drafting and enforcing statutes and regulations, regulating solid waste transfer stations, and working with other government departments and agencies.</p>
+<p>The Bureau serves as DSNY&rsquo;s liaison with the City Council and State Legislature; manages DSNY&rsquo;s City Environmental Quality Review processes; coordinates DSNY&rsquo;s responses to Freedom of Information Law requests for documents; and provides litigation support to the City&rsquo;s Law Department in connection with lawsuits involving DSNY. The Bureau provides legal counsel on employment and personnel matters, and is DSNY&rsquo;s advisor on the legal aspects of environmental compliance efforts. The Bureau also works closely with DSNY engineers to resolve controversies, allow construction projects to continue, and avoid lengthy disputes and litigation. &nbsp;</p>
+<br />
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

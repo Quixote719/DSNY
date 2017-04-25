@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">DSNY Poster Reminds New Yorkers that Assaults on Sanitation Workers are now a Felony</h3>
+<div class="prs-subtitle">
+<p><strong>Tuesday, December 11, 2012</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 12-34, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation&rsquo;s 2,000 collection trucks are displaying a new poster with an important reminder that Sanitation Workers are now covered under the same protective law as police officers and fire fighters.</p>
+<p>Over the summer, New York State Governor Andrew Cuomo signed a law making it a felony to assault a uniformed New York City Sanitation Worker while on duty. The law also carries harsher penalties on assailants. The Governor signed the law in response to several assaults against Sanitation Workers who were just doing their jobs. Last year, there were 13 assaults on Sanitation Workers.</p>
+<p>Sanitation Commissioner John J. Doherty said: &ldquo;Our Sanitation Workers are seen in every borough doing their hard and demanding job of keep our City clean. This law protects them from being assaulted and harassed while they are working. We are very appreciative of the Governor and the New York State legislature in recognizing &lsquo;New York&rsquo;s Strongest&rsquo; and in keeping the Department&rsquo;s workforce safe.&rdquo;</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

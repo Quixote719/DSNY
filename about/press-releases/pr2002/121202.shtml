@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage or Recycling Collection on Christmas Day, Wednesday, December 25th</h3>
+<div class="prs-subtitle">
+<p><strong>December 12, 2002&nbsp;</strong>| <em>Contact: Vito A. Turso / John Pampalone (646) 885-5020</em></p>
+<p>Press Release # 02-60, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has announced that, in observance of Christmas Day, there <b>will be no</b> street cleaning, garbage, or recycling collection on Wednesday, December 25th. Residents who receive Wednesday garbage collection should place their trash out at curbside Wednesday evening for pickup on Thursday, December 26th. Residents who normally receive Wednesday recycling collection <b>will not</b> have their recycling material picked up until the following Thursday, January 2nd.</p>
+<p>Neighborhoods that regularly receive garbage or recycling collection on Thursday should place their cans or bags out on Wednesday evening, as normal. Residences and commercial establishments that unlawfully leave trash or recyclables at curbside over the holiday are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>All Sanitation Department administrative offices will be closed on Wednesday, December 25th in observance of the holiday. For questions about Sanitation services and schedules over the holiday, contact the Sanitation Action Center at (212) 219-8090 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

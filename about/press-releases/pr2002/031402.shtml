@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Sanitation Collections to Start at 6AM</h3>
+<div class="prs-subtitle">
+<p><strong>March 14, 2002</strong> | <em>Kathy Dawkins / Al Ferguson (646) 885-5020 </em></p>
+<p>Press Release # 02-10, FOR IMMEDIATE RELEASE</p>
+</div>
+<span class="bodytext">
+</span><p style="MARGIN-top: 0in">The New York City Department of Sanitation announced today that starting Monday, March 18, 2002, and continuing through early November 2002, the primary hours of work for the Department&rsquo;s day force will be 6AM to 2PM.</p>
+<p>While the majority of Sanitation crews collecting refuse and recyclables will begin one hour earlier at 6AM, instead of 7AM, homeowners must continue to place their refuse and recyclables by the curb after dusk on the day prior to their scheduled day of collection. The change in collection hours<br /> allows Department personnel to do their work in cooler morning temperatures, especially as the summer heat intensifies.</p>
+<p><strong>Any questions regarding Sanitation or your collection schedule should be directed to the Sanitation Action Center at (212)&nbsp;219-8090 or by visiting the Department's web site at</strong> <a href="http://www1.nyc.gov/site/dsny/index.page"><strong>www.nyc.gov/sanitation</strong></a><strong>.</strong></p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

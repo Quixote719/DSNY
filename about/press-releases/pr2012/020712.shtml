@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling or Street Cleaning on Lincoln's Birthday, Monday, February 13th</h3>
+<div class="prs-subtitle">
+<p><strong>February 7,2012</strong> | <em>Vito A. Turso</em><em>/Matthew LiPani</em></p>
+<p>Press Release # 12-09, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Abraham Lincoln&rsquo;s birthday, there will be no garbage or recycling collection, or street cleaning on Monday, February 13, 2012.&nbsp; In addition, all Sanitation Department administrative offices will be closed on Monday, February 13th, in observance of the holiday.</p>
+<p>Residents who normally receive Monday garbage collection should place their trash out at curbside Monday after 4 P.M. for pickup.&nbsp; Those receiving Monday recycling collection will not have their recycling picked up until Tuesday, February 21st, 2012 because of the observance of Presidents Day on Monday, February 20th.&nbsp;</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+</div>
+<div style="position: absolute; left: 0px; top: -25px; width: 1px; height: 1px; overflow: hidden;" data-mce-bogus="1" class="mcePaste" id="_mcePaste"></div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

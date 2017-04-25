@@ -1,0 +1,217 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Businesses in New York City </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/styles.css" >
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h1>Businesses in New York City</h1>
+
+<p><strong>The NYC Department of Sanitation keeps our City healthy, safe and clean by collecting, recycling and disposing residential waste, cleaning streets and vacant lots, 
+and clearing snow and ice.  Businesses, however, must <a href="/assets/dsny/zerowaste/businesses/private-carter-guidelines.shtml">hire a private carting company</a> for collection and disposal service.</strong></p>
+
+<p>Sanitation's Enforcement Division monitors compliance with the laws governing clean streets. Business owners can avoid the most common fines by following <a href="http://www1.nyc.gov/assets/dsny/about/laws/avoiding-violations.shtml">these guidelines</a>.</p>
+
+<p>Find more information about opening or operating a business in New York City at <a href="http://www1.nyc.gov/nyc-resources/categories/business.page" target="_blank">nyc.gov/business</a>.</p>
+
+<div id = "accordion" > 
+
+<p>Collections, Recycling, Donating, Food Scraps + Yard Waste, etc.	</p>
+<div>
+<p>Businesses play a crucial role in protecting our environment and achieving the <a href="http://www1.nyc.gov/site/sustainability/initiatives/zero-waste.page">Mayor's goal</a> of reducing commercial waste by 90% by 2030. In addition to lowering costs by <a href="http://www1.nyc.gov/assets/dsny/about/laws/avoiding-violations.shtml">avoiding common sanitation violations</a> (pdf), businesses can benefit by reducing their carbon footprint, maintaining a clean property, and increasing their competitive edge.</p> 
+<p><a href="/assets/dsny/zerowaste/businesses.shtml">ZeroWaste Businesses</a></p> 
+</div>
+
+<p> Enforcement Hours </p> 
+<div>
+<p>Commercial property owners (or their business tenants) must clean the sidewalks adjoining their property and 18 inches from the curb into the street. Enforcement times are twice a day, each limited to a one-hour period. The specific times depend upon the property's address.</p> 
+
+<div class="span12" style="margin-top:10px;">
+     <!--<h2 style="color:#686868;">Collection Schedule</h2>-->
+      <p>To learn collection days for your location, enter street address, select borough, then click Search.</p>
+      <div id="formErrorMessage"> </div>
+      <form id="msform" name="msform" class="pure-form" type="external" method="get" style="margin:0px">
+        <input name="app_key" type="hidden" value="06F6620746865206F" />
+        <div class="span12">
+          <div class="span3">
+            <label id="houseNumberLabel" style="margin-left:0px">Building Number:<span class="red">*</span></label>
+            <input name="houseNumber" id="houseNumber" maxlength="10" style="width:100%; box-shadow:none;font-size:14px;font-weight:normal;"  type="text" tabindex="1" required/>
+          </div>
+          <div class="span3">
+            <label id="streetLabel" style="margin-left:0px">Street Name:<span class="red">*</span></label>
+            <input name="street" id="street" maxlength="50" style="width:100%; box-shadow:none;font-size:14px;font-weight:normal;" type="text" tabindex="2" required />
+          </div>
+          <div class="span3">
+            <label id="boroughLabel" style="margin-left:0px">Borough:<span class="red">*</span></label>
+            <select name="borough" id="borough" style="width:100%; box-shadow:none;margin-top:-1px;font-size:14px;font-weight:normal;" type="select-one" tabindex="3" required >
+              <option selected="selected" value="">Select your borough</option>
+              <option value="2">Bronx</option>
+              <option value="3">Brooklyn</option>
+              <option value="1">Manhattan</option>
+              <option value="4">Queens</option>
+              <option value="5">Staten Island</option>
+            </select>
+          </div>
+		  <div class="span3">
+			  <label>&nbsp;</label>
+			  <button type="submit" class="btn" tabindex="4" id="search" style="width:  100%;margin-top: -3px;font-size:14px;font-weight:normal;outline:0">Search</button>            
+          </div>
+        </div>        
+        <div class="span12">
+          <div id="results" style="margin-top:10px;margin-bottom:10px;font-size:14px" class="pure-u-sm-22-24"></div>
+        </div>
+      </form>
+    </div>
+
+<p>Learn about requirements for private carters <a href="/assets/dsny/zerowaste/businesses/private-waste-hauler-requirements.shtml">here</a>.</p>
+<p>If you believe your building owner, tenant or carter is violating rules, please <a href="http://www1.nyc.gov/nyc-resources/categories/environment/garbage-recycling/index.page#complaints">notify</a> DSNY.</p>
+
+</div>
+
+<p> Business Owner's Bill of Rights </p> 
+<div> 
+<p> New York City is committed to providing New Yorkers with excellent customer service. This commitment extends to routine agency inspections, which are necessary to protect the public’s health and safety. The Business Owner’s Bill of Rights ensures that business owners are provided with prompt, efficient and easily accessible service. Business owners have the right to:</p> 
+<p style="padding-left: 1.2em;text-indent:-1.2em;"> 1. Courteous and professional treatment by our employees. <a href="http://www.nyc.gov/html/om/pdf/eo/eo_115.pdf">See Executive Order 115</a>.</p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 2. Inspectors who are polite, professionally dressed and properly identified. DSNY Enforcement Personnel wear clearly identified uniforms. </p> 
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 3. Information about how long inspections will take and the cost of all related fees. Visit <a href="/assets/dsny/about/laws.shtml">Laws</a> for specific DSNY rules and regulations.</p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 4. Inspectors who enforce Agency rules uniformly. </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 5. Receive information about Agency rules from inspectors or other employees. Visit <a href="/assets/dsny/about/laws.shtml">Laws</a> for specific DSNY rules and regulations. </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 6. Contest a violation through a hearing, trial, or other relevant process. Learn how to <a href="http://www.nyc.gov/html/oath/html/ecb/respond-ticket.shtml">respond to your ticket.</a> </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 7. Request a review of inspection results or re-inspection as soon as possible. </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 8. Receive explanation from inspectors (if requested) on violation details and instructions for viewing inspection results. Visit <a href="/assets/dsny/about/laws.shtml">Laws</a> for specific DSNY rules and regulations. </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 9. Access information in languages other than English and request language interpretation services for inspections. See DSNY’s <a href="/assets/dsny/about/inside-dsny/language-access-plan.shtml">Language Access Plan.</a> </p>
+	<p style="padding-left: 1.2em;text-indent:-1.2em;"> 10. Comment, anonymously and without fear of retribution, on the performance or conduct of DSNY employees. </p>
+	
+<p>To provide feedback and comments, please complete NYC.gov <a href="http://www.nyc.gov/html/misc/html/customersurvey.html">customer survey</a> or <a href="/assets/dsny/contact/contact-us.shtml">contact the Department of Sanitation</a>.</p>
+</div>
+
+
+
+<p>  Storefront Litter: Adopt-a-Basket + Sponsor-a-Basket Programs </p> 
+<div>
+<p>Any business, organization or individual can join Sanitation’s <a href="/assets/dsny/contact/programs/adopt-a-basket.shtml">Adopt-a-Basket Program</a>! DSNY provides a supply of plastic liners, a collection schedule – and a direct contact at our local office. To help, monitor your litter baskets;
+ when they're three-quarters full, remove the used plastic liners, tie them, leave them next to the basket and insert a new liner.</a>
+<p>Litter baskets in highly trafficked areas can fill quickly, and it’s better for our neighborhoods – and businesses – to help keep garbage from spilling onto sidewalks. The Department presents a Certificate of Appreciation to all participants, who can put it on display to highlight their community activism.</p>
+<p>To reduce litter and improve our streetscape, sponsors purchase deluxe, heavier-duty litter baskets – which Sanitation teams regularly empty. In the <strong>Sponsor-a-Basket Program</strong>, businesses, organizations and New Yorkers supply pre-approved 
+baskets to replace the City's standard wire basket. These higher-end baskets can include a logo or name to highlight the sponsor’s commitment to maintaining the community’s quality of life. (Of course, you can sponsor and adopt a basket, too!). 
+To participate or learn more, email <a href="mailTo:CustomerService@dsny.nyc.gov">CustomerService@dsny.nyc.gov.</a></p>
+
+	
+</div> 
+
+
+</div>
+		   </div>		
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml" -->
+
+<!-- PAGE SPECIFIC JAVASCRIPT -->
+<script src="/assets/home/js/pages/agencies/about.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/agencies/dsny-lookup-routingtime.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+
+        $('#msform select').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+         
+    });
+
+$("#cancel").click(function () {
+         $("#houseNumber").val("");
+         $("#street").val("");
+         $("#boro").val("");      
+         $("#results").empty();
+
+         $('#msform input[type="text"]').attr("class", "tooltipstered");
+
+         $('#msform input[type="text"]').removeAttr("aria-invalid");
+
+         $('#msform select').attr("class", "tooltipstered");
+
+         $('#msform select').removeAttr("aria-invalid");
+
+     });
+ 
+function validateForm() {
+         validator = $('#msform').validate({
+             errorPlacement: function (error, element) {
+                 if (element.attr("type") == "text") {
+                     $(element).tooltipster('update', "This field is required");
+                 } else if (element.attr("type") == "select-one") {
+                     $(element).tooltipster('update', "Please select from the list");
+                 }
+                 else {
+                     $(element).tooltipster('update', "This field is required");
+                 }
+                                 
+                 $('element').tooltipster({
+                     functionInit: function () {
+                         return $('element').html();
+                     },
+                     functionReady: function () {
+                         $('element').attr('aria-hidden', false);
+                     },
+                     functionAfter: function () {
+                         $('element').attr('aria-hidden', true);
+                     }
+                 });
+
+                 $(element).focus(function () {
+                     if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+                     { $(this).tooltipster('show'); }
+                 })
+                   .blur(function () {
+                       $(this).tooltipster('hide');
+                   });
+             },
+             success: function (label, element) {
+                 $(element).tooltipster('hide');
+             },
+             invalidHandler: function () {
+                 $(this).find(".error:first").focus();
+             }
+         });
+         if (!$('#msform').valid()) {
+             return false;
+         } else {
+             return true;
+         }
+     }
+ 
+$("#search").click(function (event) {
+         if (validateForm()) {
+             var retCode = false;
+             event.preventDefault();
+             validateAddress(function (output) {
+                 if (output == true) {
+                     return true;
+                 }
+             });
+         }
+         else {
+             validator.focusInvalid();
+             return false;
+         }
+     });
+
+</script>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml" -->

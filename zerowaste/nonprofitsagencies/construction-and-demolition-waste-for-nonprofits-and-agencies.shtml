@@ -1,0 +1,27 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Construction and Demolition Waste for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+<h1>Construction &amp; Demolition Waste for Nonprofits &amp; Agencies</h1>
+
+
+<p>Construction and demolition waste cannot be set out with regular garbage or recycling, and must be removed by the contractor or a certified hauler. The <a href="http://www.nyc.gov/html/bic/html/trade_waste/trade_waste.shtml">Business Integrity Commission</a> certifies waste haulers and maintains a list of all registered haulers approved to remove construction and demolition waste.</p>
+<p>Deconstruction, as opposed to demolition, is the careful dismantling of buildings in order to preserve materials for reuse and recycling. The benefits of deconstruction include job creation, waste diversion, energy conservation, and historical preservation.</p>
+<p>These organizations offer information about recycling and salvaging your construction waste; check their websites for details.</p>
+<h2>Building Materials Recycling</h2>
+<ul>
+<li><a href="http://www.afandpa.org/">American Forest and Paper Association</a></li>
+<li><a href="http://www.wbdg.org/tools/cwm.php">Construction Waste Management Database</a></li>
+</ul>
+<h2>Building Materials Reuse &amp; Exchange</h2>
+<ul>
+<li><a href="http://www.wastematch.org/">NYC WasteMatch</a></li>
+<li><a href="http://reclaimedhome.com/">Reclaimed Home</a></li>
+<li><a href="http://www.bignyc.org/">Build It Green! NYC</a></li>
+</ul>
+		 </div></div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

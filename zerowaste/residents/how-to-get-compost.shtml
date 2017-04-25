@@ -1,0 +1,36 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - How To Get Compost </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1>How To Get Compost</h1>
+
+		<p>After turning food scraps, yard waste and fallen trees into compost, DSNY makes it available to residents, city agencies and nonprofits for use in gardening, soil mitigation, street tree stewardship, or habitat improvement projects.</p>
+
+		<h2>Compost Distribution Events</h2>
+
+		<p><b>NYC Department of Sanitation Compost Giveback</b> <br>
+			When: <b>May 21, 2017</b>; Time: <b>10am to 2pm</b><br>
+			Where: Fresh Kills Headquarters, 2 Muldoon Avenue, Staten Island, NY 10312
+		</p>
+
+		<p>NYC residents can receive up to 60 bags of <b>free, high-quality compost</b> (a natural soil amendment) at our spring giveback! Compost prevents weeds, helps retain moisture, and fights compaction. DSNY encourages all New Yorkers to take advantage of this free offer to make NYC greener and cleaner.</p>
+
+		<p>Bags of compost can weigh up to 60 pounds, so check your vehicle manual to make sure you do not exceed your vehicles weight bearing capacity. This event is not for businesses and commercial vehicles will not be serviced. Only vehicles registered to NYC addresses can pick up compost.</p>
+
+		<p><a href="/assets/dsny/contact/connect-with-us.shtml">Connect with us</a> to learn about upcoming events and programs. </p>
+
+		<h2>Other Ways To Get Compost</h2>
+
+		<p>The <a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml">NYC Compost Project</a> creates compost from materials accepted at food scrap drop-off sites throughout New York City. The compost is donated to local greening initiatives to rebuild NYC’s soils. <a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml">Contact the NYC Compost Project</a> for more information.</p>
+
+		<p>To get compost from the NYC Compost Project Hosted by Big Reuse, fill out their <a title="Big Reuse compost request" href="http://bigreuse.org/request-compost">compost request form</a>.</p>
+
+		<p>To get compost from the NYC Compost Project Hosted by Lower East Side Ecology Center, fill out their <a title="LESEC compost request" href="https://docs.google.com/forms/d/e/1FAIpQLSdRzOn326jeCzQu2F48g88xrZg7a3YPyCT8MtgDMcKnMJ-AFw/closedform">compost request form</a>.</p>
+
+		<!--<h2>DSNY Compost Recipients</h2> There are various organizations, individuals, and community groups within NYC devoted to increasing the number of green spaces available to NYC residents. Check this <a href="">list of sites</a> (PDF) that have received DSNY compost. -->
+	</div>
+</div>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

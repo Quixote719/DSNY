@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Extends Zuccotti Park Property Claim through Tuesday</h3>
+<div class="prs-subtitle">
+<p><strong>November 18,2011</strong> | <em>Vito A. Turso</em><i>/Matthew LiPani</i></p>
+<p>Press Release # 11-43, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The Department of Sanitation has extended the time for anyone wishing to reclaim personal property from Zuccotti Park to include Monday, November 21st, and Tuesday, November 22nd.&nbsp;</p>
+<p>Property will be available at the Department of Sanitation&rsquo;s Manhattan District 7 Garage located on West 56th Street between 11th and 12th Avenues between the hours of 8:00 AM and 4:00 PM.&nbsp;</p>
+<p>To gain access to the garage to claim your property, you should present valid photo identification. You will be asked to fill out a claim form regarding your property and provide any proof you may have that the items you are claiming should be returned to you. If you are able to locate the item you claim immediately, and DSNY determines that the item should be returned to you, DSNY will return it to you immediately. If DSNY is not able to determine immediately that it should be returned to you, the item will be put aside for a determination to be made later &ndash; for instance, DSNY may wait to see if others claim the item. Further instructions will be provided at the garage, and claim forms will be available for any lost or damaged property.</p>
+</div>
+<div style="position: absolute; left: 0px; top: -25px; width: 1px; height: 1px; overflow: hidden;" data-mce-bogus="1" class="mcePaste" id="_mcePaste"></div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

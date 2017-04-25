@@ -1,0 +1,53 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Adds Additional Computer Recycling Events</h3>
+<div class="prs-subtitle">
+<p><strong>November 4,2004</strong> | <em>Vito A. Turso / Taryn Duckett (646) 885-5020</em></p>
+<p>Press Release # 04-59, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Sanitation Commissioner John J. Doherty announced today that the Department is extending its neighborhood electronic recycling events allowing more computer owners the opportunity to recycle their old or non-working computers, monitors, and printers.</p>
+<p>"The Department was extremely pleased with the success of the computer recycling events in October; therefore, three additional events have been added so more neighborhoods can participate. Many computer owners are unaware that electronic equipment contains hazardous elements such as lead, mercury, and cadmium," said Commissioner Doherty. "Building a partnership with communities to create opportunities to recycle old equipment not only protects the environment but also helps keep our neighborhoods safe and clean," he said.</p>
+<p>Residents may recycle their old computer equipment at one of the following neighborhood electronic recycling events in November and December.</p>
+<table border="1" width="100%" cellpadding="2" cellspacing="0">
+<tbody>
+<tr>
+<td><b>DATE</b></td>
+<td><b>BOROUGH</b></td>
+<td><b>LOCATION</b></td>
+<td><b>TIME</b></td>
+</tr>
+<tr>
+<td valign="top">Saturday,<br /> November 6</td>
+<td valign="top">Brooklyn</td>
+<td>
+<div align="left"><b>Dreier Offerman Park</b><br /> Parking lot off of Shore Parkway, between Bay 44th St. and Cropsey Ave.<br /> <i>Concerned Citizens of Bensonhurst</i></div>
+</td>
+<td valign="top">8AM - 4PM</td>
+</tr>
+<tr>
+<td valign="top">Tuesday,<br /> November 9</td>
+<td valign="top">Manhattan</td>
+<td>
+<div align="left"><b>Church of the Heavenly Rest</b><br /> 90th St. and 5th Ave.<br /> <i>Church of the Heavenly Rest and the Carnegie Hill / Yorkville CSA</i></div>
+</td>
+<td valign="top">3:30PM - 7PM</td>
+</tr>
+<tr>
+<td valign="top">Sunday,<br /> December 5</td>
+<td valign="top">Brooklyn</td>
+<td>
+<div align="left"><b>PS 321<br /> </b>180 7th Ave. at 2nd St.<br /> <i>PS 321 PTA</i></div>
+</td>
+<td valign="top">9AM - 5PM</td>
+</tr>
+</tbody>
+</table>
+<br />
+<p>These events provide a means for computer owners to recycle unwanted equipment at no cost. They are made possible in part by the support Dell Inc., Lexmark, and the National Recycling Coalition. For inquiries or more information, call 311 or visit the Department's website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

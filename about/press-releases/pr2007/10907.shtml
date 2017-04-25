@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Regularly scheduled collection on Monday, Rev. Dr. Martin Luther King Jr. Day</h3>
+<div class="prs-subtitle">
+<p><strong>Tuesday, January 9, 2007</strong> | <em>Vito A. Turso / Matthew Li Pani (646) 885-5020</em></p>
+<p>Press Release # 07-01, FOR IMMEDIATE RELEASE</p>
+</div>
+<p><strong>But Alternate Side Parking regulations will be suspended</strong></p>
+<p>The New York City Department of Sanitation will conduct normal refuse and recycling collection on Monday, January 15, 2007, the observance of the Rev. Dr. Martin Luther King, Jr. Day.  Residents who receive Monday refuse and recycling collection should place their items out as usual at curbside Sunday after 4 P.M. for pickup the following day.  However, Alternate Side Parking regulations will be suspended on Monday, January 15th in observance of the holiday.</p>
+<p>In addition, the Department's administrative offices will be closed in observance of the holiday on Monday, January 15th.</p>
+<p>For questions regarding Sanitation services and schedules, contact the Citizens Service Center at 3-1-1 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Veterans' Day, Thursday, November 11th</h3>
+<div class="prs-subtitle">
+<p><strong>November 5,2004</strong> | <em>Vito A. Turso / Taryn Duckett (646) 885-5020</em></p>
+<p>Press Release # 04-61, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has announced that, in observance of Veterans' Day, there <b><i>will be no</i></b> garbage or recycling collection, and street cleaning on Thursday, November 11, 2004. Residents who receive Thursday garbage collection should instead place their trash out at curbside Thursday evening, after 5 PM for pickup on Friday, November 12th. Residents who normally receive Thursday recycling collection <i><b>will not</b></i> have their recycling picked up until the following Thursday, November 18th.</p>
+<p>Neighborhoods that regularly receive garbage or recycling collection on Friday should place their cans or bags out on Thursday evening, after 5 PM as normal. Residences and commercial establishments that unlawfully leave trash, recyclables, or dumpsters at curbside over the holiday are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>All Sanitation Department administrative offices will be closed on Thursday, November 11th in observance of the holiday. For questions about Sanitation services and schedules over the holiday, contact the Citizen Service Center at 3-1-1 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

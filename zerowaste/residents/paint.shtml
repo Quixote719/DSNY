@@ -1,0 +1,27 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Paint  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Paint</h1>
+
+<p><b>Recycling:</b> You can recycle empty plastic or metal paint cans with your metal, glass, plastic, and carton recycling.<br /><br /><b>Garbage:</b> To discard paint with garbage, remove the lid and let the paint dry, or use kitty litter, newspaper, or other absorbent material to soak up paint.</p>
+<h2>SAFE Disposal Events &amp; Drop-Off Sites</h2>
+<p>Latex paint is accepted at <a href="/assets/dsny/zerowaste/residents/special-waste-drop-off-sites.shtml" title="Household Special Waste Drop-Off Sites">Household Special Waste Drop-Off Sites</a>. Latex and oil-based paint are both accepted at <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml" title="SAFE Disposal Events">SAFE Disposal Events</a>.</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit <a href="http://nyc.gov/stuffexchange" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to donate or sell extra paint to charitable organizations, community groups, and businesses, or through a materials exchange.</p>
+<h2>Purchasing &amp; Usage Tips</h2>
+<p>To store leftover paint for future projects, cover the opening with plastic wrap, making sure the lid fits securely over the plastic. Then store the paint can upside down; this creates a tight seal and keeps the paint fresh for years.<br /><br />Use latex paint instead of oil-based paint. Latex paint cleans up with soap and water and does not contain hazardous chemicals. Consider using latex paint that is low in volatile organic compounds (VOCs) as an environmentally preferable option if you&rsquo;re concerned about indoor air quality and odor.<br /><br />Use less-toxic paint thinners or strippers. Avoid thinners or strippers that contain methylene chloride, a potential cancer-causing agent. Consider thinners or strippers that are low in volatile organic compounds (VOCs).<br /><br />Remove lead paint responsibly. Never dry-scrape or dry-sand to remove paint, especially if your home was built before 1960. <br /><br />Select the right amount of paint and paint products for each job. It takes approximately one gallon of paint to cover 350 square feet of smooth surface. Talk to your local paint retailer or use a paint calculator to determine how much paint you need:</p>
+<ul>
+<li><a href="http://www.benjaminmoore.com/en-us/for-your-home/paint-calculator" title="Benjamin Moore">Benjamin Moore</a></li>
+<li><a href="http://www.homedepot.com/webapp/wcs/stores/servlet/THDCalcInteriorPaintView?metric=false&amp;langId=-1&amp;storeId=10051&amp;catalogId=10053" title="Home Depot">Home Depot</a></li>
+<li><a href="http://www.lowes.com/cd_Paint+Calculator_953562246_" title="Lowes">Lowes</a></li>
+<li><a href="http://www.sherwin-williams.com/do_it_yourself/painting_techniques/paint_calculator/" title="Sherwin Williams">Sherwin Williams</a></li>
+</ul>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

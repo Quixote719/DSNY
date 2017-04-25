@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - NYC WasteMatch </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/donate_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>NYC WasteMatch</h1>
+<p>A free service for businesses and nonprofits, <a href="http://www.wastematch.org">NYC WasteMatch</a> is an online materials exchange that facilitates the exchange of used and surplus goods and equipment from organizations that no longer need them to entities that do. NYC WasteMatch keeps valuable resources out of the waste stream while offering clients an opportunity to save money and lower their environmental impact.</p>
+
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

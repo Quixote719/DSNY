@@ -1,0 +1,33 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Commercial Food Waste</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>NYC Commercial Organics Law</h1>
+
+
+
+<p>On July 2, 2015, Mayor de Blasio&#39s administration announced a proposal to require large-scale commercial food establishments to separate organic waste. The City is proposing the following subset of facilities to participate in this program:</p>
+<ul>
+    <li>All food service establishments in hotels with 150 or more rooms</li>
+    <li>All food service vendors in arenas and stadiums with seating capacity of at least 15,000 people</li>
+    <li>Food manufacturers with a floor area of at least 25,000 square feet</li>
+    <li>Food wholesalers with a floor area of at least 20,000 square feet </li>
+</ul>
+<p>
+Businesses covered by this proposal would be given the option to arrange for collection by a private carter, transport organic waste themselves, or process the material on site. Suitable processing methods include composting, aerobic or anaerobic digestion, or any other method approved by rule by the Department of Sanitation.
+</p>
+<p>The proposed rules will be subject to a public hearing and comment period and would take effect six months after they are adopted. From that point, there will be a six-month grace period before any fines can be imposed.</p>
+<a href="/assets/dsny/docs/zerowaste_DSNY-Proposed-Commercial-Organics-Rule-With-Certifications-Preliminary-Certifications-8-19-15_0915.pdf"> Notice of Public Hearing and Opportunity to Comment on Proposed Rules</a>
+
+
+
+
+
+</div>
+				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

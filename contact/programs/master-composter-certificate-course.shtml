@@ -1,0 +1,528 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Master Composter </title>
+
+
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<style>
+#msform fieldset {
+border: none;
+max-width: 940px;
+/*stacking fieldsets above each other*/
+position: relative;
+}
+ 
+/*Hide all except first fieldset*/
+.fieldset2 {
+display: none;
+}
+ 
+.fieldset3 {
+display: none;
+}
+ 
+.fieldset4 {
+display: none;
+}
+ 
+.error {border-color:#e9322d !important}
+</style>
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<div id="container">
+  <div id="header">
+    <h1><span class="subtitle">Master Composter Certificate Course</span></h1>
+  </div>
+  <div>
+      <p>Applicants must be NYC residents and at least 18 years of age. See <a href="/assets/dsny/zerowaste/residents/master-composter-certificate-program.shtml"  >NYC Master Composter Certificate Program</a> for details about this program.</p>
+      <p>Contact information (email, name and mailing address, and phone) and complete responses are required to process your application.</p>
+  </div>
+  <form id="msform" class="pure-form" method="post" type="external" name="Master Composter Application" action="http://www.nyc.gov/doittcaptcha/validatecap">
+		 <input type="hidden" name="cgi" value="/cgi-bin/misc/mailform.cgi"/>
+		 <input value="whenwhere_winterspring, whenwhere_fall, First Name, Last Name, Street Address, Apartment Number, City, State, Postal Code, Primary Phone #, Alternate Phone #, E-mail, Composting Experience, Why Do You, Using the Training, Affiliations" type="hidden" name="required" />
+         <input value="maaron@dsny.nyc.gov,mmost@dsny.nyc.gov,lbruce@dsny.nyc.gov,compost@nybg.org,compost@bbg.org,info@lesecologycenter.org,compost@queensbotanical.org,compost@snug-harbor.org" type="hidden" name="recipient" />
+         <input value="Master Composter Application" type="hidden" name="subject" />
+	<!--<input value="DSNY WebForms - TESTING" type="hidden" name="subject">-->
+         <input value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" type="hidden" name="env_report" />
+         
+         <input value="#FFFFFF" type="hidden" name="bgcolor" />
+         <input value="order:whenwhere_winterspring,whenwhere_fall,First Name,Last Name,Street Address,Apartment Number,City,State,Postal Code,Primary Phone #,Alternate Phone #,E-mail,Composting Experience,Why Do You,Using the Training,Affiliations" type="hidden" name="sort" />
+
+	
+        <input name="app_key" type="hidden" value="06F6620746865206F" />       
+        <input name="address" id="address" type="hidden"/>
+        <input name="name" id="name"  type="hidden"/>
+        <input name="between" id="between" type="hidden"/>
+        <input name="boro" id="boroName" type="hidden"/>	
+		<input name="intersection" id="intersection" type="hidden"/>
+		<input name="GEOcity" id="GEOcity" type="hidden"/>            
+		<input name="GEOzipcode" id="GEOzipcode" type="hidden"/>            
+		<input name="State" id="state" type="hidden" value="NY"/>
+		<input name="City" id="city" type="hidden"/>
+		<input name="whenwhere_fall" id="whenwhere_fall" type="hidden"/>     
+		<input name="Street Address" id="streetaddress" type="hidden"/>
+		<input name="Apartment Number" id="apartmentnumber" type="hidden" value="N/A"/>
+		<input name="Postal Code" id="postalcode" type="hidden"/>
+		<input name="Alternate Phone #" id="alternatephone" type="hidden" value="N/A"/>
+		<input name="Composting Experience" id="compostingexperiencecombined" type="hidden"/>		
+		
+        <div id="steps">
+            <a id="astep1" class="step1 active1" href="#"></a>
+            <a id="astep2" class="step2" href="#"></a>
+            <a id="astep3" class="step3" href="#"></a>
+        </div>
+        <div style="text-align:right;font-size:12px"><span class="red">*</span>Denotes required field</div>
+        <fieldset>	
+            <div class="pure-g">
+                <div id="subcontainer">
+                    <div class="section"> Your address </div>
+                    <div class="table">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="boro">Boro<span class="red">*</span></label>
+                            <select id="boro" name="borough" required tabindex="1" type="select-one">
+                                <option selected="selected" value="">Select your borough</option>
+                                <option value="2">Bronx</option>
+                                <option value="3">Brooklyn</option>
+                                <option value="1">Manhattan</option>
+                                <option value="4">Queens</option>
+                                <option value="5">Staten Island</option>
+                            </select>
+                        </div>                        
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="houseNumber">BLDG#<span class="red">*</span></label>
+                            <input id="houseNumber" name="houseNumber" tabindex="2" type="text" required maxlength="10"/>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="street">Street<span class="red">*</span></label>
+                            <input id="street" name="street" tabindex="3" type="text" required maxlength="50"/>
+                        </div>
+						<div class="pure-u-1 pure-u-md-1-3">
+                            <label for="siteroomfloor">Floor/Suite/Apt</label>
+                            <input id="siteroomfloor" name="SITE-ROOM-FLOOR" tabindex="4" type="text" maxlength="35"/>
+                        </div>
+                        
+                    <br/>
+                    <div id="results" class="pure-u-sm-24-24"></div>
+                    </div>
+                    
+                </div>
+            </div>
+             
+            <br/>
+            <div id="buttons">
+                <a class="pure-button next" id="cancel">Clear</a>
+				<button id="nextstep2" class="pure-button next" tabindex="5">&nbsp;<strong>Next</strong>&nbsp;</button>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset2">	
+            <div class="pure-g">
+                <div id="subcontainer">
+				<div class="section"> Select borough for training </div>
+                    <div class="table">
+                        <div class="pure-u-1">
+                            <label for="sitetype">Preferred Location<span class="red">*</span></label>
+							<select id="whenwhere_winterspring" name="whenwhere_winterspring" required type="select-one" tabindex="6" class=" pure-u-md-1-3">
+							  <option selected="selected" value="">Please select one:</option>
+							  <option value="Bronx">Bronx</option>
+							  <option value="Brooklyn">Brooklyn</option>
+							  <option value="Manhattan">Manhattan</option>
+							  <option value="Queens">Queens</option>
+							  <option value="Staten Island">Staten Island</option>							  
+							</select>                         
+                        </div>
+                    </div>
+					<div class="section"> Application questions (maximum 1500 characters for each) </div>					
+                    <div class="table">
+						<div class="pure-u-1 pure-u-md-14-24" >
+                            <label for="appliedforprogram">Have you applied to this program before?</label></div>
+<div class="pure-u-1 pure-u-md-9-24" >
+                        	<input type="radio" name="appliedforprogram" tabindex="7" value="Yes"> Yes                            	
+                            &nbsp;&nbsp;<input type="radio" name="appliedforprogram" tabindex="8" value="No"> No
+						</div><br/><br/>						
+						<div class="pure-u-1 pure-u-md-1-3-b" >
+                            <label for="sitetypeother">Describe your composting experience<span class="red">*</span></label>
+							<textarea name="compostingexperience" id="compostingexperience" maxlength="1500" tabindex="7" required></textarea>                           
+                        </div>
+						<div class="pure-u-1 pure-u-md-1-3-b" >
+                            <label for="sitetypeother">Why do you want to become a Master Composter?<span class="red">*</span></label>
+							<textarea name="Why Do You" id="whydoyou" maxlength="1500" tabindex="8" required></textarea>                           
+                        </div>
+						<div class="pure-u-1 pure-u-md-1-3-b" >
+                            <label for="sitetypeother">How would you use your Master Composter training?<span class="red">*</span></label>
+							<textarea name="Using the Training" id="usingthetraining" maxlength="1500" tabindex="9" required></textarea>                           
+                        </div>
+						<div class="pure-u-1 pure-u-md-1-3-b" >
+                            <label for="sitetypeother">Please list any community affiliations<span class="red">*</span></label>
+							<textarea name="Affiliations" id="affiliations" maxlength="1500" tabindex="10" required></textarea>                           
+                        </div>
+                    </div>
+					<div class="section"> Contact information </div>
+                    <div class="table">                                             
+						<div class="pure-u-1 pure-u-md-1-3">
+							<label for="contact1firstname">First Name<span class="red">*</span></label>
+							<input id="contact1firstname" type="text" name="First Name" tabindex="11" maxlength="25" required>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<label for="contact1lastname">Last Name<span class="red">*</span></label>
+							<input id="contact1lastname" type="text" name="Last Name" tabindex="12" maxlength="25" required>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<label for="contact1email">E-mail<span class="red">*</span></label>
+							<input id="contact1email" name="E-mail" type="text" tabindex="13" maxlength="50" required>
+						</div>
+						<div class="pure-u-1 pure-u-md-1-3">
+							<label for="contact1phone">Phone<span class="red">*</span></label>
+							<input id="contact1phone" type="text" name="Primary Phone #" maxlength="21" required tabindex="14">
+						</div>											
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="buttons">
+                <button id="previousstep1" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                <button id="nextstep3" class="pure-button next" tabindex="15">&nbsp;<strong>Next</strong>&nbsp;</button>  
+            </div>
+        </fieldset>
+        <fieldset class="fieldset3">	
+            <div class="pure-g">
+                <div id="subcontainer">
+                    <div class="section"> Submission confirmation</div>		     	
+                    <div class="table">
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Borough</div>
+                            <div id="disborough" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Building #</div>
+                            <div id="disbldg" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Street Name</div>
+                            <div id="disstreet" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Floor/Suite/Apt</div>
+                            <div id="disfloorsuiteapt" class="data_long"></div>
+                        </div>						
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Borough for training</div>
+                            <div id="disborofortraining" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Have you applied to this program before?</div>
+                            <div id="disappliedforprogram" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Describe your composting experience</div>
+                            <div id="discompostingexperience" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Why do you want to become a Master Composter?</div>
+                            <div id="diswhydoyou" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">How would you use your Master Composter training?</div>
+                            <div id="disusingthetraining" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Please list any community affiliations</div>
+                            <div id="disaffiliations" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">First Name</div>
+                            <div id="disfirstname" class="data_long">&nbsp;</div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Last Name</div>
+                            <div id="dislastname" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">E-mail</div>
+                            <div id="disemail" class="data_long">&nbsp;</div>
+                        </div>
+						<div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Phone</div>
+                            <div id="disphone" class="data_long">&nbsp;</div>
+                        </div>				                       
+                    </div>
+                  <br>
+                </div>
+            </div>
+<br>
+</fieldset>
+<div id="fieldset4" class="fieldset4">	
+<div class="row">
+<div class="container">
+<div class="span4">&nbsp;</div>
+<div id="captcha" class="span5">
+<script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+</div>
+<div class="span6"></div>
+</div>
+</div>  
+<br>
+            <div id="buttons">
+                <button id="previousstep2" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                <button id="submit" type="submit" class="pure-button next">&nbsp;<strong>Submit</strong>&nbsp;</button>
+            </div>
+         </div>
+    </form>
+</div>
+
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+ 
+<script src="/assets/dsny/js/webforms/GeoValidation.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+$('#contact1phone').mask('(999) 999-9999? x99999');
+
+$('#msform input[type="text"]').tooltipster({
+trigger: 'custom',
+onlyOne: true,
+position: 'bottom'
+});
+$('#msform textarea').tooltipster({
+trigger: 'custom',
+onlyOne: true,
+position: 'bottom'
+});
+$('#msform select').tooltipster({
+trigger: 'custom',
+onlyOne: true,
+position: 'bottom'
+});
+$('textarea[maxlength]').keyup(function () {
+var limit = parseInt($(this).attr('maxlength'));
+var text = $(this).val();
+var chars = text.length;
+if (chars > limit) {
+var new_text = text.substr(0, limit);
+$(this).val(new_text);
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+var current_fs, next_fs, previous_fs;
+var left, opacity, scale;
+
+$("#cancel").click(function () {
+$("#houseNumber").val('');
+$("#street").val('');
+$("#siteroomfloor").val('');
+$("#boro").val('');
+$("#results").empty();
+$('#msform input[type="text"]').attr("class", "tooltipstered");
+$('#msform input[type="text"]').removeAttr("aria-invalid");
+$('#msform select').attr("class", "tooltipstered");
+$('#msform select').removeAttr("aria-invalid");
+});
+
+var validator;
+function validateForm() {
+validator = $('#msform').validate({
+errorPlacement: function (error, element) {
+if (element.attr("type") == "text") {
+$(element).tooltipster('update', "This field is required");
+} else if (element.attr("type") == "select-one") {
+$(element).tooltipster('update', "Please select from the list");
+}
+else {
+$(element).tooltipster('update', "This field is required");
+}
+if (element.attr("name") == "E-mail") {
+$(element).tooltipster('update', "Please enter valid email address");
+}
+if (element.attr("name") == "incidentdate")
+ {$(element).tooltipster('update', "Please enter valid date");}
+$('element').tooltipster({
+functionInit: function () {
+return $('element').html();
+},
+functionReady: function () {
+$('element').attr('aria-hidden', false);
+},
+functionAfter: function () {
+$('element').attr('aria-hidden', true);
+}
+});
+$(element).focus(function () {
+if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+{ $(this).tooltipster('show'); }
+})
+.blur(function () {
+$(this).tooltipster('hide');
+});
+},
+success: function (label, element) {
+$(element).tooltipster('hide');
+},
+invalidHandler: function () {
+$(this).find(".error:first").focus();
+}
+});
+if (!$('#msform').valid()) {
+return false;
+}
+else { return true; }
+}
+
+$("#nextstep2").click(function (event) {
+if (validateForm()) {
+var retCode = false;
+current_fs = $(this).parent().parent();
+next_fs = $(this).parent().parent().next();
+event.preventDefault();
+validateAddress(function (output) {
+if (output == true) {
+retCode = true;
+}
+if (retCode == true) {
+var fullAddress = $("#houseNumber").val() + " " + $("#street").val();
+$("#address").val(fullAddress);
+$("#between").val(fullAddress);
+$("#streetaddress").val(fullAddress);
+$("#intersection").val(fullAddress);
+$("#city").val($("#GEOcity").val());
+$("#postalcode").val($("#GEOzipcode").val());
+
+var boroughWithID = $("#boro option:selected").val() + "-" + $("#boro option:selected").text();
+$("#boroName").val(boroughWithID);
+next_fs.show();
+current_fs.hide();
+$('#astep1').removeClass('active1');
+$('#astep2').addClass('active2');
+return false;
+}
+});
+}
+else {
+validator.focusInvalid();
+return false;
+}
+});
+
+$("#previousstep1").click(function () {
+$('#msform input[type="text"]').attr("class", "tooltipstered");
+$('#msform select').attr("class", "tooltipstered");
+$('#msform input[type="text"]').removeAttr("aria-invalid");
+$('#msform select').removeAttr("aria-invalid");
+current_fs = $(this).parent().parent();
+previous_fs = $(this).parent().parent().prev();
+previous_fs.show();
+current_fs.hide();
+$('#astep2').removeClass('active2');
+$('#astep1').addClass('active1');
+return false;
+});
+
+
+$("#nextstep3").click(function (event) {
+current_fs = $(this).parent().parent();
+next_fs = $(this).parent().parent().next();
+
+
+if (validateForm() && isValidEmailAddress($("#contact1email"))){
+
+
+$('#disborough').text($("#boro option:selected").text());
+$('#disbldg').text($('#houseNumber').val());
+$('#disstreet').text($('#street').val());
+
+var siteroomfloor = $("#siteroomfloor").val();
+if (siteroomfloor.length > 0)
+{ $('#disfloorsuiteapt').html(siteroomfloor); }
+else
+{ $('#disfloorsuiteapt').html('&nbsp;'); }
+
+$('#disfirstname').text($('#contact1firstname').val());
+$('#dislastname').text($('#contact1lastname').val());
+$('#disemail').text($('#contact1email').val());
+$('#disphone').text($('#contact1phone').val());
+
+$('#disborofortraining').text($("#whenwhere_winterspring option:selected").text());
+$('#whenwhere_fall').val('None of these');
+
+var description = '';
+var showContact = $("input:radio[name='appliedforprogram']:checked").val();
+if (showContact == "Yes" || showContact == "No" ) {
+description = "Have you applied to this program before? " + showContact + ".        ";
+
+$('#disappliedforprogram').html(showContact);
+} else {$('#disappliedforprogram').html('&nbsp;'); }
+
+
+var compostingexperience = $("#compostingexperience").val();
+if (compostingexperience.length > 0)
+{ $('#discompostingexperience').html(compostingexperience); }
+else
+{ $('#discompostingexperience').html('&nbsp;'); }
+
+ $("#compostingexperiencecombined").val(description + compostingexperience);
+
+var whydoyou = $("#whydoyou").val();
+if (whydoyou.length > 0)
+{ $('#diswhydoyou').html(whydoyou); }
+else
+{ $('#diswhydoyou').html('&nbsp;'); }
+
+var usingthetraining = $("#usingthetraining").val();
+if (usingthetraining.length > 0)
+{ $('#disusingthetraining').html(usingthetraining); }
+else
+{ $('#disusingthetraining').html('&nbsp;'); }
+
+var affiliations = $("#affiliations").val();
+if (affiliations.length > 0)
+{ $('#disaffiliations').html(affiliations); }
+else
+{ $('#disaffiliations').html('&nbsp;'); }
+
+next_fs.show();
+$('.fieldset4').show();
+$('#astep2').removeClass('active2');
+$('#astep3').addClass('active3');
+current_fs.hide();
+return false;
+} else {
+validator.focusInvalid();
+return false;
+}
+});
+$("#previousstep2").click(function () {
+$('.fieldset2').show();
+$('#astep3').removeClass('active3');
+$('#astep2').addClass('active2');
+$('.fieldset3').hide();
+$('.fieldset4').hide();
+return false;
+});
+</script>
+
+
+
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

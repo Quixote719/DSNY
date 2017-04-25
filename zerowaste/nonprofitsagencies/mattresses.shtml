@@ -1,0 +1,15 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Mattresses</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+		<h1>Mattresses</h1>
+
+		<p>Fully enclose unwanted mattresses within sealed plastic bags (to prevent the spread of bed bugs) and discard as bulk garbage on a regular collection day.</p>
+		<p>Mattresses cannot be donated.</p>
+
+	</div></div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

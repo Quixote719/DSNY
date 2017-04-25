@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">NYC Sanitation Seeks Private Firms to assist in Snow Removal During Major Snowfalls</h3>
+<div class="prs-subtitle">
+<p><strong>Tuesday, December 16, 2008</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 08-62, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that it is looking to register firms to assist in the removal of snow and ice from City thoroughfares during periods of severe weather.  Hired equipment and licensed operators will supplement Sanitation personnel and equipment in keeping vital arteries open for all vehicular traffic.</p>
+<p>The Department is particularly looking for firms that have operators and equipment such as front-loaders, dump trucks, truck cranes, bobcats, bulldozers, and winch trucks.</p>
+<p>All hired firms must be pre-qualified.  Interested firms should contact the DSNY Operations Bureau Contracting Officer, Larry Maglio at (646) 885-4992, Mimi Pizarro at (646) 885-4536, or Carol Daleo at (646) 885-4890.  Ms. Pizarro should also be contacted for the hired equipment agreement package.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

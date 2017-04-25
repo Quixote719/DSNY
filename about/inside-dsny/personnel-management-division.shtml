@@ -1,0 +1,18 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Personnel Management Division </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+                 <h1>Personnel Management Division</h1>
+<p>The Personnel Management Division coordinates with Human Resources on employee-related personal actions, such as the hiring process of new Sanitation Workers, promotions, demotions, 
+employee evaluations, disciplinary matters, separation of service, and employee hardships. The Division also monitors the electronic disciplinary system (DS 249) for accuracy, and acts as the liaison between the 
+Department Advocate and the field operations of the Bureau of Cleaning and Collection and the Solid Waste Management Unit. The Division allocates general superintendents, supervisors, civilians and 
+Sanitation Workers assigned to medical-duty to support daily Cleaning and Collection field operations.</p>
+
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

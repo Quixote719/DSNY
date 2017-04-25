@@ -1,0 +1,38 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	
+<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #17-10<br />
+  Tuesday, February 14, 2017 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>	
+  
+<p> <strong> No Garbage, Recycling or Organic Collection, nor Street Cleaning on Presidents’ Day, Monday, February 20
+
+</strong></p>
+
+<p>The New York City Department of Sanitation announced that in observance of Presidents’ Day, there will be no 
+garbage, recycling, or organics collection, nor street cleaning on Monday, February 20, 2017.  </p>
+
+<p>
+<ul>
+<li> Residents who normally receive <strong> Monday trash, organics or recycling collection </strong> should place their 
+material out at curbside after 4 p.m. on Monday, February 20 for pickup. The Department usually collects 
+recyclables the week following the holiday, and this is a departure from our normal holiday service. </li>
+ </ul>
+ </p>
+
+<p>Additionally, all Sanitation Department administrative offices will be closed on Monday, January 16, in observance of the holiday.</p>
+
+<p>For questions about Sanitation services and holiday schedules contact 311 or visit <a href=http://nyc.gov/sanitation"> nyc.gov/sanitation</a>. </p>
+
+
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

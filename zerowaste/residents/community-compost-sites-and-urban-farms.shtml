@@ -1,0 +1,38 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste -  Community Compost Sites and Urban Farms  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Community Compost Sites and Urban Farms </h1>
+
+
+
+<h2>Compost Sites</h2>
+<p>DSNY funds medium-scale compost sites that process organic waste collected at <a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml">food scrap drop-off sites</a> and public events in the City. Contact any of these sites to take a tour or to volunteer:</p>
+<p><a href="http://www.bignyc.org/compost">NYC Compost Project hosted by Big Reuse (Queens)</a> is the largest urban composting operation in the City, with a covered windrow under the Queensborough Bridge.</p>
+<p><a href="http://www.earthmatter.org">NYC Compost Project hosted by Earth Matter NY</a> operates the Compost Learning Center, featuring a large, solar-powered aerated windrow composting system, as well as an exhibit of smaller-scale composting operations.</p>
+<p><a href="http://lesecologycenter.org">Lower East Side Ecology Center (Manhattan)</a> is the oldest community composting operation of its scale in NYC, featuring an operation that combines in-vessel composting and vermicomposting systems to produce high-quality finished compost.
+This work is partially funded through the NYC Compost Project.</p>
+<p><a href="http://www.bbg.org/gardening/composting">NYC Compost Project hosted by Brooklyn Botanic Garden</a> runs the compost site at <a href="http://www.added-value.org/compost/">Red Hook Community Farm (Brooklyn)</a>, the largest entirely hand-turned, solar-powered community composting operation in NYC.
+</p>
+<h2>Urban Farms</h2>
+<p>NYC Compost Project supports and works closely with many of NYC&rsquo;s urban farms to provide communities with fresh food grown in soil nourished by compost produced locally. By growing food and composting food scraps locally, these farms demonstrate closed-loop models of food production and food recycling that can be replicated in urban settings across the country. Contact the farms to visit or to volunteer:</p>
+<p><a href="http://www.queensbotanical.org/Education/QBGFarm">QBG Farm at Queens Botanical Garden (Queens) </a></p>
+<p><a href="http://www.added-value.org">Red Hook Community Farm (Brooklyn)</a></p>
+<p><a href="http://www.snug-harbor.org/heritage-farm">Heritage Farm at Snug  Harbor Cultural Center &amp; Botanical Garden (Staten Island) </a></p>
+<h2>Small-Scale Demonstration Sites</h2>
+<p>Located within the City&rsquo;s botanical gardens, NYC Compost Project demonstration sites exhibit various compost systems suitable for residential backyards, schools, and community gardens:</p>
+<p><a href="http://www.bbg.org/discover/gardens/home_composting_exhibit">Brooklyn Botanic Garden (Brooklyn) </a></p>
+<p><a href="http://www.nybg.org/compost">The New York Botanical Garden (Bronx) </a></p>
+<p><a href="http://www.queensbotanical.org/compost">Queens Botanical Garden (Queens) </a></p>
+<p><a href="http://www.snug-harbor.org/compost">Snug Harbor Cultural Center and Botanical Garden (Staten Island)</a></p>
+<h2>Community Compost Sites</h2>
+<p>Get involved or tour a community compost site near you. See a directory of <a href="/assets/dsny/docs/zerowaste_community-compost-sites_0815.pdf">community compost sites in NYC (PDF).</a></p>
+	</div>
+
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

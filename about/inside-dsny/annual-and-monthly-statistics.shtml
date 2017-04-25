@@ -1,0 +1,75 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Annual and Monthly Statistics </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1> Annual &amp; Monthly Statistics </h1> <br />
+
+		<h2>Annual Reports for DSNY Curbside Collections</h2>
+
+		<p>Annual breakdown, by borough and Community District, of recycling and garbage tonnages collected curbside by DSNY, along with diversion and capture rates.</p>
+		<p>
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2016.pdf">Fiscal Year 2016 DSNY Curbside Collections</a><br />
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2015_0815.pdf">Fiscal Year 2015 DSNY Curbside Collections</a><br />
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2014_0815.pdf">Fiscal Year 2014 DSNY Curbside Collections</a> <br />
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2013_0815.pdf">Fiscal Year 2013 DSNY Curbside Collections</a> <br />
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2012_0815.pdf">Fiscal Year 2012 DSNY Curbside Collections</a> <br />
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2011_0815.pdf">Fiscal Year 2011 DSNY Curbside Collections</a></p>
+
+			<h2>Annual Reports for DSNY &amp; Non-DSNY Collections</h2>
+			<p>Annual breakdown of municipal recycling and garbage tonnages, along with diversion rates and goals.</p>
+			<p>
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2016.pdf">Fiscal Year 2016 DSNY and Non-DSNY Collections</a> <br />
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2015.pdf">Fiscal Year 2015 DSNY and Non-DSNY Collections</a> <br />
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2014_0815.pdf">Fiscal Year 2014 DSNY and Non-DSNY Collections</a> <br />
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2013_0815.pdf">Fiscal Year 2013 DSNY and Non-DSNY Collections</a> <br />
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2012_0815.pdf">Fiscal Year 2012 DSNY and Non-DSNY Collections</a> <br />
+				<a href="/assets/dsny/docs/about_dsny-non-dsny-collections-FY2011_0815.pdf">Fiscal Year 2011 DSNY and Non-DSNY Collections</a></p>
+
+				<h2>Fiscal Year to Date Report for DSNY Collections</h2>
+
+				<p>A fiscal year to date breakdown by borough, showing curbside, containerized, and other DSNY-managed recycling and garbage tonnages collected, along with diversion rates.</p>
+				<p><a href="/assets/dsny/docs/about_dsny-collections-FYTD.pdf">Fiscal Year to Date DSNY Collections</a></p>
+
+				<h2>Monthly Reports for DSNY Curbside and Containerized Collections&nbsp;</h2>
+
+				<p>Monthly breakdown, by borough and Community District, of recycling and garbage tonnages collected, along with diversion and capture rates.</p>
+
+				<p>
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-11.pdf">November 2016 DSNY Curbside Collections</a> <br/>
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-10.pdf">October 2016 DSNY Curbside Collections</a> <br/>
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-09.pdf">September 2016 DSNY Curbside Collections</a> <br/>
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-08.pdf">August 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-07.pdf">July 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-06.pdf">June 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-05.pdf">May 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-04.pdf">April 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-03.pdf">March 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-02.pdf">February 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2016-01.pdf">January 2016 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-12.pdf">December 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-11.pdf">November 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-10_1215.pdf">October 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-09_1115.pdf">September 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-08_0915.pdf">August 2015 DSNY Curbside Collections</a> <br />	
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-07_0915.pdf">July 2015 DSNY Curbside Collections</a> <br />	
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-06_0815.pdf">June 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-05_0815.pdf">May 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-04_0815.pdf">April 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-03_0815.pdf">March 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-02_0815.pdf">February 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2015-01_0815.pdf">January 2015 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-12_0815.pdf">December 2014 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-11_0815.pdf">November 2014 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-10_0815.pdf">October 2014 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-09_0815.pdf">September 2014 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-08_0815.pdf">August 2014 DSNY Curbside Collections</a> <br />
+					<a href="/assets/dsny/docs/about_dsny-collections-monthly-2014-07_0815.pdf">July 2014 DSNY Curbside Collections</a></p>
+				</div>
+			</div>
+
+	<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

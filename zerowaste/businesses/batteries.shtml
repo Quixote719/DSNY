@@ -1,0 +1,65 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Batteries</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1> Batteries </h1>
+
+
+<p>
+	Your business must recycle or safely dispose of rechargeable, auto, or other hazardous batteries; they can’t be discarded in the regular garbage or recycling. Except in very large quantities, alkaline batteries can be discarded with regular garbage. 
+</p>
+<p>
+	<a href="http://www.call2recycle.org"  class="exitlink">Call2Recycle</a> collects and recycles batteries at no cost. Here is a list of additional services that offer battery collection, prepaid battery mail-back service, and battery alternatives; check the websites for details.
+</p>
+<h2>
+	Battery Collection Services
+</h2>
+<p>
+	</p><ul>
+		<li><a href="http://www.aerc.com"  class="exitlink">AERC Recycling Solutions</a></li>
+		<li><a href="http://www.batteryrecycling.com"  class="exitlink">Battery Solutions, Inc.</a></li>
+		<li><a href="http://www.crsrecycle.com"  class="exitlink">Complete Recycling Solutions, LLC</a></li>
+		<li><a href="http://egreenrecyclingmanagement.com"  class="exitlink">e-Green Management, LLC</a></li>
+		<li><a href="http://www.esolutionsusa.com/index.php"  class="exitlink">E-Solutions USA, LLC</a></li>
+		<li><a href="http://www.mybatteryrecyclers.com"  class="exitlink">My Battery Recyclers</a></li>
+		<li><a href="http://www.nlr-green.com"  class="exitlink">Northeast Lamp Recycling</a></li>
+		<li><a href="http://cleanlites.com"  class="exitlink">USA Lamp and Ballast Recycling</a></li>
+		<li><a href="http://hugoneurecycling.com"  class="exitlink">Hugo Neu Recycling</a></li>
+	</ul>
+<p></p>
+<h2>
+	Pre-paid Battery Mail-Back Services
+</h2>
+<p>
+	</p><ul>
+		<li><a href="http://ww2.recyclekits.com"  class="exitlink">AERC Recycling Solutions- RecycleKits</a></li>
+		<li><a href="http://www.biggreenbox.com"  class="exitlink">Big Green Box</a></li>
+		<li><a href="http://www.call2recycle.org"  class="exitlink">Call2Recycle</a></li>
+		<li><a href="http://egreenrecyclingmanagement.com"  class="exitlink">e-Green Management, LLC</a></li>
+		<li>Mercury Sanitation, Inc., 251 Barrett Hill Road, Mahopac, NY 10541, (845) 628-6028</li>
+		<li><a href="http://www.mybatteryrecyclers.com"  class="exitlink">My Battery Recyclers - MYBRS</a></li>
+		<li><a href="http://www.go-bak.com"  class="exitlink">Northeast Lamp Recycling - BakPak</a></li>
+		<li><a href="http://lamprecycling.veoliaes.com/homeV2"  class="exitlink">Veolia Environmental Services - RecyclePak</a></li>
+		<li><a href="https://www.wmlamptracker.com/v2/index.cfm"  class="exitlink">Waste Management LampTracker</a></li>
+	</ul>
+<p></p>
+<h2>
+	Battery Alternatives	
+</h2>
+<p>
+	</p><ul>
+		<li>Aladdin Power, 8875 Hidden River Parkway, Suite 300, Tampa, FL 33637, (813) 975-7177</li>
+		<li><a href="http://www.appliedinnotech.com"  class="exitlink">Applied Innovative Technologies</a></li>
+		<li><a href="http://www.freeplayenergy.com"  class="exitlink">Freeplay</a></li>
+		<li><a href="http://www.21st-century-goods.com"  class="exitlink">21st Century Goods</a></li>
+		<li><a href="http://windstreampower.com"  class="exitlink">Windstream</a></li>
+	</ul>
+<p></p>
+
+</div>				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,668 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Adopt A Basket </title>
+
+
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<style>
+#msform fieldset {
+border: none;
+max-width: 940px;
+/*stacking fieldsets above each other*/
+position: relative;
+}
+ 
+/*Hide all except first fieldset*/
+.fieldset2 {
+display: none;
+}
+ 
+.fieldset3 {
+display: none;
+}
+ 
+.fieldset4 {
+display: none;
+}
+ 
+.error {border-color:#e9322d !important}
+</style>
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<div id="container">
+<div id="header">
+    <h1><span class="subtitle">Adopt-a-Basket Program</span></h1>
+  </div>
+  <div>
+  <p>
+The NYC Department of Sanitation keeps New York City healthy, safe and clean – and New Yorkers, businesses and organizations can partner with DSNY by adopting a litter basket!
+</p>
+<p>
+Volunteers in our Adopt-a-Basket Program help protect our health and quality of life by keeping many of the City’s 25,000 litter baskets from overflowing.
+</p>
+<p>
+<strong>Why Volunteer?</strong><br />
+New Yorkers in busy areas sometimes fill litter baskets faster than our Sanitation teams can empty them. It’s better for our neighborhoods – and businesses – to help keep garbage from spilling onto sidewalks.
+</p>
+<p>
+Participants can highlight that they’re doing their share for their community! The Department presents all participants with a Certificate of Appreciation, which can be put on display.
+</p>
+<p>
+<strong>How Do I Help?</strong><br />
+Sanitation provides a supply of plastic liners, a collection schedule – and a direct DSNY contact at our local office.
+</p>
+<p>
+To help, monitor your litter baskets; when they’re three-quarters full, remove the used plastic liners, tie them, leave them next to the basket and insert a new liner.
+</p>
+<p>
+<strong>Sponsor a Basket, Too!</strong><br />
+To reduce litter and improve our streetscape, sponsors purchase deluxe, heavier-duty litter baskets – which Sanitation teams regularly empty.
+</p>
+<p>
+In the Sponsor-a-Basket Program, businesses, organizations and New Yorkers supply pre-approved baskets to replace the City’s standard design. These higher-end baskets include a logo or name to highlight the sponsor’s commitment to maintaining the community’s quality of life. (Of course, you can sponsor and adopt a basket, too!)
+</p>
+<p>
+To sponsor a basket or learn more about this initiative, email <a href="mailto:CustomerService@dsny.nyc.gov">CustomerService@dsny.nyc.gov</a>.
+</p>  </div>
+  <form id="msform" class="pure-form" method="post" type="external" name="mradopt" action="http://www.nyc.gov/doittcaptcha/validatecap">
+
+<input type="hidden" name="cgi" value="/cgi-bin/misc/mailform.cgi"/>
+
+<input value="http://www1.nyc.gov/site/dsny/index.page" type="hidden" name="return_link_url">
+	
+<input name="code" value="10A" type="hidden"/> 
+<input name="contact_info" type="hidden"/> 
+<input name="turn_javascript_on" type="hidden" value="true"/> 
+<input name="recipient" value="mbrahmbhatt@dsny.nyc.gov" type="hidden"/> 
+
+<input name="return_link_title" value="Return to Sanitation Home Page" type="hidden"/> 
+<input name="request" value="Adopt-A-Basket Service Request Acknowledgment" type="hidden"/> 
+<input name="required" value="boro,intersection,name,address,city,state,zipcode,contact_person,phonenumber,email" type="hidden"/> 
+<input name="sort" value="order:Adopt-A-Basket Service Request Acknowledgment,code,boro,intersection,email,request,locationdetails,name,phonenumber,contact_person" type="hidden"/> 
+<!--<input name="subject" value="DSNY WebForms - TESTING" type="hidden"/>-->
+<input name="subject" value="Adopt-A-Basket Program" type="hidden"/>
+<input name="env_report" value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" type="hidden"/>
+
+        <input name="app_key" type="hidden" value="06F6620746865206F" />        
+        <input name="boro" id="boroName" type="hidden"/>
+        <input name="intersection" id="intersection" type="hidden"/>                       
+        <input name="address" id="address" type="hidden"/>                       
+        <input name="state" id="state" type="hidden" value="NY"/>  
+        <input name="contact_person" id="contact_person" type="hidden"/>      
+        <!--<input name="redirect" value="http://nyc-csg-web.csc.nycnet/site/dsny/contact/programs/thankyou.page" type="hidden"/>-->
+
+        <div id="steps">
+            <a id="astep1" class="step1 active1" href="#"></a>
+            <a id="astep2" class="step2" href="#"></a>
+            <a id="astep3" class="step3" href="#"></a>
+        </div>
+        <div style="text-align:right;font-size:12px"><span class="red">*</span>Denotes required field</div>
+        <fieldset>	
+            <div class="pure-g">
+                <div id="subcontainer">
+                    <div class="section"> Where is the litter basket located?  </div>
+                    <div class="table">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="boro">Boro<span class="red">*</span></label>
+                            <select id="boro" name="borough" required tabindex="1" type="select-one">
+                                <option selected="selected" value="">Select your borough</option>
+                                <option value="2">Bronx</option>
+                                <option value="3">Brooklyn</option>
+                                <option value="1">Manhattan</option>
+                                <option value="4">Queens</option>
+                                <option value="5">Staten Island</option>
+                            </select>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3"></div> 
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="houseNumber">Nearest BLDG#<span class="red">*</span></label>
+                            <input id="houseNumber" name="houseNumber" tabindex="2" type="text" required maxlength="10"/>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="street">Street<span class="red">*</span></label>
+                            <input id="street" name="street" tabindex="3" type="text" required maxlength="50"/>
+                        </div>
+                      
+                        <div class="pure-u-1 pure-u-md-1-3-b">
+                            <label for="locationdetails">Additional location Information (maximum 100 characters)</label>
+                            <textarea id="locationdetails" name="locationdetails" maxlength="100" tabindex="4"></textarea>
+                        </div>
+                    <br/>
+                    <div id="results" class="pure-u-sm-24-24"></div>
+                    </div>                    
+                </div>
+            </div>                 
+               
+            <br/>
+            <div id="buttons">
+                <a class="pure-button next" id="cancel">Clear</a>
+		        <button id="nextstep2" class="pure-button next" tabindex="5">&nbsp;<strong>Next</strong>&nbsp;</button>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset2">	
+            <div class="pure-g">
+                <div id="subcontainer">               
+                    <div class="section"> Contact information </div>
+                    <div class="table">                       
+                          <div id="personalinfo" style="display:block">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="name">Business/Organization Name<span class="red"><span class="red">*</span></span></label>
+                                <input id="name" type="text" name="name" tabindex="6" maxlength="25" required/>
+                            </div>
+                            
+                            <div class="pure-u-1 pure-u-md-1-3"></div> 
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="contactstreet">Address<span class="red">*</span></label>
+                                <input id="contactstreet" type="text" name="contactstreet" tabindex="7" maxlength="50" required/>
+                            </div> 
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="contactfloor">Floor/Suite/Apt</label>
+                                <input id="contactfloor" type="text" name="contactfloor" tabindex="8" maxlength="10"/>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="city">City<span class="red">*</span></label>
+                                <input id="city" type="text" name="city" tabindex="9" maxlength="25" required/>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="zipcode">Zip Code<span class="red">*</span></label>
+                                <input id="zipcode" type="text" name="zipcode" tabindex="10" maxlength="10" required/>
+                            </div>   
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="first-name">First Name<span class="red"><span class="red">*</span></span></label>
+                                <input id="first-name" type="text" name="firstname" tabindex="11" maxlength="25" required/>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="last-name">Last Name<span class="red">*</span></label>
+                                <input id="last-name" type="text" name="lastname" tabindex="12" maxlength="25" required/>
+                            </div>                                                                             
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="phonenumber">Phone<span class="red">*</span></label>
+                                <input id="phonenumber" type="text" name="phonenumber" tabindex="13" maxlength="21" required/>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="email">E-Mail<span class="red">*</span></label>
+                                <input id="email" name="email" type="text" maxlength="50" required tabindex="14" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="buttons">
+                <button id="previousstep1" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                <button id="nextstep3" class="pure-button next" tabindex="15">&nbsp;<strong>Next</strong>&nbsp;</button>
+            </div>
+        </fieldset>
+        <fieldset class="fieldset3">	
+            <div class="pure-g">
+                <div id="subcontainer">
+                    <div class="section"> Submission confirmation</div>
+		     	
+                    <div class="table">
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Borough</div>
+                            <div id="disborough" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Building #</div>
+                            <div id="disbldg" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Street Name</div>
+                            <div id="disstreet" class="data_long"></div>
+                        </div>                        
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Additional Info</div>
+                            <div id="disadditionalinfo" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Business Name</div>
+                            <div id="disbusiness" class="data_long">&nbsp;</div>
+                        </div>      
+                         <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Address</div>
+                            <div id="discontactstreet" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Floor/Suite/Apt</div>
+                            <div id="discontactfloor" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">City</div>
+                            <div id="discontactcity" class="data_long"></div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Zip Code</div>
+                            <div id="discontactzip" class="data_long"></div>
+                        </div>                    
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">First Name</div>
+                            <div id="disfirstname" class="data_long">&nbsp;</div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Last Name</div>
+                            <div id="dislastname" class="data_long">&nbsp;</div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Phone</div>
+                            <div id="disphone" class="data_long">&nbsp;</div>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-24-24">
+                            <div class="label">Email</div>
+                            <div id="disemail" class="data_long">&nbsp;</div>
+                        </div>                      
+                    </div>
+                  <br>
+                </div>
+            </div>
+<br>
+</fieldset>   
+   <div id="fieldset4" class="fieldset4">	
+            <div class="row">
+                <div class="container">
+                <div class="span4">&nbsp;</div>
+                <div id="captcha" class="span5">
+                <script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+                </div>
+                <div class="span6"></div>
+                </div>
+            </div>  
+            <br/>
+            <div id="buttons">
+                <button id="previousstep2" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                <button id="submit" type="submit" class="pure-button next">&nbsp;<strong>Submit</strong>&nbsp;</button>
+            </div>
+      </div>
+    </form>
+</div>
+
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+ 
+ <script src="/assets/dsny/js/webforms/GeoValidation.js" type="text/javascript"></script>
+
+
+ <script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+
+
+ <script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+
+ <script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+
+
+        $('#phonenumber').mask('(999) 999-9999? x99999');
+
+
+        $('#zipcode').mask('99999');
+
+
+        $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+
+
+        $('#msform textarea').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+
+
+        $('#msform select').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+
+
+        $('textarea[maxlength]').keyup(function () {
+            var limit = parseInt($(this).attr('maxlength'));
+            var text = $(this).val();
+            var chars = text.length;
+
+
+            if (chars > limit) {
+                var new_text = text.substr(0, limit);
+                $(this).val(new_text);
+            }
+        });
+    });
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+    var current_fs, next_fs, previous_fs;
+    var left, opacity, scale;
+
+
+    $("#cancel").click(function () {
+
+
+        $("#houseNumber").val('');
+
+
+        $("#street").val('');
+
+
+        $("#boro").val('');
+
+
+        $("#results").empty();
+
+
+        $("#locationdetails").val('');
+
+
+        $('#msform input[type="text"]').attr("class", "tooltipstered");
+
+
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+
+
+        $('#msform select').attr("class", "tooltipstered");
+
+
+        $('#msform select').removeAttr("aria-invalid");
+
+
+    });
+
+
+    var validator;
+
+
+    function validateForm() {
+
+
+        validator = $('#msform').validate({
+
+
+            errorPlacement: function (error, element) {
+
+
+                if (element.attr("type") == "text") {
+
+
+                    $(element).tooltipster('update', "This field is required");
+
+
+                } else if (element.attr("type") == "select-one") {
+
+
+                    $(element).tooltipster('update', "Please select from the list");
+                }
+                else {
+
+
+                    $(element).tooltipster('update', "This field is required");
+                }
+
+
+                if (element.attr("name") == "email") {
+                    $(element).tooltipster('update', "Please enter valid email address");
+                }
+
+
+                $('element').tooltipster({
+                    functionInit: function () {
+                        return $('element').html();
+                    },
+
+
+                    functionReady: function () {
+                        $('element').attr('aria-hidden', false);
+                    },
+                    functionAfter: function () {
+                        $('element').attr('aria-hidden', true);
+                    }
+                });
+
+
+
+
+                $(element).focus(function () {
+
+
+                    if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+
+
+                    { $(this).tooltipster('show'); }
+
+
+                })
+                     .blur(function () {
+                         $(this).tooltipster('hide');
+                     });
+            },
+            success: function (label, element) {
+                $(element).tooltipster('hide');
+            },
+
+
+            invalidHandler: function () {
+                $(this).find(".error:first").focus();
+            }
+        });
+
+
+        if (!$('#msform').valid()) {
+            return false;
+        }
+        else { return true; }
+    }
+
+
+
+
+    $("#nextstep2").click(function (event) {
+
+
+        if (validateForm()) {
+            var retCode = false;
+
+
+            current_fs = $(this).parent().parent();
+
+
+            next_fs = $(this).parent().parent().next();
+
+
+            event.preventDefault();
+
+
+            validateAddress(function (output) {
+                if (output == true) {
+                    retCode = true;
+                }
+
+
+                if (retCode == true) {
+
+
+                    var fullAddress = $("#houseNumber").val() + " " + $("#street").val();
+                    $("#intersection").val(fullAddress);
+                   
+
+
+                    var boroughWithID = $("#boro option:selected").val() + "-" + $("#boro option:selected").text();
+                    $("#boroName").val(boroughWithID);
+
+
+                    next_fs.show();
+
+
+                    current_fs.hide();
+
+
+                    $('#astep1').removeClass('active1');
+
+
+                    $('#astep2').addClass('active2');
+
+
+                    return false;
+                }
+            });
+        }
+        else {
+            validator.focusInvalid();
+            return false;
+        }
+    });
+
+
+
+
+    $("#previousstep1").click(function () {
+
+
+        $('#msform input[type="text"]').attr("class", "tooltipstered");
+
+
+        $('#msform select').attr("class", "tooltipstered");
+
+
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+
+
+        $('#msform select').removeAttr("aria-invalid");
+
+
+        current_fs = $(this).parent().parent();
+
+
+        previous_fs = $(this).parent().parent().prev();
+
+
+        previous_fs.show();
+
+
+        current_fs.hide();
+
+
+        $('#astep2').removeClass('active2');
+
+
+        $('#astep1').addClass('active1');
+
+
+        return false;
+    });
+
+
+
+
+    $("#nextstep3").click(function (event) {
+        current_fs = $(this).parent().parent();
+
+
+        next_fs = $(this).parent().parent().next();
+
+
+        if (validateForm() && isValidEmailAddress($('#email'))) {
+
+
+            $('#disborough').text($("#boro option:selected").text());
+            $('#disbldg').text($('#houseNumber').val());
+            $('#disstreet').text($('#street').val());
+
+
+            var str = $("#locationdetails").val();
+            str = str.replace(/\n/g, '<br />');
+            if (str.length > 0)
+            { $('#disadditionalinfo').html(str); }
+            else
+            { $('#disadditionalinfo').html('&nbsp;'); }
+
+
+            $('#disbusiness').text($('#name').val());
+            $('#discontactstreet').text($('#contactstreet').val());
+
+
+              var contactFloor = $('#contactfloor').val();
+
+
+                if (contactFloor.length > 0) {
+                    $('#discontactfloor').html(contactFloor);
+                }
+                else {
+                    $('#discontactfloor').html('&nbsp;');
+                }
+
+
+            $('#discontactcity').text($('#city').val());
+            $('#discontactzip').text($('#zipcode').val());
+
+
+            $('#disfirstname').text($('#first-name').val());
+            $('#dislastname').text($('#last-name').val());
+            $('#disemail').text($('#email').val());
+            $('#disphone').text($('#phonenumber').val());
+
+
+     var contactAddress = $("#contactfloor").val() + " " + $("#contactstreet").val();
+             $("#address").val(contactAddress);
+
+
+            $("#contact_person").val($("#first-name").val() + " " + $("#last-name").val());
+
+
+            next_fs.show();
+            $('.fieldset4').show();
+            $('#astep2').removeClass('active2');
+            $('#astep3').addClass('active3');
+            current_fs.hide();
+            return false;
+        } else {
+            validator.focusInvalid();
+            return false;
+        }
+
+
+    });
+
+
+    $("#previousstep2").click(function () {
+        $('.fieldset2').show();
+        $('#astep3').removeClass('active3');
+        $('#astep2').addClass('active2');
+        $('.fieldset3').hide();
+        $('.fieldset4').hide();
+        return false;
+    });
+
+
+</script>
+
+
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

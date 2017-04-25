@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Snow Alert Issued for Sunday, December 8th, at 4 p.m.</h3>
+<div class="prs-subtitle">
+<p><strong>Saturday, December 7, 2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-50, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation has issued a &lsquo;snow alert&rsquo; for Sunday, December 8, 2013 starting at 4 p.m.</p>
+<p style="text-align: left;">A snow alert indicates the possibility of a snow event.&nbsp; In preparation for a snow event, DSNY personnel begin initial equipment readiness, including loading of our 365 salt spreaders, attaching plows when necessary, preparing tire chains and notifying supplementary personnel as needed.&nbsp; DSNY is coordinating with the Office of Emergency Management and the Department of Transportation on snow clearing protocol in accordance with each agency&rsquo;s written snow plan.&nbsp; All relevant city agencies have been notified of the snow alert.&nbsp; DSNY will continue to monitor forecasts and will provide updates as the snow event approaches.</p>
+<p style="text-align: left;">All winter weather information and information about the City&rsquo;s response to the storm can be found by visiting the City&rsquo;s Severe Weather Website at <a href="http://www1.nyc.gov/site/severeweather/index.page">www.nyc.gov/severeweather</a> or by calling 311. New Yorkers are also encouraged to sign up for the Notify NYC, the City&rsquo;s free emergency notification system.&nbsp; Through Notify NYC, New Yorkers can sign up for receive phone calls, text messages, and emails alerts about severe weather events and emergencies.&nbsp; To sign up for Notify NYC, call 311, visit <a href="http://www1.nyc.gov/">www.nyc.gov</a>, or follow @ NotifyNYC on Twitter.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

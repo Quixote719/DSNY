@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation to Resume Christmas Tree Recycling Program This Season</h3>
+<div class="prs-subtitle">
+<p><strong>December 22, 2003</strong>&nbsp;| <em>Vito A. Turso / John Pampalone (646) 885-5020</em></p>
+<p>Press Release # 03-64, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Sanitation Commissioner John J. Doherty announced today that the Department will resume collecting discarded Christmas trees for chipping and composting citywide starting Monday, January 5, 2004 and continuing through Saturday, January 10, 2004. Only limited tree recycling collections were conducted last year because of the city's budget concerns.</p>
+<p>This year, DSNY asks residents to remove all tree stands, tinsel, lights and ornaments from trees <b><i>before</i>placing them out for collection. </b><b>DO NOT place trees in plastic bags.</b>Clean, non-bagged Christmas trees can be left out at the curb anytime during the week of Monday, January 5, 2004 and Saturday, January 10, 2004. Trees will be chipped into compost by the Parks Department and be distributed to parks, playing fields, and community gardens throughout the city. An estimated 100,000 trees are placed out for collection throughout the city each holiday season.</p>
+<p>For questions about Sanitation services, call the Citizens Service Center at 311 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

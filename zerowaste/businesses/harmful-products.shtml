@@ -1,0 +1,49 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Harmful Products</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1> Harmful Products</h1>
+
+<p>
+	Items like dental amalgams, thermostats, light bulbs, batteries, and other products that contain mercury are hazardous to the environment and cannot be discarded with garbage. 
+</p>
+<p>
+	You can use an internet search database such as <a href="http://www.thebluebook.com/search.html?region=1&class=2363" >The Blue Book</a> to find a licensed hazardous waste hauler.  
+</p>
+<p>
+	The NYS Department of Environmental Conservation maintains a list of <a href="http://www.dec.ny.gov/chemical/8844.html" >hazardous waste haulers than will accept elemental mercury</a>. When contacting haulers, ask for certification that the mercury will go to a recycling facility.
+</p>
+<h2>
+	Mercury Device Collection Services
+</h2>
+<p>
+	<ul>
+		<li><a href="http://www.aercrecycling.com" >AERC Recycling Solutions</a></li>
+		<li><a href="http://www.crsrecycle.com/recycling_mercury.asp" >Complete Recycling Solutions, LLC</a></li>
+		<li><a href="http://www.esolutionsusa.com" >E-Solutions USA, LLC</a></li>
+		<li><a href="http://www.mwsi.com" >Mercury Waste Solutions</a></li>
+		<li><a href="http://www.nlr-green.com" >Northeast Lamp Recycling</a></li>
+		<li><a href="http://www.cleanlites.com" >Cleanlites Recycling</a></li>
+		<li><a href="http://www.veoliaes.com" >Veolia Environmental Services</a></li>
+	</ul>
+</p>
+<h2>
+	Pre-Paid Mail-Back Services 
+</h2>
+<p>
+	<ul>
+		<li><a href="https://www.aerc.com" >AERC Recycling Solutions</a></li>
+		<li><a href="http://www.crsrecycle.com/products.asp" >Complete Recycling Solutions - CRS-PAK</a></li>
+		<li>Mercury Sanitation, Inc., 251 Barrett Hill Road, Mahopac, NY 10541, (845) 628-6028</li>
+		<li><a href="https://veoliaes-ts.com/RecyclePak" >Veolia Environmental Services - RecyclePak</a></li>
+		<li><a href="https://www.wmlamptracker.com" >Waste Management LampTracker</a></li>
+	</ul>
+</p>
+
+			</div>	
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

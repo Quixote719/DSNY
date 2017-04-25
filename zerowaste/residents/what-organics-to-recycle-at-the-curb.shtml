@@ -1,0 +1,53 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What Organics To Recycle at the Curb  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_residents_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1> What Organics To Recycle at the Curb </h1>
+
+		<p>Residents in <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml" title="organics collection pilot areas">buildings that receive organics collection</a> can recycle the following materials at the curb.</p>
+		<h2>Acceptable Food Waste</h2>
+		<ul>
+			<li>Vegetables and fruit</li>
+			<li>Prepared foods</li>
+			<li>Baked goods</li>
+			<li>Cereal, flour, grains, pasta, and rice</li>
+			<li>Eggs and eggshells</li>
+			<li>Dairy products</li>
+			<li>Meat, fish, bones and nuts</li>
+		</ul>
+		<h2>Acceptable Food-Soiled Paper</h2>
+		<ul>
+			<li>Paper towels and napkins</li>
+			<li>Paper plates</li>
+			<li>Coffee filters and tea bags</li>
+			<li>Paper bags</li>
+			<li>Paper trays</li>
+		</ul>
+		<h2>Acceptable Leaf &amp; Yard Waste</h2>
+		<ul>
+			<li>Leaves</li>
+			<li>Grass clippings</li>
+			<li>Garden trimmings</li>
+			<li>Plants</li>
+		</ul>
+		<p>
+		Leaf and yard waste that won’t fit in your organics bin may be placed at the curb in open, unlined containers or in paper lawn &amp; leaf bags. Do NOT set out yard waste in plastic bags. 
+
+		<h2>Items NOT Accepted in Your Organics Bin</h2>
+		<ul>
+			<li>Liquids (small amounts of grease or oils are acceptable) </li>
+			<li>Recyclables such as metal, glass, rigid plastic, cartons, clean paper, and cardboard</li>
+			<li>Trash such as plastic shopping bags and plastic wrap, bathroom and medical waste (bandages, feminine products, or diapers), animal and pet waste (kitty litter, feces, or carcasses), and cigarette butts and ashes</li>
+			<li>Trees, tree prunings, or firewood that is more than a half-inch in diameter from Brooklyn and Queens, which are <a href="http://www.nycgovparks.org/trees/beetle-alert/control-measures" title="Asian Longhorned Beetle quarantine areas">Asian Longhorned Beetle quarantine areas</a></li>
+		</ul>
+		<h2>Order Free Info</h2>
+		<p><strong>To order free recycling decals</strong> and information on NYC Organics Collection, use the <a href="http://on.nyc.gov/recycling-materials-residents-organics">recycling materials request form</a>.</p>
+		<p></p>
+
+	</div></div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

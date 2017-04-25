@@ -1,0 +1,36 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Collection Schedule For Schools</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycling_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Collection Schedule For Schools</h1>
+
+<h2>Schools Without NYC Organics Collection</h2>
+<p><strong>School Truck</strong> - DSNY collects garbage from most NYC schools every weeknight. If your school receives daily collection, set out recyclables and garbage according to this schedule:</p>
+<ul>
+<li><b>Monday, Wednesday, Friday:</b> Clean paper and cardboard; garbage. Set out at curb by 4 pm.</li>
+<li><b>Tuesday, Thursday: </b>Metal, glass, plastic, and cartons; garbage. Set out at curb by 4 pm.</li>
+</ul>
+<p><strong>Neighborhood Collection</strong> - If your school is NOT on a daily collection schedule, your recycling and garbage are collected on the same days as your <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml" title="local neighborhood">local neighborhood</a>. Set out recycling and garbage AFTER 4 pm the night before collection.</p>
+<p><strong>Dumpsters</strong> - Some large schools use separate dumpsters for garbage and/or for clean paper and cardboard. Metal, glass, plastic, and cartons must be set out at the curb in clear bags for regular weekly recycling collection on the same schedule as your <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml" title="local neighborhood">local neighborhood</a>.</p>
+<br />
+<h2>Schools With NYC Organics Collection</h2>
+<p>Organics Collection occurs on days students are in attendance, according to the schedule shown below.</p>
+<p><strong>Recyclables and food scraps</strong> are collected every weeknight:</p>
+<ul>
+<li><strong>Monday, Wednesday, Friday:</strong> Food scraps and food-soiled paper; clean paper and cardboard. Set out at curb by 4 pm.</li>
+<li><strong>Tuesday, Thursday:</strong> Food scraps and food-soiled paper; metal, glass, plastic, and cartons. Set out at curb by 4 pm.</li>
+</ul>
+<p><strong>Garbage</strong> is collected on the same schedule as your <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml" title="local neighborhood">local neighborhood</a>. Check with your custodian or refer to your school&rsquo;s <a href="/assets/dsny/docs/zerowaste_schools-dsny-collection-schedules_0815.pdf" title="collection schedule">collection schedule (PDF)</a>. Set garbage out at the curb AFTER 4 pm the night before collection.</p>
+<p>When your school has a night or weekend event, set out organics on the next collection day or discard the food scraps from the event with regular garbage.</p>
+<br />
+<h2>Holidays &amp; Snow Storms</h2>
+<p>Schools follow the same DSNY holiday collection schedule as <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml">residents</a>. Note that the regular collection schedule may also be suspended due to <a href="/assets/dsny/snow/snow.shtml">snow storms</a> or other severe weather. When collection is suspended, missed collection complaints are not accepted for that day. Set out garbage on the night of the holiday for collection starting early the next day. Set out recyclables and organics for collection on their next collection day.</p>
+<p>In addition, during <a href="http://schools.nyc.gov/NR/rdonlyres/32DF8AD8-D1E0-4228-A919-818C6B12D8C3/0/201516SchoolYearCalendarFamilyFriendly_Revised.pdf">DOE holidays and breaks</a> all School Truck and Organics Collection service is normally suspended; recycling and garbage are collected on the same days as your <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml" title="local neighborhood">local neighborhood</a>.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

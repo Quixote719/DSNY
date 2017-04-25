@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Street and Sidewalk Obstruction </title>
+
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h1>Street &amp; Sidewalk Obstruction Complaints</h1>
+<p><a href="/site/dsny/contact/complaints/obstruction-on-street-or-sidewalk-complaint.page">Street/Sidewalk Obstruction</a><br /><a href="/site/dsny/contact/complaints/collection-bin-on-public-property-removal-request.page">Collection Bin Removal Request</a><br /><a href="http://www1.nyc.gov/nyc-resources/service/2808/snow-or-ice-on-roadway-removal">Snow or Ice on Roadway Removal</a><br /><a href="http://www1.nyc.gov/nyc-resources/service/2166/overgrown-grass-or-weeds-complaint">Overgrown Grass or Weeds Complaint</a><br /><a href="/sites/dsny/contact/complaints/weed-removal-service-request.page">Weed Removal Service Request</a><br /><a href="http://www1.nyc.gov/nyc-resources/service/989/abandoned-vehicle">Abandoned Vehicle</a></p>
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

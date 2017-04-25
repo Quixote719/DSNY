@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">NO REFUSE, RECYCLING COLLECTION OR STREET CLEANING ON INDEPENDENCE DAY, THURSDAY JULY 4th</h3>
+<div class="prs-subtitle">
+<p><strong>July 1,2013</strong> | <em>Vito A. Turso</em></p>
+<p>Press Release # 13-27, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Independence Day, there will be no refuse or recycling collection, or street cleaning on Thursday, July 4, 2013. In addition, all DSNY administrative offices will be closed on Thursday, July 4, in observance of the holiday.</p>
+<p>Residents who normally receive Thursday refuse collection should place their trash out at curbside Thursday after 5 p.m. for pickup. Those receiving Thursday recycling collection will not have their recycling picked up until the following Thursday, July 11.</p>
+<p>For questions about DSNY services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

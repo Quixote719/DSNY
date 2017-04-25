@@ -1,0 +1,34 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Organics Collection - Compostable Bags</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_residents_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1>Compostable Bags</h1>
+		
+		<p>For <a href="/assets/dsny/zerowaste/residents/food-scraps-and-yard-waste.shtml">NYC Organics Collection</a>, line your DSNY-issued brown bin with a clear plastic liner, a brown paper bag, or a certified compostable bag to help keep your bin clean and reduce odors.</p>
+		
+		<p>The kitchen container can be lined with newspaper, a brown paper bag, or a certified compostable bag.</p>
+
+		<p>Look for certified compostable bags with the Biodegradable Products Institute logo.</p>
+		
+		<div style="height: 102px; width: 278px; overflow: hidden; margin-left: 100px">
+			<img src="/assets/dsny/images/compostable-bag-logo.png">
+		</div>
+		
+		<br>
+		<br>
+
+		<p><b>Stores That Carry Compostable Bags</b></p>
+
+		<div class="fluid-wrapper">
+			<iframe src="https://www.google.com/maps/d/embed?mid=z2gVn3PkAb3s.kxDUeSA4lbvU" width="640" height="480"></iframe>
+		</div>
+
+
+	</div>		
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

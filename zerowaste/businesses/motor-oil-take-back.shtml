@@ -1,0 +1,35 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Motor Oil</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+<h1> Motor Oil Take-Back </h1>
+
+
+<p>
+	Used motor oil must be disposed of properly to protect the environment and public health. 
+</p>
+<p>
+	<strong>What’s covered:</strong> Motor oil, transmission fluid, hydraulic fluid.
+</p>
+<p>
+	<strong>Businesses affected:</strong> Businesses such as auto service or repair shops that sell 500 gallons or more of new oil each year and perform vehicle servicing, and retail stores that sell at least 1,000 gallons of new oil each year.
+</p>
+<h2>
+	How To Comply
+</h2>
+<p>
+	Accept up to 5 gallons of used oil per person per day, at no charge. If your store isn’t a service station, you can contract with another business to accept oil on your behalf.
+</p>
+<p>
+	Prominently display signage that can be read from at least 25 feet away, with lettering at least an inch high, that says, “We accept used oil for recycling at no charge.” <a href="/assets/dsny/about/inside-dsny/business-recycling-materials.shtml">Download free signs</a>.
+</p>
+<p>
+	Contract with a permitted industrial hauler to pick up used oil for recycling or safe disposal.
+</p>
+
+				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

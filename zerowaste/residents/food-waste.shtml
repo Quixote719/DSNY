@@ -1,0 +1,35 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Food Scraps  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1>Food Scraps</h1>
+
+		<p><b>Garbage: </b>Discard on regular <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml">pickup days</a>.</p>
+
+		<p><b>Organics Collection:</b> Many NYC residents keep their food scraps, food-soiled paper, and yard waste separated from other waste. Food scraps are collected separately from buildings that receive <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml">curbside organics collection</a>.</p>
+
+		<p>You can also <a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml">compost at home</a> or at <a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml">neighborhood food scrap drop-off sites</a>.</p>
+		
+		<p><b>Recycling: </b>Empty and rinse <a href="/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml">metal, glass, plastic, or carton</a> food containers and place them in your blue-labeled bin for recycling.</p>
+
+		<h2>Donations &amp; Reuse</h2>
+
+		<p>These organizations accept donations of canned and packaged food; check their websites for details:</p>
+		<ul>
+			<li><a href="http://www.cityharvest.org/" title="City Harvest">City Harvest</a></li>
+			<li><a href="http://www.foodbanknyc.org/" title="Food Bank for New York City">Food Bank for New York City</a></li>
+			<li><a href="http://www.projecthospitality.org/index.php?id=34" title="Project Hospitality">Project Hospitality</a></li>
+		</ul>
+		<p><a href="/assets/donate/index.shtml">Find where to donate food near you</a>.</p>
+
+		<h2>Take-Back or Drop-Off</h2>
+
+		<p>Fruit and vegetable scraps can also be taken to a <a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml" title="food waste drop-off site">food scrap drop-off site</a>.</p>
+	</div>
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

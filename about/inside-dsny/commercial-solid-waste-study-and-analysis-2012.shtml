@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Commercial Solid Waste Study &amp; Analysis </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Commercial Solid Waste Study &amp; Analysis, 2012</h1>
+<p>The 2006 Solid Waste Management Plan called for the Department of Sanitation to perform a &ldquo;comprehensive study of the current recycling practices of commercial waste carters in the City&rdquo; and &ldquo;commercial establishments&rdquo;. In 2010, Local Law 32 was passed by City Council to implement a streamlined version of the original study scope.</p>
+<p>Using modeled data and surveys, the <b>2012 Commercial Solid Waste Study and Analysis </b>provides insight into knowledge and behavior of commercial establishments, behavior of waste carters, and provides broad estimates of commercial putrescible garbage and recycling.</p>
+<p><a href="/assets/dsny/docs/about_2012-commercial-waste-study_0815.pdf">Read the report</a></p>
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,25 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Limited Collection to Resume Today</h3>
+<div class="prs-subtitle">
+<p><strong>Wednesday, January 28, 2015</strong> | <em>Vito A. Turso</em></p>
+<p>Press Release # 15-12, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The Department of Sanitation will resume limited refuse, recycling, and organics collection throughout the city starting tonight at 7 p.m.</p>
+<p>
+       
+   Residents whose refuse, recycling, and organics wasn’t collected earlier because of the snowstorm should place their material out at the curbside after 4 P.M this evening. Residents are asked to place their material out in a cleared area, if possible, to help Sanitation Workers gain access to the cans and bags.
+    </p>
+<h3 class="prs-about"><i class="fa fa-university"></i> About the New York City Department of Sanitation</h3>
+<p>
+        The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste
+        and the development of environmentally sound long-range planning for handling refuse, including recyclables.
+        The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical
+        brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets
+        and removes debris from vacant lots as well as abandoned vehicles from City streets.
+    </p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,44 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Special Waste Drop-Off Sites</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/safedisposal_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1> Special Waste Drop-Off Sites</h1>
+
+<p>The following items are accepted at DSNY special waste drop-off sites:</p>
+<ul>
+<li>Batteries, including automotive, rechargeable (such as small sealed lead acid batteries, Li-Ion, Ni-MH, Ni-ZN, Ni-Cd) and single-use (such as alkaline and lithium primary). Follow instructions below to prepare batteries before arrival.</li>
+<li>Motor oil and transmission fluid (up to 10 quarts per visit) </li>
+<li>Motor oil filters (up to two filters per visit)</li>
+<li>Fluorescent light bulbs &amp; CFLs</li>
+<li>Latex paint (up to five gallons per visit)</li>
+<li>Mercury-containing devices (up to two per visit)</li>
+<li>Passenger car tires (up to four per visit)</li>
+<li>Electronics (covered by the <a href="/assets/dsny/zerowaste/residents/electronics.shtml">disposal ban</a>)</li>
+</ul>
+<h2>Locations &amp; Hours</h2>
+<div class="fluid-wrapper"><iframe width="700" frameborder="0" src="https://www.google.com/maps/d/embed?mid=zxg6HOaDh-mU.knS177gD0r6k" height="467" style="border:0"></iframe></div><br/>
+<ul>
+<li><b>Bronx: </b>Hunts Point at Farragut Street and the East River, next to the Fulton Fish Market. Enter on Farragut Street, off Food Center Drive.</li>
+<li><b>Brooklyn: </b>Bensonhurst at 25th Avenue&nbsp;and Gravesend Bay, next to DSNY Brooklyn District 11&nbsp;garage and the Adventurers Amusement Park, formerly&nbsp;known as Nellie Bly Amusement Park. </li>
+<li><b>Manhattan: </b>74 Pike Slip between Cherry Street and South Street under the Manhattan Bridge<b> </b></li>
+<li><b>Queens:</b> College Point at 30th Avenue,&nbsp;between 120th and 122nd Streets, at the northwest&nbsp;corner of the DSNY Queens District 7 garage. </li>
+<li><b>Staten Island:</b> Located at the foot of Muldoon Avenue, off the Muldoon Avenue exit of the southbound&nbsp;West Shore Expressway (440), adjacent to the DSNY&nbsp;Staten Island District 3 garage.</li>
+</ul>
+<p>The sites are open from 10 am to 5 pm every Saturday and the last Friday of the month. Sites are closed on legal holidays, and may be closed during <a href="http://nyc.gov/severeweather">severe weather</a>. </p>
+<h2>Rules &amp; Procedures</h2>
+<p>DSNY drop-off sites are only for non-commercial materials from NYC residents. Anyone with a commercial license plate will not be allowed to enter the site.</p>
+<p>When you arrive at the drop-off site, you&rsquo;ll be required to show a valid NYS driver&rsquo;s license and vehicle registration. If you aren&rsquo;t arriving by car, you can provide a picture ID and proof of residency, such as a phone or utility bill.</p>
+<p>The drop-off location may not be immediately visible. If you have trouble finding the location, ask a DSNY garage foreman or supervisor at the site. DSNY officials will be there to instruct you, but the sites are do-it-yourself style. Wearing casual clothes and work gloves is strongly recommended.</p>
+<h3>Special Instructions for Batteries:</h3>
+<p>To prevent the risk of fire, individually bag each non-alkaline battery or use CLEAR tape to cover the terminals. Do not use opaque tape and do not bag or tape alkaline batteries.</p> 
+<p>At the drop-off site, place each battery into its designated collection container: alkaline, small sealed lead acid, auto, and "other". </p>
+<h3>Other Disposal Options</h3>
+<p>Retailers and manufacturers accept certain items in <a href="/assets/dsny/zerowaste/residents.shtml" title="take-back programs">take-back programs</a>, including <a href="/assets/dsny/zerowaste/residents/electronics.shtml">electronics</a>. In addition, <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml" title="DSNY SAFE Disposal Events">DSNY SAFE Disposal Events</a> are held several times a year in all five boroughs.</p>
+
+
+		 </div>
+		 </div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

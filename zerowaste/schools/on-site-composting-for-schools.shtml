@@ -1,0 +1,22 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - On-Site Composting for Schools</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+
+<h1> On-Site Composting for Schools </h1>
+<!--<div class="fluid-wrapper"><iframe width="700" height="467" src="//www.youtube.com/embed/D6YgIG2356g" frameborder="0"></iframe></div>-->
+<p><a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml" title="The NYC Compost Project">The NYC Compost Project</a> provides composting education, including workshops and tours, so that NYC teachers and students can learn how to compost indoors and outdoors.</p>
+<p><a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml" title="Contact the NYC Compost Project program in your borough">Contact the NYC Compost Project program in your borough</a> for information and schedules:</p>
+<p><b>NYC Teacher Workshops </b> &#150; workshops for teachers about worm composting (vermicomposting), a fun, hands-on way for students to learn about decomposition, the food chain, and organics recycling. In these workshops, teachers learn how to set up a worm bin, feed worms with food scraps, maintain a healthy worm bin ecosystem, and harvest the finished compost.</p>
+<p><b>Composting Workshops for the Classroom </b> &#150; hands-on workshops for students in grades 1 through 8 about the importance of recycling and composting. These classroom presentations include interactive projects and a live worm bin to demonstrate the science of composting in action.</p>
+<p><b>Compost Demonstration Site Tours </b> &#150;NYC Compost Project Demonstration Sites across the City display a variety of compost bins, different stages of decomposition, and information explaining the composting process.</p>
+<p><b>Service Learning with the NYC Compost Project </b> &#150;school groups pitch in at community compost sites and do chopping, mixing, sifting, and other maintenance tasks to learn how to set up and manage an outdoor compost system.</p>
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

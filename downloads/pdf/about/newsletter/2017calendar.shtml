@@ -1,0 +1,73 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - News + Videos </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<style>
+.fluid-wrapper iframe {
+    width: 700px;
+    height: 394px; 
+	margin-left: 8%;
+}
+
+@media (max-width: 1023px), screen and (max-device-width: 1023px)
+{
+.fluid-wrapper iframe {
+    width: 100%;
+    height: 100%; 
+	margin-left: 0;
+}
+}
+</style>
+
+		<div id="contentsection" class=" about-main-image">
+			<div class="span6 about-description">
+				
+
+
+
+				<h1>2017 Calendar</h1>
+
+<table>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal1.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal2.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal3.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal4.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal5.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal6.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal7.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal8.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal9.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal10.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal11.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal12.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal13.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal14.jpg"	></td>
+</tr>
+<tr>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal15.jpg"	></td>
+<td><img width="450" src="http://www1.nyc.gov/assets/dsny/downloads/pdf/about/newsletter/cal16.jpg"	></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+		    </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

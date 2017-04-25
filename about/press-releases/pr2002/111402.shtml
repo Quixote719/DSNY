@@ -1,0 +1,22 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Schedules Public Meetings on Commercial Waste Issues</h3>
+<div class="prs-subtitle">
+<p><strong>November 14, 2002&nbsp;</strong>| <em>Contact: Vito A. Turso / Kathy Dawkins (646) 885-5020</em></p>
+<p>Press Release # 02-56, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation is welcoming interested New Yorkers to participate in a series of Public Meetings in each borough in which Sanitation representatives will take comments on commercial waste management issues affecting the City's communities. The Department is conducting an 18-month comprehensive study of commercial waste management to assess and plan for the future management of the commercial waste stream, to minimize potential adverse impact on the City's residential and business communities and the environment, and to assist in developing a new comprehensive solid waste management plan.</p>
+<p><b>The Citywide Public Meeting schedule is:</b></p>
+<p><b>Brooklyn:</b><br />Monday, November 18th at 7:00 P.M. Court Room in Brooklyn Borough Hall, 209 Joralemon Street.</p>
+<p><b>Queens:</b><br />Tuesday, November 19th at 7:00 P.M. Room 213 (2nd Floor) in Queens Borough Hall, 120-55 Queens Boulevard, Kew Gardens.</p>
+<p><b>Staten Island:</b><br />Wednesday, November 20th at 7:00 P.M. Conference Room (1st Floor) in Staten Island Borough Hall, 10 Richmond Terrace.</p>
+<p><b>Manhattan:</b><br />Monday, November 25th at 7:00 P.M. Conference Room 8B (8th Floor) in the Manhattan Borough President's Northern Manhattan Office, Adam Clayton Powell State Office Building, 163 West 125th Street.</p>
+<p><b>Bronx:</b><br />Monday, December 2nd at 7:00 P.M. Hearing Room (2nd Floor) in the Bronx Overall Economic Development Corp. Office (BOEDC), 198 East 161st Street, Bronx.</p>
+<p>For additional information on the Public Meetings, contact: Sarah Dolinar, Department of Sanitation, (212) 837-8333.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

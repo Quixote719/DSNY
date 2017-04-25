@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Automotive Products</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>Automotive Products</h1>
+
+<p>It is illegal to discard motor oil, filters, solvents, auto batteries, and waste tires with regular garbage.</p>
+<h2>Take-Back Programs</h2>
+<p>Retailers that sell motor oil and service stations that change oil must accept up to five gallons of used oil and auto fluid per day, per person.</p>
+<p>Places that sell auto batteries are required to take them back at no charge.</p>
+<p>Places that sell or install tires (including dealerships) are required to take back tires of approximately the same size that they sell. People can recycle up to the same amount of tires that they buy new. The fee for the collection of old tires is included in the cost of new tires.</p>
+<p>For more information, visit the <a href="http://www.dec.ny.gov/25.html">New York State Department of Environmental Conservation website</a>. NYS DEC enforces the returns of motor oil, auto batteries, and waste tires in New York State.</p>
+<h2>Recycled Motor Oil</h2>
+<p>Consider running your organization&rsquo;s vehicles on recycled motor oil. Re-refined oil brands include Chevron&rsquo;s ECO, Ecoguard, Enviroil, Evergreen, and Firebird.</p>
+<h2>Tire Retreading</h2>
+<p>Retreading bonds new tread to the existing body of a tire using a process very similar to the manufacture of a new tire. The <a href="http://www.retread.org/guide/index.cfm/s/1/state/ny/text/new20york.htm">Tire Retread &amp; Repair Information Bureau</a> maintains a database of retread retailers.</p>
+
+		 </div>
+		 </div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

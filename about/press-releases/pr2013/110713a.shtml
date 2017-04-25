@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Veterans Day, Monday, November 11th</h3>
+<div class="prs-subtitle">
+<p><strong>Thursday, November 7, 2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-41, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Veterans Day, there will be no garbage or recycling collection, or street cleaning on Monday, November 11th. In addition, all DSNY administrative offices will be closed on Monday, November 11th in observance of the holiday.</p>
+<p>Residents who normally receive Monday refuse collection should place their garbage out at curbside Monday evening after 4 p.m. for collection. Those receiving Monday recycling collection will not have their recycling picked up until the following Monday, November 18th.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

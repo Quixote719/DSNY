@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">As Autumn Leaves Fall, Sweep Them</h3>
+<div class="prs-subtitle">
+<p><strong>October 21, 2002&nbsp;</strong>| <em>Contact: Vito A. Turso / Taryn Duckett (646) 885-5020</em></p>
+<p>Press Release # 02-50, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Autumn is the wonderful season that blankets our City's lawns and streets with beautifully colored leaves of radiant reds, bronzy browns, and glorious golds. But those lovely leaves also amount to tons of troublesome trash.</p>
+<p>"And this year, not only must homeowners rake and bag the cacophony of color, but they also must place the bagged leaves out for regular garbage collection," said Sanitation Commissioner John J. Doherty.</p>
+<p>In better budget times, the Department would arrange for special leaf pick-ups. However, this year leaves will be collected along with regular trash. The City's Administrative Code states that it is the responsibility of every homeowner to keep their sidewalks and 18 inches into the gutter clean at all times. Those who do not maintain the cleanliness of their property could be subject to fines.</p>
+<p>"While Autumn in New York is one of our favorite times of year, we must remember that the only way to fully enjoy it is to maintain the cleanliness of our City," said Commissioner Doherty. "Failure to clean up fallen leaves and other debris on your sidewalk and 18 inches into the gutter can be considered a violation."</p>
+<p>For more information about leaf collection, residents should call the Sanitation Action Center at 212-219-8090, or visit the department's website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

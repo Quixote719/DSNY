@@ -1,0 +1,42 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Recycling Setup for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycle_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1>Recycling Setup for Nonprofits &amp; Agencies</h1>
+
+
+<p>Follow these general rules for an effective recycling program:&nbsp;</p>
+<ul>
+<li><span>Place labeled recycling bins wherever recyclables are commonly discarded, alongside receptacles for regular garbage, to reduce contamination. </span></li>
+<li><span>Collect recyclables in clear bags.</span></li>
+<li><span>Keep bags of recyclables separated from garbage as they are collected throughout the building, stored, and placed out for pick-up.</span></li>
+<li><span>Never put recyclables and garbage together in the same bag. </span></li>
+<li><span>Don&rsquo;t put paper and cardboard in the same bag with metal, glass, rigid plastic, and cartons.</span></li>
+<li><span>Flatten, and bundle or bag corrugated cardboard boxes. </span></li>
+</ul>
+<p><span>Establish centralized locations (for recycling, food waste, and regular garbage collection) along with desk-side recycling. </span></p>
+<p><span>Make sure to line containers for food waste and garbage with black or brown bags (never use blue or red).</span></p>
+<h2>Recycling Mixed Paper &amp; Cardboard</h2>
+<p>Maintain labeled recycling containers wherever mixed paper and cardboard recyclables are commonly discarded, including areas such as offices, mailrooms, and around copiers; in shipping and receiving locations; and in common areas such as entranceways, meeting rooms, and auditoriums.</p>
+<p>Clearly label each recycling bin with &ldquo;PAPER ONLY&rdquo; or use DSNY green recycling decals.</p>
+<p>Line bins with clear bags (or no bag).</p>
+<p>Post signs above each recycling container indicating what to recycle.&nbsp;</p>
+<p>Pair recycling bins with clearly labeled garbage containers to reduce contamination.</p>
+<p>Since most office waste is paper, equip each desk with a labeled receptacle for paper recycling. There are two typical ways to do this:</p>
+<ul>
+<li><span>Only one receptacle at each desk, designated for paper. Workers bring their garbage, and any recyclable metal, glass, plastic, and cartons, to centrally located recycling and garbage bins.</span></li>
+<li><span>Two receptacles at each desk: one designated for paper, and one for garbage. Workers bring recyclable metal, glass, plastic, and cartons to centrally located recycling bins. </span></li>
+</ul>
+<h2>Recycling Metal, Glass, Rigid Plastics &amp; Cartons</h2>
+<p>Maintain labeled recycling containers to collect metal, glass, rigid plastic, and cartons (such as milk cartons and juice boxes), wherever these recyclables are commonly discarded&mdash;especially in food vending areas, cafeterias, pantries, and staff lunch areas, as well as in common areas such as entranceways, near stairways, meeting rooms, and auditoriums.</p>
+<p>Clearly label each bin with &ldquo;METAL, GLASS, PLASTIC &amp; CARTONS&rdquo; or use DSNY blue recycling decals.</p>
+<p>Line bins with clear bags.</p>
+<p>Post signs above each recycling container indicating what to recycle.</p>
+<p>Pair recycling bins with clearly labeled garbage containers to reduce contamination.</p>
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,24 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Waste Characterization, 2013 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+				
+			<h1>Waste Characterization, 2013</h1>
+<p>The <strong>New York City 2013 Residential Waste Characterization Study</strong> provides an update to the <a href="/assets/dsny/about/inside-dsny/waste-characterization-2005.shtml">2005 Waste Characterization Study</a> and documents the composition and generation rates of NYC's residential curbside waste stream.</p>
+<p>The Summary Report condenses the results of the 2013 study and compares changes in NYC’s waste stream between 2005 and 2013.</p>
+<p>The Data Tables present the results for the main sort categories, the plastic resin sub-sort and a beverage container sub-sort in Excel format. The Field Manual describes the methodology used to conduct the study.</p>
+<p><a href="/assets/dsny/docs/2013-Waste-Characterization-Study.pdf">Summary Report</a></p>
+<p>Data Tables & Field Manual:</p>
+	<ul>
+	  <li><a href="/assets/dsny/docs/2013WCS_MainSort_CityandBoroughs.xlsx">Main Sort: City and Boroughs</a> (Excel)</li>
+	  <li><a href="/assets/dsny/docs/2013WCS_SubSorts_CityandBoroughs.xlsx">SubSorts: City and Boroughs</a> (Excel)</li>
+	  <li><a href="/assets/dsny/docs/2013WCS_Compare2013to2005_Citywide.xlsx">Compare 2013 to 2005 Citywide</a> (Excel)</li>
+	  <li><a href="/assets/dsny/docs/2013WCS_Field-Procedures-Manual.pdf">Field Manual</a> (pdf)</li>
+	</ul>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling or Street Cleaning on Lincoln's Birthday, Monday, February 12th</h3>
+<div class="prs-subtitle">
+<p><strong>Wednesday, February 7, 2007</strong> | <em>Vito A. Turso / Matthew Li Pani (646) 885-5020 </em></p>
+<p>Press Release # 07-07, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation announced today that in observance of President Abraham Lincoln's birthday, there will be no garbage or recycling collection, or street cleaning on Monday, February 12, 2007. Residents who receive Monday garbage collection should place their trash out at curbside Monday evening after 4 P.M. for pickup. Those who normally receive Monday recycling collection will not have their recycling material picked up until Tuesday, February 20, 2007.</p>
+<p>Residences and commercial establishments that unlawfully leave trash, recyclables, or dumpsters at curbside over the holiday are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>In addition, all Sanitation Department administrative offices will be closed on Monday, February 12, 2007 in observance of the holiday.</p>
+<p>For questions about Sanitation services and schedules over the holiday, contact the NYC Citizens Service Center at 3-1-1 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

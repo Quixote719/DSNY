@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling, Organics Collection or Street Cleaning on New Year&rsquo;s Day, Wednesday, January 1, 2014</h3>
+<div class="prs-subtitle">
+<p><strong>Friday, December 27, 2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-59, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation (DSNY) announced today that in observance of New Year&rsquo;s Day, there will be no garbage, recycling or organics collection, or street cleaning on Wednesday, January 1, 2014.</p>
+<ul>
+<li>Residents who normally receive Wednesday<strong> garbage and organics</strong> <strong>collection</strong> should place their trash and organic materials out at curbside after 4 p.m. on Wednesday, January 1 for pickup on Thursday, January 2, 2014.</li>
+<li style="margin-bottom:10pt">Residents receiving Wednesday <b>recycling </b><b><span>collection</span></b><span> <span class="bodytext">should place their items curbside after 4 p.m. on Wednesday, January 1 for pickup </span></span>on Thursday, January 2, 2014.</li>
+</ul>
+<p style="text-align: left;">In addition, all Sanitation Department administrative offices will be  closed on Wednesday, January 1, in observance of the holiday.</p>
+<p style="text-align: left;">For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at www.nyc.gov/sanitation.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

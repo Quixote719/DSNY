@@ -1,0 +1,20 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Get Donations for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+
+		<div id="contentsection" class="about-main-image">
+		<div class="span6 about-description">
+
+<h1>Donations &amp; Reuse for Nonprofits &amp; Agencies</h1>
+
+		   
+<p>Nonprofits and agencies can <a href="/assets/dsny/zerowaste/nonprofitsagencies/donate.shtml">get donations of new and used items</a> through reuse or exchange programs.</p>
+<p>To discard unwanted or surplus property, City agencies must contact the <a href="http://www.nyc.gov/html/dcas/html/business/surplus.shtml">Department of Citywide Administrative Services, Office of Surplus Activities (DCAS/OSA)</a> through the agency&rsquo;s relinquishment officer.</p>
+<p><span>For each item, the Office of Surplus Activities will determine what to do among the following options: Transfer to Another Agency; Sale from Agency Location; Move to Warehouse; Scrap; or Destroy Order. </span></p>
+<p><span>Destroy Orders are issued for items with no transfer or sale value. If the items are in good condition, the agency can consider programs for donation and reuse.</span></p>
+<p>Unless donated or resold for reuse, agencies and nonprofit institutions must always recycle<a href="/assets/dsny/zerowaste/nonprofitsagencies/electronics.shtml"> electronics</a>.</p>
+
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

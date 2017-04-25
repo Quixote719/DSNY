@@ -1,0 +1,120 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What To Recycle for Residents  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycling_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1> What To Recycle for Residents </h1>
+<div class="fluid-wrapper">
+	<iframe width="640" height="360" src="//www.youtube.com/embed/D6YgIG2356g?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+</div>
+<h2>
+	Paper &amp; Cardboard
+</h2>
+<h3>
+	Paper:
+</h3>
+<p>
+	<ul>
+		<li>Newspapers, magazines, catalogs</li>
+		<li>White and colored paper (including lined, copier, and computer paper; staples are acceptable)</li>
+		<li>Mail and envelopes (any color; window envelopes are acceptable)</li>
+		<li>Paper bags</li>
+		<li>Wrapping paper</li>
+		<li>Soft-cover books (such as paperbacks and comics; no spiral bindings), telephone books </li>
+	</ul>
+</p>
+<h3>
+	Cardboard:
+</h3>
+<p>
+	<ul>
+		<li>Cardboard egg cartons and trays</li>
+		<li>Smooth cardboard (such as food and shoes boxes, tubes, file folders, and cardboard from product packaging)</li>
+		<li>Pizza boxes; remove and discard soiled liner, and recycle plastic supporter in your blue bin</li>
+		<li>Paper cups (waxy lining is acceptable if the cups are empty and clean; plastic lids go in the blue bin)</li>
+		<li>Corrugated cardboard boxes, flattened and tied</li>
+	</ul>
+</p>
+<h3>
+	Not Accepted:
+</h3>
+<p>
+	<ul>
+		<li>Paper with heavy wax or plastic coating (such as candy wrappers, and take-out containers)</li>
+		<li>Soiled or soft paper</li>
+		<li>Hardcover books</li>
+	</ul>
+</p>
+<!-- <p>
+	See <a href="/sites/dsny/resources/faq/green-bin-faqs.page">Green Bin FAQs</a> for more information.
+</p> -->
+<h2>
+	Metal, Glass, Plastic &amp; Cartons
+</h2>
+<p>
+	Empty and rinse containers before recycling.
+</p>
+<h3>
+	Metal:
+</h3>
+<p>
+	<ul>
+		<li>Metal cans (including soup and pet food cans, empty aerosol cans, dried-out paint cans)</li>
+		<li>Aluminum foil wrap and trays</li>
+		<li>Metal caps and lids</li>
+		<li>Household metal (such as wire hangers, pots, tools, curtain rods, <a href="/assets/dsny/zerowaste/residents/specially-handled-items.shtml">knives</a>, small appliances that are mostly metal, and certain vehicle license plates)</li>
+		<li>Bulk metal (such as large metal items like furniture, cabinets, and large <a href="/assets/dsny/zerowaste/residents/appliances.shtml">appliances</a>)</li>
+	</ul>
+</p>
+<h3>
+	Glass:
+</h3>
+<p>
+	<ul>
+		<li>Glass bottles</li>
+		<li>Glass jars</li>
+	</ul>
+</p>
+<h3>
+	Plastic &amp; rigid plastic:
+</h3>
+<p>
+	<ul>
+		<li>Plastic bottles, jugs, and jars</li>
+		<li>Rigid plastic caps and lids</li>
+		<li>Rigid plastic food containers (such as yogurt, deli, or hummus containers; dairy tubs, cookie tray inserts, &#34; clamshell &#34; containers, and other plastic take-out containers)</li>
+		<li>Rigid plastic non-food containers</li>
+		<li>Rigid plastic packaging (such as &#34; blister-pack &#34; and &#34; clamshell &#34; consumer packaging, acetate boxes)</li>
+		<li>Rigid plastic housewares (such as flower pots, mixing bowls, and plastic appliances)</li>
+		<li>Bulk rigid plastic (like crates, buckets, pails, furniture, large toys, and large appliances)</li>
+	</ul>
+</p>
+<h3>
+	Cartons:
+</h3>
+<p>
+	<ul>
+		<li>Food and beverage cartons (such as cartons for soy milk and soup)</li>
+		<li>Drink boxes</li>
+		<li>Aseptic packaging</li>
+	</ul>
+</p>
+<h3>
+	Not Accepted:
+</h3>
+<p>
+	<ul>
+		<li>Batteries (remove before recycling toys and small appliances)</li>
+		<li><a href="/assets/dsny/zerowaste/residents/non-recyclable-plastics.shtml">Plastic bags, wrappers, pouches, squeeze tubes, foam</a></li>
+	</ul>
+</p>
+<!-- <p>
+	See <a href="/sites/dsny/resources/faq/blue-bin-faqs.page">Blue Bin FAQs</a> for more information.
+</p> -->
+
+
+		 </div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

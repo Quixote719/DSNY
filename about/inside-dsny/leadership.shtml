@@ -1,0 +1,34 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Leadership </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+
+		<div id="contentsection" class="about-main-image">
+			<div class="span6 about-description">
+<h1>Leadership</h1>
+<h2>Kathryn Garcia <span style="font-weight: normal;">Commissioner</span></h2>
+<img style="width: 300px; margin: 3px 10px 5px 0px; float: left;" src="/assets/dsny/img/about_CommissionerGarciaPortrait_1015.jpg" />
+<p>Appointed in March 2014 by Mayor Bill de Blasio, Commissioner Kathryn Garcia leads the world&rsquo;s largest municipal waste management agency and its 9,700 uniformed and civilian employees. Under her direction, they keep New York City healthy, safe and clean by collecting, recycling and disposing waste, cleaning streets and vacant lots, and clearing snow and ice.</p>
+<p>After her appointment as the Department&rsquo;s 43rd commissioner, Garcia set an ambitious long-term goal for New York City: contribute zero waste to landfills. By efficiently leveraging the Agency&rsquo;s $1.4 billion annual budget, the Department disposes of more than 3.2 million tons of refuse each year, recycles more than 600,000 tons of material &ndash; and is expanding its programs to make our City more sustainable. From promoting electronics and textile recycling to enhancing composting programs that eliminate food from the waste stream, the Department of Sanitation is a critical leader in helping New York City achieve the environmental goals outlined in the Mayor&rsquo;s <a href="http://www1.nyc.gov/office-of-the-mayor/news/257-15/mayor-de-blasio-releases-one-new-york-plan-strong-just-city/#/0">One New York: The Plan for a Strong and Just City</a>.</p>
+<p>A lifelong New Yorker, Commissioner Garcia launched her career as an intern at the Department of Sanitation. Before returning to the Department as Commissioner, she served as Chief Operating Officer at the NYC Department of Environmental Protection, where she was responsible for the operation of the City&rsquo;s water supply, water and sewer system, and wastewater treatment plants. Prior to her service at DEP, Garcia was Vice President at Appleseed.</p>
+<p>Commissioner Garcia earned her Bachelor of Arts in Economics and History at the University of Wisconsin-Madison.</p>
+<p>Read the <a href="http://www1.nyc.gov/office-of-the-mayor/news/091-14/mayor-de-blasio-appoints-kathryn-garcia-department-sanitation-commissioner#/0">mayoral press release</a> and <a href="http://www1.nyc.gov/office-of-the-mayor/news/966-14/transcript-mayor-de-blasio-appoints-kathryn-garcia-department-sanitation-commissioner">transcript</a>.</p>
+<div style="height: 10px;"></div>
+<h2>Executive Staff</h2>
+<p style="margin-bottom:12px;"><b>Dennis Diggins</b>&nbsp; First Deputy Commissioner</p>
+<p style="margin-bottom:3px;"><b>Bridget Anderson</b>&nbsp; Deputy Commissioner, Recycling &amp; Sustainability</p>
+<p style="margin-bottom:3px;"><b>Gregory Anderson</b>&nbsp; Chief of Staff</p>
+<p style="margin-bottom:3px;"><b>Jose Atkinson</b>&nbsp; Deputy Commissioner, Solid Waste Management</p>
+<p style="margin-bottom:3px;"><b>Lorenzo Cipollina</b>&nbsp; Deputy Commissioner, Finance &amp; Administration</p>
+<p style="margin-bottom:3px;"><b>Steven Costas</b>&nbsp; Director, Bureau of Cleaning &amp; Collection</p>
+<p style="margin-bottom:3px;"><b>Rocky DiRico</b>&nbsp; Deputy Commissioner, Support Services</p>
+<p style="margin-bottom:3px;"><b>Marie Jean-Louis</b>&nbsp; Assistant Commissioner, Facilities Planning &amp; Engineering</p>
+<p style="margin-bottom:3px;"><b>Thomas Killeen</b>&nbsp; Director, Solid Waste Management</p>
+<p style="margin-bottom:3px;"><b>Teresa Neal</b>&nbsp; Director Office of Equity, Diversity &amp; Inclusion</p>
+<p style="margin-bottom:3px;"><b>Robert Orlin</b>&nbsp; Deputy Commissioner, Legal Affairs</p>
+<p><b>Vito A. Turso</b>&nbsp; Deputy Commissioner, Public Affairs</p>
+
+			</div>	
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

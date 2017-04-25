@@ -1,0 +1,33 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><p>
+FOR IMMEDIATE RELEASE
+<br />
+Press Release # 15-62
+<br />
+Monday, June 29, 2015<br />
+Vito A. Turso/Belinda A. Mager
+</p>
+<h3>NYC Polystyrene Foam Ban Starts July 1st</h3>
+<br />
+<h3> Affects Single-Use Cups, Containers and “Packing Peanuts” </h3>
+<p>
+Starting July 1st, food service establishments (including food carts) and stores will not be able to sell, distribute or use certain foam items certain expanded polystyrene (EPS) foam products in New York City. These items include polystyrene foam single-service items including cups, bowls, plates, takeout containers, and trays and polystyrene loose fill packaging, known as packing peanuts.  </p>
+<p>
+Earlier this year, after consultation with corporations, non-profits, vendors and other stakeholders, the Department of Sanitation (DSNY), determined EPS foam cannot be recycled, which led to the ban. The provision includes a grace period from July 1 until January 1, 2016. Following the grace period, Notices of Violation will be issued.</p>
+<p>EPS is a major source of neighborhood litter and is hazardous to marine life. EPS foam is lightweight material that can clog storm drains and end up on our beaches and in waterways. EPS containers can break down into smaller pieces, which marine animals may mistake for food.</p>
+<p>
+The ban affects any business, agency, or institution that sells or uses EPS, and is located or operates within any of the five boroughs. Those using foam packaging should consider alternatives such as paper, plastic, aluminum, and biodegradable products.</p>
+<p>
+Nonprofits and small businesses (not part of a chain) with less than $500,000 in yearly revenue may apply for a hardship exemption from the Department of Small Business Services if they can prove that the purchase of alternative products not composed of EPS would create undue financial hardship.</p>
+<p> EPS is already banned in Washington, DC, Minneapolis, San Francisco, Oakland, Portland, Albany, and Seattle. In total, more than 70 cities have banned foam and businesses large and small have shifted to alternative products that are biodegradable or otherwise recyclable. </p>
+<p>
+<strong>About the New York City Department of Sanitation</strong><br />
+The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.
+</p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,20 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Begins Citywide Recycling Warning Period</h3>
+<div class="prs-subtitle">
+<p><strong>October 3, 2003</strong>&nbsp;| <em>Contact: Vito A. Turso / Kathy Dawkins (646) 885-5020</em></p>
+<p>Press Release # 03-51, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>New York City Sanitation Commissioner John J. Doherty announced today that the Department has begun issuing warnings citywide to violators of the City's recycling laws concerning plastics.</p>
+<p>Commissioner Doherty said: "Through extensive outreach and public education, New Yorkers are recycling better every day. The Department has purposely delayed the warning period on plastics so that more residents can know what is expected as they prepare their recyclables for collection. The 30-day warning period is just another tool the Department uses to remind residents that recycling is not only an integral part of the City's solid waste management plan, but it is the law."</p>
+<p>Since the Department resumed the collection of plastic in July, no summonses have been issued for mixing plastics with garbage.</p>
+<p>Residents are reminded that they cannot mix any of the designated recyclable metal, plastic, or paper, with their regular refuse. Mixed paper such as newspapers, magazines, catalogs, mail, envelopes, telephone books should be placed in clear bags or green-labeled recycling bins. Corrugated cardboard boxes should be flattened and tied into bundles. Metal cans, aluminum foil and trays, wire hangers, pots and pans should be placed in clear bags or in blue-labeled recycling bins along with thin necked plastic bottles and jugs and beverage cartons and drink boxes.</p>
+<p>Bulk metal items such as metal furniture, cabinets, and appliances can be placed at curbside for collection on recycling collection day. Appliances containing CFC (freon) gas must have the gas removed before collection. Residents can call the Citizen Service Center at 311 to schedule an appointment.</p>
+<p>For more information on this and other Sanitation services, contact the Citizen Service Center at 311, or visit the Sanitation website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

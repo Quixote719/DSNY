@@ -1,0 +1,37 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Batteries </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Batteries </h1>
+
+
+<p><b>Garbage:</b> It's illegal to discard auto batteries, backup batteries, and rechargeable batteries in the regular garbage. Other batteries, like alkaline batteries, may be discarded in the regular trash, but it is more environmentally friendly to bring to a SAFE Disposal Event or to DSNY Household Special Waste Drop-Off Site.</p>
+<h2>SAFE Disposal Events &amp; Drop-Off Sites</h2>
+<p>You can take any batteries to an upcoming <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml" title="SAFE Disposal Events">SAFE Disposal Event</a>, or to any <a href="/assets/dsny/zerowaste/residents/special-waste-drop-off-sites.shtml" title="Household Special Waste Drop-Off Sites">Household Special Waste Drop-Off Site</a>.</p>
+<p>To prevent the risk of fire, individually bag each non-alkaline battery or use CLEAR tape to cover the terminals before dropping them off. Do not use opaque tape and do not bag or tape alkaline batteries. </p>
+<p>Note: Alkaline batteries are not classified as hazardous in New York State and may be discarded in the regular trash. However, it is more environmentally friendly to bring to a SAFE Disposal Event or to DSNY Household Special Waste Drop-Off Site.</p>
+
+<h2>Take-Back or Drop-Off</h2>
+<p><b>Auto batteries.</b> It is illegal to discard a car battery in the garbage or recycling or on the street. Auto batteries can be recycled at service stations or auto supply stores that sell them. <a href="/assets/dsny/zerowaste/residents/auto-batteries.shtml">Learn more</a>.</p>
+<p><b>Button batteries</b> may be accepted at a jewelry store, watch repair shop, or camera store. Call ahead to verify.</p>
+<p><b>Rechargeable batteries.</b> Bring rechargeable batteries and small items that contain rechargeable batteries to stores in New York State that sell them, such as a pharmacy, office supply, or hardware store (except not small food stores). The stores must accept up to ten batteries of the same shape and size that they sell, free of charge. Ask for the Call2Recycle box.  </p>
+<p>To find a drop-off location, visit <a href="http://www.call2recycle.org/" title="Call2Recycle">Call2Recycle</a>.</p>
+<p>If a store refuses to accept your batteries, contact the&nbsp;<a href="http://www.dec.ny.gov/regulations/393.html" title="NYS Department of Environmental Conservation">NYS Department of Environmental Conservation</a> online or call 1-800-TIPP DEC (1-800-847-7332). <a href="http://www.dec.ny.gov/chemical/72065.html">Learn more about this NY State law</a>.</p>
+<p><b>UPS backup batteries</b> can be recycled through one of these manufacturer-sponsored mail-back programs:</p>
+<ul>
+<li><a href="http://www.apc.com/recycle/index.cfm" title="APC">APC</a></li>
+<li><a href="http://www.atbatt.com/battery_recycling.asp" title="ATBatt.com">ATBatt.com</a></li>
+<li><a href="http://excessups.com/ups-batteries" title="ExcessUPS">ExcessUPS</a></li>
+<li><a href="http://www.ibm.com/ibm/environment/products/battery_us.shtml" title="IBM">IBM</a></li>
+</ul>
+
+<h2>Purchasing Tips</h2>
+<p>Use rechargeable batteries whenever possible. Rechargeable batteries can be used many times, saving money and reducing waste. </p>
+			</div>			
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

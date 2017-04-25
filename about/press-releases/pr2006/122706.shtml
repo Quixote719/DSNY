@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage,Recycling Collection or Street Cleaning on Monday, January 1, 2007 in observance of the New Year holiday</h3>
+<div class="prs-subtitle">
+<p><strong>December 27,2006</strong> | <em>Vito A. Turso / Matthew LiPani (646) 885-5020</em></p>
+<p>Press Release # 06-74, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The Department of Sanitation announced today that <strong>there will be no garbage or recycling collection, or street cleaning on Monday, January 1, 2007, in observance of the New Year holiday.</strong> &nbsp; Residents who receive Monday garbage and recycling collection should place both materials out at curbside Monday evening after 4 PM for pickup on Tuesday, January 2nd.&nbsp;</p>
+<p>All Sanitation Department offices will be closed on Monday, January 1st in observance of the holiday.&nbsp; Residences and commercial establishments that unlawfully leave trash, recyclables, or dumpsters at curbside over the holiday are subject to a fine of up to $250.&nbsp; Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.&nbsp;</p>
+<p>For questions about Sanitation services and schedules over the holiday, contact the NYC Citizens Service Center at 3-1-1 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,28 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Appliances </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Appliances</h1>
+
+<p>Before discarding any refrigerator or freezer, water cooler, dehumidifier, air conditioner, or other type of appliance containing Chlorofluorocarbon gas (CFC&mdash;also known as Freon), you must call 311 or <a href="http://www1.nyc.gov/nyc-resources/service/1354/cfc-and-freon-removal-appointment" title="request an appointment online">request an appointment online</a> for the recovery of CFC and pick-up for recycling by DSNY.<br /><br /><b>Recycling: </b>For large and small appliances that are predominantly metal or rigid plastic and do not contain CFCs, recycle with your metal, glass, and plastic. Batteries must be removed from all appliances prior to recycling to avoid fires. <br /><br /><b>Garbage: </b>If the appliance is something other than metal or rigid plastic, place it out with other garbage.</p>
+<h3>Donations &amp; Reuse</h3>
+<p>Visit <a href="http://nyc.gov/html/stuffex/" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to buy, sell, or donate working appliances.</p>
+<h2>Take-Back or Drop-Off</h2>
+<p>Some businesses have appliance take-back programs; check their websites for details:</p>
+<ul>
+<li><a href="http://www.coned.com/energyefficiency/residential_bounty_program.asp" title="ConEdison">ConEdison</a></li>
+<li><a href="http://www.BestBuy.com/recycle" title="Best Buy">Best Buy</a></li>
+<li><a title="Felix Storch, Inc." href="http://www.summitappliance.com/recycle">Felix Storch, Inc.</a><br /><span style="margin-left: 16px">Brands: Accucold, Summit</span></li>
+<li><a title="LG Electronics U.S.A., Inc." href="http://www.lgrecyclingprogram.com">LG Electronics U.S.A., Inc.</a><br /><span style="margin-left: 16px">Brands: Goldstar, LG</span></li>
+<li><a title="Whirlpool Corporation" href="http://www.whirlpoolrecycling.com">Whirlpool Corporation</a><br /><span style="margin-left: 16px">Brands: Amana, Estate, Gladiator, Inglis, Jenn-Air, Maytag, Whirlpool Gold</span></li>
+</ul>
+<h2>Purchasing Tips</h2>
+<p>Look for fewer moving parts, buttons, or digital electronic readouts that could break. Simpler is better.<br /><br />Look for stainless steel construction for durability and recyclability at the end of the product&rsquo;s life.<br /><br />Compare warranties before you buy your new appliance. A longer warranty period indicates a manufacturer&rsquo;s confidence in its product. Although no one likes to think about repairing a purchase that hasn&rsquo;t even been paid for yet, consider the ease of repair as part of your purchasing decision.</p>
+			</div>			
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

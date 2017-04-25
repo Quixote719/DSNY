@@ -1,0 +1,39 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - About DSNY</title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+		<div id="contentsection" class="about-main-image">
+
+				<div class="span6 about-description">
+<h1>2016 Strategic Plan</h1>
+
+<div class="span12">
+	<div class="span3">
+		<p><a href="http://www1.nyc.gov/assets/dsny/2016SP.pdf" target="_blank"><img class="leftimage" style="width: 280px; margin: 3px 20px 5px 0px; float: left;" src="/assets/dsny/img/stratplan_cover.jpg"/></a></p>
+	</div>
+	<div class="span9">
+		<p>To find out more about DSNY's 2016 Strategic Plan, read the  <a href="http://www1.nyc.gov/assets/dsny/about/press-releases/pr2016/06072016.shtml" target="_blank"><strong>press release</strong></a> and <a href="http://www1.nyc.gov/assets/dsny/2016SP.pdf" target="_blank"><strong>full plan</strong></a>.</p>
+
+		<p>The New York City Department of Sanitation has a simple mission of enormous importance. We keep New York City healthy, safe and clean by collecting, recycling and disposing of waste, cleaning streets and vacant lots, and clearing snow and ice. The daily operations to meet this mission are of a vast scale and often have us operating in reaction to immediate needs and conditions in the field. However, focusing only on the present jeopardizes our long-term goals. The 2016 Strategic Plan is our blueprint for becoming a more proactive, nimble and cohesive agency—helping our Department respond to New Yorkers’ needs today while building the agency they will need in the future. </p>
+
+		<p>This strategic plan is the first of its kind in the agency’s 135-year history. It builds on the Department’s 2006 Solid Waste Management Plan—a fair, five-borough plan for the export of waste by rail and barge. And, it complements One New York: The Plan for a Strong and Just City, Mayor de Blasio’s blueprint for the city’s equitable, sustainable, and resilient development. With that report, Mayor de Blasio set an ambitious goal of sending zero waste to landfills by 2030, and in the last year, we have taken great strides toward achieving that goal. But we have much more to do.</p>
+
+		<p>This plan applies a visionary, long-term and strategic lens to everything we do. To inform our thinking, we began with five guiding questions: </p>
+
+		<ul>
+		<li><strong>Core Services:</strong> The services we provide keep New York City growing and thriving. How can we improve our operations to be more efficient, effective and adaptive?</li>
+		<li><strong>Customer Service:</strong> The public is our greatest partner in achieving our goals. How can we better engage residents, our partners and all stakeholders in our work?</li>
+		<li><strong>Safety:</strong> Sanitation is dangerous work. How can we build a stronger culture of safety to protect our employees and the public?</li>
+		<li><strong>Fleet and Facilities:</strong> We own and maintain thousands of heavy and light duty vehicles and operate more than one hundred facilities. How can we best maintain our assets and plan for the future of our fleet and facilities?</li>
+		<li><strong>Workforce:</strong> With nearly 10,000 employees, how can we ensure a diverse and vibrant workforce, with high levels of employee engagement and ample opportunities for professional development?</li>
+		</ul>
+
+		<p>We answered these questions with the help of employees at all levels of the organization—from Sanitation Workers to Staff Analysts, Enforcement Agents to Auto Mechanics, and Clerical Associates to Superintendents. This strategic plan reflects broad employee engagement and represents an agency-wide commitment to achieving our goals. Commissioner Garcia gave presentations to staff throughout the agency to welcome their ideas for strengthening the Department. Employees made suggestions and asked questions, submitted comment cards and emailed the suggestion box to share their vision. This plan is the result of dozens of town hall meetings, retreats, focus groups and presentations at 34 district garages, our downtown offices, the Central Repair Shop and two transfer stations. In total, more than 2,700 individual employees helped to create this plan. </p>
+
+		<p>The 12 goals of our plan comprise our vision for the agency going forward and the 46 strategic initiatives contained within detail ways we can innovate and embrace change to deliver our services better, more safely, and more efficiently. With this vision and plan, we are taking concrete steps toward making New York’s Strongest even stronger for the next four years and beyond.</p>
+	</div>
+</div>
+
+		</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

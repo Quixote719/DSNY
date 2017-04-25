@@ -1,0 +1,14 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Snow Alert Issued</h3>
+<div class="prs-subtitle">
+<p><strong>Friday, January 14, 2011</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 11-03, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has issued a snow alert for Saturday, January 15, 2011 starting at 4:00 P.M. for a <b>light dusting only</b>.</p>
+<p>A snow alert is a readiness notification of a possible snow event wherein DSNY personnel begin initial equipment readiness, such as loading salt spreaders and attaching plows, as needed.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

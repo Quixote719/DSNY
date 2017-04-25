@@ -1,0 +1,23 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling, Organics Collection or Street Cleaning on Labor Day, Monday, September 1, 2014</h3>
+<div class="prs-subtitle">
+<p><strong>Wednesday, August 27, 2014</strong> | <em>Vito A. Turso/Belinda A. Mager</em></p>
+<p style="font-size:14px">Press Release # 14-61, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Labor Day, there will be no garbage, recycling or organics collection, or street cleaning on Monday, September 1, 2014.</p>
+<ul>
+<li>Residents who normally receive Monday <strong>garbage and organics</strong> collection should place their trash and organic materials out at curbside after 5 p.m. on Monday, September 1 for pickup. </li>
+<li>Residents receiving Monday <strong>recycling</strong> collection should place their items curbside, after 5 p.m, on Sunday, September 7 for pickup on Monday, September 8. </li>
+</ul>
+<p style="MARGIN-top: 0in">In addition, all Sanitation Department administrative offices will be closed on Monday, September 1, in observance of the holiday.</p>
+<div></div>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+<div></div>
+<h3 class="prs-about"><i class="fa fa-university"></i> About the New York City Department of Sanitation</h3>
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

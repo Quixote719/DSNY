@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Rev. Dr. Martin Luther King Jr. Day, Monday, January 21st</h3>
+<div class="prs-subtitle">
+<p><strong>January 14,2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-03, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="MARGIN-top: 0in">The New York City Department of Sanitation (DSNY) announced today that in observance of the Rev. Dr. Martin Luther King Jr. Day, there will be no garbage or recycling collection, or street cleaning on Monday, January 21st, 2013.&nbsp; In addition, all Sanitation Department administrative offices will be closed on Monday, January 21st, in observance of the holiday.</p>
+<p>Residents who normally receive Monday garbage collection should place their trash out at curbside Monday after 4 PM for pickup.&nbsp; Those receiving Monday recycling collection will not have their recycling picked up until the following Monday, January 28th, 2013.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 3-1-1 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+<br /><br /></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

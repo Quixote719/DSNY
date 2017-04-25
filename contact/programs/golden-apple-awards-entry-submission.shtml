@@ -1,0 +1,1668 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Golden Apple Awards </title>
+
+
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<style>
+#msform fieldset {
+border: none;
+max-width: 940px;
+/*stacking fieldsets above each other*/
+position: relative;
+}
+ 
+/*Hide all except first fieldset*/
+.fieldset2 {
+display: none;
+}
+ 
+.fieldset3 {
+display: none;
+}
+ 
+.fieldset4 {
+display: none;
+}
+ 
+.error {border-color:#e9322d !important}
+</style>
+
+
+<div id="contentsection" class="about-main-image">
+
+<div class="span6 about-description">
+<div id="container">
+  <div id="header">
+    <h1> <span class="subtitle">Golden Apple Awards Entry Submission</span></h1>
+  </div>
+  <div>
+   <p> <span class="required_notification2"> </span><br/>
+     Use this form to upload your school's contest entry pdf (up to 3MB) for the <a href="/assets/dsny/zerowaste/schools/golden-apple-awards.shtml"  > Golden Apple Awards.</a>
+You may enter more than one contest; please submit each entry separately. Double check that you have answered all the required contest entry questions for the contest you're entering, and that your PDF includes an attractive cover page.
+<br/><br/>
+    
+      <span class="required_notification2"> </span></p>
+      <p>
+All entries must be submitted on or before <b> noon on Monday, May 2, 2016</b>. <!-- If you need help compressing your images or your PDF, refer to <a href="/assets/dsny/zerowaste/schools/golden-apple-awards-entry-tips.shtml"  >Golden Apple Awards Entry Tips</a>.--> Contact us if you have any questions or problems.</p>
+  </div>
+  <form id="msform" class="pure-form" method="post" type="external" name="mranimal" enctype="multipart/form-data"  action="http://www.nyc.gov/cgi-bin/mailup.cgi">	
+        <input name="app_key" type="hidden" value="06F6620746865206F" />   
+        <input name="address" id="address" type="hidden"/>
+        <input name="name" id="name"  type="hidden"/>
+        <input name="between" id="between" type="hidden"/>
+        <input name="boro" id="boroName" type="hidden"/>
+     <input value="http://www1.nyc.gov/site/dsny/index.page" type="hidden" name="return_link_url">
+
+ <input value="SCHOOL-NAME-OFFICIAL,SCHOOL-ADDRESS,SCHOOL-CITY,SCHOOL-ZIP-CODE,SCHOOL-FAX,SCHOOL-TYPE,PRINCIPAL-FIRST-NAME,PRINCIPAL-LAST-NAME,PRINCIPAL-EMAIL,PRINCIPAL-PHONE,CONTEST-BOROUGH,CONTEST-GRADE-DIVISION,CONTEST-ENTRY-TITLE,CONTEST-ENTRY-SUMMARY,COORDINATOR-FIRST-NAME,COORDINATOR-LAST-NAME,COORDINATOR-TITLE,COORDINATOR-SCHOOL-EMAIL,COORDINATOR-SCHOOL-PHONE,CUSTODIAN-FIRST-NAME,CUSTODIAN-LAST-NAME,CUSTODIAN-EMAIL,CUSTODIAN-PHONE" type="hidden" name="required" />
+          &#160;
+          <input value="maaron@dsny.nyc.gov,,mmost@dsny.nyc.gov" type="hidden" name="recipient" />
+          &#160;
+          <input value="Golden Apple Awards Entry Submission" type="hidden" name="subject" />
+          <!--   <input value="DSNY WebForms - TESTING" type="hidden" name="subject" /> -->
+
+          &#160;
+          <input value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" type="hidden" name="env_report" />
+          &#160;
+          <input value="/cgi-bin/misc/mailform.cgi" type="hidden" name="cgi" />
+          <input value="#FFFFFF" type="hidden" name="bgcolor" />
+          &#160;
+          <input value="order:SCHOOL-NUMBER,SCHOOL-NAME-OFFICIAL,SCHOOL-NAME-AKA,SCHOOL-ADDRESS,SCHOOL-CITY,SCHOOL-ZIP-CODE,SCHOOL-DISTRICT,SCHOOL-FAX,SCHOOL-TYPE,PRINCIPAL-FIRST-NAME,PRINCIPAL-LAST-NAME,PRINCIPAL-EMAIL,PRINCIPAL-PHONE,PRINCIPAL-PHONE-EXT,CONTEST-BOROUGH,CONTEST-GRADE-DIVISION,CONTEST-ENTRY-TITLE,CONTEST-ENTRY-SUMMARY,CONTEST-WE-COMPOST,COORDINATOR-FIRST-NAME,COORDINATOR-LAST-NAME,COORDINATOR-TITLE,COORDINATOR-TITLE-SPECIFY-OTHER,COORDINATOR-AFFILIATION,COORDINATOR-SCHOOL-EMAIL,COORDINATOR-ALTERNATE-EMAIL,COORDINATOR-PREFERRED-EMAIL,COORDINATOR-SCHOOL-PHONE,COORDINATOR-SCHOOL-PHONE-EXT,COORDINATOR-ALTERNATE-PHONE,COORDINATOR-ALTERNATE-PHONE-EXT,COORDINATOR-ALTERNATE-PHONE-TYPE,CUSTODIAN-FIRST-NAME,CUSTODIAN-LAST-NAME,CUSTODIAN-EMAIL,CUSTODIAN-PHONE,CUSTODIAN-PHONE-EXT,STUDENT-PARTICIPATION-CORE,STUDENT-PARTICIPATION-TOTAL,SCHOOL-POPULATION-TOTAL,COMMENTS" type="hidden" name="sort" />
+          <p style="DISPLAY: none">
+          
+
+     
+
+
+
+
+        <div id="steps">
+            <a id="astep1" class="step1 active1" href="#"></a>
+            <a id="astep2" class="step2" href="#"></a>
+            <a id="astep3" class="step3" href="#"></a>
+        </div>
+        <div style="text-align:right;font-size:12px"><span class="red">*</span>Denotes required field</div>
+        <fieldset>	
+            <div class="pure-g">
+                <div id="subcontainer">
+                    <div class="section">School address </div>
+                    <div class="table">
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="boro">Boro<span class="red">*</span></label>
+                            <select id="boro" name="borough" required tabindex="1" type="select-one">
+                                <option selected="selected" value="">Select your borough</option>
+                                <option value="2">Bronx</option>
+                                <option value="3">Brooklyn</option>
+                                <option value="1">Manhattan</option>
+                                <option value="4">Queens</option>
+                                <option value="5">Staten Island</option>
+                            </select>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3"></div> 
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="houseNumber">BLDG#<span class="red">*</span></label>
+                            <input id="houseNumber" name="houseNumber" tabindex="2" type="text" required maxlength="10"/>
+                        </div>
+                        <div class="pure-u-1 pure-u-md-1-3">
+                            <label for="street">Street<span class="red">*</span></label>
+                            <input id="street" name="street" tabindex="3" type="text" required maxlength="50"/>
+                        </div>                     
+                                             
+                      
+                    <br/>
+                    <div id="results" class="pure-u-sm-24-24"></div>
+                    </div>
+                    
+                </div>
+            </div>
+                  
+               
+            <br/>
+            <div id="buttons">
+                <a class="pure-button next" id="cancel">Clear</a>
+		<button id="nextstep2" class="pure-button next" tabindex="4">&nbsp;<strong>Next</strong>&nbsp;</button>
+            </div>
+        </fieldset>
+
+            <fieldset class="fieldset2">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section"> Contest entry information </div>
+                        <div class="table">
+
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <label for="lblcontest">Contest (Please select one):<span class="red">*</span></label>
+                                <input value="Super Recyclers" type="radio" required name="Contest" tabindex="5">&nbsp;Super Recyclers <br />
+                                <input value="Reduce & Reuse" type="radio" required name="Contest" tabindex="6">&nbsp;Reduce & Reuse <br />
+                                <input value="Team Up to Clean Up" type="radio" required name="Contest" tabindex="7">&nbsp;Team Up to Clean Up <br />
+
+                            </div>
+ <div class="pure-u-1 pure-u-md-1-3-b"> </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblcontestgradedivision">Grade Division<span class="red">*</span></label>
+                                <select tabindex="8" name="CONTEST-GRADE-DIVISION" id="gradedivision" required type="select-one">
+                                    <option selected="selected" value="">Please select one:</option>
+                                    <option value="Elementary">Elementary</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="High school">High School</option>
+                                </select>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblborough">Borough<span class="red">*</span></label>
+                                <select tabindex="9" name="CONTEST-BOROUGH" required id="contestborough" type="select-one">
+                                    <option selected="selected" value="">Please select one:</option>
+                                    <option value="Bronx">Bronx</option>
+                                    <option value="Brooklyn">Brooklyn</option>
+                                    <option value="Manhattan">Manhattan</option>
+                                    <option value="Queens">Queens</option>
+                                      <option value="Staten Island">Staten Island</option>
+                                </select>
+                            </div>
+
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblcontestentrytitle">Contest Entry Title<span class="red">*</span></label>
+                                <input maxlength="250" tabindex="10" size="30" name="CONTEST-ENTRY-TITLE" id="contestentrytitle" type="text" required />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <label for="lblcontestentrysummary">Contest Entry Summary (100 words or less)<span class="red">*</span></label>
+                                <textarea rows="5" cols="30" tabindex="11" maxlength="750" name="CONTESTENTRYSUMMARY" id="contestentrysummary" required></textarea>
+                                <input type="hidden" name="CONTEST-ENTRY-SUMMARY" id="hdncontestentrysummary">
+                                
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <label for="lblgoldenshovelentry">Golden Shovel entry</label>
+                                <input value="yes" tabindex="12" type="checkbox" name="CONTEST-WE-COMPOST" id="contestwecompost" />&nbsp; Our school composts outdoors, or indoors with worm bins.
+                            </div>
+<div class="pure-u-1 pure-u-md-1-3-b"></div>
+                           
+                          
+                        </div>
+
+                        <div class="section">School information </div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschoolnumber">School Number</label>
+                                    <input  type="text" name="SCHOOL-NUMBER" id="schoolnumber" tabindex="13" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblofficialschoolnumber">Official School Name<span class="red">*</span></label>
+                                    <input type="text"  name="SCHOOL-NAME-OFFICIAL" required id="schoolnameofficial" tabindex="14" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschoolalsoknownas">School Also Known As</label>
+                                    <input type="text" name="SCHOOL-NAME-AKA" id="schoolnameaka" tabindex="15" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschooldistrict">School District</label>
+                                    <input type="text" name="SCHOOL-DISTRICT" id="schooldistrict" tabindex="16" />
+ <input maxlength="100" size="30" name="SCHOOL-ADDRESS" type="hidden" id="hdnschooladdress"/>
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschoolfax">School Fax<span class="red">*</span></label>
+                                    <input type="text" name="SCHOOL-FAX" id="schoolfax" required tabindex="17" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschooltype">School Type<span class="red">*</span></label>
+                                    <select name="SCHOOL-TYPE" required type="select-one" id="schooltype" tabindex="18">
+                                        <option selected="selected" value="">Please select one:</option>
+                                        <option value="Public (NYC Dept of Ed)">Public (NYC Dept of Ed)</option>
+                                        <option value="Charter School">Charter School</option>
+                                        <option value="Religious">Religious</option>
+                                        <option value="Other Private">Other Private</option>
+                                    </select>                                 
+                                </div>
+
+
+
+                              
+                            
+                            </div>
+                        </div>
+
+
+                        <div class="section">Principal information</div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblfirstname">First Name<span class="red">*</span></label>
+                                    <input id="principalfirstname" type="text" name="PRINCIPAL-FIRST-NAME" required maxlength="25" tabindex="19" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lbllastname">Last Name<span class="red">*</span></label>
+                                    <input id="principallastname" maxlength="25" type="text" name="PRINCIPAL-LAST-NAME" required tabindex="20" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblphone">Phone<span class="red">*</span></label>
+                                    <input type="text" id="principalphone" name="PRINCIPAL-PHONE" maxlength="21" required tabindex="21" />
+                                 
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblemail">Email<span class="red">*</span></label>
+                                    <input type="text" name="PRINCIPAL-EMAIL" id="principalemail" maxlength="50" required tabindex="22" />
+                                </div>                     
+
+                            </div>
+                        </div>
+
+                        <div class="section">Contest coordinator info (teacher or administrator at school)</div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblfirstnamecontestcordinator">First Name<span class="red">*</span></label>
+                                    <input id="coordinatorfirstname" type="text" name="COORDINATOR-FIRST-NAME" required maxlength="25" tabindex="23" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lbllastnamecontestcordinator">Last Name<span class="red">*</span></label>
+                                    <input id="coordinatorlastname" maxlength="25" type="text" name="COORDINATOR-LAST-NAME"  required tabindex="24" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3-b">
+                                   <label for="lbltitlecoordinator">Title &nbsp; (Select all that apply): <span class="red">*</span></label>
+                                    <input value="Assistant Principal" tabindex="25" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; Assistant Principal <br />
+                                    <input value="Sustainability Coordinator" tabindex="26" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; Sustainability Coordinator <br />
+                                    <input value="Teacher" tabindex="27" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; Teacher <br />
+                                    <input value="Club Advisor" tabindex="28" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; Club Advisor <br />
+                                    <input value="After School Program Staff" tabindex="29" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; After School Program Staff<br />                                
+                                    <input value="Other" tabindex="30" type="checkbox" required name="COORDINATORTITLECHKBOX" />&nbsp; Other <br />
+                                    <input type="hidden" name="COORDINATOR-TITLE" id="hdncoordinatetitle">                                                               
+                                    
+                                </div>
+<div class="pure-u-1 pure-u-md-1-3-b">
+</div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblother">If "Other" please specify</label>
+                                    <input maxlength="100" type="text" name="COORDINATOR-TITLE-SPECIFY-OTHER" id="coordinatortitlespecifyother" disabled="disabled" tabindex="31" required  />
+
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblemail">Describe Affiliation</label>
+                                    <input type="text" name="COORDINATOR-AFFILIATION" maxlength="100" id="coordinatoraffiliation" tabindex="32" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblemailatschool">Email at School<span class="red">*</span></label>
+                                    <input id="coordinatorschoolemail" maxlength="50" type="text" name="COORDINATOR-SCHOOL-EMAIL" required tabindex="33" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblalternateemail">Alternate Email</label>
+                                    <input id="coordinatoralternateemail" maxlength="50" type="text" name="COORDINATOR-ALTERNATE-EMAIL"  tabindex="34" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblpreferrededmail">Preferred Email</label>
+                              
+
+                                         <select size="1" name="COORDINATOR-PREFERRED-EMAIL"   tabindex="35"   id="coordinatorpreferredemail">
+                                        <option selected="selected" value="">Please select one:</option>
+                                        <option value="School">School</option>
+                                        <option value="Alternate">Alternate</option>
+
+                                    </select>
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschoolphone">School Phone<span class="red">*</span></label>
+                                    <input id="coordinatorschoolphone" maxlength="21" type="text" name="COORDINATOR-SCHOOL-PHONE" required tabindex="36" />
+                                </div>
+
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblalternatephone">Alternate Phone</label>
+                                    <input id="coordinatoralternatephone" maxlength="21" type="text" name="COORDINATOR-ALTERNATE-PHONE"  tabindex="37" />
+                                </div>
+
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblalternatephonetype">Alternate Phone Type</label>
+                                    <select tabindex="38" size="1" name="COORDINATOR-ALTERNATE-PHONE-TYPE" id="coordinatoralternatephonetype">
+                                        <option selected="selected" value="">Please select one:</option>
+                                        <option value="Work">Work</option>
+                                        <option value="Mobile">Mobile</option>
+                                        <option value="Home">Home</option>
+                                    </select>
+                                </div>
+
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblpreferredphone">Preferred Phone</label>
+                                    <select tabindex="39" size="1" name="PREFERRED-PHONE" id="preferredphone">
+                                        <option selected="selected" value="">Please select one:</option>
+                                        <option value="School">School</option>
+                                        <option value="Alternate">Alternate</option>
+
+                                    </select>
+<input maxlength="100" type="hidden" size="5" name="COORDINATOR-ALTERNATE-PHONE-EXT" id="hdncordinatoralternatephoneext" />
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="section">Custodian information</div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblcustodianfirstname">First Name<span class="red">*</span></label>
+                                    <input id="custodianfirstname" type="text" name="CUSTODIAN-FIRST-NAME" required maxlength=" 25" tabindex="40" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblcustodianlastname">Last Name<span class="red">*</span></label>
+                                    <input id="custodianlastname" maxlength="25" type="text" name="CUSTODIAN-LAST-NAME" required tabindex="41" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblcustodianphone">Phone<span class="red">*</span></label>
+                                    <input type="text" maxlength="21" id="custodianphone" name="CUSTODIAN-PHONE" required tabindex="42" />                                 
+
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblcustodianemail">Email<span class="red">*</span></label>
+                                    <input type="text" id="custodianemail" name="CUSTODIAN-EMAIL" required tabindex="43" maxlength="50" />                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">Student involvement</div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblstudentparticipationcore">Student participation - core group#</label>
+                                    <input id="studentparticipationcore" type="text" name="STUDENT-PARTICIPATION-CORE" style="width:35% !important"  maxlength="50" tabindex="44" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblstudentparticipationtotal">Student participation - total #</label>
+                                    <input id="studentparticipationtotal" maxlength="50" type="text" name="STUDENT-PARTICIPATION-TOTAL"  style="width:35% !important"  tabindex="45" />
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="lblschoolpopulationtotal">School population - total #</label>
+                                    <input type="text" id="schoolpopulationtotal" maxlength="50" name="SCHOOL-POPULATION-TOTAL" tabindex="46" style="width:35% !important" />
+
+                                </div>                               
+
+                            </div>
+                        </div>
+                        <div class="section">Attach your contest entry</div>
+                        <div class="table">
+                            <div id="personalinfo" style="display:block">
+ <div class="pure-u-1 pure-u-md-1-3-b">
+
+
+Upload file, but the total size of all files uploaded cannot exceed 3 MB. Formats accepted: .doc, .docx, or .pdf. In order for your file to be uploaded, you must click the Submit button below.
+If you need help compressing your images or your PDF, refer to <a href="/assets/dsny/zerowaste/schools/golden-apple-awards-entry-tips.shtml">Golden Apple Awards Entry Tips</a>. 
+  </div>
+<div class="pure-u-1 pure-u-md-1-3-b">
+</div>
+                                <div class="pure-u-1 pure-u-md-1-3-b">
+                                    <input type="file" size="40" name="FILE1" tabindex="47" id="fileupload" style="line-height: 20px !important;margin-bottom: 7px;width:100%" />                                   
+                                </div>
+  <div class="pure-u-1 pure-u-md-1-3-b">
+By uploading this file, you agree that the City may use the content within for whatever purposes it sees fit. The City cannot return or delete files that you did not intend to submit, even if those files are personal in nature. Individuals who submit offensive or harassing files not related to City business may be liable for violations of law.
+
+</div>
+ <div class="pure-u-1 pure-u-md-1-3-b"></div>
+                                <div class="pure-u-1 pure-u-md-1-3-b">
+                                    <label for="lblcomment">Comments</label>
+                                    <textarea rows="5" cols="60" name="COMMENTS"  maxlength="250"  id="comments" tabindex="48"></textarea>
+                                </div>
+                               
+
+                            </div>
+                        </div>
+
+                        <!--<div class="section"> Contact Information </div>
+                        <div class="table">
+                            <div class="pure-u-1">
+                                <input type="radio" name="personalDetails" tabindex="49" value="0" />I would like to remain anonymous
+                                <br />
+                                <input type="radio" checked name="personalDetails" tabindex="50" value="1" />My contact information is as follows:
+                            </div>
+                            <div id="personalinfo" style="display:block">
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="first-name">First Name<span class="red"><span class="red">*</span></span></label>
+                                    <input id="first-name" type="text" name="firstname" tabindex="18" maxlength="25" required>
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="last-name">Last Name<span class="red">*</span></label>
+                                    <input id="last-name" type="text" name="lastname" tabindex="19" maxlength="25" required>
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="email">E-Mail<span class="red">*</span></label>
+                                    <input id="email" name="email" email="true" type="text" tabindex="20" maxlength="50" required>
+                                </div>
+                                <div class="pure-u-1 pure-u-md-1-3">
+                                    <label for="phone">Phone<span class="red">*</span></label>
+                                    <input id="phone" type="text" name="phonenumber" tabindex="51" maxlength="21" required>
+                                </div>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+                <br>
+                <div id="buttons">
+                    <button id="previousstep1" class="pure-button next" tabindex="49">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                    <button id="nextstep3" class="pure-button next" tabindex="50">&nbsp;<strong>Next</strong>&nbsp;</button>
+
+                </div>
+                <div id="HiddenVariable">
+                    <input name="GEOcity" id="GEOcity" type="hidden" />
+                    <input name="GEOzipcode" id="GEOzipcode" type="hidden" />
+                    <input maxlength="100" type="hidden" size="30" name="SCHOOL-CITY" id="schoolcity" />
+                    <input maxlength="100" type="hidden" size="30" name="SCHOOL-ZIP-CODE" id="schoolzipcode" />
+                </div>
+            </fieldset>
+
+
+
+            <fieldset class="fieldset3">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section"> Submission confirmation</div>
+
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Boro</div>
+                                <div id="disborough" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">BLDG #</div>
+                                <div id="disbldg" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Street</div>
+                                <div id="disstreet" class="data_long">&nbsp;</div>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest</div>
+                                <div id="discontest" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Grade Division</div>
+                                <div id="disgradedivision" class="data_long">&nbsp;<br />&nbsp;</div>
+                            </div>
+                            
+                           
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Borough</div>
+                                <div id="discontestborough" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest Entry Title</div>
+                                <div id="discontestentrytitle" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest Entry Summary</div>
+                                <div id="discontestentrysummary" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Golden Shovel Entry</div>
+                                <div id="discontestwecompost" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School Number</div>
+                                <div id="disschoolnumber" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Official School Name</div>
+                                <div id="disschoolnameofficial" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School Also Known As</div>
+                                <div id="disschoolnameaka" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School District</div>
+                                <div id="disschooldistrict" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School Fax</div>
+                                <div id="disschoolfax" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School Type</div>
+                                <div id="disschooltype" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Principal information First Name</div>
+                                <div id="disprincipalfirstname" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Principal information Last Name</div>
+                                <div id="disprincipallastname" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Principal information Phone</div>
+                                <div id="disprincipalphone" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Principal information Email</div>
+                                <div id="disprincipalemail" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest coordinator First Name</div>
+                                <div id="discoordinatorfirstname" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest coordinator Last Name</div>
+                                <div id="discoordinatorlastname" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest coordinator Title</div>
+                                <div id="discontestcordinatortitle" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Contest coordinator Title Other</div>
+                                <div id="discoordinatortitlespecifyother" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Describe Affiliation</div>
+                                <div id="discoordinatoraffiliation" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Email at School</div>
+                                <div id="discoordinatorschoolemail" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Alternate Email</div>
+                                <div id="discoordinatoralternateemail" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Preferred Email</div>
+                                <div id="discoordinatorpreferredemail" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School Phone</div>
+                                <div id="discoordinatorschoolphone" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Alternate Phone</div>
+                                <div id="discoordinatoralternatephone" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Alternate Phone Type</div>
+                                <div id="discoordinatoralternatephonetype" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Preferred Phone</div>
+                                <div id="dispreferredphone" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Custodian information First Name</div>
+                                <div id="discustodianfirstname" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Custodian information Last Name</div>
+                                <div id="discustodianlastname" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Custodian information Phone</div>
+                                <div id="discustodianphone" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Custodian information Email</div>
+                                <div id="discustodianemail" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Student participation - core group#</div>
+                                <div id="disstudentparticipationcore" class="data_long">&nbsp;<br/>&nbsp;<></div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Student participation - total #</div>
+                                <div id="disstudentparticipationtotal" class="data_long">&nbsp;<br/>&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">School population - total #</div>
+                                <div id="disschoolpopulationtotal" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">File Upload</div>
+                                <div id="disfileupload" class="data_long">&nbsp;></div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Comments</div>
+                                <div id="discomments" class="data_long">&nbsp;</div>
+                            </div>
+                          
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <br>
+            </fieldset>
+      
+
+
+   
+
+<div id="fieldset4" class="fieldset4">
+                <div class="row">
+                    <div class="container">
+                        <div class="span4">&nbsp;</div>
+                        <div id="captcha" class="span5">
+
+                         
+                        </div>
+                        <div class="span6"></div>
+                    </div>
+                </div>
+
+                <br>
+                <div id="buttons">
+                    <button id="previousstep2" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                    <button id="submit" type="submit" class="pure-button next">&nbsp;<strong>Submit</strong>&nbsp;</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+ <script src="/assets/dsny/js/webforms/GeoValidation.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+ $(":checkbox").change(function () {
+
+            var selectedCheckbox = '';
+
+            $('input[name="COORDINATORTITLECHKBOX"]:checked').each(function () {
+
+                selectedCheckbox = this.value + ', ' + selectedCheckbox;
+
+            });
+
+            if (selectedCheckbox.indexOf('Other') !== -1) {
+
+                $("#coordinatortitlespecifyother").removeAttr('disabled');                 
+
+            }
+
+            else {                
+
+$('#coordinatortitlespecifyother').val('');
+
+                $("#coordinatortitlespecifyother").attr('disabled', 'disabled');
+
+            }
+
+        });
+
+
+
+
+$('#msform input[type="text"]').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom' 
+
+});
+
+
+
+
+$('#msform textarea').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom' 
+
+});
+
+
+
+
+$('#msform select').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom'     
+
+});
+
+ $('#msform input[type="checkbox"]').tooltipster({
+
+            trigger: 'custom',
+
+            onlyOne: true,
+
+            position: 'bottom'
+
+        });
+
+ $('#msform input[type="radio"]').tooltipster({
+
+            trigger: 'custom',
+
+            onlyOne: true,
+
+            position: 'bottom'
+
+        });
+
+$('textarea[maxlength]').keyup(function () {
+
+var limit = parseInt($(this).attr('maxlength'));
+
+var text = $(this).val();
+
+var chars = text.length;
+
+if (chars > limit) {
+
+var new_text = text.substr(0, limit);
+
+$(this).val(new_text);
+
+}
+
+});  
+
+   $('#principalphone').mask('(999) 999-9999? x99999');
+
+        $('#coordinatorschoolphone').mask('(999) 999-9999? x99999');
+
+        $('#coordinatoralternatephone').mask('(999) 999-9999? x99999');
+
+        $('#custodianphone').mask('(999) 999-9999? x99999');      
+
+       
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var current_fs, next_fs, previous_fs;
+
+var left, opacity, scale;
+
+$("#msform").on('click', 'input[name="personalDetails"]', function () {
+
+var showDetails = $("input:radio[name='personalDetails']:checked").val();
+
+if (showDetails == 0) {
+
+$("#first-name").attr("class", "tooltipstered");
+
+$("#first-name").removeAttr("aria-invalid");
+
+$("#last-name").attr("class", "tooltipstered");
+
+$("#last-name").removeAttr("aria-invalid");
+
+$("#phone").attr("class", "tooltipstered");
+
+$("#phone").removeAttr("aria-invalid");
+
+ $("#coordinatorschoolphone").attr("class", "tooltipstered");
+
+            $("#coordinatorschoolphone").removeAttr("aria-invalid");
+
+            $("#coordinatoralternatephone").attr("class", "tooltipstered");
+
+            $("#coordinatoralternatephone").removeAttr("aria-invalid");
+
+            $("#custodianphone").attr("class", "tooltipstered");
+
+            $("#custodianphone").removeAttr("aria-invalid");
+
+            $("#principalphone").attr("class", "tooltipstered");
+
+            $("#principalphone").removeAttr("aria-invalid");
+
+
+
+
+$("#email").attr("class", "tooltipstered");
+
+$("#email").removeAttr("aria-invalid");
+
+$("#first-name").val('');                                               
+
+$("#last-name").val('');
+
+$("#email").val(''); 
+
+$("#phone").val('');
+
+  $("#coordinatorschoolphone").removeAttr("disabled");
+
+            $("#coordinatoralternatephone").removeAttr("disabled");
+
+            $("#custodianphone").removeAttr("disabled");
+
+            $("#principalphone").removeAttr("disabled");
+
+$("#first-name").attr("disabled", "disabled");
+
+$("#last-name").attr("disabled", "disabled");
+
+$("#email").attr("disabled", "disabled");
+
+$("#phone").attr("disabled", "disabled");
+
+$("#personalinfo").attr("style", "display:none");
+
+} else {
+
+$("#personalinfo").attr("style", "display:block");
+
+$("#first-name").removeAttr("disabled");
+
+$("#last-name").removeAttr("disabled");
+
+$("#email").removeAttr("disabled");
+
+$("#phone").removeAttr("disabled");
+
+$("#first-name").attr("class", "tooltipstered");
+
+$("#last-name").attr("class", "tooltipstered");
+
+$("#phone").attr("class", "tooltipstered");
+
+$("#email").attr("class", "tooltipstered");
+
+}
+
+});
+
+
+
+
+ 
+
+function vali_phone() {
+
+var ndigits = "0123456789";
+
+var temp;
+
+var countr;
+
+var realdata;
+
+realdata = "";
+
+var phoneVal = $("input[id=phone]").val().trim();
+
+if (!(phoneVal == "")) {
+
+for (var i = 0; i < phoneVal.length; i++) {
+
+temp = phoneVal.substring(i, i + 1);
+
+if (phoneVal.length < 10) {
+
+alert("Please enter a valid 10-digit telephone number!");
+
+return false;
+
+}
+
+}
+
+countr = 0;
+
+realdata = "";
+
+for (var i = 0; i < phoneVal.length; i++) {
+
+temp = phoneVal.substring(i, i + 1);
+
+if (ndigits.indexOf(temp) > -1) {
+
+realdata = realdata + temp;
+
+++countr;
+
+}
+
+}
+
+if (countr != 10) {
+
+alert("You have entered " + countr + " digits.\nPlease enter a valid 10-digit telephone number!");
+
+return false;
+
+}
+
+$("input[id=phone]").val("(" + realdata.substring(0, 3) + ") " + realdata.substring(3, 6) + "-" + realdata.substring(6, 10));
+
+return (true);
+
+}
+
+else return true;
+
+}
+
+
+
+
+$("#cancel").click(function () {
+
+$("#houseNumber").val('');
+
+$("#street").val('');
+
+$("#otherlocation").html('&nbsp;');
+
+$("#otherlocation").attr("disabled", "disabled");
+
+$("#boro").val('');
+
+$("#results").empty();
+
+$("#additionalinfo").val('');
+
+ $('#msform input[type="radio"]').attr("class", "tooltipstered");
+
+  $('#msform input[type="radio"]').removeAttr("aria-invalid");
+
+
+
+
+$('#msform input[type="text"]').attr("class", "tooltipstered");
+
+$('#msform input[type="text"]').removeAttr("aria-invalid");
+
+$('#msform select').attr("class", "tooltipstered");
+
+$('#msform select').removeAttr("aria-invalid");
+
+});
+
+
+
+
+var validator;
+
+function validateForm() {
+
+validator = $('#msform').validate({
+
+errorPlacement: function (error, element) {
+
+if (element.attr("type") == "text") {
+
+$(element).tooltipster('update', "This field is required");                                 
+
+}                                                                                                                                                           
+
+else if (element.attr("type") == "select-one") {
+
+$(element).tooltipster('update', "Please select from the list");                                                                 }           
+
+else {
+
+$(element).tooltipster('update', "This field is required");         } 
+
+ if (element.attr("name") == "PRINCIPAL-EMAIL") {
+
+                    $(element).tooltipster('update', "Please enter valid email address");
+
+                }
+
+                if (element.attr("name") == "COORDINATOR-SCHOOL-EMAIL") {
+
+                    $(element).tooltipster('update', "Please enter valid email address");
+
+                }
+
+                if (element.attr("name") == "COORDINATOR-ALTERNATE-EMAIL") {
+
+                    $(element).tooltipster('update', "Please enter valid email address");
+
+                }
+
+                if (element.attr("name") == "COORDINATOR-PREFERRED-EMAIL") {
+
+                    $(element).tooltipster('update', "Please enter valid email address");
+
+                }
+
+                if (element.attr("name") == "CUSTODIAN-EMAIL") {
+
+                    $(element).tooltipster('update', "Please enter valid email address");
+
+                }
+
+                                          
+
+if (element.attr("name") == "Day of the week") {
+
+  $(element).tooltipster('update', "Please enter valid date");
+
+ }                                               
+
+ if (element.attr("name") == "Contest") {
+
+                    $(element).tooltipster('update', "Please select radio button");
+
+                }
+
+                if (element.attr("name") == "COORDINATORTITLECHKBOX") {
+
+                    $(element).tooltipster('update', "Please select checkbox");
+
+                }                             
+
+$('element').tooltipster({
+
+functionInit: function(){
+
+return $('element').html();
+
+},
+
+functionReady: function(){
+
+$('element').attr('aria-hidden', false);
+
+},
+
+functionAfter: function(){
+
+$('element').attr('aria-hidden', true);
+
+}
+
+});
+
+$(element).focus(function(){
+
+if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+
+{        $(this).tooltipster('show');  }
+
+})
+
+.blur(function(){
+
+$(this).tooltipster('hide');
+
+});
+
+},
+
+success: function (label, element) {
+
+$(element).tooltipster('hide'); 
+
+},
+
+invalidHandler: function() {
+
+$(this).find(".error:first").focus();
+
+}
+
+});
+
+if (!$('#msform').valid()) {
+
+return false;
+
+} 
+
+else  {  return true; }
+
+}
+
+$("#nextstep2").click(function (event) {
+
+if (validateForm()) {
+
+var retCode = false;
+
+current_fs = $(this).parent().parent();
+
+next_fs = $(this).parent().parent().next();
+
+event.preventDefault();
+
+validateAddress(function (output) {
+
+if (output == true) {
+
+retCode = true;
+
+} 
+
+
+
+
+if (retCode == true) {
+
+var fullAddress = $("#houseNumber").val() + " " + $("#street").val();
+
+$("#address").val(fullAddress);
+
+$("#between").val(fullAddress);
+
+var boroughWithID = $("#boro option:selected").val() + "-" + $("#boro option:selected").text();
+
+$("#boroName").val(boroughWithID);
+
+next_fs.show();
+
+current_fs.hide();
+
+$('#astep1').removeClass('active1');
+
+$('#astep2').addClass('active2');
+
+return false;
+
+}
+
+});
+
+}
+
+else
+
+{
+
+validator.focusInvalid();
+
+return false;
+
+}
+
+});
+
+
+
+
+$("#previousstep1").click(function () {
+
+$('#msform input[type="text"]').attr("class", "tooltipstered");
+
+$('#msform select').attr("class", "tooltipstered");
+
+$('#msform input[type="text"]').removeAttr("aria-invalid");
+
+$('#msform select').removeAttr("aria-invalid");
+
+current_fs = $(this).parent().parent();
+
+previous_fs = $(this).parent().parent().prev();
+
+previous_fs.show();
+
+current_fs.hide();
+
+$('#astep2').removeClass('active2');
+
+$('#astep1').addClass('active1');
+
+return false;
+
+});
+
+
+
+
+
+
+
+$("#nextstep3").click(function (event) {
+
+        
+
+        current_fs = $(this).parent().parent();
+
+        next_fs = $(this).parent().parent().next();
+
+        $('#schoolcity').val($('#GEOcity').val());
+
+        $('#schoolzipcode').val($('#GEOzipcode').val());
+
+        if (validateForm() && isValidEmailAddress($("#principalemail"))
+
+            && isValidEmailAddress($("#coordinatorschoolemail")) && isValidEmailAddress($("#coordinatoralternateemail"))
+
+            && isValidEmailAddress($("#custodianemail"))
+
+            && validateRadioButton($("#input:select[name='Contest']")) && validateCheckBox($("#input:select[name='COORDINATORTITLECHKBOX']"))) {
+
+
+
+
+            $('#disborough').text($("#boro option:selected").text());
+
+            $('#disbldg').text($('#houseNumber').val());
+
+            $('#disstreet').text($('#street').val());
+
+
+
+
+            var contestcheckedRadio = $("input:radio[name='Contest']:checked").val();
+
+            var contestsummary;
+
+            contestsummary = "Contest :" + contestcheckedRadio + ".";
+
+            $('#discontest').text($("input:radio[name='Contest']:checked").val());
+
+            $('#disgradedivision').text($("#gradedivision option:selected").val());
+
+            $('#discontestborough').text($("#contestborough option:selected").val());
+
+            $('#discontestentrytitle').text($('#contestentrytitle').val());
+
+            $('#discontestentrysummary').text($('#contestentrysummary').val());
+
+            $('#hdncontestentrysummary').val(contestsummary + '    ' +$('#contestentrysummary').val());
+
+
+
+
+            if($("#contestwecompost").prop('checked') == true)
+
+            {
+
+                $('#discontestwecompost').text('Yes');
+
+          
+
+            }
+
+             else
+
+            {
+
+                 $('#discontestwecompost').text('No');
+
+            }
+
+            if ($('#schoolnumber').val().length > 0) {
+
+                $('#disschoolnumber').text($('#schoolnumber').val());
+
+            } else {
+
+                $('#disschoolnumber').html('&nbsp;');
+
+            }
+
+
+
+
+            $('#disschoolnameofficial').text($('#schoolnameofficial').val());
+
+            if ($('#schoolnameaka').val().length > 0) {
+
+                $('#disschoolnameaka').text($('#schoolnameaka').val());
+
+            }
+
+            else {
+
+                $('#disschoolnameaka').html('&nbsp;');
+
+            }
+
+            if ($('#schooldistrict').val().length > 0) {
+
+                $('#disschooldistrict').text($('#schooldistrict').val());
+
+            }
+
+            else {
+
+                $('#disschooldistrict').html('&nbsp');
+
+            }
+
+$('#hdnschooladdress').val($('#houseNumber').val() + " " + $('#street').val() + " ");
+
+            $('#disschoolfax').text($('#schoolfax').val());
+
+            $('#disschooltype').text($("#schooltype option:selected").text());
+
+
+
+
+
+
+
+            $('#disprincipalfirstname').text($('#principalfirstname').val());
+
+            $('#disprincipallastname').text($('#principallastname').val());
+
+            $('#disprincipalphone').text($('#principalphone').val());
+
+            $('#disprincipalemail').text($('#principalemail').val());
+
+                      
+
+           
+
+            $('#discoordinatorfirstname').text($('#coordinatorfirstname').val());
+
+            $('#discoordinatorlastname').text($('#coordinatorlastname').val());
+
+            var selectedCheckbox='';
+
+            $('input[name="COORDINATORTITLECHKBOX"]:checked').each(function () {
+
+                selectedCheckbox = this.value + ', ' + selectedCheckbox;
+
+            });
+
+
+
+
+            selectedCheckbox = selectedCheckbox.substring(0, selectedCheckbox.length - 2);
+
+            var backway = selectedCheckbox.split(", ").reverse().join(", ");
+
+            $('#discontestcordinatortitle').text(backway);           
+
+            $('#hdncoordinatetitle').val(selectedCheckbox);
+
+            if (selectedCheckbox.indexOf('Other') !== -1) {
+
+                $('#discoordinatortitlespecifyother').text($('#coordinatortitlespecifyother').val());
+
+            } else
+
+            {
+
+                $('#discoordinatortitlespecifyother').html('&nbsp;<br/>&nbsp;');
+
+            }
+
+
+
+
+
+
+
+            if ($('#coordinatoraffiliation').val().length > 0) {
+
+                $('#discoordinatoraffiliation').text($('#coordinatoraffiliation').val());
+
+            }
+
+            else
+
+            {
+
+                $('#discoordinatoraffiliation').html('&nbsp;');
+
+            }
+
+
+
+
+            $('#discoordinatorschoolemail').text($('#coordinatorschoolemail').val());
+
+            if ($('#coordinatoralternateemail').val().length > 0) {
+
+                $('#discoordinatoralternateemail').text($('#coordinatoralternateemail').val());
+
+            } else
+
+            {
+
+                $('#discoordinatoralternateemail').html('&nbsp;');
+
+            }
+
+
+
+
+
+
+
+ if ($("#coordinatorpreferredemail option:selected").text() != 'Please select one:') {
+
+                $('#discoordinatorpreferredemail').text($("#coordinatorpreferredemail option:selected").text());                
+
+            }
+
+            else {
+
+                $('#discoordinatorpreferredemail').html('&nbsp;');                
+
+            }
+
+
+
+
+
+
+
+            $('#discoordinatorschoolphone').text($('#coordinatorschoolphone').val());
+
+            if ($('#coordinatoralternatephone').val().length > 0) {
+
+                $('#discoordinatoralternatephone').text($('#coordinatoralternatephone').val());
+
+            }
+
+            else {
+
+                $('#discoordinatoralternatephone').html('&nbsp;');
+
+            }
+
+            if ($("#coordinatoralternatephonetype option:selected").text() != 'Please select one:') {
+
+                $('#discoordinatoralternatephonetype').text($("#coordinatoralternatephonetype option:selected").text());
+
+            }
+
+            else {
+
+                $('#discoordinatoralternatephonetype').html('&nbsp;');
+
+            }
+
+            if ($("#preferredphone option:selected").text() != 'Please select one:') {
+
+                $('#dispreferredphone').text($("#preferredphone option:selected").text());
+
+                $('#hdncordinatoralternatephoneext').val("Contest Cordinator Preferred Phone - " + $("#preferredphone option:selected").text());
+
+            }
+
+            else {
+
+                $('#dispreferredphone').html('&nbsp;');
+
+                $('#hdncordinatoralternatephoneext').val('');
+
+            }
+
+
+
+
+
+
+
+            $('#discustodianfirstname').text($('#custodianfirstname').val());
+
+            $('#discustodianlastname').text($('#custodianlastname').val());
+
+            $('#discustodianphone').text($('#custodianphone').val());
+
+            $('#discustodianemail').text($('#custodianemail').val());
+
+
+
+
+          if ($('#studentparticipationcore').val().length > 0) {
+
+                $('#disstudentparticipationcore').text($('#studentparticipationcore').val());
+
+            } else {
+
+                $('#disstudentparticipationcore').html('&nbsp;<br/>&nbsp;');
+
+            }
+
+            if ($('#studentparticipationtotal').val().length > 0) {
+
+                $('#disstudentparticipationtotal').text($('#studentparticipationtotal').val());
+
+            }
+
+            else {
+
+                $('#disstudentparticipationtotal').html('&nbsp;<br/>&nbsp;');
+
+            }
+
+            if ($('#schoolpopulationtotal').val().length > 0) {
+
+                $('#disschoolpopulationtotal').text($('#schoolpopulationtotal').val());
+
+            }
+
+            else {
+
+                $('#disschoolpopulationtotal').html('&nbsp;');
+
+            }
+
+            
+
+            if ($('[name="FILE1"]').val().split('\\').pop() == '') {
+
+                $('#disfileupload').html('&nbsp');
+
+            }
+
+            else { $('#disfileupload').text($('[name="FILE1"]').val().split('\\').pop()); }
+
+            if ($('#comments').val().length > 0) {
+
+                $('#discomments').text($('#comments').val());
+
+            }
+
+            else {
+
+                $('#discomments').html('&nbsp;');
+
+            }
+
+
+
+
+        var showContact = $("input:radio[name='personalDetails']:checked").val();
+
+        if (showContact == 0) {
+
+            $("#contact_info").val("Requestor has chosen to remain anonymous");
+
+        }
+
+        else {
+
+            $("#contact_info").val("");
+
+        }
+
+        next_fs.show();
+
+        $('.fieldset4').show();
+
+        $('#astep2').removeClass('active2');
+
+        $('#astep3').addClass('active3');
+
+        current_fs.hide();
+
+        return false;
+
+    } else {
+
+            validator.focusInvalid();
+
+    return false;
+
+    }
+
+    });
+
+
+
+
+
+
+
+
+
+
+$("#previousstep2").click(function () {
+
+ $('.fieldset2').show();
+
+$('#astep3').removeClass('active3');
+
+$('#astep2').addClass('active2');
+
+$('.fieldset3').hide();
+
+$('.fieldset4').hide();
+
+return false;
+
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

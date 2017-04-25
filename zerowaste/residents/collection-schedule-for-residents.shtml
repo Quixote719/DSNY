@@ -1,0 +1,68 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Collection Schedule For Residents </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<div id="contentsection" class="about-main-image">
+	<div class="span6 about-description">
+
+		<h1> Collection Schedule For Residents </h1>
+
+
+		<p>
+			Set out your garbage, organics, and recycling after 4 pm the night before your scheduled collection day. Remove empty containers by 9 pm on the collection day, or by 9 am the following morning if your collection occurs after 4 pm.
+		</p>
+		<p>
+			<a href="/assets/dsny/collectionandcleaning/collection.shtml">Check your collection schedule</a>.
+<!-- 			To learn your collection days, enter your building number and the name of your street, select borough, then click Search.  -->
+<!-- insert collection schedule widget here. -->
+		</p>
+		<p>
+			<a href="/assets/dsny/snow/snow.shtml">During snow operations</a>, recycling and garbage collection may be disrupted while DSNY plows and cleans the streets.
+		</p>
+		<h2>
+			Holidays &amp; Holiday Setout Instructions
+		</h2>
+		<p>
+		<strong>For specific post-holiday collection information, read our most <a href="/assets/dsny/about/press-releases/pr2017/press-release-2017.shtml">recent press releases</a> or follow DSNY on <a href="http://www.twitter.com/nycsanitation">Twitter</a> or <a href="http://www.facebook.com/NYCsanitation">Facebook</a></strong>. There are no collections on these holidays:
+		</p>
+		<p>
+			<ul>
+				<li>New Year&#39;s Day</li>
+				<li>Martin Luther King Day</li>
+				<li>Lincoln&#39;s Birthday </li>
+				<li>President&#39;s Day</li>
+				<li>Memorial Day</li>
+				<li>Independence Day</li>
+				<li>Labor Day</li>
+				<li>Columbus Day</li>
+				<li>Election Day</li>
+				<li>Veterans&#39; Day</li>
+				<li>Thanksgiving Day</li>
+				<li>Christmas Day</li>
+			</ul>
+		</p>
+		<p>
+			Here's when to set out your garbage and recycling on holidays: (Remember, it’s not unusual for your collection time to change a bit during a holiday week.) 
+		</p>
+		<p>
+			<strong>Garbage:</strong> Set out after 4 p.m. on the evening of the holiday, for collection beginning the next day. 
+		</p>
+		<p>
+			<strong>Recycling:</strong> Set out recyclables after 4 p.m. on the evening of the holiday for collection beginning the next day. 
+			
+		</p>
+		<p>
+			<strong>Organics (only for buildings with <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml">NYC Organics Collection</a>):</strong>
+			Set out food scraps, food-soiled paper, and yard waste after 4 p.m. on the evening of the holiday, for collection beginning the next day. 
+			
+		</p>
+		
+		<p> 
+			<strong>For specific post-holiday collection information, read our most <a href="/assets/dsny/about/press-releases/pr2017/press-release-2017.shtml">recent 
+			press releases</a> or follow DSNY on <a href="http://www.twitter.com/nycsanitation">Twitter</a> or <a href="http://www.facebook.com/NYCsanitation">Facebook</a></strong>. 
+			
+		</p>
+	</div>
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

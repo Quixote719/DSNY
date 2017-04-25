@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Bureau of Cleaning &amp; Collections </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		   <div class="span6 about-description">
+
+				  <h1>Bureau of Cleaning and Collection </h1>
+				<p>The Bureau of Cleaning and Collection is responsible collecting recycling and garbage, cleaning streets and vacant lots, and clearing streets of snow and ice. BCC assigns personnel and equipment to standard routes in while managing the weekly allocation of personnel to address litter and illegal dumping.</p>
+<p>The Cleaning Office oversees the removal of litter, debris, and abandoned vehicles from City streets, and collects recycling and garbage from public litter bins. The Lot Cleaning Division cleans vacant lots and the areas around them, and around City-owned buildings in order to meet the City&rsquo;s Health Code standards.</p>
+<p>The Collection Office oversees regularly scheduled recycling and garbage collection services to the City&rsquo;s residential households, public schools, public buildings, and many large institutions.</p>
+<p><a href="/assets/dsny/docs/about_PSR_SITELIST_0815.pdf">Recycling Bin Locations for Paper, Metal, Glass and Plastic</a></p>
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

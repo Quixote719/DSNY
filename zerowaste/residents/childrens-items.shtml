@@ -1,0 +1,38 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Children's Items </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Children's Items </h1>
+
+<p><b>Recycling: </b>Put items that are predominantly metal or rigid plastic out with curbside recycling. Do not put batteries in with recycling, they are a fire hazard.<br /><br /><b>Garbage: </b>Put other items out with trash for regular curbside pickup.</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit <a href="http://nyc.gov/stuffexchange" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate gently used children&rsquo;s items.<br /><br />Many organizations in NYC accept donations of children&rsquo;s items in good condition&ndash;check their websites for details. Note: The <a href="http://cpsc.gov/en/regulations-laws--standards/statutes/the-consumer-product-safety-improvement-act/" title="Consumer Product Safety Improvement Act">Consumer Product Safety Improvement Act of 2008</a> made it illegal to sell any recalled product, so certain products may not be accepted for donation.</p>
+<h2>Donation Outlets:</h2>
+<ul>
+<li><a href="http://www.babybuggy.org/" title="BabyBuggy">BabyBuggy</a></li>
+<li><a href="http://www.cityharvest.org/" title="City Harvest">City Harvest</a></li>
+<li><a href="http://www.inwoodhouse.com/" title="Inwood House">Inwood House</a></li>
+<li><a href="http://www.kidsdonations.org/" title="K.I.D.S. (Kids In Distressed Situations, Inc.)">K.I.D.S. (Kids In Distressed Situations, Inc.)</a></li>
+<li><a href="http://www.rmh-newyork.org/" title="Ronald MacDonald House New York">Ronald MacDonald House New York</a></li>
+<li><a href="http://www.roomtogrow.org/" title="Room to Grow">Room to Grow</a></li>
+<li><a href="http://www.stuffedanimalsforemergencies.org/" title="SAFE (Stuffed Animals For Emergencies)">SAFE (Stuffed Animals For Emergencies)</a></li>
+</ul>
+<h2>Parenting Materials Exchanges:</h2>
+<ul>
+<li><a href="http://www.parkslopeparents.com/index.php?option=com_content&amp;view=article&amp;id=140%3Aother-parenting-groups&amp;catid=54%3Alocal-organizations&amp;Itemid=1" title="Park Slope Parents Online Parenting Groups">Park Slope Parents Online Parenting Groups</a></li>
+<li><a href="http://www.facebook.com/recrib" title="Recrib">Recrib</a></li>
+</ul>
+<h2>Consignment Services:</h2>
+<ul>
+<li><a href="http://begreensale.com" title="Be Green    Kids Consignments">Be Green Kids Consignments</a></li>
+</ul>
+<h2>Take-Back or Drop-Off</h2>
+<p>Voluntary take back programs for baby items such as the mail-back program <a href="http://www.babyearth.com/renew" title="Baby Earth Renew">Baby Earth Renew</a> donate or recycle used baby items.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

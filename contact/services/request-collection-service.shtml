@@ -1,0 +1,40 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+
+<title>DSNY - Contact - Request Collection </title>
+
+
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+
+<h2>Request Collection Service</h2>
+<p>Private residences and nonprofit organizations may request DSNY collection service for a specific address.</p>
+<p>Submit requests via fax (212-788-3915) or by mail.</p>
+<p>NYC Department of Sanitation <br />125 Worth Street, Room 700 <br />New York, NY 10013 <br />Attention: New Service</p>
+<p>The service request should state that the applicant is requesting DSNY collection services for his/her premises and include the following:</p>
+<ol>
+<li>Full address of the premises. </li>
+<li>Name and daytime phone number of a contact person. </li>
+<li>A copy of the Certificate of Occupancy (temporary one is acceptable; not required for nonprofit organizations that lease or rent their space). </li>
+<li>For nonprofit organizations: A copy of the Notice of Assessment Statement from the Department of Finance, or a letter from another City Agency stating that the organization receives funding from the Agency to operate at the address for which they are requesting collection services. </li>
+</ol>
+<p>Approximately two weeks after receiving the request with the required documents, DSNY will notify applicants of the scheduled start date and the days of collection.</p>
+
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+ 
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

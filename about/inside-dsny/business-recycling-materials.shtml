@@ -1,0 +1,54 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Business Recycling Materials </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1> Business Recycling Materials </h1>
+		
+
+		<p>The NYC Department of Sanitation has created materials to assist businesses in complying with requirements, and to encourage additional waste prevention efforts.</p>
+		<p>The links below open pdfs of current materials available to order online at: <a href="http://materials.bwprronline.org/home/213">Sanitation Material Request Form</a>.</p>
+		<p>Visit <a href="/assets/dsny/zerowaste/businesses/resources.shtml">Business Resources</a> to download info on requirements in multiple languages as well as sample signage, and learn about trainings and webinars. </p>
+		<p><i>NOTE: These links open PDF (Portable Document Format) documents; you'll need the free <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Adobe Acrobat Reader">Adobe Acrobat Reader</a> to display and print them.</i></p>
+
+		<ul>
+			<li><a href="/assets/dsny/docs/avoiding-common-sanitation-violations-acsv-f.pdf">Avoiding Common Sanitation Violations</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-bengali-acsv-b.pdf">ব্যবসা প্রতিষ্ঠানের ক্ষেত্রে: পরিষ্কার-পরিচ্ছন্নতা সংক্রান্ত আইনের লঙ্ঘন এড়িয়ে চলা - বাংলা (Bengali)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-chinese-acsv-c.pdf">商家：避免常见的清洁违规——中文 (Chinese)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-french-creole-acsv-fc.pdf">Biznis: Evite Vyolasyon Sanitasyon Komen yo – Kreyòl Ayisyen (Haitian-Creole)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-korean-acsv-k.pdf">영업점: 일반 공중 위생 위반 행위 방지 – 한국어 (Korean)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-russian-acsv-r.pdf">Предпринимателям: Предотвращение распространенных нарушений санитарно-гигиенических требований – Русский (Russian)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-spanish-acsv-s.pdf">Empresas: Cómo evitar las infracciones a la sanidad más comúnes – Español (Spanish)</a>
+			</li>
+			<li><a href="/assets/dsny/docs/about_take-it-back-nyc-business-guidelines-tbp-bb-f_0815.pdf" title="Take-It-Back NYC: Business Guidelines">Take-It-Back NYC: Business Guidelines</a>: For retailers and service providers in NYC: what you need to know about mandated and voluntary take-back programs. </li>
+			<li><a href="/assets/dsny/docs/commercial-organics-notice-english-chinese-spanish.pdf">Commercial Organics Notice (English/Spanish/Chinese)</a></li>
+		</ul>
+		<h2>Reuse - Donate</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/donatenyc-brochure-dnbro-f.pdf">donateNYC brochure</a></li>
+		</ul>
+		<h2>TakeBack Signs</h2>
+		<p>Educational signs for take-back programs; only available as PDFs.</p>
+		<ul>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-auto-battery_0815.pdf" title="Auto Battery TakeBack">Auto Battery TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_bottle-bill-of-rights_0815.pdf" title="Bottle Bill of Rights">Bottle Bill of Rights</a> </li>
+			<li><a href="/assets/dsny/docs/about_bottle-bill-redemption-warning_0815.pdf" title="Bottle Bill Redemption Warning">Bottle Bill Redemption Warning</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-cell-phones_0815.pdf" title="Cell Phone TakeBack">Cell Phone TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-electronics_0815.pdf" title="Electronics TakeBack">Electronics TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-fluorescent-bulb_0815.pdf" title="Fluorescent Bulb TakeBack">Fluorescent Bulb TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-motor-oil_0815.pdf" title="Motor Oil TakeBack">Motor Oil TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-pharmaceuticals_0815.pdf" title="Pharmaceutical TakeBack">Pharmaceutical TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-plastic-bags_0815.pdf" title="Plastic Bag TakeBack">Plastic Bag TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-rechargeable-batteries-cellphones_0815.pdf" title="Rechargeable Battery TakeBack">Rechargeable Battery TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-sharps_0815.pdf" title="Sharps TakeBack">Sharps TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-tires_0815.pdf" title="Tires TakeBack">Tires TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-toner-cartridge_0815.pdf" title="Toner Cartridge TakeBack">Toner Cartridge TakeBack</a> </li>
+			<li><a href="/assets/dsny/docs/about_takeback-sign-trc-thermostat-banner_0815.pdf" title="Thermostat TakeBack">Thermostat TakeBack</a> </li>
+		</ul>
+	</div>
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

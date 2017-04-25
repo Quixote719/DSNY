@@ -1,0 +1,21 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Lighting</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1> Lighting </h1>
+
+
+<p>
+	Because fluorescent lighting contains mercury, it is illegal to discard old fluorescents with regular garbage.  
+</p>
+<p>
+	The National Electrical Manufacturers Association (NEMA) provides <a href="http://www.lamprecycle.org" >information on recycling fluorescent lighting and a database of lighting recyclers</a>.
+</p>
+
+				</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

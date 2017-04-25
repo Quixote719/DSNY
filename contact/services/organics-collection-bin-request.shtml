@@ -1,0 +1,518 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Organic Collection Bin Request </title>
+
+
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+
+<style>
+	#msform fieldset {
+		border: none;
+		max-width: 940px;
+		/*stacking fieldsets above each other*/
+		position: relative;
+	}
+
+	/*Hide all except first fieldset*/
+	.fieldset2 {
+		display: none;
+	}
+
+	.fieldset3 {
+		display: none;
+	}
+
+	.fieldset4 {
+		display: none;
+	}
+
+	.error {border-color:#e9322d !important}
+</style>
+
+
+<div id="contentsection" class="about-main-image">
+
+	<div class="span6 about-description">
+
+		<div id="container">
+			<div id="header">
+				<h1><span class="subtitle">Organics Bin Replacement Request</span></h1>
+			</div>
+			<div>
+				
+				<p>To request a replacement for a lost, stolen, or broken outdoor organics bin, your building must already <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml">receive organics collection</a> from the NYC Department of Sanitation. </p>
+
+				<p><b>If your bin is missing</b>, please check with your neighbors before submitting this form.  They may have taken your bin in accidentally.  If your find your bin, write your address on it.</p>
+
+				<p><b>If your bin is broken</b>, please describe the damage in detail. We may be able to come fix it.</p>
+
+				<h3>New Organics Collection Areas</h3>
+
+				<p>Bins are delivered to most homes before their organics collection begins. However, some homes may receive bins after the first collection day.  Please do not submit a bin request form until one week after your collection has begun.</p>
+
+				<p>DSNY provides one 13-gallon bin to single family homes, and two 13-gallon bins to two-family homes.  Buildings with 3 - 9 apartments receive one 21-gallon bin.</p>
+
+				<p>DSNY does not provide additional bins, and cannot help you arrange to swap your bin for a different size.</p>
+
+				<h3>Bin Delivery</h3>
+
+				<p>All bin requests are subject to review by Department of Sanitation staff. Submitting this form is not a confirmation that bins will be replaced or delivered. If eligible, replacement bins will be delivered within 6 to 8 weeks.  
+
+				<p>In the meantime, yard waste (no food waste) can be set at the curb in a paper lawn and leaf bag, or unlined container. Find where you can <a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml">drop off food scraps</a>.</p>
+
+
+				<p><b>Kitchen Containers:</b>  DSNY does not replace or redeliver small in-home kitchen collectors after the initial delivery period in each neighborhood. Purchase your own kitchen collector or use any container or bag to gather food scraps before emptying them into your outdoor organics bin.</p>
+
+				<p><b>Schools:</b> Follow the <a href="/assets/dsny/zerowaste/schools/organics-setup-for-schools.shtml" >bin replacement policy</a> for your school.</p> 
+
+			</div>
+
+			<form id="msform" class="pure-form" method="post" type="external" name="organics bin request form" action="http://www.nyc.gov/doittcaptcha/validatecap">
+				
+				<input value="SITE-ADDRESS-1,SITE-BORO,SITE-ZIP,QTY-BINS,REASON,CONTACT-FIRST-NAME,CONTACT-LAST-NAME,CONTACT-EMAIL,CONTACT-PHONE," type="hidden" name="required" />
+
+				<input value="placeholder@dsny.nyc.gov" type="hidden" name="recipient" />
+				<input type="hidden" name="cgi" value="/cgi-bin/misc/mailform.cgi"/>
+				<input value="NYC Organics Bin Replacement Request" type="hidden" name="subject" />
+				<!--<input value="DSNY WebForms - TESTING" type="hidden" name="subject">-->
+				<input value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" type="hidden" name="env_report" />         
+				<input value="#FFFFFF" type="hidden" name="bgcolor" />
+
+				<input value="order:Organics Bin Replacement Request Acknowledgement, NOTE, CONTACT-FIRST-NAME,CONTACT-LAST-NAME,CONTACT-EMAIL,CONTACT-PHONE,CONTACT-PHONE-EXT,SITE-NAME,SITE-ADDRESS-1,SITE-ADDRESS-2,SITE-BORO,SITE-ZIP,QTY-BINS,BIN-ID-NUMBER,REASON,COMMENTS" type="hidden" name="sort" />
+
+				<input name="Organics Bin Replacement Request Acknowledgement" value="We’re happy that you’re participating in the DSNY organics collection program! We aim to fulfill requests within 6-8 weeks. You may be contacted for additional information." type="hidden" />
+
+				<input name="NOTE" value=" If your bin is missing, please check with your neighbors. If you find your bin, please submit another bin request form and tell us in the COMMENTS." type="hidden" />
+
+				<input name="app_key" type="hidden" value="06F6620746865206F" />       
+				<input name="address" id="address" type="hidden"/>
+				<input name="name" id="name"  type="hidden"/>
+				<input name="between" id="between" type="hidden"/>
+				<input name="boro" id="boroName" type="hidden"/>    
+				<input name="intersection" id="intersection" type="hidden"/>
+				<input name="GEOcity" id="GEOcity" type="hidden"/>            
+				<input name="GEOzipcode" id="GEOzipcode" type="hidden"/>            
+				<input name="State" id="state" type="hidden" value="NY"/>
+				<input name="SITE-ADDRESS-1" id="siteaddress1" type="hidden"/>
+				<input name="SITE-BORO" id="siteboro" type="hidden"/>       
+				<input name="SITE-ZIP" id="sitezip" type="hidden"/>
+
+
+				<div id="steps">
+					<a id="astep1" class="step1 active1" href="#"></a>
+					<a id="astep2" class="step2" href="#"></a>
+					<a id="astep3" class="step3" href="#"></a>
+				</div>
+				<div style="text-align:right;font-size:12px"><span class="red">*</span>Denotes required field</div>
+				<fieldset>  
+					<div class="pure-g">
+						<div id="subcontainer">
+							<div class="section"> Building address</div>
+							<div class="table">
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="houseNumber">Building #<span class="red">*</span></label>
+									<input id="houseNumber" name="houseNumber" tabindex="1" type="text" required maxlength="10"/>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="street">Street Name<span class="red">*</span></label>
+									<input id="street" name="street" tabindex="2" type="text" required maxlength="50"/>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="siteroomfloor">Floor/Suite/Apt</label>
+									<input id="siteroomfloor" name="SITE-ROOM-FLOOR" tabindex="3" type="text" maxlength="35"/>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="boro">Borough<span class="red">*</span></label>
+									<select id="boro" name="borough" required tabindex="4" type="select-one">
+										<option selected="selected" value="">Select your borough</option>
+										<option value="2">Bronx</option>
+										<option value="3">Brooklyn</option>                                
+										<option value="1">Manhattan</option>
+										<option value="4">Queens</option>
+										<option value="5">Staten Island</option>
+									</select>
+								</div>                        
+
+								<br/>
+								<div id="results" class="pure-u-sm-24-24"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<br/>
+					<div id="buttons">
+						<button id="cancel" class="pure-button next" tabindex="5">&nbsp;<strong>Clear</strong>&nbsp;</button>
+						<button id="nextstep2" class="pure-button next" tabindex="6">&nbsp;<strong>Next</strong>&nbsp;</button>
+					</div>
+				</fieldset>
+				<fieldset class="fieldset2">    
+					<div class="pure-g">
+						<div id="subcontainer">     
+							<div class="section"> Organics bin information </div>
+							<div class="table">
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="qtybins">Number of outdoor bins to replace<span class="red">*</span></label>
+									<select id="qtybins" name="QTY-BINS" required tabindex="1" type="select-one">
+										<option selected="selected" value="">Please select one:</option>
+										<option value="One 13-gallon bin">One 13-gallon bin</option>
+										<option value="Two 13-gallon bins">Two 13-gallon bins</option>
+										<option value="One 21-gallon bin">One 21-gallon bin</option>
+									</select>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="binidnumber">Barcode or RFID # of remaining bins</label>
+									<input id="binidnumber" type="text" name="BIN-ID-NUMBER" tabindex="2" maxlength="50">
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="reason">Reason for replacement<span class="red">*</span></label>
+									<select id="reason" name="REASON" required tabindex="3" type="select-one">
+										<option selected="selected" value="">Please select one:</option>
+										<option value="stolen/missing">Bin stolen/missing</option>
+										<option value="broken">Bin broken (explain in comments)</option>
+										<option value="bin found">Bin found - cancel previous request (explain in comments)</option>
+									</select>                   
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="comments">Comments</span></label>
+									<input id="comments" type="text" name="COMMENTS" tabindex="4" maxlength="200">
+								</div>
+							</div>
+							<div class="section"> Contact information </div>
+							<div class="table">                                             
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="contact1firstname">First Name<span class="red">*</span></label>
+									<input id="contact1firstname" type="text" name="CONTACT-FIRST-NAME" tabindex="5" maxlength="25" required>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="contact1lastname">Last Name<span class="red">*</span></label>
+									<input id="contact1lastname" type="text" name="CONTACT-LAST-NAME" tabindex="6" maxlength="25" required>
+								</div>
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="contact1email">E-mail<span class="red">*</span></label>
+									<input id="contact1email" name="CONTACT-EMAIL" type="text" tabindex="7" maxlength="50" required>
+								</div>                                              
+								<div class="pure-u-1 pure-u-md-1-3">
+									<label for="contact1phone">Phone<span class="red">*</span></label>
+									<input id="contact1phone" name="CONTACT-PHONE" type="text" maxlength="21" required tabindex="8">                           
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<br>
+					<div id="buttons">
+						<button id="previousstep1" class="pure-button next" tabindex="9">&nbsp;<strong>Previous</strong>&nbsp;</button>
+						<button id="nextstep3" class="pure-button next" tabindex="10">&nbsp;<strong>Next</strong>&nbsp;</button>  
+					</div>
+				</fieldset>
+				<fieldset class="fieldset3">    
+					<div class="pure-g">
+						<div id="subcontainer">
+							<div class="section"> Submission confirmation</div>             
+							<div class="table">
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Borough</div>
+									<div id="disborough" class="data_long"></div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Building #</div>
+									<div id="disbldg" class="data_long"></div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Street Name</div>
+									<div id="disstreet" class="data_long"></div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Floor/Suite/Apt</div>
+									<div id="disfloorsuiteapt" class="data_long"></div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Number of outdoor bins to replace</div>
+									<div id="disqtybins" class="data_long">&nbsp;</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Barcode or RFID # of remaining bins</div>
+									<div id="disbinidnumber" class="data_long">&nbsp;</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Reason for replacement</div>
+									<div id="disreason" class="data_long">&nbsp;</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Comments</div>
+									<div id="discomments" class="data_long">&nbsp;</div>
+								</div>                  
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">First Name</div>
+									<div id="disfirstname" class="data_long">&nbsp;</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Last Name</div>
+									<div id="dislastname" class="data_long">&nbsp;</div>
+								</div>
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">E-mail</div>
+									<div id="disemail" class="data_long">&nbsp;</div>
+								</div>  
+								<div class="pure-u-1 pure-u-md-24-24">
+									<div class="label">Phone</div>
+									<div id="disphone" class="data_long">&nbsp;</div>
+								</div>                                                                             
+							</div>
+							<br>
+						</div>
+					</div>
+					<br>
+				</fieldset>
+				<div id="fieldset4" class="fieldset4">  
+					<div class="row">
+						<div class="container">
+							<div class="span4">&nbsp;</div>
+							<div id="captcha" class="span5">
+								<script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+							</div>
+							<div class="span6"></div>
+						</div>
+					</div>  
+					<br>
+					<div id="buttons">
+						<button id="previousstep2" class="pure-button next" tabindex="1">&nbsp;<strong>Previous</strong>&nbsp;</button>
+						<button id="submit" type="submit" class="pure-button next" tabindex="2">&nbsp;<strong>Submit</strong>&nbsp;</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+	</div></div>
+
+
+	<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+	<script src="/assets/dsny/js/webforms/GeoValidation.js" type="text/javascript"></script>
+	<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+	<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+	<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('#contact1phone').mask('(999) 999-9999? x99999');
+
+			$('#msform input[type="text"]').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+			$('#msform textarea').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+			$('#msform select').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+			$('textarea[maxlength]').keyup(function () {
+				var limit = parseInt($(this).attr('maxlength'));
+				var text = $(this).val();
+				var chars = text.length;
+				if (chars > limit) {
+					var new_text = text.substr(0, limit);
+					$(this).val(new_text);
+				}
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		var current_fs, next_fs, previous_fs;
+		var left, opacity, scale;
+
+		$("#cancel").click(function () {
+			$("#houseNumber").val('');
+			$("#street").val('');
+			$("#siteroomfloor").val('');
+			$("#boro").val('');
+			$("#results").empty();
+			$('#msform input[type="text"]').attr("class", "tooltipstered");
+			$('#msform input[type="text"]').removeAttr("aria-invalid");
+			$('#msform select').attr("class", "tooltipstered");
+			$('#msform select').removeAttr("aria-invalid");
+		});
+
+		var validator;
+		function validateForm() {
+			validator = $('#msform').validate({
+				errorPlacement: function (error, element) {
+					if (element.attr("type") == "text") {
+						$(element).tooltipster('update', "This field is required");
+					} else if (element.attr("type") == "select-one") {
+						$(element).tooltipster('update', "Please select from the list");
+					}
+					else {
+						$(element).tooltipster('update', "This field is required");
+					}
+					if (element.attr("name") == "CONTACT-EMAIL") {
+						$(element).tooltipster('update', "Please enter valid email address");
+					}
+					if (element.attr("name") == "incidentdate")
+						{$(element).tooltipster('update', "Please enter valid date");}
+					$('element').tooltipster({
+						functionInit: function () {
+							return $('element').html();
+						},
+						functionReady: function () {
+							$('element').attr('aria-hidden', false);
+						},
+						functionAfter: function () {
+							$('element').attr('aria-hidden', true);
+						}
+					});
+					$(element).focus(function () {
+						if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+							{ $(this).tooltipster('show'); }
+					})
+					.blur(function () {
+						$(this).tooltipster('hide');
+					});
+				},
+				success: function (label, element) {
+					$(element).tooltipster('hide');
+				},
+				invalidHandler: function () {
+					$(this).find(".error:first").focus();
+				}
+			});
+			if (!$('#msform').valid()) {
+				return false;
+			}
+			else { return true; }
+		}
+
+		$("#nextstep2").click(function (event) {
+			if (validateForm()) {
+				var retCode = false;
+				current_fs = $(this).parent().parent();
+				next_fs = $(this).parent().parent().next();
+				event.preventDefault();
+				validateAddress(function (output) {
+					if (output == true) {
+						retCode = true;
+					}
+					if (retCode == true) {
+						var fullAddress = $("#houseNumber").val() + " " + $("#street").val();
+						$("#address").val(fullAddress);
+						$("#between").val(fullAddress);
+						$("#siteaddress1").val(fullAddress);
+						$("#intersection").val(fullAddress);
+						$("#sitezip").val($("#GEOzipcode").val());
+
+						var boroughWithID = $("#boro option:selected").val() + "-" + $("#boro option:selected").text();
+						$("#boroName").val(boroughWithID);
+						$("#siteboro").val(boroughWithID);
+
+						next_fs.show();
+						current_fs.hide();
+						$('#astep1').removeClass('active1');
+						$('#astep2').addClass('active2');
+						return false;
+					}
+				});
+			}
+			else {
+				validator.focusInvalid();
+				return false;
+			}
+		});
+
+		$("#previousstep1").click(function () {
+			$('#msform input[type="text"]').attr("class", "tooltipstered");
+			$('#msform select').attr("class", "tooltipstered");
+			$('#msform input[type="text"]').removeAttr("aria-invalid");
+			$('#msform select').removeAttr("aria-invalid");
+			current_fs = $(this).parent().parent();
+			previous_fs = $(this).parent().parent().prev();
+			previous_fs.show();
+			current_fs.hide();
+			$('#astep2').removeClass('active2');
+			$('#astep1').addClass('active1');
+			return false;
+		});
+
+
+		$("#nextstep3").click(function (event) {
+			current_fs = $(this).parent().parent();
+			next_fs = $(this).parent().parent().next();
+
+
+			if (validateForm() && isValidEmailAddress($("#contact1email"))){
+
+				$('#disborough').text($("#boro option:selected").text());
+				$('#disbldg').text($('#houseNumber').val());
+				$('#disstreet').text($('#street').val());
+
+				var siteroomfloor = $("#siteroomfloor").val();
+				if (siteroomfloor.length > 0)
+					{ $('#disfloorsuiteapt').html(siteroomfloor); }
+				else
+					{ $('#disfloorsuiteapt').html('&nbsp;'); }
+
+				$('#disfirstname').text($('#contact1firstname').val());
+				$('#dislastname').text($('#contact1lastname').val());
+				$('#disemail').text($('#contact1email').val());
+				$('#disphone').text($('#contact1phone').val());
+
+				$('#disqtybins').text($('#qtybins').val());
+
+				var binidnumber = $("#binidnumber").val();
+				if (binidnumber.length > 0)
+					{ $('#disbinidnumber').html(binidnumber); }
+				else
+					{ $('#disbinidnumber').html('&nbsp;'); }
+
+				$('#disreason').text($("#reason option:selected").text());
+
+				var comments = $("#comments").val();
+				if (comments.length > 0)
+					{ $('#discomments').html(comments); }
+				else
+					{ $('#discomments').html('&nbsp;'); }
+
+				next_fs.show();
+				$('.fieldset4').show();
+				$('#astep2').removeClass('active2');
+				$('#astep3').addClass('active3');
+				current_fs.hide();
+				return false;
+			} else {
+				validator.focusInvalid();
+				return false;
+			}
+		});
+
+		$("#previousstep2").click(function () {
+			$('.fieldset2').show();
+			$('#astep3').removeClass('active3');
+			$('#astep2').addClass('active2');
+			$('.fieldset3').hide();
+			$('.fieldset4').hide();
+			return false;
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

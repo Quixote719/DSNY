@@ -1,0 +1,41 @@
+		<div id="leftnavsection" class="span3 agencies-about-links" style="display:none">
+			<div class="agencies-about-links">			
+			<ul class="clearfix hidden-phone">			
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/appliances.shtml"> Appliances </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/automotive-products.shtml"> Automotive Products </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/ballasts.shtml"> Ballasts </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/batteries.shtml">Batteries</a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/bulk.shtml"> Bulk </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/construction-and-demolition-waste-for-nonprofits-and-agencies.shtml"> Construction and Demolition Waste for Nonprofits and Agencies</a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/electronics.shtml">Electronics </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/harmful-products.shtml">Harmful Products</a>
+			</li>
+			<!--<li><a href="/assets/dsny/zerowaste/nonprofitsagencies/lighting.shtml"> Lighting </a></li>-->
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/mattresses.shtml"> Mattresses</a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/mercury-containing-lamps-and-devices.shtml"> Mercury Containing Lamps and Devices</a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/nonprofitsagencies/regulated-medical-waste.shtml"> Regulated Medical Waste</a>
+			</li>
+			</ul>
+			</div>
+
+		</div>

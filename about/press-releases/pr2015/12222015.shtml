@@ -1,0 +1,44 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	
+	<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #15-98<br />
+  Tuesday, December 22, 2015 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>
+  
+ <p> <strong> No Garbage, Recycling, Organics Collection or Street Cleaning on Christmas Day, Friday, December 25	 </strong> </p>
+	 
+	 <p> In observance of Christmas Day, there will be no garbage, recycling or organics collection, or street 
+	 cleaning on Friday, December 25. The holiday causes the Department to reschedule some collection days. 
+	 We will work to collect all material as quickly as possible. </p>
+ 
+<p> <strong> Garbage: </strong> </p>
+<p>Residents should place their garbage out at curbside after 4 p.m. on Friday, December 25 for collection. </p>
+ 
+<p> <strong> Organic Material: </strong></p>
+<p> Residents should place their organic material out at curbside after 4 p.m. on Friday, December 25 for collection. </p>
+ 
+<p> <strong> Recycling (Paper, metal, glass and plastic) </strong> </p>
+<p> Residents should place their recycling material out at curbside after 4 p.m. on Sunday, December 27, 2015 for collection. </p>
+ 
+ <p> Additionally, all DSNY administrative offices will be closed on Christmas Day. </p>
+
+ 
+ 
+<p>About the New York City Department of Sanitation <p> 
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid 
+waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. 
+The Department operates 59 district garages and manages a fleet of more than 2,000 rear-loading collection trucks, 
+450 mechanical brooms and 500 salt/sand spreaders. The Department clears litter, snow and ice from approximately 
+6,500 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets. </p>
+
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

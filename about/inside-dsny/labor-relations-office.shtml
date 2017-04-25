@@ -1,0 +1,14 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Labor Relations Office </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Labor Relations Office</h1>
+				<p>The Labor Relations Office represents DSNY in various matters related to all DSNY employee unions. This includes collective bargaining, grievances from step II to arbitration, improper practice cases, and labor and management meetings. The Office is also responsible for advising DSNY officials on labor collective-bargaining agreements, laws, rules, regulations, and decisions of courts and arbitrators as they relate to various areas of labor relations.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

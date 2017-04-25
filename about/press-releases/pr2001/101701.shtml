@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Compost Giveback Location Changed</h3>
+<div class="prs-subtitle">
+<p><strong>October 17, 2001</strong>&nbsp;| <em>Contact: Kathy Dawkins / Al Ferguson (646) 885-5020</em></p>
+<p>Press Release # 01-29, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The location of the Compost Giveback event sponsored by the New York City Department of Sanitation and the Staten Island Botanical Garden scheduled for this Saturday at the Fresh Kills Landfill has been changed to the <b>Midland Beach Parking Lot on Father Capodanno Boulevard at the intersection of Hunter Avenue. The date and time for the giveback is still Saturday, October 20, 2001 from 10:00 A.M. to 4:00 P.M.</b></p>
+<p>The Compost Giveback is for New York City residents only and not for any commercial landscapers. At this event, New York City residents can take up to 30 gallons of free compost. Residents must bring their own shovels and containers to carry the compost. The Sanitation Department also encourages residents to bring carts or dollies to transport the compost, which can be heavy, to their cars. Garden Gourmet compost bins will be available for $20.00. Thirty gallon paper yard waste bags for fall leaf collection are available at $2.00 for a pack of five bags.</p>
+<p>The Compost Project is funded by the New York City Department of Sanitation. For more information, call the compost hotline at (718)&nbsp;273-0629.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

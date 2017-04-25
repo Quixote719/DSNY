@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Regularly Scheduled Garbage and Recycling Collection on Martin Luther King, Jr. Day, Monday, January 20, 2003</h3>
+<div class="prs-subtitle">
+<p><strong>January 9, 2003</strong>&nbsp;| <em>Contact: John Pampalone (646) 885-5020</em></p>
+<p>Press Release # 03-02, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation will conduct normal refuse and recycling collection on Monday, January 20, 2003, Martin Luther King, Jr. Day.</p>
+<p>However, there will be no street cleaning on Monday, January 20, 2003.</p>
+<p>In addition, the Department's administrative offices will be closed in observance of the holiday on Monday, January 20, 2003.</p>
+<p>For questions regarding Sanitation services and schedules, contact Sanitation at (212) 219-8090 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

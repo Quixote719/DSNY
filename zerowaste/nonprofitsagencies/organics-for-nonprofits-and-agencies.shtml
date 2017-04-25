@@ -1,0 +1,27 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Organics for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+
+<h1>Organics for Nonprofits &amp; Agencies</h1>
+
+<p>Compost yard waste or food scraps to reduce waste and help build healthy soil.</p>
+<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/on-site-composting-for-nonprofits-and-agencies.shtml">Learn about on-site composting</a>.</p>
+<p>
+<a href="/assets/dsny/zerowaste/nonprofitsagencies/food-yard.shtml">NYC Organics Collection</a>
+ is available to nonprofit organizations and agencies in select areas. Organic waste includes yard waste, food scraps, and compostable paper (such as napkins and paper plates).
+</p>
+<p> To request NYC Organics Collection, complete the <a href="/assets/dsny/contact/programs/apartment-programs-inquiry.shtml">online inquiry form</a> </p>
+<p>Learn about organics collection and recycling for nonprofits and agencies:</p>
+<ul>
+<li><a href="/assets/dsny/zerowaste/nonprofitsagencies/organics-set-up-for-nonprofits-and-agencies.shtml">Organics Collection Setup</a></li>
+<li><a href="/assets/dsny/zerowaste/nonprofitsagencies/what-food-waste-to-recycle-for-nonprofits-and-agencies.shtml">What Food Waste to Recycle</a></li>
+</ul>
+<p>
+Organizations and agencies that aren’t eligible for DSNY organics collection can use a <a href="/assets/dsny/zerowaste/businesses/food-scraps-and-yard-waste.shtml">private food waste hauler</a>
+</p>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

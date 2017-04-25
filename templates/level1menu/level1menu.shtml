@@ -1,0 +1,107 @@
+<!-- templates/level1menu/level1menu.shtml (start) -->
+								<body id="page"><div class="ls-canvas page" id="outer-wrap"><div class="ls-row" id="inner-wrap"><div class="ls-fxr" id="ls-gen53820119-ls-fxr"><div class="ls-col" id="ls-row-1-col-1"><div class="ls-col-body" id="ls-gen53820120-ls-col-body">
+								<div class="ls-row main-header" id="top"><div class="ls-fxr" id="ls-gen53820121-ls-fxr"><div class="ls-col block" id="ls-row-1-col-1-row-1-col-1"><div class="ls-col-body" id="ls-gen53820122-ls-col-body"><div class="ls-row" id="ls-row-1-col-1-row-1-col-1-row-1"><div class="ls-fxr" id="ls-gen53820123-ls-fxr"><div class="ls-area" id="ls-row-1-col-1-row-1-col-1-row-1-area-1"><div class="ls-area-body" id="ls-gen53820124-ls-area-body"><div class="ls-cmp-wrap ls-1st" id="w1407802447991"><!--
+							ls:begin[component-
+							1407802447991
+							]
+						--><div class="iw_component" id="1407802447991">
+				</div><!--
+							ls:end[component-
+							1407802447991
+							]
+						--></div><div class="ls-cmp-wrap" id="w1407802447992"><!--
+							ls:begin[component-
+							1407802447992
+							]
+						--><div class="iw_component" id="1407802447992"><!--
+				Author: Mr Dan Jung
+				Purpose: Build agency navigation based on selections in Agency Generator java class.  QC 1396.  Moved to different jar. 
+				-->
+				<div class="agency-header">
+				<div class="upper-header-black">
+				<div class="container">
+				<span class="upper-header-left"><a href="http://www1.nyc.gov"><img src="/assets/home/images/global/nyc_white.png" alt="" class="small-nyc-logo"></a><img src="/assets/home/images/global/upper-header-divider.gif" alt=""><span class="upper-header-black-title">Department of Sanitation</span></span><span class="upper-header-padding"></span><span class="upper-header-right"><span class="upper-header-three-one-one"><a href="/311/index.page">311</a></span><img src="/assets/home/images/global/upper-header-divider.gif" alt=""><span class="upper-header-search"><a href="/home/search/index.page">Search all NYC.gov websites</a></span></span>
+				</div>
+				</div>
+				</div>
+				<div role="banner" id="top" class="main-header">
+				<div class="block">
+				<div class="header-top">
+				<div class="container">
+				<a href="#" class="toggle-mobile-side-nav visible-phone" id="nav-open-btn"></a><span class="welcome-text hidden-phone agency-header">Keeping NYC healthy, safe and clean since 1881.</span>
+
+				<a href="#" class="toggle-mobile-side-nav visible-phone" id="launch-mobile-nav" style="z-index:9999;"></a>
+				<div class="agency-logo-wrapper">
+				<a href="/site/dsny/index.page"><img class="agency-logo" src="/assets/dsny/img/updated-logo.png" alt="Department of Sanitation"></a>
+				</div>
+				<div class="hidden-phone" id="header-links">
+				<div class="language-selector">
+				<div id="google_translate_element"></div>
+				</div>
+				<a class="text-size hidden-phone" href="http://www1.nyc.gov/home/text-size.page">Text-Size</a>
+				</div>
+				<a href="#" class="visible-phone nav-sprite-mobile" id="toggle-mobile-search"><span class="hidden"></span></a>
+				</div>
+				</div>
+				<div class="container nav-outer">
+				<nav role="navigation" class="hidden-phone" id="nav">
+				<div class="block">
+				<h2 class="block-title visible-phone">Keeping NYC healthy, safe and clean since 1881.</h2>
+				<ul>
+				<li class="nav-home hidden-phone">
+				<a href="/site/dsny/index.page">
+				                      Home</a>
+				</li>
+				<li>
+				<a href="/assets/dsny/about/inside-dsny.shtml">About</a>
+				</li>
+				<li id="zw-menu">
+				<a href="/assets/dsny/zerowaste/residents.shtml">Zero Waste</a>
+				</li>
+				<li>
+				<a href="/assets/dsny/collectionandcleaning/collection.shtml">Collection + Cleaning</a>
+				</li>
+				<li>
+				<a href="/assets/dsny/snow/stormresponse.shtml">Snow</a>
+				</li>
+				<li>
+				<a href="/assets/dsny/contact/complaints.shtml">Contact</a>
+				</li>
+				<li class="hidden-phone toggle-search-wide-background-ico-search" id="toggle-search-wide"></li>
+				</ul>
+				</div>
+				</nav>
+				<div class="global-input-search">
+				<form method="GET" action="/home/search/index.page" name="filter-search-form" class="hidden hidden-phone" id="global-search-form1">
+				<div class="field-search">
+				<input value="" class="ico-search btn-filter-search" type="submit">
+				<div class="input-padding">
+				<input class="input-search input-black filter-item" placeholder="Search" name="search-terms" type="text"><input type="hidden" name="sitesearch" value="www1.nyc.gov/assets/dsny">
+				</div>
+				</div>
+				</form>
+				</div>
+				<div class="global-input-search visible-phone hidden-phone" id="nav-top-searches">
+				<div class="block">
+				<form method="GET" action="/home/search/index.page" name="filter-search-form" id="global-search-form2">
+				<div class="field-search">
+				<input value="" class="ico-search btn-filter-search" type="submit">
+				<div class="input-padding">
+				<input class="input-search input-black filter-item" placeholder="Search all of NYC" name="search-terms" type="text"><input type="hidden" name="sitesearch">
+				</div>
+				</div>
+				</form>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447992
+							]
+						--></div></div></div><div class="ls-row-clr"></div></div></div></div></div><div class="ls-row-clr"></div></div></div>
+						
+			<div class="ls-row main" id="main"><div class="ls-fxr" id="ls-gen53820125-ls-fxr"><div class="ls-area" id="ls-row-1-col-1-row-2-area-1">
+<div class="ls-area-body" id="ls-gen53820126-ls-area-body">
+<!-- templates/level1menu/level1menu.shtml (end) -->

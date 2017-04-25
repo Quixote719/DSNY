@@ -1,0 +1,23 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling or Organics Collection or Street Cleaning in Observance of Christmas Day on Wednesday, December 25</h3>
+<div class="prs-subtitle">
+<p><strong>Thursday, December 19, 2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-55, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation (DSNY) announced today that in observance of Christmas Day, there will be no garbage or recycling collections, or street cleaning on Wednesday, December 25, 2013.</p>
+<font style="text-align: left;">
+</font><p style="text-align: left;">In addition, all Sanitation Department administrative offices will be closed on Wednesday, December 25, in observance of the holiday.</p>
+<ul>
+<li>Residents who normally receive Wednesday <strong>garbage or organics collection</strong> should place their trash and organics materials out at curbside after 4 p.m. on Wednesday for pickup.</li>
+</ul>
+<ul>
+<li>Those receiving Wednesday <strong>recycling collection</strong> will have their recycling pick up delayed until Thursday, January 2, 2014 due to the consecutive Christmas and New Year&rsquo;s Day holidays. All recyclable material should be placed curbside after 4 p.m. on Wednesday, January 1, 2014 for pickup.</li>
+</ul>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,20 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Collection Questions For Schools</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycling_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Collection Questions For Schools </h1> 
+
+<p>If you think DSNY missed a collection of garbage or recyclables from your school, contact your <!--<a href="/assets/dsny/about/operations/garage-locations.shtml" title="local DSNY garage">local DSNY garage</a>-->local DSNY garage by calling 311.<br/><br/> If you have a service issue, require a special pickup for a large cleanout, or have other questions, refer to the Communications Protocol:</p>
+<ul>
+<li><a href="/assets/dsny/docs/zerowaste_schools-doe-dsny-communication-protocol_0815.pdf" title="Department of Education Communications Protocol" >Department of Education Communications Protocol (PDF)</a></li>
+<li><a href="/assets/dsny/docs/zerowaste_schools-private-dsny-communication-protocol_0815.pdf" title="Private schools Communication Protocol" >Private schools Communication Protocol (PDF)</a></li>
+</ul><br/>
+<p>DSNY accepts complaints about missed collections starting at 8 am on the day after the scheduled collection.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

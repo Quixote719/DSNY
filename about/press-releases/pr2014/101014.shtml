@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Refuse, Recycling Collection or Street Cleaning on Columbus Day, Monday, October 13th</h3>
+<div class="prs-subtitle">
+<p><strong>Friday, October 10, 2014</strong> | <em>Vito A. Turso/Belinda A. Mager</em></p>
+<p style="font-size:14px">Press Release # 14-66, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Columbus Day, there will be no refuse or recycling collection, or street cleaning on Monday, October 13, 2014. In addition, all DSNY administrative offices will be closed on Monday, October 13, in observance of the holiday.</p>
+<p>Residents who normally receive Monday garbage collection, or who participate in the Organics Collection&nbsp;Program,&nbsp;should place their material out at curbside Monday after 4 p.m. for pickup. Those receiving Monday recycling collection will not have their recycling picked up until the following Monday, October 20, 2014.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+<h3 class="prs-about"><i class="fa fa-university"></i> About the New York City Department of Sanitation</h3>
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

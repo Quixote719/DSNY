@@ -1,0 +1,19 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Corrosive and Flammable </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+<h1> Highly Corrosive and Flammable </h1> 
+
+
+<p>Products labeled &ldquo;DANGER-corrosive&rdquo; and &ldquo;DANGER-flammable&rdquo; cannot be disposed of in regular garbage or recycling. Dispose of empty containers with regular garbage, not recycling. Submerge flares in water and saturate thoroughly to render unusable, then bag and place out with your regular garbage.</p>
+<h2>SAFE Disposal Events &amp; Drop-Off Sites</h2>
+<p>Corrosive and flammable materials are accepted at <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml" title="SAFE Disposal Events">SAFE Disposal Events</a>.</p>
+<h2>Purchasing Tips</h2>
+<p>Only buy as much as you need and use the entire product if possible.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

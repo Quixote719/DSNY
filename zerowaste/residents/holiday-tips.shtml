@@ -1,0 +1,37 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Holiday Tips  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+
+<h1>Holiday Tips</h1>
+
+<p>Here are some ideas to help you <b>give more</b> and <b>waste less</b> during the holiday season:</p>
+<p>Make gifts, such as food or clothing.</p>
+<p>Choose vintage or used items, such as clothes, jewelry, furniture, and books. Find affordable second-hand gifts on <a href="http://www.nyc.gov/donate">donateNYC</a>.</p>
+<p>Give entertainment or experiences: museum memberships; tickets to movies, theater, concerts, or sporting events; or gift certificates to a favorite restaurant.</p>
+<p>Give the gift of learning, such as language or music lessons, or classes in cooking, photography, or gardening.</p>
+<p>Give your time or talent: baby-sitting, pet-sitting, computer help, or home repairs.</p>
+<p>Pamper your recipient with a gift certificate for a massage, facial, or manicure; gym membership; or classes in yoga, Pilates, or dance.</p>
+<p>Make a contribution to a favorite charity. <a href="http://www.nyc.gov/service">Volunteer</a> at a nonprofit organization.</p>
+<h2>Waste Less</h2>
+<p>Wrap presents in reusable gift bags or make your own wrapping paper from things like comics and old maps, or a pretty scarf. If you buy gift wrap, choose recycled.</p>
+<p>Use reusable dishware when entertaining friends and family. If you use disposables, choose recycled.</p>
+<p>Avoid wasting food by planning ahead and remixing leftovers.</p>
+<p>Borrow or rent party supplies instead of buying new ones.</p>
+<p>Send your old holiday lights to <a href="http://www.holidayleds.com/christmas-light-recycling-program.aspx" title="Christmas light recycling program">HolidayLEDs.com</a> and receive a coupon for new energy efficient LED holiday lights.</p>
+<p>Cut down on paper waste by sending email greetings instead of holiday cards.</p>
+<h2>Recycle</h2>
+<p>Remember that others may want the stuff you no longer need. <a href="/assets/dsny/zerowaste/residents/donate.shtml" title="Donate">Donate</a> your gently used clothing, furniture, books, and electronic goods.</p>
+<p>The holiday season generates good spirits&mdash;and lots of recyclables. <a href="/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml" title="Recycle your greeting cards, gift boxes, wrapping paper">Recycle your greeting cards, gift boxes, wrapping paper, catalogs</a>, and 
+<a href="/assets/dsny/zerowaste/residents/junk-mail.shtml" title="junk mail">junk mail</a> along with other paper and cardboard.</p>
+<p>Recycle <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml">foil trays, bottles, cans, and anything that’s mostly metal or rigid plastic</a>.</p>
+<p>Recycle your <a href="/assets/dsny/zerowaste/residents/christmas-trees.shtml" title="Christmas tree">Christmas tree</a> into soil-enriching compost; remove lights, decorations, and stands before bringing to MulchFest or placing at the curb.</p>
+<p>&nbsp;</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Sanitation Launches Outreach to Apartment Buildings Citywide About New "Used Clothing" Recycling Program</h3>
+<div class="prs-subtitle">
+<p><strong>Wednesday, June 1, 2011</strong> | <em>Vito A. Turso/Keith Mellis</em></p>
+<p>Press Release # 11-21, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) is launching a citywide outreach effort to apartment buildings to inform them about its new &ldquo;refashioNYC&rdquo; used clothing recycling program.</p>
+<p>&ldquo;RefashioNYC&rdquo; is unique in that it provides participating apartment buildings with convenient clothing drop off services at no cost to the building or taxpayers, and looks to help achieve Mayor Bloomberg&rsquo;s PlaNYC goal of diverting 75% of the City&rsquo;s solid waste from landfills.  Joining the program simply requires willing landlords, building managers or superintendents to monitor the used clothing bin and notify Housing Works, the City&rsquo;s &ldquo;refashioNYC&rdquo; partner, when the bin is full.  All used clothing collected from participating buildings will be used to fund Housing Works&rsquo; services for homeless and low income New Yorkers affected by HIV/AIDs, including medical and dental care, substance use and mental health treatment, job training, support to stay on track, and a place to call home.</p>
+<p>The program is open to all residential buildings in the five boroughs. The program will grow based upon demand, but there may be a wait while DSNY secures building approval and order, and deliver bins.</p>
+<p>So far, the Department has received a great response and is presently in the process of evaluating hundreds of requests to join the program from interested tenants, coop and condo owners, landlords, building managers, and coop and condo board members. Buildings interested in joining the program can contact 311 and ask &ldquo;refashioNYC&rdquo;, or visit www.nyc.gov/refashionyc.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,66 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY – Zerowaste – Carryout Bag Fee Info for Stores</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_business_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+		<h1>Carryout Bag Fee - Information for Businesses</h1>
+		<p>
+		<b>UPDATE:</b> At this time, retailers are not required to charge a fee on carryout bags to customers. Even though New York State suspended implementation of NYC Carryout Bag Fee, we encourage residents to use reusable bags and  businesses to take back and recycle plastic bags. For more information, visit the <a href="http://www.dec.ny.gov/chemical/50034.html">New York State Department of Environmental Conservation</a>.
+		</p>
+		<!-- <p>
+			Beginning <b>February 15, 2017,</b> all stores covered by the Carryout Bag Law must charge their customers at least five cents ($0.05) per carryout bag provided by the store, with some exceptions. This fee should be clearly indicated on the receipt issued to the customer and should not be charged if the customer brings their own carryout bags to transport items purchased at your establishment.
+		</p> -->
+		<p><a href="/assets/dsny/zerowaste/residents/carryout-bag-fee.shtml">Frequently Asked Questions</a></p>
+
+<!-- 		<h2>
+			Informational  Materials
+		</h2>
+		<p>
+			The NYC Department of Sanitation has created materials to assist stores in complying with requirements.
+		</p>
+		<p>
+			<a href="http://materials.bwprronline.org/home/213">Request printed versions</a> of certain business education materials, free of charge.</p>
+			<p>
+				Download pdfs of the informational materials available.
+			</p>
+			<p>
+				NOTE: These links open PDF (Portable Document Format) documents; you'll need the free <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a> to display and print them.
+			</p>
+			
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-english.pdf">Carryout Bag Fee Official Notice (English)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-arabic.pdf">إشعار رسمي بفرض رسوم أكياس التسوق - عربي (Arabic)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-bengali.pdf">শপিং ব্যাগের মূল্য সম্পর্কিত অফিসিয়াল বিজ্ঞপ্তি - বাংলা (Bengali)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-chinese.pdf">外賣袋費用正式通知——中文 (Chinese)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-french.pdf">Annonce officielle relative au tarif des sacs à emporter - Français (French)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-haitian-creole.pdf">Avi Ofisyèl osijè Sak pou pote machandiz - Kreyòl Ayisyen (Haitian-Creole)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-hindi.pdf">सामान डालने के बैग के शुल्क संबंधी सरकारी नोटिस – हिंदी (Hindi)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-korean.pdf">캐리아웃 봉지 요금 공식 통지서 - 한국어 (Korean)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-russian.pdf">Официальное уведомление о плате за пакеты для покупок – Русский (Russian)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-spanish.pdf">Aviso oficial sobre la tarifa a pagar por bolsas desechables – Español (Spanish)</a>
+			</p>
+			<p>
+				<a href="/assets/dsny/docs/commercial-carryout-bag-fee-notice-urdu.pdf">سامان لے جانے والے تھیلے کی فیس سے متعلق سرکاری نوٹس - اردو (Urdu)</a>
+			</p>
+ -->		</div>
+	</div>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

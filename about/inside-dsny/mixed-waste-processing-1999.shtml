@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Mixed Waste Processing, 1999 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Mixed Waste Processing, 1999</h1>
+<p>The 1999 report, <b>Mixed Waste Processing In New York City: A Pilot Test Evaluation, </b>describes DSNY&rsquo;s three-part pilot program that measured the effectiveness of mixed waste processing in recovering recyclables from NYC collection districts with historically low recycling diversion rates.</p>
+<p>An economic model with a range of scenarios indicates that mixed waste processing increases recycling at considerable increases in cost, compared to the existing program, for each case where recyclables are collected separately. Cost savings for the additional recycling, compared to the existing program, result under certain co-collection scenarios, as the number of collections are reduced by picking up recyclables with waste.</p>
+<p><a href="/assets/dsny/docs/about_1999-mixed-waste-processing_0815.pdf">Read the report</a></p>
+			</div>	
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

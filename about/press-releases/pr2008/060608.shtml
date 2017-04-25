@@ -1,0 +1,14 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Sanitation Department shifts to summer hours</h3>
+<div class="prs-subtitle">
+<p><strong>June 6,2008</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 08-23, FOR IMMEDIATE RELEASE</p>
+</div>
+The New York City Department of Sanitation announced today that starting Monday, June 9, 2008, and continuing through November 2008, the primary hours of work for the Department's refuse collection and recycling force will be 6:00 A.M. to 2:00 P.M.  The change in hours allows DSNY personnel to do their strenuous work in cooler morning temperatures during the warmer late spring and summer months.  Homeowners must still place their refuse and recyclables at curbside after dusk on the day prior to their scheduled day of collection.  For any questions regarding DSNY services and schedules, contact 311 or visit the www.nyc.gov/sanitation.</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

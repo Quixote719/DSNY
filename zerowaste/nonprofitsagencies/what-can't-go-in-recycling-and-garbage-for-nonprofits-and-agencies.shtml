@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What Can't Go In Recycling and Garbage for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycle_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+
+			<div class="span6 about-description">
+<h1><span>What Can&rsquo;t Go in Recycling &amp; Garbage for Nonprofits &amp; Agencies</span></h1>
+		
+
+<p><span>Some commonly used items can&rsquo;t go in the regular garbage or recycling. Items that require special disposal include:</span></p>
+<ul>
+<li><span>electronics (computers, cell phones, and others) </span></li>
+<li><span>universal waste (rechargeable batteries, certain pesticides, mercury-containing products such as thermostats, thermometers, and fluorescent lamps)</span></li>
+<li><span>hazardous waste (including automotive fluids, oil-based paint, solvents, aerosols, gas tanks, chemicals, dental mercury, radioactive waste, ammunition, and more)</span></li>
+<li><span>regulated medical waste </span></li>
+<li><span>waste tires</span></li>
+</ul>
+<p><span>Learn about some disposal options for these items in <a href="/assets/dsny/zerowaste/nonprofits-and-agencies.shtml">How To Get Rid Of for Nonprofits &amp; Agencies</a>.</span></p>
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

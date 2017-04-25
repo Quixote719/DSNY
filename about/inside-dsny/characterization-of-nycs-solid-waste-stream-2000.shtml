@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Characterization of NYC&rsquo;s Solid Waste Stream, 2000 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Characterization of NYC&rsquo;s Solid Waste Stream, 2000</h1>
+<p>The <strong>Characterization of NYC&rsquo;s Solid Waste Stream</strong> report (part of the Waste Prevention Report Series published in 2000) provides the results of a material-specific waste composition analysis of the City&rsquo;s solid waste stream. It was intended to help DSNY focus its resources more effectively on appropriate products and packaging to increase waste prevention and recycling, and to enhance DSNY&rsquo;s ability to measure the impacts of its waste prevention programs.</p>
+<p>Historically, waste composition analyses primarily focused on broad material categories. This report instead focuses on a variety of specific products and packaging chosen for their waste reduction potential.</p>
+<p><a href="/assets/dsny/docs/about_2000-characterization-of-nyc-solid-waste-stream_0815.pdf">Read the report</a></p>
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

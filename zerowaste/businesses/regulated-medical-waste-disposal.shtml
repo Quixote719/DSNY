@@ -1,0 +1,46 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Medical Waste</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1> Regulated Medical Waste Disposal </h1>
+
+<p>
+	NYC and New York State laws specify strict requirements for the storage, treatment, transport, and disposal of medical waste. 
+</p>
+<p>
+	<strong>What’s covered:</strong>
+</p>
+<p>
+	<ul>
+		<li>Laboratory, dialysis or biological waste</li>
+		<li>Waste generated in the diagnosis, treatment, or immunization of people or animals</li>
+		<li>Human pathological waste</li>
+		<li>Blood, cultures, sharps (such as scalpel blades and needles)</li>
+		<li>Contaminated animal carcasses</li>
+		<li>Waste that may have come in contact with infectious agents</li>
+		<li>Materials contaminated with blood</li>
+	</ul>
+</p>
+<p>
+	<strong>Business affected:</strong> Hospitals, residential health care facilities, diagnostic and treatment facilities, and clinical laboratories.
+</p>
+<h2>
+	How To Comply
+</h2>
+<p>
+	Generators of this waste must file reports to the <a href="http://www.dec.ny.gov/chemical/8789.html" >NYS Department of Environmental Conservation</a> and file a <a href="/assets/dsny/contact/programs/solid-waste-removal-plan.shtml">removal plan with DSNY</a>.
+</p>
+<p>
+	In order to use DSNY collection services, offices that require health, medical, pharmaceutical, or laboratory licenses have to certify that their garbage contains only material that can be legally disposed of in NYC. 
+</p>
+
+</div>
+
+				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

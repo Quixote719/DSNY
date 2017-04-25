@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste -  NYC Compost Project  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/foodyard_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>NYC Compost Project</h1>
+<p>The NYC Compost Project helps to reduce waste in NYC and rebuild City soils by giving New Yorkers the knowledge, skills, and opportunities they need to produce and use compost.</p>
+<p><a href="/assets/dsny/zerowaste/residents/nyc-compost-project-education-programs.shtml">Learn about composting.</a> The NYC Compost Project has workshops and courses for New Yorkers of all ages, from novices to experienced composters.</p>
+<p><a href="/assets/dsny/zerowaste/residents/nyc-compost-project-technical-assistance.shtml">Join our network of community compost sites.</a> Get technical assistance from experts, and connect with other community composters across the City.</p>
+<p><a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml">Drop off your food scraps for composting.</a> The NYC Compost Project hosts food-scrap drop-off sites in all five boroughs, and composts the scraps locally.</p>
+<p><a href="/assets/dsny/zerowaste/residents/community-compost-sites-and-urban-farms.shtml">Visit or volunteer at a compost site or urban farm </a>to get your hands dirty and see how innovative New Yorkers have met the challenge of composting and growing food in an urban environment.</p>
+<p><a href="/assets/dsny/docs/zerowaste_composting_equipment_0815.pdf">Purchase a compost bin (PDF).</a> NYC residents can purchase low-cost backyard compost bins and worm compost bins at reduced prices.</p>
+<p><a href="/assets/dsny/contact/services/event-participation-request.shtml">Request a compost information table at your public event.</a></p>
+<p><a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml">Contact NYC Compost Project.</a> NYC Compost Project programs are carried out by DSNY-funded staff at host sites in each borough.</p>
+
+
+	</div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

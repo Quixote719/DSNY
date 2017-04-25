@@ -1,0 +1,41 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Cell Phones </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Cell Phones </h1>
+
+
+<p>Cell phones should not be placed in the garbage unless the <a href="/assets/dsny/zerowaste/residents/batteries.shtml" title="battery">battery</a> is removed. See below for better&nbsp;options.&nbsp;</p>
+<h2>Donations &amp; Reuse</h2>
+<p>Visit <a href="http://www.nyc.gov/stuffexchange" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate working cell phones.</p>
+<h2>Take-Back or Drop-Off</h2>
+<p>Cell phone service providers in New York State are required to accept cell phones for reuse or recycling from anyone at no cost (limit 10 per person per day). Here are various take-back programs; check the websites for&nbsp;details:</p>
+<h2>Provider Take-Back Programs:</h2>
+<ul type="disc">
+<li><a href="http://www.att.com/gen/general?pid=20369" title="AT&amp;T">AT&amp;T</a></li>
+<li><a href="http://www.sprint.com/responsibility/communities_across/index.html" title="Sprint Nextel">Sprint Nextel (includes Boost Mobile)</a></li>
+<li><a href="https://www.trade-in.vzw.com/home.php5?c=en-us" title="Verizon Wireless">Verizon Wireless</a></li>
+</ul>
+<h2>Manufacturer Take-Back Programs:</h2>
+<ul type="disc">
+<li><a href="http://www.electronicstakeback.com/how-to-recycle-electronics/manufacturer-takeback-programs/lgs-takeback-program/" title="LG Electronics">LG Electronics</a></li>
+<li><a href="http://responsibility.motorola.com/index.php/environment/products/recycling/htrmp/USrecycling/" title="Motorola">Motorola</a></li>
+<li><a href="http://www.samsung.com/us/aboutsamsung/citizenship/usactivities/environmentalinitiatives/recyclingdirect/" title="Samsung">Samsung</a></li>
+<li><a href="https://secure.sprintbuyback.com/rbb/" title="Sprint">Sprint</a></li>
+</ul>
+<h2>Retailer Take-Back Programs:</h2>
+<ul type="disc">
+<li><a href="http://www.bestbuy.com/site/null/Recycling-Electronics/pcmcat149900050025.c?id=pcmcat149900050025" title="Best Buy">Best Buy</a></li>
+<li><a href="http://www.call2recycle.org/locator/" title="Call2Recycle">Call2Recycle</a></li>
+<li><a href="http://www.greeninbklyn.com/" title="Green in BKLYN">Green in BKLYN</a></li>
+<li><a href="http://www.staples.com/sbd/cre/marketing/easy-on-the-planet/recycling-and-eco-services.html" title="Staples">Staples</a></li>
+<li><a href="http://www.lowes.com/cd_recycling_368967519_" title="Lowes">Lowes</a></li>
+</ul>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

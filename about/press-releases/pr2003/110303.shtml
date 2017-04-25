@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Enforcement of New Law Prohibiting Handbills on Motor Vehicles' Windshields Has Begun</h3>
+<div class="prs-subtitle">
+<p><strong>November 3, 2003</strong>&nbsp;| <em>Contact: Vito A. Turso / Kathy Dawkins (646) 885-5020</em></p>
+<p>Press Release # 03-54, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Enforcement of a new statewide law prohibiting the placement of handbills and other advertisements on the windshield, under windshield wipers, or on rear windows of motor vehicles began on November 1st. Fines start at $75 per handbill, poster, sticker, or other form of advertisement.</p>
+<p>Under Executive Order No. 40, Mayor Bloomberg designated the New York City Police Department and the Department of Sanitation to enforce the new law.</p>
+<p>The amended law creates a "rebuttable presumption" whereby any person or group whose name, telephone numbers, or other identifying information appearing on the handbill will be responsible for the violation. All summonses issued in New York City will be adjudicated by the Environmental Control Board.</p>
+<p>Sanitation Commissioner John J. Doherty said: "We are pleased that this amended law is now a reality. The law gives the City real teeth in confronting and enforcing an annoying act that causes litter, unsightly streets, and lower scorecard ratings. We can target the violator instantly. Once the handbill is placed under the windshield wiper, the violator's name, address, or telephone number appearing on the handbill can receive a summons as the responsible party who is now breaking the law. I know that New York City residents will join with me in applauding this much needed boost in helping to maintain clean streets citywide."</p>
+<p>For more information, contact the Citizen Service Center at 311.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

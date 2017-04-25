@@ -1,0 +1,18 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Who Picks Up for Recycling and Garbage for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycle_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1>Who Picks Up Recycling &amp; Garbage for Nonprofits &amp; Agencies<br /></h1>
+
+		  
+<p>DSNY provides curbside recycling and garbage collection for nonprofit organizations and agencies located in tax-exempt buildings. If your organization is eligible but not currently receiving DSNY collection services, you can <a href="/assets/dsny/contact/services/request-collection-service.shtml">request DSNY collection </a>.</p>
+<p>Nonprofits and agencies located in leased commercial spaces must use <a href="/assets/dsny/zerowaste/residents/residential-generators-of-private-carter-collected-waste.shtml">private carter service</a> and follow <a href="/assets/dsny/zerowaste/businesses.shtml">guidelines for businesses</a> for recycling and garbage collection.</p>
+
+</div></div>
+
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

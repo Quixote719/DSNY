@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Election Day, Tuesday, November 4th</h3>
+<div class="prs-subtitle">
+<p><strong>October 27, 2003</strong>&nbsp;| <em>Contact: Vito A. Turso / John Pampalone (646) 885-5020</em></p>
+<p>Press Release # 03-53, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has announced that, in observance of Election Day, there <b>will be no</b> garbage or recycling collection, and street cleaning on Tuesday, November 4, 2003. Residents who receive Tuesday garbage collection should instead place their refuse out at curbside Tuesday evening, after 5 PM for anticipated pickup on Wednesday, November 5th. Residents who normally receive Tuesday, <b>Week A</b> recycling collection are scheduled to have their recycling material picked up Wednesday, November 5th.</p>
+<p>Neighborhoods that regularly receive Wednesday garbage collection and Wednesday, <b>Week A</b> recycling collection should place their cans or bags out on Tuesday evening, after 5 PM as normal. Residences and commercial establishments that unlawfully leave trash or recyclables or dumpsters at curbside over the holiday weekend are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>All Sanitation Department administrative offices will be closed on Tuesday, November 4th in observance of the holiday. For questions about Sanitation services and schedules over the holiday, call the Citizens Service Center at 311 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

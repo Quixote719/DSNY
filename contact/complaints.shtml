@@ -1,0 +1,104 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Contact - Complaints</title>
+
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+
+
+               
+<div id="contentsection" class="about-main-image">	
+		
+<div class="span6 about-description">
+
+<h1>Complaints</h1>
+		
+					<div id= accordion> 
+
+					<p>Equal Employment Opportunity</p>
+					<div>
+						<a href="/assets/dsny/contact/complaints/equal-employment-opportunity-complaint.shtml">Equal Employment Opportunity Complaint</a>
+					</div>
+											
+				
+								
+					
+					<p>Recycling + Garbage</p>
+					
+					<div>	
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/2031/missed-garbage-recycling-or-organics-collection">Missed Garbage, Recycling, or Organics Collection</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1230/recycling-violation-complaint">Recycling Violation Complaint</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1908/trash-disposal-complaint">Trash Disposal Complaint</a></p>
+						<p><a href="/assets/dsny/contact/complaints/recyclable-material-theft-observation.shtml">Recyclable Material Theft Observation</a></p>
+						<p><a href="/assets/dsny/contact/complaints/failure-to-properly-store-receptacles-complaint.shtml">Failure to Store Receptacles</a></p>						
+						<p><a href="/assets/dsny/contact/complaints/sanitation-truck-spillage-complaint.shtml">Sanitation Truck Spillage Complaint</a></p>
+					</div>					
+		
+					
+					<p>Illegal Dumping + Vacant Lots</p>
+					<div>	
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1151/illegal-dumping-complaint">Illegal Dumping Complaint</a></p>
+						<p><a href="/assets/dsny/contact/complaints/lot-cleaning-request.shtml">Lot Cleaning Request</a></p>
+						
+					
+					</div>
+					
+					<p>Litter</p>
+					<div>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1064/dirty-sidewalk-or-gutter-complaint">Dirty Sidewalk or Gutter Complaint</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1069/dirty-yard-or-alley-complaint">Dirty Yard or Alley Complaint</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1165/littering-complaint">Littering Complaint</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1993/loose-trash-complaint">Loose Trash Complaint</a></p>						
+						<p><a href="/assets/dsny/contact/complaints/overflowing-broken-or-uncovered-receptacles-complaint.shtml">Private Receptacle Complaint</a></p>
+					
+					
+					</div>
+					
+					<p>Litter Baskets</p>					
+					<div>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1979/litter-basket-request-or-complaint">Litter Basket Request or Complaint</a></p>
+						<p><a href="https://www1.nyc.gov/apps/311universalintake/form.htm?serviceName=DSNY+Dirty+Trash+Can+Misuse">Report Misuse of a Litter Basket</a></p>						
+						<p><a href="/assets/dsny/contact/complaints/overflowing-litter-basket-service-request.shtml">Overflowing DSNY Litter Basket</a></p>
+					</div>
+					
+					<p>Street + Sidewalk Obstructions</p>
+					<div>
+						<p><a href="/assets/dsny/contact/complaints/obstruction-on-street-or-sidewalk-complaint.shtml">Street/Sidewalk Obstruction</a></p>
+						<p><a href="/assets/dsny/contact/complaints/collection-bin-on-public-property-removal-request.shtml">Collection Bin Removal Request</a></p>
+                        <p><a href="http://www1.nyc.gov/nyc-resources/service/2808/snow-or-ice-on-roadway-removal">Snow or Ice on Roadway Removal</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/2166/overgrown-grass-or-weeds-complaint">Overgrown Grass or Weeds Complaint</a></p>
+						<p><a href="/assets/dsny/contact/complaints/weed-removal-service-request.shtml">Weed Removal Service Request</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/989/abandoned-vehicle">Abandoned Vehicle</a></p>
+																
+					</div>
+					
+					<p>Graffiti + Posters</p>					
+					<div>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1114/graffiti-report">Graffiti Report</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1720/flyer-or-poster-complaint">Flyer or Poster Complaint</a></p>					
+					</div>
+						
+					
+					<p>Animals</p>
+					<div>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1535/dog-or-animal-waste-complaint">Dog or Animal Waste Complaint</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/2659/unleashed-dog-complaint">Unleashed Dog Complaint</a></p>
+						<p><a href="/assets/dsny/contact/complaints/dead-animal-removal-request.shtml">Dead Animal Removal Request</a></p>
+						<p><a href="http://www1.nyc.gov/nyc-resources/service/1487/dead-animal">Dead Animal (in a park) </a></p>
+					</div>	
+
+					<p>Report Fraud or Corruption</p>
+					<div>
+						To report alleged fraud or corruption, contact the Department of Investigation. Their contact information is available 
+						<a href="http://www.nyc.gov/html/doi/html/contact/contact.shtml">online</a>, or you may call 212-825-2438.
+					</div>					
+						
+				</div>
+						
+										
+		
+
+			</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

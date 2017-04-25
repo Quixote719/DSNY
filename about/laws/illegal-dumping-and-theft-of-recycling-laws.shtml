@@ -1,0 +1,44 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Illegal Dumping + Theft Of Recycling Laws </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/streetandsidewalklaws_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1> Illegal Dumping + Theft Of Recycling Laws </h1>
+
+		
+
+		<h2>Illegal Dumping</h2>
+<p>It is illegal for any person to dump, deposit, or otherwise dispose of any dirt, sand, gravel, clay, loam, stone rocks, rubble, building rubbish, sawdust, shavings, trade or household waste, ashes, manure, garbage, rubbish, or debris of any sort being transported in a dump truck or other vehicle in or upon any street, lot, park, public place, or other area whether publicly or privately owned. In addition, no person may allow anyone under his/her control (agent or employee) to engage in illegal dumping.</p>
+<p>Penalties for this offense include a fine and vehicle impoundment. Both the owner and driver of the vehicle are liable for illegal dumping. If the owner of the vehicle has been convicted of or found liable for a violation of this Code provision three or more times within an 18 month period, or if the owner has been convicted of or found liable for a violation one time in which the material dumped is defined as hazardous waste or acute hazardous waste under State Law, the vehicle is forfeited to the City pursuant to a court determination and auctioned no sooner than 30 days after the determination. The convicted owner of the vehicle is not entitled to repurchase it. The driving and/or vehicle registration privileges of any person who fails to pay a fine imposed by the Environmental Control Board (ECB) for violation of the local law prohibiting unlawful dumping in New York City may be suspended.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C1_16-119.asp">&sect;16-119</a></p>-->
+<p><i>Fine: </i>$1,500&ndash;$20,000</p>
+<h2>Unauthorized Removal of Garbage</h2>
+<p>No one, other than an authorized employee or agent of DSNY, shall disturb or remove ashes, garbage, refuse (including recycling), or rubbish placed within the stoop line or in front of houses by householders, tenants, or occupants for removal by DSNY.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C1_16-118.asp">&sect;16-118(7)</a></p>-->
+<p><i>Fine: </i>$100&ndash;$300</p>
+<h2>Theft of Residential Recyclable Material</h2>
+<p>Except for an authorized employee or agent of DSNY, it shall be unlawful for any person to disturb, remove, or transport by motor vehicle any amount of recyclable material placed out at curbside, within the stoop line, or in front of the premises for collection or removal by DSNY.</p>
+<p>Penalties for this offense include a fine and vehicle impoundment. Both the owner and driver of the vehicle are liable for theft of recyclable material.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C4-c_16-461.asp">&sect;16-461(a)(1)</a></p>-->
+<p><i>Fine: </i>$500&ndash;$1000 (Operator); $500&ndash;$1000 (Owner) plus Vehicle Impoundment</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C4-c_16-461.asp">&sect;16-461(b)</a></p>-->
+<p>Removal of DSNY-marked ?or Refrigerant-Containing Item<i>&mdash;Fine: </i>$750&ndash;$1500 (Operator); $500&ndash;$1000 (Owner) plus Vehicle Impoundment</p>
+<h2>Theft of Commercial Recyclable Material</h2>
+<p>Except for an authorized employee of an entity licensed by or registered with the Business Integrity Commission, it shall be unlawful for any person to disturb, remove, or transport by motor vehicle any amount of recyclable material placed out for collection by owners of commercial properties or businesses. Both the owner and driver of the vehicle are liable for theft of commercial recyclable material.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C4-c_16-461.asp">&sect;16-461(c)</a></p>-->
+<p><i>Fine: </i>$1,000&ndash;$2,000</p>
+<h2>Acceptance of Recyclable Containers in Bulk Using Motor Vehicles</h2>
+<p>It is unlawful for any person using a motor vehicle to accept, receive, or otherwise collect recyclable containers in bulk from more than one person on or in any street in New York City. Additionally, it is against the law for any person, using a motor vehicle to accept, receive, or transfer from one motor vehicle to another motor vehicle, or otherwise collect recyclable containers in bulk from more than two persons at a fixed location on private property in New York City without registering with DSNY. For more information regarding registration, please contact DSNY.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C4-d_16-471.asp">&sect;16-471</a></p>-->
+<p><i>Fine:</i> $1,000 (Owner and Operator) plus Vehicle Impoundment</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C4-d_16-472.asp">&sect;16-472</a></p>-->
+<p><i>Fine: </i>$500 (Owner and Operator) plus Vehicle Impoundment</p>
+<h2>Reward &amp; Tip Program Available</h2>
+<p>If the DSNY Commissioner determines that any individual provides information which results in the conviction of, or the imposition of a fine or civil penalty for, illegally dumping or for the theft of recycling, the Commissioner may offer to the individual a reward up to 50 percent of any fine or civil penalty collected, or up to five hundred dollars when a criminal conviction is obtained but no fine or civil penalty is imposed. In determining the amount of the reward, the Commissioner will consider the amount and type of material dumped (if applicable), and the specificity of information provided, including, but not limited to, the license plate number, the make or model of the vehicle, and the location, date, or time of the violation. For information, call the NYC Customer Service Center at 311 or visit <a href="http://nyc.gov/311">nyc.gov/311</a>.</p>
+
+		 </div>
+		 </div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

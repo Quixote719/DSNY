@@ -1,0 +1,39 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - How to Get Rid of...  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+<link href="/assets/dsny/css/pages/webforms/bootstrap_input.css" media="screen" rel="stylesheet" type="text/css" />
+
+<style>
+	.control-group .tt-dataset-aNames{max-height:200px; overflow-y:auto; width: 99%; border: 1px solid #e5e5e5; border-radius:3px; background-color:#ffffff;}
+	.btn,.btn:focus { padding : 6px 12px; width: auto; }
+	.input-group {width: 60%}		
+	.control-group .tt-dropdown-menu {width: 85%}
+	.btn:hover, .btn:focus, .btn.focus { color: white;}
+</style>
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h1>How To Get Rid Of…</h1>
+
+<form method="get"  type="external" action="/assets/dsny/zerowaste/how-do-i-get-rid-of-filter.shtml" class="form-search"> 
+<label for="search-terms" class="first-label" style="margin: 0 0 0 0px;">ENTER SEARCH TERMS</label>
+	<div class="input-group control-group typeahead-div">
+		<input type="text" class="typeahead form-control" placeholder="Search for.." id="filter-term" name="filter-term" style="position: relative; vertical-align: top; background-color: transparent;box-shadow: none;border: 1px solid #ccc;" tabindex="1"/> 
+		<!--<span class="input-group-btn"> <button style="margin-left: 14px;height:  40px;margin-top: 2px;" class="btn btn-default" type="submit">Go!</button> </span>-->
+		<span class="input-group-btn"><button type="submit" class="btn" tabindex="4" id="search" style="width:  100%;margin-left: 30px;margin-top: 0px;margin-left: 20px;height: 40px;" tabindex="2">Search</button></span>
+	</div>
+</form> 
+<hr />
+
+<div id="results-div"></div>
+
+   </div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml" -->
+ <script src="/assets/dsny/js/agencies/dispose_data_stg.js" type="text/javascript"></script>
+ <script src="/assets/dsny/js/agencies/dispose-filter.js" type="text/javascript"></script>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml" -->
+ 

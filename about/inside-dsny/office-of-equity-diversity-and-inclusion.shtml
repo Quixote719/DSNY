@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Office of Equity, Diversity &amp; Inclusion </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Office of Equity, Diversity &amp; Inclusion</h1>
+				<p>The Office of Equity, Diversity &amp; Inclusion develops and implements agency equity and diversity policy. Through specialized Diversity and Inclusion training, and dissemination of employment law updates by &nbsp;OEDI, DSNY ensures that all employees are aware, not only of their employment rights but also of their responsibilities.</p>
+<p>All employees are expected to follow the guidelines of NYC&rsquo;s Equal Employment Opportunity Policy. OEDI investigates and mediates issues of employment discrimination. &nbsp;It responds to inquiries from DSNY employees, applicants, and temporary participants in the Work Experience Management (WEM) Program, and provides guidance to Managers and Supervisors in handling employee misunderstandings which could present potential discriminatory situations.</p>
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

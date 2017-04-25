@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Columbus Day, Monday, October 10th</h3>
+<div class="prs-subtitle">
+<p><strong>October 4,2011</strong> | <em>Vito A. Turso</em><em>/Keith Mellis</em></p>
+<p>Press Release # 11-30, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Columbus Day, there will be no garbage or recycling collection, or street cleaning on Monday, October 10th, 2011.&nbsp; In addition, all Sanitation Department administrative offices will be closed on Monday, October 10th, in observance of the holiday.&nbsp;</p>
+<p>Residents who normally receive Monday garbage collection should place their trash out at curbside Monday after 5 PM for pickup.&nbsp; Those receiving Monday recycling collection will not have their recycling picked up until the following Monday, October 17th.&nbsp;&nbsp;&nbsp;</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+</div>
+<div style="position: absolute; left: 0px; top: -25px; width: 1px; height: 1px; overflow: hidden;" data-mce-bogus="1" class="mcePaste" id="_mcePaste"></div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

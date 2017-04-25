@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Glass Recycling Enforcement to Resume on July 1st</h3>
+<div class="prs-subtitle">
+<p><strong>June 15, 2004</strong> | <em>Vito A. Turso / Taryn Duckett (646) 885-5020 </em></p>
+<p>Press Release # 04-27, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The Department of Sanitation will resume enforcing violations of the recycling laws pertaining to glass recyclables on Thursday July 1st, it was announced by Sanitation Commissioner John J. Doherty.</p>
+<p>The resumption of enforcement followed an extensive 90 day public outreach campaign during which no summonses were written for failure to recycle glass. On April 1st, the City's weekly recycling program was fully restored after two years of glass and plastic materials suspension necessitated by the City's fiscal challenges.</p>
+<p>"The DSNY was aware that New Yorkers deserved time to adjust to a regular recycling schedule, therefore a three month grace period was granted during which no summonses were issued for the improper recycling of glass," said Commissioner Doherty.</p>
+<p>A telemarketing campaign has been launched to reach out to residents and remind them to recycle glass properly or face a $25 fine. In addition, the Department has placed ads and flyers in daily and weekly newspapers, placed posters on collection trucks, and mailed brochures to building managers, owners and homeowners to promote further outreach.</p>
+<p>For inquiries, recycling decals or flyers, New Yorkers should call 311.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

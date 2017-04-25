@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Department of Sanitation and Autism Speaks Light It Up Blue <br />DSNY Collection Trucks and Mechanical Brooms Will Feature Blue Autism Support Posters During Autism Awareness Month</h3>
+<div class="prs-subtitle">
+<p><strong>Thursday, April 2, 2015</strong> | <em>Vito A. Turso / Belinda Mager</em></p>
+<p style="font-size:14px">Press Release # 15-40, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>In honor of Autism Awareness Month, the New York City Department of Sanitation and Autism Speaks have joined forces to place autism awareness posters on the Department&rsquo;s collection trucks and mechanical brooms.</p>
+<p>The posters will appear on some 2,500 Department trucks and brooms throughout April, Autism Awareness Month.</p>
+<p>&ldquo;I am proud to see that many of the Department&rsquo;s employees support advocacy groups, such as Autism Speaks,&rdquo; said Sanitation Commissioner Kathryn Garcia. &ldquo;Our trucks and brooms are in every neighborhood and on every street in the city, and I am happy that we can show our support in such a visible way.&rdquo;</p>
+<p>Last year, Department fundraising brought more than $40,000 for Autism Speaks.</p>
+<p>&ldquo;The NYC Department of Sanitation has supported families with autism in New York City for years,&rdquo; said Liz Feld, president of Autism Speaks. &ldquo;By putting our puzzle-piece logo on almost 2,500 trucks that will roll through all five boroughs, the DSNY is leading our awareness efforts in a big way. We are so grateful for their commitment to our mission.&rdquo;</p>
+<h3 class="prs-about"><i class="fa fa-university"></i>About the New York City Department of Sanitation</h3>
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

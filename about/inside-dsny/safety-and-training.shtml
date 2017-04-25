@@ -1,0 +1,15 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Safety and Training </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Safety and Training</h1>
+<p>The Division of Safety and Training is responsible for all administrative and operational training to ensure that DSNY employees have the knowledge and skills to perform their jobs safely and effectively in a hazard-free work place. The Division also has the jurisdiction to enforce Federal, State, City, and departmental laws, rules, and regulations pertaining to safe motor vehicle operation and work procedures, building maintenance, and driver&rsquo;s license requirements.</p>
+<p>The Division responsibilities include developing and maintaining programs and trainings; investigating serious line-of-duty injuries and vehicular accidents; conducting orientation programs for new and recently promoted uniformed employees; and facilitating department-wide walkthroughs for Workplace Violence surveys and facility E-waste, standpipe, and sprinkler inspections.</p>				
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,45 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Jobs </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+		<div id="contentsection" class="about-main-image">
+		  <div class="span6 about-description">
+
+				<h1>Jobs</h1>
+<h2>DSNY&rsquo;s EEO Policy</h2>
+<p><a href="/assets/dsny/about/inside-dsny/eeo-policy.shtml" title="Equal Employment Opportunity Policy">Equal Employment Opportunity Policy</a></p>
+
+<h2>Job Training Program</h2>
+
+<p>If you are a business interested in hiring employees, DSNY&rsquo;s <a href="/assets/dsny/about/inside-dsny/job-training-program.shtml" title="Job Training Program">Job Training Program</a> can help.</p>
+
+<h2>Job Opportunities</h2>
+
+<p>For open jobs, refer to <a href="http://www1.nyc.gov/jobs/index.page" title="Public Service Careers with NYC">Public Service Careers with NYC</a>.</p>
+<p>For open competitive exams and promotion exams, refer to <a href="http://www1.nyc.gov/jobs/exams.page" title="Exams for Jobs">Exams for Jobs</a>.</p>
+<p>Visit the Operations page of the <a href="/assets/dsny/snow/operations.shtml">Snow section</a> of this website to learn about temporary snow-removal employment. </p>
+
+
+<h2>Sanitation Worker List</h2>
+
+<p>The normal entry-level position in DSNY is Sanitation Worker. Sanitation Workers are appointed from a civil-service list. In order to be placed on the civil-service list, a candidate must pass a written exam (when available) and a physical test administered by the <a href="http://nyc.gov/html/dcas/html/work/work.shtml" title="Department of Citywide Administrative Services">Department of Citywide Administrative Services</a>.</p>
+
+<p>As DSNY receives authorization to hire Sanitation Workers, it calls candidates in list-number order. Each candidate must pass a pre-employment medical exam, a background check, and a driver's license check.</p>
+
+<p>Under the current civil service list, each candidate must have a high school diploma, or equivalent, and a commercial driver's license at the time of appointment. Sanitation Workers must reside within New York City, Nassau County, or Westchester County.</p>	
+
+
+<h2>Contract Opportunities</h2>
+
+<p>The <a href="http://nyc.gov/html/dcas/html/about/cityrecord.shtml" title="City Record On-Line">City Record On-Line</a> is a searchable database of all of the procurement notices that appear in the printed City Record. The site offers current solicitations and an archive of older notices. Vendors who register with the site will receive notification by e-mail when new solicitations are posted.</p>
+
+<h2>Minority + Women-Owned Business Enterprises</h2>
+
+<p>DSNY is seeking qualified Minority + Women-Owned Business Enterprises (M/WBEs) to be contractors for goods, services, and construction. Refer to <a href="http://nyc.gov/html/dcas/html/business/mwbe.shtml" title="M/WBE Program">M/WBE Program</a> if you are looking to become a certified M/WBE vendor.</p>
+				
+		  </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
+
+

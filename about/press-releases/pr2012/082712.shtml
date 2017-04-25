@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Labor Day, Monday, September 3rd</h3>
+<div class="prs-subtitle">
+<p><strong>Monday, August 27, 2012</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 12-25, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation (DSNY) announced today that in observance of Labor Day, there will be no garbage or recycling collection, or street cleaning on Monday, September 3rd, 2012. In addition, all Sanitation Department administrative offices will be closed on Monday, September 3rd, in observance of the holiday.</p>
+<p>Residents who normally receive Monday garbage collection should place their trash out at curbside Monday after 5 PM for pickup. Those receiving Monday recycling collection will not have their recycling picked up until the following Monday, September 10th, 2012.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+<p><a href="/assets/dsny/downloads/pdf/golden-apple-awards/GAA-2012winners.pdf">2012 Golden Apple Award Winners</a></p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

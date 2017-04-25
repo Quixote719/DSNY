@@ -1,0 +1,80 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What To Recycle for Schools</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycling_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Who Picks up Recycling and Garbage For Schools </h1>
+
+<div class="fluid-wrapper"><iframe width="700" height="467" src="//www.youtube.com/embed/D6YgIG2356g" frameborder="0"></iframe></div>
+
+<h2>Paper &amp; Cardboard</h2>
+<h3>Paper—“If you can tear it, recycle it”:</h3>
+<ul>
+<li>Newspapers, magazines, catalogs</li>
+<li>White and colored paper (including lined, copier, and computer paper; staples are acceptable)</li>
+<li>Mail and envelopes (any color; window envelopes are acceptable)</li>
+<li>Paper bags (cloth or plastic handles are acceptable)</li>
+<li>Wrapping paper</li>
+<li>Soft-cover books, telephone books (such as paperbacks and comics; no spiral bindings; refer to <a  title="DOE Book Recycling Policy on Facilities Managers How to Do" href="http://schools.nyc.gov/community/facilities/sustainability/facilitymanagers/howtodo/">DOE Book Recycling Policy on Facilities Managers How to Do</a>) </li>
+</ul>
+<h3>Cardboard:</h3>
+<ul>
+<li>Smooth cardboard (such as food and shoe boxes, tubes, file folders, and cardboard from product packaging)</li>
+<li>Cardboard egg cartons and trays</li>
+<li>Pizza boxes: remove and discard soiled liner; recycle plastic supporter in your blue bin</li>
+<li>Paper cups (waxy lining is acceptable if the cups are empty and clean; plastic lids go in the blue bin)</li>
+<li>Corrugated cardboard boxes, flattened </li>
+</ul>
+<h3>Not Accepted:</h3>
+<ul>
+<li>Paper with heavy wax or plastic coating (such as candy wrappers and take-out containers)</li>
+<li>Soiled or soft paper (tissues, napkins, paper towels) </li>
+<li>Hardcover books (refer to <a  title="DOE Book Recycling Policy on Facilities Managers How to Do" href="http://schools.nyc.gov/community/facilities/sustainability/facilitymanagers/howtodo/">DOE Book Recycling Policy on Facilities Managers How to Do</a>)</li>
+</ul>
+<!--<p>See <a title="Green Bin FAQs" href="/site/dsny/resources/faq/green-bin-faqs.page">Green Bin FAQs</a> for more information.</p>-->
+<h2>Metal, Glass, Plastic &amp; Cartons</h2>
+<p>Empty and rinse containers before recycling.</p>
+<h3>Metal:</h3>
+<ul>
+<li>Metal cans (including soda, soup, and sauce cans, empty aerosol cans, dried-out paint cans)</li>
+<li>Aluminum foil wrap and trays</li>
+<li>Metal caps and lids</li>
+<li>Household metal (such as wire hangers, scissors, staplers, pots, tools, curtain rods, <a title="knives" href="/assets/dsny/zerowaste/residents/specially-handled-items.shtml">knives</a>, small appliances that are mostly metal, and certain vehicle license plates)</li>
+<li>Bulk metal (such as large metal items such as furniture, cabinets, and large <a title="appliances" href="/assets/dsny/zerowaste/residents/appliances.shtml">appliances</a>) </li>
+</ul>
+<h3>Glass:</h3>
+<ul>
+<li>Glass bottles</li>
+<li>Glass jars</li>
+</ul>
+<h3>Rigid plastic:</h3>
+<ul>
+<li>Plastic bottles, jugs, and jars</li>
+<li>Rigid plastic caps and lids</li>
+<li>Rigid plastic food containers (such as yogurt, deli, or hummus containers; dairy tubs, cookie tray inserts, "clamshell" containers, and other plastic take-out containers)</li>
+<li>Rigid plastic non-food containers</li>
+<li>Rigid plastic packaging (such as “blister-pack” and “clamshell” consumer packaging, acetate boxes)</li>
+<li>Rigid plastic housewares (such as bowls, flower pots, and plastic appliances)</li>
+<li>Bulk rigid plastic (such as crates, buckets, pails, furniture, and large toys)</li>
+</ul>
+<h3>Cartons:</h3>
+<ul>
+<li>Food and beverage cartons (such as cartons for milk, juice, and soup)</li>
+<li>Drink boxes</li>
+<li>Aseptic packaging</li>
+</ul>
+<h3>Not Accepted:</h3>
+<ul>
+<li>Batteries</li>
+<li>Plastic bags, wrappers, pouches, squeeze tubes, foam plastics</li>
+</ul>
+<!--<p>See <a title="Blue Bin FAQs" href="/site/dsny/resources/faq/blue-bin-faqs.page">Blue Bin FAQs</a> for more information.</p>-->
+
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

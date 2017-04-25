@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      
+	<link rel="stylesheet" href="/assets/dsny/dashboard/includes/css/bootstrap.min.css">
+	<style>
+	.row {
+     margin-left: 0px!important; 
+     margin-right: 0px!important;
+}
+	
+	</style>
+	
+</head>
+
+<body>
+	<div class="container-fluid" style='height:100%; 'id='settings'>
+        <div class="row" id="1" style="display:none">	
+			 <div class="row"> <strong> Televisions CRT </strong>  </div>
+			<div class="row"> 
+			<img src="/assets/dsny/img/crttv.jpg"> </img>
+			</div>
+		</div>		
+		<div class="row" id="17" style="display:none" >			
+			 <div class="row"> <strong> Televisions LCD </strong>  </div>
+			<div class="row"> 
+			<img src="/assets/dsny/img/lcdtv.jpg"> </img>
+			</div>
+		</div>		
+		<div class="row" id="7" style="display:none" >
+			 <div class="row"> <strong> Other TV peripherals  </strong>  </div>
+			<div class="row"> 
+			TV peripherals, other than those listed above, are auxiliaries that connects to and works with the TV in some way. Such as: Chromecast, Speakers, Streaming boxes.
+			</div>
+		</div>		
+		 <div class="row"  id="15" style="display:none" >
+		 <div class="row"> <strong> Other portable devices </strong>  </div>
+			<div class="row"> 
+			Portable devices, other than those listed above, are any devices that can easily be carried. Such as: Phones, MP3, watches.
+			</div>
+		</div>
+		 <div class="row"  id="2" style="display:none" >
+			<div class="row"> <strong>  Other computer peripherals </strong>  </div>
+			<div class="row"> 
+			Computer peripherals, other than those listed above, are auxiliaries that connects to and works with the computer in some way. Such as: microphones, loudspeakers, webcams, and digital cameras.
+			</div>
+		</div>
+	</div>	
+	<script src="/assets/home/js/libs/jquery-1.9.1.js" type="text/javascript"></script>     
+	<script>	
+	
+	$(document).ready(function () {
+		//Start - Get QueryString From URL
+		function getParameterByName(name, url) {
+			if (!url) url = window.location.href;
+			name = name.replace(/[\[\]]/g, "\\$&");
+			var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+				results = regex.exec(url);
+			if (!results) return null;
+			if (!results[2]) return '';
+			return decodeURIComponent(results[2].replace(/\+/g, " "));
+		}
+		
+		var currentPageURL = location.href;
+		var id = getParameterByName('id',currentPageURL);		
+		 		
+		$('#'+id).show();
+		
+	});
+
+	
+	</script>
+	
+</body>
+
+</html>

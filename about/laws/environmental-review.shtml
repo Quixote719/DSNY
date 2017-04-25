@@ -1,0 +1,20 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Environmental Review </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+
+
+		<div id="contentsection" class=" about-main-image">
+			<div class="span6 about-description">
+
+<h1>Environmental Review</h1>
+
+
+<p>City Environmental Quality Review, or &ldquo;CEQR,&rdquo; is New York City&rsquo;s process for implementing the State Environmental Quality Review Act (SEQR), by which agencies of the City of New York review proposed discretionary actions to identify and disclose the potential effects those actions may have on the environment.&nbsp; The project&rsquo;s Lead Agency&mdash;the agency with principal responsibility for approving, funding or carrying out an action&mdash;initially assesses impacts through preparation of an Environmental Assessment Statement (EAS). If the Lead Agency&rsquo;s review of the EAS finds there would be no significant adverse environmental impact from the action, it issues a Negative Declaration, which concludes the review.&nbsp; If the Lead Agency determines that the action may result in a significant adverse environmental impact, it issues a Positive Declaration identifying the potential impact(s) and requires the preparation of a draft Environmental Impact Statement (EIS) which is released for public comment.</p>
+<p>The EIS includes a consideration of mitigation measures that may reduce such impact(s) and reasonable alternatives that are feasible.&nbsp; A Final EIS includes responses to public comments.&nbsp; Before the Agency may take final action following issuance of an EIS, it must certify that consistent with social, economic and other essential considerations from among the reasonable alternatives available, the action is one that avoids or minimizes adverse environmental impacts to the maximum extent practicable by incorporating as conditions to the decision those mitigative measures that were identified as practicable.</p>
+<p>To find a specific EAS or EIS, please search the Mayor's Office of Environmental Coordination <a href="https://a002-ceqraccess.nyc.gov/ceqr/">database</a>.</p>
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

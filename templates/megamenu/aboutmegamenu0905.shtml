@@ -1,0 +1,461 @@
+	<div class="ls-cmp-wrap ls-1st" id="w1407802447993"><!--
+		ls:begin[component-
+		1407802447993
+		]
+	--><div class="iw_component" id="1407802447993">
+
+	<div class="row">
+
+
+
+<div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">		
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Inside DSNY</a>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <div class="menu-style" style=""></div>
+                <ul class="dropdown-menu nyc-grey-250" role="menu">
+
+
+                    <li data-submenu-id="submenu-about-leadership">
+                        <a href="/assets/dsny/about/inside-dsny/leadership.shtml">Leadership</a>
+                        <div id="submenu-about-leadership" class="popover"></div>
+                    </li>
+
+
+                    <li data-submenu-id="submenu-about-bureaus">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Bureaus &amp; Units</a>
+                        <!--
+                          jQuery-menu-aim: each class="popover" div defines submenu content. There are a million
+                          and one ways to do this, places to structure the HTML, etc. This is just one example.
+                          jQuery-menu-aim is agnostic to your HTML structure, it only fires events to be used
+                          as you please.
+                        -->
+
+
+
+                        <div id="submenu-about-bureaus" class="popover">
+                            <h3 class="popover-title">Bureaus &amp; Units</h3>
+                            <div class="popover-content">
+				<a href="/assets/dsny/about/inside-dsny/bureaus-and-units.shtml">Bureaus and Units</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/bureau-of-cleaning-and-collection.shtml">Bureau of Cleaning &amp; Collection</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/bureau-of-information-technology.shtml">Bureau of Information Technology</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/bureau-operations-office.shtml">Bureau Operations Office</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/enforcement-division.shtml">Enforcement Division</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/engineering.shtml">Engineering</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/engineering-audits.shtml">Engineering Audits</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/office-of-equity-diversity-and-inclusion.shtml">Equal Employment Opportunity Office</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/fiscal-services.shtml">Fiscal Services</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/human-resources.shtml">Human Resources</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/labor-relations-office.shtml">Labor Relations Office</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/legal-affairs.shtml">Legal Affairs</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/medical-division.shtml">Medical Division</a> <br>
+                                <a href="/assets/dsny/about/inside-dsny/permit-inspection-unit-and-environmental-police-unit.shtml">Permit Inspection Unit &amp; Environment Police Unit</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/recycling-and-sustainability.shtml">Recycling &amp; Sustainability</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/safety-and-training.shtml">Safety &amp; Training</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/solid-waste-management.shtml">Solid Waste Management</a> <br>
+                                <a href="/assets/dsny/about/inside-dsny/support-services.shtml">Support Services</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/work-enrichment-program.shtml">Work Experience Management</a>      
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-affiliations">
+                        <a href="/assets/dsny/about/inside-dsny/affiliations.shtml">Affiliations</a>
+                        <div id="submenu-affiliations" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-history">
+                        <a href="/assets/dsny/about/inside-dsny/history.shtml">History</a>
+                        <div id="submenu-history" class="popover"></div>
+                    </li>
+                   
+                    <li data-submenu-id="submenu-reports">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Reports</a>
+                        <div id="submenu-reports" class="popover">
+                            <h3 class="popover-title">Reports</h3>
+                            <div class="popover-content content-two-col">
+							<table>
+                                    <tr>
+										<td><a href="/assets/dsny/about/inside-dsny/reports.shtml">Reports</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/composting-opportunities-2012.shtml">Composting Opportunities, 2012</a></td>										
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/diversion-goals.shtml">Diversion Goals</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/hunts-point-organics-recovery-2005.shtml">Hunts Point Organics Recovery, 2005</a></td>	
+																				
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/annual-and-monthly-statistics.shtml">Annual &amp; Monthly Statistics</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/municipal-solid-waste-composting-report-2004.shtml">Municipal Solid Waste Composting Report, 2004</a></td>										
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/public-space-recycling-pilot-2007.shtml">Public Space Recycling Pilot, 2007</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/composting-in-nyc-2001.shtml">Composting In NYC 2001</a></td>																													
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/market-research-2005.shtml">Market Research, 2005</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/backyard-composting-1999.shtml">Backyard Composting, 1999</a></td>																			
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/market-research-1999.shtml">Market Research 1999</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/commercial-solid-waste-study-and-analysis-2012.shtml">Commercial Solid Waste Study &amp; Analysis, 2012</a></td>																	
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/processing-and-marketing-recyclables-2004.shtml">Processing &amp; Marketing Recyclables, 2004</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/waste-characterization-2005.shtml">Waste Characterization, 2005</a></td>																													
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/recycling-in-context-2001.shtml">Recycling in Context, 2001</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/commercial-waste-management-study-2004.shtml">Commercial Waste Management Study, 2004</a></td>																												
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/outreach-activities-1999.shtml">Outreach Activities, 1999</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/characterization-of-nycs-solid-waste-stream-2000.shtml">Characterization of NYC's Solid Waste Stream, 2000</a></td>																			
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/organics-collection-pilot-reports-2014-2015.shtml">Organics Collection Pilot Reports, 2014-2015</a></td>
+										<td><a href="/assets/dsny/about/inside-dsny/mixed-waste-processing-1999.shtml">Mixed Waste Processing, 1999</a></td>																	
+									</tr>
+									<tr>
+										<td><a href="/assets/dsny/about/inside-dsny/community-composting-report-2014.shtml">Community Composting Report, 2014</a></td>										
+										<td><a href="/assets/dsny/about/inside-dsny/waste-characterization-1990.shtml">Waste Characterization, 1990</a></td>
+									</tr>
+								</table>                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-newsletter">
+                        <a href="/assets/dsny/about/inside-dsny/newsletters.shtml">Newsletter</a>
+                        <div id="submenu-newsletter" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-videos">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Videos</a>
+                        <div id="submenu-videos" class="popover">
+                            <h3 class="popover-title">Videos</h3>
+                            <div class="popover-content">
+				<a href="/assets/dsny/about/inside-dsny/videos.shtml">Videos</a><br>
+                            	<a href="/assets/dsny/about/inside-dsny/videos-for-residents-and-institutions.shtml">Videos for Residents &amp; Institutions</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/videos-for-schools.shtml">Videos for Schools</a><br>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-educationalmaterials">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Educational Materials</a>
+                        <div id="submenu-educationalmaterials" class="popover">
+                            <h3 class="popover-title">Educational Materials</h3>
+                            <div class="popover-content">
+								<a href="/assets/dsny/about/inside-dsny/educational-materials.shtml">Educational Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/business-recycling-materials.shtml">Business Recycling Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/cleanup-and-gardening-activities-for-students.shtml">Cleanup &amp; Gardening Activities For Students</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/coloring-and-comic-books.shtml">Coloring &amp; Comic Books</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/compost-project-materials.shtml">Compost Project Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/field-trips-and-tours.shtml">Field Trips &amp; Tours</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/general-sanitation-materials.shtml">General Sanitation Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/recycling-and-waste-prevention-materials.shtml">Recycling &amp; Waste Prevention Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/nycs-recycling-curriculum.shtml">NYC's Recycling Curriculum</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/promotional-materials.shtml">Promotional Materials</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/public-presentations.shtml">Public Presentations</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/recycling-activities-for-students.shtml">Recycling Activities For Students</a><br>                                
+                                <a href="/assets/dsny/about/inside-dsny/resources-for-schools.shtml">Resources for Schools</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/school-recycling-materials.shtml">School Recycling Materials</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-jobs">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Jobs</a>
+                        <div id="submenu-jobs" class="popover">
+                            <h3 class="popover-title">Jobs</h3>
+                            <div class="popover-content">
+								<a href="/assets/dsny/about/inside-dsny/jobs.shtml">Jobs</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/eeo-policy.shtml">EEO Policy</a><br>
+                                <a href="/assets/dsny/about/inside-dsny/job-training-program.shtml">Job Training Program</a><br>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-doing-business">
+                        <a href="/assets/dsny/about/inside-dsny/doing-business-with-dsny.shtml">Doing Business With DSNY</a>
+                        <div id="submenu-doing-business" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-memoranda-understanding">
+                        <a href="/assets/dsny/about/inside-dsny/mous.shtml">Memoranda of Understanding</a>
+                        <div id="submenu-memoranda-understanding" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-language-access">
+                        <a href="/assets/dsny/about/inside-dsny/language-access-plan.shtml">Language Access Plan</a>
+                        <div id="submenu-language-access" class="popover"></div>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Laws</a>
+                <div class="menu-style" style=""></div>
+                <!--
+                  jQuery-menu-aim: this <ul> defines the dropdown main menu and its contents.
+                  This is just one of many possible examples for defining the menu's HTML.
+                  jQuery-menu-aim is agnostic to your HTML structure, it only fires events to
+                  be used as you please.
+                -->
+                <ul class="dropdown-menu nyc-grey-20" role="menu">
+					<li data-submenu-id="submenu-laws">
+                        <a href="/assets/dsny/about/laws.shtml">Laws</a>
+                        <div id="submenu-laws" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-proposed-rules">
+                        <a href="/assets/dsny/about/laws/proposed-rules.shtml">Proposed Rules</a>
+                        <div id="submenu-proposed-rules" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-solid-waste">
+                        <a href="/assets/dsny/about/laws/solid-waste-management-plan.shtml">Solid Waste Management Plan</a>
+                        <div id="submenu-solid-waste" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-environmental">
+                        <a href="/assets/dsny/about/laws/environmental-review.shtml">Environmental Review</a>
+                        <div id="submenu-environmental" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-recycling-garbage-laws">
+                        <!--<a href="/assets/dsny/about/laws/recycling-and-garbage-laws.shtml">Recycling &amp; Garbage Laws</a>-->
+						<a href="javascript:undefined" style="cursor:default;text-decoration:none">Recycling &amp; Garbage Laws</a>
+                        <div id="submenu-recycling-garbage-laws" class="popover">
+                            <h3 class="popover-title">Recycling &amp; Garbage Laws</h3>
+                            <div class="popover-content content-two-col">
+                                <table>
+                                    <tbody>
+										<tr>
+                                            <td><a href="/assets/dsny/about/laws/recycling-and-garbage-laws.shtml">Recycling &amp; Garbage Laws</a></td>
+                                            <td><a href="/assets/dsny/about/laws/recycling-laws-for-nonprofits-and-agencies.shtml">Recycling Laws for Nonprofits &amp; Agencies</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="/assets/dsny/about/laws/setout-laws-for-residents.shtml">Setout Laws for Residents</a></td>
+                                            <td><a href="/assets/dsny/about/laws/harmful-products-and-special-handling-laws.shtml">Harmful Products &amp; Special Handling</a></td>
+                                        </tr>
+                                        <tr>
+											<td><a href="/assets/dsny/about/laws/recycling-laws-for-residents.shtml">Recycling Laws for Residents</a></td>
+											<td><a href="/assets/dsny/about/laws/collection-and-setout-laws-for-businesses.shtml">Collection &amp; Setout Laws for Businesses</a></td>
+                                        </tr>
+                                        <tr>
+											<td><a href="/assets/dsny/about/laws/setout-laws-for-schools.shtml">Setout Laws for Schools</a></td>
+											<td><a href="/assets/dsny/about/laws/recycling-laws-for-businesses.shtml">Recycling Laws for Businesses</a></td>
+                                        </tr>
+                                        <tr>
+											<td><a href="/assets/dsny/about/laws/recycling-laws-for-schools.shtml">Recycling Laws for Schools</a></td>
+											<td><a href="/assets/dsny/about/laws/retail-and-service-provider-requirements.shtml">Retail &amp; Servicer Provider Requirements</a></td>
+                                        </tr>                                                                                                                       
+                                        <tr>
+											<td><a href="/assets/dsny/about/laws/setout-laws-for-nonprofits-and-agencies.shtml">Setout Laws for Nonprofits &amp; Agencies</a></td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-street-sidewalks-laws">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Streets &amp; Sidewalk Laws</a>
+                        <div id="submenu-street-sidewalks-laws" class="popover">
+                            <h3 class="popover-title">Streets &amp; Sidewalk Laws</h3>
+                            <div class="popover-content content-two-col">
+                                <table>
+                                     <tr>
+                                        <td><a href="/assets/dsny/about/laws/streets-and-sidewalks-laws.shtml">Streets &amp; Sidewalk Laws</a></td>
+                                        <td><a href="/assets/dsny/about/laws/posting-and-graffiti-laws.shtml">Posting &amp; Graffiti Laws</a></td>
+                                    </tr>
+									<tr>
+                                        <td><a href="/assets/dsny/about/laws/cleaning-laws.shtml">Cleaning Laws</a></td>
+                                        <td><a href="/assets/dsny/about/laws/sidewalk-and-street-obstruction-laws.shtml">Sidewalk &amp; Street Obstruction Laws</a></td>
+                                    </tr>
+                                    <tr>
+										<td><a href="/assets/dsny/about/laws/dog-laws.shtml">Dog Laws</a></td>
+                                        <td><a href="/assets/dsny/about/laws/vehicle-and-bike-laws.shtml">Vehicle &amp; Bike Laws</a></td>                                        
+                                    </tr>
+                                    <tr>
+										<td><a href="/assets/dsny/about/laws/alternate-side-parking-and-street-cleaning-laws.shtml">Alternate Side Parking &amp; Street Cleaning Laws</a></td>
+                                        <td><a href="/assets/dsny/about/laws/snow-laws.shtml">Snow Laws</a></td>                                      
+                                    </tr>
+                                    <tr>
+										<td><a href="/assets/dsny/about/laws/illegal-dumping-and-theft-of-recycling-laws.shtml">Illegal Dumping &amp; Theft of Recycling</a></td>                                        
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Press Releases</a>
+                <div class="menu-style" style=""></div>
+                <ul class="dropdown-menu nyc-grey-65" role="menu">
+                    <li data-submenu-id="submenu-2015">
+                        <a href="/assets/dsny/about/press-releases/pr2015/press-release-2015.shtml">Year 2015</a>
+                        <div id="submenu-2015" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-2014">
+                        <a href="/assets/dsny/about/press-releases/pr2014/press-release-2014.shtml">Year 2014</a>
+                        <div id="submenu-2014" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-2013">
+                        <a href="/assets/dsny/about/press-releases/pr2013/press-release-2013.shtml">Year 2013</a>
+                        <div id="submenu-2013" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-2012">
+                        <a href="/assets/dsny/about/press-releases/pr2012/press-release-2012.shtml">Year 2012</a>
+                        <div id="submenu-2012" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-2011">
+                        <a href="/assets/dsny/about/press-releases/pr2011/press-release-2011.shtml">Year 2011</a>
+                        <div id="submenu-2011" class="popover"></div>
+                    </li>
+                    <li data-submenu-id="submenu-archive">
+                        <a href="javascript:undefined" style="cursor:default;text-decoration:none">Archives</a>
+                        <div id="submenu-archive" class="popover">
+                            <h3 class="popover-title">Archives</h3>
+                            <div class="popover-content content-two-col">
+                                <table>
+                                    <tr>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2010/press-release-2010.shtml">Year 2010</a></td>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2005/press-release-2005.shtml">Year 2005</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2009/press-release-2009.shtml">Year 2009</a></td>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2004/press-release-2004.shtml">Year 2004</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <a href="/assets/dsny/about/press-releases/pr2008/press-release-2008.shtml">Year 2008</a></td>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2003/press-release-2003.shtml">Year 2003</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2007/press-release-2007.shtml">Year 2007</a></td>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2002/press-release-2002.shtml">Year 2002</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2006/press-release-2006.shtml">Year 2006</a></td>
+                                        <td><a href="/assets/dsny/about/press-releases/pr2001/press-release-2001.shtml">Year 2001</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-collapse collapse">
+            <ul class="nav last-dropdown-menu">
+              <li class="active">
+                <a class="dropdown-toggle top-menu-style" data-toggle="dropdown" href="#">Operations</a>
+
+                <div class="menu-style" style=""></div>
+				<ul class="dropdown-menu" role="menu">
+
+					<li data-submenu-id="submenu-operations">
+                        <a href="/assets/dsny/about/operations.shtml">Operations</a>
+                        <div id="submenu-operations" class="popover"></div>
+                    </li>
+					
+                   <li data-submenu-id="submenu-operations-equipment">
+                        <a href="/assets/dsny/about/operations/equipment.shtml">Equipment</a>
+                        <div id="submenu-operations-equipment" class="popover"></div>
+                    </li>
+
+
+                    <li data-submenu-id="submenu-operations-garages">
+                        <!--<a href="/assets/dsny/about/operations/garages.shtml">Garages</a>-->
+						<a href="javascript:undefined" style="cursor:default;text-decoration:none">Garages</a>
+
+                        <div id="submenu-operations-garages" class="popover">
+                            <h3 class="popover-title">Garages</h3>
+                            <div class="popover-content content-two-col">
+                                <table>
+                                    <tr>
+                                        <td><a href="/assets/dsny/about/operations/garages.shtml">Garages</a></td>
+                                        <td><a href="/assets/dsny/about/operations/manhattan-district-4-4a-and-7-garage.shtml">Manhattan District 4 &amp; 7 Garage</a></td>
+                                    </tr>
+									<tr>
+                                        <td><a href="/assets/dsny/about/operations/garage-locations.shtml">Garage Locations</a></td>
+                                        <td><a href="/assets/dsny/about/operations/spring-street-salt-shed.shtml">Manhattan Spring Street Salt</a></td>
+                                    </tr>
+                                    <tr>
+										<td><a href="/assets/dsny/about/operations/planned-garages.shtml">Planned Garages</a></td>
+                                        <td><a href="/assets/dsny/about/operations/queens-east-district-14-garage-and-salt-shed.shtml">Queens District 14 Garage and Salt Shed</a></td>                                        
+                                    </tr>
+                                    <tr>
+										<td><a href="/assets/dsny/about/operations/brooklyn-districts-1-and-4-garage-and-borough-offices.shtml">Brooklyn District 1 &amp; 4 Garage</a></td>                                       
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-submenu-id="submenu-operations-fleet">
+                <a href="/assets/dsny/about/operations/sustainable-fleet-operations.shtml">Sustainable Fleet Operations</a>
+                <div id="submenu-operations-fleet" class="popover"></div>
+
+            </li>
+                   
+                   <li data-submenu-id="submenu-operations-building">
+                    <a href="/assets/dsny/about/operations/sustainable-building-operations.shtml">Sustainable Building Operations</a>
+                    <div id="submenu-operations-building" class="popover"></div>
+            </li>       
+              
+            </ul>
+          
+	</li>
+	</ul>
+	</div>
+
+
+
+
+          <div class="menu-bar"></div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447993
+							]
+						--></div>

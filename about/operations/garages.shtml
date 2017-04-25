@@ -1,0 +1,22 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Garages </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml"-->
+
+<div id="contentsection" class="about-main-image">
+<div class="span6 about-description">
+
+<h1>Garages</h1>
+<p>Essential to DSNY operations are the DSNY garages. Located in community districts all over the city, DSNY garages store equipment and vehicles and house DSNY personnel.</p>
+<p><a href="/assets/dsny/about/operations/garage-locations.shtml">Garage Locations</a><br />
+	<a href="/assets/dsny/about/operations/planned-garages.shtml">Planned Garages</a>
+	</p>
+<p>Several of the most recently built garages have received design awards:</p>
+	<p><a href="/assets/dsny/about/operations/brooklyn-districts-1-and-4-garage-and-borough-offices.shtml">Brooklyn District 1 and 4 Garage</a><br />
+		<a href="/assets/dsny/about/operations/manhattan-district-4-4a-and-7-garage.shtml">Manhattan District 4 and 7 Garage</a><br />
+		<a href="/assets/dsny/about/operations/spring-street-salt-shed.shtml">Manhattan Spring Street Salt</a><br />
+		<a href="/assets/dsny/about/operations/queens-east-district-14-garage-and-salt-shed.shtml">Queens District 14 Garage and Salt Shed</a>
+	</p>
+</div>
+		 </div>
+		 
+<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

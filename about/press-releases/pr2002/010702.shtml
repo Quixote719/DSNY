@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Regular Scheduled Garbage and Recycling Collection on Martin Luther King, Jr. Day, Monday, January 21, 2002</h3>
+<div class="prs-subtitle">
+<p><strong>January 7, 2002</strong> | <em>Kathy Dawkins / Al Ferguson (646) 885-5020</em></p>
+<p>Press Release # 02-03, FOR IMMEDIATE RELEASE</p>
+</div>
+<span class="bodytext">
+</span><p style="MARGIN-top: 0in">The New York City Department of Sanitation has announced that, on Martin Luther King, Jr. Day, there <i><b>will be</b></i> garbage and recycling collection on Monday, January&nbsp;21, 2002.</p>
+<p>However, there <b><i>will be no</i></b> street cleaning on Monday, January 21, 2002.</p>
+<p><strong>The Department&rsquo;s administrative offices will be closed on Monday, January&nbsp;21, 2002 in observance of the holiday. For questions regarding Sanitation services and schedules, contact the Sanitation Action Center at (212)&nbsp;219-8090 or visit our web site at</strong> <a href="http://www1.nyc.gov/site/dsny/index.page"><strong>www.nyc.gov/sanitation</strong></a><strong>.</strong></p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

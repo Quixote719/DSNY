@@ -1,0 +1,93 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - School Recycling Materials </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+		<h1>School Recycling Materials</h1>
+		<p>The NYC Department of Sanitation has created materials to assist and encourage NYC residents, agencies, and institutions to recycle, compost, and prevent waste.</p>
+		<p>The links below open pdfs of the current materials available for download, or order these free materials online <a href="/assets/dsny/contact/services/recycling-and-waste-prevention-material-request.shtml ">Recycling &amp; Waste Prevention Material Request</a></p>
+		<p><i>NOTE: These links open PDF (Portable Document Format) documents; you'll need the free <a href="http://www.adobe.com/products/acrobat/readstep2.html" title="Adobe Acrobat Reader">Adobe Acrobat Reader</a> to display and print them.</i></p>
+		<h2>Schools &ndash; Educational</h2>
+		<p><i>(These materials are for schools ONLY)</i><b> </b></p>
+		<ul>
+			<li><a href="/assets/dsny/about/inside-dsny/nycs-recycling-curriculum.shtml">NYC K-12 School RRResource Guide</a>: (320 pages in 1" binder) Includes reduce, reuse &amp; recycling activities and lesson plans that meet current education standards. </li>
+			<li><a href="/assets/dsny/docs/dsny-recycling-coloring-book-06400-f.pdf" title="dsny coloring book">DSNY Coloring Book</a>: For Pre-K to Grade 1 (pre-literate). </li>
+			<li><a href="/assets/dsny/docs/dsny-comic1-grades-2-3.pdf" title="dsny comic book #1 grades 2-3">DSNY Comic Book, Grades 2-3</a>: For Grades 2 to 3 (emergent readers). </li>
+			<li><a href="/assets/dsny/docs/dsny-comic2-grades-4-6.pdf" title="dsny comic book #2 grades 4-6" >DSNY Comic Book, Grades 4-6</a>: For Grades 4 to 6 (fluent readers).</li>
+		</ul>
+		<h2>Recycling Info</h2> 
+		<ul>
+			<li><a href="/assets/dsny/docs/zero-waste-schools-guide-zwsg.pdf">NYC Schools Guide to Zero Waste</a>: (28 pages) Comprehensive guide to proper recycling and organics setup, and other resources for schools. Intended for school custodians, administrators, teachers, and Green Teams.</li>
+			<li><a href="/assets/dsny/docs/zero-waste-schools-guide-zwsg-accessible.pdf">NYC Schools Guide to Zero Waste: accessible PDF</a></li>
+			<li><a href="/assets/dsny/docs/how-to-recycle-removable-sticker-clsc-f.pdf">How To Recycle removable sticker</a>: Shows what to recycle. Appropriate to distribute to all staff, students, and parents. </li>
+			<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-spanish-06352-f.pdf">How To Recycle flyer (English/Spanish)</a>: Shows what to recycle. English/Spanish. Appropriate to distribute to all staff, students, and parents.</li>
+			<li><a href="/assets/dsny/docs/how-to-recycle-flyer-english-chinese-06359-f.pdf">How To Recycle flyer (English/Chinese)</a>: Shows what to recycle. English/Chinese. Appropriate to distribute to all staff, students, and parents. </li>
+			<li><a href="/assets/dsny/docs/bookmark-nyc-zerowaste-zwbm-f.pdf">Bookmark - Zero Waste</a>: What to recycle info and website links. Appropriate to distribute to all staff, students, and parents. </li>
+		</ul>
+		<h2>Recycling Decals</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/blue-indoor-decal-06200-f.pdf">Blue Indoor Decal</a>: To label indoor recycling containers for metal, glass, plastic &amp; cartons. </li>
+			<li><a href="/assets/dsny/docs/metal-glass-plastic-cartons-text-decals-tdmgpw-f.pdf">"Metal, Glass, Plastic &amp; Cartons" Text Decal</a>: (14" x 1.25") To label indoor recycling container lids. </li>
+			<li><a href="/assets/dsny/docs/green-indoor-decal-06201-f.pdf">Green Indoor Decal</a>: To label indoor recycling containers for mixed paper &amp; cardboard. </li>
+			<li><a href="/assets/dsny/docs/green-decal-outdoor-08804-f.pdf">Green Outdoor Decal</a>: To label outdoor paper recycling containers or dumpsters for mixed paper &amp; cardboard. </li>
+			<li><a href="/assets/dsny/docs/mixed-paper-text-decal-tdmpw-f.pdf">"Mixed Paper" Text Decal</a>: (14" x 1.25") To label indoor recycling container lids. </li>
+			<li><a href="/assets/dsny/docs/trash-only-text-decal-tdtob-f.pdf">"Trash Only" Text Decal</a>: (14" x 3") To label lids or sides of indoor trash containers. </li>
+			<li><a href="/assets/dsny/docs/recycling-area-decal-08801-f.pdf">Recycling Area Decal</a>: To designate an area inside or outside the building where recyclables are stored. </li>
+		</ul>
+		<h2>Recycling Signage</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/metal-glass-plastic-and-cartons-recycling-bin-sign-english-chinese-06380c-f.pdf">Metal, Glass, Plastic &amp; Cartons Recycling Bin Sign (English/Chinese)</a>: Post over indoor recycling bin for metal, glass, plastic &amp; cartons. English/Chinese. </li>
+			<li><a href="/assets/dsny/docs/metal-glass-plastic-and-cartons-recycling-bin-sign-english-spanish-06380-f.pdf">Metal, Glass, Plastic &amp; Cartons Recycling Bin Sign (English/Spanish)</a>: Post over indoor recycling bin for metal, glass, plastic &amp; cartons. English/Spanish. </li>
+			<li><a href="/assets/dsny/docs/paper-recycling-bin-sign-english-chinese-06360C-f.pdf">Paper Recycling Bin Sign (English/Chinese)</a>: Post over indoor recycling bin for mixed paper &amp; cardboard. English/Chinese. </li>
+			<li><a href="/assets/dsny/docs/paper-recycling-bin-sign-english-spanish-06360-f.pdf">Paper Recycling Bin Sign (English/Spanish)</a>: Post over indoor recycling bins for mixed paper &amp; cardboard. English/Spanish. </li>
+		</ul>
+		<h2>Schools &ndash; Waste Sorting Station Posters</h2>
+		<p><i>(These materials are for schools ONLY)</i></p>
+		<ul>
+			<li><a href="/assets/dsny/docs/about_metal-glass-plastic-cartons-poster-large-k-apb_0815.pdf">Metal, Glass, Plastic &amp; Cartons Poster - Large</a>: Laminated (18" x 24") Hang above recycling bins for MGPC in the cafeteria or common areas. </li>
+			<li><a href="/assets/dsny/docs/about_metal-glass-plastic-cartons-poster-small-k-pb_0815.pdf">Metal, Glass, Plastic &amp; Cartons Poster - Small</a>: (11" x 17") Shows items found in schools and agencies. </li>
+			<li><a href="/assets/dsny/docs/about_paper-recycling-poster-large-k-apg_0815.pdf">Paper Recycling Poster - Large</a>: Laminated (18" x 24") Hang above large paper recycling bins in common areas. </li>
+			<li><a href="/assets/dsny/docs/about_paper-recycling-poster-small-k-pg_0815.pdf">Paper Recycling Poster - Small</a>: (11" x 17") Hang above paper recycling bins in common areas. </li>
+			<li><a href="/assets/dsny/docs/about_trash-landfill-poster-large-k-aptl_0815.pdf">Trash Landfill Poster - Large</a>: Laminated (18" x 24") Hang above each garbage bin in cafeteria and common areas. <i>Not for cafeterias with NYC Organics Collection. <br /></i></li>
+			<li><a href="/assets/dsny/docs/about_trash-landfill-poster-small-k-ptl_0815.pdf">Trash Landfill Poster - Small</a>: (11" x 17") Hang above each garbage bin in cafeteria and common areas. <i>Not for cafeterias with NYC Organics Collection.<br /></i></li>
+			<li><a href="/assets/dsny/docs/about_liquids-poster-large-k-aplq_0815.pdf">Liquids Poster - Large</a>: Laminated (18" x 24") Hang above liquids collection bucket in the cafeteria. </li>
+			<li><a href="/assets/dsny/docs/about_liquids-poster-small-k-plq_0815.pdf">Liquids Poster - Small</a>: (11" x 17") Hang above liquids collection bucket in the cafeteria. </li>
+			
+		</ul>
+		<h2>Schools &ndash; Organics Cafeteria Posters</h2>
+		<p><i>(These materials are ONLY for schools with NYC Organics Collection)</i></p>
+		<ul>
+			<li><a href="/assets/dsny/docs/about_food-scraps-poster-large-ocp-k-apf_0815.pdf">Food Scraps Poster &ndash; Large</a>: Laminated (18" x 24") Hang above each brown organics bin. <i>Only for schools with NYC Organics Collection.<br /></i></li>
+			<li><a href="/assets/dsny/docs/about_food-scraps-poster-small-ocp-k-pf_0815.pdf">Food Scraps Poster - Small</a>: (11" x 17") Hang above brown organics bin. <i>Only for schools with NYC Organics Collection.<br /></i></li>
+			<li><a href="/assets/dsny/docs/about_food-bin-decal-ocp-k-fbdf_0815.pdf">Food Bin Decal</a>: (12" x 6") <i>Only for schools with NYC Organics Collection.</i> Order two for each food waste bin in the kitchen and cafeteria. &nbsp;</li>
+			<li><a href="/assets/dsny/docs/about_food-scraps-text-decal-ocp-k-fbtf_0815.pdf">"Food Scraps" Text Decal</a>: (14" x 1.25") <i>Only for schools with NYC Organics Collection. </i>Use on the front of brown organics bins to identify where to discard food scraps. </li>
+			<li><a href="/assets/dsny/docs/about_trash-landfill-poster-organics-program-large-ocp-k-apg_0815.pdf">Trash Landfill Poster, Organics Program - Large</a>: Laminated (18" x 24") Hang above each garbage bin in the cafeteria. <i>Only for schools with NYC Organics Collection.<br /></i></li>
+			<li><a href="/assets/dsny/docs/about_trash-landfill-poster-organics-program-small-ocp-k-pg_0815.pdf">Trash Landfill Poster, Organics Program - Small</a>: (11" x 17") Hang above each garbage bin in the cafeteria. <i>Only for schools with NYC Organics Collection.</i></li>
+		</ul>
+		<h2>Composting</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/nyc-cp-brochure-cp-broch.pdf">Compost Project Brochure</a>: Explains the various programs of the NYC Compost Project. </li>
+			<li><a href="/assets/dsny/docs/outdoor-composting-guide-06339-f.pdf" title="Outdoor Composting Guide" >Outdoor Composting Guide</a>: Describes how to compost food &amp; yard waste on-assets, using outdoor composting bins. </li>
+			<li><a href="/assets/dsny/docs/indoor-worm-bin-composting-brochure-06340-f.pdf" title="Indoor Worm Bin Composting Brochure">Indoor Worm Bin Composting Brochure</a>: Describes how to compost food &amp; yard waste on site, using indoor worm composting bins. </li>
+		</ul>
+		<p>
+		<h3>Tip Sheets</h3>
+		<ul>
+			<li><a href="/assets/dsny/docs/tip-sheet-compost-made-easy-cpts-spez-f.pdf">Compost Made Easy (English/Spanish)</a></li>
+			<li><a href="/assets/dsny/docs/tip-sheet-decomposer-id-cpts-id-f.pdf">Decomposers in a Compost Pile</a></li>
+			<li><a href="/assets/dsny/docs/tip-sheet-how-to-use-compost-cpts-htuc-f.pdf">How To Use Compost</a></li>
+			<li><a href="/assets/dsny/docs/tip-sheet-using-mulch-cptsmulchf.pdf">Using Mulch</a></li>
+			<li><a href="/assets/dsny/docs/tip-sheet-what-to-composttroubleshoot-cptscmpstf.pdf">What To Compost</a></li>
+			<li><a href="/assets/dsny/docs/tip-sheet-worm-bin-troubleshooting-cpts-worm-f.pdf">Worm Bin Troubleshooting Guide</a></li>
+		</ul>
+
+		<h2>Reuse - Donate</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/donatenyc-brochure-dnbro-f.pdf">donateNYC brochure</a></li>
+		</ul>
+	</div>
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,61 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - General Sanitation Materials </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1> General Sanitation Materials </h1>
+
+
+		<p>
+			The links below open pdfs of the current materials available for download, or order these free materials online: <a href="/assets/dsny/contact/services/other-sanitation-materials-request.shtml">Other Sanitation Materials Request</a>
+		</p>
+		<p>
+			<i>NOTE: These links open PDF (Portable Document Format) documents; you'll need the free <a title="Adobe Acrobat Reader" href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Acrobat Reader</a> to display and print them.</i>
+		</p>
+		<h2>Programs</h2>
+		<ul>
+			<li>Snow Operations FAQs <a href="/assets/dsny/docs/snow-faq-10.16.pdf">English </a> / <a href="/assets/dsny/docs/about_ChineseSnowFAQ_0815.pdf">Chinese</a></li>
+
+			<li><a href="/assets/dsny/docs/adopt-a-basket-flyer-abf-f.pdf">Adopt-A-Basket Flyer</a></li>
+			<li><a href="/assets/dsny/docs/about_illegal-dumping-award-program_0815.pdf">Illegal Dumping Affidavit</a></li>
+			<li><a href="/assets/dsny/docs/about_illegal-dumping-tip-program_0815.pdf">Illegal Dumping Tips Form</a></li>
+			<li><a href="/assets/dsny/docs/about_DSNY-volunteer-graffiti-removal-program_0815.pdf">Volunteer Graffiti Removal Paint Program Application</a></li>
+			<li><a href="/assets/dsny/docs/about_theft-of-recycling-award-program-instructions-and-form_0815.pdf">Theft of Recycling Award Program</a></li>
+			<li><a href="/assets/dsny/docs/adopt-a-basket-flyer-spanish-abf-s-f.pdf">Adoptar-Una-Canasta</a> (Adopt-A-Basket Flyer – Spanish)</li>
+			<li><a href="/assets/dsny/docs/adopt-a-basket-flyer-chinese-abf-c-f.pdf">領養一個垃圾箱</a> (Adopt-A-Basket Flyer - Chinese)</li>
+			<li><a href="/assets/dsny/docs/adopt-a-basket-flyer-korean-abf-k-f.pdf">쓰레기통을 담당하세요</a> (Adopt-A-Basket Flyer – Korean)</li>
+		</ul>
+		<h2>Regulations</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/about_DSNY-rules-and-regulations_0815.pdf">A Summary of Rules & Regulations</a> </li>
+			<li><a href="/assets/dsny/docs/about_snow-removal-responsibilities_0815.pdf">Snow Removal: Your Responsibility</a> </li>
+			<li><a href="/assets/dsny/docs/about_litter-baskets-proper-use_0815.pdf">"Litter Baskets… Please Don't Misuse Them" Flyer</a> </li>
+		</ul>
+		<h2>Residential Flyers</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/about_support-cleaner-neighborhood_0815.pdf">Resident Clean Community Flyer</a> </li>
+			<li><a href="/assets/dsny/docs/about_bulk-collection_0815.pdf">Bulk Collection Flyer</a> </li>
+			<li>Dog Owner Flyer <a href="/assets/dsny/docs/about_dog-owner-clean-community-tips-english_0815.pdf">English</a> / <a href="/assets/dsny/docs/about_dog-owner-clean-community-tips-spanish_0815.pdf">Spanish</a> </li>
+			<li><a href="/assets/dsny/docs/about_stop-bed-bugs_0815.pdf">Mattress Disposal Information - Stop Bed Bugs</a></li>
+		</ul>
+		<h2>Business Flyers</h2>
+		<ul>
+			<li><a href="/assets/dsny/docs/avoiding-common-sanitation-violations-acsv-f.pdf">Avoiding Common Sanitation Violations</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-bengali-acsv-b.pdf">ব্যবসা প্রতিষ্ঠানের ক্ষেত্রে: পরিষ্কার-পরিচ্ছন্নতা সংক্রান্ত আইনের লঙ্ঘন এড়িয়ে চলা - বাংলা (Bengali)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-chinese-acsv-c.pdf">商家：避免常见的清洁违规——中文 (Chinese)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-french-creole-acsv-fc.pdf">Biznis: Evite Vyolasyon Sanitasyon Komen yo – Kreyòl Ayisyen (Haitian-Creole)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-korean-acsv-k.pdf">영업점: 일반 공중 위생 위반 행위 방지 – 한국어 (Korean)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-russian-acsv-r.pdf">Предпринимателям: Предотвращение распространенных нарушений санитарно-гигиенических требований – Русский (Russian)</a><br/>
+				<a href="/assets/dsny/docs/avoiding-common-sanitation-violations-spanish-acsv-s.pdf">Empresas: Cómo evitar las infracciones a la sanidad más comúnes – Español (Spanish)</a>
+			</li>
+			<li><a href="/assets/dsny/docs/about_clean-community-campaign_0815.pdf">Merchant Clean Community Flyer</a> </li>
+			<li><a href="/assets/dsny/docs/about_application-for-waste-collection-and-disposal-service-for-professionals_0815.pdf">Professional Fee for Service Flyer</a> </li>
+		</ul>
+
+	</div>
+</div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,18 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Community Composting Report, 2014 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+	<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+				
+<h1>Community Composting Report, 2014</h1>
+	<p style="margin-top:10px">In 2013, New York City Council passed Local Law 77, which requires the DSNY Commissioner to establish a voluntary curbside collection pilot for residential organic waste and a school organic waste collection pilot. 
+		As part of Local Law 77, the DSNY Commissioner is required to conduct a study on how to improve community composting in NYC and submit the fi&not;ndings to the Mayor and the Council.</p>
+	<p><strong>2014 NYC Community Composting Report</strong> lists recommendations for how the City could further optimize the use of existing compost sites and resources, as well as expand community composting locations in each of the &not;five boroughs.</p>
+	
+	<p><a href="/assets/dsny/docs/about_2014-community-composting-report-LL77_0815.pdf">Read the report</a></p>
+  </div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

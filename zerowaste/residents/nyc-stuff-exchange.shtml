@@ -1,0 +1,25 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - NYC Stuff Exchange </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/donate_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>NYC Stuff Exchange</h1>
+<p>The <a href="http://www.nyc.gov/html/stuffex/html/home/home.shtml">NYC Stuff Exchange</a>, developed by DSNY, offers a quick and simple online tool to find out where to donate, buy, or sell gently used goods in NYC.</p>
+<div> 
+    <ul>
+        <li>Hundreds of listings, searchable by zip code, borough, or citywide.</li>
+        <li> Nonprofits promote upcoming donation drives, swaps, book drives, and rummage sales through the <a href="http://www.nyc.gov/html/stuffex/html/calendar/calendar.shtml">Calendar of Events.</a> </li>
+        <li> <a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-mixed-establishments.shtml"> Mixed Establishments:</a>Non-food businesses (offices, stores, supermarkets) with a kitchen, cafeteria or dining/drinking area </li>
+         <li> <a href="http://www.nyc.gov/html/stuffex/html/get_listed/get_listed.shtml"> Get listed</a> explains how to request a free listing or submit an event to the calendar. </li>
+    </ul>
+</div>
+
+
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

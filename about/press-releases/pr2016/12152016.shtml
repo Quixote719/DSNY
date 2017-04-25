@@ -1,0 +1,44 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	
+		<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #16-67<br />
+  Thursday, December 15, 2016 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>	
+  
+<p> <strong> DSNY Issues ‘Snow Alert’ for Saturday, December 17 at 12:01 a.m. to Prepare Equipment and Personnel for Winter Weather</strong></p>
+
+<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Saturday, December 17 at 12:01 a.m. 
+A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt 
+spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.  </p>
+
+<p>DSNY coordinates with the Office of Emergency Management and the Department of Transportation on snow clearing protocol in 
+accordance with each agency’s written snow plan. All relevant city agencies have been notified of the snow alert. DSNY will 
+continue to monitor forecasts and will provide updates as the snow event approaches. </p>
+
+<p>All winter weather information and information about the City’s response to the storm can be found by visiting the City’s 
+Severe Weather website at <a href="http://www1.nyc.gov/site/severeweather/index.page"> www.nyc.gov/severeweather</a> or by calling 311. New Yorkers are also encouraged to sign up for the 
+Notify NYC, the City’s free emergency notification system. Through Notify NYC, New Yorkers can sign up to receive phone 
+calls, text messages, and emails alerts about severe weather events and emergencies. </p>
+
+<p>To sign up for Notify NYC, call 311, visit <a href="http://nyc.gov"> www.nyc.gov </a> or follow @NotifyNYC on <a href="https://twitter.com/notifynyc"> Twitter</a>.</p>
+
+<p>The DSNY Snow 101 FAQ is available <a href="http://www1.nyc.gov/assets/dsny/docs/about_snow-faq_0815.pdf"> online</a>.</p>
+
+
+<p><strong> About the New York City Department of Sanitation</strong></p>
+<p> The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste 
+and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department
+ operates 59 district garages and manages a fleet of more than 2,000 rear-loading collection trucks, 450 mechanical brooms 
+ and 689 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,500 miles of City streets and
+ removes debris from vacant lots as well as abandoned vehicles from City streets.</p>
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

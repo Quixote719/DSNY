@@ -1,0 +1,22 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Eyeglasses  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Eyeglasses</h1>
+
+<b>Garbage: </b>Discard with regular trash on pickup day.<br /><br />
+<h2>Donations &amp; Reuse</h2>
+Donate or sell used eyeglasses that are in working condition. These organizations accept donations; check their websites for details: 
+<ul>
+<li><a href="http://www.lionsclubs.org/EN/member-center/planning-projects/sight-hearing/sight/eyeglass-recycling/recycling-centers/index.php" title="Lions Club/Recycle For Sight">Lions Club/Recycle For Sight</a></li>
+<li><a href="http://www.new-eyes.org/recycle/" title="New Eyes for the Needy">New Eyes for the Needy</a></li>
+</ul>
+You can also donate prescription eyeglasses at collection boxes located at LensCrafters, Goodwill stores, or members of the American Optometric Association.
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

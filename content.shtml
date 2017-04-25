@@ -1,0 +1,38 @@
+<!--#include virtual="htmlheadsection.html" -->
+<!--#include virtual="mobilenavigation.html" -->
+<!--#include virtual="level1menu.html" -->
+<!--#include virtual="aboutmegamenu.html" -->
+<!--#include virtual="breadcrumb.html" -->
+<!--#include virtual="bureausandunits_leftnav.shtml" -->
+
+		<div class="span9 about-main-image">
+
+				<div class="span6 about-description"><h2 id="InsideDSNY-InsideDSNY">Bureaus &amp; Units</h2>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/residents.page" target="_blank">Residents</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/schools.page" target="_blank">Schools</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/nonprofits-and-agencies.page" target="_blank">Nonprofits & Agencies</a></p>
+                                                                <p><a href="http://www1.nyc.gov/site/dsny/recycling-and-garbage/businesses.page" target="_blank">Businesses</a></p>
+
+				<p>The Department of Sanitation (DSNY) promotes a healthy NYC environment through efficient management of the City&rsquo;s solid waste, and environmentally sound long-range planning for handling the City&rsquo;s recycling and garbage.</p>
+				<p>DSNY is the world&rsquo;s largest sanitation department, collecting more than 10,500 tons of residential and institutional garbage and 1,760 tons of recyclables every day. NYC businesses generate another 13,000 tons of garbage daily, which is collected by private carting companies.</p>
+				<p>DSNY also clears litter, snow, and ice from some 6,000 miles of streets; removes debris from vacant lots; and clears abandoned vehicles from City streets.</p>
+				<p>To meet the challenge of keeping NYC clean, DSNY serves the City out of 59 districts, with resources that include:</p>
+				<ul>
+				<li>7,197 uniformed sanitation workers and supervisors</li>
+				<li>2,048 civilian workers</li>
+				<li>2,230 collection trucks</li>
+				<li>450 mechanical street sweepers</li>
+				<li>275 specialized collection trucks</li>
+				<li>365 salt/sand spreaders</li>
+				<li>298 front end loaders, and</li>
+				<li>2,360 various other support vehicles</li>
+				</ul>
+				<p>See a list of <a href="/assets/dsny/downloads/pdf/operations/dsny_garage_locations.pdf" target="_blank">DSNY garages.</a></p>
+				<p>Under the current leadership of DSNY Commissioner Kathryn Garcia, NYC streets are cleaner today than they have been in more than 35 years.</p>
+
+
+
+				<div data-mce-bogus="1" id="_mcePaste" style="left: -40px; top: -25px; width: 1px; height: 1px; overflow: hidden; position: absolute;" class="mcePaste"></div></div>
+		 </div>
+		 
+ <!--#include virtual="footer.html" -->

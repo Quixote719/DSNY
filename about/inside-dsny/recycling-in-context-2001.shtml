@@ -1,0 +1,22 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Recycling In Context, 2001 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+	<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1>Recycling in Context, 2001</h1>
+	<p>The 2001 report, <strong>New York City Recycling in Context</strong>, examines the success of NYC&rsquo;s mandatory recycling program, which led to an all-time high recycling rate of 20% in the year 2000.</p>
+	<p>DSNY made recycling commonplace by providing New York City with full and frequent recycling service and educating residents on the importance of recycling. 
+		<strong>New York City Recycling in Context</strong> 
+		evaluates the City&rsquo;s progress in the context of other U.S. cities and takes into account factors in NYC such as the predominance of apartment buildings and the lack of yards. 
+		The report employs the various measures and calculations used by other cities to create a uniform field of examination. 
+		When compared by this method, NYC&rsquo;s recycling rates are ahead of, or on par with, other cities throughout the country.</p>
+	<p><a href="/assets/dsny/docs/about_2001-recycling-in-context_0815.pdf">Read the report </a>
+		
+	</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

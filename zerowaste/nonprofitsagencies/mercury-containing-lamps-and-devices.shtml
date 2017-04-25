@@ -1,0 +1,29 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Mercury Containing Lamps and Devices</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>Mercury-Containing Lamps &amp; Devices</h1>
+
+<p>Lamps and other mercury-containing devices are hazardous to the environment if not discarded properly. It is illegal to include these products with regular garbage.</p>
+<p>Mercury-containing devices include:</p>
+<ul>
+<li>Barometers</li>
+<li>Electric switches and relays</li>
+<li>Lamps (including linear tubes; U-shaped tubes; circular tubes; compact fluorescent lamps, or CFLs; high intensity discharge, or HID, lamps such as mercury vapor, high-pressure sodium, and metal halide)</li>
+<li>Manometers</li>
+<li>Marine float switches</li>
+<li>Thermometers</li>
+<li>Thermostats</li>
+</ul>
+<p>Digital thermometers and thermostats do not contain mercury and can go in the regular garbage.</p>
+<p>NYC mayoral agencies should use the <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-disposal.shtml">Agency Safe Handling contract</a> to properly disposal of fluorescent lamps.</p>
+<p>Non-mayoral agencies and nonprofits should hire a third party recycler. The Agency Safe Handling vendor may honor contract pricing for non-mayoral agencies and nonprofits.</p>
+<p>The National Electrical Manufacturers Association (NEMA) provides <a href="http://www.lamprecycle.org">information on recycling fluorescent lighting and a database of lighting recyclers</a>.</p>
+<p>Vendors may offer either collection services or pre-paid containers for returning products for recycling.</p>
+
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

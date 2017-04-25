@@ -1,0 +1,22 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Coloring and Comic Book Materials </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+		<h1> Coloring and Comic Books </h1>
+		
+		<p>DSNY teamed up with Marvel Comics to create grade-specific literacy components supporting the lesson plans in the K-12 <a href="/assets/dsny/about/inside-dsny/nycs-recycling-curriculum.shtml">NYC Schools <i>RRResource Guide: RRR You Ready?</i></a>.</p>
+		<p><b>Pre-K to Grade 1 (pre-literate):</b></p>
+		<p><a href="/assets/dsny/docs/dsny-recycling-coloring-book-06400-f.pdf" title="dsny coloring book">DSNY Coloring Book (PDF)</a></p>
+		<p><b>Grades 2 and 3 (emergent readers):</b></p>
+		<p><a href="/assets/dsny/docs/dsny-comic1-grades-2-3.pdf" title="dsny comic book #1 grades 2-3">DSNY Comic Book #1 (PDF)</a></p>
+		<p><b>Grades 4 to 6 (fluent readers):</b></p>
+		<p><a href="/assets/dsny/docs/dsny-comic2-grades-4-6.pdf" title="dsny comic book #2 grades 4-6">DSNY Comic Book #2 (PDF)</a></p>
+
+	</div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

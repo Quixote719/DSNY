@@ -1,0 +1,37 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Collection Schedule for Nonprofits and Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycle_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>Collection Schedule for Nonprofits &amp; Agencies</h1>
+
+
+<p><span>Set out all garbage and recycling after 4 pm on the night before the scheduled collection day. Remove empty bins by 9 pm on the collection day, or by 9 am the following morning if collection occurs after 4 pm.</span></p>
+<p><a href="/assets/dsny/collectionandcleaning/collection.shtml">Check your collection schedule</a>.</p>
+<p>During <a href="/assets/dsny/snow/snow.shtml">snow operations</a>, recycling and garbage collection may be disrupted while DSNY plows and cleans the streets.</p>
+<h2><span>Holidays &amp; Holiday Setout </span></h2>
+<p><span>There are no collections on these holidays:</span></p>
+<ul>
+<li><span>New Year&rsquo;s Day</span></li>
+<li><span>Martin Luther King Day </span></li>
+<li><span>Lincoln&rsquo;s Birthday </span></li>
+<li><span>President's Day </span></li>
+<li><span>Memorial Day </span></li>
+<li><span>Independence Day </span></li>
+<li><span>Labor Day </span></li>
+<li><span>Columbus Day </span></li>
+<li><span>Election Day </span></li>
+<li><span>Veteran&rsquo;s Day</span></li>
+<li><span>Thanksgiving Day</span></li>
+<li><span>Christmas Day</span></li>
+</ul>
+<p><span>Here&rsquo;s when to set out garbage and recycling on holidays: </span></p>
+<p><b><span>Garbage: </span></b><span>Set out after 4 pm on the evening of the holiday, for collection beginning the next day. Collection may occur earlier or later than the usual time.</span></p>
+<p><b><span>Recycling: </span></b><span>Hold until the scheduled collection day the following week. When there are back-to-back holidays (for example, two Monday holidays in a row), recyclables will typically be collected the day after the second holiday.</span></p>
+<p><b><span>Organics (only for buildings with NYC Organics Collection):</span></b><span> </span><span>Set out food scraps, food-soiled paper, and yard waste after 4 pm on the evening of the holiday, for collection beginning the next day. Collection may occur earlier or later than the usual time.</span><span></span></p>
+
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

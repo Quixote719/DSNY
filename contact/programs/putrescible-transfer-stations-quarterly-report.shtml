@@ -1,0 +1,24 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+<title>DSNY - Contact - Putrescible Transfer Stations Report </title>
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h1>Putrescible Transfer Stations Quarterly Report</h1>
+<p>Local Law 40 of 1990 requires that each operator of a solid waste transfer station complete a Private Transfer Station Solid Waste/Recycling Quarterly Report.</p>
+<p>The report provides information relating to the quantity and type of material received at your facility, as well as the landfills and recycling vendors where materials are delivered.</p>
+<p><a href="/assets/dsny/downloads/pdf/contact/putrescible-transfer-stations-quarterly-report.pdf">Putrescible-Private Transfer Stations Solid Waste/Recycling Quarterly Report</a></p>
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

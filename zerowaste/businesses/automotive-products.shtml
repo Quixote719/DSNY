@@ -1,0 +1,93 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Auto Products</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Automotive Products </h1>
+
+
+
+<p>
+	Motor oil, batteries, filters, and solvents must be recycled or disposed of safely; they cannot be discarded with regular garbage. 
+</p>
+<h2>
+	Motor Oil &amp; Batteries Take-Back
+</h2>
+<p>
+	Retailers that sell oil and service stations that change oil must accept up to five gallons of used oil per day, per person, for free. Places that sell batteries are required to take back used batteries at no charge.
+</p>
+<p>
+	For more information, or if you encounter problems trying to return these items, contact the <a href="http://www.dec.ny.gov/"  class="exitlink">New York State Department of Environmental Conservation</a>, which enforces the returns of motor oil and batteries. 
+</p>
+<h2>
+	Motor Oil Recyclers 
+</h2>
+<p>
+	The following businesses accept used motor oil; contact them or check their websites for details:
+</p>
+<p>
+	</p><ul>
+		<li><a href="http://www.easternenvironmental.com"  class="exitlink">Eastern Environmental Technologies</a></li>
+		<li><a href="http://www.hazletonoil.com"  class="exitlink">Hazleton Oil &amp; Environmental, Inc.</a></li>
+		<li><a href="http://www.keyenvironmental.com"  class="exitlink">Key Environmental</a></li>
+		<li>Tri-City Waste Oil Corp, P.O. Box 4377, Flushing, NY 11360, (718) 721-5393</li>
+	</ul>
+<p></p>
+<p>
+	DSNY encourages businesses to use recycled motor oil. Re-refined oil brands include Chevron&#39s ECO, Ecoguard, Enviroil, Evergreen, and Firebird. 
+</p>
+<h2>
+	Auto Battery Recyclers
+</h2>
+<p>
+	The following businesses accept used batteries:
+</p>
+<p>
+	</p><ul>
+		<li><a href="http://www.aerc.com"  class="exitlink">AERC Recycling Solutions</a></li>
+		<li><a href="http://www.batteryrecycling.com"  class="exitlink">Battery Solutions, Inc.</a></li>
+		<li><a href="http://www.crsrecycle.com"  class="exitlink">Complete Recycling Solutions, LLC</a></li>
+		<li><a href="http://www.easternenvironmental.com"  class="exitlink">Eastern Environmental Technologies</a></li>
+		<li><a href="http://cleanlites.com"  class="exitlink">USA Lamp and Ballast Recycling</a></li>
+		<li><a href="http://www.eco-batteryinc.com"  class="exitlink">Eco-Battery, Inc.</a></li>
+	</ul>
+<p></p>
+<h2>
+	Tire Retreaders
+</h2>
+<p>
+	Retreading bonds new tread to the existing body of a tire using a process very similar to the manufacture of a new tire. The <a href="http://www.retread.org/guide/index.cfm/s/1/state/ny/text/new20york.htm"  class="exitlink">Tire Retread &amp; Repair Information Bureau</a> maintains a database of retread retailers.
+</p>
+<h2>
+	Solvent Disposal &amp; Recycling
+</h2>
+<p>
+	These businesses accept used solvent for recycling, or sell solvent-recycling equipment; check their websites or contact them for details:
+</p>
+<p>
+	</p><ul>
+		<li><a href="http://www.cbgtechnologies.com"  class="exitlink">CBG Biotech</a></li>
+		<li><a href="http://www.keyenvironmental.com"  class="exitlink">Key Environmental</a></li>
+		<li>Production Supply &amp; Equipment, 20 West Prospect Street, P.O. Box 36, Waldwick, NJ 07463-0036, (201) 447-3525</li>
+		<li>Tri Star Sales, 23-74 26th Street, Astoria, NY 11105, (718) 932-4310</li>
+		<li><a href="http://www.uniram.com"  class="exitlink">Uniram Corporation</a></li>
+	</ul>
+<p></p>
+<h2>
+	Oil Filter Recyclers
+</h2>
+<p>
+	</p><ul>
+		<li><a href="http://www.easternenvironmental.com"  class="exitlink">Eastern Environmental Technologies</a></li>
+		<li><a href="http://www.keyenvironmental.com"  class="exitlink">Key Environmental</a></li>
+	</ul>
+<p></p>
+
+</div>
+				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

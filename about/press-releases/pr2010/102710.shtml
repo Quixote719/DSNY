@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Election Day, November 2nd</h3>
+<div class="prs-subtitle">
+<p><strong>October 27,2010</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 10-30, FOR IMMEDIATE RELEASE</p>
+</div>
+The New York City Department of Sanitation (DSNY) today reminded New  Yorkers that there will be no garbage or recycling collection, or street  cleaning on Election Day, Tuesday, November 2nd.&nbsp; In addition, all  Sanitation Department administrative offices will be closed on Tuesday, November  2nd in observance of the holiday.
+<p>Residents who normally receive Tuesday garbage collection should place their trash out  at curbside Tuesday after 4 P.M. for pickup.&nbsp; Those receiving  Tuesday recycling collection will not have their recycling picked up until the  following Tuesday, November 9th.&nbsp;</p>
+<p>For questions about Sanitation services and holiday  schedules, contact 311 or visit the DSNY website at  www.nyc.gov/sanitation.</p>
+<p>&nbsp;</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

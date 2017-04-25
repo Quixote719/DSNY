@@ -1,0 +1,26 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div class="prs-subtitle">
+<p><strong>September 6, 2006</strong> | <em>Vito A. Turso / Matthew LiPani(646) 885-5020</em></p>
+<p>Press Release # 06-39, FOR IMMEDIATE RELEASE</p>
+</div>
+<span class="bodytext">
+<table align="center" width="445">
+<tbody>
+<tr>
+<td height="278">
+<p style="MARGIN: 0in 0in 0pt" align="center"><img border="1" align="middle" style="width: 250px; margin: 3px 10px 5px 0px;" src="/assets/dsny/images/content/pages/about/news/damonpr.jpg" alt="Damon Allen" height="124" /></p>
+<p>&nbsp;</p>
+<p>Funeral arrangements have been finalized for hero Sanitation Worker Damon Allen, 32, murdered in Brooklyn early Labor Day morning.&nbsp; Assigned to Sanitation's Brooklyn South District 17, which covers Remsen Village and East Flatbush, Sanitation Worker Allen leaves behind his two daughters, mother, sister and grandparents.<br /> <br /> Sanitation Worker Allen, along with his partner Sanitation Worker Michael Kalinowski, received Gold Medals of Honor from Mayor Michael R. Bloomberg last year for courageously rescuing Emani McCovery, now 5, from a burning building in Canarsie, Brooklyn, on September 14, 2005.&nbsp; Sanitation Worker Allen and his partner caught McCovery after her stepfather dropped the little girl from the second floor balcony into the waiting arms of her rescuers.&nbsp;</p>
+<p align="left">Viewing will be held on Saturday, September 9th at:&nbsp;<br /> Frank R. Bell Funeral Chapel, 536 Sterling Place, Brooklyn<br /> from 11 AM to 3 PM.&nbsp;&nbsp;<br /> &nbsp;<br /> Funeral services will follow on:<br /> Saturday, September 9, 2006 @ 5 PM<br /> at:<br /> Christian Cultural Center<br /> 12020 Flatlands Avenue<br /> Canarsie, Brooklyn</p>
+<p align="center">&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+</span></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

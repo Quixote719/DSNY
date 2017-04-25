@@ -1,0 +1,33 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Electronics for Businesses</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<div id="contentsection" class="about-main-image">
+	<div class="span6 about-description">
+
+<h1>Electronics for Businesses</h1>
+<p>There are several ways for your business to get rid of unwanted electronics, including donating them to a charity that will recycle them, trading them in, or sending them directly to a registered electronic waste recycling facility.</p>
+<p>When choosing a recycling facility, you can check with <a href="http://www.e-stewards.org">e-stewards.org</a> or <a href="http://www.sustainableelectronics.org">sustainableelectronics.org</a> to help ensure that the facility is recycling responsibly.</p>
+<p>Small businesses and nonprofits may be able to dispose of the following types of electronics through a retailer, community organization, or charity program that works with manufacturers to recycle and reuse them:</p>
+<ul>
+<li>Computers</li>
+<li>Televisions and cathode ray tubes</li>
+<li>Small scale servers</li>
+<li>Computer accessories, including monitors, keyboards, mice, fax machines, scanners, and printers</li>
+<li>TVs, VCRs, DVRs, DVD players, and digital converter boxes</li>
+<li>Portable devices, including digital music players, tablets, and e-readers</li>
+<li>Cell phones</li>
+</ul>
+<h2>Recycling Through Manufacturers</h2>
+<p>Small businesses with fewer than 50 full time employees, and non-profits with fewer than 75 employees, are eligible for free and convenient electronics recycling provided by manufacturers. Contact the product manufacturer (the NYS Department of Environmental Conservation maintains a list of <a href="http://www.dec.ny.gov/chemical/82084.html">registered electronic equipment manufacturers</a>), or look into electronics recycling options available to <a href="/assets/dsny/zerowaste/residents/electronics.shtml">NYC residents</a>.</p>
+<p>Although larger businesses and non-profits aren&rsquo;t eligible for these free recycling services, many manufacturers offer similar take-back programs to larger businesses and organizations for a fee.</p>
+<h3>Recycling for Charity</h3>
+<p>Hundred of charities offer free electronics recycling for various causes. <a href="http://www.nyc.gov/stuffexchange">Find donation options at NYC Stuff Exchange</a>.</p>
+<h2>Recycling Facilities</h2>
+<p>The NYS Department of Environmental Conservation maintains a list of <a href="http://www.dec.ny.gov/chemical/73670.html">registered electronic waste recycling facilities</a> (however, there is no requirement that you use an electronics recycling facility located in New York State).</p>
+
+
+				</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

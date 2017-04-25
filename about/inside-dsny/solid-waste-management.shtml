@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Solid Waste Management </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Solid Waste Management</h1>
+
+				<p>The Solid Waste Management Unit is responsible for the disposal of all municipal solid waste and recyclables managed by DSNY, and for long-term waste export programs. The Unit consists of Solid Waste Management Engineering, the Export Contract Management Unit, marine and land-based transfer stations, and the Fresh Kills landfill and long-term export programs.</p>
+<p>The Export Contract Management Unit handles DSNY contracts with private vendors who operate municipal solid waste and putrescible and non-putrescible solid waste disposal facilities, including transfer stations and waste-to-energy plants. DSNY also has City-owned and -operated transfer stations.</p>
+<p>Solid Waste Management Engineering is principally responsible for the design, construction, closure and post-closure care, and end-use development of the 2,200-acre Fresh Kills landfill. Solid Waste Management Engineering develops and implements long-term waste export programs and the City&rsquo;s Comprehensive Solid Waste Management Plan for 2006&ndash;2025 and the Solid Waste Management Plan Final Environmental Impact Statement.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

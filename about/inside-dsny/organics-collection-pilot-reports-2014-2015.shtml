@@ -1,0 +1,21 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Organics Collection Pilot Reports, 2014-2015 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Organics Collection Pilot Reports, 2014-2015</h1>
+<p>In 2013, New York City Council passed Local Law 77, which requires the New York City Department of Sanitation to implement a voluntary curbside-collection pilot for residential organic waste and a pilot program for school organic waste. 
+	The time period for the pilot is October 1, 2013 to July 1, 2015. Organic waste includes food scraps, soiled paper, and yard waste.</p>
+<p>Local Law 77 requires the Sanitation Commissioner to report on the amount of organic waste diverted from participating households and schools every six months during the pilot period. In addition, the Sanitation Commissioner must provide a report on <a href="/assets/dsny/about/inside-dsny/community-composting-report-2014.shtml">community composting</a>, and a final report at the conclusion of the two year pilot period.</p>
+<p><a href="/assets/dsny/downloads/pdf/studies-and-reports/OrganicsCollection-LL77-NYCOrganicsCollectionReport-2015.pdf">2015 NYC Organics Collection Report</a></p>
+<p><a href="/assets/dsny/downloads/pdf/studies-and-reports/OrganicsCollection-LL77-NYCOrganicsCollectionReportAppendices-2015.pdf">2015 NYC Organics Collection Report Appendices</a></p>
+<p><a href="/assets/dsny/docs/about_OrganicsCollection-LL77-DiversionReportI-2014_0815.pdf">Read Diversion Report 1</a></p>
+<p><a href="/assets/dsny/docs/about_OrganicsCollection-LL77-DiversionReportII-2015_0815.pdf">Read Diversion Report 2</a></p>
+<p><a href="/assets/dsny/docs/about_LL77_DiversionReportIII_June2015_0815.pdf">Read Diversion Report 3</a></p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

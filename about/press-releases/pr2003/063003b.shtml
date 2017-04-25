@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Citywide Plastic Recycling Resumes Tomorrow, Tuesday, July 1st</h3>
+<div class="prs-subtitle">
+<p><strong>June 30, 2003</strong> | <em>Vito A. Turso / Kathy Dawkins (646) 885-5020</em></p>
+<p>Press Release # 03-39, FOR IMMEDIATE RELEASE</p>
+</div>
+<span class="bodytext">
+</span><p style="MARGIN-top: 0in">Sanitation Commissioner John J. Doherty announced today that the City will resume its plastic recycling collection program citywide tomorrow, Tuesday, July 1st. The designated plastic recyclables are: plastic bottles and jugs including beverage, milk, and juice cartons. All other plastics will be considered garbage. Home owners and building managers will receive a brochure in the mail explaining the plastic recycling resumption.</p>
+<p>Commissioner Doherty said: "Through a budget agreement between the Mayor and the City Council, the Department is resuming the collection of certain types of plastics tomorrow. Since the suspension of plastic recycling last year, the Mayor has worked to create a stronger recycling program and now we have such a program. I know that all New Yorkers will support plastic recycling as we continue to manage our waste more efficiently."</p>
+<p>Plastic bottles and jugs including beverage, milk, and juice cartons can be placed in the same clear plastic bags or in blue labeled containers as metal recyclables. Paper should continue to be placed in clear plastic bags or in green labeled containers. Also, corrugated cardboard should continue to be flattened and tied.</p>
+<p>Summonses for failing to recycle metal and paper or mixing either of these two recyclables with garbage will still be written. However, summonses for failing to recycle plastic will not be issued until further notice. Glass recycling will resume in April 2004.</p>
+<p>For more information on the City's recycling program contact New York City Citizen Service Center at 311 or Sanitation's website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

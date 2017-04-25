@@ -1,0 +1,41 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Electronics</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+<h1>Electronics</h1>
+
+
+<p>The New York State Electronic Equipment Recycling and Reuse Act bans the disposal of the following type of electronic equipment:</p>
+<ul>
+<li>Computers, including items like tablets and e-readers</li>
+<li>Televisions (as well as cathode ray tubes)</li>
+<li>Small scale servers</li>
+<li>Computer peripherals, including any permanently attached cable or wiring</li>
+<li>Monitors</li>
+<li>Electronic keyboards</li>
+<li>Electronic mice and other pointing devices</li>
+<li>Fax machines, document scanners, and printers that are meant for use with a computer and weigh less than 100 lbs.</li>
+<li>TV peripherals, including any permanently attached cable or wiring</li>
+<li>VCRs</li>
+<li>Digital video recorders</li>
+<li>DVD players</li>
+<li>Digital converter boxes</li>
+<li>Cable or satellite receivers</li>
+<li>Electronic or video game consoles</li>
+<li>Portable devices, including any permanently attached cable or wiring</li>
+<li>Portable digital music players</li>
+</ul>
+<p>There are several ways to get rid of unwanted electronics, including donating them to a charity, selling them, trading them in, or recycling them. Before getting rid of electronics, be sure to erase all sensitive data. NYC agencies must follow agency relinquishment procedures.</p>
+<h2>Donations, Resale &amp; Trade-Ins</h2>
+<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/get-donations-for-nonprofits-and-agencies.shtml">Donate, sell, or trade in working electronics</a></p>
+<h2>Recycling</h2>
+<p>If the electronics are no longer working or useful, they should be recycled. Find out if you have an existing disposal contract to manage electronics. Certain equipment may have come with a lease agreement or manufacturer&rsquo;s end-of-life service contract. Some manufacturers also offer asset recovery programs.</p>
+<p>Agencies and nonprofits with fewer than 75 employees are eligible for free and convenient electronics recycling provided by manufacturers. Contact your product manufacturer or see <a href="/assets/dsny/zerowaste/businesses/electronics-take-back.shtml">take-back programs for electronics</a> for more information.</p>
+<p>Although larger agencies and nonprofits are not eligible for these free recycling services, many manufacturers offer similar take-back programs for a fee. Large agencies and nonprofits can also hire a third party recycler. When choosing a recycler, look for <a href="http://www.e-stewards.org/">e-stewards</a> or <a href="http://www.sustainableelectronics.org">R2</a> certification to help ensure that your electronics are recycled responsibly. The NYS Department of Environmental Conservation maintains a list of <a href="http://www.dec.ny.gov/chemical/73670.html">registered recyclers</a>.</p>
+<p>Mayoral agencies should use the <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-disposal.shtml">Agency Safe Handling contract</a> to safely and responsibly recycle electronics. Contract pricing may be available to non-mayoral agencies and nonprofits.</p>
+		 </div>
+		 </div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

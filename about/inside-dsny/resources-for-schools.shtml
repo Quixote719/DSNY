@@ -1,0 +1,23 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Resources for Schools </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Resources for Schools</h1>
+
+
+
+<p><a href="/assets/dsny/about/inside-dsny/nycs-recycling-curriculum.shtml" title="NYC&rsquo;s Recycling Curriculum">NYC&rsquo;s Recycling Curriculum</p>
+<a href="/assets/dsny/about/inside-dsny/coloring-and-comic-books.shtml" title="Coloring &amp; Comic Books">Coloring &amp; Comic Books</p>
+<a href="/assets/dsny/about/inside-dsny/recycling-activities-for-students.shtml" title="Recycling Activities For Students">Recycling Activities for Students</p>
+<a href="/assets/dsny/about/inside-dsny/cleanup-and-gardening-activities-for-students.shtml" title="Cleanup and Gardening Activities for Students">Cleanup and Gardening Activities for Students</p>
+<a href="/assets/dsny/zerowaste/schools.shtml" title="Waste Less for Schools">Waste Less for Schools</p>
+<a href="/assets/dsny/about/inside-dsny/field-trips-and-tours.shtml" title="Field Trips &amp; Assembly Programs">Field Trips &amp; Assembly Programs</p>
+<a href="http://www.learndoe.org/si/recording-dsny-recycling-organics" title="Webinar: School Recycling &amp; Organics Collection Basics" class="exitlink">Webinar: School Recycling &amp; Organics Collection Basics</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

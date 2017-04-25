@@ -1,0 +1,30 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Snow Laws </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/streetandsidewalklaws_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+<div class="span6 about-description">
+
+
+<h1> Snow Laws </h1>
+
+		   
+
+<p>Every owner, lessee, tenant, occupant, or other person having charge of any lot or building must clean snow and/or ice from the sidewalk after the snow has stopped falling. Snow may NOT be thrown into the street.</p>
+<p>If the snow stops falling between:</p>
+<ul>
+<li>7:00 am and 4:49 pm: must be cleared within four hours; </li>
+<li>5:00 pm and 8:59 pm: must be cleared within fourteen hours; </li>
+</ul>
+<p><i>Example:</i> If the snow stops falling at 7:00 pm, the owner, lessee, tenant, occupant, or other person in charge of any lot or building has until 9:00 am the following morning to clear.</p>
+<ul>
+<li>9:00 pm and 6:59 am: must be cleared by 11:00 am. </li>
+</ul>
+<p>If the snow or ice becomes frozen so hard that it cannot be removed, the sidewalk may be strewn with ashes, sand, sawdust, or similar suitable material within the same time limits. The sidewalk must be thoroughly cleaned as soon as the weather permits.</p>
+<!--<p><i>Related Law: </i><a href="http://72.45.128.254/nyc/adcode/Title16C1_16-123.asp">&sect;16-123</a></p>-->
+<p><i>Fine:</i> $100&ndash;$150 (1st Offense); $150&ndash;$350 (2nd Offense); $250&ndash;$350 (3rd and Subsequent Offenses)</p>
+
+		</div> </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

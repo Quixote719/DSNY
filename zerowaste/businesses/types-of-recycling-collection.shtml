@@ -1,0 +1,31 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY – Zero Waste – Types of Recycling Collection</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+
+<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Types of Recycling Collection for Businesses </h1>
+<p>Businesses should consult their private carters and determine a plan for collecting recyclables that works for the business and complies with the <a href="/assets/dsny/zerowaste/businesses/recycling-for-businesses.shtml">recycling</a> rules. The plan should comply with one of the following types of recycling collection: source-separated collection, co-collection, or single-stream collection.</p> 
+<p>Important: It is illegal for recyclable material to be collected in the same bag with garbage, or be placed in the same compartment of a truck or container with garbage.</p> 
+<p><a href="/assets/dsny/zerowaste/businesses/resources.shtml">Download or order materials, sign up for a business recycling training, or watch the webinar</a></p>
+<h2>Source-Separated Recycling</h2> 
+<p>Source-separated recycling collection is the practice of separating the two designated recyclable "streams" from each other and from garbage. These three streams must be kept separate from the point of generation (where staff/customers place an item in a receptacle) until the materials are placed out for collection. Your carter is then required to collect the three streams with three separate trucks or in three separate compartments in a truck. Source-separated recycling collection is the most common type of collection.</p>  
+<ul>
+	<li>1 container/bag for metal, glass, plastic, and beverage cartons</li>
+	<li>1 container/bag for paper and cardboard</li>
+	<li>1 container/bag for garbage</li>
+</ul>
+<h2>Co-Collection</h2>
+<p>Businesses with private carters that are authorized for co-collection of recyclables should operate as a source-separated site. In other words, recyclables should be kept separate from each other and garbage from the point of generation (where staff/customers place an item in a receptacle) until the materials are placed out for collection. However, with proper documentation, a carter may be permitted to co-collect source-separated recyclables in one truck. In this case, the business must post a sign indicating that co-collection is used and the name of the carter that is authorized to co-collect the recyclables.</p> 
+<h2>Single-Stream Recycling</h2>
+<p>Single-stream recycling collection is the practice of collecting the two designated recyclable "streams" together, but always separated from garbage. These two streams must be kept separate from the point of generation (where staff/customers place an item in a receptacle) until the materials are placed out for collection. Private carters that are authorized to collect single-stream recyclables must keep recyclables separate from garbage at all times. Businesses utilizing single-stream recycling collection are required to post a sign indicating that single-stream is used and the name of the carter that is authorized to collect single-stream recyclables.</p> 
+<ul>
+<li>1 container/bag for metal, glass, plastic, beverage cartons, paper, and cardboard</li>
+<li>1 container/bag for garbage</li>
+</ul>
+</div>				
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

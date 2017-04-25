@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Thanksgiving Day, Thursday, November 26th</h3>
+<div class="prs-subtitle">
+<p><strong>Wednesday, November 18, 2009</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 09-47, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Thanksgiving Day, there will be no garbage or recycling collection, or street cleaning on Thursday, November 26, 2009.  In addition, all Sanitation Department administrative offices will be closed on Thursday, November 26th, in observance of the holiday.</p>
+<p>Residents who normally receive Thursday garbage collection should place their trash out at curbside Thursday after 4 P.M. for pickup.  Those receiving Thursday recycling collection will not have their recycling picked up until the following Thursday, December 3rd.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at www.nyc.gov/sanitation.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

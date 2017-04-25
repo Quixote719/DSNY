@@ -1,0 +1,35 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Sanitation sweeps away 48 tons of New Year’s trash, party hats from Times Square</h3>
+<div class="prs-subtitle">
+<p><strong>Monday, January 5, 2015</strong> | <em>Vito A. Turso</em></p>
+<p>Press Release # 15-02, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Sanitation Commissioner Kathryn Garcia announced today that the Department 
+    collected 48 tons of trash from the Times Square New Year&rsquo;s cleanup. 
+    As the revelers dispersed, a small army of Sanitation Workers began to remove party hats, 
+    confetti, and noise makers from the &ldquo;crossroads of the world.&rdquo;</p>
+<p>For the massive cleanup, Sanitation deployed 178 Sanitation Workers plus 
+    supervisory personnel using 26 mechanical sweepers, 25 collection trucks, 38 leaf blowers, 
+    and other types of street cleaning equipment to the area.</p>
+<p>&ldquo;Every year, the Department of Sanitation does its part to sweep clean Times 
+    Square from the festivities of New York Eve. The cleanup is a tremendous undertaking that&rsquo;s done smoothly, 
+    efficiently, and quickly to open the area to pedestrian and vehicular traffic,&rdquo; said Commissioner Garcia. &ldquo;
+    Our employees take pride in cleaning up after a big celebration and look forward to doing it again next year.&rdquo; 
+  </p>
+<h3 class="prs-about"><i class="fa fa-university"></i> About the New York City Department of Sanitation</h3>
+<p>
+       
+            The Department of Sanitation (DSNY) promotes a healthy environment through the 
+            efficient management of solid waste and the development of environmentally sound 
+            long-range planning for handling refuse, including recyclables.
+             The Department operates 59 district garages and manages a fleet of 2,022 
+            rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. 
+            The Department clears litter, snow and ice from approximately 6,000 miles of 
+            City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

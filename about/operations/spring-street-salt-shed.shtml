@@ -1,0 +1,21 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Spring Street Salt Shed </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/garages_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+
+
+		<h1> Spring Street Salt Shed </h1>
+		<div class="row img-row">
+<div><img src="/assets/dsny/img/about_mn1-2-5-and-salt-shed-night_0815.jpg" alt="DSNY Spring Street Salt Shed" />
+<div class="img-caption">Spring Street Salt Shed</div>
+</div>
+</div>
+
+<p>The Spring Street Salt Shed rises 70 feet tall over the Hudson River and maintains 4,000 tons of salt. With concrete walls, a brick bottom, and a metal glass top, this glass-plated structure provides sound functionality behind a tasteful veneer in NYC&rsquo;s trendy TriBeCa neighborhood.</p>
+<p>Winner of the <a href="http://www1.nyc.gov/site/designcommission/awards/past-awards/design-awards-29.page">NYC Art Commission Design Award in 2011</a>, the structure provides parking, cleaning, and repair facilities for over 150 DSNY trucks. Offices for employees from three DSNY Manhattan districts are also housed within the building along with some UPS trucks formerly based on the site.</p>
+
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

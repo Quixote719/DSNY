@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Normal Sanitation garbage and recycling collections on Veterans' Day observance, Friday, November 10th</h3>
+<div class="prs-subtitle">
+<p><strong>November 8, 2006</strong>&nbsp;| CONTACT:&nbsp;<em>Vito A. Turso / Matthew LiPani (646) 885-5020</em></p>
+<p>Press Release # 06-59, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has announced that normal garbage and recycling collections will be conducted on the observance of Veterans' Day, Friday, November 10th, 2006 and on Saturday, November 11th, 2006.&nbsp; However, street-cleaning regulations will be suspended on Friday and Saturday.&nbsp; Residents who normally receive Friday and Saturday garbage or recycling collection should place their trash out at curbside as usual.</p>
+<p>Residences and commercial establishments that unlawfully leave trash, recyclables or dumpsters at curbside over the holiday are subject to a fine of up to $250.&nbsp; Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on that holiday.&nbsp;</p>
+<p>All Sanitation Department administrative offices will be closed on Friday, November 10th in observance of the holiday.</p>
+<p>For questions about Sanitation services and schedules over the holiday, contact the NYC Citizens Service Center at 3-1-1 or visit the DSNY website at <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

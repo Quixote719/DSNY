@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Permit Inspection Unit and Environmental Police Unit </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Permit Inspection Unit and Environmental Police Unit</h1>
+				<p>The primary responsibility of the Permit Inspection Unit is enforcement of Local Law 40, governing the permit and inspection processes of solid waste transfer stations and fill material operations within the City. Environmental Police Officers conduct regular inspections to ensure compliance with the rules and regulations relating to these activities.</p>
+<p>The Permit Inspection Unit issues permits and conducts regular inspections of putrescible and non-putrescible transfer stations, fill material transfer stations, and fill material operations that involve the grading, leveling, or improvement of property. It also plays a main role in identifying and closing illegal transfer stations and dump sites, and works closely with DSNY Legal Affairs and various City, State, and Federal agencies.</p>
+<p>The Environmental Police Unit enforces Local Laws 70 and 75, governing the storage, transportation, and disposal of asbestos and regulated medical waste. Environmental Police Officers respond to incidents involving the improper disposal of chemicals, household hazardous waste, low-level radioactive waste, and medical waste. The Environmental Police Unit also conducts inspections of hospitals and nursing homes to ensure proper disposal of regulated medical waste, and inspects medical practices operating in multi-dwelling buildings to ensure compliance with Local Law 41.</p>
+	</div>
+</div>		 
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

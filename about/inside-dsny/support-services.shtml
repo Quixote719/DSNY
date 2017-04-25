@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Support Services Division </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Support Services</h1>
+				<p>The Support Services Division includes the Bureau of Motor Equipment and the Bureau of Building Maintenance, which provide the equipment required for DSNY to perform its essential tasks. Support Services coordinates the activities of these two operating bureaus to ensure that current and future needs are met for equipment, garages, transfer stations, and related infrastructure.</p>
+<p>The Bureau of Motor Equipment provides a full range of fleet-related functions, such as design, research and development, procurement, maintenance, repair, and ultimately disposal of DSNY vehicles. The Bureau's&nbsp; PM program is the cornerstone of its success in providing the Equipment necessary for the Operating Bureau's to achieve goals. It is the Bureau that has led the charge towards being the cleanest Refuse Fleet in the Country. All of these functions are performed through 4 main operating divisions&mdash;BME Field Operations, Material Management, and Vehicle Acquisition and Warranty Division, and CRS Operations..</p>
+<p>The Bureau of Building Maintenance has responsibility for maintaining garages, transfer stations, repair shops, and office buildings throughout the five boroughs. The Bureau employs carpenters, plumbers, electricians and other skilled trades who provide routine maintenance, facility rehabilitation, and emergency repairs. Additionally, together with Legal Affairs and Engineering, the Bureau of Building Maintenance ensures that DSNY facilities are in compliance with all Federal, State, and local oversight regulations.. The Bureau also works closely with DCAS to secure funding for energy reduction programs and to achieve CO2 goals set forth by NYC PLANYC.</p>
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

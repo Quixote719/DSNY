@@ -1,0 +1,1331 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+
+<title>DSNY - Contact - EEO Complaint</title>
+
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<style>
+#msform fieldset {
+border: none;
+max-width: 940px;
+/*stacking fieldsets above each other*/
+position: relative;
+}
+ 
+/*Hide all except first fieldset*/
+.fieldset2 {
+display: none;
+}
+ 
+.fieldset3 {
+display: none;
+}
+ 
+.fieldset4 {
+display: none;
+}
+ 
+.error {border-color:#e9322d !important}
+</style>
+
+
+
+
+
+<div id="contentsection" class=" about-main-image">
+<div class="span6 about-description">
+
+<div id="container">
+ <div id="header">
+<div align="left">
+    <h1> Equal Employment Opportunity Complaint</h1>
+</div>
+
+  </div>
+ 
+
+<br/>
+
+
+<div align="center">
+ <h3> THE CITY OF NEW YORK Department of Sanitation</h3>
+<h3>EEO COMPLAINT FORM DS 1735 (7-02-10)</h3>
+</div>
+<br/>
+<div align="center">
+<h3> DSNY Equal Employment Opportunity Statement</h3>
+</div> 
+<br/>
+<p>
+The City of New York and DSNY are equal opportunity employers and prohibit discriminatory employment actions against and discriminating treatment of its employees and applicants for employment based on actual or perceived race,color, national origin,alienage or citizenship status, religion or creed, gender (including "gender identity" - which refers to a person's actual or perceived sex, and includes self-image, appearance, behavior or expression, whether or not different from that traditionally associated with the legal sex assigned to the person at birth) disability, age (18 or over), military status, unemployment status, prior record of arrest or conviction, marital status, partnership status, genetic predisposition or carrier status, sexual orientation, or status as a victim of domestic violence, a sex offense, or stalking.</p>
+<br/>
+<div align="center">
+ <h3>Confidentiality</h3>
+</div>
+<br/>
+<p>
+All complaints, investigations, requests for reasonable accommodation, and records will be handled, to the greatest extent possible, in a manner that will protect the privacy interests of those involved. EEO matters may be discussed with other persons who may have information about a complaint or who are necessary to implement reasonable accommodations for disability, religion, or based on status as a victim of domestic violence, a sex offense, or stalking. Therefore, it may be necessary to disclose information to persons with a legitimate need to know about the matter.</p>
+<br/>
+<div align="center">
+<h3>Retaliation</h3>
+</div> 
+<br/>
+<p>
+It is a violation of the EEO Policy to retaliate against or harass any person who asserts his or her rights regarding employment discrimination by 1) opposing discriminatory practices in the workplace; 2) complaining about prohibited conduct; or 3) participating in any way in the complaint, investigation or reasonable accomodation processes. It is also a violation of the EEO Policy to retaliate against or harass someone because of his or her association with such an individual.</p>
+<br/>
+<p>
+If any employee knowingly makes a false accusation of discrimination or knowingly provides false information in the course of an investigation of a complaint such conduct may be grounds for discipline. A complaint made in good faith, even if found to be unsubstantiated, will not be considered a false accusation.</p>
+<br/>
+
+<div align="center">
+<h3>NOTICE</h3></div> 
+<br/>
+
+<div align="center">
+ <h3>YOUR RIGHT TO FILE A COMPLAINT WITH CIVIL RIGHTS ENFORCEMENT AGENCIES
+</h3></div>
+<br/>
+<p>
+Any Employee or applicant for employment who believes that he or she has experienced unlawful discrimination has a right to file a formal complaint with the federal, state or local agencies listed below. A person does not give up this right when he or she files a complaint with the Department of Sanitation's EEO Office. The following federal, state and local agencies enforce laws against discrimination:</p>
+<p>
+<font color="blue"> <a href="http://www.nyc.gov/html/cchr/html/home/home.shtml" > <u> New York City Commission of Human Rights </u> </a></font>
+<br/>
+<font color="blue"> <a href="http://www.eeoc.gov/" id="link2"  > <u>United States Equal Employment Opportunity Commission </u> </a></font>
+<br/>
+<font color="blue"><a href="http://www.dol.gov/ofccp" > <u> United States Department of Labor Office of Federal Contract Compliance Programs</u> </a></font>
+<br/>
+<font color="blue"><a href="http://www.dhr.ny.gov" > <u> New York State Division on Human Rights Executive Department</u> </a></font>
+<br/>
+</p>
+<div align="center">
+ <h3>NOTICE</h3></div> 
+<br/>
+<div align="center">
+<h3> STATUTORY TIME PERIODS FOR THE TIMELY FILING OF CHARGES OF DISCRIMINATION(MEASURED FROM THE OCCURANCE OF A DISCRIMINATORY ACTION)</h3>
+</div> 
+<br/>
+<p>
+1. New York City Commission on Human Rights - One Year (NYC. Administrative Code, Title 8, Chapter 1).  <br/>
+ 
+2. New York State Division of Human Flights - One Year (New York Executive Law, Article 15, §297(5); see also & sect;297(9) (may file civil action first, but administrative action is then precluded.<br/>
+3. United State Equal Employment Opportunity Commission - 180 days unless proceeding involving same acts is instituted first before the New York State Division of Human Rights or New York City Commission on Human Rights.<br/><br/>  
+ 
+Where a proceeding is first initiated before the State Division of Human Rights or the City Commission on Human  Rights (No. 1 and 2 above) - filing before EEOC must occur within 300 days (however, it is advisable to file before expiration of 240 daysbecause of a requirement that a complaint must be deferred to a local or state antidiscrimination agency for 60 days) or within 30 days after receiving notice that the State Division or the City Commission has terminated the proceedings under State or local law, whichever is earlier (42 U.W.S.C.§2000e~5(e)).  <br/><br/>
+ 
+4. Office of Federal Contract Compliance Programs - within 180 days, 41 CFFI §60 - 1.21 (1990).<br/><br/>  
+ 
+5. EEO Office of an Agency of the City of New York - One Year (NYC Department of Citywide Administrative Services/Office of Citywide Equal Employment Opportunity. DCAS/OCEEO</p><br/><br/><br/>
+
+
+</p>
+  </div>
+  
+<form id="msform" class="pure-form" method="post" type="external" name="mranimal" action="http://www.nyc.gov/doittcaptcha/validatecap">
+
+	
+        <input name="app_key" type="hidden" value="06F6620746865206F" />
+   
+       <input type="hidden" value="TNEAL@dsny.nyc.gov" name="recipient" />  <!--  <input type="hidden" value="http://www.nyc.gov/html/dsny/html/jobs/eeo-complaint-form-confirm.shtml" name="redirect" /> <input name="required" value="email, realname, Company, Address1, City, State, Zip Code, Phone" type="hidden" /> -->
+<!-- <input type="hidden" value="DSNY WebForms - TESTING" name="subject" /> -->
+<input type="hidden" value="DSNY EEO Complaint Form" name="subject" />
+ <input type="hidden" value="order:Employees Name,ID,Title,Work Location,Supervisor,Telephone,Allege Day,Allege Year,Allege Time,Incident,EEO Matter,Race,Color,National Origin,Alienage,Citizenship Status,Religion,Creed,Gender,Disability,Age,Military Status,Arrest Conviction,Marital Status,Partnership Status,Genetic Predisposition,Sexual Orientation,Domestic Violence,Sex Offense,Stalking,Prior Incident,Witnesses,Documentation,How Respond,Speak About,Witnessed Another Employee,Remedy,Print Name,Date" name="sort" /> <input type="hidden" value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" name="env_report" /> <input type="hidden" value="#FFFFFF" name="bgcolor" />
+<input type="hidden" name="cgi" value="/cgi-bin/misc/mailform.cgi"/>
+
+<input value="http://www1.nyc.gov/site/dsny/index.page" type="hidden" name="return_link_url">
+
+        <div id="steps">
+            <a id="astep1" class="step1 active1" href="#"></a>
+
+            <a id="astep4" class="step4" href="#"></a>
+        </div>
+        <div style="text-align:right;font-size:12px"><span class="red">*</span>Denotes required field</div>
+
+       
+            <fieldset class="fieldset1">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section"> Detail information </div>
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblemployeename">EMPLOYEE'S NAME (Last, First, MI.)</label>
+                                <input type="text" name="Employees Name" title="Employees Name" id="EmployeesName"  tabindex="1" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblemployeeid">EMPLOYEE ID</label>
+                                <input name="ID" type="text" title="ID" id="ID"  tabindex="2" />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lbltitleemployee">TITLE</label>
+                                <input name="Title" type="text" title="Title" id="Title"  tabindex="3" />
+                            </div>
+
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblworklocationunit">WORK LOCATION/UNIT</label>
+                                <input name="Work Location" type="text" title="Work Location" id="WorkLocation"  tabindex="4" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblemployeesupervisor">SUPERVISOR</label>
+                                <input name="Supervisor" type="text" title="Supervisor" id="Supervisor"  tabindex="5"  />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="lblemployeephoneno">TELEPHONE NO</label>
+                                <input name="Telephone" type="text" title="Telephone" id="Telephone"  tabindex="6" />
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <br />
+                                1. I allege that on <input name="Allege Day" type="text" title="Allege Day" id="AllegeDay" style="width:20% !important"  tabindex="7" /> , 20 <input name="Allege Year" type="text" title="Allege Year" id="AllegeYear" style="width:20% !important"  tabindex="8" /> , at approximately <input name="Allege Time" type="text" title="Allege Time" id="AllegeTime" style="width:20% !important"  tabindex="9" /> am/pm, the following incident occurred :
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <textarea name="Incident" rows="5" cols="50" title="Incident" id="Incident"  tabindex="10" ></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+
+                                <label for="lbljustificationincident">2. Why do you believe this incident is an EEO matter that should be considered by the EEO Office?</label>
+                                <textarea name="EEO Matter" rows="5" cols="50" title="EEO Matter" id="EEOMatter"  tabindex="11"></textarea>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <label for="worklocationunit">What is the alleged basis of discrimination? (Check all which apply)</label>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Race" name="Race" title="Race" id="Race"  tabindex="12" />&nbsp; <font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Race </font>                            
+</div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Gender" name="Gender" title="Gender" id="Gender"  tabindex="13" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Gender </font>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Partnership Status" name="Partnership Status" title="Partnership Status" id="PartnershipStatus"  tabindex="14" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Partnership Status</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Color" name="Color" title="Color" id="Color"  tabindex="15" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Color </font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Disability" name="Disability" title="Disability" id="Disability"  tabindex="16" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Disability</font>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Genetic Predisposition" name="Genetic Predisposition" title="Genetic Predisposition" id="GeneticPredisposition"  tabindex="17"  />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Genetic Predisposition</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="National Origin" name="National Origin" title="National Origin" id="NationalOrigin"  tabindex="18"  />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> National Origin</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Age" name="Age" title="Age" id="Age"  tabindex="19"  />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Age</font>
+
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Sexual Orientation" name="Sexual Orientation" title="Sexual Orientation" id="SexualOrientation"  tabindex="20" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Sexual Orientation</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Alienage" name="Alienage" title="Alienage" id="Alienage"  tabindex="21" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Alienage</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Military Status" name="Military Status" title="Military Status" id="MilitaryStatus"  tabindex="22"  />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Military Status</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Victim of Domestic Violence" name="Domestic Violence" title="Domestic Violence" id="DomesticViolence"  tabindex="23" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Victim of Domestic Violence</font>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Citizenship Status" name="Citizenship Status" title="Citizenship Status" id="CitizenshipStatus"  tabindex="24" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Citizenship Status</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Prior Record of Arrest or Conviction" name="Arrest Conviction" title="Arrest Conviction" id="ArrestConviction"  tabindex="25"  />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Prior Record of Arrest or Conviction </font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Victim of a Sex Offense" name="Sex Offense" title="Sex Offense" id="SexOffense"  tabindex="26" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Victim of a Sex Offense</font>
+
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Religion" name="Religion" title="Religion" id="Religion"  tabindex="27" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Religion</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Marital Status" name="Marital Status" title="Marital Status" id="MaritalStatus"  tabindex="28" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Marital Status</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Victim of Stalking" name="Stalking" title="Stalking" id="Stalking"  tabindex="29" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Victim of Stalking</font>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <input type="checkbox" value="Creed" name="Creed" title="Creed" id="Creed"  tabindex="30" />&nbsp;<font style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:12px;font-weight:bold"> Creed</font>
+
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblpriorincident">3. Was this incident a first occurrence? If there have been similar or prior incidents, please describe, give the date of the occurrence and provide witness information.</label>
+                                <textarea name="Prior Incident" rows="5" cols="50" title="Prior Incident" id="PriorIncident"  tabindex="31" ></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblwitnesses">4. Were there any witnesses to this incident (i.e., others who were not directly involved, but who may have seen or heard what took place)?</label>
+                                <textarea name="Witnesses" rows="5" cols="50" title="Witnesses" id="Witnesses"  tabindex="32"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lbldocumentation">5. Is there any documentation that relates to your claim?</label>
+                                <textarea name="Documentation" rows="5" cols="50" title="Documentation" id="Documentation"  tabindex="33"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblhowrespond">6. When this incident occurred, how did you respond to the other person(s) directly involved?</label>
+                                <textarea name="How Respond" rows="5" cols="50" title="How Respond" id="HowRespond"  tabindex="34"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblspeakabout">7. After this incident occurred, did you speak to anyone at work about what happened?</label>
+                                <textarea name="Speak About" rows="5" cols="50" title="Speak About" id="SpeakAbout"  tabindex="35"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblwitnessedanotheremployee">8. Have you witnessed another employee being subjected to similar behavior/conduct by the person(s) directly involved in this incident?</label>
+                                <textarea name="Witnessed Another Employee" rows="5" cols="50" title="Witnessed Another Employee" id="WitnessedAnotherEmployee"  tabindex="36"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblremedy">9. What remedy or action would you like taken to correct this situation?</label>
+                                <textarea name="Remedy" rows="5" cols="50" title="Remedy" id="Remedy"  tabindex="37"></textarea>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <br />
+                                <label for="lblemployeenamedate">EMPLOYEE: I have reviewed the entries on this EEO Complaint Form, and I affirm these statements to be true, to the best of my recollection. I have received the information covering my right to file a complaint with Federal, state, and local civil rights enforcement agencies.</label>
+
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="worklocationunit">NAME:</label>
+                                <input name="Print Name" type="text" title="Print Name" id="PrintName"  tabindex="38" />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="worklocationunit">DATE:</label>
+                                <input name="Date" maxlength="25" type="text" title="Date" id="Date"  tabindex="39"/>
+                            </div>
+                            <br />
+                            <div id="results" class="pure-u-sm-24-24"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <br />
+                <div id="buttons">
+                    <a class="pure-button next" id="cancel">Clear</a>
+                    <button id="nextstep2" class="pure-button next" tabindex="40">&nbsp;<strong>Next</strong>&nbsp;</button>
+                </div>
+            </fieldset>
+
+
+
+
+
+
+<fieldset class="fieldset3">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section"> Submission confirmation</div>
+
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Employee's name (Last, First, MI.)</div>
+                                <div id="disemployeesname" class="data_long">&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Employee id</div>
+                                <div id="disid" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Title</div>
+                                <div id="distitle" class="data_long">&nbsp;</div>
+                            </div>
+
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Work location/unit</div>
+                                <div id="disworklocation" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Supervisor</div>
+                                <div id="dissupervisor" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Telephone</div>
+                                <div id="distelephone" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Incident Date And Incident Time</div>
+                                <div id="disincidentdatetime" class="data_long">&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">2. Why do you believe this incident is an EEO matter that should be considered by the EEO Office?</div>
+                                <div id="diseeomatter" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">What is the alleged basis of discrimination? (Check all which apply)</div>
+                                <div id="disdiscrimination" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">3. Was this incident a first occurrence? If there have been similar or prior incidents, please describe, give the date of the occurrence and provide witness information.</div>
+                                <div id="dispriorincident" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">4. Were there any witnesses to this incident (i.e., others who were not directly involved, but who may have seen or heard what took place)?</div>
+                                <div id="diswitnesses" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">5. Is there any documentation that relates to your claim?</div>
+                                <div id="disdocumentation" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">6. When this incident occurred, how did you respond to the other person(s) directly involved?</div>
+                                <div id="dishowrespond" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">7. After this incident occurred, did you speak to anyone at work about what happened?</div>
+                                <div id="disspeakabout" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">8. Have you witnessed another employee being subjected to similar behavior/conduct by the person(s) directly involved in this incident?</div>
+                                <div id="diswitnessedanotheremployee" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">9. What remedy or action would you like taken to correct this situation?</div>
+                                <div id="disremedy" class="data_long">&nbsp;<br />&nbsp;<br />&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Name</div>
+                                <div id="disprintname" class="data_long">&nbsp;</div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Date</div>
+                                <div id="disdate" class="data_long">&nbsp;</div>
+                            </div>
+                            <!--<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Phone</div>
+                                <div id="disphone" class="data_long">&nbsp;</div>
+                            </div>-->
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <br>
+            </fieldset>
+
+
+
+
+
+<div id="fieldset4" class="fieldset4">
+                <div class="row">
+                    <div class="container">
+                        <div class="span4">&nbsp;</div>
+                        <div id="captcha" class="span5">
+                            <script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+                        </div>
+                        <div class="span6"></div>
+                    </div>
+                </div>
+
+                <br>
+                <div id="buttons">
+                    <button id="previousstep2" class="pure-button next">&nbsp;<strong>Previous</strong>&nbsp;</button>
+                    <button id="submit" type="submit" class="pure-button next">&nbsp;<strong>Submit</strong>&nbsp;</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/GeoValidation.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+$('#msform input[type="text"]').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom' 
+
+});
+
+
+
+
+$('#msform textarea').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom' 
+
+});
+
+
+
+
+$('#msform select').tooltipster({
+
+trigger: 'custom',
+
+onlyOne: true,  
+
+position: 'bottom'     
+
+});
+
+
+
+
+$('textarea[maxlength]').keyup(function () {
+
+var limit = parseInt($(this).attr('maxlength'));
+
+var text = $(this).val();
+
+var chars = text.length;
+
+if (chars > limit) {
+
+var new_text = text.substr(0, limit);
+
+$(this).val(new_text);
+
+}
+
+});  
+
+ $('#Telephone').mask('(999) 999-9999? x99999');
+
+ $('#Date').mask("99/99/9999");
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+var current_fs, next_fs, previous_fs;
+
+var left, opacity, scale;
+
+$("#msform").on('click', 'input[name="personalDetails"]', function () {
+
+var showDetails = $("input:radio[name='personalDetails']:checked").val();
+
+if (showDetails == 0) {
+
+$("#first-name").attr("class", "tooltipstered");
+
+$("#first-name").removeAttr("aria-invalid");
+
+$("#last-name").attr("class", "tooltipstered");
+
+$("#last-name").removeAttr("aria-invalid");
+
+$("#phone").attr("class", "tooltipstered");
+
+$("#phone").removeAttr("aria-invalid");
+
+$("#email").attr("class", "tooltipstered");
+
+$("#email").removeAttr("aria-invalid");
+
+$("#first-name").val('');                                               
+
+$("#last-name").val('');
+
+$("#email").val(''); 
+
+$("#phone").val('');
+
+$("#first-name").attr("disabled", "disabled");
+
+$("#last-name").attr("disabled", "disabled");
+
+$("#email").attr("disabled", "disabled");
+
+$("#phone").attr("disabled", "disabled");
+
+$("#personalinfo").attr("style", "display:none");
+
+} else {
+
+$("#personalinfo").attr("style", "display:block");
+
+$("#first-name").removeAttr("disabled");
+
+$("#last-name").removeAttr("disabled");
+
+$("#email").removeAttr("disabled");
+
+$("#phone").removeAttr("disabled");
+
+$("#first-name").attr("class", "tooltipstered");
+
+$("#last-name").attr("class", "tooltipstered");
+
+$("#phone").attr("class", "tooltipstered");
+
+$("#email").attr("class", "tooltipstered");
+
+}
+
+});
+
+
+
+
+ 
+
+function vali_phone() {
+
+var ndigits = "0123456789";
+
+var temp;
+
+var countr;
+
+var realdata;
+
+realdata = "";
+
+var phoneVal = $("input[id=phone]").val().trim();
+
+if (!(phoneVal == "")) {
+
+for (var i = 0; i < phoneVal.length; i++) {
+
+temp = phoneVal.substring(i, i + 1);
+
+if (phoneVal.length < 10) {
+
+alert("Please enter a valid 10-digit telephone number!");
+
+return false;
+
+}
+
+}
+
+countr = 0;
+
+realdata = "";
+
+for (var i = 0; i < phoneVal.length; i++) {
+
+temp = phoneVal.substring(i, i + 1);
+
+if (ndigits.indexOf(temp) > -1) {
+
+realdata = realdata + temp;
+
+++countr;
+
+}
+
+}
+
+if (countr != 10) {
+
+alert("You have entered " + countr + " digits.\nPlease enter a valid 10-digit telephone number!");
+
+return false;
+
+}
+
+$("input[id=phone]").val("(" + realdata.substring(0, 3) + ") " + realdata.substring(3, 6) + "-" + realdata.substring(6, 10));
+
+return (true);
+
+}
+
+else return true;
+
+}
+
+ $("#cancel").click(function () {
+
+ $("#EmployeesName").val('');
+
+        $("#ID").val('');
+
+        $("#Title").val('');
+
+        $("#WorkLocation").val('');
+
+        $("#Supervisor").val('');
+
+        $("#Telephone").val('');
+
+        $("#AllegeDay").val('');
+
+        $("#AllegeYear").val('');
+
+        $("#AllegeTime").val('');
+
+        $("#Incident").val('');
+
+        $("#EEOMatter").val('');
+
+        $('#Race').attr('checked', false);
+
+        $('#Gender').attr('checked', false); 
+
+        $('#PartnershipStatus').attr('checked', false); 
+
+        $('#Color').attr('checked', false); 
+
+        $('#Disability').attr('checked', false);  
+
+        $('#GeneticPredisposition').attr('checked', false); 
+
+        $('#NationalOrigin').attr('checked', false); 
+
+        $('#Age').attr('checked', false); 
+
+        $('#SexualOrientation').attr('checked', false); 
+
+        $('#Alienage').attr('checked', false); 
+
+        $('#MilitaryStatus').attr('checked', false);  
+
+        $('#DomesticViolence').attr('checked', false); 
+
+        $('#ArrestConviction').attr('checked', false);  
+
+        $('#SexOffense').attr('checked', false);
+
+ $('#CitizenshipStatus').attr('checked', false); 
+
+        $('#Religion').attr('checked', false); 
+
+        $('#MaritalStatus').attr('checked', false);  
+
+        $('#Stalking').attr('checked', false); 
+
+        $('#Creed').attr('checked', false);  
+
+
+
+
+  $("#disdiscrimination").val('');
+
+        $("#PriorIncident").val('');
+
+        $("#Witnesses").val('');
+
+        $("#Documentation").val('');
+
+        $("#HowRespond").val('');
+
+        $("#SpeakAbout").val('');
+
+        $("#WitnessedAnotherEmployee").val('');
+
+        $("#PrintName").val('');
+
+        $("#Date").val('');
+
+        $("#Remedy").val('');
+
+
+
+
+
+
+
+  $('#msform input[type="text"]').attr("class", "tooltipstered");
+
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+
+        $('#msform select').attr("class", "tooltipstered");
+
+        $('#msform select').removeAttr("aria-invalid");
+
+    });
+
+var validator;
+
+function validateForm() {
+
+validator = $('#msform').validate({
+
+errorPlacement: function (error, element) {
+
+if (element.attr("type") == "text") {
+
+$(element).tooltipster('update', "This field is required");                                 
+
+}                                                                                                                                                           
+
+else if (element.attr("type") == "select-one") {
+
+$(element).tooltipster('update', "Please select from the list");                                                                 }           
+
+else {
+
+$(element).tooltipster('update', "This field is required");         } 
+
+if (element.attr("name") == "email") {
+
+$(element).tooltipster('update', "Please enter valid email address");
+
+}                                                
+
+if (element.attr("name") == "Date") {
+
+  $(element).tooltipster('update', "Please enter valid date");
+
+ }                                                                            
+
+$('element').tooltipster({
+
+functionInit: function(){
+
+return $('element').html();
+
+},
+
+functionReady: function(){
+
+$('element').attr('aria-hidden', false);
+
+},
+
+functionAfter: function(){
+
+$('element').attr('aria-hidden', true);
+
+}
+
+});
+
+$(element).focus(function(){
+
+if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+
+{        $(this).tooltipster('show');  }
+
+})
+
+.blur(function(){
+
+$(this).tooltipster('hide');
+
+});
+
+},
+
+success: function (label, element) {
+
+$(element).tooltipster('hide'); 
+
+},
+
+invalidHandler: function() {
+
+$(this).find(".error:first").focus();
+
+}
+
+});
+
+if (!$('#msform').valid()) {
+
+return false;
+
+} 
+
+else  {  return true; }
+
+}
+
+
+
+
+function cleardata() {
+
+        $('#disemployeesname').html('&nbsp;<br />&nbsp;');
+
+        $('#disid').html('&nbsp');
+
+        $('#distitle').html('&nbsp');
+
+        $('#disworklocation').html('&nbsp');
+
+        $('#dissupervisor').html('&nbsp');
+
+        $('#distelephone').html('&nbsp');
+
+        $('#disincidentdatetime').html('&nbsp;<br />&nbsp;');
+
+        $('#diseeomatter').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#disdiscrimination').html('&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#dispriorincident').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br/>&nbsp;<br/>&nbsp;');
+
+        $('#diswitnesses').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#disdocumentation').html('&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#dishowrespond').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#disspeakabout').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#diswitnessedanotheremployee').html('&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#disremedy').html('&nbsp;<br />&nbsp;<br />&nbsp;');
+
+        $('#disprintname').html('&nbsp');
+
+        $('#disdate').html('&nbsp');
+
+    
+
+       
+
+    }
+
+ $("#nextstep2").click(function (event) {
+
+        cleardata();
+
+        if (validateForm() && checkdate($('#Date')) ) {
+
+
+
+
+
+
+
+            if ($('#EmployeesName').val().length >0) {
+
+                $('#disemployeesname').text($('#EmployeesName').val());
+
+            }
+
+          
+
+
+
+
+            if ($('#ID').val().length>0)
+
+                $('#disid').text($('#ID').val());
+
+
+
+
+            if ($('#Title').val().length >0)
+
+                $('#distitle').text($('#Title').val());
+
+
+
+
+            if ($('#WorkLocation').val().length >0)
+
+                $('#disworklocation').text($('#WorkLocation').val());
+
+
+
+
+            if ($('#Supervisor').val().length >0)
+
+                $('#dissupervisor').text($('#Supervisor').val());
+
+
+
+
+            if ($('#Telephone').val().length >0 )
+
+                $('#distelephone').text($('#Telephone').val());
+
+
+
+
+            if ($('#AllegeDay').val().length > 0 || $('#AllegeYear').val().length > 0 || $('#AllegeTime').val().length > 0 || $('#Incident').val().length>0)
+
+                $('#disincidentdatetime').text($('#AllegeDay').val() + ' 20' + $('#AllegeYear').val() + ' ' + $('#AllegeTime').val() + ' ' + $('#Incident').val());
+
+
+
+
+            if ($('#EEOMatter').val().length>0)
+
+                $('#diseeomatter').text($('#EEOMatter').val());
+
+
+
+
+            var discriminationcheckboxselected;
+
+            discriminationcheckboxselected = '';
+
+            if ($('#Race').is(":checked")) {
+
+                discriminationcheckboxselected = $('#Race').val() + ', ';
+
+            }
+
+            if ($('#Gender').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Gender').val() + ', ';
+
+            }
+
+            if ($('#PartnershipStatus').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#PartnershipStatus').val() + ', ';
+
+            }
+
+            if ($('#Color').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Color').val() + ', ';
+
+            }
+
+            if ($('#Disability').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Disability').val() + ', ';
+
+            }
+
+            if ($('#GeneticPredisposition').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#GeneticPredisposition').val() + ', ';
+
+            }
+
+            if ($('#NationalOrigin').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#NationalOrigin').val() + ', ';
+
+            }
+
+            if ($('#Age').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Age').val() + ', ';
+
+            }
+
+            if ($('#SexualOrientation').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#SexualOrientation').val() + ', ';
+
+            }
+
+            if ($('#Alienage').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Alienage').val() + ', ';
+
+            }
+
+            if ($('#MilitaryStatus').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#MilitaryStatus').val() + ', ';
+
+            }
+
+             if ($('#DomesticViolence').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#DomesticViolence').val() + ' , ';
+
+            }
+
+            if ($('#CitizenshipStatus').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#CitizenshipStatus').val() + ', ';
+
+            }
+
+            if ($('#ArrestConviction').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#ArrestConviction').val() + ', ';
+
+            }
+
+            if ($('#SexOffense').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#SexOffense').val() + ', ';
+
+            }
+
+
+
+
+            if ($('#Religion').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Religion').val() + ', ';
+
+            }
+
+            if ($('#MaritalStatus').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#MaritalStatus').val() + ', ';
+
+            }
+
+            if ($('#Stalking').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Stalking').val() + ', ';
+
+            }
+
+            if ($('#Creed').is(":checked")) {
+
+                discriminationcheckboxselected = discriminationcheckboxselected + $('#Creed').val() + ', ';
+
+            }
+
+            if (discriminationcheckboxselected != "")
+
+                $('#disdiscrimination').text(discriminationcheckboxselected.substring(0, discriminationcheckboxselected.length - 2));
+
+
+
+
+            if ($('#PriorIncident').val() != '')
+
+                $('#dispriorincident').text($('#PriorIncident').val());
+
+
+
+
+            if ($('#Witnesses').val() != '')
+
+                $('#diswitnesses').text($('#Witnesses').val());
+
+                      
+
+
+
+
+            if ($('#Documentation').val() != '')
+
+                $('#disdocumentation').text($('#Documentation').val());
+
+
+
+
+            if ($('#HowRespond').val() != '')
+
+                $('#dishowrespond').text($('#HowRespond').val());
+
+
+
+
+            if ($('#SpeakAbout').val() != '')
+
+                $('#disspeakabout').text($('#SpeakAbout').val());
+
+
+
+
+            if ($('#WitnessedAnotherEmployee').val() != '')
+
+                $('#diswitnessedanotheremployee').text($('#WitnessedAnotherEmployee').val());
+
+
+
+
+            if ($('#Remedy').val() != '')
+
+                $('#disremedy').text($('#Remedy').val());
+
+
+
+
+            if ($('#PrintName').val() != '')
+
+                $('#disprintname').text($('#PrintName').val());
+
+
+
+
+            if ($('#Date').val() != '')
+
+                $('#disdate').text($('#Date').val());
+
+
+
+
+
+
+
+            var retCode = false;           
+
+            
+
+            event.preventDefault();
+
+
+
+
+$('.fieldset3').show();
+ $('.fieldset4').show();
+$('#astep1').removeClass('active1');
+$('#astep4').addClass('active4');
+$('.fieldset1').hide();
+
+
+
+
+
+
+
+
+
+            return false;
+
+
+
+
+        }
+
+        else {
+
+            validator.focusInvalid();
+
+            return false;
+
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$("#nextstep3").click(function (event) {
+
+current_fs = $(this).parent().parent();
+
+next_fs = $(this).parent().parent().next();
+
+if (checkdate($('#IncidentDate')) && validateForm() && isValidEmailAddress($("#email"))) 
+
+ {
+
+var showinfo = $("input:radio[name='personalDetails']:checked").val();
+
+next_fs.show();
+
+$('.fieldset4').show();
+
+current_fs.hide();
+
+ $('#astep1').removeClass('active1');
+
+$('#astep4').addClass('active4');
+
+return false;
+
+} else {                    
+
+validator.focusInvalid();
+
+return false;
+
+}
+
+});
+
+
+
+
+  $("#previousstep2").click(function () {
+
+        $('#msform input[type="text"]').attr("class", "tooltipstered");
+
+        $('#msform select').attr("class", "tooltipstered");
+
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+
+        $('#msform select').removeAttr("aria-invalid");
+
+        $('.fieldset1').show();
+
+        $('#astep4').removeClass('active4');
+
+        $('#astep1').addClass('active1');
+
+        $('.fieldset3').hide();
+
+        $('.fieldset4').hide();
+
+        return false;
+
+    });
+
+</script>
+
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

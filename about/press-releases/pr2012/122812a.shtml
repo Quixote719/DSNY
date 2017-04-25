@@ -1,0 +1,16 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Refuse, Recycling Collection or Street Cleaning on New Year&rsquo;s Day, Tuesday, January 1, 2013</h3>
+<div class="prs-subtitle">
+<p><strong>Friday, December 28, 2012</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 12-38, FOR IMMEDIATE RELEASE</p>
+</div>
+<p style="text-align: left;">The New York City Department of Sanitation (DSNY) announced today that in observance of New Year&rsquo;s Day, there will be no refuse or recycling collection, or street cleaning on Tuesday, January 1, 2013.</p>
+<p>In addition, all Sanitation Department administrative offices will be closed on Tuesday, January 1st in observance of the holiday.</p>
+<p>Residents who normally receive Tuesday refuse collection should place their trash out at curbside Tuesday after 4 PM for pickup.  Those receiving Tuesday recycling collection will have their recycling picked up on Wednesday, January 2, 2013.</p>
+<p>For questions about Sanitation services and holiday schedules, contact 3-1-1 or visit the DSNY website at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

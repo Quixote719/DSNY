@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Lincoln's Birthday, Thursday, February 12, 2004</h3>
+<div class="prs-subtitle">
+<p><strong>February 3, 2004</strong> | <em>Vito A. Turso / Kathy Dawkins (646) 885-5020</em></p>
+<p>Press Release # 04-08, FOR IMMEDIATE RELEASE</p>
+</div>
+<span class="bodytext">
+</span><p>The New York City Department of Sanitation has announced that, in observance of Lincoln's Birthday, <b>there will be no</b> garbage or recycling collection, and street cleaning on Thursday, February 12, 2004. Residents who receive Thursday garbage collection should instead place their trash out at curbside Thursday evening, after 5:00 P.M. for anticipated pickup on Friday, February 13, 2004 . Residents who normally receive Thursday, <b>Week A</b> recycling collection are scheduled to have their recycling material picked up on Friday, February 13, 2004.</p>
+<p>Neighborhoods that regularly receive Friday garbage collection and Friday, <b>Week A</b> recycling collection should place their cans or bags out Thursday evening, after 5:00 P.M. as normal. Residences and commercial establishments that unlawfully leave trash or recyclables or dumpsters at curbside over the holiday are subject to a fine of up to $250. Shopkeepers, restaurant managers, and other merchants who are serviced by private carting companies should contact their refuse haulers to determine whether they will receive collection on the holiday.</p>
+<p>All Sanitation Department administrative offices will be closed on Thursday, February 12, 2004 in observance of the holiday. For questions about Sanitation services and schedules over the holiday, call the Citizens Service Center at 311 or visit the DSNY web site at <a href="http://www1.nyc.gov/site/dsny/index.page">www.nyc.gov/sanitation</a>.</p>
+</div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,39 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description">
+<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #15-78<br />
+  Wednesday, September 30, 2015 <br />
+  CONTACT: Vito A. Turso <br />
+  646-885-5020 </p>
+<p> <strong>	DSNY Publishes 2014-2015 Biennial Report</strong> </p> 
+
+<p>The New York City Department of Sanitation has published its 2014-2015 Biennial Report, highlighting the service provided to all New Yorkers and outlining the Agency’s strategy to build a more sustainable City. </p>
+
+
+<p>The report is available <a href="http://www1.nyc.gov/assets/dsny/downloads/pdf/studies-and-reports/20142015AnnualReport.pdf"> online. </a> </p>
+
+
+<p>“Over the next five years, we’re changing our operations with one focus: make it easier for New Yorkers to divert waste from landfills,” Sanitation Commissioner Kathryn Garcia noted in the report. “Recovering these resources is best for our environment – and we’re proud to lead New Yorkers to contribute zero waste to landfills by 2030,” she continued. </p>
+
+
+<p>The report details new and changing programs to help the City reach its zero-waste-to-landfills goal by simplifying curbside recycling, encouraging recycling at schools and in NYCHA communities, promoting re-use, and expanding access to recycling programs for electronics, textiles, hazardous items and organic materials. </p>
+
+
+<p>Additionally, the report highlights the Department’s work to eliminate its fleet’s greenhouse gas emissions and the City’s shrinking reliance on long-haul trucking as rail and marine transfer stations open as part of the Solid Waste Management Plan. </p>
+
+
+<p>In a Mayor’s Message, Mayor Bill de Blasio noted, “I commend DSNY for its dedication each day and in positioning New Yorkers for a vibrant and strong future – one that will keep our City a great place to live, work and visit.” </p>
+
+
+
+
+  <p> <strong> About the New York City Department of Sanitation</strong><br />
+  The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p>
+  
+  </div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

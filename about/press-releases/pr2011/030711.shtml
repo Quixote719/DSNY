@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">DSNY Announces switch to curbside collection at developments in Brooklyn Community Boards 1, 3, 4 and 5</h3>
+<div class="prs-subtitle">
+<p><strong>Monday, March 7, 2011</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 11-12, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation announced today that starting the week of March 14th, 2011, in order to achieve savings, some residential developments within Brooklyn Community Boards 1, 3, 4, and 5 will switch from containerized refuse collection to curbside collection.  These operational changes will result in efficiency gains for the Department, without interrupting the level of service for residents.  Parts of Queens and Staten Island have already been switched from containerized refuse collection to curbside collection.  The locations are:</p>
+<p>&bull;&nbsp;La Cabana Houses &ndash; 391 Lorimer Street<br /> &bull;&nbsp;Caribe Gardens &ndash; 175 Boerum Street<br /> &bull;&nbsp;UDC Restoration Phase 1 &ndash; 721 Willoughby Avenue<br /> &bull;&nbsp;Bedford Stuy Restoration &ndash; 300 Vernon Avenue<br /> &bull;&nbsp;Bushwick Avenue Association &ndash; 757 Bushwick Avenue<br /> &bull;&nbsp;Brooklyn Manor &ndash; 2830 Pitkin Avenue<br /> &bull;&nbsp;Shirtz Residence &ndash; 960/980 Elton Street</p>
+<p>&ldquo;This switch from containerized refuse collection to curbside reflects the budgetary realities the Department faces, but ensures that the affected developments will receive the same level of service they&rsquo;re accustomed to,&rdquo; said Commissioner John J. Doherty.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,19 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Market Research, 2005 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Market Research, 2005</h1>
+
+		  
+
+<p>The 2005 report, <b>Recycling at Home: NYC Resident Attitudes, Awareness, and Behavior</b>, summarizes the results of a standardized telephone survey to determine NYC residents&rsquo; attitudes and behaviors concerning DSNY&rsquo;s recycling program. The survey gauged residents&rsquo; reactions to a number of temporary major changes in the program, most notably the suspension of glass and plastics recycling during 2002&ndash;2003, and to serve as a &ldquo;baseline&rdquo; to test New Yorkers&rsquo; awareness of the program. The study complemented the 2004&ndash;2005 Waste Characterization Study, by collecting important data about the relationship between waste generation and income/housing density groups.</p>
+<p>Based on 1,200 anonymous interviews, the survey concluded that the overwhelming majority of NYC residents actively recycle.</p>
+<p><a href="/assets/dsny/docs/about_2005-market-research_0815.pdf">Read the report</a></p>				
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

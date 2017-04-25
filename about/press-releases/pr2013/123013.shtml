@@ -1,0 +1,17 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">DSNY Sweeps in New Year at Times Square</h3>
+<div class="prs-subtitle">
+<p><strong>Monday, December 30, 2013</strong> | <em>Vito A. Turso</em></p>
+<p style="font-size:14px">Press Release # 13-60, FOR IMMEDIATE RELEASE</p>
+</div>
+<p><img border="1" src="/assets/dsny/images/content/pages/about/news/features_NewYearsCleaning.JPG" width="236" /></p>
+<p style="text-align: left;">When the New Year&rsquo;s revelers in Times Square begin to disperse, a small army of Sanitation Workers will sweep in to clear the aftermath of one of New York&rsquo;s most festive annual events.</p>
+<p style="text-align: left;">As the throngs disperse, Sanitation Workers will converge on the &ldquo;crossroads of the world&rdquo; to clean up tons of party hats, noisemakers, confetti, paper streamers and other New Year&rsquo;s joy.&nbsp;</p>
+<p style="text-align: left;">This year, DSNY will have 156 Sanitation Workers, 23 Officers, and four Chiefs on duty for the enormous challenge, using 24 mechanical sweepers, 22 collection trucks, 70 leaf blowers, and other assorted street cleaning equipment to clear the square. Last year, the DSNY removed 50.84 tons of debris.</p>
+<p>&ldquo;Celebrating the New Year in Times Square brings a million people, many smiling faces, and tons of debris,&rdquo; said Sanitation Commissioner John J. Doherty. &ldquo;In no time, the men and women of the Department of Sanitation will have the area clean and clear, and ready for business on New Year&rsquo;s Day.&rdquo;</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

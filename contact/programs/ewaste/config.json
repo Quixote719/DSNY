@@ -1,0 +1,8 @@
+{
+    "max_dates": 14,
+    "boroughs": [
+        {
+            "name": "Staten Island"
+        }
+    ]
+}

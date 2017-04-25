@@ -1,0 +1,15 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Medical Division </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Medical Division</h1>
+				<p>The Medical Division is an occupational healthcare facility comprised of medical and administrative staff, including board-certified physicians and surgeons, to monitor the medical condition of DSNY employees.</p>
+<p>The Medical Division manages patient treatment resulting from work-related injuries, and processing of medical bills associated with those injuries. The Employee Assistance Unit offers support services, such as counseling and out-patient referrals. The Supervised Sick Leave Unit monitors medical leave for DSNY employees in the uniform service or skilled-trade titles. The Medical Division also administers pre-employment medical examinations of applicants seeking employment as Sanitation Workers and supports Citywide initiatives through the Drug and Alcohol Testing Unit.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

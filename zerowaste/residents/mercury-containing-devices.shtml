@@ -1,0 +1,26 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Mercury Containing Devices  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1> Mercury Containing Devices </h1>
+	
+<p>It is illegal to discard mercury-containing devices with your garbage or recycling.</p>
+<h2>SAFE Disposal Events &amp; Drop-Off Sites</h2>
+<p>Mercury-containing devices are accepted at <a href="/assets/dsny/zerowaste/residents/special-waste-drop-off-sites.shtml" title="Household Special Waste Drop-Off Sites">Household Special Waste Drop-Off Sites</a>. Liquid mercury and mercury-containing devices are accepted at <a href="/assets/dsny/zerowaste/residents/safe-disposal-events.shtml" title="SAFE Disposal Events">SAFE Disposal Events</a>.</p>
+<h2>Take-Back or Drop-Off</h2>
+<p>Visit the <a href="http://www.thermostat-recycle.org/" title="Thermostat Recycling Corporation">Thermostat Recycling Corporation</a> to find a location to drop off mercury thermostats.<br /><br />For other mercury-containing items, contact a hazardous waste recycler; here are two databases to search for information:</p>
+<ul>
+<li><a href="http://esd.ny.gov/businessprograms/secondarymarketinfo.html" title="NYS Recycling Markets Database">NYS Recycling Markets Database</a>&mdash;an interactive database hosted by Empire State Development to help users locate outlets for materials that can be reused, recycled, or composted.</li>
+<li><a href="http://www.superpages.com/" title="Verizon Super Pages">Verizon Super Pages</a>&mdash;use search terms such as &ldquo;hazardous waste disposal,&rdquo; &ldquo;harmful product removal,&rdquo; &ldquo;hazardous waste&nbsp;recycle.&rdquo;</li>
+</ul>
+<h2>Purchasing Tips</h2>
+<p>When remodeling your home or updating your heating system, be sure to ask your contractor to carefully remove and recycle your thermostat.</p>
+<div data-mce-bogus="1" class="mcePaste" id="_mcePaste" style="position: absolute; width: 1px; height: 1px; overflow: hidden; top: -25px; left: -40px;"></div>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

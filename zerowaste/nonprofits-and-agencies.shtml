@@ -1,0 +1,103 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Nonprofits + Agencies</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+		<div id="contentsection" class="about-main-image">
+			<div class="span6 about-description">
+
+<h1>Nonprofits + Agencies</h1>
+<p>Reducing the materials sent to landfills will protect our soil, air and water – and non-profit organizations and City agencies
+ are key partners in helping New York City contribute zero waste to landfills by 2030.
+</p>
+
+<div id = "accordion">
+<p>  Foam Products </p>
+  <div>
+	<p>Some products can’t be easily recycled. Case in point: expanded polystyrene, or EPS. Known as the foam used to make coffee cups, the Department collects more than 28,000 tons of EPS each year. 
+	Foam is lightweight and comprises a substantial amount of litter on our streets, waterway and beaches – and banning EPS cups, plates, containers and packing peanuts is the best way to keep this foam from landfills. In January 2015, Commissioner Garcia determined that foam recycling is not feasible. While a New York State judge has recently overturned the City’s ban on EPS, DSNY is exploring ways to keep this material from landfills.</p>	
+</div>
+
+<p>Disposing Electronics</p>
+<div>
+	<p>
+	Because hazardous chemicals are used to produce electronic equipment, it’s illegal to throw away electronics with other garbage. 
+	Televisions, electronic readers, scanners, printers, digital music players and other equipment must be donated or recycled.</a>  
+	</p>
+	
+	<p>The New York State Electronic Equipment Recycling and Reuse Act bans the disposal of the following type of electronic equipment:</p>
+	<ul>
+		<li>Computers, including items like tablets and e-readers</li>
+		<li>Televisions (as well as cathode ray tubes)</li>
+		<li>Small scale servers</li>
+		<li>Computer peripherals, including any permanently attached cable or wiring</li>
+		<li>Monitors</li>
+		<li>Electronic keyboards</li>
+		<li>Electronic mice and other pointing devices</li>
+		<li>Fax machines, document scanners, and printers that are meant for use with a computer and weigh less than 100 lbs.</li>
+		<li>TV peripherals, including any permanently attached cable or wiring</li>
+		<li>VCRs</li>
+		<li>Digital video recorders</li>
+		<li>DVD players</li>
+		<li>Digital converter boxes</li>
+		<li>Cable or satellite receivers</li>
+		<li>Electronic or video game consoles</li>
+		<li>Portable devices, including any permanently attached cable or wiring</li>
+		<li>Portable digital music players</li>
+	</ul>
+<p>There are several ways to get rid of unwanted electronics, including donating them to a charity, selling them, trading them in, or recycling them. 
+Visit the <a href="/assets/dsny/zerowaste/nonprofitsagencies/donate.shtml">Donate</a> section of Nonprofits + Agencies on this website.</p> 
+<p>Before getting rid of electronics, be sure to erase all sensitive data. NYC agencies must follow agency relinquishment procedures.</p>
+<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/get-donations-for-nonprofits-and-agencies.shtml">Donate, Sell or Trade-in Working Electronics</a></p>
+<p><strong>Recycling Electronics</strong></p>
+<p>If the electronics are no longer working or useful, they should be recycled. Find out if you have an existing disposal contract to manage electronics. Certain equipment may have come with a lease agreement or manufacturer&rsquo;s end-of-life service contract. Some manufacturers also offer asset recovery programs.</p>
+<p>Agencies and nonprofits with fewer than 75 employees are eligible for free and convenient electronics recycling provided by manufacturers. Contact your product manufacturer or see <a href="/assets/dsny/zerowaste/businesses/electronics-take-back.shtml">take-back programs for electronics</a> for more information.</p>
+<p>Although larger agencies and nonprofits are not eligible for these free recycling services, many manufacturers offer similar take-back programs for a fee. Large agencies and nonprofits can also hire a third party recycler. When choosing a recycler, look for <a href="http://www.e-stewards.org/">e-stewards</a> or <a href="http://www.sustainableelectronics.org">R2</a> certification to help ensure that your electronics are recycled responsibly. The NYS Department of Environmental Conservation maintains a list of <a href="http://www.dec.ny.gov/chemical/73670.html">registered recyclers</a>.</p>
+<p>Mayoral agencies should use the <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-disposal.shtml">Agency Safe Handling contract</a> to safely and responsibly recycle electronics. Contract pricing may be available to non-mayoral agencies and nonprofits.</p>
+</div>
+
+<p>Products Requiring Special Handling</p>
+<div>
+	<p>Some items cannot be discarded with regular garbage or recycling and require special handling.</p>
+	
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/appliances.shtml"> Appliances </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/automotive-products.shtml">Automotive Products </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/ballasts.shtml"> Ballasts</a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/batteries.shtml">Batteries </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/bulk.shtml"> Bulk</a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/construction-and-demolition-waste-for-nonprofits-and-agencies.shtml">Construction + Demolition Waste </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/electronics.shtml">Electronics </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/harmful-products.shtml">Harmful Products </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/mattresses.shtml">Mattresses </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/mercury-containing-lamps-and-devices.shtml">Mercury-containing Lamps + Devices </a></p>
+		<p><a href="/assets/dsny/zerowaste/nonprofitsagencies/regulated-medical-waste.shtml">Regulated Medical Waste </a></p>		
+	</ul>
+</div>
+
+<p>Strategies to Reduce Waste</p>
+<div>
+	<p>Reduce, reuse and recycle to save money and to conserve energy and resources.</p>
+
+	<p><strong>Go Paperless.</strong> Since paper is the largest part of the waste stream for many businesses, “cloud computing” services like 
+	online team management make it easy to move much of your company’s workflow online for a paperless office. Post announcements, 
+	forms, and reports on your intranet rather than printing and circulating hard copies. Make it office policy that employees 
+	avoid printing out emails or reports that are sent electronically.</p>
+	<p><strong>Reduce Junk Mail</strong>. Opt out of junk mail with tips from the 
+	<a href="http://your.kingcounty.gov/solidwaste/wasteprevention/junkmail.asp">National Waste Prevention Coalition</a>, 
+	which will cut employees’ time to sort and reduce disposal costs.  Update your own mailing lists regularly, and move to 
+	online communication with your customers, which saves paper and postage costs.</p>
+	<p><strong>Reduce Product and Distribution Packaging</strong>. Speak with your vendors about tailoring merchandise packaging to meet your storage 
+	or display needs. Require vendors to eliminate non-essential packaging elements like hangers, plastic bags, and cardboard 
+	sleeves and inserts. Consider selling small items in bulk bins; you’ll save money and cut waste.</p>
+	<p><strong>Lease New Products.</strong> Consider leasing new products such as computers and electronics, furniture, 
+	carpeting, appliances and tools. When the lease agreement ends, the leasing company – not your organization – 
+	is responsible for determining whether the equipment will be reused or recycled. Since most leasing companies refurbish 
+	items for re-leasing or donating, leasing extends the useful life of many products that would normally be discarded.</p>
+</div>
+
+</div>
+
+
+	</div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

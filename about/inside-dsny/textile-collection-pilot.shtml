@@ -1,0 +1,43 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Textile Collection Pilot </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/educationalmaterials_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>DSNY Curbside Textile Collection Pilot</h1>
+<p>In Fall 2015, DSNY is pilot-testing the curbside collection of clothing for donation. This is a <b>one-time only</b> collection to assess the feasibility of this type of service.</p>
+<p>Sanitation will mail residents in four pilot districts plastic donation bags and instructions for how to set out unwanted clothing and textiles for DSNY collection and subsequent donation. Residents in the pilot districts will then place the filled donation bags at the curb for DSNY collection on a specified recycling collection day.</p>
+<h3>Fall 2015 Textile Collection Pilot Districts</h3>
+<ul>
+<li>Staten Island 3: collection week is September 28, 2015 (<a href="/assets/dsny/docs/about_CTCL-SI3_0915.pdf">see SI3 letter</a>)</li>
+</ul>
+<ul>
+<li>Bronx 8: collection week is October 5, 2015 (<a href="/assets/dsny/docs/about_CTCL-BX8_0915.pdf">see BX8 letter</a>)</li>
+</ul>
+<ul>
+<li>Queens 11: collection week is October 19, 2015 (<a href="/assets/dsny/docs/about_CTCL-QN11_0915.pdf">see Q11 letter</a>)</li>
+</ul>
+<ul>
+<li>Brooklyn 11: collection week is October 26, 2015 (<a href="/assets/dsny/docs/about_CTCL-BK11_0915.pdf">see BK11 letter</a>)</li>
+</ul>
+<h3>Information for Residents in Pilot Districts</h3>
+<p>Sanitation will send an envelope with instructions and pink, plastic donation bags one-to-two weeks before the collection week for your district.</p>
+<p>Please fill the bags with clean, unwanted clothing, shoes, handbags, belts, towels, linens, and curtains. Make sure to securely tie the bags and set them out for DSNY collection <b>the night before your regular recycling day on the designated week, any time after 4pm</b>.</p>
+<p>It is OK to include ripped or torn items because these will be recycled. DO NOT include books, rugs, suitcases, lamps, or children&rsquo;s toys.</p>
+<p>If you need additional bags to set out during your designated collection week:</p>
+<ul>
+<li>You can download and print <a href="/assets/dsny/docs/about_textile-collection-pilot-bag-label_0915.pdf">textile collection labels</a> to tape to clear plastic bags designate them for textile recycling. </li>
+<li>You can also contact your <a href="http://www.nyc.gov/html/cau/html/cb/cb.shtml">local Community Board</a> for extra pink bags for the pilot.</li>
+</ul>
+<h3>What Happens to Donated Items</h3>
+<p>DSNY will bring all collected clothing during the textile collection pilot to <a href="http://www.goodwill.org/">Goodwill</a>. Your donations will support their mission to empower individuals with disabilities and other barriers to employment to gain independence through the power of work.</p>
+<h3>Information for Residents Not Located in Pilot Districts</h3>
+<p>Sanitation will only send donation bags to residents within the textile collection pilot districts. If you are not located in the pilot districts, please do not set out clothing for curbside collection since DSNY will not collect such bags for donation.</p>
+<h3>Other Donation and Reuse Options</h3>
+<p>If you cannot to participate in the pilot, please consider other <a href="/assets/dsny/zerowaste/residents/donate.shtml">donation and reuse options</a>.</p>
+		   </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

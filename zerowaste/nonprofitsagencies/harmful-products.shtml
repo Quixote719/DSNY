@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Harmful Products</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_nonprofitsagencies_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+<h1>Harmful Products</h1>
+
+
+<p>Hazardous and universal wastes require special handling and cannot be discarded with garbage or regular recycling.</p>
+<p>NYC mayoral agencies may use the <a href="/assets/dsny/zerowaste/nonprofitsagencies/safe-disposal.shtml">Agency Safe Handling contract</a> to dispose of universal and electronic waste</p>
+<p>Non-mayoral agencies, nonprofits, and mayoral agencies looking to dispose of hazardous waste can use an internet search database such as <a href="http://www.thebluebook.com/search.html?region=1&amp;class=2363">The Blue Book</a> to find a licensed hazardous waste hauler.</p>
+
+</div></div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

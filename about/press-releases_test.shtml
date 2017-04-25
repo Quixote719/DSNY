@@ -1,0 +1,351 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<head>
+	<style type="text/css">
+		.shtmlr{ clear:both; float:left; }
+		.agencies-about-links{ width:180px;}
+		.about-main-image{ width:74.46809%;    margin-left:0; }
+		.pagination ul>li>a{ border-radius: 0; }
+		.active{ background-color:#339933 !important;color:white !important; }
+		.pagination ul>li>a:hover{ background-color: #50c550 !important;color: white !important; }
+		h5{ font-size:17px; }
+		.prlist-mobile{ color:#ffffff; font-size:31.5px; padding:0px 0px 5px 15px; font-weight:bold }
+		
+		@media only screen and (max-width: 479px) {    
+			.prlist-mobile { letter-spacing: 0; font-size: 20px; line-height: 26px; } 
+		}
+		@media only screen and (min-width: 480px) and (max-width: 640px) and (-webkit-device-pixel-ratio: 1) {   
+			.prlist-mobile {    font-size: 36px; } 
+		}
+	</style>
+</head>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<div id="leftnavsection" class="span3 agencies-about-links">
+			<div class="agencies-about-links">			
+			<ul class="clearfix hidden-phone">	
+				<li>
+				<a class="range" href="/assets/dsny/about/press-releases_test?after=2017-01-01T00:00:00&before=2017-12-31T23:59:59">2017</a>
+				</li>	
+				<li>
+				<a class="range" href="/assets/dsny/about/press-releases_test?after=2016-01-01T00:00:00&before=2017-02-01T23:59:59">pre-Feb 2017</a>
+				</li>			
+				<li>
+			</ul>
+			</div>
+
+		</div>
+
+<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description">
+
+	<h1 id="yearHeader">2017 Press Releases</h1>
+	<div id="pageStuff">
+
+
+		<!--Please Insert a New Press Release Under This Line -->
+
+		<pre>&lt;-- start: Wordpress Post Content from Wordpress evaluation installation on developer's workstation --&gt;</pre>	
+		
+		<div id="wordpress_pr_summaries">
+		</div>
+
+		<div id="wordpress_pr_full" style="display: none">
+		</div>
+
+		<pre>&lt;-- end: Wordpress Post Content --&gt;</pre>
+
+		<div>
+
+
+	</div>
+
+
+
+	<div class="pagination">
+		<ul class="pager">
+		</ul>
+	</div> 
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+	var slug = getUrlParameter('item');
+	if (slug.length > 0) {
+		console.log('load a specific press release:' + slug );
+		loadSinglePressRelease(slug);
+	} else {
+		var before = getUrlParameter('before');
+		var after = getUrlParameter('after');
+		if (before.length > 0 && after.length > 0) {
+			console.log('load range');
+			loadRange(before, after);
+		} else {
+			window.location.href = '/assets/dsny/about/press-releases_test?after=2017-01-01T00:00:00&before=2017-12-31T23:59:59';	
+		}
+		// loadPageOfSummaries();
+	}
+
+	// var ranges = document.getElementsByClassName("range");
+	// for (var i = 0; i < ranges.length; i++) {
+	// 	ranges[i].addEventListener('click', clickRange, false);
+	// }
+
+	
+
+});
+
+// function clickSummary() {
+// 	var slug = this.getAttribute("slug");
+// 	console.log('click on an summary ' + slug);
+// 	window.location.href = '/assets/dsny/about/press-releases_test?item=' + slug;
+// 	// loadSinglePressRelease(slug);
+// };
+
+function clickRange() {
+	var before = this.getAttribute("before");
+	var after = this.getAttribute("after");
+	console.log('click on an range (before:'+before+', after:'+after+')');
+	window.location.href = '/assets/dsny/about/press-releases_test?after='+after+'before='+before;
+	// loadRange(before, after);
+}
+
+function loadRange(before, after) {
+	hideById('wordpress_pr_full');
+	showById('wordpress_pr_summaries');
+	showById('yearHeader');
+	$('#wordpress_pr_summaries').empty();
+	$.ajax( {
+		url: 'http://10.150.97.118:44991/wp-json/wp/v2/posts?categories=10&after='+after+'&before='+before,
+		datatype: "json",
+		success: function ( data ) {
+			$.each(data, function(i, item) {
+				var strPressRelease = '<div class="summary" slug="'+item.slug+'">'
+				+ item.content.rendered
+				+ '<br>'
+				+ '</div>'
+				$('#wordpress_pr_summaries').append(strPressRelease);
+			});
+			// var summaries = document.getElementsByClassName("summary");
+			// for (var i = 0; i < summaries.length; i++) {
+			// 	summaries[i].addEventListener('click', clickSummary, false);
+			// }
+
+		},
+		error: function (a,b,c) {
+			console.log('error');
+		},
+		cache: false
+	} );
+}
+
+// function loadPageOfSummaries() {
+// 	hideById('wordpress_pr_full');
+// 	showById('wordpress_pr_summaries');
+// 	showById('yearHeader');
+// 	$('#wordpress_pr_summaries').empty();
+	
+// 	$.ajax( {
+// 		url: 'http://10.150.97.118:44991/wp-json/wp/v2/posts?categories=10',
+// 		datatype: "json",
+// 		success: function ( data ) {
+// 			$.each(data, function(i, item) {
+// 				var strPressRelease = '<div class="summary" slug="'+item.slug+'">'
+// 				+ item.content.rendered
+// 				+ '<p>'
+// 				+ '<a href="/assets/dsny/about/press-releases_test?item=' + item.slug + '">'
+// 				+ '/assets/dsny/about/press-releases_test?item=' + item.slug
+// 				+ '</a>'
+// 				+ '</p>'
+// 				+ '<hr>'
+// 				+ '</div>'
+// 				$('#wordpress_pr_summaries').append(strPressRelease);
+// 			});
+// 			var summaries = document.getElementsByClassName("summary");
+// 			for (var i = 0; i < summaries.length; i++) {
+// 				summaries[i].addEventListener('click', clickSummary, false);
+// 			}
+
+// 		},
+// 		error: function (a,b,c) {
+// 			console.log('error');
+// 		},
+// 		cache: false
+// 	} );
+// }
+
+function clickSummary() {
+	var slug = this.getAttribute("slug");
+	console.log('click on an summary ' + slug);
+	loadSinglePressRelease(slug);
+};
+
+function loadSinglePressRelease(slug) {
+	hideById('wordpress_pr_summaries');
+	hideById('yearHeader');
+	showById('wordpress_pr_full');
+	$.ajax( {
+		url: 'http://10.150.97.118:44991/wp-json/wp/v2/posts?slug='+slug,
+		datatype: "json",
+		success: function ( data ) {
+			var post = data[0];
+			var content = post.content.rendered;
+			
+			$('#wordpress_pr_full').html(content);
+		},
+		error: function (a,b,c) {
+			console.log('error');
+		},
+		cache: false
+	} );
+}
+
+
+function getUrlParameter( name )
+{
+  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+  var regexS = "[\\?&]"+name+"=([^&#]*)";
+  var regex = new RegExp( regexS );
+  var results = regex.exec( window.location.href );
+  if( results == null )
+	return "";
+  else
+	return results[1];
+}
+function hideById(d) {
+  document.getElementById(d).style.display = "none";
+}
+function showById(d) {
+  document.getElementById(d).style.display = "block";
+}
+
+
+
+
+
+
+
+	var listElement = $('#pageStuff');
+	var perPage = 10;
+	var numItems = listElement.children("div").size();
+	var numPages = Math.ceil(numItems / perPage);
+	var clickedPage = 0;
+	var activePage = 0;
+
+	$('.pager').data("curr", 0);
+
+
+	var curr = 0;
+	while (numPages > curr) {
+		if(curr === 0)
+		{
+			$('<li><a href="#">&laquo;</a></li> <li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
+		}
+		else if (numPages === curr + 1)
+		{
+			$('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li><li><a href="#">&raquo;</a></li>').appendTo('.pager');
+		}        
+		else
+		{
+			$('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
+		}
+		curr++;
+	}
+
+	$('.pager .page_link:first').addClass('active');
+
+	listElement.children("div").css('display', 'none');
+	listElement.children("div").slice(0, perPage).css('display', 'block');
+
+	$('.pager li a').click(function () {
+
+		clickedPage = $(this).html().valueOf() - 1;
+
+		if ($(this).html().valueOf() == "«")
+		{
+			if(activePage !== 0)
+			{
+				var prevPage = activePage - 1;
+				$('.pager li a').removeClass('active');
+				$('#page' + prevPage).addClass('active');
+				previous();
+			}
+		}
+		else if ($(this).html().valueOf() == "»") 
+		{
+			if(activePage !== numPages - 1)
+			{
+				var nextPage = activePage + 1;
+				$('.pager li a').removeClass('active');
+				$('#page' + nextPage).addClass('active');
+				next();
+			}
+		}
+		else
+		{
+			$('.pager li a').removeClass('active');
+			$(this).addClass('active');
+			goTo(clickedPage, perPage);
+		};
+	});
+
+	function previous() {
+		if(activePage === 0)
+		{
+			goTo(activePage, perPage);
+		}
+		else
+		{
+			var prevPage = activePage - 1;
+			goTo(prevPage, perPage);
+		}
+		/*var goToPage = parseInt($('.pager').data("curr")) - 1;
+		if ($('.active_page').prev('.page_link').length == true) {
+			goTo(goToPage);
+		}*/
+	}
+
+	function next() {
+		var lastPage = numPages - 1;
+		if(activePage === lastPage)
+		{
+			goTo(activePage, perPage);
+		}
+		else
+		{
+			var nextPage = activePage + 1;
+			goTo(nextPage, perPage);
+		}
+		/*var goToPage = parseInt($('.pager').data("curr")) + 1;
+		if ($('.active_page').next('.page_link').length == true) {
+			goTo(goToPage);
+		}*/
+	}
+
+	function goTo(page) {
+		activePage = page;
+		var startAt = page * perPage,
+		endOn = startAt + perPage;
+
+		listElement.children().css('display', 'none').slice(startAt, endOn).css('display', 'block');
+		$('.pager').attr("curr", page);
+	}
+
+	$('.active').hover(function(){
+		$(this).css('background-color', '#50c550');
+		$(this).css('color', 'white');
+	});
+
+	$('.active').mouseleave(function(){
+		$(this).css('background-color', 'white');
+		$(this).css('color', '#339933');
+	});
+
+
+
+</script>

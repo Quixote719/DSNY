@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Department Suspends Refuse and Recycling Pickup in order to Clear City of Snow</h3>
+<div class="prs-subtitle">
+<p><strong>December 26,2010</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 10-48, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>In order to ensure that all city streets are plowed and salted throughout the  current blizzard, the Department of Sanitation has announced that all scheduled  refuse and recycling pickups will be suspended citywide.&nbsp; Announcements  will be made when curbside pickups will resume.&nbsp; For any Sanitation related  questions on the most up-to-date information, residents can call 3-1-1 or visit  <a href="http://www.nyc.gov/sanitation">www.nyc.gov/sanitation</a>.&nbsp;</p>
+</div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

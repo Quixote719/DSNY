@@ -1,0 +1,24 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Job Training program </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/jobs_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Job Training program </h1>
+
+<p>If you are a business and interested in hiring employees, DSNY&rsquo;s Job Training Program (JTP) can help.</p>
+<p>DSNY Job Training Program participants complete six months of comprehensive on-the-job skills training in custodial, clerical, and soft skills such as how to keep a job. JTP participants also receive job-readiness skills development on how to update their resumes, conduct mock interviews, and apply online for both City and private jobs.</p>
+<p>DSNY graduates have the training and experience to qualify for a variety of employment opportunities including:</p>
+<ul>
+<li>Clerical</li>
+<li>Maintenance</li>
+<li>Street cleaning</li>
+</ul>
+<p>Employers save time and money hiring candidates who are pre-screened to meet job requirements.</p>
+<p>At this time, DSNY does not accept outside referrals for the Job Training Program. For general inquiries or to discuss your hiring needs, please complete the <a href="/assets/dsny/contact/programs/job-training-inquiry.shtml" title="Job Training Inquiry">Job Training Inquiry</a>.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

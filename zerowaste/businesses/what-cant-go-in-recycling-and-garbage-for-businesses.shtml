@@ -1,0 +1,31 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - What Can't Go In</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/recycle_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+
+<h1>What Can't Go in Recycling and Garbage for Businesses </h1>
+
+		 
+<p>
+	Some commonly used items cannot go in the regular garbage or recycling. These items include hazardous waste like batteries, anything containing mercury, pesticides, medical waste, and certain types of lights.
+</p>
+<p>
+	The following items cannot be thrown out with regular garbage:
+</p>
+<p><a href="/assets/dsny/zerowaste/businesses/automotive-products.shtml">Automotive Products</a></p>
+<p><a href="/assets/dsny/zerowaste/businesses/batteries.shtml">Batteries</a></p>
+<p><a href="/assets/dsny/zerowaste/businesses/construction-and-demolition-waste-for-businesses.shtml">Construction & Demolition Waste</a></p>
+<p><a href="/assets/dsny/zerowaste/businesses/electronics.shtml">Electronics</a></p>
+<p><a href="/assets/dsny/zerowaste/businesses/harmful-products.shtml">Harmful Products</a> (Items containing mercury and pesticides)</p>
+<p><a href="/assets/dsny/zerowaste/businesses/lighting.shtml">Fluorescent Lighting</a></p>
+<p><a href="/assets/dsny/zerowaste/businesses/regulated-medical-waste-disposal.shtml">Medical Waste</a></p>
+
+
+				</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

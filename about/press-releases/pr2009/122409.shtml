@@ -1,0 +1,15 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling Collection or Street Cleaning on Christmas Day, December 25th</h3>
+<div class="prs-subtitle">
+<p><strong>Thursday, December 24, 2009</strong> | <em>Vito A. Turso/Matthew LiPani</em></p>
+<p>Press Release # 09-52, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation (DSNY) announced today that in observance of Christmas Day, there will be no garbage or recycling collection, or street cleaning on Friday, December 25, 2009.  In addition, all Sanitation Department administrative offices will be closed on Friday, December 25th, in observance of the holiday.</p>
+<p><strong>Residents who normally receive Friday garbage and recycling collection should place their garbage and recycling out at curbside Friday after 4 P.M. for pickup.</strong></p>
+<p>For questions about Sanitation services and holiday schedules, contact 311 or visit the DSNY website at www.nyc.gov/sanitation.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

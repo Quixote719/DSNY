@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Asbestos </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+<h1> Asbestos </h1>
+
+<p>Asbestos must never be discarded at the curb. Contact an appropriate private hazardous/chemical waste company.</p>
+<p>If you are renovating or demolishing a building, you must conform to asbestos-abatement regulations to avoid release of asbestos fibers into the air. 
+<a href="http://nyc.gov/html/dep/html/air_and_noise/asbestos_abatement.shtml" title="NYC's Asbestos Control Program">NYC's Asbestos Control Program</a> provides guidance on and requirements for the proper handling, storing, and disposal of asbestos-containing materials.</p>
+
+			</div>			
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

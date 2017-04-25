@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Recycling and Sustainability </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+				<h1>Recycling and Sustainability</h1>
+				<p>The DSNY Bureau of Recycling and Sustainability plans, implements, promotes, and evaluates DSNY&rsquo;s recycling, composting, and waste prevention programs to support the Department&rsquo;s efficient management of the City&rsquo;s solid waste, and to pursue achievement of the City&rsquo;s ambitious sustainability goals.</p>
+<p>The Bureau engages residents, schools, City agencies &amp; institutions, and businesses to improve their waste diversion practices. Bureau activities include the distribution of a wide range of educational materials; facilitating site visits and trainings; participating in public events and meetings, and conducting policy analysis and research.</p>
+<p><a href="/assets/dsny/docs/about_PSR_SITELIST_0815.pdf">Recycling Bin Locations for Paper, Metal, Glass and Plastic</a></p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

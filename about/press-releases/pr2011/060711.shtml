@@ -1,0 +1,24 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">Sanitation Releases Guide on Safe Handling and Disposal of Potentially Harmful Products</h3>
+<div class="prs-subtitle">
+<p><strong>Tuesday, June 7, 2011</strong> | <em>Vito A. Turso/Keith Mellis </em></p>
+<p>Press Release # 11-23, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>Sanitation Commissioner John J. Doherty today announced the release of a guide for residents on how to safely handle and discard potentially harmful products, many of which are used in homes daily, but which can cause harm to adults, children, pets and the environment if not handled and disposed of properly.  The guide is being mailed out to all NYC households as an information resource residents can refer to when determining the safest way to dispose of an unwanted product.</p>
+<p>The guide has been under development for several years and was created by the Department&rsquo;s Bureau of Waste Prevention, Reuse &amp; Recycling (BWPRR), with input from the NY State Department of Environmental Conservation, NYC Office of Emergency Management, NYC Department of Health and Mental Hygiene, and the NYC Department of Environmental Protection.</p>
+<p>The guide provides residents with individual guidelines for the purchasing, handling and disposal of many typical household products, including but not limited to:</p>
+<ul>
+<li>Household Medical Waste</li>
+<li>Automotive Products</li>
+<li>Household Products Containing Mercury</li>
+<li>Electronic Products</li>
+<li>Gas Cylinders</li>
+<li>Cleaning and Maintenance Products</li>
+</ul>
+<p>The guide also provides information on the Special Waste Drop-Off Sites operated by Sanitation, including the types of products accepted at the sites and the hours of operation.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

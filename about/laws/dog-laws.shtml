@@ -1,0 +1,28 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Dog laws </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/streetandsidewalklaws_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+		<div class="span6 about-description">
+
+<h1> Dog Laws </h1>
+
+
+<h2>Failure to Remove Canine Waste</h2>
+<p>Each person who owns or controls a dog must remove any feces left by that dog on any sidewalk, gutter, street, or other public area and dispose of it in a legal manner.&nbsp; The person may remove the feces and carry them away with him/her for disposal in a toilet or their own litter basket.&nbsp; The feces may also be placed in a non-leaking sealed bag or container and deposited in a DSNY litter basket.&nbsp; The provisions of this law do not apply to a guide dog accompanying any blind person.</p>
+<p><i>Related Law: </i><a href="http://public.leginfo.state.ny.us/lawssrch.cgi?NVLWO:">New York State Public Health Law &sect;1310</a> <br />(Search for Public Health Law (PBH), Article 13, Title 1: General Provisions; Control and Abatement)</p>
+<p><i>Fine: </i>$250</p>
+<h2>Control of Dogs &amp; Other Animals to Prevent Nuisance</h2>
+<p>Each person who owns or controls a pet shall not allow the animal to commit a nuisance on any public or private premises used in common by the public, or any area of a building abutting a public place.</p>
+<p><i>Related Law: </i><a href="http://library.amlegal.com/nxt/gateway.dll/New%20York/rules/title24departmentofhealthandmentalhygien/newyorkcityhealthcode?f=templates$fn=default.htm$3.0$vid=amlegal:newyork_ny$anc=JD_T24HC_161.03">New York City Health Code &sect;161.03</a></p>
+<p><i>Fine:</i> $200&ndash;$400</p>
+<h2><span>Unleashed Dogs</span></h2>
+<p>A person who owns or controls a dog may not allow it to be in any public place or in any open or unfenced field abutting a public place, unless the dog is effectively restrained by a leash or chain no more than six feet long.</p>
+<p><i>Related Law: </i><a href="http://library.amlegal.com/nxt/gateway.dll/New%20York/rules/title24departmentofhealthandmentalhygien/newyorkcityhealthcode?f=templates$fn=default.htm$3.0$vid=amlegal:newyork_ny$anc=JD_T24HC_161.05">New York City Health Code &sect;161.05</a></p>
+<p><i>Fine: </i>$200&ndash;$400</p>
+
+		 </div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

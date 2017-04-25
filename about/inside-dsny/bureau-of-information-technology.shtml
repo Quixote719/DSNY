@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Bureau of Information Technology </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/bureausandunits_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+		<h1> Bureau Of Information Technology </h1>
+
+		
+<p>The Bureau of Information Technology manages all aspects of computing and technology for DSNY, including networks, databases, software, devices, and technical support.</p>
+<p>The Bureau designed the Sanitation Management Analysis and Resource Tracking (SMART) system, a web-based mobile system that provides DSNY field forces with digital operations, scheduling, and reporting technology, and gives DSNY management instant access to real-time operational information. It is integrated with City-wide systems such as GIS mapping services, fleet management, building management, human resources, and purchasing and financial applications.</p>
+		    </div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,31 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Waste Hauler</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_business_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+<div class="span6 about-description">
+
+
+<h1>Private Waste Hauler Requirements </h1>
+
+<p>
+	If your business is engaged in <strong>landfilling, grading, land improvements, or changing existing property grades by adding fill material</strong>, you must have a <a href="https://www1.nyc.gov/nycbusiness/description/fill-material-operation" >Fill Material Operation permit</a>.
+</p>
+<p>
+	<strong>Intermodal solid waste transfer facilities</strong> (facilities where solid waste is transferred to rail, vessel, or other transport for shipment to a treatment or disposal facility) must be <a href="https://www1.nyc.gov/nycbusiness/description/intermodal-registration" >registered with DSNY</a>.
+</p>
+<p>
+	Operators of <strong>putrescible solid waste transfer stations</strong> (transfer facilities for solid waste with organic matter that tends to decompose and form odors) are required to have a <a href="https://www1.nyc.gov/nycbusiness/description/solid-waste-transfer-station" >Solid Waste Transfer Station permit</a>.
+</p>
+<p>
+	<strong>Non-putrescible solid waste transfer stations</strong> (also known as construction and demolition transfer stations) must have a <a href="https://www1.nyc.gov/nycbusiness/description/solid-waste-transfer-station-nonputrescible" >Non-Putrescible Solid Waste Transfer Station permit</a>.
+</p>
+<p>
+	<strong>Fill-material transfer stations</strong> (which handle clean earth, dirt, concrete, rock, gravel, stone, and sand) are required to have a <a href="https://www1.nyc.gov/nycbusiness/description/fill-material-operation" >Fill Material Transfer Station permit</a>.
+</p>
+
+			</div>	
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

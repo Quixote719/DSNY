@@ -1,0 +1,22 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><h3 class="prs-title">No Garbage, Recycling, Organics Collection or Street Cleaning on New Year&rsquo;s Day, Thursday January 1st</h3>
+<div class="prs-subtitle">
+<p><strong>Tuesday, December 30, 2014</strong> | <em>Vito A. Turso/Belinda A. Mager</em></p>
+<p style="font-size:14px">Press Release # 14-92, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>In observance of New Year&rsquo;s Day, there will be no garbage, recycling or organics collection, or street cleaning on Thursday, January 1, 2015. In addition, all DSNY administrative offices will be closed.</p>
+<ul>
+<li><span style="font-size:12pt;font-family:Symbol"></span>Residents normally receiving Thursday <strong>recycling collection</strong> should not place their materials out at curbside until after 4 p.m. on Thursday, January 1 for collection on Friday, January 2.</li>
+<li>
+<div style="margin-left:0in;margin-bottom:px;margin-top:px">Residents who normally receive Thursday <strong>refuse and organics collection</strong> should place their materials out at curbside Thursday evening after 4 p.m. &nbsp;Most residents will have their refuse collected a day or two after the holiday, however, some residents may not receive service until their next scheduled collection day. Thursday organic material will be collected on Friday after the holiday.</div>
+</li>
+</ul>
+<p>&nbsp;</p>
+<h3 class="prs-about"><i class="fa fa-university"></i> About the New York City Department of Sanitation</h3>
+<p>The Department of Sanitation (DSNY) promotes a healthy environment through the efficient management of solid waste and the development of environmentally sound long-range planning for handling refuse, including recyclables. The Department operates 59 district garages and manages a fleet of 2,022 rear-loading collection trucks, 450 mechanical brooms and 365 salt/sand spreaders. The Department clears litter, snow and ice from approximately 6,000 miles of City streets and removes debris from vacant lots as well as abandoned vehicles from City streets.</p></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

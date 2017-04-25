@@ -1,0 +1,28 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Contact - Disability Services</title>
+
+
+<!--#include virtual="/assets/dsny/templates/contacttemplates.shtml" -->
+
+
+<div id="contentsection" class="about-main-image">
+
+<div class="span6 about-description">
+
+	<h1>Disability Services</h1>
+<p>The New York City Department of Sanitation complies with all applicable laws, including, but not limited to, the Americans with Disabilities Act (ADA) and the Rehabilitation Act. </p>
+
+<p>Anyone who requires services or a modification of policies or procedures to participate in DSNY programs or activities is encouraged to contact the Disability Services Facilitator by telephone or email:</p>
+
+<p>Chief Stephen Harbin <br>
+Director, Division of Safety and Training<br>
+Tel: 718-758-7948<br>
+Email: <a href="mailto:sharbin@dsny.nyc.gov">sharbin@dsny.nyc.gov</a></p>
+
+
+
+</div></div>
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

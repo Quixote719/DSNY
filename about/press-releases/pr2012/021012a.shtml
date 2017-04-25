@@ -1,0 +1,18 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image"><div class="span6 about-description"><div>
+<h3 class="prs-title">Snow Alert Issued</h3>
+<div class="prs-subtitle">
+<p><strong>February 10,2012</strong> | <em>Vito A. Turso</em><em>/Matthew LiPani</em></p>
+<p>Press Release # 12-12, FOR IMMEDIATE RELEASE</p>
+</div>
+<p>The New York City Department of Sanitation has issued a &lsquo;snow alert&rsquo; for Friday, February 10, 2012 starting at 10 PM.&nbsp; The Department is preparing for one to three inches of snow, primarily on grassy, unpaved surfaces.&nbsp;</p>
+<p>A snow alert indicates the possibility of a snow event.&nbsp; In preparation for a snow event, DSNY personnel begin initial equipment readiness, including loading salt spreaders, attaching plows when necessary, preparing tire chains, and notifying supplementary personnel as needed.&nbsp; DSNY is coordinating with the Office of Emergency Management and the Department of Transportation on snow clearing protocol in accordance with each agency&rsquo;s written snow plan.&nbsp; All relevant City agencies have been notified of the snow alert.&nbsp; DSNY will continue to monitor forecasts and will provide updates as the snow event approaches.&nbsp;</p>
+<p>All winter weather information and information about the City&rsquo;s response to the storm can be found by calling 311. New Yorkers are also encouraged to sign up for the Notify NYC, the City&rsquo;s free emergency notification system. Through Notify NYC New Yorkers can sign up to receive phone calls, text messages, and email alerts about severe weather events and emergencies. To sign up for Notify NYC call 311, visit <a href="http://www.nyc.gov">www.nyc.gov</a>, or follow @NotifyNYC on Twitter.</p>
+</div>
+<div style="position: absolute; left: 0px; top: -25px; width: 1px; height: 1px; overflow: hidden;" data-mce-bogus="1" class="mcePaste" id="_mcePaste"></div></div>		 </div>
+
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

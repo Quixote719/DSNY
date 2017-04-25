@@ -1,0 +1,19 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Manhattan District 4, 4a &amp; 7 Garage </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/garages_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+
+		<h1> Manhattan District 4, 4a &amp; 7 Garage </h1>
+<div class="row img-row">
+<div><img src="/assets/dsny/img/about_mn4and7garage_0815.jpg" alt="DSNY Manhattan 4 and 7 Garage" />
+<div class="img-caption">Manhattan District 4 and 7 Garage</div>
+</div>
+</div>
+<p>The Manhattan District 4, 4A, and 7 Garage displays a &ldquo;wave wall&rdquo; fa&ccedil;ade of curved glass that defies all stereotypes of a Sanitation garage. This undulating front entertains viewers with a pixilated truck washing show that takes place behind a specially designed glass brick wall along its 12<sup>th</sup><span> Avenue face. A strategically placed 11</span><sup>th</sup><span> Avenue arch allows pedestrians to proceed through the enormous complex without increasing neighborhood congestion.</span></p>
+<p>With four truck storage floors, a central ramp, ample parking in the heart of Midtown Manhattan, and state-of-the-art employee and personnel facilities, the garage is both a functional and an aesthetic marvel. Its ability to achieve architectural excellence while serving practical community needs earned it the prestigious <a href="http://www1.nyc.gov/site/designcommission/awards/past-awards/design-awards-21.page">Art Commission of NYC&rsquo;s Excellence in Design Award in 2003.</a></p>
+
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

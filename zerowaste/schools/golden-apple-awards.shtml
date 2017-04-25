@@ -1,0 +1,24 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Golden Apple Awards</title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_schools_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Golden Apple Awards</h1>
+<p>DSNY&rsquo;s Golden Apple Awards reward NYC public schools grades K&ndash;12 with cash prizes for implementing innovative and exemplary programs in recycling, waste prevention, and cleanup and beautification.</p>
+<p><a href="/assets/dsny/zerowaste/schools/previous-golden-apple-award-winners.shtml">Golden Apple Award winners</a> have received awards ranging up to $10,000. (Award levels may change year-to-year based on available funding.)</p>
+<div class="fluid-wrapper"><iframe width="700" frameborder="0" src="http://player.vimeo.com/video/81223939" height="393"></iframe></div>
+<h2>The Contests</h2>
+<p>Learn about the Golden Apple Awards contests and how to enter:</p>
+<p><a href="/assets/dsny/zerowaste/schools/super-recyclers.shtml">Super Recyclers</a>&mdash;rewards schools that implement exemplary recycling programs and educational components.</p>
+<p><a href="/assets/dsny/zerowaste/schools/reduce-and-reuse.shtml">Reduce &amp; Reuse</a>&mdash;rewards schools with the most successful and innovative waste prevention practices.</p>
+<p><a href="/assets/dsny/zerowaste/schools/team-up-to-clean-up.shtml">Team Up to Clean Up</a>&mdash;rewards schools for effective cleanup, beautification, or reclamation projects, including school gardens.</p>
+<p>Schools can compete in any or all of the three contests by completing separate and distinct projects for each contest. Each contest has separate elementary, intermediate, and high school divisions. Schools cannot win in multiple years for the same project.</p>
+<p>A judging panel of environmental educators and government officials carefully reviews the entries submitted to select the winners for each grade division. There are not always winners in each division and each contest. Winners are announced every year in June.</p>
+
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

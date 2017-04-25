@@ -1,0 +1,17 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Waste Characterization, 2005 </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+				
+			<h1>Waste Characterization, 2005</h1>
+<p>The <b>New York City 2004&ndash;05 Residential and Street Basket Waste Characterization Study</b> is a comprehensive look at the composition and generation rates of NYC&rsquo;s residential and street basket waste.</p>
+<p>The report presents the results of a Preliminary Waste Characterization Study (PWCS) conducted in May and June 2004, and a Waste Characterization Study conducted from October 2004 through August 2005. The purpose of both studies was to characterize the City&rsquo;s residential waste. Both studies involved taking samples of garbage and recycling and then sorting and weighing the materials in those samples to arrive at an estimate of the composition of the waste.</p>
+<p>The PWCS developed a snapshot of NYC&rsquo;s curbside residential garbage and recycling. The WCS had three components: a residential study that characterized the curbside-collected residential waste based on housing density and income strata; a street basket waste study; and a multi-unit apartment study that identified correlations between recycling success and building characteristics.</p>
+<p><a href="/assets/dsny/docs/about_2004-2005-waste-characterization_0815.pdf">Read the report </a></p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -1,0 +1,16 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Composting in NYC, 2001</title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/reports_leftnav.shtml" -->
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+
+<h1>Composting in NYC, 2001</h1>
+<p>The 2001 report, <b>Composting in New York City: A Complete Program History</b>,<b> </b>summarizes DSNY&rsquo;s efforts to compost the organic material in NYC&rsquo;s waste stream. DSNY examined and tested two overarching strategies to recover the compostable portion of the residential and institutional waste stream: centralized composting, which involves collecting and transporting organic material to a centralized composting facility, and de-centralized composting, which occurs on site.</p>
+<p>This report summarizes DSNY&rsquo;s experiences and contains recommendations for advancing the most promising aspects of each approach.</p>
+<p><a href="/assets/dsny/docs/about_2001-composting-in-nyc_0815.pdf">Read the report</a></p>
+	</div>
+</div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

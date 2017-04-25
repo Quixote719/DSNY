@@ -1,0 +1,25 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Deposit Bottles  </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+<!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
+		<div id="contentsection" class="span9 about-main-image">
+			<div class="span6 about-description">
+
+<h1>Deposit Bottles </h1>
+
+<p><b>Recycling: </b>Set out glass and plastic beverage bottles with your recycling.</p>
+<h2>Take-Back or Drop-Off</h2>
+<p>New York State law requires a 5-cent deposit on containers (under 1 gallon) for carbonated soft drinks, water and soda water, beer, malt beverages,&nbsp;and wine&nbsp;coolers. Dealers must refund the deposit on all containers of the same type&ndash;brand, size, shape, color, and composition&ndash;that they sell for off-premises consumption, regardless of where the container was originally purchased.<br />A store may refuse to return a deposit if the store doesn&rsquo;t carry that type of container, or if the container:</p> 
+<ul>
+<li>Doesn&rsquo;t have a proper New York refund label</li>
+<li>Isn&rsquo;t in reasonably good condition</li>
+<li>Is broken, corroded, or crushed</li>
+<li>Has anything in it besides small amounts of dirt, dust, or moisture</li>
+</ul>
+
+<p>A store may decline to accept more than 240 containers from one person at one time and in one day. However, you may make 48-hour advance arrangements to redeem an unlimited number of empty beverage containers. Stores that are not open 24 hours a day don&rsquo;t have to accept containers during the first and last half hour of their business day.<br /><br />In addition,&nbsp;<a href="/assets/dsny/zerowaste/businesses/what-to-recycle-for-non-food-service-establishments.shtml" title="food service establishments">food service establishments</a> where customers clear their own tables have to provide labeled containers for these recyclables.</p>
+			</div>
+		 </div>
+		 
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
