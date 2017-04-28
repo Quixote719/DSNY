@@ -432,12 +432,7 @@
 								<div class="pure-u-1 pure-u-md-1-3"> 
 									<label for="pallets">NUMBER OF PALLETS OF COMPOST (EACH PALLET CONTAINS 60 FORTY-POUND BAGS) <span class="red">*</span></label>
 									<input id="pallets" name="pallets" type="text" maxlength="125" tabindex="38" required/>
-								</div>
-
-								<div class="pure-u-1 pure-u-md-1-3"> 
-									<label></label>
-									<input type="hidden" name="placeholder" />
-								</div>
+								</div>								
 								
 								<div class="pure-u-1 pure-u-md-1-3">
 									<label for="ApptDate">WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY? <span class="red">*</span></label> 
@@ -450,6 +445,7 @@
 
 								<div class="pure-u-1 pure-u-md-1-3" id="deliverydateparent">
 									<label for="deliveryDates">PREFERRED DELIVERY DAYS <span class="red deliveryflag" style="display: none;">*</span></label>
+									<i>Select ALL that apply:</i><br>
 									<input value="Monday"  type="checkbox" tabindex="39" class="deliveryDates" name="deliveryDates">&nbsp; Monday<br>
 									<input value="Tuesday"  type="checkbox" tabindex="40" class="deliveryDates" name="deliveryDates">&nbsp; Tuesday<br>
 									<input value="Wednesday"  type="checkbox" tabindex="41" class="deliveryDates" name="deliveryDates">&nbsp; Wednesday<br>
@@ -459,15 +455,16 @@
 								</div>
 								<div class="pure-u-1 pure-u-md-1-3">
 									<label for="deliveryDates">PREFERRED DELIVERY TIMES <span class="red deliveryflag" style="display: none;">*</span></label>
-									<input value= "7am" type="checkbox" tabindex="45" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;7</pre> AM<br>
-									<input value= "8am" type="checkbox" tabindex="46" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;8</pre> AM<br>
-									<input value= "9am" type="checkbox" tabindex="47" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;9</pre> AM<br>
-									<input value="10am" type="checkbox" tabindex="48" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;"> 10</pre> AM<br>
-									<input value="11am" type="checkbox" tabindex="49" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;"> 11</pre> AM<br>
-									<input value="12am" type="checkbox" tabindex="50" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;"> 12</pre> AM<br>
-									<input value= "1pm" type="checkbox" tabindex="51" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;1</pre> PM<br>
-									<input value= "2pm" type="checkbox" tabindex="52" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;2</pre> PM<br>
-									<input value= "3pm" type="checkbox" tabindex="53" class="deliveryTime" name="deliveryTime"><pre style="all: initial; font-family: 'Lucida Console', Monaco, monospace;">  &nbsp;3</pre> PM<br>						
+									<i>Select ALL that apply:</i><br>
+									<input value= "7am" type="checkbox" tabindex="45" class="deliveryTime" name="deliveryTime">  &nbsp;7 AM<br>
+									<input value= "8am" type="checkbox" tabindex="46" class="deliveryTime" name="deliveryTime">  &nbsp;8 AM<br>
+									<input value= "9am" type="checkbox" tabindex="47" class="deliveryTime" name="deliveryTime">  &nbsp;9 AM<br>
+									<input value="10am" type="checkbox" tabindex="48" class="deliveryTime" name="deliveryTime"> 10 AM<br>
+									<input value="11am" type="checkbox" tabindex="49" class="deliveryTime" name="deliveryTime"> 11 AM<br>
+									<input value="12am" type="checkbox" tabindex="50" class="deliveryTime" name="deliveryTime"> 12 AM<br>
+									<input value= "1pm" type="checkbox" tabindex="51" class="deliveryTime" name="deliveryTime">  &nbsp;1 PM<br>
+									<input value= "2pm" type="checkbox" tabindex="52" class="deliveryTime" name="deliveryTime">  &nbsp;2 PM<br>
+									<input value= "3pm" type="checkbox" tabindex="53" class="deliveryTime" name="deliveryTime">  &nbsp;3 PM<br>						
 								</div>
 								<div class="pure-u-1 pure-u-md-1-3"> 
 									<label for="deliveryNotes">DELIVERY NOTES AND INSTRUCTIONS </label>
