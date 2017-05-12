@@ -1,4 +1,8 @@
 ﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<script type="text/javascript">
+	window.location.replace("/assets/dsny/zerowaste/residents/how-to-get-organics-collection-service.shtml");
+</script>
+
 <title>DSNY - Zero Waste - Organics Collection In Large Buildings (10+ Units) </title>
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 

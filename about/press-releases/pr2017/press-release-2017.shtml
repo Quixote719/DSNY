@@ -1,9 +1,9 @@
-<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
 <title>DSNY - About - Press Releases </title>
 <head>
-	<style type="text/css">
-		.shtmlr{        clear:both;        float:left;    }.agencies-about-links{    width:180px;}.about-main-image{    width:74.46809%;    margin-left:0;}.pagination ul>li>a{border-radius: 0;}.active{background-color:#339933 !important;color:white !important;}.pagination ul>li>a:hover{background-color: #50c550 !important;color: white !important;}h5{font-size:17px;}.prlist-mobile{color:#ffffff; font-size:31.5px; padding:0px 0px 5px 15px; font-weight:bold}@media only screen and (max-width: 479px) {  /* line 139, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/subheader.scss */  .prlist-mobile {    letter-spacing: 0;    font-size: 20px;    line-height: 26px; } }@media only screen and (min-width: 480px) and (max-width: 640px) and (-webkit-device-pixel-ratio: 1) {  /* line 149, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/subheader.scss */  .prlist-mobile {    font-size: 36px; } }
-	</style>
+    <style type="text/css">
+    .shtmlr{        clear:both;        float:left;    }.agencies-about-links{    width:180px;}.about-main-image{    width:74.46809%;    margin-left:0;}.pagination ul>li>a{border-radius: 0;}.active{background-color:#339933 !important;color:white !important;}.pagination ul>li>a:hover{background-color: #50c550 !important;color: white !important;}h5{font-size:17px;}.prlist-mobile{color:#ffffff; font-size:31.5px; padding:0px 0px 5px 15px; font-weight:bold}@media only screen and (max-width: 479px) {  /* line 139, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/subheader.scss */  .prlist-mobile {    letter-spacing: 0;    font-size: 20px;    line-height: 26px; } }@media only screen and (min-width: 480px) and (max-width: 640px) and (-webkit-device-pixel-ratio: 1) {  /* line 149, /Volumes/UserData/Users/lmairl/Projects/NYC.GOV/source/assets/home/css/modules/subheader.scss */  .prlist-mobile {    font-size: 36px; } }
+    </style>
 </head>
 <!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
 
@@ -13,215 +13,582 @@
 
 
 
-	<h1>2017 Press Releases</h1>
-	<div id="pageStuff">
+<h1>2017 Press Releases</h1>
+<div id="pageStuff">
 
 
-		<!--Please Insert a New Press Release Under This Line -->
+<!--Please Insert a New Press Release Under This Line -->
 
 
-		<div>
 
+<div>
 
-			<br>
-			<p>
-				<strong>Thursday, March 2, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/03022017.shtml"> DSNY Issues ‘Snow Alert’ for Friday, March 3 at 1 p.m. to Prepare Equipment and Personnel for Winter Weather
-				</a>
-			</h5>
-			<p>The New York City Department of Sanitation has issued a "Snow Alert" for Friday, March 3 at 1 p.m. Calling a “Snow Alert” allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows, preparing tire chains and notifying other city agencies and supplementary personnel as needed. 
-			</p>
-			<p>PRESS RELEASE # 17-11</p>	
 
+                        <br>
+                        <p>
+                        <strong>Thursday, May 11, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/05112017.shtml"> <p> <strong> NYC Sanitation Launches DSNY Info, its App to Help Keep New York City Healthy, Safe and Clean </strong> </a>
+                        </h5>
+						   <p>The New York City Department of Sanitation is announcing the launch of DSNY Info, its smart phone and tablet app that 
+						   provides Sanitation service reminders, updates and special event schedules. The app also includes tips to reduce, 
+						   reuse and recycle, making it easier for New Yorkers send zero waste to landfills by 2030.  The free app is available
+						   for both iOS and Android operating systems, and can be found by searching DSNY Info in the Apple App and Google Play stores. </p>
 
-		</div>
+ <p>PRESS RELEASE # 17-29</p>	
+ 
 
+</div>
 
 
-		<div>
 
 
-			<br>
-			<p>
-				<strong>Tuesday, February 14, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/02142017.shtml"> No Garbage, Recycling or Organic Collection, nor Street Cleaning on Presidents’ Day, Monday, February 20
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation announced that in observance of Presidents’ Day, there will be no garbage, recycling, or organics collection, nor street cleaning on Monday, February 20, 2017.  
-			</p>
+<div>
 
-			<p>PRESS RELEASE # 17-10</p>	
 
+                        <br>
+                        <p>
+                        <strong>Sunday, May 7, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/05072017.shtml"> <p> <strong>DSNY, NYC Parks, New York Knicks Tip Off New #TalkTrashNewYork Anti-Litter Campaign</strong> </a>
+                        </h5>
+						   <p>Because keeping New York City clean takes a full-court press, the New York City Department of Sanitation is partnering with NYC Parks and the New York Knicks to tip off #TalkTrashNewYork, a new springtime anti-litter campaign promoting clean streets, sidewalks, beaches and parks across the City. </p>
 
-		</div>
+ <p>PRESS RELEASE # 17-28</p>	
+ 
 
+</div>
 
 
 
-		<div>
 
 
-			<br>
-			<p>
-				<strong>Wednesday, February 8, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/02082017.shtml"> DSNY Issues ‘Snow Alert’ for Thursday, February 9 at 12:01 a.m. to Prepare Equipment and Personnel for Winter Weather  </a>
-			</h5>
-			<p> The New York City Department of Sanitation has issued a "Snow Alert" for Thursday, February 9 at 12:01 a.m. Calling a “Snow Alert” allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows, preparing tire chains and notifying other city agencies and supplementary personnel as needed.  
-			</p>
 
-			<p>PRESS RELEASE # 17-09</p>	
 
+<div>
 
-		</div>
 
+                        <br>
+                        <p>
+                        <strong>Wednesday, May 3, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/05032017.shtml"> <p> <strong> Bronx SAFE Disposal Event to be Held Saturday, May 13</strong> </a>
+                        </h5>
+						   <p>City residents wanting to dispose of potentially harmful household materials may do so at the Department
+						   of Sanitation’s Bronx SAFE (Solvents, Automotive, Flammables, and Electronics) Disposal event, held 
+						   Saturday, May 13. The drop-off event will be held at the Orchard Beach parking lot, rain-or-shine, 
+						   from 10 a.m. to 4 p.m. Residents driving to the free event should follow Park Drive to the end. Last year,
+						   the Department collected more than 1,110 tons of material at the SAFE events. </p>
 
+ <p>PRESS RELEASE # 17-27</p>	
+ 
 
-		<div>
+</div>
 
 
-			<br>
-			<p>
-				<strong>Thursday, February 2, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/02012017.shtml">Collection Service will Occur on Lincoln’s Birthday, Monday, February 13</a>
-			</h5>
-			<p> The New York City Department of Sanitation announced that there would be garbage, organics and recycling collection on the Lincoln’s Birthday holiday, Monday, February 13.   
-			</p>
 
-			<p>PRESS RELEASE # 17-07</p>	
 
 
-		</div>
 
-		<div>
+<div>
 
 
-			<br>
-			<p>
-				<strong>Monday, January 30, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/01302017.shtml">  DSNY Issues ‘Snow Alert’ for Tuesday, January 31 at 6 a.m. to Prepare Equipment and Personnel for Winter Weather
+                        <br>
+                        <p>
+                        <strong>Monday, May 1, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/05012017.shtml"> <p> <strong> Brooklyn Update: Curbside Collection of Organic Material Begins in CB’s 1 and 16 Week of Monday, May 1</strong> </a>
+                        </h5>
+						   <p>Starting the week of May 1, the New York City Department of Sanitation will begin the curbside collection of food 
+						   scraps, food-soiled paper and yard waste, otherwise known as organic material, from residents living in Brooklyn’s 
+						   Community Boards 1 and 16. Additionally, the Department will soon begin distributing brown bins to residents in 
+						   Community Boards 2, 13 and 15. Curbside collection in those areas begins next month. </p>
 
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Tuesday, January 31 at 6 a.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.   
-			</p>
+ <p>PRESS RELEASE # 17-25</p>	
+ 
 
-			<p>PRESS RELEASE # 17-05</p>	
+</div>
 
 
-		</div>
 
 
 
 
+<div>
 
-		<div>
 
+                        <br>
+                        <p>
+                        <strong>Friday, April 28, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/04282017.shtml"> <p> <strong> Staten Island SAFE Disposal Event to be Held Saturday, May 6</strong> </a>
+                        </h5>
+						   <p>City residents wanting to dispose of potentially harmful household materials may do so at the Department of Sanitation’s 
+ Staten Island SAFE (Solvents, Automotive, Flammables, and Electronics) Disposal event, held Saturday, May 6. The drop-off 
+ event will be held at the Midland Beach parking lot, rain-or-shine, from 10 a.m. to 4 p.m. Residents driving to the free 
+ event should approach from Slater Boulevard. Last year, the Department collected more than 1,110 tons of material.</p>
 
-			<br>
-			<p>
-				<strong>Saturday, January 14, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/01142017.shtml">  DSNY Issues ‘Snow Alert’ for Saturday, January 14 at 2 p.m. to Prepare Equipment and Personnel for Winter Weather
+ <p>PRESS RELEASE # 17-24</p>	
+ 
 
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Saturday, January 14 at 2 p.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.   
-			</p>
+</div>
 
-			<p>PRESS RELEASE # 17-04</p>	
 
 
-		</div>
+<div>
 
 
+                        <br>
+                        <p>
+                        <strong>Tuesday, April 18, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/04182017B.shtml"> <p> <strong> Manhattan SAFE Disposal Event to be Held Sunday, April 30 </strong> </a>
+                        </h5>
+						  <p>City residents wanting to dispose of potentially harmful household materials may do so at the Department of Sanitation’s 
+Manhattan SAFE (Solvents, Automotive, Flammables, and Electronics) Disposal event, held Sunday, April 30. The drop-off event 
+will be held by Columbia University, at 120th Street, between Broadway and Amsterdam Avenue. Residents driving to the free 
+event should approach from Seminary Drive down Amsterdam Avenue. The rain-or-shine event is held from 10 a.m. to 4 p.m. 
+Last year, the Department collected more than 1,110 tons of material.</p>
 
+ <p>PRESS RELEASE # 17-22</p>	
+ 
 
-		<div>
+</div>
 
 
-			<br>
-			<p>
-				<strong>Wednesday, January 11, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/01112017.shtml">  No Garbage, Recycling or Organic Collection, nor Street Cleaning on Rev. Dr. Martin Luther King, Jr. Day, Monday, January 16
 
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation announced that in observance of the Rev. Dr. Martin Luther King, Jr. Day, there will be no garbage, recycling, or organics collection, nor street cleaning on Monday, January 16, 2017.   
-			</p>
+<div>
 
-			<p>PRESS RELEASE # 17-03</p>	
 
+                        <br>
+                        <p>
+                        <strong>Tuesday, April 18, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/04182017A.shtml"> <p> <strong> DSNY Announces Final Contract to Transport Waste from Brooklyn by Barge </strong> </a>
+                        </h5>
+						   <p>The New York City Department of Sanitation announced today the selection of Waste Management for a $3.3 billion, 20-year 
+contract to export waste from the Hamilton Avenue and Southwest Brooklyn marine transfer stations. This contract, which 
+was submitted to the Comptroller last week, is the final long-term waste export contract of the City’s 2006 Solid Waste 
+Management Plan, a comprehensive, long-term plan to equitably and sustainably collect and dispose of New York City’s 
+municipal solid waste.</p>
 
-		</div>
+ <p>PRESS RELEASE # 17-21</p>	
+ 
 
+</div>
 
 
-		<div>
 
 
-			<br>
-			<p>
-				<strong>Friday, January 6, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/01062017.shtml">  DSNY Issues ‘Snow Alert’ for Saturday, January 7 at 7 a.m. to Prepare Equipment and Personnel for Winter Weather
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Saturday, January 7 at 7 a.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.   
-			</p>
 
-			<p>PRESS RELEASE # 17-02</p>	
 
 
-		</div>
+<div>
 
 
+                        <br>
+                        <p>
+                        <strong>Friday, April 14, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/04142017.shtml"> <p> <strong> Mayor de Blasio Announces Additional DSNY Litter Patrols to Provide Manual Sweeping Cleaning Services on Staten Island </strong> </a>
+                        </h5>
+						 <p>Mayor Bill de Blasio, Department of Sanitation Commissioner Kathryn Garcia, Staten Island Borough President James Oddo, and City Council Member 
+Steven Matteo announced today that Staten Island will be receiving Department of Sanitation specialized litter patrols to provide additional
+ manual street sweeping services throughout the borough. The program will begin shortly.</p>
 
+ <p>PRESS RELEASE # 17-20</p>	
+ 
 
+</div>
 
 
-		<div>
 
 
-			<br>
-			<p>
-				<strong>Thursday, January 5, 2017</strong>
-			</p>
-			<h5>
-				<a href="/assets/dsny/about/press-releases/pr2017/01052017.shtml">  DSNY Issues ‘Snow Alert’ for Thursday, January 5 at 10 p.m. to Prepare Equipment and Personnel for Winter Weather
-				</a>
-			</h5>
-			<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Thursday, January 5 at 10 p.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.  
-			</p>
 
-			<p>PRESS RELEASE # 17-01</p>	
 
 
-		</div>
 
+<div>
 
 
-	</div>
+                        <br>
+                        <p>
+                        <strong>Tuesday, April 4, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/04042017.shtml"> Milestone: Ten Million Pounds of Electronics and Ten Million Pounds of Textiles Collected and Recycled Through DSNY Programs
 
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation announced two major milestones for its high-rise apartment building 
+						recycling programs; <strong> re-fashioNYC </strong> has collected 10 million pounds of used clothing, 
+						towels and linens, while the electronics recycling program, <strong> e-cycleNYC</strong>, has collected 10 
+						million pounds of unwanted electronic items, such as computers and televisions. 
+						</p>
 
+ <p>PRESS RELEASE # 17-19</p>	
+ 
 
-	<div class="pagination">
-		<ul class="pager">
-		</ul>
-	</div> 
+</div>
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Monday, March 27, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03272017.shtml"> 2017 SAFE Disposal Events Announced; 
+Events Provide NYC Residents Easy Option for Disposal of Potentially Harmful Household Items 
+
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation announced the first five 2017 dates for the Department’s 
+						annual SAFE (Solvents, Automotive, Flammables, and Electronics) Disposal events. The events provide City 
+						residents with a one-stop drop-off to safely dispose of potentially harmful household products. Last year, more
+						than 1,110 tons of material was collected. This year, the first event is Sunday, April 2 in Brooklyn.  
+						</p>
+
+ <p>PRESS RELEASE # 17-17</p>	
+ 
+
+</div>
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Thursday, March 23, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03232017.shtml"> DSNY Announces Major Expansion of NYC Organics Program 
+</a>
+                        </h5>
+						<p> Today, the New York City Department of Sanitation announced a major expansion of its curbside food scrap and yard waste collection 
+						program. This year, the program, which collects “organic” waste and turns it into usable compost or renewable energy, will be made 
+						available to more than two million additional city residents. The program began as a pilot for 3,200 residents in spring 2013 and 
+						is already available to nearly one million residents citywide.  
+						</p>
+
+ <p>PRESS RELEASE # 17-16</p>	
+ 
+
+</div>
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Friday, March 17, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03172017.shtml"> DSNY Issues ‘Snow Alert’ for Saturday, March 18 at 3 a.m. 
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued a "Snow Alert" for Saturday, March 18 at 3 a.m. 
+						</p>
+
+ <p>PRESS RELEASE # 17-14</p>	
+ 
+
+</div>
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Sunday, March 12, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03122017.shtml"> DSNY Issues ‘Snow Alert’ for
+						Monday, March 13 at 11 p.m. to Prepare Equipment and Personnel for Major Winter Storm
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued a "Snow Alert" for Monday, March 13 at 11 p.m. Calling 
+						a “Snow Alert” allows DSNY to begin to prepare for a response by loading salt spreaders, attaching plows, preparing
+						tire chains and notifying other city agencies and supplementary personnel as needed. </p>
+
+ <p>PRESS RELEASE # 17-13</p>	
+ 
+
+</div>
+
+
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Thursday, March 9, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03092017.shtml"> DSNY Issues ‘Snow Alert’ 
+						for Friday, March 10 at 1 a.m. to Prepare Equipment and Personnel for Winter Weather
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued a "Snow Alert" for Friday, 
+						March 10 at 1 a.m. Calling a “Snow Alert” allows DSNY to begin to prepare for a possible
+						response by loading salt spreaders, attaching plows, preparing tire chains and notifying
+						other city agencies and supplementary personnel as needed. </p>
+
+ <p>PRESS RELEASE # 17-12</p>	
+ 
+
+</div>
+
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Thursday, March 2, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/03022017.shtml"> DSNY Issues ‘Snow Alert’ 
+						for Friday, March 3 at 1 p.m. to Prepare Equipment and Personnel for Winter Weather
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued a "Snow Alert" for Friday, 
+						March 3 at 1 p.m. Calling a “Snow Alert” allows DSNY to begin to prepare for a possible
+						response by loading salt spreaders, attaching plows, preparing tire chains and notifying
+						other city agencies and supplementary personnel as needed. </p>
+
+ <p>PRESS RELEASE # 17-11</p>	
+ 
+
+</div>
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Tuesday, February 14, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/02142017.shtml"> No Garbage, Recycling
+						or Organic Collection, nor Street Cleaning on
+Presidents’ Day, Monday, February 20
+</a>
+                        </h5>
+						<p> The New York City Department of Sanitation announced that in observance of 
+						Presidents’ Day, there will be no garbage, recycling, or organics collection, 
+						nor street cleaning on Monday, February 20, 2017.  </p>
+
+ <p>PRESS RELEASE # 17-10</p>	
+ 
+
+</div>
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Wednesday, February 8, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/02082017.shtml"> DSNY Issues ‘Snow Alert’
+						for Thursday, February 9 at 12:01 a.m. to Prepare Equipment and Personnel for Winter Weather  </a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued a "Snow Alert" for Thursday, 
+						February 9 at 12:01 a.m. Calling a “Snow Alert” allows DSNY to begin to prepare for a
+						possible response by loading salt spreaders, attaching plows, preparing tire chains 
+						and notifying other city agencies and supplementary personnel as needed.  </p>
+
+ <p>PRESS RELEASE # 17-09</p>	
+ 
+
+</div>
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Thursday, February 2, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/02012017.shtml">Collection Service will 
+						Occur on Lincoln’s Birthday, Monday, February 13   </a>
+                        </h5>
+						<p> The New York City Department of Sanitation announced that there would be garbage, 
+						organics and recycling collection on the Lincoln’s Birthday holiday, Monday, February 13.   </p>
+
+ <p>PRESS RELEASE # 17-07</p>	
+ 
+
+</div>
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Monday, January 30, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/01302017.shtml">  DSNY Issues ‘Snow Alert’ for Tuesday, January 31 at 6 a.m. to Prepare Equipment and Personnel for Winter Weather
+
+ </a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ 
+						for Tuesday, January 31 at 6 a.m. A snow alert indicates the potential for winter weather, 
+						and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching
+						plows (if necessary), preparing tire chains and notifying other city agencies and supplementary 
+						personnel as needed.   </p>
+
+ <p>PRESS RELEASE # 17-05</p>	
+ 
+
+</div>
+
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Saturday, January 14, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/01142017.shtml">  DSNY Issues ‘Snow Alert’ for Saturday, January 14 at 2 p.m. to Prepare Equipment and Personnel for Winter Weather
+
+ </a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Saturday, January 14 at 2 p.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire chains and notifying other city agencies and supplementary personnel as needed.   </p>
+
+ <p>PRESS RELEASE # 17-04</p>	
+ 
+
+</div>
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Wednesday, January 11, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/01112017.shtml">  No Garbage, Recycling or Organic Collection, nor Street Cleaning on
+Rev. Dr. Martin Luther King, Jr. Day, Monday, January 16
+
+ </a>
+                        </h5>
+						<p> The New York City Department of Sanitation announced that in observance of the Rev. Dr. Martin Luther King, Jr. Day, 
+						there will be no garbage, recycling, or organics collection, nor street cleaning on Monday, January 16, 2017.   </p>
+
+ <p>PRESS RELEASE # 17-03</p>	
+ 
+
+</div>
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Friday, January 6, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/01062017.shtml">  DSNY Issues ‘Snow Alert’ for Saturday, January 7 at 
+						7 a.m. to Prepare Equipment and Personnel for Winter Weather
+ </a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for Saturday, 
+						January 7 at 7 a.m. A snow alert indicates the potential for winter weather, and allows DSNY to begin to 
+						prepare for a possible response by loading salt spreaders, attaching plows (if necessary), preparing tire
+						chains and notifying other city agencies and supplementary personnel as needed.   </p>
+
+ <p>PRESS RELEASE # 17-02</p>	
+ 
+
+</div>
+
+
+
+
+
+
+<div>
+
+
+                        <br>
+                        <p>
+                        <strong>Thursday, January 5, 2017</strong>
+                        </p>
+                        <h5>
+                        <a href="/assets/dsny/about/press-releases/pr2017/01052017.shtml">  DSNY Issues ‘Snow Alert’ for Thursday, 
+						January 5 at 10 p.m. to Prepare Equipment and Personnel for Winter Weather
+ </a>
+                        </h5>
+						<p> The New York City Department of Sanitation has issued an agency preparedness ‘snow alert’ for 
+						Thursday, January 5 at 10 p.m. A snow alert indicates the potential for winter weather, and allows 
+						DSNY to begin to prepare for a possible response by loading salt spreaders, attaching plows (if necessary),
+						preparing tire chains and notifying other city agencies and supplementary personnel as needed.  </p>
+
+ <p>PRESS RELEASE # 17-01</p>	
+ 
+
+</div>
+
+
+
+</div>
+            
+
+
+<div class="pagination">
+<ul class="pager">
+</ul>
+</div> 
 
 
 
@@ -233,125 +600,125 @@
 
 
 
-<!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
 
 <script type="text/javascript">
 
-	var listElement = $('#pageStuff');
-	var perPage = 10;
-	var numItems = listElement.children("div").size();
-	var numPages = Math.ceil(numItems / perPage);
-	var clickedPage = 0;
-	var activePage = 0;
+    var listElement = $('#pageStuff');
+    var perPage = 10;
+    var numItems = listElement.children("div").size();
+    var numPages = Math.ceil(numItems / perPage);
+    var clickedPage = 0;
+    var activePage = 0;
 
-	$('.pager').data("curr", 0);
+    $('.pager').data("curr", 0);
 
 
-	var curr = 0;
-	while (numPages > curr) {
-		if(curr === 0)
-		{
-			$('<li><a href="#">&laquo;</a></li> <li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
-		}
-		else if (numPages === curr + 1)
-		{
-			$('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li><li><a href="#">&raquo;</a></li>').appendTo('.pager');
-		}        
-		else
-		{
-			$('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
-		}
-		curr++;
-	}
+    var curr = 0;
+    while (numPages > curr) {
+        if(curr === 0)
+        {
+            $('<li><a href="#">&laquo;</a></li> <li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
+        }
+        else if (numPages === curr + 1)
+        {
+        $('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li><li><a href="#">&raquo;</a></li>').appendTo('.pager');
+        }        
+        else
+        {
+        $('<li><a href="#" class="page_link" id="page' + curr + '">' + (curr + 1) + '</a></li>').appendTo('.pager');
+        }
+        curr++;
+    }
 
-	$('.pager .page_link:first').addClass('active');
+    $('.pager .page_link:first').addClass('active');
 
-	listElement.children("div").css('display', 'none');
-	listElement.children("div").slice(0, perPage).css('display', 'block');
+    listElement.children("div").css('display', 'none');
+    listElement.children("div").slice(0, perPage).css('display', 'block');
 
-	$('.pager li a').click(function () {
+    $('.pager li a').click(function () {
 
-		clickedPage = $(this).html().valueOf() - 1;
+        clickedPage = $(this).html().valueOf() - 1;
 
-		if ($(this).html().valueOf() == "«")
-		{
-			if(activePage !== 0)
-			{
-				var prevPage = activePage - 1;
-				$('.pager li a').removeClass('active');
-				$('#page' + prevPage).addClass('active');
-				previous();
-			}
-		}
-		else if ($(this).html().valueOf() == "»") 
-		{
-			if(activePage !== numPages - 1)
-			{
-				var nextPage = activePage + 1;
-				$('.pager li a').removeClass('active');
-				$('#page' + nextPage).addClass('active');
-				next();
-			}
-		}
-		else
-		{
-			$('.pager li a').removeClass('active');
-			$(this).addClass('active');
-			goTo(clickedPage, perPage);
-		};
-	});
+        if ($(this).html().valueOf() == "«")
+        {
+            if(activePage !== 0)
+            {
+                var prevPage = activePage - 1;
+                $('.pager li a').removeClass('active');
+                $('#page' + prevPage).addClass('active');
+                previous();
+            }
+        }
+        else if ($(this).html().valueOf() == "»") 
+        {
+            if(activePage !== numPages - 1)
+            {
+                var nextPage = activePage + 1;
+                $('.pager li a').removeClass('active');
+                $('#page' + nextPage).addClass('active');
+                next();
+            }
+        }
+        else
+        {
+            $('.pager li a').removeClass('active');
+            $(this).addClass('active');
+            goTo(clickedPage, perPage);
+        };
+    });
 
-	function previous() {
-		if(activePage === 0)
-		{
-			goTo(activePage, perPage);
-		}
-		else
-		{
-			var prevPage = activePage - 1;
-			goTo(prevPage, perPage);
-		}
-		/*var goToPage = parseInt($('.pager').data("curr")) - 1;
-		if ($('.active_page').prev('.page_link').length == true) {
-			goTo(goToPage);
-		}*/
-	}
+    function previous() {
+        if(activePage === 0)
+        {
+            goTo(activePage, perPage);
+        }
+        else
+        {
+            var prevPage = activePage - 1;
+            goTo(prevPage, perPage);
+        }
+        /*var goToPage = parseInt($('.pager').data("curr")) - 1;
+        if ($('.active_page').prev('.page_link').length == true) {
+            goTo(goToPage);
+        }*/
+    }
 
-	function next() {
-		var lastPage = numPages - 1;
-		if(activePage === lastPage)
-		{
-			goTo(activePage, perPage);
-		}
-		else
-		{
-			var nextPage = activePage + 1;
-			goTo(nextPage, perPage);
-		}
-		/*var goToPage = parseInt($('.pager').data("curr")) + 1;
-		if ($('.active_page').next('.page_link').length == true) {
-			goTo(goToPage);
-		}*/
-	}
+    function next() {
+        var lastPage = numPages - 1;
+        if(activePage === lastPage)
+        {
+            goTo(activePage, perPage);
+        }
+        else
+        {
+            var nextPage = activePage + 1;
+            goTo(nextPage, perPage);
+        }
+        /*var goToPage = parseInt($('.pager').data("curr")) + 1;
+        if ($('.active_page').next('.page_link').length == true) {
+            goTo(goToPage);
+        }*/
+    }
 
-	function goTo(page) {
-		activePage = page;
-		var startAt = page * perPage,
-		endOn = startAt + perPage;
+    function goTo(page) {
+        activePage = page;
+        var startAt = page * perPage,
+          endOn = startAt + perPage;
 
-		listElement.children().css('display', 'none').slice(startAt, endOn).css('display', 'block');
-		$('.pager').attr("curr", page);
-	}
+        listElement.children().css('display', 'none').slice(startAt, endOn).css('display', 'block');
+        $('.pager').attr("curr", page);
+    }
 
-	$('.active').hover(function(){
-		$(this).css('background-color', '#50c550');
-		$(this).css('color', 'white');
-	});
+    $('.active').hover(function(){
+        $(this).css('background-color', '#50c550');
+        $(this).css('color', 'white');
+    });
 
-	$('.active').mouseleave(function(){
-		$(this).css('background-color', 'white');
-		$(this).css('color', '#339933');
-	});
+    $('.active').mouseleave(function(){
+        $(this).css('background-color', 'white');
+        $(this).css('color', '#339933');
+    });
 
 
 

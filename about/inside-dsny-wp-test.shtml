@@ -26,7 +26,7 @@
 	$(document).ready(function(){
 
 		$.ajax( {
-			url: 'http://10.150.97.118:44991//wp-json/wp/v2/posts/1',
+			url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts/48',
 			datatype: "json",
 			success: function ( data ) {
 				var post = data; 

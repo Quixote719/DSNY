@@ -3,20 +3,23 @@
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
 <!--#include virtual="/assets/dsny/templates/leftnav/recycling_schools_leftnav.shtml" -->
-		<div id="contentsection" class="span9 about-main-image">
-			<div class="span6 about-description">
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
 
-<h1> What Can't Go In Recycling and Garbage For Schools </h1>
-
-		  
-<p>Electronics, fluorescent bulbs,&nbsp;rechargeable batteries, and other hazardous waste items require special handling and disposal, and can &#39;t go in regular recycling or garbage.</p>
-<p>As an alternative to disposal, look into donating <b>electronics</b> through <a href="http://www.wastematch.org" title="NYC WasteMatch"  class="exitlink">NYC WasteMatch</a>, an online materials exchange.</p>
-<p>Unless they &#39;re donated or resold for reuse, electronics must be recycled. Public schools must follow guidelines for how to dispose of obsolete equipment and furniture described in the&nbsp;<a href="http://schools.nyc.gov/Offices/EnterpriseOperations/ChiefFinancialOfficer/DFO/SOP/Default.htm" title="DOE Division of Financial Operations Inventory Standard Operating Procedures"  class="exitlink">DOE Division of Financial Operations Inventory Standard Operating Procedures</a>.</p>
-<p>Check with your school custodian about proper disposal of items like <b>fluorescent bulbs</b>, <b>rechargeable batteries,</b> and <b>phones</b>.</p>
+		<h1> What Can't Go In Recycling and Garbage For Schools </h1>
 
 
-			</div>
+		<p>Electronics, fluorescent bulbs,&nbsp;rechargeable batteries, and other hazardous waste items require special handling and disposal, and can&#39;t go in regular recycling or garbage.</p>
 
-		 </div>
-		 
+		<p>As an alternative to disposal, look into donating <b>electronics</b> through <a href="/assets/donate/giveandfind/exchange.shtml">donateNYC Exchange</a>, an online materials exchange.</p>
+		
+		<p>Unless they&#39;re donated or resold for reuse, electronics must be recycled. Public schools must follow guidelines for how to dispose of obsolete equipment and furniture described in the&nbsp;<a href="http://schools.nyc.gov/Offices/EnterpriseOperations/ChiefFinancialOfficer/DFO/SOP/Default.htm" title="DOE Division of Financial Operations Inventory Standard Operating Procedures" class="exitlink">DOE Division of Financial Operations Inventory Standard Operating Procedures</a>.</p>
+		
+		<p>Check with your school custodian about proper disposal of items like <b>fluorescent bulbs</b>, <b>rechargeable batteries,</b> and <b>phones</b>.</p>
+
+
+	</div>
+
+</div>
+
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

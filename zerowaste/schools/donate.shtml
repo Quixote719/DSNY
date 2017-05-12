@@ -1,45 +1,39 @@
 ﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
-<title>Donate</title>
+<title>DSNY – Schools – Donate + Get Donations</title>
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
-		<div id="contentsection" class="about-main-image">
-			<div class="span6 about-description">
+<div id="contentsection" class="about-main-image">
+	<div class="span6 about-description">
 
-			<h1>Donate</h1> 
-
-
+		<h1>Donate + Get Donations For Schools</h1> 
 
 
-<p><strong>NYC Department of Education schools must follow the guidelines for discarding obsolete equipment and furniture</strong>. To donate 
-usable equipment, visit <a href="http://nyc.gov/donate" title="donateNYC">donateNYC</a>. </p>
 
-<div id = "accordion">
 
-<p>Donating to Our Schools</p>
-<div>
-<p>Organizations and reuse programs provide schools with new and used goods, including supplies, books and computers.  You or your company can reduce waste 
-by and help our schools by visiting the below websites to donate useful items. </p>
- 
-<p><a href="http://nyc.gov/donate" title="donateNYC">donateNYC</a></p>
-<p><a href="http://www.nyc.gov/html/dcla/mfta/html/home/home.shtml"> Materials for the Arts </a></p>
-<p><a href="http://projectcicero.org"> Project Cicero </a></p>
-<p><a href="http://www.gsa.gov/portal/content/100851"> US General Services Administration’s State Agencies for Surplus Property </a></p>
-<p><a href="http://computersforlearning.gov"> US General Services Administration’s Computers for Learning </a></p>
-<p><a href="http://www.donorschoose.org"> Donors Choose </a></p>
-<p><a href="http://irnsurplus.com/"> IRN Surplus Property </a></p>
-<p><a href="https://www.cristina.org/become-partner/"> National Cristina Foundation </a></p>
-<p><a href="http://www.pencil.org"> Pencil </a></p>
-<p><a href="http://perscholas.org/"> Per Scholas </a></p>
-<p><a href="http://www.recycles.org/"> Recycles.org </a></p>
-<p><a href="http://www.techsoup.org"> TechSoup </a></p>
+		<p><b>NYC Department of Education schools must follow relinquishment guidelines for discarding obsolete equipment and furniture</b>. To donate usable equipment, visit <a href="http://nyc.gov/donate">donateNYC</a>.</p>
 
-    
+		<p>Organizations and reuse programs provide schools with new and used goods, including supplies, books and computers. You or your company can reduce waste and help our schools by donating useful items. Schools can utilize these programs to get donations. </p>
+
+		<p>Check the websites for details and contact information. </p>
+
+		<p><a href="http://nyc.gov/donate" title="donateNYC">donateNYC</a></p>
+		<p><a href="http://www.nyc.gov/html/dcla/mfta/html/home/home.shtml"> Materials for the Arts </a></p>
+		<p><a href="http://projectcicero.org"> Project Cicero </a></p>
+		<p><a href="http://www.gsa.gov/portal/content/100851"> US General Services Administration’s State Agencies for Surplus Property </a></p>
+		<p><a href="http://computersforlearning.gov"> US General Services Administration’s Computers for Learning </a></p>
+		<p><a href="http://www.donorschoose.org"> Donors Choose </a></p>
+		<p><a href="http://irnsurplus.com/"> IRN Surplus Property </a></p>
+		<p><a href="https://www.cristina.org/become-partner/"> National Cristina Foundation </a></p>
+		<p><a href="http://www.pencil.org"> Pencil </a></p>
+		<p><a href="http://perscholas.org/"> Per Scholas </a></p>
+		<p><a href="http://www.recycles.org/"> Recycles.org </a></p>
+		<p><a href="http://www.techsoup.org"> TechSoup </a></p>
+
+
+
+
+
+	</div>
 </div>
 
-</div>
-
-
-			</div>
-		 </div>
-		 
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

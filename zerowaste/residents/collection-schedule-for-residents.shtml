@@ -12,10 +12,57 @@
 			Set out your garbage, organics, and recycling after 4 pm the night before your scheduled collection day. Remove empty containers by 9 pm on the collection day, or by 9 am the following morning if your collection occurs after 4 pm.
 		</p>
 		<p>
-			<a href="/assets/dsny/collectionandcleaning/collection.shtml">Check your collection schedule</a>.
+
 <!-- 			To learn your collection days, enter your building number and the name of your street, select borough, then click Search.  -->
 <!-- insert collection schedule widget here. -->
+		<div>
+			<div>
+				<div class="span12" style="margin-top:10px;">
+					<p>To learn your collection days, enter your building number and the name of your street, select borough, then click Search.<br> (For example, 125 Worth Street is: BUILDING NUMBER: 125, STREET NAME: Worth Street)
+					</p>
+					<div id="formErrorMessage"> 
+					</div>
+					<form id="msform" name="msform" class="pure-form" type="external" method="get" style="margin:0px">
+						<input name="app_key" type="hidden" value="06F6620746865206F" />
+						<div class="span12">
+							<div class="span3">
+								<label id="houseNumberLabel">Building Number:<span class="red">*</span></label>
+								<input name="houseNumber" id="houseNumber" maxlength="10" style="width:100%; box-shadow:none;"  type="text" tabindex="1" required/>
+							</div>
+							<div class="span3">
+								<label id="streetLabel">Street Name:<span class="red">*</span></label>
+								<input name="street" id="street" maxlength="50" style="width:100%; box-shadow:none;" type="text" tabindex="2" required />
+							</div>
+							<div class="span3">
+								<label id="boroughLabel">Borough:<span class="red">*</span></label>
+								<select name="borough" id="borough" style="width:100%; box-shadow:none;margin-top:-1px;" type="select-one" tabindex="3" required >
+									<option selected="selected" value="">Select your borough</option>
+									<option value="2">Bronx</option>
+									<option value="3">Brooklyn</option>
+									<option value="1">Manhattan</option>
+									<option value="4">Queens</option>
+									<option value="5">Staten Island</option>
+								</select>
+							</div>
+							<div class="span3">
+								<label>&nbsp;</label>
+								<button type="submit" class="btn" tabindex="4" id="search" style="width:  100%;margin-top: -3px;background-color: #e26e25">Search</button>            
+							</div>
+						</div>        
+						<div class="span12">
+							<div id="results" style="margin-top:10px;margin-bottom:10px;" class="pure-u-sm-22-24"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		</p>
+
+
+		<p>To learn if your neighborhood receives <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml">organics collection service</a>, see the map of <a href="/assets/dsny/docs/nyc-organics-collection-areas.pdf">participating neighborhoods</a> (pdf). 
+		</p>
+
 		<p>
 			<a href="/assets/dsny/snow/snow.shtml">During snow operations</a>, recycling and garbage collection may be disrupted while DSNY plows and cleans the streets.
 		</p>
@@ -66,3 +113,106 @@
 </div>
 
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
+
+ <!-- PAGE SPECIFIC JAVASCRIPT -->
+<script src="/assets/home/js/pages/agencies/about.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/agencies/dsny-lookup.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+
+		$('#msform input[type="text"]').tooltipster({
+			trigger: 'custom',
+			onlyOne: true,
+			position: 'bottom'
+		});
+
+		$('#msform select').tooltipster({
+			trigger: 'custom',
+			onlyOne: true,
+			position: 'bottom'
+		});
+
+	});
+
+	$("#cancel").click(function () {
+		$("#houseNumber").val("");
+		$("#street").val("");
+		$("#boro").val("");      
+		$("#results").empty();
+
+		$('#msform input[type="text"]').attr("class", "tooltipstered");
+
+		$('#msform input[type="text"]').removeAttr("aria-invalid");
+
+		$('#msform select').attr("class", "tooltipstered");
+
+		$('#msform select').removeAttr("aria-invalid");
+
+	});
+
+	function validateForm() {
+		validator = $('#msform').validate({
+			errorPlacement: function (error, element) {
+				if (element.attr("type") == "text") {
+					$(element).tooltipster('update', "This field is required");
+				} else if (element.attr("type") == "select-one") {
+					$(element).tooltipster('update', "Please select from the list");
+				}
+				else {
+					$(element).tooltipster('update', "This field is required");
+				}
+
+				$('element').tooltipster({
+					functionInit: function () {
+						return $('element').html();
+					},
+					functionReady: function () {
+						$('element').attr('aria-hidden', false);
+					},
+					functionAfter: function () {
+						$('element').attr('aria-hidden', true);
+					}
+				});
+
+				$(element).focus(function () {
+					if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+						{ $(this).tooltipster('show'); }
+				})
+				.blur(function () {
+					$(this).tooltipster('hide');
+				});
+			},
+			success: function (label, element) {
+				$(element).tooltipster('hide');
+			},
+			invalidHandler: function () {
+				$(this).find(".error:first").focus();
+			}
+		});
+		if (!$('#msform').valid()) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	$("#search").click(function (event) {
+		if (validateForm()) {
+			var retCode = false;
+			event.preventDefault();
+			validateAddress(function (output) {
+				if (output == true) {
+					return true;
+				}
+			});
+		}
+		else {
+			validator.focusInvalid();
+			return false;
+		}
+	});
+
+</script>

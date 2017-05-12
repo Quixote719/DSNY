@@ -121,7 +121,7 @@ function loadRange(before, after) {
 	showById('yearHeader');
 	$('#wordpress_pr_summaries').empty();
 	$.ajax( {
-		url: 'http://10.150.97.118:44991/wp-json/wp/v2/posts?categories=10&after='+after+'&before='+before,
+		url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts?categories=5&after='+after+'&before='+before,
 		datatype: "json",
 		success: function ( data ) {
 			$.each(data, function(i, item) {
@@ -190,7 +190,7 @@ function loadSinglePressRelease(slug) {
 	hideById('yearHeader');
 	showById('wordpress_pr_full');
 	$.ajax( {
-		url: 'http://10.150.97.118:44991/wp-json/wp/v2/posts?slug='+slug,
+		url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts?slug='+slug,
 		datatype: "json",
 		success: function ( data ) {
 			var post = data[0];
