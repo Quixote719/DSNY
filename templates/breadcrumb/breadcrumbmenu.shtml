@@ -220,7 +220,7 @@
 								<li><a href="/assets/dsny/zerowaste/residents/sport-equipment.shtml">Sport Equipment</a></li>
 								<li><a href="/assets/dsny/zerowaste/residents/cleaning-products.shtml">Cleaning Products</a></li>
 								<li><a href="/assets/dsny/zerowaste/residents/junk-mail.shtml">Junk Mail</a></li>
-								<li><a href="/assets/dsny/zerowaste/residents/textiles.shtml">Textiles</a></li>
+								<li><a href="/assets/dsny/zerowaste/residents/textiles.shtml">Clothing + Textiles</a></li>
 								<li><a href="/assets/dsny/zerowaste/residents/lighting.shtml">Lighting</a></li>
 								<li><a href="/assets/dsny/zerowaste/residents/tires.shtml">Tires</a></li>
 								<li><a href="/assets/dsny/zerowaste/residents/corrosive-and-flammable.shtml">Corrosive &amp; Flammable</a></li>
@@ -368,6 +368,8 @@
 				<li>
 					<a href="/assets/dsny/zerowaste/schools.shtml">Schools</a>
 					<ul>
+						<li><a href="/assets/dsny/zerowaste/schools/zws-website-and-awards.shtml">Zero Waste Schools Website and Awards</a></li>
+						<li><a href="/assets/dsny/zerowaste/schools-reduce-reuse.shtml">Reduce + Reuse</a></li>
 						<li><a href="/assets/dsny/zerowaste/schools/golden-apple-awards.shtml">Golden Apple Awards</a></li>
 						<li><a href="/assets/dsny/zerowaste/schools/previous-golden-apple-award-winners.shtml">Golden Apple Award Winners</a></li>
 						<li>
@@ -404,7 +406,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="/assets/dsny/zerowaste/schools/donate.shtml">Donate</a>
+							<a href="/assets/dsny/zerowaste/schools/donate.shtml">Donate + Get Donations</a>
 							<ul>
 								<li><a href="/assets/dsny/zerowaste/schools/get-donations-for-schools.shtml">Get Donations</a></li>
 							</ul>

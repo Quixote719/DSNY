@@ -3,24 +3,31 @@
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
 <!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
-		<div id="contentsection" class="span9 about-main-image">
-			<div class="span6 about-description">
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
 
-<h1>Medical Equipment</h1>
+		<h1>Medical Equipment</h1>
 
-<h2>DSNY Collection</h2>
-<p><b>Recycling: </b>Medical equipment that is mostly metal or rigid plastic&nbsp;can be placed at the curb for recycling with metal, glass, and plastic.<br /><br /><b>Garbage:</b> Discard other items with regular trash.</p>
-<h2>Donations &amp; Reuse</h2>
-<p>These organizations collect usable medical equipment and supplies and medicines, for distribution in areas with medical emergencies or in developing nations. Check their websites for information about the equipment and supplies they accept and for drop-off locations:</p>
-<ul>
-<li><a href="http://www.afyafoundation.org/" title="Afya Foundation">Afya Foundation</a></li>
-<li><a href="http://www.aidforaids.org/index.php/site/donate/" title="Aid for Aids">Aid for Aids</a></li>
-<li><a href="http://www.nycservice.org/organizations/index.php?org_id=1700" title="Global Crisis Interventions">Global Crisis Interventions</a></li>
-<li><a href="http://www.madre.org/index.php?video=1" title="Meds for MADRE">Meds for MADRE</a></li>
-<li><a href="http://www.getatstuff.com/" title="Assistive Technology Exchange">Assistive Technology Exchange in New England &amp; New York<br /></a></li>
-</ul>
+		<h2>DSNY Collection</h2>
 
-			</div>
-		 </div>
-		 
+		<p><b>Recycling: </b>Medical equipment that is mostly metal or rigid plastic&nbsp;can be placed at the curb for recycling with metal, glass, and plastic.</p>
+		<p><b>Garbage:</b> Discard other items with regular trash.</p>
+
+		<h2>Donations &amp; Reuse</h2>
+
+		<p>Visit <a href="/assets/donate/index.shtml">donateNYC</a> to find a place to donate or buy used medical equipment and furniture; or try listing on an online <a href="/assets/dsny/zerowaste/residents/donate.shtml">community swap</a>.</p>
+
+		<p>These organizations collect usable medical equipment and supplies and medicines, for distribution in areas with medical emergencies or in developing nations. Check their websites for information about the equipment and supplies they accept and for drop-off locations:</p>
+
+		<ul>
+			<li><a href="http://www.afyafoundation.org/" title="Afya Foundation">Afya Foundation</a></li>
+			<li><a href="http://www.aidforaids.org/index.php/site/donate/" title="Aid for Aids">Aid for Aids</a></li>
+			<li><a href="http://www.nycservice.org/organizations/index.php?org_id=1700" title="Global Crisis Interventions">Global Crisis Interventions</a></li>
+			<li><a href="http://www.madre.org/index.php?video=1" title="Meds for MADRE">Meds for MADRE</a></li>
+			<li><a href="http://www.getatstuff.com/" title="Assistive Technology Exchange">Assistive Technology Exchange in New England &amp; New York<br /></a></li>
+		</ul>
+
+	</div>
+</div>
+
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

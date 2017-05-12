@@ -3,14 +3,19 @@
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
 <!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
-		<div id="contentsection" class="span9 about-main-image">
-		<div class="span6 about-description">
-<h1>Sport Equipment</h1>
-	
-<b>Recycling: </b>Recycle broken equipment that is predominantly metal or rigid plastic.<br /><br /><b>Garbage</b>: Dispose of other broken equipment with your garbage.<br /><br />
-<h2>Donations &amp; Reuse</h2>
-Visit <a href="http://www.nyc.gov/html/stuffex/html/home/home.shtml" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate gently used sport equipment.
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+		
+		<h1>Sport Equipment</h1>
 
-		 </div>
-		 </div>
+		<p><b>Recycling: </b>Recycle broken equipment that is predominantly metal or rigid plastic.<br /><br /><b>Garbage</b>: Dispose of other broken equipment with your garbage.</p>
+
+		<h2>Donations &amp; Reuse</h2>
+
+		<p>Visit <a href="/assets/donate/index.shtml" title="donateNYC">donateNYC</a> to find a place to donate or buy gently used sport equipment.</p>
+
+		<p>Or bring sports equipment to a <a href="/assets/dsny/zerowaste/residents/donate.shtml">community swap</a>.</p>
+
+	</div>
+</div>
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

@@ -3,29 +3,46 @@
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
 <div id="contentsection" class="about-main-image">
-    <div class="span6 about-description">
+	<div class="span6 about-description">
 
-        <h1>Donate</h1>
-        <p>By donating and reusing goods instead of discarding them, New Yorkers can greatly reduce waste, conserve energy and resources, save money, and help provide New Yorkers with jobs and human services. <a href="http://nyc.gov/donate" title="donateNYC">donateNYC</a> is an essential part of NYC’s 0X30 initiative, helping New Yorkers reach the goal of sending <b>zero waste to landfills by 2030</b>.</p>
-        <div id="accordion">
-            <p>donateNYC</p>
-            <div>
-                <p><a href="http://nyc.gov/donate" title="donateNYC">donateNYC</a> helps New Yorkers give goods, find goods, and do good, with tools that make it easy to donate or find used and surplus items.</p>
-                <p>Residents can use the donateNYC web directory and mobile app to find close and convenient places to donate or find second-hand goods, as well as view a reuse events calendar highlighting upcoming flea markets, donation drives, swaps, book drives, and rummage sales.</p>
-            </div>
-            <p> Community Swaps </p>
-            <div>
-                <p><a href="http://swap.meetup.com/cities/us/ny/new_york/"> Swap Groups</a> </p>
-                <p><a href="http://www.grownyc.org/swap?gclid=CI-B8dr3rqsCFQXe4AodNSZHLw"> Stop 'N' Swap </a></p>
-                <p><a href="http://www.gaiatreehouse.com/p/swap-o-rama-rama.html"> Swap-O-Rama-Rama </a></p>
-            </div>
-            <p> re-fashioNYC </p>
-            <div>
-                <p>In partnership with the New York City nonprofit Housing Works, re-fashioNYC makes donating clothing easy through its convenient building bin service. Residents living in a building with a re-fashioNYC bin can donate their unwanted clothing in their own building and receive a tax donation for their contribution. This service is free, and it also saves money, reduces waste and helps fellow New Yorkers in need through Housing Works' health and homeless service programs.</p>
-                <p><a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">Find out if your building is eligible </a></p>
-            </div>
-        </div>
-    </div>
+		<h1>Donate</h1>
+		
+		<p>By donating and reusing goods instead of discarding them, New Yorkers can greatly reduce waste, conserve energy and resources, save money, and help provide New Yorkers with jobs and human services. </p>
+		
+		<p>Reuse is an essential part of NYC’s 0X30 initiative, helping New Yorkers reach the goal of sending <b>zero waste to landfills by 2030</b>.</p>
+		
+		<div id="accordion">
+
+			<p style="font-size: x-large; font-weight: bold;">donateNYC</p>
+			<div>
+				<p><a href="/assets/donate/index.shtml" title="donateNYC">donateNYC</a> helps New Yorkers give goods, find goods, and do good, with tools that make it easy to donate or find used and surplus items.</p>
+
+				<p>Visit <a href="/assets/donate/giveandfind/residents/searchvendors.shtml">donateNYC</a> to use the online Directory, or download the <a href="https://itunes.apple.com/us/app/donatenyc/id1112567037">donateNYC mobile app for iOS</a> or <a href="https://play.google.com/store/apps/details?id=gov.nyc.dsny.donate">Android</a>, to easily locate convenient places to give or find unwanted, gently used goods.</p>
+ 
+				<p>With hundreds of registered locations all across the five boroughs, residents can search and filter donation and reuse entities by material type and location, find hours of operation, locate contact information, and determine if donation pick-up is an option.</p>
+  
+				<p>Residents can also visit donateNYC’s <a href="/assets/donate/resources/events.shtml">reuse events calendar</a>,  highlighting upcoming flea markets, donation drives, swaps, book drives, and rummage sales.</p>
+			</div>
+			
+			<p style="font-size: x-large; font-weight: bold;">Community Swaps</p>
+			<div>
+				<p><a href="http://www.grownyc.org/swap?gclid=CI-B8dr3rqsCFQXe4AodNSZHLw"> Stop 'N' Swap </a></p>
+				<p><a href="http://swap.meetup.com/cities/us/ny/new_york/"> Swap Groups</a> </p>
+				<p><a href="http://www.gaiatreehouse.com/p/swap-o-rama-rama.html"> Swap-O-Rama-Rama </a></p>
+				<p><a href="http://newyork.craigslist.org/">Craigslist</a></p>
+				<p><a href="http://www.freecycle.org/">FreeCycle</a></p>
+			</div>
+			
+			<p style="font-size: x-large; font-weight: bold;">refashionNYC</p>
+			<div>
+				<p>Apartment buildings with 10 or more units can sign up for <a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">refashionNYC</a>, a partnership between NYC and <a href="http://www.housingworks.org/">Housing Works</a> that offers convenient, in-building drop-off service for clothing, accessories, and textiles. Free donation bins are provided for qualifying apartment buildings (with 10 or more units) and businesses that regularly collect and donate clothing.</p>
+
+				<p>Residents living in an apartment building that has a refashionNYC bin can donate their unwanted clothing right in their own building and receive a tax deduction for their contribution.</p>
+
+				<p><a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">Find out if your building is eligible </a></p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

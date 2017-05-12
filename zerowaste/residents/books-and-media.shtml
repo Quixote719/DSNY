@@ -3,15 +3,45 @@
 <!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
 
 <!--#include virtual="/assets/dsny/templates/leftnav/howtogetridof_residents_leftnav.shtml" -->
-		<div id="contentsection" class="span9 about-main-image">
-			<div class="span6 about-description">
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
 
-<h1>Books &amp; Media </h1>
+		<h1>Books &amp; Media </h1>
 
-<p><b>Recycling: </b>Recycle your paperback books with mixed paper and cardboard. CDs, DVDs, vinyl records, disks, and CD and DVD cases can be placed with your metal, glass, plastic, and carton recycling.<br /><br /><b>Garbage: </b>Discard hard cover books with your regular trash. Cassettes and VHS tapes are problematic to recycle, so place in your regular trash.</p>
-<h2>Donations &amp; Reuse</h2>
-<p>Visit <a href="http://nyc.gov/stuffexchange" title="NYC Stuff Exchange">NYC Stuff Exchange</a> to find a place to sell or donate used media.</p>
-			</div>
-		 </div>
-		 
+		<p>
+			<b>Recycling:</b> Recycle your paperback books with mixed paper and cardboard. CDs, DVDs, vinyl records, disks, and CD and DVD cases can be placed with your metal, glass, plastic, and carton recycling.
+		</p>
+
+		<p>
+			<b>Garbage:</b> Discard hard cover books with your regular trash. Cassettes and VHS tapes are problematic to recycle, so place in your regular trash.
+		</p>
+
+		<h2>Donations &amp; Reuse</h2>
+
+		<p>
+			Visit <a href="/assets/donate/index.shtml" title="donateNYC">donateNYC</a> to find a place to donate or buy used media.
+		</p>
+
+		<p>
+			Or bring books to a <a href="/assets/dsny/zerowaste/residents/donate.shtml">community swap</a>
+		</p>
+
+		<h2>Libraries</h2>
+		<ul>
+			<li><a href="https://www.nypl.org/help/community-outreach/correctional-services/donate">NY Public Library, Correctional Services</a> accepts certain book donations</li>
+
+			<li><a href="http://www.bklynlibrary.org/support/donating-library-materials/">Brooklyn Public Library’s list</a> of where to donate books</li>
+
+			<li><a href="http://www.queenslibrary.org/faq/what-materials-can-i-donate-to-the-queens-library">Queens Public Library</a> accepts book donations at any branch</li>
+		</ul>
+
+		<h2>Recycle Media</h2>
+		<ul>
+			<li><a href="https://www.lesecologycenter.org/programs/ewaste/">Gowanus E-Waste Warehouse</a>: recycles media such as VHS tapes, cassette tapes, CDs, and DVDs: (fees may apply)</li>
+			<li><a href="http://www.greendisk.com">GreenDisk</a>: recycles media; ship at your own expense</li>
+		</ul>
+
+	</div>
+</div>
+
  <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->
