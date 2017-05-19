@@ -46,8 +46,8 @@ display: none;
       <p> 
         Complete this form to sign up for, or to obtain more info, about: 
           <ul>
-              <li>Obtaining a clothing donation bin (<a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml" >re-fashioNYC</a>)</li>
-              <li>Setting up an electronics recycling program for your apartment building (<a href="/assets/dsny/zerowaste/residents/e-cyclenyc.shtml" >e-cycleNYC</a>)</li>
+              <li>Obtaining a clothing donation bin (<a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">refashionNYC</a>)</li>
+              <li>Setting up an electronics recycling program for your apartment building (<a href="/assets/dsny/zerowaste/residents/e-cyclenyc.shtml" >ecycleNYC</a>)</li>
               <!--<li>Improving recycling in your apartment building&nbsp;(<a href="/assets/dsny/zerowaste/residents/apartment-building-recycling-initiative.shtml" >Apartment Building Recycling Initiative</a>)</li>-->
               <li>Receiving <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml" title="organics collection in large apartment buildings" >NYC Organics Collection</a> at your building</li>
           </ul>
@@ -138,8 +138,8 @@ display: none;
                         Please select the programs you are interested in<span class="red">*</span><br /> 
                         <br />
                         <div class="pure-u-1 pure-u-md-1-3-b">                            
-                            <input name="PROGRAM" type="checkbox" value="re-fashioNYC" tabindex="6" required> re-fashioNYC<br />
-                            <input name="PROGRAM" type="checkbox" value="e-cycleNYC" tabindex="7" required> e-cycleNYC<br />
+                            <input name="PROGRAM" type="checkbox" value="re-fashioNYC" tabindex="6" required> refashionNYC<br />
+                            <input name="PROGRAM" type="checkbox" value="e-cycleNYC" tabindex="7" required> ecycleNYC<br />
                             <!--<input name="PROGRAM" type="checkbox" value="Apt Building Recycling Initiative (ABRI)" tabindex="8" required> Apartment Building Recycling Initiative<br />-->
                             <input name="PROGRAM" type="checkbox" value="organics collection" tabindex="9" required> Organics Collection
                         </div>
@@ -167,11 +167,11 @@ display: none;
                                 <option value="co-op">Co-op</option>
                                 <option value="condo">Condo</option>
                                 <option value="rental">Rental</option>
-                                <option value="commercial">Commercial (re-fashioNYC only)</option>
-                                <option value="non-profit">Non-profit (re-fashioNYC/organics only)</option>
-                                <option value="public school">Public School (re-fashioNYC only)</option>
-                                <option value="private school">Private School (re-fashioNYC/organics only)</option>                    
-                                <option value="government agency">Government (re-fashioNYC/organics only)</option>
+                                <option value="commercial">Commercial (refashionNYC only)</option>
+                                <option value="non-profit">Non-profit (refashionNYC/organics only)</option>
+                                <option value="public school">Public School (refashionNYC only)</option>
+                                <option value="private school">Private School (refashionNYC/organics only)</option>                    
+                                <option value="government agency">Government (refashionNYC/organics only)</option>
                                 <option value="other">Other</option>
                             </select>
                        </div>

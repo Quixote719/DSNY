@@ -224,12 +224,12 @@
                                                                           <div class="slide" data-bg-color="#0a5796">
 										<div class="img-container">   
                                                                                                 <img class="rsImg" src="/assets/dsny/images/content/hero/ecycle 1 million.jpg
-                                           " alt="1 Million NYC'ers have access to e-cycleNYC
+                                           " alt="1 Million NYC'ers have access to ecycleNYC
                                            "/> <!-- end img tag -->
 											<div class="bg-gradient"></div>
 										</div> <!-- end img-container-->
                                                 <div class="richtext">
-<h2 class="hero-title"><a class="arrow-link arrow-link-white inline" href="http://www1.nyc.gov/site/dsny/about/news/pr2015/071515.page">e-cycleNYC Reaches 1 Million</a></h2>
+<h2 class="hero-title"><a class="arrow-link arrow-link-white inline" href="http://www1.nyc.gov/site/dsny/about/news/pr2015/071515.page">ecycleNYC Reaches 1 Million</a></h2>
 <p>
 <a class="read-more" href="http://www1.nyc.gov/site/dsny/about/news/pr2015/071515.page"></a>
 </p>
@@ -237,7 +237,7 @@
 <div class="module module-stats">
 <span class="stats-title">Milestone Announced</span>
 <!--Need clearfix to get all characters to display desktop-->
-<ul class="clearfix"><p><strong>e-cycleNYC</strong></p>
+<ul class="clearfix"><p><strong>ecycleNYC</strong></p>
 <p>One million NYC'ers have access to in-apartment building electronics recycling program</p>
 <p>863,000 pounds of electronics collected since program&rsquo;s start</p>
 <p>To date, 2,500 buildings have enrolled in the program</p></ul>
@@ -442,10 +442,10 @@
 <!--DJ: Render containing div for each program -->
 <div class="initiative" data-link="http://www1.nyc.gov/site/dsny/resources/initiatives/e-cyclenyc.page">
 <div class="content-info">
-<a target="_self" href="http://www1.nyc.gov/site/dsny/resources/initiatives/e-cyclenyc.page" title="e-cycleNYC"><img src="/assets/home/images/programs/DOS_e-cycle.jpg"></a>
+<a target="_self" href="http://www1.nyc.gov/site/dsny/resources/initiatives/e-cyclenyc.page" title="ecycleNYC"><img src="/assets/home/images/programs/DOS_e-cycle.jpg"></a>
 <div class="content-info-inner">
 <h4>
-<a title="" target="_self" href="#">e-cycleNYC</a>
+<a title="" target="_self" href="#">ecycleNYC</a>
 </h4>
 <p class="richtext desktop">
 <a title="" target="_self" href="#">A free, convenient service to pick up and recycle unwanted electronics at apartment buildings.</a>
