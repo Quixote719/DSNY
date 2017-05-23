@@ -27,7 +27,7 @@
 				<a class="range" href="/assets/dsny/about/press-releases_test?after=2017-01-01T00:00:00&before=2017-12-31T23:59:59">2017</a>
 				</li>	
 				<li>
-				<a class="range" href="/assets/dsny/about/press-releases_test?after=2016-01-01T00:00:00&before=2017-02-01T23:59:59">pre-Feb 2017</a>
+				<a class="range" href="/assets/dsny/about/press-releases_test?after=2016-01-01T00:00:00&before=2016-12-31T23:59:59">2016</a>
 				</li>			
 				<li>
 			</ul>
@@ -37,13 +37,13 @@
 
 <div id="contentsection" class="span9 about-main-image"><div class="span6 about-description">
 
-	<h1 id="yearHeader">2017 Press Releases</h1>
+	<h1 id="yearHeader">Press Releases</h1>
 	<div id="pageStuff">
 
 
 		<!--Please Insert a New Press Release Under This Line -->
 
-		<pre>&lt;-- start: Wordpress Post Content from Wordpress evaluation installation on developer's workstation --&gt;</pre>	
+		<pre>&lt;-- start: Wordpress Post Content from CMS backend --&gt;</pre>	
 		
 		<div id="wordpress_pr_summaries">
 		</div>
@@ -51,7 +51,7 @@
 		<div id="wordpress_pr_full" style="display: none">
 		</div>
 
-		<pre>&lt;-- end: Wordpress Post Content --&gt;</pre>
+		<pre>&lt;-- end: Wordpress Post Content from CMS backend --&gt;</pre>
 
 		<div>
 
@@ -121,7 +121,7 @@ function loadRange(before, after) {
 	showById('yearHeader');
 	$('#wordpress_pr_summaries').empty();
 	$.ajax( {
-		url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts?categories=5&after='+after+'&before='+before,
+		url: 'http://msswvw-dsnweb01.csc.nycnet/wordpress/wp-json/wp/v2/posts?categories=5&after='+after+'&before='+before,
 		datatype: "json",
 		success: function ( data ) {
 			$.each(data, function(i, item) {
@@ -190,7 +190,7 @@ function loadSinglePressRelease(slug) {
 	hideById('yearHeader');
 	showById('wordpress_pr_full');
 	$.ajax( {
-		url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts?slug='+slug,
+		url: 'http://msswvw-dsnweb01.csc.nycnet/wordpress/wp-json/wp/v2/posts?slug='+slug,
 		datatype: "json",
 		success: function ( data ) {
 			var post = data[0];
