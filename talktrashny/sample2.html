@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Trash Talk - With FadeIn</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen backgrounds." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" type="text/css" href="animate.min.css">
+	<style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h2{
+		font-size: 3em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:3;
+	}
+
+
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 43%;
+
+		/* 
+		* Preventing flicker on some browsers 
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+
+	/* Hiding video controls 
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	video::-webkit-media-controls {
+	  display:none !important;
+	}
+
+     #section1{
+		background-image: url(Assets/bgimage1.png);
+        background-size:100% auto;
+
+		padding: 6% 0 0 0;
+	}
+	#section2{
+		background-image: url(Assets/bgimage2.png);
+        background-size:100% auto;
+
+		padding: 6% 0 0 0;
+	}
+    #section3{
+		background-image: url(Assets/bgimage3.png);
+		padding: 6% 0 0 0;
+	background-size:100% auto;
+}
+
+.myContent{
+        height: 225px;
+      }
+      .footer{
+          height: 200px;
+          background-color: #4A4A4A;
+      }
+      #menu li {
+
+          float: right;
+          background: transparent;
+          
+          
+      }
+      .VideoHeader{
+          font-family: Anton;
+            font-size: 48px;
+            line-height: 60px;
+            color: #FFFFFF;
+            text-shadow:0 2px 4px  rgba(0,0,0,0.5); 
+      }
+      #menu li a {
+     color: white;
+          font-family: "Roboto Condensed";
+        font-size: 18px;
+        font-weight: bold;
+        text-align: right;
+
+      }
+
+#fp-nav ul li a span{
+        height: 10px;
+    width: 10px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+   background-color: rgba(255,255,255,0.4);
+}
+#fp-nav ul li a.active span{
+        height: 10px;
+    width: 10px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+    background-color:white;
+}
+#fp-nav ul li:nth-child(1), #fp-nav ul li:nth-child(2), #fp-nav ul li:nth-child(6) {
+display: none;
+}
+#fp-nav.left{
+    top:125px !important;
+}
+
+.trashTalkinfokHeader{
+    padding: 25px;
+    font-family: "Helvetica Neue";
+font-size: 36px;
+font-weight: bold;
+font-style: italic;
+text-align: center;
+line-height: 44px;
+color: #000000;
+}
+.trashTalinfokfooter{
+font-family: Roboto;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+line-height: 27px;
+color: #4A4A4A;
+padding: 0 70px;
+}
+.dtfooter{
+  max-width: 535px;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 500;
+line-height: 27px;
+color: #F0F0F0; 
+text-align: left;
+margin-left: 80px;
+display: none;
+}
+.show{
+    display: block !important;
+}
+.dtHeader{
+    max-width: 535px;
+font-family: Anton;
+font-size: 36px;
+line-height: 53px;
+color: #FFFFFF;
+text-align: left;
+margin-left: 80px;
+display: none;
+}
+
+      .anim{
+    -webkit-transform:translate(0px,50px);
+}
+
+.mySpan{
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+
+
+
+
+    .fullpage-wrapper {
+    width: 100%!important;
+    transform: none!important;
+}
+
+.fp-section {
+    width: 100%!important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+.fp-section.active {
+    visibility: visible;
+    opacity: 1;
+ }
+
+
+
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="jquery.fullPage.js"></script>
+	<script type="text/javascript" src="examples.js"></script>
+
+	<script type="text/javascript">
+   
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				verticalCentered: true,
+                anchors: ['','','anchor5', 'anchor4', 'anchor3'],
+                menu: '#menu',
+				'navigation': true,
+				'navigationPosition': 'left',
+				'navigationTooltips': ['','', 'Dont trash Ney York', 'Hears why', '0X30'],
+                parallax: true,
+        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+				'afterLoad': function(anchorLink, index){
+                  
+					if(index == 1)  {
+						$("#fp-nav").hide();
+					}
+                    else if (index == 2) {
+						$("#fp-nav").hide();
+					}else if (index == 3) {
+                        $('#section1 .dtHeader').addClass('show animated fadeIn');
+                        $('#section1 .dtfooter').addClass('show animated fadeInUp');
+                      $("#fp-nav").show();
+                    }else if (index == 4) {
+                        $('#section2 .dtHeader').addClass('show animated fadeIn');
+                        $('#section2 .dtfooter').addClass('show animated fadeInUp');
+                      $("#fp-nav").show();
+                    }else if (index == 5) {
+                        $('#section3 .dtHeader').addClass('show animated fadeIn');
+                        $('#section3 .dtfooter').addClass('show animated fadeInUp');
+                      $("#fp-nav").show();
+                    }
+				},
+			});
+		});
+   function scrollBanner() {
+    $(document).scroll(function(){
+        var scrollPos = $(this).scrollTop();
+        var transY = scrollPos / 2;
+        $('.dtHeader, .dtfooter').css({
+            'color':'yellow',
+            'opacity' : 1-(scrollPos/200),
+            'transform':'translateY(' + transY + ')'
+        });
+        
+    });
+}
+
+
+	</script>
+
+</head>
+<body>
+<ul id="menu">
+  <li data-menuanchor="anchor3"><a href="#anchor3">0X30</a></li>
+  <li data-menuanchor="anchor4"><a href="#anchor4">Hear's why</a></li>
+  <li data-menuanchor="anchor5"><a href="#anchor5">Don't trash New York</a></li>
+</ul>
+<div id="fullpage">
+	<div class="section mainsection" id="section0">
+		<video id="myVideo" loop data-autoplay>
+			<source src="Video/TalkTrashCut.mp4" type="video/mp4">
+			<source src="Video/TalkTrashCut3.webm" type="video/webm">
+		</video>
+		<div class="layer mySpan">
+			
+            <div class="VideoHeader" >See Some littering ? </div> </br><div class="VideoHeader">tell them where to put it</div>
+		</div>
+	</div>
+    <div class="section fp-auto-height" id="section4">
+        
+          <div class="myContent">
+              <div class="trashTalkinfokHeader">#TalkTrashNewYork</div>
+              <div class="trashTalinfokfooter">#TalkTrashNewYork is DSNY’s call to action, encouraging New Yorkers to do their share by putting litter where it goes – in a basket.  
+(Reminding fellow New Yorkers to do the same helps, too!)</div>
+            </div>
+    </div>
+	<div class="section mainsection" id="section1">
+	    <div class="dtHeader">Don’t trash New York. </div>
+              <div class="dtfooter">Litter trashes our town. Garbage along our streets and sidewalks reaches our sewers, then floats to our beaches – where it hurts wildlife, damages our landscape and messes up summer.
+ 
+To keep New York City beautiful and protect our environment, the NYC Department of Sanitation empties more than 23,500 sidewalks across the five boroughs and mechanical brooms sweep more than XXX miles of streets and highway ramps each week.</div>
+           
+	</div>
+	<div class="section mainsection" id="section2">
+         <div class="dtHeader">Here’s Why</div>
+              <div class="dtfooter">Littering can be hazardous to one's own health as well. Trash in an area attracts vermin and bacteria. Broken glass and other sharp objects are dangerous when they are left lying around in public places.
+Litter is harmful to wildlife as well. Plastic can cause animals such as birds to choke, when they mistake it for food. And, even worse, small bits of plastic can accumulate in the stomach of a bird, never digesting or decomposing, to the point where there is no more room for real food and the bird starves to death with a full stomach
+Lastly, but most obviously, litter makes an area look bad. When a large amount of litter can be found in a particular environment, it reflects badly on the people who live there. [http://environment.newarchaeology.com/littering.php]</div>
+           
+    </div>
+	<div class="section mainsection" id="section3">
+         <div class="dtHeader">0X30</div>
+              <div class="dtfooter">0X30: New York City will be contributing zero waste to landfills by 2030.  As one of the largest cities in the world to make a commitment to Zero Waste. The City is the first to commit to meeting at least 90% of the Zero Waste goal through a unique combination of waste reduction, reuse, recycling programs, and wastewater treatment plants using food waste for co-generation. NYC’s Zero Waste program relies far less on conventional waste-to-energy processing and instead emphasizes highest and best use of commodities and materials in the waste stream.</div>
+           
+    </div>
+    <div class="section fp-auto-height" id="section5">
+        
+          <div class="footer">
+              This is Footer
+            </div>
+    </div>
+</div>
+
+</body>
+</html>

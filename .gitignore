@@ -23,3 +23,5 @@ downloads/video/*.mp4
 downloads/word/*.doc
 downloads/word/*.rtf
 *.pdf
+*.mp4
+*.mov

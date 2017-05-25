@@ -1,0 +1,711 @@
+	/* Style for our header texts
+	* --------------------------------------- */
+	h2{
+		font-size: 3em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+		overflow: hidden;
+	}
+
+	#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover;  /*cover video background */
+   		z-index:3;
+	}
+
+	#menu li a, #menu li.active a {
+		padding: 14px 18px;
+		display: block;
+	}
+
+	/* Layer with position absolute in order to have it over the video
+	* --------------------------------------- */
+	#section0 .layer{
+		position: absolute;
+		z-index: 4;
+		width: 100%;
+		left: 5%;
+		top: 48%;
+
+		/*
+		* Preventing flicker on some browsers
+		* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+		*/
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+		text-align: left;
+	}
+
+	/*solves problem with overflowing video in Mac with Chrome */
+	#section0{
+		overflow: hidden;
+	}
+
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+
+	/* Hiding video controls
+	* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+	* --------------------------------------- */
+	/*video::-webkit-media-controls {
+	  display:none !important;
+	}*/
+	
+	#section0{
+		background-image: url(/assets/dsny/talktrashny/Assets/VideoPlaceHolderImage_Desktop.png);
+		background-size: cover;
+		padding: 6% 0 0 0;
+	}
+
+     #section1{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage1.png);
+        background-size: cover;
+
+		padding: 6% 0 0 0;
+	}
+	#section2{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage2.png);
+        background-size: cover;
+
+		padding: 6% 0 0 0;
+	}
+    #section3{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage3.png);
+		padding: 6% 0 0 0;
+	background-size: cover;
+}
+
+.myContent{
+        /*height: 225px;*/ 
+      }
+      .footer{
+          height: 200px;
+          background-color: #4A4A4A;
+      }
+      #menu li {
+
+          float: right;
+          background: transparent;
+
+
+      }
+      .VideoHeader{
+          font-family: Anton;
+            font-size: 48px;
+            line-height: 60px;
+            color: #FFFFFF;
+            text-shadow:0 2px 4px  rgba(0,0,0,0.5);
+      }
+      #menu li a {
+     color: white;
+          font-family: "Roboto Condensed";
+        font-size: 18px;
+        font-weight: bold;
+        text-align: right;
+
+      }
+
+#fp-nav ul li a span{
+        /*height: 10px;
+    width: 10px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;*/
+   background-color: rgba(255,255,255,0.4);
+}
+#fp-nav ul li a.active span{
+      /*height: 10px;
+    width: 10px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;*/
+    background-color:white;
+}
+#fp-nav ul li:nth-child(1), #fp-nav ul li:nth-child(2), #fp-nav ul li:nth-child(6) {
+display: none;
+}
+#fp-nav.left{
+    top:125px !important;
+}
+
+#section4{
+	background: #1e1e1e;
+}
+
+.trashTalkinfokHeader{
+    padding: 25px;
+    font-family: Anton;
+font-size: 36px;
+/*font-weight: bold;
+font-style: italic; */
+text-align: center;
+line-height: 44px;
+color: #fff;
+}
+
+.trashTalinfokfooter{
+font-family: Roboto;
+font-size: 16px;
+/*font-weight: bold;*/
+text-align: center;
+line-height: 27px;
+color: #f0f0f0;
+padding: 0 70px;
+padding-bottom: 20px;
+}
+.dtfooter{
+  max-width: 535px;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 500;
+line-height: 27px;
+color: #F0F0F0;
+text-align: left;
+margin-left: 70px;
+opacity: 0;
+}
+.boldText{
+font-weight: 900;
+/*padding-right: 4px;*/
+}
+.mobtext{
+	padding: 10px 0px;
+}
+.show{
+	opacity: 1;
+    display: block !important;
+}
+
+.dtHeader{
+    max-width: 535px;
+font-family: Anton;
+font-size: 36px;
+line-height: 53px;
+color: #FFFFFF;
+text-align: left;
+margin-left: 70px;
+opacity: 0;
+margin-top: 45px;
+}
+.dsnLogo{
+    margin-top: 5px;
+	margin-left: 10px;
+}
+
+.line{
+	padding: 10px 10px 25px 10px;
+margin-right: -360px;
+}
+
+.mar{
+
+}
+#menu li.active, #menu li:hover  {
+    color: white;
+background: transparent;
+}
+.chart{
+    float: left;
+    padding: 30px;
+    margin-left: 40px;
+  opacity: 0;
+		width: 35%;
+}
+
+
+#link3 a.active, #link3 a:hover ,#link5 a.active, #link5 a:hover, #link4 a.active, #link4 a:hover
+{
+	background-color: transparent;
+	/*color: #ddd;*/
+	opacity: 0.5;
+}
+
+#menu:before
+{
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+#menu
+{
+	/*background-color: rgba(104,104,104,0.75);*/
+	/*background-color: #000;*/
+	background-color: rgba(0,0,0,0.5);
+	height: 70px;
+}
+
+ol, ul {
+    list-style: disc;
+    margin-left: 30px;
+}
+
+.playpause {
+    background-image: url(/assets/dsny/talktrashny/Assets/icons/play-button.svg);
+    background-repeat: no-repeat;
+    width: 3.5%;
+    height: 30%;
+    position: absolute;
+    background-size: contain;
+    background-position: right;
+    cursor: pointer;
+    text-align: left;
+    background-position: left;
+    vertical-align: top;
+    color: #fff;
+    /*margin-left: 10px;*/
+    margin-top: -4px;
+    font-size: 28px;
+	display: inline !important;
+	margin-left: 64px;
+}
+
+.horizontalline
+{
+	float: left;
+	width: 474px;
+    margin-left: 3px;
+    /*margin-bottom: 20px;*/
+}
+
+.talktrashtext {
+    /*color: #fff;*/
+	font-size: 40px;
+    text-align: left;
+	font-family: Roboto;
+	margin-left: 5px;
+	font-weight: bold;
+	color: #ff7600; 
+	padding-top: 10px;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+
+#section0{
+		background-image: url(/assets/dsny/talktrashny/Assets/VideoPlaceHolderImage_Tablet.png);
+ }
+	
+ #section1{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage1_Tablet.png);
+	}
+	#section2{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage2_Tablet.png);
+	}
+    #section3{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage3_Tablet.png);
+}
+  #menu li a {
+        font-size: 18px;
+      }
+
+	.trashTalinfokfooter{
+			font-size: 13px;
+	}
+	.dtfooter{
+		font-size: 13px;
+		line-height: 25px;
+	}
+	.dtHeader{
+		font-size: 36px;
+	}
+
+	.chart{
+		width: 50%;
+		padding: 55px;
+		margin-left:15px;
+	}
+	.line{
+		padding: 10px 10px 25px 10px;
+		margin-left: 20px;
+		margin-right: -360px;
+
+	}
+	.mobtext{
+		padding: 10px 0px;
+	}
+
+	.playpause {
+		width: 10%;
+	}	
+
+}
+
+@media all and (max-width: 767px ){
+ .flexbox-footer-mobile{
+     display: -webkit-inline-flex;
+     display: inline-flex;
+     width: 100%;
+     height: auto;
+     justify-content: flex-start;
+     margin-left: 10px;
+ }
+
+ #talktrashfooter-mobile{
+   display: block;
+ }
+
+ #talktrashfooter{
+   display: none;
+ }
+ .footer{
+ 	height: 280px;
+ }
+
+ #menu li#link3, #menu li#link4, #menu li#link5 {
+          float: inherit;
+          display: block;
+	  }
+
+ #menu li#link3{
+          /*margin-top: -10px;*/
+	  }
+
+ #menu li#link2{
+          margin-top: 0px;
+	  }
+
+ .hamburger
+ {
+	outline: none;
+ }
+
+ .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+ {
+	background-color: #fff;
+	width: 30px;
+	height: 2px;
+ }
+ 
+.hamburger-inner::after
+{
+	bottom: -7px;
+}
+
+.hamburger-box {
+    width: 18px;
+}
+
+#menu li a, #menu li.active a {
+		padding: 14px 4px;
+		display: block;
+}
+ 
+ .hamburger-inner::before{
+    top: -7px;
+}
+ 
+ #link3 a.active, #link3 a:hover ,#link5 a.active, #link5 a:hover, #link4 a.active, #link4 a:hover
+{
+	background-color: transparent;
+	/*color: #ddd;*/
+	opacity: 0.5;
+	
+}
+
+#menu
+{
+	/*background-color: rgba(104,104,104,0.75);*/
+	/*background-color: #000;*/
+	background-color: rgba(0,0,0,0.5);
+	height: 50px;
+}
+
+#chart
+{
+display:none;
+}
+
+#mobilechart
+{
+display:block !important;
+}
+
+.horizontalline
+{
+	width: 274px;
+}
+
+
+}
+
+
+
+@media all and (min-width: 768px){
+ #talktrashfooter-mobile{
+   display: none;
+ }
+
+ #talktrashfooter{
+   display: block;
+ }
+
+
+ .flexbox-footer{
+     display: -webkit-inline-flex;
+     display: inline-flex;
+     width: 100%;
+     height: 33%;
+
+     justify-content: space-around;
+ }
+
+
+ #departmentofsanitation{
+   border-top: 1px solid #535353 ;
+ }
+
+
+
+}
+
+@media only screen
+and (max-device-width : 767px)  {
+
+#section0{
+		background-image: url(/assets/dsny/talktrashny/Assets/VideoPlaceHolderImage_Mobile.png);
+ }
+ 
+ #section1{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage1_mobile.png);
+	}
+	#section2{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage2_mobile.png);
+	}
+    #section3{
+		background-image: url(/assets/dsny/talktrashny/Assets/bgimage3_mobile.png);
+}
+
+.playpause {
+    background-image: url(/assets/dsny/talktrashny/Assets/icons/play-button-mobile.svg);
+	/*margin-top: 2px;*/
+	margin-left: 24px;
+	width: 10%;
+	 margin-top: -6px;
+}
+
+	.chart{
+		width: inherit;
+		margin-left:0px;
+	}
+	.line{
+		padding: 10px 10px 25px 10px;
+		margin-left: 20px;
+		margin-right: 0;
+
+	}
+	#fp-nav.left {
+    display: none !important;
+}
+
+.trashTalinfokfooter {
+	font-size: 13px;
+	line-height: 25px;
+	text-align: left;
+	margin-top: -20px;
+	margin-left: -30px;
+}
+.trashTalkinfokHeader{
+	/*font-size: 24px;*/
+	margin-top: 15px;
+	font-family: Anton;
+	font-size: 24px;
+	line-height: 53px;
+	color: #FFFFFF;
+	text-align: left;
+	margin-left: 14px;
+}
+
+.dtfooter, .dtHeader{
+	margin-left: 40px;
+padding: 0 8px 0 0 ;
+}
+.dtHeader{
+	font-size: 24px;
+	margin-top: 25px;
+}
+.dtfooter{
+	font-size: 13px;
+	line-height: 25px;
+}
+.mobtext{
+	padding: 0px;
+}
+.talktrashtext {
+	font-family: Roboto;
+	font-size: 24px;
+}
+.VideoHeader {
+    font-size: 28px;
+		line-height: 40px;
+	}
+
+}
+
+/*.playpause {
+    background-image: url(/assets/zws/images/play-button.svg);
+    background-repeat: no-repeat;
+    width: 18%;
+    height: 18%;
+    position: absolute;
+    left: 40%;
+    /*right: 0%;*/
+    /*top: 40%;*/
+    /*bottom: 0%;*/
+  /*  margin: auto;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+} */
+
+
+
+.playpause:hover{
+   /* background-image: url(/assets/dsny/talktrashny/Assets/icons/play-button-hover.svg);*/
+   opacity: 0.5;
+}
+
+.divline
+{
+   margin-bottom: 20px;
+   margin-left: 3px;
+}
+
+
+
+
+
+
+
+.flexbox-footer{
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+#departmentofsanitation{
+  border-top: 1px solid #535353;
+}
+
+.toggle-mobile-side-nav {
+      display: block;
+    position: absolute;
+    /*right: 5px;
+    top: 15px; */
+	right: -10px;
+    top: 25px;
+    width: 16px;
+    z-index: 9999;
+    /*height: 13px;*/
+}
+
+
+ .toggle-mobile-side-nav {
+    background: url("/assets/home/images/global/nav/nav-sprite-mobile.png") no-repeat 0 0;
+ }
+
+ .close
+ {
+ margin-right:10px;
+ margin-top:10px;
+ color: #FFF;
+ opacity: 1
+ }
+
+ .close:hover,
+.close:focus {
+        /*color: #686868;*/
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+		outline: none;
+    }
+
+button.close {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+.menuAddBgColor
+{
+	height: 220px !important;
+}
+
+/* Hide the Play button on IOS - Start*/
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works */
+
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+.urllink {
+    color: #0e8c1b  !important;
+}
+
+.urllink:hover {
+    color: #63c44d !important;
+}
+
+.fp-tableCell
+{
+	vertical-align: top;
+}
+.hide{
+  display: none !important;
+}
+/* Hide the Play button on IOS - End*/

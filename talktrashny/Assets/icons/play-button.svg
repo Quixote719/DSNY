@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="71px" height="71px" viewBox="0 0 71 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>play-button (1)</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-3-hover" transform="translate(-558.000000, -565.000000)">
+            <g id="Group-2" transform="translate(140.000000, 565.000000)">
+                <g id="play-button-(1)" transform="translate(418.000000, 0.000000)">
+                    <g id="Capa_1">
+                        <circle id="Oval-4" fill="#FFFFFF" cx="32" cy="35" r="31"></circle>
+                        <path d="M35.5,0 C15.8941543,0 0,15.893877 0,35.5 C0,55.106123 15.8941543,71 35.5,71 C55.1058457,71 71,55.106123 71,35.5 C71,15.893877 55.1058457,0 35.5,0 Z M47.7696875,37.3817773 L30.0196875,48.4755273 C29.6605273,48.6997598 29.2521387,48.8125 28.84375,48.8125 C28.4737734,48.8125 28.1032422,48.7204219 27.7679336,48.5340469 C27.0626484,48.1429922 26.625,47.4008203 26.625,46.59375 L26.625,24.40625 C26.625,23.5991797 27.0626484,22.8570078 27.7679336,22.4659531 C28.4732187,22.0726797 29.3356191,22.0965312 30.0196875,22.5244727 L47.7696875,33.6182227 C48.4181172,34.0245312 48.8125,34.7352246 48.8125,35.5 C48.8125,36.2647754 48.4181172,36.9756074 47.7696875,37.3817773 Z" id="Shape" fill="#FF7600" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
