@@ -4,7 +4,7 @@
 <div id="contentsection" class="about-main-image">
 
 	<div class="span6 about-description">
-		<pre>&lt;-- start: Wordpress Post Content from Wordpress evaluation installation on developers workstation residing on internal LAN (take longer because it is test workstation far from the DMZ) --&gt;</pre>		
+		<pre>&lt;-- start: Wordpress Post Content from Wordpress Server --&gt;</pre>		
 		<div id='content'>
 		</div>
 		<pre>&lt;-- end: Wordpress Post Content --&gt;</pre>
@@ -25,11 +25,11 @@
 
 	$(document).ready(function(){
 
-		$.ajax( {
-			url: 'http://10.150.97.118:51533/wp-json/wp/v2/posts/48',
+		$.ajax( { 
+			url: 'http://msswvw-dsnweb01.csc.nycnet/wordpress/wp-json/wp/v2/posts?slug=wordpress-demo-page-content',
 			datatype: "json",
 			success: function ( data ) {
-				var post = data; 
+				var post = data[0]; 
 				var content = post.content;
 				var rendered = content.rendered;
 				$( '#content' ).html( rendered );
