@@ -1321,7 +1321,7 @@
 								
 
 								<!--mobile-->
-											<div class="cd-dropdown-wrapper">
+<div class="cd-dropdown-wrapper">
 											<a class="cd-dropdown-trigger" style="display:none;" href="#0">Dropdown</a>
 											<nav class="cd-dropdown">				
 												<h2>Title</h2>
@@ -1760,7 +1760,703 @@
 													</li> <!-- .has-children -->
 
 													
+														<a href="#">Collection &amp; Cleaning</a>
+
+														<ul class="cd-secondary-dropdown is-hidden">
+															<li class="go-back"><a href="#0">Back</a></li>
+															<li class="see-all"><a href="/assets/dsny/about/inside-dsny.shtml">About Page</a></li>
+															<li class="has-children">
+																<a href="#">Inside DSNY</a>
+
+																<ul class="is-hidden" id="second-mobile-content">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Inside DSNY Page</a></li>
+																	<li><a href="#" class="">Leadership</a></li>
+																	<li class="has-children">
+																		<a href="#" class="">Bureaus &amp; Units</a>
+																		
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="/assets/dsny/about/inside-dsny/bureaus-and-units.shtml">Bureaus &amp; Units Page</a></li>
+																			<li><a href="/assets/dsny/about/inside-dsny/bureau-of-cleaning-and-collection.shtml">Bureau of Cleaning &amp; Collection</a></li>
+																			<li><a href="#">Bureau of Information Technology</a></li>
+																			<li><a href="#">Bureau Operations Office</a></li>
+																			<li><a href="#">Enforcement Division</a></li>
+																			<li><a href="#">Engineering</a></li>
+																			<li><a href="#">Engineering Audits</a></li>																			
+																			<li><a href="#">Fiscal Services</a></li>
+																			<li><a href="#">Human Resources</a></li>
+																			<li><a href="#">Labor Relations Office</a></li>
+																			<li><a href="#">Legal Affairs</a></li>
+																			<li><a href="#">Medical division</a></li>
+																			<li><a href="#">Office of Equity Office</a></li>
+																			<li><a href="#">Operations Management division</a></li>																			
+																			<li><a href="#">Permit Inspection Unit &amp; Environment Police Unit</a></li>
+																			<li><a href="#">Recycling &amp; Sustainability</a></li>
+																			<li><a href="#">Safety &amp; Training</a></li>
+																			<li><a href="#">Solid Waste Management</a></li>
+																			<li><a href="#">Support Services</a></li>
+																			<li><a href="#">Work Experience Management</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Affiliations</a></li>	
+																	<li><a href="#" class="">History</a></li>	
+																	<li><a href="#" class="">Public Relations</a></li>	
+																	<li class="has-children">
+																		<a href="#" class="">Reports</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Reports Page</a></li>
+																			<li><a href="#">Diversion Goals</a></li>
+																			<li><a href="#">Annual &amp; Monthly Statistics</a></li>
+																			<li><a href="#">Public Space Recycling Pilot, 2007</a></li>
+																			<li><a href="#">Market Research, 2005</a></li>
+																			<li><a href="#">Market Research 1999</a></li>
+																			<li><a href="#">Processing &amp; Marketing Recyclables, 2004</a></li>
+																			<li><a href="#">Recycling in Context, 2001</a></li>
+																			<li><a href="#">Outreach Activities, 1999</a></li>
+																			<li><a href="#">Organics Collection Pilot Reports, 2014-2015</a></li>
+																			<li><a href="#">Community Composting Report, 2014</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Hunts Point Organics Recovery, 2005</a></li>
+																			<li><a href="#">Municipal Solid Waste Composting Report, 2004</a></li>
+																			<li><a href="#">Composting In NYC 2001</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Commercial Solid Waste Study &amp; Analysis, 2012</a></li>
+																			<li><a href="#">Waste Characterization, 2005</a></li>
+																			<li><a href="#">Commercial Waste Management Study, 2004</a></li>
+																			<li><a href="#">Characterization of NYC's Solid Waste Stream, 2000</a></li>
+																			<li><a href="#">Mixed Waste Processing, 1999</a></li>
+																			<li><a href="#">Waste Characterization, 1990</a></li>
+																			<li><a href="#">Backyard Composting, 1999</a></li>
+																			<li><a href="#">Alternative Fuel Vehicle Programs, 2012</a></li>
+																			<li><a href="#">Inter-Agency Task Force</a></li>
+																			<li><a href="#">Life-Span Costing Analysis Case Studies, 2000</a></li>
+																			<li><a href="#">Materials Exchange Research Report, 2000</a></li>
+																			<li><a href="#">Measuring Waste Prevention In NYC, 2000</a></li>
+																			<li><a href="#">NYC Materials Exchange Roundtable, 1997</a></li>
+																			<li><a href="#">NYC Wasteless Business Summary Report, 2000</a></li>
+																			<li><a href="#">NYCitysense Project Summary, 2000</a></li>
+																			<li><a href="#">Packaging Restrictions Research</a></li>
+																			<li><a href="#">Packaging Waste, 2000</a></li>
+																			<li><a href="#">Procurement Strategies, 2000</a></li>
+																			<li><a href="#">Survey Of Waste Prevention, 2000</a></li>
+																			<li><a href="#">Waste Vehicle Technology Assessment, 2004</a></li>
+																			<li><a href="#">What's In NYC's Waste</a></li>																			
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Newsletter</a></li>																		
+																	<li class="has-children">
+																		<a href="#" class="">Videos</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Videos Page</a></li>
+																			<li><a href="#">Videos for Residents &amp; Institutions</a></li>
+																			<li><a href="#">Videos for Schools</a></li>																			
+																		</ul>
+																	</li>	
+																	<li class="has-children">
+																		<a href="#" class="">Educational Materials</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Educational Materials Page</a></li>
+																			<li><a href="#">Business Recycling Materials</a></li>
+																			<li><a href="#">Cleanup &amp; Gardening Activities For Students</a></li>
+																			<li><a href="#">Coloring &amp; Comic Books</a></li>
+																			<li><a href="#">Compost Project Materials</a></li>
+																			<li><a href="#">Field Trips &amp; Tours</a></li>
+																			<li><a href="#">General Sanitation Materials</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">How2Recycle Product Labels</a></li>
+																			<li><a href="#">NYC's Recycling Curriculum</a></li>
+																			<li><a href="#">Promotional Materials</a></li>
+																			<li><a href="#">Public Presentations</a></li>
+																			<li><a href="#">Recycling Activities For Students</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">Recycling Game</a></li>																		
+																			<li><a href="#">Resources for Schools</a></li>
+																			<li><a href="#">School Recycling Materials</a></li>																	
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#" class="" id="jobs-btn">Jobs</a>
+																		<ul class="is-hidden last-mobile-content">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Jobs Page</a></li>
+																			<li><a href="#">EEO Policy</a></li>
+																			<li><a href="#">Job Training Program</a></li>																			
+																		</ul>
+																	</li>	
+																	<li><a href="#" class="">Doing Business With DSNY</a></li>	
+																	<li><a href="#" class="">Memoranda of Understanding</a></li>	
+																	<li><a href="#" class="">Language Access Plan</a></li>				
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Laws</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Laws Page</a></li>																	
+																	<li><a href="#" class="">Proposed Rules</a></li>	
+																	<li><a href="#" class="">Solid Waste Management Plan</a></li>
+																	<li><a href="#" class="">Environmental Review</a></li>																		
+																	
+																	<li class="has-children">
+																		<a href="#0">Recycling & Garbage Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Recycling & Garbage Laws Page</a></li>
+																			<li><a href="#">Setout Laws for Residents</a></li>
+																			<li><a href="#">Recycling Laws for Residents</a></li>
+																			<li><a href="#">Setout Laws for Schools</a></li>
+																			<li><a href="#">Recycling Laws for Schools</a></li>
+																			<li><a href="#">Setout Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Recycling Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Harmful Products & Special Handling</a></li>
+																			<li><a href="#">Collection & Setout Laws for Businesses</a></li>
+																			<li><a href="#">Recycling Laws for Businesses</a></li>
+																			<li><a href="#">Retail & Servicer Provider Requirements</a></li>
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#0">Streets & Sidewalk Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Streets & Sidewalk Laws Page</a></li>
+																			<li><a href="#">Cleaning Laws</a></li>
+																			<li><a href="#">Dog Laws</a></li>
+																			<li><a href="#">Alternate Side Parking & Street Cleaning Laws</a></li>
+																			<li><a href="#">Illegal Dumping & Theft of Recycling</a></li>
+																			<li><a href="#">Posting & Graffiti Laws</a></li>
+																			<li><a href="#">Sidewalk & Street Obstruction Laws</a></li>
+																			<li><a href="#">Vehicle & Bike Laws</a></li>
+																			<li><a href="#">Snow Laws</a></li>													
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Press Releases</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Press Releases Page</a></li>
+																	<li><a href="#">Press Releases 2015</a></li>
+																	<li><a href="#">Press Releases 2014</a></li>
+																	<li><a href="#">Press Releases 2013</a></li>
+																	<li><a href="#">Press Releases 2012</a></li>
+																	<li><a href="#">Press Releases 2011</a></li>
+																	<li><a href="#">Press Releases 2010</a></li>
+																	<li><a href="#">Press Releases 2009</a></li>
+																	<li><a href="#">Press Releases 2008</a></li>
+																	<li><a href="#">Press Releases 2007</a></li>
+																	<li><a href="#">Press Releases 2006</a></li>
+																	<li><a href="#">Press Releases 2005</a></li>
+																	<li><a href="#">Press Releases 2004</a></li>
+																	<li><a href="#">Press Releases 2003</a></li>
+																	<li><a href="#">Press Releases 2002</a></li>
+																	<li><a href="#">Press Releases 2001</a></li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Operations</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Operations Page</a></li>
+																	<li><a href="#">Equipment</a></li>																	
+																	<li class="has-children">
+																		<a href="#0">Garages</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Garages Page</a></li>
+																			<li><a href="#">Garage Locations</a></li>
+																			<li><a href="#">Planned garages</a></li>
+																			<li><a href="#">Brooklyn District 1 & 4 garage</a></li>
+																			<li><a href="#">Manhattan District 4 & 7 garage</a></li>
+																			<li><a href="#">Manhattan Spring street salt</a></li>
+																			<li><a href="#">Queens District 14 garage and salt shed</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#">Sustainable fleet operations</a></li>
+																	<li><a href="#">Sustainable Building Operations</a></li>
+																</ul>
+															</li>
+														</ul> <!-- .cd-secondary-dropdown -->
+													</li> <!-- .has-children -->
+													
+									
+														<a href="#">Snow</a>
+
+														<ul class="cd-secondary-dropdown is-hidden">
+															<li class="go-back"><a href="#0">Back</a></li>
+															<li class="see-all"><a href="/assets/dsny/about/inside-dsny.shtml">About Page</a></li>
+															<li class="has-children">
+																<a href="#">Inside DSNY</a>
+
+																<ul class="is-hidden" id="second-mobile-content">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Inside DSNY Page</a></li>
+																	<li><a href="#" class="">Leadership</a></li>
+																	<li class="has-children">
+																		<a href="#" class="">Bureaus &amp; Units</a>
+																		
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="/assets/dsny/about/inside-dsny/bureaus-and-units.shtml">Bureaus &amp; Units Page</a></li>
+																			<li><a href="/assets/dsny/about/inside-dsny/bureau-of-cleaning-and-collection.shtml">Bureau of Cleaning &amp; Collection</a></li>
+																			<li><a href="#">Bureau of Information Technology</a></li>
+																			<li><a href="#">Bureau Operations Office</a></li>
+																			<li><a href="#">Enforcement Division</a></li>
+																			<li><a href="#">Engineering</a></li>
+																			<li><a href="#">Engineering Audits</a></li>																			
+																			<li><a href="#">Fiscal Services</a></li>
+																			<li><a href="#">Human Resources</a></li>
+																			<li><a href="#">Labor Relations Office</a></li>
+																			<li><a href="#">Legal Affairs</a></li>
+																			<li><a href="#">Medical division</a></li>
+																			<li><a href="#">Office of Equity Office</a></li>
+																			<li><a href="#">Operations Management division</a></li>																			
+																			<li><a href="#">Permit Inspection Unit &amp; Environment Police Unit</a></li>
+																			<li><a href="#">Recycling &amp; Sustainability</a></li>
+																			<li><a href="#">Safety &amp; Training</a></li>
+																			<li><a href="#">Solid Waste Management</a></li>
+																			<li><a href="#">Support Services</a></li>
+																			<li><a href="#">Work Experience Management</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Affiliations</a></li>	
+																	<li><a href="#" class="">History</a></li>	
+																	<li><a href="#" class="">Public Relations</a></li>	
+																	<li class="has-children">
+																		<a href="#" class="">Reports</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Reports Page</a></li>
+																			<li><a href="#">Diversion Goals</a></li>
+																			<li><a href="#">Annual &amp; Monthly Statistics</a></li>
+																			<li><a href="#">Public Space Recycling Pilot, 2007</a></li>
+																			<li><a href="#">Market Research, 2005</a></li>
+																			<li><a href="#">Market Research 1999</a></li>
+																			<li><a href="#">Processing &amp; Marketing Recyclables, 2004</a></li>
+																			<li><a href="#">Recycling in Context, 2001</a></li>
+																			<li><a href="#">Outreach Activities, 1999</a></li>
+																			<li><a href="#">Organics Collection Pilot Reports, 2014-2015</a></li>
+																			<li><a href="#">Community Composting Report, 2014</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Hunts Point Organics Recovery, 2005</a></li>
+																			<li><a href="#">Municipal Solid Waste Composting Report, 2004</a></li>
+																			<li><a href="#">Composting In NYC 2001</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Commercial Solid Waste Study &amp; Analysis, 2012</a></li>
+																			<li><a href="#">Waste Characterization, 2005</a></li>
+																			<li><a href="#">Commercial Waste Management Study, 2004</a></li>
+																			<li><a href="#">Characterization of NYC's Solid Waste Stream, 2000</a></li>
+																			<li><a href="#">Mixed Waste Processing, 1999</a></li>
+																			<li><a href="#">Waste Characterization, 1990</a></li>
+																			<li><a href="#">Backyard Composting, 1999</a></li>
+																			<li><a href="#">Alternative Fuel Vehicle Programs, 2012</a></li>
+																			<li><a href="#">Inter-Agency Task Force</a></li>
+																			<li><a href="#">Life-Span Costing Analysis Case Studies, 2000</a></li>
+																			<li><a href="#">Materials Exchange Research Report, 2000</a></li>
+																			<li><a href="#">Measuring Waste Prevention In NYC, 2000</a></li>
+																			<li><a href="#">NYC Materials Exchange Roundtable, 1997</a></li>
+																			<li><a href="#">NYC Wasteless Business Summary Report, 2000</a></li>
+																			<li><a href="#">NYCitysense Project Summary, 2000</a></li>
+																			<li><a href="#">Packaging Restrictions Research</a></li>
+																			<li><a href="#">Packaging Waste, 2000</a></li>
+																			<li><a href="#">Procurement Strategies, 2000</a></li>
+																			<li><a href="#">Survey Of Waste Prevention, 2000</a></li>
+																			<li><a href="#">Waste Vehicle Technology Assessment, 2004</a></li>
+																			<li><a href="#">What's In NYC's Waste</a></li>																			
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Newsletter</a></li>																		
+																	<li class="has-children">
+																		<a href="#" class="">Videos</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Videos Page</a></li>
+																			<li><a href="#">Videos for Residents &amp; Institutions</a></li>
+																			<li><a href="#">Videos for Schools</a></li>																			
+																		</ul>
+																	</li>	
+																	<li class="has-children">
+																		<a href="#" class="">Educational Materials</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Educational Materials Page</a></li>
+																			<li><a href="#">Business Recycling Materials</a></li>
+																			<li><a href="#">Cleanup &amp; Gardening Activities For Students</a></li>
+																			<li><a href="#">Coloring &amp; Comic Books</a></li>
+																			<li><a href="#">Compost Project Materials</a></li>
+																			<li><a href="#">Field Trips &amp; Tours</a></li>
+																			<li><a href="#">General Sanitation Materials</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">How2Recycle Product Labels</a></li>
+																			<li><a href="#">NYC's Recycling Curriculum</a></li>
+																			<li><a href="#">Promotional Materials</a></li>
+																			<li><a href="#">Public Presentations</a></li>
+																			<li><a href="#">Recycling Activities For Students</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">Recycling Game</a></li>																		
+																			<li><a href="#">Resources for Schools</a></li>
+																			<li><a href="#">School Recycling Materials</a></li>																	
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#" class="" id="jobs-btn">Jobs</a>
+																		<ul class="is-hidden last-mobile-content">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Jobs Page</a></li>
+																			<li><a href="#">EEO Policy</a></li>
+																			<li><a href="#">Job Training Program</a></li>																			
+																		</ul>
+																	</li>	
+																	<li><a href="#" class="">Doing Business With DSNY</a></li>	
+																	<li><a href="#" class="">Memoranda of Understanding</a></li>	
+																	<li><a href="#" class="">Language Access Plan</a></li>				
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Laws</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Laws Page</a></li>																	
+																	<li><a href="#" class="">Proposed Rules</a></li>	
+																	<li><a href="#" class="">Solid Waste Management Plan</a></li>
+																	<li><a href="#" class="">Environmental Review</a></li>																		
+																	
+																	<li class="has-children">
+																		<a href="#0">Recycling & Garbage Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Recycling & Garbage Laws Page</a></li>
+																			<li><a href="#">Setout Laws for Residents</a></li>
+																			<li><a href="#">Recycling Laws for Residents</a></li>
+																			<li><a href="#">Setout Laws for Schools</a></li>
+																			<li><a href="#">Recycling Laws for Schools</a></li>
+																			<li><a href="#">Setout Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Recycling Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Harmful Products & Special Handling</a></li>
+																			<li><a href="#">Collection & Setout Laws for Businesses</a></li>
+																			<li><a href="#">Recycling Laws for Businesses</a></li>
+																			<li><a href="#">Retail & Servicer Provider Requirements</a></li>
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#0">Streets & Sidewalk Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Streets & Sidewalk Laws Page</a></li>
+																			<li><a href="#">Cleaning Laws</a></li>
+																			<li><a href="#">Dog Laws</a></li>
+																			<li><a href="#">Alternate Side Parking & Street Cleaning Laws</a></li>
+																			<li><a href="#">Illegal Dumping & Theft of Recycling</a></li>
+																			<li><a href="#">Posting & Graffiti Laws</a></li>
+																			<li><a href="#">Sidewalk & Street Obstruction Laws</a></li>
+																			<li><a href="#">Vehicle & Bike Laws</a></li>
+																			<li><a href="#">Snow Laws</a></li>													
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Press Releases</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Press Releases Page</a></li>
+																	<li><a href="#">Press Releases 2015</a></li>
+																	<li><a href="#">Press Releases 2014</a></li>
+																	<li><a href="#">Press Releases 2013</a></li>
+																	<li><a href="#">Press Releases 2012</a></li>
+																	<li><a href="#">Press Releases 2011</a></li>
+																	<li><a href="#">Press Releases 2010</a></li>
+																	<li><a href="#">Press Releases 2009</a></li>
+																	<li><a href="#">Press Releases 2008</a></li>
+																	<li><a href="#">Press Releases 2007</a></li>
+																	<li><a href="#">Press Releases 2006</a></li>
+																	<li><a href="#">Press Releases 2005</a></li>
+																	<li><a href="#">Press Releases 2004</a></li>
+																	<li><a href="#">Press Releases 2003</a></li>
+																	<li><a href="#">Press Releases 2002</a></li>
+																	<li><a href="#">Press Releases 2001</a></li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Operations</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Operations Page</a></li>
+																	<li><a href="#">Equipment</a></li>																	
+																	<li class="has-children">
+																		<a href="#0">Garages</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Garages Page</a></li>
+																			<li><a href="#">Garage Locations</a></li>
+																			<li><a href="#">Planned garages</a></li>
+																			<li><a href="#">Brooklyn District 1 & 4 garage</a></li>
+																			<li><a href="#">Manhattan District 4 & 7 garage</a></li>
+																			<li><a href="#">Manhattan Spring street salt</a></li>
+																			<li><a href="#">Queens District 14 garage and salt shed</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#">Sustainable fleet operations</a></li>
+																	<li><a href="#">Sustainable Building Operations</a></li>
+																</ul>
+															</li>
+														</ul> <!-- .cd-secondary-dropdown -->
+													</li> <!-- .has-children -->
+													
 												
+														<a href="#">Contact</a>
+
+														<ul class="cd-secondary-dropdown is-hidden">
+															<li class="go-back"><a href="#0">Back</a></li>
+															<li class="see-all"><a href="/assets/dsny/about/inside-dsny.shtml">About Page</a></li>
+															<li class="has-children">
+																<a href="#">Inside DSNY</a>
+
+																<ul class="is-hidden" id="second-mobile-content">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Inside DSNY Page</a></li>
+																	<li><a href="#" class="">Leadership</a></li>
+																	<li class="has-children">
+																		<a href="#" class="">Bureaus &amp; Units</a>
+																		
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="/assets/dsny/about/inside-dsny/bureaus-and-units.shtml">Bureaus &amp; Units Page</a></li>
+																			<li><a href="/assets/dsny/about/inside-dsny/bureau-of-cleaning-and-collection.shtml">Bureau of Cleaning &amp; Collection</a></li>
+																			<li><a href="#">Bureau of Information Technology</a></li>
+																			<li><a href="#">Bureau Operations Office</a></li>
+																			<li><a href="#">Enforcement Division</a></li>
+																			<li><a href="#">Engineering</a></li>
+																			<li><a href="#">Engineering Audits</a></li>																			
+																			<li><a href="#">Fiscal Services</a></li>
+																			<li><a href="#">Human Resources</a></li>
+																			<li><a href="#">Labor Relations Office</a></li>
+																			<li><a href="#">Legal Affairs</a></li>
+																			<li><a href="#">Medical division</a></li>
+																			<li><a href="#">Office of Equity Office</a></li>
+																			<li><a href="#">Operations Management division</a></li>																			
+																			<li><a href="#">Permit Inspection Unit &amp; Environment Police Unit</a></li>
+																			<li><a href="#">Recycling &amp; Sustainability</a></li>
+																			<li><a href="#">Safety &amp; Training</a></li>
+																			<li><a href="#">Solid Waste Management</a></li>
+																			<li><a href="#">Support Services</a></li>
+																			<li><a href="#">Work Experience Management</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Affiliations</a></li>	
+																	<li><a href="#" class="">History</a></li>	
+																	<li><a href="#" class="">Public Relations</a></li>	
+																	<li class="has-children">
+																		<a href="#" class="">Reports</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Previous</a></li>
+																			<li class="see-all"><a href="#">Reports Page</a></li>
+																			<li><a href="#">Diversion Goals</a></li>
+																			<li><a href="#">Annual &amp; Monthly Statistics</a></li>
+																			<li><a href="#">Public Space Recycling Pilot, 2007</a></li>
+																			<li><a href="#">Market Research, 2005</a></li>
+																			<li><a href="#">Market Research 1999</a></li>
+																			<li><a href="#">Processing &amp; Marketing Recyclables, 2004</a></li>
+																			<li><a href="#">Recycling in Context, 2001</a></li>
+																			<li><a href="#">Outreach Activities, 1999</a></li>
+																			<li><a href="#">Organics Collection Pilot Reports, 2014-2015</a></li>
+																			<li><a href="#">Community Composting Report, 2014</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Hunts Point Organics Recovery, 2005</a></li>
+																			<li><a href="#">Municipal Solid Waste Composting Report, 2004</a></li>
+																			<li><a href="#">Composting In NYC 2001</a></li>
+																			<li><a href="#">Composting Opportunities, 2012</a></li>
+																			<li><a href="#">Commercial Solid Waste Study &amp; Analysis, 2012</a></li>
+																			<li><a href="#">Waste Characterization, 2005</a></li>
+																			<li><a href="#">Commercial Waste Management Study, 2004</a></li>
+																			<li><a href="#">Characterization of NYC's Solid Waste Stream, 2000</a></li>
+																			<li><a href="#">Mixed Waste Processing, 1999</a></li>
+																			<li><a href="#">Waste Characterization, 1990</a></li>
+																			<li><a href="#">Backyard Composting, 1999</a></li>
+																			<li><a href="#">Alternative Fuel Vehicle Programs, 2012</a></li>
+																			<li><a href="#">Inter-Agency Task Force</a></li>
+																			<li><a href="#">Life-Span Costing Analysis Case Studies, 2000</a></li>
+																			<li><a href="#">Materials Exchange Research Report, 2000</a></li>
+																			<li><a href="#">Measuring Waste Prevention In NYC, 2000</a></li>
+																			<li><a href="#">NYC Materials Exchange Roundtable, 1997</a></li>
+																			<li><a href="#">NYC Wasteless Business Summary Report, 2000</a></li>
+																			<li><a href="#">NYCitysense Project Summary, 2000</a></li>
+																			<li><a href="#">Packaging Restrictions Research</a></li>
+																			<li><a href="#">Packaging Waste, 2000</a></li>
+																			<li><a href="#">Procurement Strategies, 2000</a></li>
+																			<li><a href="#">Survey Of Waste Prevention, 2000</a></li>
+																			<li><a href="#">Waste Vehicle Technology Assessment, 2004</a></li>
+																			<li><a href="#">What's In NYC's Waste</a></li>																			
+																		</ul>
+																	</li>
+																	<li><a href="#" class="">Newsletter</a></li>																		
+																	<li class="has-children">
+																		<a href="#" class="">Videos</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Videos Page</a></li>
+																			<li><a href="#">Videos for Residents &amp; Institutions</a></li>
+																			<li><a href="#">Videos for Schools</a></li>																			
+																		</ul>
+																	</li>	
+																	<li class="has-children">
+																		<a href="#" class="">Educational Materials</a>
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Educational Materials Page</a></li>
+																			<li><a href="#">Business Recycling Materials</a></li>
+																			<li><a href="#">Cleanup &amp; Gardening Activities For Students</a></li>
+																			<li><a href="#">Coloring &amp; Comic Books</a></li>
+																			<li><a href="#">Compost Project Materials</a></li>
+																			<li><a href="#">Field Trips &amp; Tours</a></li>
+																			<li><a href="#">General Sanitation Materials</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">How2Recycle Product Labels</a></li>
+																			<li><a href="#">NYC's Recycling Curriculum</a></li>
+																			<li><a href="#">Promotional Materials</a></li>
+																			<li><a href="#">Public Presentations</a></li>
+																			<li><a href="#">Recycling Activities For Students</a></li>
+																			<li><a href="#">Recycling &amp; Waste Prevention Materials</a></li>
+																			<li><a href="#">Recycling Game</a></li>																		
+																			<li><a href="#">Resources for Schools</a></li>
+																			<li><a href="#">School Recycling Materials</a></li>																	
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#" class="" id="jobs-btn">Jobs</a>
+																		<ul class="is-hidden last-mobile-content">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Jobs Page</a></li>
+																			<li><a href="#">EEO Policy</a></li>
+																			<li><a href="#">Job Training Program</a></li>																			
+																		</ul>
+																	</li>	
+																	<li><a href="#" class="">Doing Business With DSNY</a></li>	
+																	<li><a href="#" class="">Memoranda of Understanding</a></li>	
+																	<li><a href="#" class="">Language Access Plan</a></li>				
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Laws</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Laws Page</a></li>																	
+																	<li><a href="#" class="">Proposed Rules</a></li>	
+																	<li><a href="#" class="">Solid Waste Management Plan</a></li>
+																	<li><a href="#" class="">Environmental Review</a></li>																		
+																	
+																	<li class="has-children">
+																		<a href="#0">Recycling & Garbage Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Recycling & Garbage Laws Page</a></li>
+																			<li><a href="#">Setout Laws for Residents</a></li>
+																			<li><a href="#">Recycling Laws for Residents</a></li>
+																			<li><a href="#">Setout Laws for Schools</a></li>
+																			<li><a href="#">Recycling Laws for Schools</a></li>
+																			<li><a href="#">Setout Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Recycling Laws for Nonprofits & Agencies</a></li>
+																			<li><a href="#">Harmful Products & Special Handling</a></li>
+																			<li><a href="#">Collection & Setout Laws for Businesses</a></li>
+																			<li><a href="#">Recycling Laws for Businesses</a></li>
+																			<li><a href="#">Retail & Servicer Provider Requirements</a></li>
+																		</ul>
+																	</li>
+																	<li class="has-children">
+																		<a href="#0">Streets & Sidewalk Laws</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Streets & Sidewalk Laws Page</a></li>
+																			<li><a href="#">Cleaning Laws</a></li>
+																			<li><a href="#">Dog Laws</a></li>
+																			<li><a href="#">Alternate Side Parking & Street Cleaning Laws</a></li>
+																			<li><a href="#">Illegal Dumping & Theft of Recycling</a></li>
+																			<li><a href="#">Posting & Graffiti Laws</a></li>
+																			<li><a href="#">Sidewalk & Street Obstruction Laws</a></li>
+																			<li><a href="#">Vehicle & Bike Laws</a></li>
+																			<li><a href="#">Snow Laws</a></li>													
+																		</ul>
+																	</li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Press Releases</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Press Releases Page</a></li>
+																	<li><a href="#">Press Releases 2015</a></li>
+																	<li><a href="#">Press Releases 2014</a></li>
+																	<li><a href="#">Press Releases 2013</a></li>
+																	<li><a href="#">Press Releases 2012</a></li>
+																	<li><a href="#">Press Releases 2011</a></li>
+																	<li><a href="#">Press Releases 2010</a></li>
+																	<li><a href="#">Press Releases 2009</a></li>
+																	<li><a href="#">Press Releases 2008</a></li>
+																	<li><a href="#">Press Releases 2007</a></li>
+																	<li><a href="#">Press Releases 2006</a></li>
+																	<li><a href="#">Press Releases 2005</a></li>
+																	<li><a href="#">Press Releases 2004</a></li>
+																	<li><a href="#">Press Releases 2003</a></li>
+																	<li><a href="#">Press Releases 2002</a></li>
+																	<li><a href="#">Press Releases 2001</a></li>
+																</ul>
+															</li>
+
+															<li class="has-children">
+																<a href="#">Operations</a>
+
+																<ul class="is-hidden">
+																	<li class="go-back"><a href="#0">Back</a></li>
+																	<li class="see-all"><a href="#">Operations Page</a></li>
+																	<li><a href="#">Equipment</a></li>																	
+																	<li class="has-children">
+																		<a href="#0">Garages</a>
+
+																		<ul class="is-hidden">
+																			<li class="go-back"><a href="#0">Back</a></li>
+																			<li class="see-all"><a href="#">Garages Page</a></li>
+																			<li><a href="#">Garage Locations</a></li>
+																			<li><a href="#">Planned garages</a></li>
+																			<li><a href="#">Brooklyn District 1 & 4 garage</a></li>
+																			<li><a href="#">Manhattan District 4 & 7 garage</a></li>
+																			<li><a href="#">Manhattan Spring street salt</a></li>
+																			<li><a href="#">Queens District 14 garage and salt shed</a></li>
+																		</ul>
+																	</li>
+																	<li><a href="#">Sustainable fleet operations</a></li>
+																	<li><a href="#">Sustainable Building Operations</a></li>
+																</ul>
+															</li>
+														</ul> <!-- .cd-secondary-dropdown -->
+													</li> <!-- .has-children -->
 
 													
 												</ul> <!-- .cd-dropdown-content -->

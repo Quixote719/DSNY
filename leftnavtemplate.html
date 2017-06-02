@@ -61,7 +61,7 @@
 							    	}
 
 							        .navbar .popover {
-							            width: 578px;
+							            width: 580px;
 							            -webkit-border-top-left-radius: 0px;
 							            -webkit-border-bottom-left-radius: 0px;
 							            border-top-left-radius: 0px;
@@ -95,9 +95,8 @@
 							        	-webkit-border-radius: 0 0 0 0;
   										-moz-border-radius: 0 0 0 0;
   										background-color:#e6e6e6;
-  										color: #339933;
+  										color: black;
   										font-weight: bold;
-  										line-height: 28px;
 							        }
 
 							        .navbar .popover-content img {
@@ -107,7 +106,7 @@
 
 							        .navbar .dropdown-menu {
 							        	width:360px;
-							        	margin-top:85px;
+							        	margin-top:92px;
 							            /*-webkit-border-top-right-radius: 0px;
 							            -webkit-border-bottom-right-radius: 0px;
 							            border-top-right-radius: 0px;
@@ -125,7 +124,6 @@
 										background-color: #339933;
 										border: none;
 										padding: 20px 0 0 0;
-										margin-bottom:10px;
 							        }
 
 
@@ -133,12 +131,12 @@
 							        .navbar .dropdown-menu > li > a:hover {
 							            background-image: none;
 							            color: white !important;
-							            background-color: #50c550;
+							            background-color: #3ab239;
 							        }
 
 							        .navbar .dropdown-menu > li > a.maintainHover {
 							            color: white;
-							            background-color: #50c550;
+							            background-color: #3ab239;
 							        }
 
 
@@ -276,26 +274,11 @@
 										border-width:0px 1px 0px 1px; 
 										border-color:white; 
 										border-style:solid;
-										display:none;
-									}
-
-
-									.dropdown-menu > li
-									{
-										border-top:solid 1px white;
-										margin-left: 1px;
-  										border-left: solid 1px #50c550;										
-									}
-
-									.dropdown-menu > li:first-child
-									{
-										border-top:0;
-
 									}
 
 									@media only screen and (min-width: 768px) and (max-width: 800px){
 								        .navbar .popover {
-								            width: 410px;
+								            width: 400px;
 								        }
 
 								        .navbar .dropdown-menu {
@@ -2204,15 +2187,6 @@
 						   		$('#launch-mobile-nav').click(function(){
 						   			$('.cd-dropdown-trigger').click();
 						   		});
-								
-								$('.dropdown-toggle').click(function(){
-						   			$('.menu-bar').show();
-
-						   			if( $(this).parent().hasClass('open') )
-						   			{
-						   				$('.menu-bar').hide();
-						   			}
-						   		});
 
 
 						        var $menu = $(".dropdown-menu");
@@ -2271,7 +2245,6 @@
 						            // together menu/submenu structure to show the use of jQuery-menu-aim.
 						            $(".popover").css("display", "none");
 						            $("a.maintainHover").removeClass("maintainHover");
-						            $(".menu-bar").css("display", "none");
 						        });
 
 						    </script>

@@ -82,14 +82,12 @@
 							        .popover-title
 							        {
 							        	font-size:20px;
-							        	margin-top: -1px;
-							        	margin-left: -1px;
 							        	-webkit-border-radius: 0 0 0 0;
   										-moz-border-radius: 0 0 0 0;
-  										background-color: rgb(99,100,102);
-  										color: white;
+  										background-color: rgb(211,211,211);
+  										color: #339933;
   										font-weight: bold;
-  										line-height: 30px;
+  										line-height: 28px;
 							        }
 
 							        .navbar .popover-content img {
@@ -114,7 +112,7 @@
 							        .navbar-inverse .navbar-inner
 							        {
 							        	background-image: none;
-										/*background-color: #339933;*/
+										background-color: #339933;
 										border: none;
 										padding: 20px 0 0 0;
 										margin-bottom:10px;
@@ -122,7 +120,16 @@
 
 
 
+							        .navbar .dropdown-menu > li > a:hover {
+							            background-image: none;
+							            color: white !important;
+							            background-color: #50c550;
+							        }
 
+							        .navbar .dropdown-menu > li > a.maintainHover {
+							            color: white;
+							            background-color: #50c550;
+							        }
 
 
 
@@ -199,12 +206,37 @@
 							        }
 
 
+							        a.dropdown-toggle:hover
+							        {
+							        	background-color:#3ab239;
+							        	color:white !important;
+							        }
 
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#339933;
+							        	text-shadow:none;
+							        }
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#3ab239;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#50c550;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#50c550;
+							        }
 
 							        .menu-style
 							        {
 							        	height: 20px; 
-							        	/*background-color: #339933; */
+							        	background-color: #339933; 
 							        	border-right-color: transparent;  
 							        	border-left-color: transparent;  
 							        	border-right-style: solid;  
@@ -220,7 +252,7 @@
 							        {
 							        	border-right-color: white;  
 							        	border-left-color: white;
-							        	/*background-color: #50c550;*/
+							        	background-color: #50c550;
 							        	height: 22px;
 							        }
 
@@ -230,7 +262,7 @@
 										width:99.79%; 
 										margin-top:74px; 
 										height:10px; 
-										/*background-color:#50c550; */
+										background-color:#50c550; 
 										height:10px; 
 										border-width:0px 1px 0px 1px; 
 										border-color:white; 
@@ -404,8 +436,7 @@
 									  color: white;
 									  background-color: rgba(0,89,73,0.97);
 									  border-bottom: solid 1px #ffffff;
-									  font-size:14px;
-									  padding-right: 40px;
+									  font-size:20px;
 									}
 									.cd-dropdown .cd-close {
 									  /* 'X' close icon - mobile version only */
@@ -937,80 +968,6 @@
 									{
 										background-color: rgba(247,139,30,0.9);
 									}
-
-									.navbar-inverse .navbar-inner
-									{
-										background-color: #005949;
-									}
-
-									.menu-style
-									{
-										background-color: #005949;
-									}
-
-									#nav .active
-									{
-										background-color: #005949 !important;
-									}
-
-
-									.menu-bar
-									{
-										background-color: #22ba6f;
-									}
-
-									.dropdown-menu > li > a
-									{
-										background-color: #22ba6f;
-									}
-
-
-							        a.dropdown-toggle:hover
-							        {
-							        	background-color:#3ab239;
-							        	color:white !important;
-							        }
-
-							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style
-							        {
-							        	background-color:#005949;
-							        	text-shadow:none;
-							        }
-
-							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style:hover
-							        {
-							        	background-color:#b2b2b2;
-							        	color: #005949 !important;
-							        }
-
-							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style
-							        {
-							        	background-color:#22ba6f;
-							        }
-
-							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style:hover
-							        {
-							        	background-color:#22ba6f;
-							        	color: white !important;
-							        }
-
-							        .open > .menu-style
-							        {
-							        	background-color: #22ba6f;
-							        }
-
-
-							        .navbar .dropdown-menu > li > a:hover {
-							            background-image: none;
-							            color: #005949 !important;
-							            background-color: #b2b2b2;
-							        }
-
-							        .navbar .dropdown-menu > li > a.maintainHover {
-							            color: #005949;
-							            background-color: #b2b2b2;
-							        }
-
 
 									/*.cd-dropdown-content
 									{
@@ -1808,7 +1765,7 @@
 
 				<a href="#" class="toggle-mobile-side-nav visible-phone" id="launch-mobile-nav" style="z-index:9999;"></a>
 				<div class="agency-logo-wrapper">
-				<a href="/sites/dsny/index.page"><img class="agency-logo" src="/assets/dsny/img/updated-logo.png" alt="Department of Sanitation"></a>
+				<a href="/sites/dsny/index.page"><img class="agency-logo" src="/assets/dsny/images/content/header/sanitation-logo.png" alt="Department of Sanitation"></a>
 				</div>
 				<div class="hidden-phone" id="header-links">
 				<div class="language-selector">

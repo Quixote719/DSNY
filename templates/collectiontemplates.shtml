@@ -1,7 +1,5 @@
-<!-- templates/collectiontemplates.shtml (start) -->
 <!--#include virtual="/assets/dsny/templates/header-footer/styles.shtml" -->
 <!--#include virtual="/assets/dsny/templates/mobilenav/mobilenavigation.shtml" -->
 <!--#include virtual="/assets/dsny/templates/level1menu/level1menu.shtml" -->
 <!--#include virtual="/assets/dsny/templates/megamenu/collectionandcleaningmenu.shtml" -->
 <!--#include virtual="/assets/dsny/templates/breadcrumb/breadcrumb.shtml"-->
-<!-- templates/collectiontemplates.shtml (end) -->

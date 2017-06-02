@@ -1,4 +1,3 @@
-<!-- dsny/templates/header-footer/htmlheader.shtml start -->
 				<!DOCTYPE html>
 				<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 				<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7"><![endif]-->
@@ -22,4 +21,3 @@
 
 				<!--<![endif]-->
 				<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- dsny/templates/header-footer/htmlheader.shtml start -->

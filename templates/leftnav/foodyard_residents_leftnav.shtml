@@ -1,49 +1,46 @@
 		<div id="leftnavsection" class="span3 agencies-about-links" style="display:none">
 			<div class="agencies-about-links">			
-				<ul class="clearfix hidden-phone">			
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/community-compost-sites-and-urban-farms.shtml"> Community Compost Sites & Urban Farms </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml"> Contact NYC Compost Project </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/master-composter-certificate-program.shtml"> Master Composter Certificate Program </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml"> NYC Compost Project </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/nyc-compost-project-education-programs.shtml">  NYC Compost Project Education Programs </a>
-					</li>			
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/nyc-compost-project-technical-assistance.shtml"> NYC Compost Project Technical Assistance </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml"> Organics Collection Neighborhoods Served </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/nyc-organics-collection-faqs-and-tips.shtml"> Organics Collection FAQs + Tips</a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/organics-collection-in-houses-and-small-buildings-1-9-units.shtml"> Organics Collection In Houses & Small Buildings (1-9 Units) </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/organics-collection-in-large-buildings-10-units.shtml"> Organics Collection In Large Buildings (10 &#43; Units) </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml"> Residential Food Waste Drop-Off Sites </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/wood-debris-disposal.shtml"> Wood Debris Disposal </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/what-food-waste-to-drop-off.shtml">What Food Waste To Drop Off </a>
-					</li>
-					<li>
-						<a href="/assets/dsny/zerowaste/residents/what-organics-to-recycle-at-the-curb.shtml"> What Organics To Recycle at the Curb </a>
-					</li>
-				</ul>
+			<ul class="clearfix hidden-phone">			
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/community-compost-sites-and-urban-farms.shtml"> Community Compost Sites & Urban Farms </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/contact-nyc-compost-project.shtml"> Contact NYC Compost Project </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/master-composter-certificate-program.shtml"> Master Composter Certificate Program </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/nyc-compost-project.shtml"> NYC Compost Project </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/nyc-compost-project-education-programs.shtml">  NYC Compost Project Education Programs </a>
+			</li>			
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/nyc-compost-project-technical-assistance.shtml"> NYC Compost Project Technical Assistance </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml"> NYC Organics Collection</a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/organics-collection-in-houses-and-small-buildings-1-9-units.shtml"> Organics Collection In Houses & Small Buildings (1-9 Units) </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/organics-collection-in-large-buildings-10-units.shtml"> Organics Collection In Large Buildings (10 &#43; Units) </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/residential-food-waste-drop-off-sites.shtml"> Residential Food Waste Drop-Off Sites </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/wood-debris-disposal.shtml"> Wood Debris Disposal </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/what-food-waste-to-drop-off.shtml">What Food Waste To Drop Off </a>
+			</li>
+			<li>
+			<a href="/assets/dsny/zerowaste/residents/what-organics-to-recycle-at-the-curb.shtml"> What Organics To Recycle at the Curb </a>
+			</li>
+			</ul>
 			</div>
 
 		</div>

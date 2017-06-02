@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="BootStrapDatePicker/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="BootStrapDatePicker/css/bootstrap-datetimepicker-standalone.css">
+    <link rel="stylesheet" href="tooltipster/tooltipster.css">
+
+    <title>
+        E-Pickup Dashboard - Login
+    </title>
+
+    <style type="text/css">
+        /*a:focus {
+            outline: 0;
+        }
+
+        input:focus {
+            outline: 0;
+        }
+
+        button:focus {
+            outline: 0;
+        }*/
+
+        div.card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 300px;
+            left: 50%;
+            margin-left: -150px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-top: 25px;
+            height: 250px;
+        }
+
+        input[type=text] {
+            width: 250px;
+            padding-left: 10px;
+            height: 35px;
+        }
+
+        input[type=password] {
+            width: 250px;
+            padding-left: 10px;
+            height: 35px;
+        }
+
+        .bootstrap-datetimepicker-widget.dropdown-menu {
+            width: 100% !important;
+            top: 39px !important;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F9F9F9">
+    <div style="text-align:center; margin-top: 100px">
+        <div>
+            <img src="Assets/DSNYLogo_Desktop.png" alt="dsny logo" />
+        </div>
+        <div style="font-weight: bold; color: #006646; margin-top: 25px">
+            E-Pickup Dashboard
+        </div>
+        <form id="msform" class="pure-form" method="post" name="loginform">
+            <div class="card card-block text-xs-center" id="divlogin">
+                <p class="card-text">
+                    <input type="text" name="UserName" maxlength="25" id="txtUserName" placeholder="Username" required style="margin-top: 20px">
+                </p>
+                <p class="card-text">
+                    <input type="password" name="Password" maxlength="25" id="txtPassword" placeholder="Password" required>
+                </p>
+                <a href="#" class="btn" id="btnLogin" style="background-color: #0E8C1B; border-radius: 0px; color: #FFFFFF; width: 130px; margin-top: 15px">Login</a>
+            </div>
+            <div class="card card-block text-xs-center" id="divfilter" style="display:none; padding-top:20px">
+                <p class="card-text">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' id="dtpickupdate" name="pickupdate" required tabindex="2" maxlength="15" style="border: 0px; background-color: #F9F9F9; width: 100%;" placeholder="Select Date" />
+                        <span class="input-group-addon" style="border: 0px; background-color: #F9F9F9; padding: 7px; color: #006646">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </p>
+                <p class="card-text">
+                    <select id="borough" name="borough" required tabindex="2" style="width: 100%; height: 35px; border: 0px; background-color: #F9F9F9; padding-left: 5px">
+                        <option selected="selected" value="">Select Borough</option>
+                        <option value="Staten Island">Staten Island</option>
+                    </select>
+                </p>
+                <p class="card-text">
+                    <select id="district" name="district" required tabindex="3" style="width: 100%; height: 35px; border: 0px; background-color: #F9F9F9; padding-left: 5px">
+                        <option selected="selected" value="">Select District</option>
+                    </select>
+                </p>
+                <a href="#" class="btn" id="btngo" style="background-color: #0E8C1B; border-radius: 0px; color: #FFFFFF; width: 130px; margin-top: 5px;">Go</a>
+            </div>
+        </form>
+        <div style="color: #9b9b9b; margin-top: 280px">
+            Need Help? Please contact IT Helpdesk:
+        </div>
+        <div>
+            <hr style="width:50%; background-color: #9b9b9b" />
+        </div>
+        <div style="color: #9b9b9b">
+            <i class="fa fa-phone" aria-hidden="true" style="margin-right: 5px"></i>
+            212-437-4286
+        </div>
+        <div style="font-weight: 500; color: #006646">
+            <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i>
+            <a href="mailto:ithelpdesk@dsny.nyc.gov" target="_top" style="color: #006646; text-decoration: underline">ithelpdesk@dsny.nyc.gov</a>
+        </div>
+    </div>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="jquery/tether.min.js"></script>
+    <script src="jquery/jquery.validate.js"></script>
+    <script src="BootStrap/js/bootstrap.min.js"></script>
+    <script src="BootStrapDatePicker/js/moment.js"></script>
+    <script src="BootStrapDatePicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="tooltipster/jquery.tooltipster.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#datetimepicker1').datetimepicker({
+                format: 'MM-DD-YYYY',
+                widgetPositioning: {
+                    horizontal: 'auto',
+                    vertical: 'bottom'
+                },
+            });
+        });
+
+        $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'right'
+        });
+
+        $('#msform input[type="password"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'right'
+        });
+
+        $('#msform select').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'right'
+        });
+
+        $(document).ready(function () {
+
+            $("#btnLogin").click(function (event) {
+                jQuery.support.cors = true;
+                if (validateForm()) {
+                    event.preventDefault();
+                    var ValidateUser = {
+                        UserName: $("#txtUserName").val(),
+                        Password: $("#txtPassword").val()
+                    };
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/Dashboard/ValidateUserCredentials',
+                        data: ValidateUser,
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data) {
+                                //alert(data);
+                                $("#divlogin").hide();
+                                $("#divfilter").show();
+                                return data;
+                            }
+                            else {
+                                $("#txtPassword").tooltipster('update', "Please enter valid username and/or password.");
+                                $("#txtPassword").tooltipster('show');
+                                $("#txtPassword").focus();
+                            }
+                        }
+                    });
+                }
+                else {
+                    validator.focusInvalid();
+                    return false;
+                }
+            });
+
+
+            $('#borough').on('change', function () {
+                var selectval = $("#borough option:selected").val();
+                if (selectval != "") {
+                    getDistricts(selectval);
+                }
+                else {
+                    getDistricts(selectval);
+                }
+            });
+
+
+            $("#btngo").click(function (event) {
+                jQuery.support.cors = true;
+                if (validateForm()) {
+                    event.preventDefault();
+                    sessionStorage.setItem("pickupdate", $('#dtpickupdate').val());
+                    sessionStorage.setItem("borough", $("#borough option:selected").val());
+                    sessionStorage.setItem("district", $("#district option:selected").val());
+                    window.location.href = "index.html";
+                }
+                else {
+                    validator.focusInvalid();
+                    return false;
+                }
+            });
+
+        });
+
+        var validator;
+        function validateForm() {
+            validator = $('#msform').validate({
+                errorPlacement: function (error, element) {
+                    if (element.attr("name") == "UserName") {
+                        $(element).tooltipster('update', "Please enter username.");
+                    } else if (element.attr("name") == "Password") {
+                        $(element).tooltipster('update', "Please enter password.");
+                    } else if (element.attr("name") == "borough") {
+                        $(element).tooltipster('update', "Please select borough from the list.");
+                    } else if (element.attr("name") == "district") {
+                        $(element).tooltipster('update', "Please select district from the list.");
+                    } else if (element.attr("name") == "pickupdate") {
+                        $(element).tooltipster('update', "Please select pick up date.");
+                    }
+                    else {
+                        $(element).tooltipster('update', "Please enter the required field.");
+                    }
+                    $('element').tooltipster({
+                        functionInit: function () {
+                            return $('element').html();
+                        },
+                        functionReady: function () {
+                            $('element').attr('aria-hidden', false);
+                        },
+                        functionAfter: function () {
+                            $('element').attr('aria-hidden', true);
+                        }
+                    });
+                    $(element).focus(function () {
+                        if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid")) { $(this).tooltipster('show'); }
+                    })
+                    .blur(function () {
+                        $(this).tooltipster('hide');
+                    });
+                },
+                success: function (label, element) {
+                    $(element).tooltipster('hide');
+                },
+                invalidHandler: function () {
+                    $(this).find(".error:first").focus();
+                }
+            });
+            if (!$('#msform').valid()) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        //get districts based on borough selected from the drop down.
+        function getDistricts(param) {
+            jQuery.support.cors = true;
+            $('#district option').remove();
+            $("#district").append('<option value="" selected="selected">Select District</option>');
+            $.ajax({
+                url: 'https://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/Dashboard/GetDistrictsByBorough?Borough=' + param,
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    $.each(data, function (i, item) {
+                        $("#district").append('<option value="' + item.Id + '">' + item.DistrictName + '</option>');
+                    });
+                }
+            });
+        }
+
+
+    </script>
+</body>
+</html>

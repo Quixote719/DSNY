@@ -1,0 +1,38 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Contact - Contact Us</title>
+
+
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+
+
+		<div id="contentsection" class="about-main-image">
+
+		<div class="span6 about-description">
+
+<h2>Contact Us</h2>
+	<p> For questions on how to discard certain items use the How To Get Rid Of search tool.</p>
+	<br>
+	<p>Find the appropriate form to handle your request on these pages:</p>
+	<ul>
+		<li> <a href=""> Complaints</a></li>
+		<li> <a href=""> Programs</a></li>
+		<li> <a href=""> Services</a></li>
+	</ul>
+	<br>
+		<p>If you can’t find the information you need, <a href="http://www.nyc.gov/html/mail/html/maildos.html"> email the Commissioner</a>.</p>
+	<br>
+		<p>You can also write to: </p>
+		<p>NYC Department of Sanitation Central Correspondence Unit </p>
+		<p>59 Maiden Lane, 5th Floor New York, NY 10038</p>
+
+
+</div></div>
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->
