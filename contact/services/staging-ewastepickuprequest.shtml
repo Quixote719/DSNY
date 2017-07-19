@@ -736,6 +736,22 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
                 </div>
 				</div>
 			 </fieldset>
+            <fieldset class="fieldset7" style="display:none;">
+				<div class="pure-g">  
+                    <div id="subcontainer" class="errormsg" style="text-align:center">  
+                        A request already exists at the current address on the same date <div id="addrDate"> </div> Please place your items at the designated area or choose a different date to schedule a separate appointment.
+						
+					</div>
+					<br>
+					<br> 
+					<div id="buttons">
+                    <button id="btnCancel" class="pure-button next">
+                        &nbsp;<strong>Cancel</strong>&nbsp;</button>
+                    <button id="btnStep2" class="pure-button next">
+                        &nbsp;<strong>Reschedule</strong>&nbsp;</button>
+                </div>
+				</div>
+			 </fieldset>
             </form>
         </div>
 		<div id="errcontainer" style="display:none" > 
@@ -950,14 +966,14 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 						$button.val(0);	
 						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
 						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue); 
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 						$('#Count'+CatID).tooltipster('show');
 					}
 					else if ( TotalCategory >= 20) {						
 						$button.parent().find("input").val(0)
 						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
 						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue); 	
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 						$('#Count'+CatID).tooltipster('show'); 					
 					}				   				  
 				
@@ -965,7 +981,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 			  }			  
 			 else if (($button[0].name == 'elecCtgCount')  ){
 			
-			     $button.tooltipster('update', "You can not enter more than 20 quantity for this request.");
+			     $button.tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				 $button.tooltipster('hide');
 				 
 				 if (TotalCategory <= 20)
@@ -1024,7 +1040,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 						TotalCategory += parseFloat(element.value);
 					});
 				
-				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You can not enter more than 20 quantity for this request.");
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
 				
 				TotalCategory = parseFloat((TotalCategory + newVal) - oldValue )
@@ -1034,7 +1050,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 			 // if(($button.parent().find("input")[0].name == 'tvSubCat'+CatID ))
 			  if(($button.parent().find("input")[0].name == 'tvSubCat' ))
 			  {   
-					$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+					$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 					$('#Count'+CatID).tooltipster('hide');					
 					var SubCtgTotalValue = parseFloat((SubCtgSum + newVal) - oldValue ) // Total of individual category.
 					
@@ -1069,7 +1085,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 						$button.parent().find("input").val(oldValue) 
 						$('#Count'+CatID).val(SubCtgSum);
 						$('#ctgsum'+CatID).val(SubCtgSum); 	
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 						$('#Count'+CatID).tooltipster('show'); 					
 					}				   				  
 			  }
@@ -1655,6 +1671,11 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 								$('#errorDate').text($('#disApptDate').text());
 								$('.fieldset6').show();	
 							  }
+                             else if (json.toUpperCase() == 'DUPLICATE ADDRESS'){
+                                $('#ReqHeader').text('Step 4 - Confirmation');
+								$('#addrDate').text($('#disApptDate').text());
+								$('.fieldset7').show();
+							  }
 							  else if (json.toUpperCase() == 'ERROR'){
 								$('#container').hide();
 								$('#errcontainer').show();					  
@@ -1702,6 +1723,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 	});
 	$('#btnStep2').click(function(){
 		$('.fieldset6').hide(); 
+        $('.fieldset7').hide(); 
 		$('#datetimepicker1').data('DateTimePicker').destroy();
 		Recaptcha.reload(); 
 		var disableDT = []; //['09/28/2016', '2016-09-27',d];

@@ -86,7 +86,7 @@ function isValidEmailAddressAPP(input) {
 					TotalCategory += parseFloat(element.value);
 				});
 
-				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You can not enter more than 20 quantity for this request.");
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
 
 				TotalCategory = parseFloat((TotalCategory + newVal) - oldValue );
@@ -94,7 +94,7 @@ function isValidEmailAddressAPP(input) {
 				SubCtgSum = parseFloat($('#ctgsum' + CatID).val());
 				if (($button.parent().find("input")[0].name == 'tvSubCat' + CatID)) {
 
-					$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+					$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 					$('#Count'+CatID).tooltipster('hide');
 
 					var SubCtgTotalValue = 0;
@@ -131,7 +131,7 @@ function isValidEmailAddressAPP(input) {
 							$button.parent().find("input").val(oldValue)
 							$('#Count'+CatID).val(SubCtgSum);
 							$('#ctgsum'+CatID).val(SubCtgSum);
-							$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+							$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 							$('#Count'+CatID).tooltipster('show');
 						}
 						else {
@@ -148,7 +148,7 @@ function isValidEmailAddressAPP(input) {
 							$button.parent().find("input").val(oldValue)
 							$('#Count'+CatID).val(SubCtgSum);
 							$('#ctgsum'+CatID).val(SubCtgSum);
-							$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
+							$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 							$('#Count'+CatID).tooltipster('show');
 						}
 						else {
@@ -241,7 +241,7 @@ function isValidEmailAddressAPP(input) {
 							$button.val(0);
 							$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
 							$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue);
-							$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+							$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 							$('#Count'+CatID).tooltipster('show');
 
 						}
@@ -258,7 +258,7 @@ function isValidEmailAddressAPP(input) {
 							$button.parent().find("input").val(0)
 							$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
 							$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue);
-							$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
+							$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 							$('#Count'+CatID).tooltipster('show');
 						}
 						else {
@@ -271,7 +271,7 @@ function isValidEmailAddressAPP(input) {
 			  else if (($button[0].name == 'elecCtgCount')  )
 			  {
 				 
-				$button.tooltipster('update', "You can not enter more than 20 quantity for this request.");
+				$button.tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				$button.tooltipster('hide');
 
 				if  (TotalCategory <= 20)

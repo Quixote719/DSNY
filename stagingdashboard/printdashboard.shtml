@@ -95,7 +95,7 @@
 		
 		$("#lblDate").text(SearchDate);
 		
-		var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/DashboardExportToExcel?SearchDate=' + SearchDate + '&Borough=' + Borough  + '&DistrictId=' + DistrictId +'&TruckId=' +  TruckId
+		var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/DashboardExportToExcel?SearchDate=' + SearchDate + '&Borough=' + Borough  + '&DistrictId=0&TruckId=' +  TruckId
         $.ajax({
 				async: false,
 				url: RequestUrl,

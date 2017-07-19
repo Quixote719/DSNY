@@ -36,6 +36,8 @@
         <form class="form-inline pull-xs-right">
             <button id="btnNewRequest" class="btn navButton" onmouseover="this.style.background='#0d8219';" onmouseout="this.style.background='#0e8c1b';">+ Add On</button>
             <button id="print" class="btn navButton" type="submit" onmouseover="this.style.background='#0d8219';" onmouseout="this.style.background='#0e8c1b';">Print</button>
+            <button id="EODReport" class="btn navButton" type="submit" onmouseover="this.style.background='#0d8219';" onmouseout="this.style.background='#0e8c1b';">EOD Report</button>
+            <button id="AssReport" class="btn navButton" type="submit" onmouseover="this.style.background='#0d8219';" onmouseout="this.style.background='#0e8c1b';">Assignments Report</button>
             <button class="btn logoutButton" type="submit">Logout</button>
         </form>
     </nav>
@@ -422,20 +424,23 @@
                      <div><span class='totalSelected'><span id='totalSelected' > </span> Selected </span><button type="button"
                              id="selectAll" class="btn btn-outline-secondary">Select All <i class="fa fa-check-circle fa-lg" aria-hidden="true"></i></button></div>
                  </div>
-                 <div class="col-lg-4 SelectedTaskStatusButtons">
+                 <div class="col-lg-5 SelectedTaskStatusButtons">
                      <div class="btn-group dropup">
                          <button type="button" class="btn btn-outline-secondary btn-secondary dropdown-toggle BulktruckMenuDropdown" data-toggle="dropdown" aria-haspopup="true"
                              aria-expanded="false">
-       Change Equipment
-     <span class="sr-only">Toggle Dropdown</span>
-   </button>
+			       Change Equipment
+			     <span class="sr-only">Toggle Dropdown</span>
+			   </button>
                          <div class="dropdown-menu truckDropDown_menu_list">
 
                              <!-- Dropdown menu links -->
                          </div>
                      </div>
-                     <button type="button" id='BulkCancellation' class="btn btn-outline-secondary">Snow Cancellation</button></div>
-                 <div class="col-lg-4 SelectedTaskFooterCloseButton"> <button type="button" id="unselectAll" class="btn btn-outline-secondary">Close <i class="fa fa-times-circle-o fa-lg" aria-hidden="true"></i></button>                    </div>
+                     <button type="button" id='BulkCancellation' class="btn btn-outline-secondary">Snow Cancellation</button>
+                     <button type="button" id='BulkUpdateComplete' class="btn btn-outline-secondary">Complete As Is</button>
+                     <button type="button" id='BulkUpdateCancel' class="btn btn-outline-secondary">Cancel without Reason</button>
+                     <button type="button" id='BulkUpdateNOL' class="btn btn-outline-secondary">Not on Location</button></div>
+                 <div class="col-lg-3 SelectedTaskFooterCloseButton"> <button type="button" id="unselectAll" class="btn btn-outline-secondary">Close <i class="fa fa-times-circle-o fa-lg" aria-hidden="true"></i></button>                    </div>
              </div>
     </div>
 

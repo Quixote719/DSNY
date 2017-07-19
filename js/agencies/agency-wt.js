@@ -19,6 +19,6 @@ $("a.main-filter-category:contains('Nonprofits & Agencies')").removeAttr("style"
 //$('a[href^="/site/dsny/recycling-and-garbage/nonprofits-and-agencies.page').removeAttr("style");
 
 //prependClass("a:contains('Nonprofits & Agencies')","longTxtMenu");
-
+$('input[name=sitesearch]').val('www1.nyc.gov/assets/dsny');
 
 });

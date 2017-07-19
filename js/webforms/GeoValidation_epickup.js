@@ -18,7 +18,7 @@ var getFormInput = function () {
 
 var setFormInput = function (input) {
     $("form :input[id='houseNumber']").val(input.houseNumber);
-    $("form :input[id='street']").val(input.street);
+    
     $("form :input[id='boro']").val(getBoroughCode(input.borough));
 };
 
@@ -155,6 +155,7 @@ var parse = function(json) {
     result.message = a(json).message;
     result.houseNumber = a(json).houseNumber;
     result.street = a(json).firstStreetNameNormalized;
+	$("form :input[id='street']").val(a(json).firstStreetNameNormalized);
     result.borough = a(json).firstBoroughName;
 
     result.city = a(json).uspsPreferredCityName;
@@ -181,8 +182,12 @@ var parse = function(json) {
         }
     } else {
         // success
-        result.trashPickup = parseSchedule(a(json).sanitationRegularCollectionSchedule);
+        //result.trashPickup = parseSchedule(a(json).sanitationRegularCollectionSchedule);
+		result.trashPickup = a(json).sanitationRegularCollectionSchedule;
+		result.trashPickupWithFullDayName = parseSchedule(a(json).sanitationRegularCollectionSchedule);
         result.recyclePickup = parseSchedule(a(json).sanitationRecyclingCollectionSchedule);
+		result.Lat = parseSchedule(a(json).latitude);
+		result.Long = parseSchedule(a(json).longitude);
 		result.possiblegiStreet = '';
 		var arryStreet = [];
         //result.hasPossibleStreets = num > 0;
@@ -351,6 +356,11 @@ function successCallback(json) {
 			} 
 			//$("form :input[name='GEOPickupStreet']").val(str);				
 			$("form :input[name='GEODistrict']").val(result.communityDistrict);			
+			$("form :input[name='Lat']").val(result.latitude);
+			$("form :input[name='Long']").val(result.longitude);
+			$("form :input[name='RegularCollectionSchedule']").val(result.trashPickup);
+			$("form :input[name='RegularCollectionDayNames']").val(result.trashPickupWithFullDayName);
+			
 			if (result.possiblelowCrossStreetName.length > 0 &&  result.possiblehighCrossStreetName.length > 0 ){ 
 				$("form :input[name='GEOCrossStreet']").val(result.possiblelowCrossStreetName.substring(0, (result.possiblelowCrossStreetName.length - 2) ) +' / '+ result.possiblehighCrossStreetName.substring(0, (result.possiblehighCrossStreetName.length - 2) ));
 			}

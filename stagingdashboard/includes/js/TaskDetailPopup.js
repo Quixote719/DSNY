@@ -3,8 +3,8 @@ $(document).on("click", ".completePopup", function () {
 		complete_Popup("ID",reqNumber);
 	});
 
-	
-	
+
+
 	var complete_Popup = function (ReqType,reqNumber) {
 
 
@@ -115,10 +115,15 @@ $(document).on("click", ".completePopup", function () {
 										</div><div  style="background-color:' + color + '; color:' + TextColor + '; border-radius:0px 0px 4px 4px; height: 36px; border:1px ' + color + ';">\
 											<p style="padding:5px; margin-left:10px;"><span><b>' + item.Status + '</b></span><span style="float:right; margin-right:10px;">' + item.TotalRequestItems + '</span></p></div></div></div>'
 
+											CardComments = '';
+											if (item.StatusId == 5) {
+
+											CardComments = '<div class="card"><div style=" width:100%;"><div style="height: 36px; background-color:#535a5f; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;vertical-align: middle;">Comments</span></div> </div><div class="row divrowmargin"><div class="col-xs-12"><span id="canComments" class="dynamicData col-xs-8-margin"> &nbsp;' + item.Comments + '</span></div></div></div>'
+										}
 
 
 								$('#cmlcard').append(CustomCard);
-								$('#card').append(CustomCard);
+								$('#card').append(CustomCard + CardComments );
 
 								$('[id=ppfname]').text(data.FirstName);
 								$('[id=pplname]').text(data.LastName);
@@ -296,9 +301,9 @@ $(document).on("click", ".completePopup", function () {
 
 
 	 }
-	 
-	
-	
+
+
+
 	// Complete button click
 	$('#btnComplete').click(function () {
 			$('#hardCategory').hide();
@@ -313,7 +318,7 @@ $(document).on("click", ".completePopup", function () {
 			return false;
 		});
 
-	// Unserviceable Button click	
+	// Unserviceable Button click
 	$('#btnUnserviceable').click(function () {
 		$('#hardCategory').hide();
 		$('#tvCategory').hide();
@@ -328,7 +333,7 @@ $(document).on("click", ".completePopup", function () {
 		return false;
 
 	});
-	
+
 	// Submit completed Task or Unserviceable Task details
 	$('#btnCompleteSubmit').click(function () {
 		   if ($('#UnserviceableReason').is(":visible")){
@@ -341,7 +346,7 @@ $(document).on("click", ".completePopup", function () {
 				insertData.IsCompleteRequest = false;
 				delete insertData.$id;
 				var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest';
-			 } 
+			 }
 			 else  {
 				var arrSubCat = $('#tvCategory').find('input:text')
 				var CatgoryList = [];
@@ -397,7 +402,7 @@ $(document).on("click", ".completePopup", function () {
 			});
 		});
 
-		// Delete Task - Cancel button click event  
+		// Delete Task - Cancel button click event
 		$("#btnDelete").click(function () {
 			jQuery.support.cors = true;
 				insertData.Status = 'Request Cancelled';
@@ -425,7 +430,7 @@ $(document).on("click", ".completePopup", function () {
 
 			return false;
 		});
-		
+
 		// Not on Location click event
 		$("#btnPckUp").click(function () {
 			jQuery.support.cors = true;

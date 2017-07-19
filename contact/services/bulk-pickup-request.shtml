@@ -1,0 +1,1901 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/ewastecontacttemplates.shtml" -->
+
+<title>Bulk Pickup Request</title>
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<link href="/assets/donate/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="/assets/donate/css/bootstrap-glyphicon.css" rel="stylesheet">
+<style>
+    #msform fieldset
+    {
+        border: none;
+        max-width: 940px; /*stacking fieldsets above each other*/
+        position: relative;
+    }
+    /*Hide all except first fieldset*/
+    .fieldset2
+    {
+        display: none;
+    }
+    .fieldset3
+    {
+        display: none;
+    }
+    .fieldset4
+    {
+        display: none;
+    }
+    .error
+    {
+        border-color: #e9322d !important;
+    }
+    .chkCls
+    {
+        width:50%!important;
+        /* margin: .5em 0 .2em!important; */
+     }
+     .inc
+     {
+			/*float: left;*/
+			display: inline-block;
+        }
+      .dec
+      {
+			display: inline-block;
+    	}
+	.txtValue{
+	    width: 30PX!important;
+		align-items: center;
+		margin:0px!important;
+		text-align:center;
+	}
+	.table td {
+		border-top:0px!important;
+	}
+	.divimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	.divdecimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	
+	.ctglistdiv{
+		 line-height: 25px;
+	}
+	.ctgDiv{
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0px;
+	}
+	.tvSubCtg{
+	    line-height: 36px;
+	}
+	.sbClass { 
+		background-color: #F5F5F5;
+		font-size:14px!important;
+	}
+	.section {
+		background-color: #686868!important;
+		color:white!important;
+	}
+	.clsBottomborder{
+		border-bottom: 1px solid #ccc;
+	}
+	#subcontainer {
+ 
+		border: 0px!important;
+		font-size:14px!important;
+	}
+	.label{
+			background-color:transparent!important;
+			text-align: right;			 
+			display: block;
+			line-height: 20px;
+			font-weight: bold!important;
+		}
+	.data_long{
+		background-color:transparent!important;
+		line-height: 20px;
+	} 
+	.ctgName div:after{
+		content: "_____________________________________________________________________";
+	}
+	.disableText{
+		background-color: transparent!important;
+		color: #000!important;
+	}
+	.ctgAddressInfo{
+		background-color:#F5F5F5;
+		padding:10px 0px;
+	}
+	.textbold{
+	    font-size: 14px;		 
+		color: #333;
+		font-weight: bold;
+		margin: 0 0 0 10px; 
+		float:left;
+		padding-right: 5px;
+	}
+	.addressText{
+	    font-size: 14px;		 
+		color: #333;		
+		margin: 0 0 0 10px; 
+	} 
+	.pure-u-md-3-24 {
+		text-align: right;			
+	}  
+	
+	.step4{
+		display: inline-block;
+		background: url('/assets/dsny/images/content/webforms/step4-comfirm.png');
+		width: 133px;
+		height: 56px;
+		margin: 0 10px 10px 0;
+		opacity: 0.7;
+		transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-webkit-transition: opacity 1s ease-in-out;
+	}
+	.step4:hover {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+		opacity: 1.0;
+		transition: opacity .55s ease-in-out;
+		-moz-transition: opacity .55s ease-in-out;
+		-webkit-transition: opacity .55s ease-in-out;
+	}
+	.active4 {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+	}
+	.fieldset5{
+		font-size: 14px!important;
+	}
+	.errormsg{
+		color:red!important;
+	}	
+	img.imginchv:hover {
+		background: url('/assets/dsny/img/plus.svg') no-repeat;    
+		background-position: center;
+		background-size: cover;
+	}
+	img.imgdechv:hover {
+		background: url('/assets/dsny/img/minus.svg') no-repeat;    
+		background-position: center;
+		background-size: cover;   
+	}
+	@media (max-width: 767px){
+		.pure-u-sm-2-24 {
+			width: 8.3333%;
+			float: left;
+		} 
+		.pure-u-sm-19-24{
+			width: 60.1667%;
+			float: left;
+		} 
+		.pure-u-sm-18-24{
+			width: 60.1667%;
+			float: left;
+		}
+		.pure-u-md-1-24{
+			width: 6%;
+			float:left;
+		}
+		.pure-u-md-20-24 {
+			width: 63%;
+			float:left;
+		}
+		.pure-u-md-3-24 {
+			width: 31%;
+			float: right;
+			text-align: right;			
+		} 
+		.chkCls
+		{
+			width:80%!important;        
+		}
+		.pure-u-8-24, .pure-u-4-24, .pure-u-11-24 {
+			width: 100% !important;
+		} 
+	}
+	
+	ul.leaders {
+	  padding: 0;
+	  font-size:14px!important;
+	}
+	ul.leaders li {
+	  display: table;
+	  line-height: 25px!important;
+	  font-size:14px!important;
+	}
+	ul.leaders li span {
+	  display:        table-cell;
+	}
+	ul.leaders li span:first-child { /* TITLE */
+	  position:       relative;
+	  overflow:       hidden;       /* Don't go underneath the price */
+	}
+	ul.leaders li span:first-child:after { /* DASHES */
+	  content:        "";
+	  position:       absolute;
+	  bottom:         0.5em;        /* Set as you want */       
+	  margin-left:    0.5em;        /* Keep same for the next span's left padding */
+	  width:          100%;
+	  border-bottom:  1px solid #c7c7c7; 
+	}
+	ul.leaders li span + span {     /* PRICE */
+	  text-align:     right;
+	  width:          1%;           /* Trick it */
+	  vertical-align: bottom;       /* Keep Price text bottom-aligned */
+	  padding-left:   0.5em;
+	  /* white-space: nowrap;       /* Uncomment if needed */
+	}
+	.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {		 
+		color: #e3e3e2!important;		
+	}
+	.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+		background-color: #eeeeee!important;   
+	}
+	.divlable{
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #333;
+		font-weight: bold;	
+		margin: .5em 0 .2em;
+		float:left;
+	}
+	.divlableNote{
+		font-size: 12px;	
+		color: #333;
+		margin: .5em 0 .2em;
+	}
+</style>
+ <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'white'
+ }; 
+ </script>
+<div id="contentsection" class="about-main-image">
+    <div class="span6 about-description">
+        <div id="container">
+            <div id="header">  
+                <h1>
+                    <span class="subtitle" id="PreHeader" >
+Bulk Pickup Request</span></h1>
+<p>
+Pickups will take place Monday through Friday, except city holidays, and may be scheduled up to two weeks in advance.</p>
+<p>
+1.	Request a pickup. <br>
+2.	Set out your bulk waste at the curb after 4pm the night before your scheduled pickup date. 
+NOTE: DSNY will NOT come inside your house or ring your bell; items must be at the curb. </p>
+<p>It is generally recommended that, if possible, you erase all computer hard drives and clear your private information before placing electronics at the curb. Electronics are taken to a facility where they are recycled responsibly.</p> 
+<p>
+Note: Collections are postponed and will be rescheduled in the event of <a href="http://www1.nyc.gov/site/severeweather/index.page">severe weather conditions</a>.
+</p>
+<p><a href="/assets/dsny/contact/services/bulk-ewaste-pickup-search.shtml">Check Status of Bulk Pickup</a></p>
+
+
+            </div>
+            <div id="header">  
+                <h1>
+                    <span class="subtitle" id="ReqHeader" >Step 1 - General Info</span></h1>
+            </div>
+            <div id="Step2div" style="display:none" >  
+                <p><div id="stepmsg" > 
+                    Your address and recycling day have been verified as:
+				 </div></p>
+				<div class="ctgAddressInfo"> 
+				<div class="pure-u-1 pure-u-md-1-3-b">
+						<div class="textbold"> Address: </div> <div id="rdAddress" class="addressText" > </div>
+				</div>
+				<div class="pure-u-1 pure-u-md-1-3-b">
+						<div class="textbold"> Cross Street: </div>  <div id="rdStreet" class="addressText"> </div>
+				</div>
+				</div>   
+            </div> 
+            <!-- <form id="msform" class="pure-form" method="post" type="external" name="BWPRR Participation Request Form"    action="http://www.nyc.gov/doittcaptcha/validatecap"> -->
+			<form id="msform" class="pure-form" method="post"  type="external" name="E-Pick up Request Form" >  
+             <!--<input type="hidden" name="cgi" value="/cgi-bin/misc/mailform.cgi" />-->
+            <!-- <input value="http://www1.nyc.gov/site/dsny/index.page" type="hidden" name="return_link_url">
+            <input value="EVENT-NAME,EVENT-NAME-ALT,EVENT-LOCATION,EVENT-CITY,EVENT-START-DATE,EVENT-START-TIME,EVENT-END-DATE,EVENT-END-TIME,EVENT-NOTES,EVENT-THEME,EVENT-AUDIENCE,EVENT-ATTENDEES,EVENT-REOCCURRING,DESCRIBE-EQUIPMENT-PROVIDED,SHIPPING-INFO-FOR-RECYCLING-MATERIALS,DESCRIBE-PARKING-PROVIDED,COSTUME-CHARACTERS-REQUESTED-DETAILS,CONTACT-1-FIRST-NAME,CONTACT-1-LAST-NAME,CONTACT-1-TITLE,CONTACT-1-AFFILIATION,CONTACT-1-ADDRESS-1,CONTACT-1-CITY,CONTACT-1-PHONE,CONTACT-1-PHONE-TYPE,CONTACT-1-EMAIL"
+                type="hidden" name="required" />
+            <input value="mbrahmbhatt@dsny.nyc.gov" type="hidden" name="recipient" />
+            <!--<input value="DSNY WebForms - TESTING" type="hidden" name="subject" />-->
+           <!--  <input value="BWPRR Participation Request Form" type="hidden" name="subject" />
+            <input value="REMOTE_HOST,HTTP_ADDR,HTTP_USER_AGENT" type="hidden" name="env_report" />
+            <input value="#FFFFFF" type="hidden" name="bgcolor" />
+            <input value="order:EVENT-NAME,EVENT-NAME-ALT,EVENT-LOCATION,EVENT-CITY,EVENT-START-DATE,EVENT-START-TIME,EVENT-END-DATE,EVENT-END-TIME,EVENT-NOTES,EVENT-THEME,EVENT-AUDIENCE,EVENT-ATTENDEES,EVENT-REOCCURRING,EVENT-REOCCURRING-EXPLAIN,EVENT-OTHER-ORGS,DESCRIBE-EQUIPMENT-PROVIDED,SHIPPING-INFO-FOR-RECYCLING-MATERIALS,DESCRIBE-PARKING-PROVIDED,COSTUME-CHARACTERS-REQUESTED-DETAILS,CONTACT-1-FIRST-NAME,CONTACT-1-LAST-NAME,CONTACT-1-TITLE,CONTACT-1-AFFILIATION,CONTACT-1-ADDRESS-1,CONTACT-1-ADDRESS-2,CONTACT-1-CITY,CONTACT-1-PHONE,CONTACT-1-PHONE-EXT,CONTACT-1-PHONE-TYPE,CONTACT-1-EMAIL,CONTACT-2-FIRST-NAME,CONTACT-2-LAST-NAME,CONTACT-2-TITLE,CONTACT-2-AFFILIATION,CONTACT-2-ADDRESS-1,CONTACT-2-ADDRESS-2,CONTACT-2-CITY,CONTACT-2-PHONE,CONTACT-2-PHONE-EXT,CONTACT-2-PHONE-TYPE,CONTACT-2-EMAIL"
+                type="hidden" name="sort" /> --> 
+            <input name="app_key" type="hidden" value="06F6620746865206F" /> 
+            <input name="GEOcity" id="GEOcity" type="hidden" />
+            <input name="GEOzipcode" id="GEOzipcode" type="hidden" />
+			<input name="GEOCrossStreet" id="GEOCrossStreet" type="hidden" />
+			<input name="GEOPickupStreet" id="GEOPickupStreet" type="hidden" />
+			<input name="GEODistrict" id="GEODistrict" type="hidden" />
+			<input name="Lat" id="Lat" type="hidden" /> 
+			<input name="Long" id="Long" type="hidden" /> 
+			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
+			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
+			
+            <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
+            <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
+            <div id="steps">
+                <a id="astep1" class="step1 active1" href="#"></a><a id="astep2" class="step2" href="#">
+                </a><a id="astep3" class="step3" href="#"></a><a id="astep4" class="step4" href="#"></a>
+            </div>
+            <div style="text-align: right; font-size: 12px" id="reqFld">
+                <span class="red">*</span>Denotes required field</div>
+            <fieldset class="fieldset1">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section">Enter your address</div>
+                        <div class="table">
+							
+                            <div class="pure-u-8-24">
+                                <label for="boro">
+                                    Boro<span class="red">*</span></label>
+                                <select id="boro" name="boroughName" required type="select-one" tabindex="1">
+                                    <option selected="selected" value="">Select a borough</option>
+                                    <option value="2">Bronx</option>
+                                    <option value="3">Brooklyn</option>
+                                    <option value="1">Manhattan</option>
+                                    <option value="4">Queens</option>
+                                    <option value="5">Staten Island</option>
+                                </select>
+                            </div> 
+                            <div class="pure-u-4-24">
+                                <label for="houseNumber">
+                                    BLDG#<span class="red">*</span></label>
+                                <input id="houseNumber" name="houseNumber" tabindex="2" type="text" required maxlength="10" />
+                            </div>
+                            <div class="pure-u-11-24"> 
+                                <label for="street">
+                                    Street<span class="red">*</span></label>
+                                <input id="street" name="streetName" tabindex="3" type="text" required maxlength="50" />
+                            </div>
+                            <!--<div class="pure-u-1 pure-u-md-1-3-b">
+                            <label for="additionalinfo">Additional location Information (maximum 100 characters)</label>
+                            <textarea id="additionalinfo" name="additionalinfo" maxlength="100" tabindex="4"></textarea>
+                        </div>-->
+                            <br />
+                            <div id="results" class="pure-u-sm-24-24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div id="buttons">
+                    <a class="pure-button next" id="cancel">Clear</a>
+                    <button id="nextstep2" class="pure-button next" tabindex="5">
+                        &nbsp;<strong>Next</strong>&nbsp;</button>
+                </div>
+            </fieldset>
+			
+			<div id="divNonDualBin" style="display:none" >
+				<br/>
+				<p>Your address and recycling day have been verified as:</p>
+				<div class="ctgAddressInfo">
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Address: </div> <div id="rdAddressNonDual" class="addressText" > </div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Cross Street: </div>  <div id="rdStreetNonDual" class="addressText"> </div>
+					</div>
+				</div>
+				<br/>
+				<p><b>Good news! You do need to schedule for bulk garbage pickups. Just place your bulk garbage curbside after 4pm the night before your scheduled collection day.</b></p>
+				<p>Your Regular collection days are: <span id="collectionDays"></span></p>
+            </div>
+			
+			
+            <fieldset class="fieldset2">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section">Specific information</div>
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="PICKUP LOCATION">
+                                    Pick up location<span class="red">*</span></label>
+                                <select name="PICKUP LOCATION" id="lstPickUpLocation" type="select-one" tabindex="14"
+                                    required>
+                                    <option selected="selected" value="">Please select one:</option>
+                                    <!-- <option value="1">Center Street</option>
+                                    <option value="2">White Street</option> -->
+                                </select>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="ApptDate">
+                                    Appointment Date<span class="red">*</span></label> 
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' onkeydown="return false" id="slapptdate" required tabindex="15" maxlength="15" />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>  
+                            </div>
+                            <!--<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="divlable">Electronic Category<span class="red">*</span> </div>
+								<div class="divlableNote"> (Maximum of 20 items including no more than 5 TVs per request) </div> 
+							</div>-->
+							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
+							</div>
+							<div  class="pure-u-1 pure-u-md-1-3-b" style="display:none" >
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24 pure-u-sm-1-24">
+									<input type="checkbox" id="tvchkbox" class="chkCls" />
+								</div>
+								<div class="pure-u-md-19-24 pure-u-sm-19-24">
+										Televisions (including cathode ray tubes)
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24" style="display:none" >
+									<div class="inc button">&nbsp; </div>
+									<input type="text" class="txtValue" name="partridge" id="tvCount" value="0">
+									<div class="dec button">&nbsp;</div>
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-1-3-b tvSubCtg" id="tvSubCategory" style="display:none" >
+								<div class="pure-u-md-2-24 pure-u-sm-2-24">
+								</div>
+								<div class="pure-u-md-18-24 pure-u-sm-18-24">
+									<label for="ELEC-CATEGORY">
+										Smaller than 20â€™</label>
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage" > </div>
+                                </div>
+								<div class="pure-u-md-2-24 pure-u-sm-2-24">
+								</div>
+								<div class="pure-u-md-18-24 pure-u-sm-18-24">
+									<label for="ELEC-CATEGORY">
+										20â€™ â€“ 30â€™</label>
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+								<div class="pure-u-md-2-24 pure-u-sm-2-24"> </div>
+								<div class="pure-u-md-18-24 pure-u-sm-18-24">
+									<label for="ELEC-CATEGORY">
+										31â€™ â€“ 40â€™</label>
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+								<div class="pure-u-md-2-24"> </div>
+								<div class="pure-u-md-18-24">
+									<label for="ELEC-CATEGORY">
+										41â€™ â€“ 50â€™</label>
+								</div>
+								<div class="pure-u-md-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+								<div class="pure-u-md-2-24"> </div>
+								<div class="pure-u-md-18-24">
+									<label for="ELEC-CATEGORY">
+										51â€™ â€“  60â€™</label>
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+								<div class="pure-u-md-2-24"> </div>
+								<div class="pure-u-md-18-24">
+									<label for="ELEC-CATEGORY">
+										Larger than 60â€™</label>
+								</div>
+								<div class="pure-u-md-3-24 pure-u-sm-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="tvSubCat" id="tv" value="0">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+							</div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                               <div class="pure-u-md-1-24">
+									<input type="checkbox" id="Checkbox1" class="chkCls" />
+								</div>
+								<div class="pure-u-md-19-24">
+										Computer peripherals, including any permanently attached cable or wiring
+								</div>
+                                <div class="pure-u-md-3-24 pure-u-sm-3-24" style="display:none">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text1" value="1">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24">
+                                    <input type="checkbox" id="Checkbox2" class="chkCls"  />
+                                </div>
+                                <div class="pure-u-md-19-24">
+                                    Monitors, laptops
+                                </div>
+                                <div class="pure-u-md-3-24 pure-u-sm-3-24" style="display:none">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text2" value="1">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24">
+                                    <input type="checkbox" id="Checkbox2" class="chkCls"  />
+                                </div>
+                                <div class="pure-u-md-19-24">
+                                    Electronic keyboards
+                                </div>
+                                <div class="pure-u-md-3-24 pure-u-sm-3-24" style="display:none">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text2" value="1">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24">
+                                    <input type="checkbox" id="Checkbox2" class="chkCls"  />
+                                </div>
+                                <div class="pure-u-md-19-24">
+                                <label for="ELEC-CATEGORY">
+                                    Electronic mice and other pointing devices</label>
+                                </div>
+                                <div class="pure-u-md-3-24 pure-u-sm-3-24" style="display:none">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text2" value="1">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24">
+                                    <input type="checkbox" id="Checkbox2" class="chkCls"  />
+                                </div>
+                                <div class="pure-u-md-19-24">
+                                    Fax machines, document scanners, and printers that are meant for use with a computer and weigh less than 100 lbs.
+                                </div>
+                                <div class="pure-u-md-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text2" value="1">
+									<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="pure-u-md-1-24">
+                                    <input type="checkbox" id="Checkbox2" class="chkCls"  />
+                                </div>
+                                <div class="pure-u-md-19-24">
+									TV peripherals, including any permanently attached cable or wiring
+                                </div>
+                                <div class="pure-u-md-3-24">
+									<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divimage"></div>
+									<input type="text" class="txtValue" name="partridge" id="Text2" value="1">
+									 <div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>
+                                </div>
+                            </div>
+							</div>
+					   </div>
+                        <br />
+                        <div class="section">Contact information </div>
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-FIRST-NAME">
+                                    First Name<span class="red">*</span></label>
+                                <input maxlength="25" name="CONTACT-1-FIRST-NAME" id="CONTACT-1-FIRST-NAME" type="text"
+                                    tabindex="26" required />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-LAST-NAME">
+                                    Last Name<span class="red">*</span></label>
+                                <input maxlength="25" name="CONTACT-1-LAST-NAME" id="CONTACT-1-LAST-NAME" type="text"
+                                    tabindex="27" required />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-PHONE">
+                                    Phone<span class="red">*</span></label>
+                                <input maxlength="21" name="CONTACT-1-PHONE" id="CONTACT-1-PHONE" type="text" tabindex="28"
+                                    required />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-EMAIL">
+                                    Email<span class="red">*</span></label>
+                                <input maxlength="50" name="CONTACT-EMAIL" id="CONTACT-1-EMAIL" type="text" tabindex="29"
+                                    required />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-CONFRIM-EMAIL">
+                                    Confirm Email<span class="red">*</span></label>
+                                <input maxlength="50" name="CONTACT-CONFRIM-EMAIL" id="CONTACT-CONFRIM-EMAIL" type="text"
+                                    tabindex="30" required />
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div id="buttons">
+                    <button id="previousstep1" class="pure-button next">
+                        &nbsp;<strong>Previous</strong>&nbsp;</button>
+                    <button id="nextstep3" class="pure-button next" tabindex="48">
+                        &nbsp;<strong>Next</strong>&nbsp;</button>
+                </div>
+            </fieldset>
+            <fieldset class="fieldset3">
+                <div class="pure-g"> 
+                    <div id="subcontainer" class="sbClass">  
+                        <div class="section">Review and Submit </div>
+                        <div class="table">
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Address :</div>
+                                <div id="disaddress" class="data_long">
+                                </div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Cross Street :</div>
+                                <div id="disCrsStrt" class="data_long"></div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24">							
+                            </div>	 
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Pick Up Location :</div>
+                                <div id="disPckLocation" class="data_long">
+                                </div>
+                            </div>  
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Appointment Date :</div>
+                                <div id="disApptDate" class="data_long">
+                                </div>
+                            </div>
+							<br>
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
+							
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <!-- <div id="displayItem" class="ctglistdiv">			</div>  -->
+								<ul id="displayItem" class=leaders>
+								
+								</ul>
+								
+                            </div>
+							<br> 
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">First Name :</div>
+                                <div id="disfname" class="data_long">
+                                </div>
+                            </div>   
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Last Name :</div>
+                                <div id="dislname" class="data_long">
+                                </div> 
+                            </div>  
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Phone :</div>
+                                <div id="disphone" class="data_long">
+                                </div>
+                            </div>  							
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Email :</div>
+                                <div id="disemail" class="data_long"> 
+                                </div> 
+                            </div>                           
+                        </div>
+                        <br />
+                    </div>
+                
+					
+				</div>
+                <br />
+            </fieldset>
+            <div id="fieldset4" class="fieldset4">
+			 <div class="pure-u-1 pure-u-md-1-3-b"> 
+					<div class="pure-u-md-11-24"> &nbsp; </div>
+					<div class="pure-u-md-12-24" style="text-align:right;"> 
+						<input type="checkbox" id="chkTC" required />  I certify that this request is not for a commercial business.<span class="red">*</span>
+					</div>
+					<br>
+				 </div> 
+				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>
+                <div class="row"> 
+                    <!-- 
+					<div class="container">
+                        <div class="span4">
+                            &nbsp;</div>
+                        <div id="captcha" class="span5">
+                            <script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+                        </div>
+                        <div class="span6">
+                        </div>
+                    </div>-->
+					
+					<!--  Uncomment after performance testing.-->
+					<div class="container" style="text-align: center; text-align: -webkit-center;">
+                            <div class ="recaptchatable recaptcha_theme_white" id="rcaptcha">
+                                <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6Ldi8iETAAAAADBF2c6b2b9qBUGe3YDJp5Gp9MTq"></script>
+                                <textarea id="recaptcha_challenge_field" name="recaptcha_challenge_field" rows="3" cols="40" style="display: none"></textarea>
+                                <input type="hidden" id="recaptcha_response_field" name="recaptcha_response_field" value="manual_challenge" />
+                            </div> 
+                            <div id="divInvalidMessage" style="color: red; font-size: 14px; height: 15px"></div>  
+                     </div>  
+                </div> 
+				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>				
+                <br >
+                <div id="buttons">
+                    <button id="previousstep2" class="pure-button next">
+                        &nbsp;<strong>Previous</strong>&nbsp;</button>
+                    <button id="submitrq" class="pure-button next">
+                        &nbsp;<strong>Submit</strong>&nbsp;</button>
+                </div>
+            </div>
+			 <fieldset class="fieldset5" style="display:none;">
+				<div class="pure-g"> 
+                    <div id="subcontainer"   style="text-align:center">  
+						Thank you for submitting your E-Waste pick-up request. <br>The Service Request number is <br><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/>Use this number when you check the status of your request. <br>
+						You will also receive an email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request please call 311.  <br> <br> <br>
+						<strong> Where to leave your E-Waste items? <br> 
+						Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB. </strong>						
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnTrkReq" class="pure-button next">
+                        &nbsp;<strong>Track your Request</strong>&nbsp;</button>
+                    <button id="btnNewReq" class="pure-button next" style="margin-top:10px">
+                        &nbsp;<strong>Schedule Another Pick Up</strong>&nbsp;</button>
+                </div>
+				</div>
+			 </fieldset>
+			 <fieldset class="fieldset6" style="display:none;">
+				<div class="pure-g">  
+                    <div id="subcontainer" class="errormsg" style="text-align:center">  
+						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+						
+					</div>
+					<!--<br>
+					<br> 
+					<div id="buttons">
+                    <button id="btnCancel" class="pure-button next">
+                        &nbsp;<strong>Cancel</strong>&nbsp;</button>
+                    <button id="btnStep2" class="pure-button next">
+                        &nbsp;<strong>Reschedule</strong>&nbsp;</button>
+                </div>-->
+				</div>
+			 </fieldset>
+			 <fieldset class="fieldset7" style="display:none;">
+				<div class="pure-g">  
+                    <div id="subcontainer" class="errormsg" style="text-align:center">  
+						Sorry, there already exists a request for this address on the same pick up date. 
+						
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnNewReq1" class="pure-button next" style="margin-top:10px">
+                        &nbsp;<strong>Schedule Another Pick Up</strong>&nbsp;</button>
+                </div>
+					
+				</div>
+			 </fieldset>
+            </form>
+        </div>
+		<div id="errcontainer" style="display:none" > 
+			<div class="rows">
+			<div class="row" style="text-align: center;">
+				<h1> Error </h1>
+						<div class="row" style="text-align: center;">
+							There has been an issue while submitting your request.
+						</div>
+						<div class="row" style="text-align: center;">
+							We apologize for any inconvenience, please try later.
+						</div>  
+						<div class="row" style="text-align: center;">
+							</br>
+						</div>						
+			</div> 
+		 </div>
+		</div>
+	</div>
+</div>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/GeoValidation_epickup.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="/assets/donate/js/bootstrap.min.js"></script>
+<script src="/assets/donate/js/moment-2.8.3.js"></script>
+<!-- <script src="/assets/donate/js/bootstrap-datetimepicker.js"></script> -->
+<script src="/assets/dsny/js/webforms/bootstrap-datetimepicker.js"></script> 
+<script src="/assets/dsny/js/webforms/production_staging_config.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+	$('body').css('background-color', backgroundcolor);
+	
+    $(document).ready(function () {
+	  
+	jQuery.support.cors = true; 
+	var arrCtg = []
+	var ctgcheck=$.ajax({
+			async: false,
+			url: APIUrl +"/BulkAPI/api/bulkpickups/GetItemCategories",
+			type: "GET",
+			dataType: 'json',		
+			crossDomain: true,
+			success: function (json) {
+				if (json != undefined){
+				var ctgStr = '';
+				$.each(json, function(key, item) {
+					ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ctgDiv" id="'+item.CategoryId+'">\
+						<div class="pure-u-md-1-24 pure-u-sm-1-24">\
+							<input type="checkbox" id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
+						</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'
+						
+						if (item.hasSubCategory >= 1){
+							/*ctgStr +='<div class="inc button" style="width:20px;" > </div>\
+								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" onkeydown="return false" value="0">\
+								<input name="ctgsum'+ item.CategoryId +'" id="ctgsum'+ item.CategoryId +'" type="hidden" />\
+								<div class="dec button" style="width:20px;" ></div>'*/
+						}
+						else{
+							ctgStr +='<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divdecimage "></div>\
+								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" value="0">\
+								<input name="ctgsum'+ item.CategoryId +'" id="ctgsum'+ item.CategoryId +'" type="hidden" />\
+								<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage"></div>'
+						} 
+						ctgStr += '</div> '				
+						if (item.hasSubCategory  >= 1){		
+
+							arrCtg.push(item.CategoryId);
+							
+							
+						} 
+						ctgStr += '</div>'  					
+				});
+				
+					
+				$('#ElecCtg').append(ctgStr);
+				
+				$('#msform input[type="checkbox"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});
+				$('#msform input[type="text"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});   
+						
+				}
+			}
+        });
+		
+		 
+		
+		 
+		$.when(ctgcheck).done(function () { 
+			$.each(arrCtg, function(key, item) {
+			var CategoryID = item
+			var SubCategoryURL = APIUrl +'/BulkAPI/api/bulkpickups/GetItemSubCategories?CategoryID='+ CategoryID ;
+			$.ajax({
+				async: false,
+				url: SubCategoryURL ,
+				type: "GET",
+				dataType: 'json',
+				crossDomain: true,
+				success: function (json) {
+					if (json != undefined){
+					var SubctgStr = '<div class="pure-u-1 pure-u-md-1-3-b tvSubCtg" id="tvSubCategory"  style="display:none" >';
+					$.each(json, function(key, item) {
+						SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b">	<div class="pure-u-md-2-24 pure-u-sm-2-24"> &nbsp;</div><div class="pure-u-md-19-24 pure-u-sm-18-24">\
+									<label for="ELEC-CATEGORY">'+ item.SubCategory +'</label></div><div class="pure-u-md-3-24 pure-u-sm-3-24" id="'+ CategoryID +'" name="'+ item.SubCategoryId+'" >\
+											<div class="dec button"><img  src="/assets/dsny/img/hover-minus.svg" class="divdecimage"></div>\
+											<input type="text" class="txtValue" name="tvSubCat" disabled  id="subCategory'+ item.SubCategoryId +'" value="0">\
+											<div class="inc button"><img  src="/assets/dsny/img/hover plus.svg" class="divimage" > </div>\
+										</div>\
+									</div>';
+					});
+					SubctgStr += '</div>';
+					
+					//ctgStr += SubctgStr;									
+					$('#ElecCtg').find('#'+item).append(SubctgStr);
+					
+						
+					
+				$('#msform input[type="checkbox"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});
+				$('#msform input[type="text"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});   
+					
+					}
+				}
+			});
+						
+						
+			});
+		
+		});
+		   
+			
+		
+		
+	    //$("#txtboxToFilter").keydown(
+		$(document).on("keydown","input:text.txtValue",function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+		});    
+		
+	   var sum = 0 ;   
+	   //  Textbox change value 
+	   $(document).on("change","input:text.txtValue", function() {
+	      
+		  var $button = $(this);
+		  var TextValue = parseFloat($button.val());
+		  var CatID = $button.parent()[0].id;
+		  var SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;		
+		  var TotalCategory =  0
+		  var SubCtgTotalValue = 0
+			// Total of all Electronic category
+		if (($button[0].name == 'elecCtgCount')  ){
+			
+			//$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(){
+				//TotalCategory += parseFloat(this.value);
+				TotalCategory = TextValue;
+			//});	
+		}
+			
+		
+		  
+			  if(($button[0].name == 'tvSubCat') )
+			  {   
+					TotalCategory += TextValue; 
+					
+					$('#Count'+CatID).tooltipster('hide');
+					var TotalSubCategory =  0					
+					var SubCtgTotalValue = 0 //parseFloat(SubCtgSum + TextValue)   // Total of individual category.
+					
+					// Total of individual TV category
+					//$button.parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
+						SubCtgTotalValue = TextValue;
+					//});
+					
+					// Total of both TV category
+					//$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
+						//TotalSubCategory += parseFloat(this.value);
+					//});	
+					
+					//if ( TotalSubCategory <= 5 && TotalCategory <= 20){
+					if ( SubCtgTotalValue <= 99){
+					
+						//$('#Count'+CatID).val(SubCtgTotalValue);
+						//$('#ctgsum'+CatID).val(SubCtgTotalValue);
+						$button.val(TextValue); 
+					}
+					else if (SubCtgTotalValue <= 0){
+						//$('#Count'+CatID).val(1);
+						//$('#ctgsum'+CatID).val(1); 
+						$button.val(0);				
+					}
+					else if (SubCtgTotalValue  > 99){
+						//$('#Count'+CatID).val(1);
+						//$('#ctgsum'+CatID).val(1); 
+						$button.val(0);
+						$button.tooltipster('update', "You can not enter more than 99 quantity for this category.");
+						$button.tooltipster('show');
+						
+						return false;						
+					}
+					//else if (TotalSubCategory >= 5 && TotalCategory <= 20) {
+					/*else if (TotalSubCategory >= 99) {
+						$button.val(0);	
+						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
+						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue); 
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 99 quantity for this category");
+						$('#Count'+CatID).tooltipster('show');
+					}*/
+					/*else if ( TotalCategory >= 99) {						
+						$button.parent().find("input").val(0)
+						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
+						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue); 	
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 99 quantity for this category.");
+						$('#Count'+CatID).tooltipster('show'); 				
+					}*/				   				  
+				
+					
+			 }			  
+			 else if (($button[0].name == 'elecCtgCount')  ){
+			
+			     $button.tooltipster('update', "You can not enter more than 99 quantity for this category.");
+				 $button.tooltipster('hide');
+				 
+				 if (TotalCategory <= 99)
+					$button.val(TextValue); 
+				else{
+					$button.tooltipster('show');
+					$button.val(0); 
+					return false;				
+				}				
+			}   
+		});
+	   	   
+	   
+	   // Plus and minus quantity.
+	   $(document).on("click","div.button", function() {
+		  var $button = $(this);
+		  var oldValue = $button.parent().find("input[type=text]").val();
+		  var CatID = $button.parent()[0].id;
+		  var SubCtgSum = 0 ;
+		  if ($button.parent().find("input[type=text]").hasClass('disableText')){
+			  if ($button.hasClass("inc"))
+			  {
+				  var newVal = parseFloat(oldValue) + 1;
+				} else {
+			   // Don't allow decrementing below zero
+				if (oldValue > 1) {
+				  var newVal = parseFloat(oldValue) - 1;
+				   } else {
+				   
+				   if (($button.parent().find("input")[0].name == 'elecCtgCount')){
+						newVal = 1;
+				   }
+				   else{
+						newVal = 0;
+				   }				 
+				}
+			  }			  
+			  
+				var TotalCategory =  0
+				if (($button.parent().find("input")[0].name == 'elecCtgCount') )
+				{
+				//$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(index, element){
+						TotalCategory = newVal;
+					//});
+				}
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter quantity more than 99 for this category.");
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
+				
+				//TotalCategory = parseFloat((TotalCategory + newVal) - oldValue )
+			  			  
+				//SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;
+
+
+
+
+				
+			  if(($button.parent().find("input")[0].name == 'tvSubCat' ))
+			  {   
+					//$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+					//$('#Count'+CatID).tooltipster('hide');					
+					//var SubCtgTotalValue = parseFloat((SubCtgSum + newVal) - oldValue ) // Total of individual category.
+					
+					// Total both TV category
+					var TotalValue = 0; 					
+					//$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(index, element){
+						TotalValue = newVal;
+						
+						
+						
+					//});
+					
+					if ( TotalValue <= 99){		
+							//$('#Count'+CatID).val(SubCtgTotalValue);
+							//$('#ctgsum'+CatID).val(SubCtgTotalValue); 
+							$button.parent().find("input").val(newVal);
+						}
+						else if (TotalValue <= 0){					
+							//$('#Count'+CatID).val(1);
+							//$('#ctgsum'+CatID).val(1); 
+							$button.parent().find("input").val(1);					
+						}
+						//else if (TotalValue >= 5 && TotalCategory <= 20) {
+						else if (TotalValue >= 99) {
+							$button.parent().find("input").val(oldValue)
+							//$('#Count'+CatID).val(SubCtgSum);
+							//$('#ctgsum'+CatID).val(SubCtgSum); 						
+							//$('#Count'+CatID).tooltipster('show');
+							$button.parent().find("input").tooltipster('update', "You cannot enter quantity more than 99 for this category.");
+							$button.parent().find("input").tooltipster('show');							
+						}  
+					
+					//TotalValue = parseFloat((TotalValue + newVal) - oldValue ); 
+					
+					//if ( TotalValue <= 5 && TotalCategory <= 20){						
+					
+					/*else if (TotalCategory >= 99) {
+						
+						$button.parent().find("input").val(oldValue) 
+						$('#Count'+CatID).val(SubCtgSum);
+						$('#ctgsum'+CatID).val(SubCtgSum); 	
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 99 quantity for this request.");
+						$('#Count'+CatID).tooltipster('show'); 					
+					}*/				   				  
+			  }
+			  else if (($button.parent().find("input")[0].name == 'elecCtgCount') )
+			  {  
+				if ( TotalCategory <= 99){
+					$button.parent().find("input[name=elecCtgCount]").val(newVal);				
+				}
+				else{
+					$button.parent().find("input[name=elecCtgCount]").val(oldValue);
+					$button.parent().find("input[name=elecCtgCount]").tooltipster('show');
+					return false;
+				}
+			} 
+		  }
+		});
+			   
+		$(document).on('change', '.pure-u-md-1-24 input[type=checkbox]', function() {
+			//alert('clicked');
+			//var divShow =  $(this).parent().parent().find('.pure-u-md-3-24')[0].name;
+		
+			
+			if (this.checked)	 {
+				//$(this).parent().parent().find('.pure-u-md-3-24').show();
+				$(this).parent().parent().find('input[type=text]').removeAttr("disabled");
+				$(this).parent().parent().find('input[type=text]').addClass('disableText');
+				$(this).parent().parent().find('img.divdecimage').addClass('imgdechv');
+				$(this).parent().parent().find('img.divimage').addClass('imginchv');  
+				 				
+				$(this).parent().parent().find('input[type=text]').val(0);
+				//if ($(this).parent().parent().hasClass('tvSubCtg')) { 
+				if ($(this).parent().parent().find('#tvSubCategory').length > 0) {  
+				 //if ($(this).parent().parent().has('#tvSubCategory') ) {	
+					$(this).parent().parent().find('#tvSubCategory').show();
+					$(this).parent().parent().find('input[type=text]').val(0);
+					$(this).parent().parent().find('input[type=hidden]').val(0);
+				}
+				$('#chkbox1').tooltipster('hide');
+				//$('#chkbox1').removeClass("tooltipstered error");
+					//$(firstchk).removeAttr("aria-invalid");
+					//$(firstchk).removeAttr("aria-required");
+					//$(firstchk).removeAttr("required");
+			 }  
+			 else {
+				$(this).parent().parent().find('input[type=text]').attr("disabled","disabled");
+				$(this).parent().parent().find('input[type=text]').removeClass("disableText");
+				$(this).parent().parent().find('img.divdecimage').removeClass('imgdechv');
+				$(this).parent().parent().find('img.divimage').removeClass('imginchv');		
+				$(this).parent().parent().find('input[type=text]').val(0);				
+				//$(this).parent().parent().find('.pure-u-md-3-24').hide();
+				//$(this).parent().parent().find('input[name=elecCtgCount]').val(0);
+				 if ($(this).parent().parent().find('#tvSubCategory').length > 0 ) {
+					$(this).parent().parent().find('#tvSubCategory').find('input[name=tvSubCat]').val(0);
+					$(this).parent().parent().find('input[type=hidden]').val(0); 
+					//sum = 0;
+					$(this).parent().parent().find('#tvSubCategory').hide();
+				}
+			 }
+	 }); 
+	   // $('.pure-u-md-1-24 checkbox').on("click", function(){
+		//	 if (this.checked)
+		//	 {
+		//		$divShow.show();
+		//	 }
+		//	 else
+		//	 {
+		//		$divShow.hide();
+		//	 }
+		//});  
+	    $('#tvchkbox').change(function(e){
+			if (this.checked){
+				$('#tvSubCategory').show();
+			}
+			else{
+				$('#tvSubCategory').hide();
+			}
+		});
+		
+		$('#msform input[type="checkbox"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform textarea').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform select').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('textarea[maxlength]').keyup(function () {
+            var limit = parseInt($(this).attr('maxlength'));
+            var text = $(this).val();
+            var chars = text.length;
+            if (chars > limit) {
+                var new_text = text.substr(0, limit);
+                $(this).val(new_text);
+            }
+        });
+        $('#CONTACT-1-PHONE').mask("(999) 999-9999");
+        //$('#CONTACT-2-PHONE').mask('(999) 999-9999? x99999');
+        $('#CONTACT-1-ZIP').mask('99999');
+        $('#CONTACT-2-ZIP').mask('99999');
+        $('#EVENT-START-DATE').mask('99/99/9999');
+        $('#EVENT-END-DATE').mask('99/99/9999');
+		
+		$('#datetimepicker1').bind('cut copy paste', function (e) {
+			e.preventDefault();
+		});
+	   
+		//Disable mouse right click
+		$("#datetimepicker1").on("contextmenu",function(e){
+			return false;
+		});
+    });
+	
+	$(document).click(function() {
+		if($(event.target).closest('.inc').length > 0 || $(event.target).closest('.dec').length > 0 || $(event.target).closest('input[name=tvSubCat]').length > 0  ||  $(event.target).closest('input[name=elecCtgCount]').length > 0 ) {
+			return false;
+		}
+		  
+		$("input[name=elecCtgCount]").tooltipster('hide');  
+		$("input[name=tvSubCat]").tooltipster('hide');  
+	});
+</script>
+
+<script type="text/javascript">
+    var current_fs, next_fs, previous_fs;
+	var CatgoryList = [];
+    var left, opacity, scale;
+    $("#cancel").click(function () {
+        $("#houseNumber").val("");
+        $("#street").val("");
+        $("#boro").val("");
+        $("#additionalinfo").val("");
+		$('#divNonDualBin').hide();
+        $("#results").empty();
+        //$('#msform input[type="text"]').attr("class", "tooltipstered");
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+        $('#msform select').attr("class", "tooltipstered"); 
+        $('#msform select').removeAttr("aria-invalid");
+        //$('#msform textarea').attr("class", "tooltipstered");
+        $('#msform textarea').removeAttr("aria-invalid");
+    }); 
+    var validator;
+    function validateForm() {
+        validator = $('#msform').validate({
+            errorPlacement: function (error, element) {
+                if (element.attr("type") == "text") {
+                    $(element).tooltipster('update', "This field is required");
+                } else if (element.attr("type") == "select-one") {
+                    $(element).tooltipster('update', "Please select from the list");
+                }
+                else {
+                    $(element).tooltipster('update', "This field is required");
+                }
+                if (element.attr("name") == "CONTACT-1-EMAIL") {
+                    $(element).tooltipster('update', "Please enter valid email address");
+                }
+                if (element.attr("name") == "CONTACT-2-EMAIL") {
+                    $(element).tooltipster('update', "Please enter valid email address");
+                }
+                if (element.attr("name") == "EVENT-START-DATE") {
+                    $(element).tooltipster('update', "Please enter valid date");
+                }
+                if (element.attr("name") == "EVENT-END-DATE") {
+                    $(element).tooltipster('update', "Please enter valid date");
+                }
+                $('element').tooltipster({
+                    functionInit: function () {
+                        return $('element').html();
+                    },
+                    functionReady: function () {
+                        $('element').attr('aria-hidden', false);
+                    },
+                    functionAfter: function () {
+                        $('element').attr('aria-hidden', true);
+                    }
+                });
+                $(element).focus(function () {
+                    if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+                    { $(this).tooltipster('show'); }
+                })
+                   .blur(function () {
+                       $(this).tooltipster('hide');
+                   });
+            },
+            success: function (label, element) {
+                $(element).tooltipster('hide');
+            },
+            invalidHandler: function () {
+                $(this).find(".error:first").focus();
+            }
+        });
+        if (!$('#msform').valid()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    $("#nextstep2").click(function (event) {
+		 
+	
+		var disableDT = []; //['09/28/2016', '2016-09-27',d];
+		/*var MaxDate = new Date(); // Parse date
+		MaxDate.setDate(MaxDate.getDate() + 14); // Add 7 days
+		var minDate = new Date();
+		minDate.setDate(minDate.getDate() + 1); // Add 7 days
+		if (minDate.getDay() == 0){
+			minDate.setDate(minDate.getDate() + 1);
+		} */
+		$('#divNonDualBin').hide();
+		var minDate; //= moment();//.format("MM-DD-YYYY");
+		var MaxDate; //= moment().add(21, 'days'); 
+		//MaxDate = MaxDate.format("MM-DD-YYYY"); // Parse date
+		
+        if (validateForm()) {
+            var retCode = false;
+            current_fs = $(this).parent().parent();
+            next_fs = $(this).parent().parent().next();
+            event.preventDefault();
+            validateAddress(function (output) {
+                if (output == true) {
+                    retCode = true;
+                }
+                if (retCode == true) {
+				
+					$('#ReqHeader').text('Step 2 - Specific Info');
+					
+                    var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
+					//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
+					$('#rdAddress').html(fullAddress);
+					$('#rdStreet').html($("#GEOCrossStreet").val());
+					$('#rdAddressNonDual').html(fullAddress);
+					$('#rdStreetNonDual').html($("#GEOCrossStreet").val());
+					$('#Step2div').show();
+					$('#lstPickUpLocation').empty();
+					$('#lstPickUpLocation').append('<option selected="selected" value="">Please select one:</option>');
+					$('#lstPickUpLocation').append($("#GEOPickupStreet").val());  
+										
+					
+                    //$("#EVENT-LOCATION").val(fullAddress);
+                    //$("#EVENT-CITY").val($("#GEOcity").val()); 
+					
+					$.ajax({
+					 type: 'GET',
+					url: APIUrl + '/BulkAPI/api/bulkpickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
+					 crossDomain: true,
+					 dataType: 'json',
+					 async: false,
+					 success: function (data) {
+						 if (data) {
+								//var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+								var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
+								var getdisDAte =$.ajax({
+									async:false,
+									url: getDateUrl,
+									dataType: 'json',
+									crossDomain: true,
+									success: function(data){
+										if (data != undefined)
+										{ 
+											//disableDT = data ;
+											$.each(data, function(key, item) { 
+												var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
+												//var d=new Date(item); 
+												//d.setDate(d.getDate()+ 1); 
+												disableDT.push(d); 
+												minDate = item.StartDate;									
+												MaxDate = item.EndDate;
+											});  
+											
+											$('#datetimepicker1').datetimepicker({
+												format: 'MM-DD-YYYY',
+												minDate: minDate,
+												maxDate : MaxDate,
+												focusOnShow: false,
+												widgetPositioning: {
+													horizontal: 'auto',
+													vertical: 'bottom'
+												},											
+												//daysOfWeekDisabled: [0,6],
+												disabledDates: disableDT,
+												keyBinds: {
+															up: null,
+															down: function (widget) {
+																		if (!widget) {
+																		this.show();
+																		return;
+																		}
+																	},
+															left: null,
+															right: null,
+															t : null,
+															'delete' : null
+														} 
+											}); 	
+											//$('#datetimepicker1').datetimepicker('update'); 
+										}				
+									}
+								});    					
+								//next_fs.show();
+								$('#divNonDualBin').hide();
+								$('.fieldset2').show();
+								current_fs.hide();
+								$('#astep1').removeClass('active1');
+								$('#astep2').addClass('active2');
+					}
+					else
+					{
+					     $("#collectionDays").html($("#RegularCollectionDayNames").val());
+						 $('#divNonDualBin').show();
+                         return false;
+                    }
+				  }
+				 });
+                    return false;
+                }
+            });
+        }
+        else {
+            validator.focusInvalid();
+            return false;
+        }
+     });
+	
+	
+    $("#previousstep1").click(function () {
+        //$('#msform input[type="text"]').attr("class", "tooltipstered");
+        //$('#msform select').attr("class", "tooltipstered");
+        //$('#msform textarea').attr("class", "tooltipstered");  
+        $('#msform input[type="text"]').removeAttr("aria-invalid");  
+        $('#msform select').removeAttr("aria-invalid");
+        $('#msform textarea').removeAttr("aria-invalid");
+        //$('#msform input[type="checkbox"]').attr("class", "tooltipstered");
+        $('#msform input[type="checkbox"]').removeAttr("aria-invalid");
+		$('#ReqHeader').text('Step 1 - General Info');
+		$('#Step2div').hide();
+		 
+        current_fs = $(this).parent().parent();
+        previous_fs = $(this).parent().parent().prev();
+        $('.fieldset2').hide();
+        $('.fieldset1').show();
+        $('#astep2').removeClass('active2');
+        $('#astep1').addClass('active1');
+        return false;
+    });
+	
+	function validateCategory(){
+	
+		var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
+		var firstchk = $('#ElecCtg').find('input[type=checkbox]')[0]
+		var checked = false;
+		var CtgVAL = 0 ;
+		$.each(arr, function(key, item) {				
+					if (item.checked){	
+						$(firstchk).removeClass("tooltipstered error");
+						$(firstchk).removeAttr("aria-invalid");
+						$(firstchk).removeAttr("aria-required");
+						$(firstchk).removeAttr("required");
+						checked = true;
+						CtgVAL = 0;
+						
+						 if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
+						 {
+							$(item).parent().parent().find('input[name^="tvSubCat"]').each(function(){
+								CtgVAL += parseFloat(this.value);
+							});
+						 }
+						 else
+						 {
+							 CtgVAL = $(item).parent().parent().find('input[type=text]').val();
+						 }
+						 
+						 $(item).parent().parent().find('input[type=text]').tooltipster('hide');
+                        
+								
+						if (CtgVAL == 0){
+						  
+							var ctgTextbox = $(item).parent().parent().find('input[type=text]')[0];
+							$(ctgTextbox).addClass("tooltipstered error");
+							$(ctgTextbox).attr("required",'true');
+							$(ctgTextbox).attr("aria-invalid",'true');
+							$(ctgTextbox).attr("aria-required",'true');
+							$(ctgTextbox).tooltipster('update', "Quantity should be greater than zero.");
+							$(ctgTextbox).tooltipster('show'); 
+							$(ctgTextbox).focus();  
+							return false;   
+							//break;   
+						}
+						//break;
+						return true;
+					}
+		}); 		
+		if (checked ){
+			
+			if (CtgVAL == 0){
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		else {
+			$(firstchk).addClass("tooltipstered error");
+			$(firstchk).attr("required",'true');
+			$(firstchk).attr("aria-invalid",'true');
+			$(firstchk).attr("aria-required",'true');
+			$(firstchk).tooltipster('update', "Please select one category");
+			$(firstchk).tooltipster('show'); 
+			$(firstchk).focus(); 
+			return false;
+		}
+	}
+	
+    $("#nextstep3").click(function () {
+        current_fs = $(this).parent().parent();
+        next_fs = $(this).parent().parent().next();
+        if ( validateForm() && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
+		
+			if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
+			
+				$('#CONTACT-CONFRIM-EMAIL').tooltipster('update', "Confrim email address should match to email address.");
+				$('#CONTACT-CONFRIM-EMAIL').tooltipster('show'); 
+				return false; 
+			} 
+		
+		
+			var strAddress =  $('#houseNumber').val() + ' ' + $('#street').val() + ', ' + $("#boro option:selected").text()
+            $('#disaddress').html(strAddress);
+			$('#disCrsStrt').text($('#GEOCrossStreet').val());
+            //$('#disbldg').text($('#houseNumber').val());
+            //$('#disstreet').text($('#street').val());  
+            //$('#disCrsStrt').text();
+            $('#disPckLocation').text($("#lstPickUpLocation option:selected").text());
+			$('#disApptDate').text($('#slapptdate').val()); 
+			$('#displayItem').empty();
+			var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
+			CatgoryList = []; 
+			
+			$.each(arr, function(key, item) {				
+				if (item.checked){				
+					//alert('selected');					
+					
+					ctgStr = '';
+					//var CategoryDiv = $(item).parent().parent();
+					var CtgID = $(item).parent().parent()[0].id
+					var Ctgname = $(item).parent().parent().find('.pure-u-md-20-24').html();
+					var CtgVAL = $(item).parent().parent().find('input[type=text]').val();
+					var SubCategoryID = 0; 					
+					
+					//ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">\
+					//	<div class="pure-u-md-1-24 pure-u-sm-1-24">\
+					//	</div><div class="pure-u-md-20-24 pure-u-sm-20-24 ctgName ">'+ Ctgname +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ CtgVAL +'</div> </div>'
+					
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
+					{
+						ctgStr += ' <li> <span>'+ Ctgname +'</span> </li>';
+					}
+					else
+					{
+						ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+					}
+					 
+					$('#displayItem').append(ctgStr); 							
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0 )	
+					{
+						 var arrSubCat = $(item).parent().parent().find('#tvSubCategory').find('.pure-u-1')
+					     //$(item).parent().parent().find('#tvSubCategory').find('input[type=text]')
+						 var SubctgStr = '<ul class=leaders> '; 
+						 $.each(arrSubCat, function(Subkey, Subitem) {
+							//SubctgStr = '';
+							if ($(Subitem).find('input[type=text]').val() > 0)
+							{
+								CtgVAL = $(Subitem).find('input[type=text]').val();
+							    SubCategoryID = $(Subitem).find('.pure-u-md-3-24').attr('name');  
+								
+								//SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">'
+								//SubctgStr +='<div class="pure-u-md-2-24 pure-u-sm-2-24">'
+								//SubctgStr +='</div><div class="pure-u-md-19-24 pure-u-sm-19-24 ctgName ">'+ $(Subitem).find('label')[0].innerText +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ $(Subitem).find('input[type=text]').val() +'</div> </div>'
+								SubctgStr += '<li>  <span>'+ $(Subitem).find('label')[0].innerText +'</span>   <span>'+ $(Subitem).find('input[type=text]').val() +'</span>  </li>';
+																							
+								CatgoryList.push({
+								 CategoryID: CtgID,
+								 SubCategoryId: SubCategoryID,
+								 RequestedQty: CtgVAL
+								});
+								
+							}
+						 }); 	
+						SubctgStr += '</ul> ';
+						$('#displayItem').append(SubctgStr); 
+					}
+					else{
+						CatgoryList.push({
+							 CategoryID: CtgID,
+							 SubCategoryId: SubCategoryID,
+							 RequestedQty: CtgVAL
+						 });
+					
+					}
+					
+					//$(item).parent().parent().html()					 					
+				}
+			});
+			//$('displayItem').text();
+			//$('#disApptDate').text();						
+			$('#disfname').text($('#CONTACT-1-FIRST-NAME').val());
+            $('#dislname').text($('#CONTACT-1-LAST-NAME').val());
+			$('#disphone').text($('#CONTACT-1-PHONE').val());
+			$('#disemail').text($('#CONTACT-1-EMAIL').val());
+            $(".fieldset1").scrollTop(0);
+             $('body').animate({scrollTop:0},0);
+            $('#ReqHeader').text('Step 3 - Submit');
+			$('#stepmsg').text('Review the form before submitting:');
+            //$('#reqFld').hide();
+            next_fs.show();
+            $('.fieldset4').show();
+            $('#astep2').removeClass('active2');
+            $('#astep3').addClass('active3');
+            current_fs.hide();
+            return false;
+        } else {
+            validator.focusInvalid();
+            return false;
+        }
+    });
+	
+    $("#previousstep2").click(function () {
+        $('.fieldset2').show();
+		$('#ReqHeader').text('Step 2 - Specific Info');
+		$('#stepmsg').text('Your address and recycling day have been verified as:');
+        //$('#reqFld').show();
+        $('#astep3').removeClass('active3');
+        $('#astep2').addClass('active2');
+        $('.fieldset3').hide();
+        $('.fieldset4').hide();
+        return false;
+    });
+	
+	$('#chkTC').change( function(){
+		if ($('#chkTC')[0].checked) 
+		{		
+			$('#chkTC').tooltipster('hide'); 
+		}
+	}) ;
+	
+	$("#submitrq").click(function (){		
+		if (!$('#chkTC')[0].checked) 
+		{		
+			$('#chkTC').addClass("tooltipstered error");
+			$('#chkTC').attr("required",'true');
+			$('#chkTC').attr("aria-invalid",'true');
+			$('#chkTC').attr("aria-required",'true');
+			$('#chkTC').tooltipster('update', "Please certify the request.");
+			$('#chkTC').tooltipster('show'); 
+			$('#chkTC').focus(); 			
+			//return false;
+		}
+		else{
+			$('#chkTC').tooltipster('hide'); 		
+		
+		/* Uncomment after performance testing. */
+			var captchaInfo = {
+                 challengeValue: $("#recaptcha_challenge_field").val(),
+                 responseValue: $("#recaptcha_response_field").val()
+             }; 
+             $.ajax({
+                 type: 'POST',
+				 url: APIUrl + '/ePickupsAPI/api/PickupRequest/ValidateCaptcha',
+                 data: captchaInfo,
+                 crossDomain: true,
+                 dataType: 'json',
+                 async: false,
+                 success: function (data) {
+                     if (data) {
+					 
+					 
+                         //Save user information if captcha is valid
+						var Requestdata= {
+						FirstName: $('#disfname').text(),
+						LastName : $('#dislname').text(),
+						Phone : $('#disphone').text(),
+						Email : $('#disemail').text(),
+						BuildingNumber : $('#houseNumber').val(),
+						Street : $('#street').val(),
+						District : $('#GEODistrict').val(),
+						PickUpLocation :$('#disPckLocation').text(),
+						AppointmentDate : $('#disApptDate').text(),
+						Source : 'DSNY',
+						CrossStreets : $('#GEOCrossStreet').val(),
+						PickupRequestItems : CatgoryList
+					}		
+					var RequestURL = APIUrl + '/BulkAPI/api/bulkpickups/AddUpdatePickUpRequest';
+					$.ajax({
+						async: false,
+						url: RequestURL ,
+						data: Requestdata,
+						type: "POST",
+						dataType: 'json',
+						crossDomain: true,
+						success: function (json) {				
+							if (json != undefined){
+                                 $(".fieldset1").scrollTop(0); 
+                                 $('body').animate({scrollTop:0},0);
+                                $('#reqFld').hide();
+							 var data = json  
+								$('.fieldset4').hide();
+								$('.fieldset3').hide();
+								$('#astep4').addClass('active4');
+								$('#astep3').removeClass('active3');
+							  /*if (json.length == 0){
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#stepmsg').hide();
+								$('.fieldset5').show();								
+							  } 
+							  else if (json.toUpperCase() == 'NOT AVAILABLE'){
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset6').show();		
+							  }
+							  else if (json.toUpperCase() == 'ERROR'){
+								$('#container').hide();
+								$('#errcontainer').show();
+							  }*/
+
+							if (json.toUpperCase() == 'NOT AVAILABLE'){
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset6').show();	
+							  }
+							  else if (json.toUpperCase() == 'DUPLICATE REQUEST'){
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset7').show();	
+							  }
+							  else if (json.toUpperCase() == 'ERROR'){
+								$('#container').hide();
+								$('#errcontainer').show();					  
+							  } 
+							  else {							  
+								//if (parseInt(json) > 0){  	
+								$('#srnumer').text(json);
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#stepmsg').hide();
+								$('.fieldset5').show();	 							
+								
+							  } 
+
+							  
+							 
+							}			
+							//$('#ElecCtg').find('#'+SubCategoryID).append(SubctgStr);
+						}
+					});	
+                         //return true;
+                   /*  Uncomment after performance testing. */
+				   }
+                     else {
+                         $("#divInvalidMessage").html('The security code you entered is invalid. Please try again!');
+                         Recaptcha.reload();
+                         return false;
+                     }
+                 },
+                 error: function (request, status, error) {
+                     //alert(error);
+                 }
+             });			
+		} 
+		return false;
+	});
+	 
+	$('#btnNewReq, #btnNewReq1').click(function(){
+		//location.reload();
+		window.location.href = '/assets/dsny/contact/services/bulk-pickup-request.shtml'; 
+	})
+	
+	$('#btnTrkReq').click(function(){
+		window.location.href ='/assets/dsny/contact/services/bulk-ewaste-pickup-search.shtml';   
+		return false;
+	});
+	
+	$('#btnStep2').click(function(){
+		$('.fieldset6').hide(); 
+		$('.fieldset7').hide(); 
+		$('#datetimepicker1').data('DateTimePicker').destroy();
+		Recaptcha.reload(); 
+		var disableDT = []; //['09/28/2016', '2016-09-27',d];
+		/*var MaxDate = new Date(); // Parse date
+		MaxDate.setDate(MaxDate.getDate() + 14); // Add 7 days
+		var minDate = new Date();
+		minDate.setDate(minDate.getDate() + 1); // Add 7 days		*/
+		
+		var minDate; //= moment()//.format("MM-DD-YYYY")
+		var MaxDate; //= moment().add(21, 'days');
+		//MaxDate = MaxDate.format("MM-DD-YYYY"); // Parse date
+		
+		//var getDateUrl =  APIUrl + '/BulkAPI/api/bulkpickups/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+		var getDateUrl =  APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?District='+ $('#GEODistrict').val() +'';
+				var getdisDAte =$.ajax({
+					async:false,
+					url: getDateUrl,
+					dataType: 'json',
+					crossDomain: true,
+					success: function(data){
+						if (data != undefined)
+						{
+							//disableDT = data ;
+							$.each(data, function(key, item) { 
+									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
+									//var d=new Date(item); 
+									//d.setDate(d.getDate()+ 1); 
+									disableDT.push(d); 
+									minDate = item.StartDate;									
+									MaxDate = item.EndDate;
+								}); 
+							 
+							$('#datetimepicker1').datetimepicker({
+								format: 'MM-DD-YYYY',
+								minDate: minDate,
+								maxDate : MaxDate,
+                                focusOnShow: false,
+								widgetPositioning: {
+									horizontal: 'auto',
+									vertical: 'bottom'
+								}, 								
+								//daysOfWeekDisabled: [0,6],
+								disabledDates: disableDT,
+								keyBinds: {
+										up: null,
+										down: function (widget) {
+													if (!widget) {
+													this.show();
+													return;
+													}
+												},
+										left: null,
+										right: null,
+										t : null,
+										'delete' : null
+										} 
+							});
+							//$('#datetimepicker1').datetimepicker('update'); 
+							
+						}						
+					}
+				});  		
+		
+		$('#ReqHeader').text('Step 2 - Specific Info');
+		$('#stepmsg').text('Your address and recycling day have been verified as:');
+        $('#astep4').removeClass('active4');
+        $('#astep2').addClass('active2');
+		$('.fieldset2').show();
+		return false; 
+	});
+	
+</script>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/jquery.xdomainrequest.js" type="text/javascript"></script>

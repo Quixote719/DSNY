@@ -1,0 +1,555 @@
+/*!
+ * Dashboard Application CSS
+ */
+	body
+	{
+		font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+	}
+		
+	input, textarea, keygen, select, button 
+	{
+		font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+	}
+.red{
+    color: red;
+}
+
+.card.flipped {
+  transform:rotatey(-360deg);
+  -ms-transform:rotatey(-360deg); /* IE 9 */
+  -moz-transform:rotatey(-360deg); /* Firefox */
+  -webkit-transform:rotatey(-360deg); /* Safari and Chrome */
+  -o-transform:rotatey(-360deg); /* Opera */
+}
+
+.textbold{
+	    font-size: 14px;		 
+		color: #333;
+		font-weight: bold;
+		margin: 0 0 0 10px; 
+		float:left;
+		padding-right: 5px;
+	}
+
+.addressText{
+        font-size: 14px;		 
+		margin: 5px 0 0px 10px; 
+		float:left;
+		padding-right: 5px;
+        width:100%;
+    
+}
+
+.tvctgqty{
+      background: transparent;
+      border: 0px solid;
+      color: white;
+   }
+        
+        
+ .card {
+  
+  -webkit-transform-style: translate3d(0,0,0);
+  -webkit-transition: 2s;
+  -moz-transform-style: translate3d(0,0,0);
+  -moz-transition: 2s;
+  -ms-transform-style: translate3d(0,0,0);
+  -ms-transition: 2s;
+  -o-transform-style: translate3d(0,0,0);
+  -o-transition: 2s;
+  transform-style: translate3d(0,0,0);
+  transition: 2s;
+}
+	.box {
+		-o-text-overflow: ellipsis;
+		/* Opera */
+		text-overflow: ellipsis;
+		/* IE, Safari (WebKit) */
+		overflow: hidden;
+		/* don't show excess chars */
+		white-space: nowrap;
+		/* force single line */
+		width: 100%;
+		/* fixed width */
+	}
+
+	.navbar-brand {
+		width: 250px;
+		word-wrap: break-word;
+		border-bottom-left-radius:;
+	}
+	
+	input {font-weight:bolder;}
+
+    
+    .form-control {
+    padding: 4px 12px;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, .125);
+    font-weight: normal;
+    }
+.selectedDate{
+   padding: 0px 0px 4px 12px;
+    font-size: 15px; 
+}
+
+	.assignment_gliphIcon{
+		padding: 3px;
+		color: white;
+	}
+
+	.navButton {
+		background-color: #0e8c1b;
+		color: white;
+		margin-left: 20px;
+		width: 170px;
+	}
+
+	.logoutButton {
+		background-color: gray;
+		color: white;
+		margin-left: 30px;
+		width: 170px;
+	}
+
+	.card-text {
+		margin: 10px;
+	}
+
+	.dropdown-toggle::after {
+		float: right;
+		margin-top: -10px;
+		width: 10px;
+	}
+
+	#dateToggle::after {
+		margin-top: -40px;
+		margin-right: 15px;
+		width: 10px;
+	}
+
+	.dropdown-menu > a:hover,
+	.dropdown-menu > a:focus {
+		background-color: #598e5f;
+	}
+
+	#SupervisorDropDown > a:hover,
+	a:focus {
+		background-color: #5b4d7c;
+	}
+
+	.truckDropDown_menu > a:hover,
+	a:focus {
+		background-color: #9b9b9b;
+	}
+
+	div.CustomCards {
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.50);
+		border-radius: 4px;
+	}
+
+ div.CustomCards:hover {
+            cursor: pointer;
+            cursor: hand;
+             box-shadow: 0 3px 10px 6px rgba(52, 52, 52, 0.5);
+        }
+
+	p,
+	H4 {
+		text-align: left;
+	}
+
+	.card {
+		padding-top: 10;
+		margin-top: 30;
+		border: 0px;
+		border-radius:0;
+	}
+
+	table {
+		width: 100%;
+		height: 150px;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.header_row {
+		border-bottom: 1px solid #B09340;
+		height: 36px;
+	}
+
+   .Task_header_row {
+		border-bottom: 1px solid #fff;
+		height: 36px;
+	}
+
+	
+	td, th {
+		
+		text-align: left;
+	}
+    .right_align_text{
+        text-align: right;
+        padding-right: 10px;
+    }
+    .right_align_text_np{
+        text-align: right;
+        
+    }
+     
+	.card-header {
+		background-color: white;
+	}
+
+	.bootstrap-datetimepicker-widget.dropdown-menu {
+		height: 200px;
+		width: 100%;
+		margin-top: 0px;
+		background-color: white;
+		border-radius: 0px;
+		left: 0px !important
+	}
+
+     .bootstrap-datetimepicker-widget.dropdown-menu:before,  
+	 .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after{
+          border: none !important;
+          content: none !important;
+       }
+	 
+	.alertModal {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0px;
+		margin: 0px;
+	}
+
+	.col-xs-5ths,
+	.col-sm-5ths,
+	.col-md-5ths,
+	.col-lg-5ths {
+		position: relative;
+		min-height: 1px;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.col-xs-5ths {
+		width: 20%;
+		float: left;
+	}
+
+	@media (min-width: 768px) {
+		.col-sm-5ths {
+			width: 50%;
+			float: left;
+		}
+
+		.col-lg-3 {
+			width: 100%;
+		}
+
+		.col-lg-6 {
+			width: 100%;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.col-md-5ths {
+			width: 20%;
+			float: left;
+		}
+
+		.col-lg-3 {
+			width: 100%;
+		}
+
+		.col-lg-6 {
+			width: 100%;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		.col-lg-5ths {
+			width: 20%;
+			float: left;
+		}
+
+		.col-lg-3 {
+			width: 20%;
+		}
+
+		.col-lg-6 {
+			width: 60%;
+		}
+	}
+	/* TO blackout except the selected DIV*/
+
+	.expose {
+		position: relative;
+	}
+
+	#overlay {
+		background: rgba(0, 0, 0, 0.5);
+		display: none;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 9998;
+	}
+
+	.disabledbutton {
+		pointer-events: none;
+		opacity: 0.4;
+	}
+
+	.modal-dialog {
+		max-width: 90% !important;
+		margin: 60px 30px 0 auto;
+	}
+
+	.categorycard {
+		position: relative;
+		display: block;
+		margin-bottom: .75rem;
+		background-color: #fff;
+		border-radius: .25rem;
+		border-top: 1px solid rgba(0, 0, 0, .125);
+		border-left: 1px solid rgba(0, 0, 0, .125);
+		border-right: 1px solid rgba(0, 0, 0, .125);
+	}
+
+	.inc {
+		/*float: left;*/
+		display: inline-block;
+	}
+
+	.dec {
+		display: inline-block;
+	}
+
+	.txtValue {
+		width: 30PX !important;
+		align-items: center;
+		margin: 0px !important;
+		text-align: center;
+		height: 50%;
+	}
+
+	#dialogRequest .row {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	#dialogRequest .card {
+		box-shadow: none;
+		border: 1px solid rgba(0, 0, 0, .125);
+		border-radius: 4px;
+	}
+
+	.divborder {
+		border-bottom: 1px solid rgba(0, 0, 0, .125);
+	}
+
+	.modal-content {
+		background-color: #F9F9F9;
+	}
+
+	.qtyRight {
+		text-align: right !important;
+	}
+
+	.completePopup {
+		cursor: pointer;
+	}
+    .bgcolor
+	{
+		background-color:#454545;
+	}
+	.navbar-margin
+	{
+		margin-top:-5px; padding:0px;height:40px;color:white;
+	}
+	.navbar-div
+	{
+		margin:0px; padding:0px;height:20px;
+	}
+	.overlaybg
+	{
+		background-color:#61a269; color:white;
+	}
+	.datepickerdivmargin
+	{
+		margin:0px 0px 0px 12px; 
+		padding-top:5px;
+	}
+	.datetimepicker2border
+	{
+		border:0px;width:100%;
+	}
+	.labelmargin
+	{
+		margin:0px;float:left;
+	}
+	.fullwidth
+	{
+		width:100%;
+	}
+	.alignleft
+	{
+		text-align:left;
+	}
+	.ahrefcolor
+	{
+		color:white;
+	}
+	.dropdownmenuheight
+	{
+		max-height:150px;overflow:auto;
+	}
+	.supervisorbg
+	{
+		background-color:#7461a2; color:white;
+	}
+	.assignmentsbg
+	{
+		background-color:#5393e7; color:white;
+	}
+	.assignmentsdiv
+	{
+		border-bottom:1px solid white; height:60px;
+	}
+	.assignmentsheight
+	{
+		height:600px;overflow:auto;
+	}
+	.margintop
+	{
+		margin-top:10px;
+	}
+	.rowstyle
+	{
+		border-bottom:1px solid #9b9b9b; padding-bottom:5px; margin:0px -5px 0px -5px;
+	}
+	.col-lg-3-style
+	{
+		padding:0px 7px 0px 7px;
+	}
+	.col-lg-3-margin
+	{
+		margin-left:-4px;
+	}
+	.pendingitemsbg
+	{
+		background-color:#EAC454; color:#5a4c22;
+	}
+	.pendingitemsheight
+	{
+		height:150px;
+	}
+	.pendingitemstyle
+	{
+		border-bottom:1px solid #b09340;
+	}
+	.pendingitemsdiv
+	{
+		width:50%; height:100%; padding:0px 5px 0px 0px; border-right:1px solid #b09340;float:left;
+	}
+	.crtv
+	{
+		width:25px;height:20px; padding:0px; margin-bottom:5px; margin-right:8px;
+	}
+	.lcdtv
+	{
+		width:25px;height:15px; padding:0px; margin-bottom:2px; margin-right:8px;
+	}
+	.pendingCRTV
+	{
+		height:36px; padding-top:5px; margin-bottom:5px;  border-bottom:1px solid #b09340;
+	}
+	.pendingCRTVdiv
+	{
+		width:50%;height:70%;border-right:1px solid #b09340;float:left;
+	}
+	.palign
+	{
+		margin:3px 5px 10px 0px;
+        height: 25px;
+	}
+	.divwidthheight
+	{
+		width:50%;height:70%;float:left;
+	}
+	.tvmargin
+	{
+		float:right;margin-right:10px;
+	}
+	.tvimagemargin
+	{
+		width:25px;height:20px; padding:0px; margin-bottom:5px; margin-right:8px;
+	}
+	.pendingLCDTVdiv
+	{
+		width:50%;height:100%;padding:0px 0px 0px 5px; float:left;
+	}
+	.pendingLCDTVheight
+	{
+		height:36px; padding:5px 5px 5px 0px; margin-bottom:5px;border-bottom:1px solid #b09340;
+	}
+	.lcdtvimgmargin
+	{
+		width:20px;height:15px; padding:0px; margin-bottom:5px; margin-right:8px;
+	}
+	.col-xs-8-border
+	{
+		border:1px solid rgba(0,0,0,.125);
+        margin-left: -5px;
+	}
+	.col-xs-8-margin
+	{
+		margin-right:10px;
+	}
+	.divrowmargin
+	{
+		margin:5px 5px;
+	}
+	.carddivstyle
+	{
+		width:33%;height:70%;border-right:1px solid rgba(0,0,0,.125);float:left;padding: 0px 0px 0px 10px;
+	}
+	.cadrdivfullwidthheight
+	{
+		width:100%;height:100%; float:left;
+	}
+	.tvbgcolor
+	{
+		height:36px; background-color:#EAC454; color:white; border-bottom:1px solid white;
+	}
+	.paddingleftlabel
+	{
+		padding-left: 10px;
+	}
+	.placeright
+	{
+		float:right;
+	}
+	.dropdown-menu-right
+	{
+		left:auto !important;
+	}
+	#datepicker, #boroughCard, #districtCard, #SUperVisorCard
+	{
+		height: 60px;
+	}
+	
+	.reverse {
+		top:auto;
+		bottom:100%;
+	}
+	
+	#open-datetimepicker{cursor: pointer}
+	
+	.error {border-color:#e9322d !important}

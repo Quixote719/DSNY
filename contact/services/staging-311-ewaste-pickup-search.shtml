@@ -30,7 +30,7 @@
 								--><!--
 									ls:begin[head-injection]
 								--><meta charset="utf-8" /><!--[if IE]>        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        <![endif]-->
-								<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>								
+								<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 								<!-- Google Translate Plugin --><meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c"/><!--[if lt IE 9]>            <script src="/assets/home/js/libs/html5shiv.js" type="text/javascript"></script>        <![endif]--><!-- GLOBAL STYLES --><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 								<link href="/assets/dsny/css/pages/webforms/global_dsny.css" media="screen" rel="stylesheet" type="text/css" />
 								<link href="/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" /><!-- PRINT STYLE --><link rel="stylesheet" href="/assets/home/css/print.css" type="text/css" media="print" />
@@ -43,16 +43,16 @@
 								<!-- centralized css --><link href="/assets/dsny/css/pages/webforms/inside_dsny.css" media="screen" rel="stylesheet" type="text/css" />
 								<link href="/assets/dsny/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
 								<link href="/assets/dsny/css/pages/agencies/megamenu/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
-								<link rel="stylesheet" href="/assets/dsny/css/pages/agencies/megamenu/jquery-ui.css">								
+								<link rel="stylesheet" href="/assets/dsny/css/pages/agencies/megamenu/jquery-ui.css">
 								<link href="/assets/dsny/css/pages/agencies/socialicons/plugin.css" media="all" rel="stylesheet" />
 								<style>
-								
+
 								[class*="span"] {
-								margin-left: 0px; 
+								margin-left: 0px;
 								}
 
 								.agencies-about-share {
-								 padding: 0px 0 0px 0 !important; 
+								 padding: 0px 0 0px 0 !important;
 								}
 
 								h2
@@ -66,7 +66,7 @@
 								{
 									color: #686868;
 								}
-								
+
 								#main, .main{
 									margin: 0px;
 								}
@@ -134,7 +134,7 @@
 										top:72px;
 							            /*-webkit-border-top-right-radius: 0px;
 							            -webkit-border-bottom-right-radius: 0px;
-							            border-top-right-radius: 0px;										
+							            border-top-right-radius: 0px;
 							            border-bottom-right-radius: 0px;
 
 							            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -156,17 +156,17 @@
 									{
 									  right : 25.63%
 									}
-									
+
 									body
 									{
 										background-color: #ffcdcb !important;
 									}
-									
+
 									.navbar .alignleftlastcolumn
 									{
 									   right : 0.1%
 									}
-									
+
 							        /*.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus*/
 							        .top-menu-style
 							        {
@@ -214,7 +214,7 @@
   										margin-right: 2.127659574468%;
 							        }
 
-							        
+
 									.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
 									  /* color: #555555; */
 									  /* text-decoration: none; */
@@ -245,13 +245,13 @@
 
 							        .menu-style
 							        {
-							        	height: 20px; 
+							        	height: 20px;
 							        	/*background-color: #339933; */
-							        	border-right-color: transparent;  
-							        	border-left-color: transparent;  
-							        	border-right-style: solid;  
-							        	border-right-width: 1px;  
-							        	border-left-width: 1px;  
+							        	border-right-color: transparent;
+							        	border-left-color: transparent;
+							        	border-right-style: solid;
+							        	border-right-width: 1px;
+							        	border-left-width: 1px;
 							        	border-left-style: solid;
 							        	/*border-bottom-color: transparent;
 							        	border-bottom-style: solid;
@@ -260,7 +260,7 @@
 
 							        .open > .menu-style
 							        {
-							        	border-right-color: white;  
+							        	border-right-color: white;
 							        	border-left-color: white;
 							        	/*background-color: #50c550;*/
 							        	height: 22px;
@@ -269,13 +269,13 @@
 
 									.menu-bar
 									{
-										width:99.79%; 
-										margin-top:74px; 
-										height:10px; 
+										width:99.79%;
+										margin-top:74px;
+										height:10px;
 										/*background-color:#50c550; */
-										height:10px; 
-										border-width:0px 1px 0px 1px; 
-										border-color:white; 
+										height:10px;
+										border-width:0px 1px 0px 1px;
+										border-color:white;
 										border-style:solid;
 										display:none;
 									}
@@ -321,7 +321,7 @@
 										position: relative;
 										display: block;
 									}
-																		
+
 									@media only screen and (min-width: 768px) and (max-width: 800px){
 								        .navbar .popover {
 								            width: 426px;
@@ -330,7 +330,7 @@
 								        .navbar .dropdown-menu {
 								        	width:300px;
 										}
-										
+
 										.NonProfitCaretUp
 										{
 											float: right;
@@ -352,13 +352,13 @@
 									}
 
 									.has-content:after
-									{ 
+									{
 										/*float: right;*/
-										content: url('/assets/dsny/img/mega-menu-carrot.png'); 
+										content: url('/assets/dsny/img/mega-menu-carrot.png');
 										position: absolute;
 										right: 20px;
 									}
-									
+
 
 
 									.nyc-mega-bg
@@ -377,8 +377,8 @@
 
 									/*
 									.dropdown-menu li > a:only-child:after
-									{ margin-left: 0; 
-										content: ''; 
+									{ margin-left: 0;
+										content: '';
 									}*/
 
 									.residents-howto
@@ -453,7 +453,7 @@
 									}
 
 
-							        /* -------------------------------- 
+							        /* --------------------------------
 
 									Main Components
 
@@ -1066,16 +1066,16 @@
 										margin:0;
 									}
 
-							
+
 									@media only screen and (max-width: 767px) {
 										  .navbar-inverse {
-										    display:none; 
+										    display:none;
 											}
 											.main-header #toggle-mobile-search {
 											   display:none !important;
 											  }
 									}
-									
+
 
 									@media only screen and (min-width: 767px) {
 										.cd-dropdown-wrapper
@@ -1101,7 +1101,7 @@
 										/*background-color: rgba(26,157,92,0.97);*/
 										background-color: rgb(26,157,92);
 									}
-									
+
 									li.has-children.zerowaste-color
 									{
 										/*background-color: rgba(247,139,30,0.9);*/
@@ -1130,7 +1130,7 @@
 
 
 
-									#zw-menu.active 
+									#zw-menu.active
 									{
 										background-color: #e26e25 !important;
 										color : white;
@@ -1166,7 +1166,7 @@
 							        	background-color: rgb(230, 230, 230);
 							        }
 
-							        
+
 
 
 
@@ -1202,7 +1202,7 @@
 							        	background-color:#686868;
 							        	color: white !important;
 							        }
-									
+
 									.navbar-inverse .nav .active > a.top-menu-style
 							        {
 							        	background-color:#0e8c1b;
@@ -1259,7 +1259,7 @@
 							            background-color: #63c44d;
 							        }
 
-							       
+
 
 
 									/* Zero waste orange */
@@ -1368,7 +1368,7 @@
 							        {
 							        	color: #005949;
 							        	font-size: 16px;
-							        }							        
+							        }
 
 
 									.main-header nav ul li.nav-home a
@@ -1377,7 +1377,7 @@
 									}
 
 
-									.main-header .global-input-search .field-search .ico-search									
+									.main-header .global-input-search .field-search .ico-search
 									{
 										background: url("/assets/dsny/img/sprite-ico-search.png") no-repeat white left 6px;
 									}
@@ -1391,10 +1391,10 @@
 									{
 										color : #379800;
 									}
-									
-									.agencies-about-links ul li.active a,.agencies-about-links ul li.active a:hover, .agencies-about-links ul li.active a:focus 
+
+									.agencies-about-links ul li.active a,.agencies-about-links ul li.active a:hover, .agencies-about-links ul li.active a:focus
 									{
-										color: #686868 !important;									
+										color: #686868 !important;
 									}
 
 									.page-breadcrumb
@@ -1408,7 +1408,7 @@
 										color: #0e8c1b;
 									}
 
-									.page-breadcrumb a.breadcrumb-active-page, a.breadcrumb-active-page:link, a.breadcrumb-active-page:visited 
+									.page-breadcrumb a.breadcrumb-active-page, a.breadcrumb-active-page:link, a.breadcrumb-active-page:visited
 									{
 										color: #686868;
 									}
@@ -1529,17 +1529,17 @@
 									.content-container
 									{
 									   min-height: 550px;
-									   margin-top: 2px;			
+									   margin-top: 2px;
 									}
 									.agencies-about-links ul li:last-child a {
-									   border-bottom: 0px solid #eeeeee;  
+									   border-bottom: 0px solid #eeeeee;
 								    }
 
 								    .share
 								    {
 								    	z-index:500;
-								    }								
-									
+								    }
+
 								  @media (max-width: 767px), screen and (max-device-width: 767px)
 									{
 										.wrapper-banner-top
@@ -1556,42 +1556,42 @@
 										.old-social {
 										    display: block;
 										}
-										
+
 										.agencies-about-share {
-										  padding: 20px 0 0px 0 !important;										
+										  padding: 20px 0 0px 0 !important;
 										}
-										
+
 										.agency-logo-wrapper{top:0px; width: 88%;}
 
 										.new-social
 										{
 											display: none;
-										}							
-										
+										}
+
 										.leftimage
 										{
 											margin-right: 80px !important;
 										}
-										
+
 									}
 
 								.about-description h1, h1
-								{ 
-								  font-size: 32px;	
+								{
+								  font-size: 32px;
 								  margin-bottom: 10px;
 								}
-								
+
 								.about-description h2, h2
-								{ 
-								  font-size: 28px;	
+								{
+								  font-size: 28px;
 								  color: #686868;
 								}
 
 								h3
-								{ 
-								  font-size: 24px;	
+								{
+								  font-size: 24px;
 								}
-								
+
 								  .btn, .btn:focus
 								  {
 								    position: relative;
@@ -1614,7 +1614,7 @@
 								  }
 
 								  @media only screen and (max-width: 500px)
-								  { 
+								  {
 								    .btn
 								    {
 								    width:25%;
@@ -1636,35 +1636,35 @@
 								  	.about-description h2, h2
 								  	{
 								  		line-height:30px;
-								  	}									
+								  	}
 								  }
-								  
+
 								  @media only screen and (min-width: 767px) and (max-width: 900px) {
 									  .longTxtMenu
 									{
 									  line-height: 25.5px !important;
-									} 
-									
+									}
+
 									.open .longTxtMenu
 									{
 									  line-height: 26px !important;
-									} 
-									
-								}								
-								
+									}
+
+								}
+
 								.share .facebook_custom {background: url("/assets/dsny/img/facebook20px.png") no-repeat; }
-									  
+
 								.share .twitter_custom {background: url("/assets/dsny/img/twitter20px.png") no-repeat; }
-									  
+
 								.share .googleplus_custom {background: url("/assets/dsny/img/google-plus20px.png") no-repeat; }
-									  
+
 								.share .tumblr_custom {background: url("/assets/dsny/img/tumblr20px.png") no-repeat; }
-									  
+
 								.share .email_custom {background: url("/assets/dsny/img/email20px.png") no-repeat; }
-									
-										
+
+
 							    </style>
-								
+
 								<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
 <link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
 <link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
@@ -1679,7 +1679,7 @@
 <link href="/assets/donate/css/bootstrap-glyphicon.css" rel="stylesheet">
 
 <style>
-	
+
 
     #msform fieldset
     {
@@ -1709,7 +1709,7 @@
         width:50%!important;
         /* margin: .5em 0 .2em!important; */
      }
-    
+
 	.txtValue{
 	    width: 30PX!important;
 		align-items: center;
@@ -1729,7 +1729,7 @@
 		height: 20px;
 		cursor:pointer;
 	}
-	
+
 	.ctglistdiv{
 		 line-height: 25px;
 	}
@@ -1740,7 +1740,7 @@
 	.tvSubCtg{
 	    line-height: 36px;
 	}
-	.sbClass { 
+	.sbClass {
 		background-color: #F5F5F5;
 		font-size:14px!important;
 	}
@@ -1752,13 +1752,13 @@
 		border-bottom: 1px solid #ccc;
 	}
 	#subcontainer {
- 
+
 		border: 0px!important;
 		font-size:14px!important;
 	}
 	.label{
 			background-color:transparent!important;
-			text-align: right;			 
+			text-align: right;
 			display: block;
 			line-height: 20px;
 			font-weight: bold!important;
@@ -1766,7 +1766,7 @@
 	.data_long{
 		background-color:transparent!important;
 		line-height: 20px;
-	} 
+	}
 	.ctgName div:after{
 		content: "_____________________________________________________________________";
 	}
@@ -1779,22 +1779,22 @@
 		padding:10px 0px;
 	}
 	.textbold{
-	    font-size: 14px;		 
+	    font-size: 14px;
 		color: #333;
 		font-weight: bold;
-		margin: 0 0 0 10px; 
+		margin: 0 0 0 10px;
 		float:left;
 		padding-right: 5px;
 	}
 	.addressText{
-	    font-size: 14px;		 
-		color: #333;		
-		margin: 0 0 0 10px; 
-	} 
+	    font-size: 14px;
+		color: #333;
+		margin: 0 0 0 10px;
+	}
 	.pure-u-md-3-24 {
-		text-align: right;			
-	}  
-	
+		text-align: right;
+	}
+
 	.step4{
 		display: inline-block;
 		background: url('/assets/dsny/images/content/webforms/step4-comfirm.png');
@@ -1821,26 +1821,26 @@
 	}
 	.errormsg{
 		color:red!important;
-	}	
+	}
 	img.imginchv:hover {
-		background: url('/assets/dsny/img/plus.png') no-repeat;    
+		background: url('/assets/dsny/img/plus.png') no-repeat;
 		background-position: center;
 		background-size: cover;
 	}
 	img.imgdechv:hover {
-		background: url('/assets/dsny/img/minus.png') no-repeat;    
+		background: url('/assets/dsny/img/minus.png') no-repeat;
 		background-position: center;
-		background-size: cover;   
+		background-size: cover;
 	}
 	@media (max-width: 767px){
 		.pure-u-sm-2-24 {
 			width: 8.3333%;
 			float: left;
-		} 
+		}
 		.pure-u-sm-19-24{
 			width: 60.1667%;
 			float: left;
-		} 
+		}
 		.pure-u-sm-18-24{
 			width: 60.1667%;
 			float: left;
@@ -1856,18 +1856,18 @@
 		.pure-u-md-3-24 {
 			width: 31%;
 			float: right;
-			text-align: right;			
-		} 
+			text-align: right;
+		}
 		.chkCls
 		{
-			width:80%!important;        
+			width:80%!important;
 		}
 		.pure-u-8-24, .pure-u-4-24, .pure-u-11-24 {
 			width: 100% !important;
-		} 
-		
+		}
+
 	}
-	
+
 	ul.leaders {
 	  padding: 0;
 	  font-size:14px!important;
@@ -1886,10 +1886,10 @@
 	ul.leaders li span:first-child:after { /* DASHES */
 	  content:        "";
 	  position:       absolute;
-	  bottom:         0.5em;        /* Set as you want */       
+	  bottom:         0.5em;        /* Set as you want */
 	  margin-left:    0.5em;        /* Keep same for the next span's left padding */
 	  width:          100%;
-	  border-bottom:  1px solid #c7c7c7; 
+	  border-bottom:  1px solid #c7c7c7;
 	}
 	ul.leaders li span + span {     /* PRICE */
 	  text-align:     right;
@@ -1898,15 +1898,15 @@
 	  padding-left:   0.5em;
 	  /* white-space: nowrap;       /* Uncomment if needed */
 	}
-	
-	.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {         
-        color: #e3e3e2 !important;        
+
+	.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {
+        color: #e3e3e2 !important;
     }
     .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
-        background-color: #eeeeee !important;   
+        background-color: #eeeeee !important;
     }
-	
-	
+
+
 	.agency-header, .main-header{
 		display: none !important
 	}
@@ -1916,48 +1916,48 @@
 		max-width: 85%;
 		margin-right: 10px;
 	}
-	
-	
+
+
 	#searchSR{
-			background-color:#000000; 
+			background-color:#000000;
 			padding: 0.1em 1em;
-			vertical-align: top; 
+			vertical-align: top;
 			height: 28px;
 			color: #fff;
 		}
-		
+
 	#searchSR:hover{
-		background-color: #454545; 
+		background-color: #454545;
 		padding: 0.1em 1em;
-		vertical-align: top; 
+		vertical-align: top;
 		height: 28px;
 		color: #fff;
 		/*border: 1px solid #000;*/
 	}
-	
-	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq, #btnCancel, #btnStep2, #closeSR{
-		background-color:#000000; 
+
+	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq, #btnCancel, #btnStep2, #closeSR, #confirmCancel{
+		background-color:#000000;
 		padding: 0.1em 1em;
-		vertical-align: top; 
+		vertical-align: top;
 		height: 28px;
 		color: #fff;
 	}
-	
+
 	#submitrq[disabled], #submitrq[disabled]:hover{
 	  background-color: #000000 !important;
 	}
-		
-	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover{
-		background-color:#454545 !important; 
+
+	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover, #confirmCancel:hover{
+		background-color:#454545 !important;
 		padding: 0.1em 1em;
-		vertical-align: top; 
+		vertical-align: top;
 		height: 28px;
 		color: #fff !important;
 		/*border: 1px solid #000;*/
 	}
-	
+
 	.page-breadcrumb, .socialPlugin, .agencies-about-share { display: none !important}
-	
+
 	.button {
   /*margin: 0 0 0 5px;*/
   text-indent: -9999px;
@@ -2029,7 +2029,7 @@ input[disabled], input[disabled]:hover{
 
 
 </style>
- 
+
 
 								<!--[if (gte IE 6)&(lte IE 8)]>        <script type="text/javascript" src="/assets/home/js/libs/selectivizr.js"></script>        <![endif]--><!--[if IE 8]>        <script type="text/javascript" src="/assets/home/js/libs/respond.min.js"></script>        <![endif]--><script src="/assets/home/js/libs/modernizr-2.6.2.min.js" type="text/javascript"></script><!--
 									ls:end[head-injection]
@@ -2039,16 +2039,16 @@ input[disabled], input[disabled]:hover{
 									ls:end[script]
 								-->
 								<script src="/assets/dsny/js/agencies/megamenu/modernizr.js"></script> <!-- Modernizr -->
-								<script type="text/javascript"> 
-									
-										if (location.href.indexOf("https://") == -1) { 
-											location.href = location.href.replace("http://", "https://"); 
-										} 
-									
+								<script type="text/javascript">
+
+										if (location.href.indexOf("https://") == -1) {
+											location.href = location.href.replace("http://", "https://");
+										}
+
 								</script>
 								</head>
-								
-								
+
+
 								<!--#include virtual="/assets/dsny/templates/mobilenav/mobilenavigation.shtml" -->
 <!--#include virtual="/assets/dsny/templates/level1menu/level1menu.shtml" -->
 
@@ -2059,10 +2059,10 @@ input[disabled], input[disabled]:hover{
 	--><div class="iw_component" id="1407802447993">
 
 	<div class="row" style="background-color:#FFF200">
-      
+
 			<div class="container">
 				<h1 class=""> <img src="/assets/dsny/img/311Logo.png" style="height:50px"> <span id="top-header">E-Waste pick up request</span></h1>
-				
+
 				<div class="pure-form">
 					<div style="display: inline">
 						<input type="text" id="search-input" placeholder="Search SR#" tabindex="1">
@@ -2071,8 +2071,8 @@ input[disabled], input[disabled]:hover{
 						<button type="button" id="searchSR" class="pure-button search-button" tabindex="2">Search</button>
 					</div>
 				</div>
-			</div>		
-		
+			</div>
+
     </div>
 
 				</div>
@@ -2093,20 +2093,20 @@ input[disabled], input[disabled]:hover{
 <div id="contentsection" class="about-main-image" style="margin-top: -15px">
     <div class="span6 about-description">
         <div id="container">
-            <div id="header">  
+            <div id="header">
                 <h1>
                     <span class="subtitle" id="ReqHeader" >Step 1 - General Info</span></h1>
             </div>
-            
+
             <!-- <form id="msform" class="pure-form" method="post" type="external" name="BWPRR Participation Request Form"    action="http://www.nyc.gov/doittcaptcha/validatecap"> -->
-			<form id="msform" class="pure-form" method="post"  type="external" name="E-Pick up Request Form" >  
-             
-            <input name="app_key" type="hidden" value="06F6620746865206F" /> 
+			<form id="msform" class="pure-form" method="post"  type="external" name="E-Pick up Request Form" >
+
+            <input name="app_key" type="hidden" value="06F6620746865206F" />
             <input name="GEOcity" id="GEOcity" type="hidden" />
             <input name="GEOzipcode" id="GEOzipcode" type="hidden" />
 			<input name="GEOCrossStreet" id="GEOCrossStreet" type="hidden" />
 			<input name="GEOPickupStreet" id="GEOPickupStreet" type="hidden" />
-			<input name="GEODistrict" id="GEODistrict" type="hidden" /> 
+			<input name="GEODistrict" id="GEODistrict" type="hidden" />
             <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
             <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
 
@@ -2117,7 +2117,7 @@ input[disabled], input[disabled]:hover{
                     <div id="subcontainer">
                         <div class="section">Enter your address</div>
                         <div class="table">
-							
+
                             <div class="pure-u-8-24">
                                 <label for="boro">
                                     Boro<span class="red">*</span></label>
@@ -2129,37 +2129,37 @@ input[disabled], input[disabled]:hover{
                                     <option value="4">Queens</option> -->
                                     <option value="5">Staten Island</option>
                                 </select>
-                            </div> 
+                            </div>
                             <div class="pure-u-4-24">
                                 <label for="houseNumber">
                                     BLDG#<span class="red">*</span></label>
                                 <input id="houseNumber" name="houseNumber" tabindex="4" type="text" required maxlength="10" />
                             </div>
-                            <div class="pure-u-9-24"> 
+                            <div class="pure-u-9-24">
                                 <label for="street">
                                     Street<span class="red">*</span></label>
                                 <input id="street" name="streetName" tabindex="5" type="text" required maxlength="50" />
                             </div>
 							<div style="display: inline;">
-							
+
 								<button id="nextstep2" class="pure-button next" style="margin-top: 28px; float: right" tabindex="6">
 									Verify</button>
 							</div>
-                            
+
                             <br />
                             <div id="results" class="pure-u-sm-24-24">
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
             </fieldset>
-			
-			<div id="Step2div" style="display:none" >  
-                <!--<p><div id="stepmsg" > 
+
+			<div id="Step2div" style="display:none" >
+                <!--<p><div id="stepmsg" >
                     Your address and recycling day have been verified as:
 				 </div></p>-->
-				<div class="ctgAddressInfo"> 
+				<div class="ctgAddressInfo">
 					<div class="pure-u-1 pure-u-md-1-3-b">
 							<div class="textbold"> Address: </div> <div id="rdAddress" class="addressText" > </div>
 					</div>
@@ -2169,14 +2169,14 @@ input[disabled], input[disabled]:hover{
 					<div class="pure-u-1 pure-u-md-1-3-b" id="currentAppDate" style="display:none">
 							<div class="textbold"> Current Appointment Date: </div>  <div id="currentAppDateVal" class="addressText"> </div>
 					</div>
-				</div>   
-            </div> 
-			
-			<div id="header2">  
+				</div>
+            </div>
+
+			<div id="header2">
                 <h1>
                     <span class="subtitle">Step 2 - Specific Info</span></h1>
             </div>
-			
+
             <fieldset class="fieldset2">
                 <div class="pure-g">
                     <div id="subcontainer">
@@ -2199,7 +2199,7 @@ input[disabled], input[disabled]:hover{
                                     <input type='text' onkeydown="return false" id="slapptdate" disabled tabindex="15" maxlength="15" />
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                                     </span>
-                                </div> 
+                                </div>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3-b">
                                 <label for="ELEC-CATEGORY">
@@ -2207,7 +2207,7 @@ input[disabled], input[disabled]:hover{
 							</div>
 							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
 							</div>
-							
+
 					   </div>
                         <br />
                         <div class="section">Contact information </div>
@@ -2246,38 +2246,38 @@ input[disabled], input[disabled]:hover{
                         <br />
                     </div>
                 </div>
-             	
+
 				<div>
-						
+
 						<button id="nextstep3" class="pure-button next" style="margin-top: 28px; float: right" tabindex="48">
 							Next</button>
 				</div>
             </fieldset>
-			<div id="header3" style="display: none">  
+			<div id="header3" style="display: none">
                 <h1>
                     <span class="subtitle">Step 3 - Submit</span></h1>
             </div>
             <fieldset class="fieldset3">
-                <div class="pure-g"> 
-                    <div id="subcontainer" class="sbClass">  
+                <div class="pure-g">
+                    <div id="subcontainer" class="sbClass">
                         <div id="step3section" class="section">Review and Submit</div>
-						
+
 						<div id="step3buttons" class="pure-u-1 pure-u-md-24-24" style="display:none">
-							
+
 							<div class="pure-u-1-3">
-								<button id="cancelSR" class="pure-button next" style="margin-top: 8px; margin-left: 10px; float: left" tabindex="49">
+				              <button id="cancelSR" class="pure-button next" data-toggle="modal" data-target="#cancelModal" style="margin-top: 8px; margin-left: 10px; float: left" tabindex="49">
 									Cancel Request</button>
 							</div>
-							
+
 							<div class="pure-u-1-3">
 								<div id="disSRNo" style="text-align: center; margin-top: 10px"></div>
 							</div>
-							
+
 							<div style="display: inline;" class="pure-u-1-3">
 								<button id="rescheduleSR" class="pure-button next" style="margin-top: 8px; margin-right: 10px; float: right" tabindex="50">
 									Reschedule</button>
 							</div>
-						
+
 						</div>
                         <div class="table">
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
@@ -2290,87 +2290,87 @@ input[disabled], input[disabled]:hover{
                                 <div class="label">Cross Street :</div>
                                 <div id="disCrsStrt" class="data_long"></div>
                             </div>
-							<div class="pure-u-1 pure-u-md-24-24">							
-                            </div>	 
+							<div class="pure-u-1 pure-u-md-24-24">
+                            </div>
                             <div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Pick Up Location :</div>
                                 <div id="disPckLocation" class="data_long">
                                 </div>
-                            </div>  
+                            </div>
                             <div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Appointment Date :</div>
                                 <div id="disApptDate" class="data_long">
                                 </div>
                             </div>
 							<br>
-							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
-							
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>
+
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                               <!--   <div id="displayItem" class="ctglistdiv"></div>  -->
 								<ul id="displayItem" class=leaders>
-								
+
 								</ul>
                             </div>
-							<br> 
-							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
+							<br>
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">
                             </div>
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">First Name :</div>
                                 <div id="disfname" class="data_long">
                                 </div>
-                            </div>   
+                            </div>
                             <div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Last Name :</div>
                                 <div id="dislname" class="data_long">
-                                </div> 
-                            </div>  
+                                </div>
+                            </div>
 							<div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Phone :</div>
                                 <div id="disphone" class="data_long">
                                 </div>
-                            </div>  							
+                            </div>
                             <div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Email :</div>
-                                <div id="disemail" class="data_long"> 
-                                </div> 
-                            </div>                           
+                                <div id="disemail" class="data_long">
+                                </div>
+                            </div>
                         </div>
 						<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
-							
+
 							<div class="pure-u-1-3">
 									&nbsp;
 							</div>
-							
+
 							<div class="pure-u-1-3" style="text-align:center">
 									<button id="closeSR" class="pure-button next" style="margin-top: 8px; margin-right: 10px; margin-bottom: 8px;" tabindex="51">
 									Close</button>
 							</div>
-							
+
 							<div style="display: inline;" class="pure-u-1-3">
 									&nbsp;
 							</div>
-						
+
 						</div>
                         <br />
                     </div>
-                
-					
+
+
 				</div>
                 <br />
             </fieldset>
             <div id="fieldset4" class="fieldset4">
-			 <div class="pure-u-1 pure-u-md-1-3-b"> 
+			 <div class="pure-u-1 pure-u-md-1-3-b">
 					<div class="pure-u-md-11-24"> &nbsp; </div>
-					<div class="pure-u-md-12-24" style="text-align:right;"> 
+					<div class="pure-u-md-12-24" style="text-align:right;">
 						<input type="checkbox" id="chkTC" required />  I certify that this request is not for a commercial business.<span class="red">*</span>
 					</div>
 					<br>
-				 </div> 
+				 </div>
 				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>
-                <div class="row"> 
-                    <!-- 
+                <div class="row">
+                    <!--
 					<div class="container">
                         <div class="span4">
                             &nbsp;</div>
@@ -2380,33 +2380,33 @@ input[disabled], input[disabled]:hover{
                         <div class="span6">
                         </div>
                     </div>
-					
+
 					<div class="container" style="text-align: center; text-align: -webkit-center;">
                             <div class="g-captcha" id="rcaptcha">
                                 <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6Ldi8iETAAAAADBF2c6b2b9qBUGe3YDJp5Gp9MTq"></script>
                                 <textarea id="recaptcha_challenge_field" name="recaptcha_challenge_field" rows="3" cols="40" style="display: none"></textarea>
                                 <input type="hidden" id="recaptcha_response_field" name="recaptcha_response_field" value="manual_challenge" />
                             </div>
-                            <div id="divInvalidMessage" style="color: red; font-size: 14px; height: 15px"></div>  
+                            <div id="divInvalidMessage" style="color: red; font-size: 14px; height: 15px"></div>
                         </div> -->
-                </div> 
-				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>				
-               
-				<div> 
+                </div>
+				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>
+
+				<div>
 						<!--<button id="previousstep2" class="pure-button next">
-                        &nbsp;<strong>Previous</strong>&nbsp;</button>-->						
+                        &nbsp;<strong>Previous</strong>&nbsp;</button>-->
 						<button id="submitrq" class="pure-button next" style="margin-top: 28px; float: right">
 							Submit</button>
 				</div>
             </div>
 			 <fieldset class="fieldset5" style="display:none;">
-				<div class="pure-g"> 
+				<div class="pure-g">
                     <div id="subcontainer"   style="text-align:center">
 									Thank you for submitting your E-Waste pick-up request. <br>The Service Request number is <br/><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/> Use this number when you check the status of this request. <br>
 The resident will receive a confirmation email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request please call 311.  <br> <br> <br>
 <strong> Where to leave your E-Waste items?  <br>
 Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB. </strong>
-						 					
+
 					</div>
 					<br>
 					<br>
@@ -2417,13 +2417,13 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 				</div>
 			 </fieldset>
 			 <fieldset class="fieldset6" style="display:none;">
-				<div class="pure-g">  
-                    <div id="subcontainer" class="errormsg" style="text-align:center">  
-						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
-						
+				<div class="pure-g">
+                    <div id="subcontainer" class="errormsg" style="text-align:center">
+                        Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+
 					</div>
 					<br>
-					<br> 
+					<br>
 					<div id="buttons">
                     <button id="btnCancel" class="pure-button next">
                         &nbsp;<strong>Cancel</strong>&nbsp;</button>
@@ -2432,6 +2432,50 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
                 </div>
 				</div>
 			 </fieldset>
+            	 <fieldset class="fieldset7" style="display:none;">
+				<div class="pure-g">
+                    <div id="subcontainer" class="errormsg" style="text-align:center">
+                        A request already exists at the current address on the same date <div id="addrDate"> </div> Please place your items at the designated area or choose a different date to schedule a separate appointment.
+
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnCancel" class="pure-button next">
+                        &nbsp;<strong>Cancel</strong>&nbsp;</button>
+                    <button id="btnStep2" class="pure-button next">
+                        &nbsp;<strong>Reschedule</strong>&nbsp;</button>
+                </div>
+				</div>
+			 </fieldset>
+                <!--vainika -->
+                <br>
+				<br>
+                <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                             <div class="modal-header">
+                                  <p class="modal-title" style="font-weight: bold">Reason for Cancel</p>
+                             </div>
+                             <div class="modal-body js-modalBody">
+															 <select id="ddlReasonCancel" required type="select-one" tabindex="1">
+																	<option selected="selected" value="">Select a reason</option>
+																	<option value="1">Item picked up by others</option>
+																	<option value="2">Decided to keep</option>
+																	<option value="3">Donated</option>
+																	<option value="4">Other</option>
+															</select>
+                                <textarea id="txtReasonCancel" disabled class="form-control" rows="4" cols="50" id="cancelReason"></textarea>
+                            </div>
+                        <div class="modal-footer" style="background-color:white">
+                            <div class="pure-u-1-3">
+				            <button id="reasonCancel" class="pure-button next" data-toggle="modal" data-target="#confirmModal" style="margin-top: 8px; margin-right: 10px; margin-bottom: 8px;">
+									Confirm</button>
+							</div>
+                        </div>
+                        </div>
+                    </div>
+                 </div>
             </form>
         </div>
     </div>
@@ -2449,12 +2493,12 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 <script type="text/javascript">
 //var APIUrl = 'http://msdwvw-dsndny01.csc.nycnet';
  //var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
- 
+
 
   function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
     var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
     var centerTop = parseInt(((window.screen.availHeight - windowHeight) / 2) - windowOuterHeight);
- 
+
     var misc_features;
     if (features) {
       misc_features = ', ' + features;
@@ -2471,13 +2515,13 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 
 function loadCategories()
    {
-   jQuery.support.cors = true; 
+   jQuery.support.cors = true;
 	var arrCtg = []
 	var ctgcheck=$.ajax({
 			async: false,
 			url: APIUrl + '/ePickupsAPI/api/PickupRequest/GetItemCategories',
 			type: "GET",
-			dataType: 'json',		
+			dataType: 'json',
 			crossDomain: true,
 			success: function (json) {
 				if (json != undefined){
@@ -2487,7 +2531,7 @@ function loadCategories()
 						<div class="pure-u-md-1-24 pure-u-sm-1-24">\
 							<input type="checkbox" disabled id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
 						</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category
-						
+
 						if (item.CategoryId == 1){
 							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(350,350,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=1\',\'demo_win\');"><div class="helpicon"></div></a>'
 						}
@@ -2503,10 +2547,10 @@ function loadCategories()
 						else if (item.CategoryId == 15){
 							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(300,300,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=15\',\'demo_win\');"><div class="helpicon"></div></a>'
 						}
-						
-						
+
+
 						ctgStr +='</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'
-						
+
 						if (item.hasSubCategory >= 1){
 							ctgStr +='<div class="inchide button" style="width:20px;" > </div>\
 								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" onkeydown="return false" value="0">\
@@ -2517,20 +2561,20 @@ function loadCategories()
 							ctgStr +='<div class="dec button"></div>\
 								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" value="0">\
 								<div class="inc button"></div>'
-						} 
-						ctgStr += '</div> '				
-						if (item.hasSubCategory  >= 1){		
+						}
+						ctgStr += '</div> '
+						if (item.hasSubCategory  >= 1){
 
 							arrCtg.push(item.CategoryId);
-							
-							
-						} 
-						ctgStr += '</div>'  					
+
+
+						}
+						ctgStr += '</div>'
 				});
-				
-					
+
+
 				$('#ElecCtg').append(ctgStr);
-				
+
 				$('#msform input[type="checkbox"]').tooltipster({
 					trigger: 'custom',
 					onlyOne: true,
@@ -2540,16 +2584,16 @@ function loadCategories()
 					trigger: 'custom',
 					onlyOne: true,
 					position: 'bottom'
-				});   
-						
+				});
+
 				}
 			}
         });
-		
-		 
-		
-		 
-		$.when(ctgcheck).done(function () { 
+
+
+
+
+		$.when(ctgcheck).done(function () {
 			$.each(arrCtg, function(key, item) {
 			var CategoryID = item
 			var SubCategoryURL = APIUrl + '/ePickupsAPI/api/PickupRequest//GetItemSubCategories?CategoryID='+ CategoryID ;
@@ -2572,12 +2616,12 @@ function loadCategories()
 									</div>';
 					});
 					SubctgStr += '</div>';
-					
-					//ctgStr += SubctgStr;									
+
+					//ctgStr += SubctgStr;
 					$('#ElecCtg').find('#'+item).append(SubctgStr);
-					
-						
-					
+
+
+
 				$('#msform input[type="checkbox"]').tooltipster({
 					trigger: 'custom',
 					onlyOne: true,
@@ -2587,30 +2631,30 @@ function loadCategories()
 					trigger: 'custom',
 					onlyOne: true,
 					position: 'bottom'
-				});   
-					
+				});
+
 					}
 				}
 			});
-						
-						
+
+
 			});
-		
+
 		});
 	}
 
 var reqId = 0;
 	//jQuery.support.cors = true;
     $(document).ready(function () {
-	  
+
 		loadCategories();
-				
+
 	    //$("#txtboxToFilter").keydown(
 		$(document).on("keydown","input:text.txtValue",function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
              // Allow: Ctrl+A, Command+A
-            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
              // Allow: home, end, left, right, down, up
             (e.keyCode >= 35 && e.keyCode <= 40)) {
                  // let it happen, don't do anything
@@ -2620,89 +2664,89 @@ var reqId = 0;
         if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
             e.preventDefault();
         }
-		}); 
-		
-	   var sum = 0 ;   
-	   //  Textbox change value 
+		});
+
+	   var sum = 0 ;
+	   //  Textbox change value
 	   $(document).on("change","input:text.txtValue", function() {
-	   	   
+
 		  var $button = $(this);
 		  var TextValue = parseFloat($button.val());
 		  var CatID = $button.parent()[0].id;
 		  var SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;
-		  
-		  var TotalCategory =  0
-				
+
+		  var TotalCategory =  0;
+
 			$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(){
 				TotalCategory += parseFloat(this.value);
-			});	
-		
-		  
+			});
+
+
 			if(($button[0].name == 'tvSubCat'+CatID ) )
-			  {   
+			  {
 					TotalCategory += TextValue;
 					$('#Count'+CatID).tooltipster('hide');
 					var TotalSubCategory = 0;
 					//var SubCtgTotalValue = parseFloat(SubCtgSum + TextValue)   // Total of individual category.
 					var SubCtgTotalValue = 0;
-					
+
 					// Total of individual TV category
 					$button.parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
 						SubCtgTotalValue += parseFloat(this.value);
 					});
-					
+
 					// Total of both TV category
 					$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
 						TotalSubCategory += parseFloat(this.value);
-					}); 
-					 
-			  
+					});
+
+
 					if ( TotalSubCategory <= 5 && TotalCategory <= 20){
-					
+
 						$('#Count'+CatID).val(SubCtgTotalValue);
-						$('#ctgsum'+CatID).val(SubCtgTotalValue); 
+						$('#ctgsum'+CatID).val(SubCtgTotalValue);
 						$button.val(TextValue);
 					}
 					else if (TotalSubCategory <= 0){
 						$('#Count'+CatID).val(1);
-						$('#ctgsum'+CatID).val(1); 
-						$button.val(1);						
+						$('#ctgsum'+CatID).val(1);
+						$button.val(1);
 					}
 					else if (TotalSubCategory >= 5 && TotalCategory <= 20) {
-						$button.val(0);	
+						$button.val(0);
 						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
-						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue); 
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
+						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue);
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
 						$('#Count'+CatID).tooltipster('show');
-									
+
 					}
-					else if (TotalCategory >= 20) {						
+					else if (TotalCategory >= 20) {
 						$button.parent().find("input").val(0)
 						$('#Count'+CatID).val(SubCtgSum);
-						$('#ctgsum'+CatID).val(SubCtgSum); 	
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
-						$('#Count'+CatID).tooltipster('show'); 					
-					}				   				  				
+						$('#ctgsum'+CatID).val(SubCtgSum);
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+						$('#Count'+CatID).tooltipster('show');
+					}
 			  }
 			  else if (($button[0].name == 'elecCtgCount')  )
 			  {
-			   $button.tooltipster('update', "You can not enter more than 20 quantity for this request.");
+			   $button.tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				$button.tooltipster('hide');
-				
+
 				if  (TotalCategory <= 20)
-					$button.val(TextValue); 
+					$button.val(TextValue);
 				else{
-					
+
 					$button.tooltipster('show');
-					$button.val(0); 
+					$button.val(0);
 					return false;
-					//$button.val(1); 
+					//$button.val(1);
 				}
-			  }	  
+			  }
 		});
-	   
-	   
-	   
+
+
+
 	   // Plus and minus quantity.
 	   $(document).on("click","div.button", function() {
 		  var $button = $(this);
@@ -2718,159 +2762,159 @@ var reqId = 0;
 				if (oldValue > 1) {
 					var newVal = parseFloat(oldValue) - 1;
 				   } else {
-				   newVal = 0;				  		 
+				   newVal = 0;
 				}
 			  }
 				var TotalCategory =  0
-			
+
 				$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(index, element){
 					TotalCategory += parseFloat(element.value);
 				});
-			
-				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You can not enter more than 20 quantity for this request.");
+
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter more than 20 items (including televisions).");
 				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
-			
+
 				TotalCategory = parseFloat((TotalCategory + newVal) - oldValue );
-			  
-				SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;			  
+
+				SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;
 			  if(($button.parent().find("input")[0].name == 'tvSubCat'+CatID ))
-			  {   
-					$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
-					$('#Count'+CatID).tooltipster('hide');					
+			  {
+					$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
+					$('#Count'+CatID).tooltipster('hide');
 					//var SubCtgTotalValue = parseFloat((SubCtgSum + newVal) - oldValue ) // Total of individual category.
 					var SubCtgTotalValue = 0;
-					
+
 					// Total of individual TV category
 					$button.parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
 						SubCtgTotalValue += parseFloat(this.value);
 					});
-					
-					SubCtgTotalValue = parseFloat((SubCtgTotalValue + newVal) - oldValue );					
+
+					SubCtgTotalValue = parseFloat((SubCtgTotalValue + newVal) - oldValue );
 					// Total both TV category
-					var TotalValue = 0; 
+					var TotalValue = 0;
 					// $button.parent().parent().parent().parent().find('input[name^="tvSubCat"]')
 					$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(index, element){
 						TotalValue += parseFloat(element.value);
 					});
-					
-					TotalValue = parseFloat((TotalValue + newVal) - oldValue ); 
-					
-					if ( TotalValue <= 5 && TotalCategory <= 20){						
+
+					TotalValue = parseFloat((TotalValue + newVal) - oldValue );
+
+					if ( TotalValue <= 5 && TotalCategory <= 20){
 						$('#Count'+CatID).val(SubCtgTotalValue);
-						$('#ctgsum'+CatID).val(SubCtgTotalValue); 
-						$button.parent().find("input").val(newVal);
-					}
-					else if (TotalValue <= 0){					
-						$('#Count'+CatID).val(1);
-						$('#ctgsum'+CatID).val(1); 
-						$button.parent().find("input").val(1);			
-					}
-					else if (TotalValue >= 5 && TotalCategory <= 20) {
-						$button.parent().find("input").val(oldValue)
-						$('#Count'+CatID).val(SubCtgSum); 
-						$('#ctgsum'+CatID).val(SubCtgSum); 
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");						
-						$('#Count'+CatID).tooltipster('show'); 
-						//$button.val(0);
-					}  
-					else if (TotalCategory >= 20) {
-						
-						$button.parent().find("input").val(oldValue)
-						$('#Count'+CatID).val(SubCtgSum);
-						$('#ctgsum'+CatID).val(SubCtgSum); 	
-						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
-						$('#Count'+CatID).tooltipster('show'); 					
-					}					
-					
-					/* *****************
-					if ( TotalValue <= 5){
-						
-						$('#Count'+CatID).val(TotalValue);
-						$('#ctgsum'+CatID).val(TotalValue); 
+						$('#ctgsum'+CatID).val(SubCtgTotalValue);
 						$button.parent().find("input").val(newVal);
 					}
 					else if (TotalValue <= 0){
-					
 						$('#Count'+CatID).val(1);
-						$('#ctgsum'+CatID).val(1); 
+						$('#ctgsum'+CatID).val(1);
 						$button.parent().find("input").val(1);
-					
+					}
+					else if (TotalValue >= 5 && TotalCategory <= 20) {
+						$button.parent().find("input").val(oldValue)
+						$('#Count'+CatID).val(SubCtgSum);
+						$('#ctgsum'+CatID).val(SubCtgSum);
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
+						$('#Count'+CatID).tooltipster('show');
+						//$button.val(0);
+					}
+					else if (TotalCategory >= 20) {
+
+						$button.parent().find("input").val(oldValue)
+						$('#Count'+CatID).val(SubCtgSum);
+						$('#ctgsum'+CatID).val(SubCtgSum);
+						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+						$('#Count'+CatID).tooltipster('show');
+					}
+
+					/* *****************
+					if ( TotalValue <= 5){
+
+						$('#Count'+CatID).val(TotalValue);
+						$('#ctgsum'+CatID).val(TotalValue);
+						$button.parent().find("input").val(newVal);
+					}
+					else if (TotalValue <= 0){
+
+						$('#Count'+CatID).val(1);
+						$('#ctgsum'+CatID).val(1);
+						$button.parent().find("input").val(1);
+
 					}
 					else{
-					
+
 						$('#Count'+CatID).val(SubCtgSum);
-						$('#ctgsum'+CatID).val(SubCtgSum); 						
+						$('#ctgsum'+CatID).val(SubCtgSum);
 						$('#Count'+CatID).tooltipster('show');
 						$button.val(0);
-					
+
 					} ******************  */
-			  
-					
+
+
 				    /*SubCtgSum = 0 ;
 				  //$('input[name^="tvSubCat'+CatID+'"]').each(function(){
 					$button.parent().parent().parent().find('input[name^="tvSubCat'+CatID+'"]').each(function(){
 						SubCtgSum += parseFloat(this.value);
 					});
-				
-					
 
-				
+
+
+
 					if (SubCtgSum == 0){
 						SubCtgSum = 1;
 						$button.parent().find("input").val(1);
 					}*/
-					
-					  
+
+
 			  }
 			  else if (($button.parent().find("input")[0].name == 'elecCtgCount') )
-			  {  
-			  
+			  {
+
 				if ( TotalCategory <= 20){
-					$button.parent().find("input[name=elecCtgCount]").val(newVal);				
+					$button.parent().find("input[name=elecCtgCount]").val(newVal);
 				}
 				else{
 					$button.parent().find("input[name=elecCtgCount]").val(oldValue);
 					$button.parent().find("input[name=elecCtgCount]").tooltipster('show');
 					return false;
 				}
-			  
+
 			  /*
 				$button.parent().find("input").tooltipster('hide');
 				if (parseFloat(newVal) <= 20){
 					$button.parent().find("input").val(newVal);
-					
+
 				}
 				else{
-					
+
 					$button.parent().find("input").tooltipster('update', "You can not enter more than 20 quantity for this category.");
 					$button.parent().find("input").tooltipster('show');
 					return false;
-				
+
 				}
 				*/
-				 
+
 			  }
 		  }
 		});
-			   
+
 		$(document).on('change', '.pure-u-md-1-24 input[type=checkbox]', function() {
 			//alert('clicked');
 			//var divShow =  $(this).parent().parent().find('.pure-u-md-3-24')[0].name;
-		
-			
+
+
 			if (this.checked)	 {
 				//$(this).parent().parent().find('.pure-u-md-3-24').show();
 				$(this).parent().parent().find('input[type=text]').removeAttr("disabled");
 				$(this).parent().parent().find('input[type=text]').addClass('disableText');
 				//$(this).parent().parent().find('img.divdecimage').addClass('imgdechv');
-				//$(this).parent().parent().find('img.divimage').addClass('imginchv');  
+				//$(this).parent().parent().find('img.divimage').addClass('imginchv');
 				$(this).parent().parent().find('.dec').addClass('decpointer');
-				$(this).parent().parent().find('.inc').addClass('incpointer');  
-				 				
+				$(this).parent().parent().find('.inc').addClass('incpointer');
+
 				$(this).parent().parent().find('input[type=text]').val(0);
-				//if ($(this).parent().parent().hasClass('tvSubCtg')) { 
-				if ($(this).parent().parent().find('#tvSubCategory').length > 0) {  
-				 //if ($(this).parent().parent().has('#tvSubCategory') ) {	
+				//if ($(this).parent().parent().hasClass('tvSubCtg')) {
+				if ($(this).parent().parent().find('#tvSubCategory').length > 0) {
+				 //if ($(this).parent().parent().has('#tvSubCategory') ) {
 					$(this).parent().parent().find('#tvSubCategory').show();
 					$(this).parent().parent().find('input[type=text]').val(0);
 					$(this).parent().parent().find('input[type=hidden]').val(0);
@@ -2880,25 +2924,25 @@ var reqId = 0;
 					//$(firstchk).removeAttr("aria-invalid");
 					//$(firstchk).removeAttr("aria-required");
 					//$(firstchk).removeAttr("required");
-			 }  
+			 }
 			 else {
 				$(this).parent().parent().find('input[type=text]').attr("disabled","disabled");
 				$(this).parent().parent().find('input[type=text]').removeClass("disableText");
 				//$(this).parent().parent().find('img.divdecimage').removeClass('imgdechv');
-				//$(this).parent().parent().find('img.divimage').removeClass('imginchv');		
+				//$(this).parent().parent().find('img.divimage').removeClass('imginchv');
 				$(this).parent().parent().find('.dec').removeClass('decpointer');
-				$(this).parent().parent().find('.inc').removeClass('incpointer');  
-				$(this).parent().parent().find('input[type=text]').val(0);				
+				$(this).parent().parent().find('.inc').removeClass('incpointer');
+				$(this).parent().parent().find('input[type=text]').val(0);
 				//$(this).parent().parent().find('.pure-u-md-3-24').hide();
 				//$(this).parent().parent().find('input[name=elecCtgCount]').val(0);
 				 if ($(this).parent().parent().find('#tvSubCategory').length > 0 ) {
 					$(this).parent().parent().find('#tvSubCategory').find('input[name=tvSubCat]').val(0);
-					$(this).parent().parent().find('input[type=hidden]').val(0); 
+					$(this).parent().parent().find('input[type=hidden]').val(0);
 					//sum = 0;
 					$(this).parent().parent().find('#tvSubCategory').hide();
 				}
 			 }
-	 }); 
+	 });
 	   // $('.pure-u-md-1-24 checkbox').on("click", function(){
 		//	 if (this.checked)
 		//	 {
@@ -2908,7 +2952,7 @@ var reqId = 0;
 		//	 {
 		//		$divShow.hide();
 		//	 }
-		//});  
+		//});
 	    $('#tvchkbox').change(function(e){
 			if (this.checked){
 				$('#tvSubCategory').show();
@@ -2917,7 +2961,7 @@ var reqId = 0;
 				$('#tvSubCategory').hide();
 			}
 		});
-		
+
 		$('#msform input[type="checkbox"]').tooltipster({
             trigger: 'custom',
             onlyOne: true,
@@ -2957,20 +3001,20 @@ var reqId = 0;
 		$('#datetimepicker1').bind('cut copy paste', function (e) {
 			e.preventDefault();
 		});
-	   
+
 		//Disable mouse right click
 		$("#datetimepicker1").on("contextmenu",function(e){
 			return false;
 		});
     });
-	
+
 	$(document).click(function() {
 		if($(event.target).closest('.inc').length > 0 || $(event.target).closest('.dec').length > 0 || $(event.target).closest('input[name=tvSubCat]').length > 0  ||  $(event.target).closest('input[name=elecCtgCount]').length > 0 ) {
 			return false;
 		}
-		  
-		$("input[name=elecCtgCount]").tooltipster('hide');  
-		$("input[name=tvSubCat]").tooltipster('hide');  
+
+		$("input[name=elecCtgCount]").tooltipster('hide');
+		$("input[name=tvSubCat]").tooltipster('hide');
 	});
 </script>
 <script type="text/javascript">
@@ -2989,7 +3033,7 @@ var reqId = 0;
         $('#msform select').removeAttr("aria-invalid");
         $('#msform textarea').attr("class", "tooltipstered");
         $('#msform textarea').removeAttr("aria-invalid");
-    }); 
+    });
     var validator;
     function validateForm() {
         validator = $('#msform').validate({
@@ -3050,21 +3094,21 @@ var reqId = 0;
 		var disableDT = [];
 		var minDate; //moment()//.format("MM-DD-YYYY")
         var MaxDate; //moment().add(21, 'days');
-        //MaxDate = MaxDate.format("MM-DD-YYYY"); 
-		
+        //MaxDate = MaxDate.format("MM-DD-YYYY");
+
 		if($('#datetimepicker1').data('DateTimePicker')){
 			$('#datetimepicker1').data('DateTimePicker').destroy();
 		}
-		
-		$('#msform input[type="text"]').removeAttr("required");  
+
+		$('#msform input[type="text"]').removeAttr("required");
         $('#msform select').removeAttr("required");
         $('#msform textarea').removeAttr("required");
         $('#msform input[type="checkbox"]').removeAttr("required");
 		$('#boro').attr("required",'true');
 		$('#houseNumber').attr("required",'true');
 		$('#street').attr("required",'true');
-		
-		
+
+
         if (validateForm()) {
             var retCode = false;
             current_fs = $(this).parent().parent();
@@ -3075,18 +3119,18 @@ var reqId = 0;
                     retCode = true;
                 }
                 if (retCode == true && ($('#results').text().length == 0)) {
-				
+
 					//$('#ReqHeader').text('Step 2 - Specific Info');
-					
+
                     var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
 					//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
 					$('#rdAddress').html(fullAddress);
 					$('#rdStreet').html($("#GEOCrossStreet").val());
 					$('#Step2div').show();
-					
+
 					$('#lstPickUpLocation').find('option:gt(0)').remove();
-					$('#lstPickUpLocation').append($("#GEOPickupStreet").val()); 
-					
+					$('#lstPickUpLocation').append($("#GEOPickupStreet").val());
+
 					$('#slapptdate').removeAttr("disabled");
 					$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
 					$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
@@ -3094,19 +3138,19 @@ var reqId = 0;
 					$('#CONTACT-1-EMAIL').removeAttr("disabled");
 					$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
 					$('#msform input[type="checkbox"]').removeAttr("disabled");
-					
+
 					$('select').removeAttr("disabled");
-					
+
 					$('#slapptdate').attr("required",'true');
 					$('#CONTACT-1-FIRST-NAME').attr("required",'true');
 					$('#CONTACT-1-LAST-NAME').attr("required",'true');
 					$('#CONTACT-1-PHONE').attr("required",'true');
 					$('#CONTACT-1-EMAIL').attr("required",'true');
 					$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
-					
-					
+
+
 					$('select').attr("required",'true');
-					
+
 						$('#msform input[type="checkbox"]').tooltipster({
 							trigger: 'custom',
 							onlyOne: true,
@@ -3122,10 +3166,10 @@ var reqId = 0;
 							onlyOne: true,
 							position: 'bottom'
 						});
-					
+
                     //$("#EVENT-LOCATION").val(fullAddress);
 					jQuery.support.cors = true;
-					var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+					var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true';
 					$.ajax({
 						async:false,
 						url: getDateUrl,
@@ -3136,18 +3180,18 @@ var reqId = 0;
 							if (data != undefined)
                             {
                                 //disableDT = data ;
-								$.each(data, function(key, item) {                                     
-                                    //var d=moment(item);//.format("MM-DD-YYYY"); 
-                                    //disableDT.push(d); 
-									
-									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
-									//var d=new Date(item); 
-									//d.setDate(d.getDate()+ 1); 
-									disableDT.push(d); 
-									minDate = item.StartDate;									
+								$.each(data, function(key, item) {
+                                    //var d=moment(item);//.format("MM-DD-YYYY");
+                                    //disableDT.push(d);
+
+									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY");
+									//var d=new Date(item);
+									//d.setDate(d.getDate()+ 1);
+									disableDT.push(d);
+									minDate = item.StartDate;
 									MaxDate = item.EndDate;
-                                });  
-                                
+                                });
+
                                 $('#datetimepicker1').datetimepicker({
                                     debug: true,
 									format: 'MM-DD-YYYY',
@@ -3156,10 +3200,10 @@ var reqId = 0;
                                     widgetPositioning: {
                                         horizontal: 'auto',
                                         vertical: 'bottom'
-                                    },                                        
+                                    },
                                     //daysOfWeekDisabled: [0,6],
-                                    disabledDates: disableDT, 
-									keyBinds: { 
+                                    disabledDates: disableDT,
+									keyBinds: {
 											up: null,
 											down: function (widget) {
 														if (!widget) {
@@ -3171,11 +3215,11 @@ var reqId = 0;
 											right: null,
 											t : null,
 											'delete' : null
-										} 
+										}
                                 });
 							}
 						}
-					});  
+					});
 
                     //next_fs.show();
                     //current_fs.hide();
@@ -3190,7 +3234,7 @@ var reqId = 0;
             return false;
         }
     });
-	
+
 	$('#datetimepicker1').on('dp.show', function (e) {
 		$('#datetimepicker1').not(e.target).each(function (index) { $(this).data('DateTimePicker').hide();     });
 	});
@@ -3205,31 +3249,31 @@ var reqId = 0;
 			}
 		}
 	});
-	
+
 	$(document).click(function(e){
 				var target = $(e.target);
 				if(target.parents('.bootstrap-datetimepicker-widget').length < 1 && !target.hasClass('datetimepickerInput') && !target.hasClass('datepickerIcon') && !target.hasClass('clockpickerIcon')){
 					if($('.bootstrap-datetimepicker-widget').length > 0){
-						
+
 						$('.datetimepickerInput').blur();
 						$('.bootstrap-datetimepicker-widget').focus();
 						$('.bootstrap-datetimepicker-widget').css('cursor', 'pointer');
 					}
 				}
 	});
-	
+
     $("#previousstep1").click(function () {
         //$('#msform input[type="text"]').attr("class", "tooltipstered");
         //$('#msform select').attr("class", "tooltipstered");
-        //$('#msform textarea').attr("class", "tooltipstered");  
-        $('#msform input[type="text"]').removeAttr("aria-invalid");  
+        //$('#msform textarea').attr("class", "tooltipstered");
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
         $('#msform select').removeAttr("aria-invalid");
         $('#msform textarea').removeAttr("aria-invalid");
         //$('#msform input[type="checkbox"]').attr("class", "tooltipstered");
         $('#msform input[type="checkbox"]').removeAttr("aria-invalid");
 		$('#ReqHeader').text('Step 1 - General Info');
 		$('#Step2div').hide();
-		 
+
         current_fs = $(this).parent().parent();
         previous_fs = $(this).parent().parent().prev();
         previous_fs.show();
@@ -3239,41 +3283,41 @@ var reqId = 0;
         return false;
     });
 	function validateCategory(){
-	
-		var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
+
+		var arr =  $('#ElecCtg').find('input[type=checkbox]');
 		var firstchk = $('#ElecCtg').find('input[type=checkbox]')[0]
 		var checked = false;
 		var CtgVAL = 0 ;
-		$.each(arr, function(key, item) {				
-					if (item.checked){	
+		$.each(arr, function(key, item) {
+					if (item.checked){
 						$(firstchk).removeClass("tooltipstered error");
 						$(firstchk).removeAttr("aria-invalid");
 						$(firstchk).removeAttr("aria-required");
 						$(firstchk).removeAttr("required");
 						checked = true;
-						
+
 						//CtgVAL = $(item).parent().parent().find('input[type=text]')[key].value;
 					     CtgVAL = $(item).parent().parent().find('input[type=text]').val();
-						 $(item).parent().parent().find('input[type=text]').tooltipster('hide');   
+						 $(item).parent().parent().find('input[type=text]').tooltipster('hide');
 						if (CtgVAL == 0){
-						  
+
 							var ctgTextbox = $(item).parent().parent().find('input[type=text]')[0];
 							$(ctgTextbox).addClass("tooltipstered error");
 							$(ctgTextbox).attr("required",'true');
 							$(ctgTextbox).attr("aria-invalid",'true');
 							$(ctgTextbox).attr("aria-required",'true');
 							$(ctgTextbox).tooltipster('update', "Qunatity should be greater than zero.");
-							$(ctgTextbox).tooltipster('show'); 
-							$(ctgTextbox).focus();  
-							return false;   
-							//break;  
+							$(ctgTextbox).tooltipster('show');
+							$(ctgTextbox).focus();
+							return false;
+							//break;
 						}
 						//break;
 						return true;
 					}
-		}); 		
+		});
 		if (checked ){
-			
+
 			if (CtgVAL == 0){
 				return false;
 			}
@@ -3287,83 +3331,83 @@ var reqId = 0;
 			$(firstchk).attr("aria-invalid",'true');
 			$(firstchk).attr("aria-required",'true');
 			$(firstchk).tooltipster('update', "Please select one category");
-			$(firstchk).tooltipster('show'); 
-			$(firstchk).focus(); 
+			$(firstchk).tooltipster('show');
+			$(firstchk).focus();
 			return false;
 		}
-		
-		
-	
+
+
+
 	}
     $("#nextstep3").click(function () {
-   
+
 		current_fs = $(this).parent().parent();
         next_fs = $(this).parent().parent().next();
         if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
-		
+
 			if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
-			
+
 				$('#CONTACT-CONFRIM-EMAIL').tooltipster('update', "Confrim email address should match to email address.");
-				$('#CONTACT-CONFRIM-EMAIL').tooltipster('show'); 
-				return false; 
-			} 
-		
-		
+				$('#CONTACT-CONFRIM-EMAIL').tooltipster('show');
+				return false;
+			}
+
+
 			var strAddress =  $('#houseNumber').val() + ' ' + $('#street').val() + ', ' + $("#boro option:selected").text()
             $('#disaddress').html(strAddress);
 			$('#disCrsStrt').text($('#GEOCrossStreet').val());
             //$('#disbldg').text($('#houseNumber').val());
-            //$('#disstreet').text($('#street').val());  
+            //$('#disstreet').text($('#street').val());
             //$('#disCrsStrt').text();
             $('#disPckLocation').text($("#lstPickUpLocation option:selected").text());
-			$('#disApptDate').text($('#slapptdate').val()); 
+			$('#disApptDate').text($('#slapptdate').val());
 			$('#displayItem').empty();
-			var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
-			CatgoryList = []; 
-			
-			$.each(arr, function(key, item) {				
-				if (item.checked){				
-					//alert('selected');					
-					
+			var arr =  $('#ElecCtg').find('input[type=checkbox]');
+			CatgoryList = [];
+
+			$.each(arr, function(key, item) {
+				if (item.checked){
+					//alert('selected');
+
 					ctgStr = '';
 					//var CategoryDiv = $(item).parent().parent();
 					var CtgID = $(item).parent().parent()[0].id
 					var Ctgname = $(item).parent().parent().find('.pure-u-md-20-24').html();
-					
+
 					var CtgVAL = $(item).parent().parent().find('input[type=text]').val();
 					var SubCategoryID = 0;
-					
-					
+
+
 					//ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">\	<div class="pure-u-md-1-24 pure-u-sm-1-24">\</div><div class="pure-u-md-20-24 pure-u-sm-20-24 ctgName ">'+ Ctgname +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ CtgVAL +'</div> </div>'
 					ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
-					$('#displayItem').append(ctgStr); 							
-					if ($(item).parent().parent().find('#tvSubCategory').length > 0)	
+					$('#displayItem').append(ctgStr);
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0)
 					{
 						 var arrSubCat = $(item).parent().parent().find('#tvSubCategory').find('.pure-u-1')
 					     //$(item).parent().parent().find('#tvSubCategory').find('input[type=text]')
-						 var SubctgStr = '<ul class=leaders> ';  
+						 var SubctgStr = '<ul class=leaders> ';
 						 $.each(arrSubCat, function(Subkey, Subitem) {
 							//SubctgStr = '';
 							if ($(Subitem).find('input[type=text]').val() > 0)
-							{				
+							{
 								CtgVAL = $(Subitem).find('input[type=text]').val();
-							    SubCategoryID = $(Subitem).find('.pure-u-md-3-24').attr('name');  
+							    SubCategoryID = $(Subitem).find('.pure-u-md-3-24').attr('name');
 								//SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">'
 								//SubctgStr +='<div class="pure-u-md-2-24 pure-u-sm-2-24">'
 								//SubctgStr +='</div><div class="pure-u-md-19-24 pure-u-sm-19-24 ctgName ">'+ $(Subitem).find('label')[0].innerText +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ $(Subitem).find('input[type=text]').val() +'</div> </div>'
 								SubctgStr += '<li>  <span>'+ $(Subitem).find('label')[0].innerText +'</span>   <span>'+ $(Subitem).find('input[type=text]').val() +'</span>  </li>';
-								
-								
+
+
 								CatgoryList.push({
 								 CategoryID: CtgID,
 								 SubCategoryId: SubCategoryID,
 								 RequestedQty: CtgVAL
 								});
-								
+
 							}
-						 }); 
+						 });
 							SubctgStr += '</ul>'
-						$('#displayItem').append(SubctgStr); 
+						$('#displayItem').append(SubctgStr);
 					}
 					else{
 						CatgoryList.push({
@@ -3371,15 +3415,15 @@ var reqId = 0;
 							 SubCategoryId: SubCategoryID,
 							 RequestedQty: CtgVAL
 						 });
-					
+
 					}
-					
-					//$(item).parent().parent().html()					 					
+
+					//$(item).parent().parent().html()
 				}
 			});
-						
+
 			//$('displayItem').text();
-			//$('#disApptDate').text();						
+			//$('#disApptDate').text();
 			$('#disfname').text($('#CONTACT-1-FIRST-NAME').val());
             $('#dislname').text($('#CONTACT-1-LAST-NAME').val());
 			$('#disphone').text($('#CONTACT-1-PHONE').val());
@@ -3400,7 +3444,7 @@ var reqId = 0;
 			$('#step3closebutton').hide();
 			$('.helpicon').hide();
 			//window.ScrollTop(0);
-			
+
             //$('#astep2').removeClass('active2');
             //$('#astep3').addClass('active3');
            current_fs.hide();
@@ -3420,37 +3464,37 @@ var reqId = 0;
         $('.fieldset4').hide();
         return false;
     });
-	
+
 	$('#chkTC').change( function(){
-		if ($('#chkTC')[0].checked) 
-		{		
-			$('#chkTC').tooltipster('hide'); 
+		if ($('#chkTC')[0].checked)
+		{
+			$('#chkTC').tooltipster('hide');
 		}
 	}) ;
-	
-	$("#submitrq").click(function (){	
-		
-		if (!$('#chkTC')[0].checked) 
-		{		
+
+	$("#submitrq").click(function (){
+
+		if (!$('#chkTC')[0].checked)
+		{
 			$('#chkTC').addClass("tooltipstered error");
 			$('#chkTC').attr("required",'true');
 			$('#chkTC').attr("aria-invalid",'true');
 			$('#chkTC').attr("aria-required",'true');
 			$('#chkTC').tooltipster('update', "Please certify the request.");
-			$('#chkTC').tooltipster('show'); 
-			$('#chkTC').focus(); 			
+			$('#chkTC').tooltipster('show');
+			$('#chkTC').focus();
 			//return false;
 		}
 		else{
-			
-			$("#submitrq").attr('disabled', 'disabled');	
-			$('#chkTC').tooltipster('hide'); 		
-		    
-		
+
+			$("#submitrq").attr('disabled', 'disabled');
+			$('#chkTC').tooltipster('hide');
+
+
 			/*var captchaInfo = {
                  challengeValue: $("#recaptcha_challenge_field").val(),
                  responseValue: $("#recaptcha_response_field").val()
-             }; 
+             };
              $.ajax({
                  type: 'POST',
                  url: 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/ValidateCaptcha',
@@ -3475,7 +3519,7 @@ var reqId = 0;
 						Source : '311',
 						CrossStreets : $('#GEOCrossStreet').val(),
 						PickupRequestItems : CatgoryList
-					}		
+					}
 					var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
 					$.ajax({
 						async: false,
@@ -3484,41 +3528,45 @@ var reqId = 0;
 						type: "POST",
 						dataType: 'json',
 						crossDomain: true,
-						success: function (json) {				
+						success: function (json) {
 							if (json != undefined){
-							 var data = json  
-                                $('#reqfld').hide();  
+							 var data = json
+                                $('#reqfld').hide();
 								$('.fieldset4').hide();
 								$('.fieldset3').hide();
 								$('#header3').hide();
 							 /* if (json.length == 0){
 								$('#ReqHeader').text('Step 4 - Confirmation');
 								$('#stepmsg').hide();
-								$('.fieldset5').show();	 				   
-								
-							  } 
+								$('.fieldset5').show();
+
+							  }
 							  else if (json.length > 0){
 								$('#errorDate').text($('#disApptDate').text());
-								$('.fieldset6').show();		
+								$('.fieldset6').show();
 							  }*/
-							   
+
 							   if (json.toUpperCase() == 'NOT AVAILABLE'){
-							   
+
 								$('#errorDate').text($('#disApptDate').text());
 								$('.fieldset6').show();
 							  }
-							  else {								
+                              else if (json.toUpperCase() == 'DUPLICATE ADDRESS'){
+								$('#addrDate').text($('#disApptDate').text());
+								$('.fieldset7').show();
+							  }
+							  else {
 								$('#srnumer').text(json);
 								$('#ReqHeader').text('Step 4 - Confirmation');
 								$('#stepmsg').hide();
-								$('.fieldset5').show();								
-							  } 
-							 
-							 
-							}			
+								$('.fieldset5').show();
+							  }
+
+
+							}
 							//$('#ElecCtg').find('#'+SubCategoryID).append(SubctgStr);
-						}			
-					});	 
+						}
+					});
                          //return true;
                      /*}
                      else {
@@ -3531,11 +3579,11 @@ var reqId = 0;
                      //alert(error);
                  }
              });*/
-			
-		}		
+
+		}
 		return false;
 	});
-	  
+
 	$('#btnNewReq').click(function (){
 		//location.reload();
 		window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
@@ -3544,26 +3592,27 @@ var reqId = 0;
 	$('#btnStep2').click(function(){
 		$("#submitrq").removeAttr("disabled");
 		$('.fieldset6').hide();
+        $('.fieldset7').hide();
 		$('.fieldset1').show();
 		$('.fieldset2').show();
 		$('#header').show();
 		$('#header2').show();
 		$('#Step2div').show();
 		$('.fieldset3').hide();
-		
-		
+
+
 		$('#datetimepicker1').data('DateTimePicker').destroy();
-		
+
         var disableDT = []; //['09/28/2016', '2016-09-27',d];
         /*var MaxDate = new Date(); // Parse date
         MaxDate.setDate(MaxDate.getDate() + 14); // Add 7 days
         var minDate = new Date();
-        minDate.setDate(minDate.getDate() + 1); // Add 7 days  
+        minDate.setDate(minDate.getDate() + 1); // Add 7 days
 		*/
 		var minDate; //moment()//.format("MM-DD-YYYY")
-        var MaxDate;//moment().add(21, 'days'); 
-		
-        var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+        var MaxDate;//moment().add(21, 'days');
+
+        var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true';
                 var getdisDAte =$.ajax({
                     async:false,
                     url: getDateUrl,
@@ -3573,26 +3622,26 @@ var reqId = 0;
                         if (data != undefined)
                         {
                             //disableDT = data ;
-							/*$.each(data, function(key, item) {                                     
-                                    var d=new Date(item); 
-                                    d.setDate(d.getDate()); 
+							/*$.each(data, function(key, item) {
+                                    var d=new Date(item);
+                                    d.setDate(d.getDate());
                                     disableDT.push(d);
 							});*/
-							
-							 
-							$.each(data, function(key, item) {                                     
-                                    //var d=moment(item);//.format("MM-DD-YYYY"); 
-                                    //disableDT.push(d); 
-									
-									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
-									//var d=new Date(item); 
-									//d.setDate(d.getDate()+ 1); 
-									disableDT.push(d); 
-									minDate = item.StartDate;									
+
+
+							$.each(data, function(key, item) {
+                                    //var d=moment(item);//.format("MM-DD-YYYY");
+                                    //disableDT.push(d);
+
+									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY");
+									//var d=new Date(item);
+									//d.setDate(d.getDate()+ 1);
+									disableDT.push(d);
+									minDate = item.StartDate;
 									MaxDate = item.EndDate;
-                                });  
-							
-                             
+                                });
+
+
                             $('#datetimepicker1').datetimepicker({
                                 format: 'MM-DD-YYYY',
                                 minDate: minDate,
@@ -3603,7 +3652,7 @@ var reqId = 0;
                                 },
                                 //daysOfWeekDisabled: [0, 6],
                                 disabledDates: disableDT,
-								keyBinds:{ 
+								keyBinds:{
 											up: null,
 											down: function (widget) {
 														if (!widget) {
@@ -3617,66 +3666,65 @@ var reqId = 0;
 											'delete' : null
 										}
                             });
-                            //$('#datetimepicker1').datetimepicker('update'); 
-                            
-                        }                        
+                            //$('#datetimepicker1').datetimepicker('update');
+
+                        }
                     }
                 });
-		
+
 		return false;
-		
-		
-		
+
 	});
-	
+
 	$("#searchSR").click(function (event) {
 			var apptDate ;
-			
+
 			$("#submitrq").removeAttr("disabled");
 			$("#submitrq").prop("disabled", false);
-			
+
 			if( $('#search-input').val() == '' || $('#search-input').val() == 'Search SR#')
 			{
 				$("#search-input").val('');
 				window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
 			}
-			
+
 			//$("#ElecCtg").empty();
 			//loadCategories();
-			
+
 			if($('#datetimepicker1').data('DateTimePicker')){
 				$('#datetimepicker1').data('DateTimePicker').destroy();
 			}
-			
+
 			//Clear everything
 			$("#ElecCtg").find('input:checkbox').attr('checked', false);
 			$("#ElecCtg").find('input[type=text]').val(0);
 			$("#ElecCtg").find('input[type=text]').attr("disabled","disabled");
 			$("#ElecCtg").find('#tvSubCategory').hide();
 			$("#ElecCtg").find('.dec').removeClass('decpointer');
-			$("#ElecCtg").find('.inc').removeClass('incpointer');  
+			$("#ElecCtg").find('.inc').removeClass('incpointer');
 			$("#ElecCtg").find('input[type=text]').removeClass("disableText");
-		
+
 			var disableDT = [];
 			var minDate; // = moment();//.format("MM-DD-YYYY")
 			var MaxDate; //= moment().add(21, 'days');
-			//MaxDate = MaxDate.format("MM-DD-YYYY"); 
+			//MaxDate = MaxDate.format("MM-DD-YYYY");
 
-		
+
 			$.ajax({
 				async: false,
 				url: APIUrl + '/ePickupsAPI/api/PickupRequest/GetPickUpRequest?SRNumber='+ $('#search-input').val(),
 				type: "GET",
-				dataType: 'json',	
+				dataType: 'json',
 				crossDomain: true,
 				success: function (data) {
-				
+
 					if ( data != undefined && data.RequestId > 0){
-					
+
 						$('.fieldset1').hide();
 						$('.fieldset2').hide();
 						$('.fieldset5').hide();
 						$('.fieldset6').hide();
+                        $('.fieldset7').hide();
 						 $('#header').hide();
 						$('#header2').hide();
 						$('.fieldset3').show();
@@ -3684,39 +3732,39 @@ var reqId = 0;
 						$('#Step2div').hide();
 						$('#step3buttons').show();
 						$('#step3closebutton').show();
-						
+
 						$('#currentAppDate').show();
 						$('#disSRNo').text(data.SRNumber);
 						data.CanCancel == 0 ? $('#cancelSR').hide() : $('#cancelSR').show();
 						data.CanReschedule == 0 ? $('#rescheduleSR').hide() : $('#rescheduleSR').show();
-							
+
 						reqId = data.RequestId;
 						apptDate = data.AppointmentDate
-						
-						
-						
-						
+
+
+
+
 						//Step 1 data fill
 						$("#boro option:contains(" + data.Borough + ")").attr('selected', 'selected');
 						//$('#boro').text(data.Borough);
-						
+
 						$('#houseNumber').val(data.BuildingNumber);
                         $('#street').val(data.Street);
 						$('#rdAddress').val(strAddress);
 						$('#rdStreet').val(data.Street);
-						
+
 						//Step 2 data fill
-						
-						var arr =  data.PickupRequestItems;	 
-						CatgoryList = []; 
-						
-						$.each(arr, function(key, item) {				
-							 
+
+						var arr =  data.PickupRequestItems;
+						CatgoryList = [];
+
+						$.each(arr, function(key, item) {
+
 							ctgStr = '';
 							var CtgID =  item.CategoryId
 							var Ctgname = item.Category
 							var CtgVAL = item.RequestedQty;
-							
+
 							$('#'+CtgID).find('input:checkbox:first').prop('checked', true);
 							$('#'+CtgID).find('input:checkbox:first').attr('checked', true);
 							$('#'+CtgID).find('input:checkbox:first').attr('checked', 'checked');
@@ -3724,101 +3772,101 @@ var reqId = 0;
 							$('#'+CtgID).find('input[type=text]:first').removeAttr('disabled');
 							$('#'+CtgID).find('input[type=text]').addClass('disableText');
 							$('#'+CtgID).find('.dec').addClass('decpointer');
-							$('#'+CtgID).find('.inc').addClass('incpointer');  
-							
-							if ($('#'+CtgID).find('#tvSubCategory').length > 0 && item.RequestedQty > 0) {  
+							$('#'+CtgID).find('.inc').addClass('incpointer');
+
+							if ($('#'+CtgID).find('#tvSubCategory').length > 0 && item.RequestedQty > 0) {
 								$('#'+CtgID).find('#tvSubCategory').show();
 								$('#'+CtgID).find('input[type=text]').removeAttr('disabled');
 								$('#'+CtgID).find('input[type=text]').addClass('disableText');
 								$('#'+CtgID).find('input[type=hidden]').val(item.RequestedQty);
 							}
-																					
-							
-							if (item.PickupRequestSubItems != undefined && item.PickupRequestSubItems.length > 0 )	
+
+
+							if (item.PickupRequestSubItems != undefined && item.PickupRequestSubItems.length > 0 )
 							{
 								 var arrSubCat = item.PickupRequestSubItems
-								
-								 var SubctgStr = ''; 
-								 $.each(arrSubCat, function(Subkey, Subitem) { 
-								 
+
+								 var SubctgStr = '';
+								 $.each(arrSubCat, function(Subkey, Subitem) {
+
 									$('#'+CtgID).find('#subCategory'+Subitem.SubCategoryId).val(Subitem.Quantity);
 									$('#'+CtgID).find('#subCategory'+ Subitem.SubCategoryId).removeAttr('disabled');
 									$('#'+CtgID).find('.dec').addClass('decpointer');
-									$('#'+CtgID).find('.inc').addClass('incpointer');  
-								 }); 
-							}		
-							
-						
+									$('#'+CtgID).find('.inc').addClass('incpointer');
+								 });
+							}
+
+
 						});
-						
-						var formatedDate =  moment(data.AppointmentDate).format("MM-DD-YYYY"); 
-						
-						$('#currentAppDateVal').text(formatedDate); 						
-						
-						$('#CONTACT-1-FIRST-NAME').val(data.FirstName); 
-						$('#CONTACT-1-LAST-NAME').val(data.LastName); 
-						$('#CONTACT-1-PHONE').val(data.Phone); 
-						$('#CONTACT-1-EMAIL').val(data.Email); 
-						$('#CONTACT-CONFRIM-EMAIL').val(data.Email); 
-					
-						
+
+						var formatedDate =  moment(data.AppointmentDate).format("MM-DD-YYYY");
+
+						$('#currentAppDateVal').text(formatedDate);
+
+						$('#CONTACT-1-FIRST-NAME').val(data.FirstName);
+						$('#CONTACT-1-LAST-NAME').val(data.LastName);
+						$('#CONTACT-1-PHONE').val(data.Phone);
+						$('#CONTACT-1-EMAIL').val(data.Email);
+						$('#CONTACT-CONFRIM-EMAIL').val(data.Email);
+
+
 						//Step 3 Review Mode data fill
 						$('#dvTitle').text('SR#  '+ $('#txtSR').val() + '  ' + data.Status )
 						var strAddress =  data.BuildingNumber + ' ' + data.Street + ', ' + data.Borough
 						$('#disaddress').html(strAddress);
 						$('#disCrsStrt').text(data.CrossStreets);
-						
+
 						$('#disPckLocation').text(data.PickUpLocation);
-						$('#disApptDate').text(formatedDate); 
+						$('#disApptDate').text(formatedDate);
 						$('#displayItem').empty();
-						
+
 						if (data.PickupRequestItems != undefined){
-							arr =  data.PickupRequestItems;	 
-							CatgoryList = []; 
-						
-							$.each(arr, function(key, item) {				
-						
+							arr =  data.PickupRequestItems;
+							CatgoryList = [];
+
+							$.each(arr, function(key, item) {
+
 								ctgStr = '';
-								
+
 								var CtgID =  item.CategoryId
 								var Ctgname = item.Category
 								var CtgVAL = item.RequestedQty;
-																						
-						
-								ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';	
-								
-								$('#displayItem').append(ctgStr); 
+
+
+								ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+
+								$('#displayItem').append(ctgStr);
 								if (item.PickupRequestSubItems != undefined){
-								
-									if (item.PickupRequestSubItems.length > 0 )	
+
+									if (item.PickupRequestSubItems.length > 0 )
 									{
 										 var arrSubCat = item.PickupRequestSubItems
-										
-										 var SubctgStr =  '<ul class=leaders> ';  
-										 $.each(arrSubCat, function(Subkey, Subitem) { 
-											
+
+										 var SubctgStr =  '<ul class=leaders> ';
+										 $.each(arrSubCat, function(Subkey, Subitem) {
+
 											 SubctgStr += '<li>  <span>'+ Subitem.SubCategoryName +'</span>   <span>'+ Subitem.Quantity +'</span>  </li>';
 											//SubctgStr += '<li>  <span>'+ $(Subitem).find('label')[0].innerText +'</span>   <span>'+ $(Subitem).find('input[type=text]').val() +'</span>  </li>';
-											
-										 }); 
-										SubctgStr +=  '</ul> '; 
-										$('#displayItem').append(SubctgStr);	
-									}		
+
+										 });
+										SubctgStr +=  '</ul> ';
+										$('#displayItem').append(SubctgStr);
+									}
 								}
-								
+
 							});
-						}		
-								
+						}
+
 						$('#disfname').text(data.FirstName);
 						$('#dislname').text(data.LastName);
 						$('#disphone').text(data.Phone);
 						$('#disemail').text(data.Email);
 					}
-					
+
 					else{
 						alert("Please enter a valid service request number");
 					}
-						
+
 					if (validateForm()) {
 								var retCode = false;
 								event.preventDefault();
@@ -3827,18 +3875,18 @@ var reqId = 0;
 										retCode = true;
 									}
 									if (retCode == true) {
-									
+
 										//$('#ReqHeader').text('Step 2 - Specific Info');
-										
+
 										var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
 										//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
 										$('#rdAddress').html(fullAddress);
 										$('#rdStreet').html($("#GEOCrossStreet").val());
-										
+
 										$('#lstPickUpLocation').find('option:gt(0)').remove();
-										$('#lstPickUpLocation').append($("#GEOPickupStreet").val()); 
+										$('#lstPickUpLocation').append($("#GEOPickupStreet").val());
 										$("#lstPickUpLocation option:contains(" + data.PickUpLocation + ")").attr('selected', 'selected');
-										
+
 										$('#slapptdate').removeAttr("disabled");
 										$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
 										$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
@@ -3846,19 +3894,19 @@ var reqId = 0;
 										$('#CONTACT-1-EMAIL').removeAttr("disabled");
 										$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
 										$('#msform input[type="checkbox"]').removeAttr("disabled");
-										
+
 										$('select').removeAttr("disabled");
-										
+
 										$('#slapptdate').attr("required",'true');
 										$('#CONTACT-1-FIRST-NAME').attr("required",'true');
 										$('#CONTACT-1-LAST-NAME').attr("required",'true');
 										$('#CONTACT-1-PHONE').attr("required",'true');
 										$('#CONTACT-1-EMAIL').attr("required",'true');
 										$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
-										
-										
+
+
 										$('select').attr("required",'true');
-										
+
 											$('#msform input[type="checkbox"]').tooltipster({
 												trigger: 'custom',
 												onlyOne: true,
@@ -3874,10 +3922,10 @@ var reqId = 0;
 												onlyOne: true,
 												position: 'bottom'
 											});
-										
-									
+
+
 										jQuery.support.cors = true;
-										var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+										var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true';
 										$.ajax({
 											async:false,
 											url: getDateUrl,
@@ -3888,24 +3936,24 @@ var reqId = 0;
 												if (datedata != undefined)
 												{
 													//disableDT = data ;
-													$.each(datedata, function(key, item) {                                     
-														//var d=moment(item)//.format("MM-DD-YYYY"); 
-														//disableDT.push(d); 
-														
-														var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
-														//var d=new Date(item); 
-														//d.setDate(d.getDate()+ 1); 
-														disableDT.push(d); 
-														minDate = item.StartDate;									
+													$.each(datedata, function(key, item) {
+														//var d=moment(item)//.format("MM-DD-YYYY");
+														//disableDT.push(d);
+
+														var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY");
+														//var d=new Date(item);
+														//d.setDate(d.getDate()+ 1);
+														disableDT.push(d);
+														minDate = item.StartDate;
 														MaxDate = item.EndDate;
-													});  
-													
+													});
+
 													//When reschedule is called, if previous appt date is disabled then remove the disable feature for that date
 													//var aptDt = moment(apptDate)//.format("MM-DD-YYYY") //new Date(apptDate)
 													//disableDT = jQuery.grep(disableDT, function(value) {
                                                       //return value != aptDt;
-                                                    //});  
-													
+                                                    //});
+
 													$('#datetimepicker1').datetimepicker({
 														debug: true,
 														format: 'MM-DD-YYYY',
@@ -3914,10 +3962,10 @@ var reqId = 0;
 														widgetPositioning: {
 															horizontal: 'auto',
 															vertical: 'bottom'
-														},                                        
+														},
 														//daysOfWeekDisabled: [0,6],
 														disabledDates: disableDT,
-														keyBinds: { 
+														keyBinds: {
 																	up: null,
 																	down: function (widget) {
 																				if (!widget) {
@@ -3930,30 +3978,30 @@ var reqId = 0;
 																	t : null,
 																	'delete' : null
 																}
-													});                          
+													});
 												}
 											}
-										});  
+										});
 
 										return false;
 									}
 								});
 							}
-						
-						
-						
-					
+
+
+
+
 				}
-					
-					
+
+
 				});
 				return false;
       });
-	
-	
+
+
 	$("#rescheduleSR").click(function () {
 		$("#submitrq").removeAttr("disabled");
-		
+
 		$('.fieldset1').show();
 		$('.fieldset2').show();
 		$('.helpicon').show();
@@ -3961,47 +4009,75 @@ var reqId = 0;
 		$('#header2').show();
 		$('#Step2div').show();
 		$('.fieldset3').hide();
-		
+
 		return false;
     });
-	
+
 	$("#cancelSR").click(function () {
 
-		var txt;
-		var r = confirm("Do you want to cancel this service request?");
-		if (r == true) {
-		
-			jQuery.support.cors = true;
-			var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled'; 
-			$.ajax({
-				async:false,
-				url: getDateUrl,
-				type: "GET",
-				dataType: 'json',
-				crossDomain: true,
-				success: function(data){
-					if (data != undefined)
-					{
-						$("#search-input").val('');
-						window.location.href = '/assets/dsny/contact/services/staging-311ewaste-pickup-search.shtml';
-					}
-				}
-			});
-		
-			
-		} else {
-			//return false;
-		}
-		
+        $('#cancelModal').modal();
+    //     var txt;
+    //     var r = confirm("Do you want to cancel this service request?");
+		// if (r == true) {
+		//
+		// 	jQuery.support.cors = true;
+		// 	var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled' + ;
+		// 	$.ajax({
+		// 		async:false,
+		// 		url: getDateUrl,
+		// 		type: "GET",
+		// 		dataType: 'json',
+		// 		crossDomain: true,
+		// 		success: function(data){
+		// 			if (data != undefined)
+		// 			{
+		// 				$("#search-input").val('');
+		// 				window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
+		// 			}
+		// 		}
+		// 	});
+		//
+		//
+		// } else {
+		// 	//return false;
+		// }
+
 		return false;
     });
-	
+
+		$('#ddlReasonCancel').change(function(){
+				$("#txtReasonCancel").prop("disabled", !($(this).val() == 4));
+		});
+
+		$("#reasonCancel").click(function (){
+
+		jQuery.support.cors = true;
+		var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled&ReasonType=' + $("#ddlReasonCancel").val() + '&Comments=' + $("#txtReasonCancel").val();
+		$.ajax({
+			async:false,
+			url: getDateUrl,
+			type: "GET",
+			dataType: 'json',
+			crossDomain: true,
+			success: function(data){
+				if (data != undefined)
+				{
+					$("#search-input").val('');
+					window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
+				}
+			}
+		});
+
+		return false;
+		});
+
+
 	$("#closeSR").click(function () {
 		$("#search-input").val('');
-		window.location.href = '/assets/dsny/contact/services/staging-311ewaste-pickup-search.shtml';
+		window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
 	});
-   
-	
+
+
 </script>
 <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->
 <script src="/assets/dsny/js/webforms/jquery.xdomainrequest.js" type="text/javascript"></script>

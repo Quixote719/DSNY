@@ -1,0 +1,49 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - About - Press Releases </title>
+<!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
+<!--#include virtual="/assets/dsny/templates/leftnav/pressreleases_leftnav.shtml" -->
+
+<div id="contentsection" class="span9 about-main-image">
+	<div class="span6 about-description">
+	
+	<p> FOR IMMEDIATE RELEASE <br />
+  Press Release #17-41<br />
+  Wednesday, June 28, 2017 <br />
+  CONTACT: Vito A. Turso/Belinda Mager 646-885-5020 </p>	
+  
+<p> <strong> No Garbage, Recycling or Organic Collection, or Street Cleaning on Independence Day, Tuesday, July 4 </strong> </p> 
+
+
+<p> The New York City Department of Sanitation announced that in observance of Independence Day, there will be no garbage, 
+recycling, or organics collection, or street cleaning on Tuesday, July 4, 2017. </p> 
+
+<ul>
+<li>	Residents who normally receive <strong>Tuesday trash, organics and recycling </strong> collection should place 
+their material out at curbside after 4 p.m. on Tuesday, July 4 for pickup. The Department previously 
+collected recyclables the week following the holiday, but is modifying its holiday service at this time. </li>
+
+</ul>
+
+<p> Additionally, all Sanitation Department administrative offices will be closed on Tuesday, July 4, in observance of the holiday. </p>
+
+
+<p>To help provide city residents with Sanitation-related service reminders, updates and special event schedules, 
+the New York City Department of Sanitation has launched DSNY Info, its smart phone and tablet app. The app also
+ includes tips to reduce, reuse and recycle, making it easier for New Yorkers send zero waste to landfills by 
+ 2030. The free app is available for both iOS and Android operating systems, and can be found by searching DSNY
+ Info in the <a href="https://itunes.apple.com/us/app/dsny-info-service-schedule-updates/id1139303678?mt=8"> Apple App</a>  
+ and <a href="https://play.google.com/store/apps/details?id=gov.nyc.dsny.dsny&hl=en"> Google Play </a> stores. </p>
+
+<p> For questions about Sanitation services and holiday schedules contact 311 or visit <a href=http://www.nyc.gov/sanitation"> nyc.gov/sanitation</a>. <p>
+
+	
+	<p> <strong>About the New York City Department of Sanitation</strong> </p>
+The Department of Sanitation (DSNY) keeps New York City healthy, safe and clean by collecting, recycling and disposing
+ of waste, cleaning streets and vacant lots, and clearing snow and ice. The Department operates 59 district garages 
+ and manages a fleet of more than 2,000 rear-loading collection trucks, 450 mechanical brooms and 689 salt/sand spreaders. 
+ The Department clears litter, snow and ice from approximately 6,500 miles of City streets and removes debris from vacant 
+ lots as well as abandoned vehicles from City streets. </p>
+  
+  </div>		 
+</div>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer.shtml" -->

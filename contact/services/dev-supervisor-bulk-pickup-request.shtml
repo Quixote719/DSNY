@@ -1,0 +1,4017 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+	<!--
+									ls:begin[stylesheet]
+								--><link href="/iwov-resources/fixed-layout/3-Row Simple.css" type="text/css" rel="stylesheet"><!--
+									ls:end[stylesheet]
+								--><!--
+									ls:begin[meta-keywords]
+								--><meta name="keywords" content=""><!--
+									ls:end[meta-keywords]
+								--><!--
+									ls:begin[meta-description]
+								--><meta name="description" content=""><!--
+									ls:end[meta-description]
+								--><!--
+									ls:begin[meta-vpath]
+								--><meta name="vpath" content=""><!--
+									ls:end[meta-vpath]
+								--><!--
+									ls:begin[meta-page-locale-name]
+								--><meta name="page-locale-name" content=""><!--
+									ls:end[meta-page-locale-name]
+								--><!--
+									ls:begin[pre-head-injection]
+								--><!--
+									ls:end[pre-head-injection]
+								--><!--
+									ls:begin[social_media_injection]
+								--><!--
+									ls:end[social_media_injection]
+								--><!--
+									ls:begin[head-injection]
+								--><meta charset="utf-8" /><!--[if IE]>        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">        <![endif]-->
+								<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>								
+								<!-- Google Translate Plugin --><meta name="google-translate-customization" content="4707bd7f535893a0-45bca7b6a97e5a2d-g609df9381571b349-c"/><!--[if lt IE 9]>            <script src="/assets/home/js/libs/html5shiv.js" type="text/javascript"></script>        <![endif]--><!-- GLOBAL STYLES --><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+								<link href="/assets/dsny/css/pages/webforms/global_dsny.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/home/css/css-min/module.css" media="screen" rel="stylesheet" type="text/css" /><!-- PRINT STYLE --><link rel="stylesheet" href="/assets/home/css/print.css" type="text/css" media="print" />
+								<!-- PAGE SPECIFIC STYLES -->
+								<link href="/assets/home/css/includes/header-agencies.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/home/css/modules/news-panel.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/home/css/modules/share-icons.css" media="screen" rel="stylesheet" type="text/css" /><link href="/assets/dsny/css/pages/webforms/agenciesaboutlinks_dsny.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/home/css/modules/programs-and-initiatives.css" media="screen" rel="stylesheet" type="text/css" />
+								<!--<link href="/assets/test/css/pages/agencies/inside.css" media="screen" rel="stylesheet" type="text/css" />-->
+								<!-- centralized css --><link href="/assets/dsny/css/pages/webforms/inside_dsny.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/dsny/css/agency-styles.css" media="screen" rel="stylesheet" type="text/css" />
+								<link href="/assets/dsny/css/pages/agencies/megamenu/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+								<link rel="stylesheet" href="/assets/dsny/css/pages/agencies/megamenu/jquery-ui.css">								
+								<link href="/assets/dsny/css/pages/agencies/socialicons/plugin.css" media="all" rel="stylesheet" />
+								<style>
+								
+								[class*="span"] {
+								margin-left: 0px; 
+								}
+
+								.agencies-about-share {
+								 padding: 0px 0 0px 0 !important; 
+								}
+
+								h2
+								{
+								  margin: 0 0 10px 0;
+								  color: #005949;
+								  font-size:32px;
+								}
+
+								h3
+								{
+									color: #686868;
+								}
+								
+								#main, .main{
+									margin: 0px;
+								}
+								</style>
+
+
+							    <style>
+									
+									body
+									{
+										background-color: #F4F4F4 !important; 
+									}
+								
+							    	.popover
+							    	{
+							    		max-width: 700px;
+							    		padding:0;
+							    		font-size: 14px;
+							    	}
+
+							        .navbar .popover {
+							            width: 579px;
+							            -webkit-border-top-left-radius: 0px;
+							            -webkit-border-bottom-left-radius: 0px;
+							            border-top-left-radius: 0px;
+							            border-bottom-left-radius: 0px;
+							            overflow: hidden;
+							        }
+
+
+							        .navbar .popover-content a, a:link, a:visited
+							        {
+							        	color: #0e8c1b;
+							        }
+
+
+							        .popover-content
+							        {
+							        	line-height: 25px;
+										margin-left: -1px;
+										position: relative;
+										z-index: 2;
+							        }
+
+							        .navbar
+							        {
+							        	margin-bottom: 0px;
+							        }
+
+
+							        .popover-title
+							        {
+							        	width:100%;
+							        	font-size:16px;
+							        	margin-top: -1px;
+							        	margin-left: -1px;
+							        	-webkit-border-radius: 0 0 0 0;
+  										-moz-border-radius: 0 0 0 0;
+  										font-weight: bold;
+  										line-height: 31px;
+							        }
+
+							        .navbar .popover-content img {
+							            height: 212px;
+							            max-width: 250px;
+							        }
+
+							        .navbar .dropdown-menu {
+							        	width:360px;
+							        	/*margin-top:84px;*/
+										top:72px;
+							            /*-webkit-border-top-right-radius: 0px;
+							            -webkit-border-bottom-right-radius: 0px;
+							            border-top-right-radius: 0px;										
+							            border-bottom-right-radius: 0px;
+
+							            -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+							            -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+							            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);*/
+							        }
+
+
+							        .navbar-inverse .navbar-inner
+							        {
+							        	background-image: none;
+										/*background-color: #339933;*/
+										border: none;
+										padding: 20px 0 0 0;
+										margin-bottom:10px;
+							        }
+
+									.navbar .alignleft
+									{
+									  right : 25.63%
+									}
+									
+									.navbar .alignleftlastcolumn
+									{
+									   right : 0.1%
+									}
+									
+							        /*.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus*/
+							        .top-menu-style
+							        {
+									  color: #ffffff;
+									  background-color: #339933;
+									  line-height: 51px;
+									  text-align: center;
+									  /*margin-right: 20px;
+									  width: 218px;*/
+									  font-size: 18px;
+									  font-weight: bold;
+									  border-width: 1px;
+									  border-style: solid;
+									  border-color: white;
+									  /*border: 1px solid transparent;*/
+									  /*-webkit-border-radius: 3px;*/
+									  /*border-radius:3px;*/
+							        }
+
+
+							        .open > .top-menu-style
+							        {
+										border-width:1px 1px 0 1px;
+							        	border-style:solid;
+							        	border-color:white;
+							        	/*border-bottom-right-radius: 0px;*/
+							        	/*border-bottom-left-radius: 0px;*/
+										border-radius: 0px;
+							        	background-color:#50c550;
+							        }
+
+
+							        .navbar .nav > li > a
+							        {
+							        	padding: 0 0 0 0;
+							        }
+
+							        .navbar .nav
+							        {
+							        	float: left;
+							        	width:25%;
+							        	margin:0 0 0 0;
+							        	position:initial;
+							        	width: 23.404255319149%;
+  										margin-right: 2.127659574468%;
+							        }
+
+							        
+									.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+									  /* color: #555555; */
+									  /* text-decoration: none; */
+									  /* background-color: #e5e5e5; */
+									  -webkit-box-shadow: none;
+									  -moz-box-shadow: none;
+									  box-shadow: none;
+									}
+
+
+									.last-dropdown-menu
+							        {
+							        	margin-right:0 !important;
+							        }
+
+							        .ls-canvas .ls-area
+							        {
+							        	overflow:visible;
+							        }
+
+							        .ls-canvas .ls-area-body
+							        {
+							        	overflow:visible;
+							        }
+
+
+
+
+							        .menu-style
+							        {
+							        	height: 20px; 
+							        	/*background-color: #339933; */
+							        	border-right-color: transparent;  
+							        	border-left-color: transparent;  
+							        	border-right-style: solid;  
+							        	border-right-width: 1px;  
+							        	border-left-width: 1px;  
+							        	border-left-style: solid;
+							        	/*border-bottom-color: transparent;
+							        	border-bottom-style: solid;
+							        	border-bottom-width: 1px;*/
+							        }
+
+							        .open > .menu-style
+							        {
+							        	border-right-color: white;  
+							        	border-left-color: white;
+							        	/*background-color: #50c550;*/
+							        	height: 22px;
+							        }
+
+
+									.menu-bar
+									{
+										width:99.79%; 
+										margin-top:74px; 
+										height:10px; 
+										/*background-color:#50c550; */
+										height:10px; 
+										border-width:0px 1px 0px 1px; 
+										border-color:white; 
+										border-style:solid;
+										display:none;
+									}
+
+
+									.dropdown-menu > li
+									{
+										border-top:solid 1px white;
+										margin-left: 1px;
+  										/*border-left: solid 1px #50c550;*/
+									}
+
+									.dropdown-menu > li:first-child
+									{
+										border-top:0;
+
+									}
+
+									.main-header nav ul li
+									{
+										padding: 0 3% 0 3%;
+									}
+
+									.main-header nav ul li.nav-home
+									{
+										padding: 0 2.083333333333% 0 2.083333333333%;
+									}
+
+									.NonProfitCaretUp
+									{
+									    float: right;
+										top: 16px;
+										right: 10px;
+										position: relative;
+										display: none;
+									}
+
+									.NonProfitCaretDown
+									{
+										float: right;
+										top: 19px;
+										right: 10px;
+										position: relative;
+										display: block;
+									}
+																		
+									@media only screen and (min-width: 768px) and (max-width: 800px){
+								        .navbar .popover {
+								            width: 426px;
+								        }
+
+								        .navbar .dropdown-menu {
+								        	width:300px;
+										}
+										
+										.NonProfitCaretUp
+										{
+											float: right;
+											top: -10px;
+											right: 10px;
+											position: relative;
+											display: none;
+										}
+
+										.NonProfitCaretDown
+										{
+											float: right;
+											top: -7px;
+											right: 10px;
+											position: relative;
+											display: block;
+										}
+
+									}
+
+									.has-content:after
+									{ 
+										/*float: right;*/
+										content: url('/assets/dsny/img/mega-menu-carrot.png'); 
+										position: absolute;
+										right: 20px;
+									}
+									
+
+
+									.nyc-mega-bg
+									{
+										position: absolute;
+										bottom: 0;
+										z-index: 1;
+										top: 0px;
+									}
+
+
+									.nyc-grey-250 .nyc-mega-bg
+									{
+										top: 120px;
+									}
+
+									/*
+									.dropdown-menu li > a:only-child:after
+									{ margin-left: 0; 
+										content: ''; 
+									}*/
+
+									.residents-howto
+									{
+										line-height:1;
+									}
+
+									.residents-howto table
+									{
+										margin-top: 5px;
+									}
+
+
+									.residents-howto tr
+									{
+										height: 30px;
+										font-size: 14px;
+									}
+
+									.residents-howto td
+									{
+										text-align: left;
+										width: 180px;
+										height: 25px;
+    									vertical-align: top;
+									}
+
+
+
+									.content-two-col
+									{
+										line-height:1;
+									}
+
+									.content-two-col table
+									{
+										margin-top: 5px;
+									}
+
+									.content-two-col tr
+									{
+										height: 30px;
+										font-size: 14px;
+									}
+
+									.content-two-col td
+									{
+										text-align: left;
+										width: 280px;
+										height: 25px;
+    									vertical-align: top;
+									}
+
+
+									.content-container
+									{
+										margin-top:1px;
+										margin-bottom: 20px;
+									}
+
+									.agencies-about-links ul
+									{
+										margin: -9px 0 0 0;
+									}
+
+									.breadcrumb-arrow
+									{
+										font-size: 10px;
+										color: #d6d6d6;
+										position: relative;
+										bottom: 1px;
+									}
+
+
+							        /* -------------------------------- 
+
+									Main Components
+
+									-------------------------------- */
+									header {
+									  height: 100px;
+									  background: #ffffff;
+									}
+
+									.cd-dropdown-wrapper {
+									  /*display: inline-block;*/
+									  position: relative;
+									  /*height: 40px;
+									  margin: 30px 0 0 5%;*/
+									  -webkit-font-smoothing: antialiased;
+									  -moz-osx-font-smoothing: grayscale;
+									}
+									.cd-dropdown-trigger {
+									  display: block;
+									  position: relative;
+									  padding: 0 36px 0 20px;
+									  line-height: 40px;
+									  background-color: #111433;
+									  color: #ffffff;
+									  border-radius: 3px;
+									}
+									.no-touch .cd-dropdown-trigger:hover {
+									  background-color: #171b46;
+									}
+									.cd-dropdown-trigger::before, .cd-dropdown-trigger::after {
+									  /* this is the arrow inside the dropdown trigger*/
+									  content: '';
+									  position: absolute;
+									  top: 50%;
+									  margin-top: -1px;
+									  height: 2px;
+									  width: 9px;
+									  background: #ffffff;
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transition: width 0.3s, -webkit-transform 0.3s;
+									  -moz-transition: width 0.3s, -moz-transform 0.3s;
+									  transition: width 0.3s, transform 0.3s;
+									}
+									.cd-dropdown-trigger::before {
+									  right: 22px;
+									  -webkit-transform: rotate(45deg);
+									  -moz-transform: rotate(45deg);
+									  -ms-transform: rotate(45deg);
+									  -o-transform: rotate(45deg);
+									  transform: rotate(45deg);
+									}
+									.cd-dropdown-trigger::after {
+									  right: 17px;
+									  -webkit-transform: rotate(-45deg);
+									  -moz-transform: rotate(-45deg);
+									  -ms-transform: rotate(-45deg);
+									  -o-transform: rotate(-45deg);
+									  transform: rotate(-45deg);
+									}
+
+
+									.cd-dropdown h2,
+									.cd-dropdown-content a,
+									.cd-dropdown-content ul a {
+									  height: 50px;
+									  line-height: 50px;
+									}
+
+									.cd-dropdown-content a,
+									.cd-dropdown-content ul a,
+									.cd-dropdown-content .cd-divider {
+									  padding: 0 15px;
+									}
+
+									.cd-dropdown h2
+									{
+									  padding: 0 7px;
+									}
+
+									.cd-dropdown {
+									  position: fixed;
+									  z-index: 1;
+									  top: 0;
+									  left: 0;
+									  width: 100%;
+									  height: 120%;
+									  background-color: #111433;
+									  color: #ffffff;
+									  visibility: hidden;
+									  /* Force Hardware Acceleration */
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transform: translateZ(0);
+									  -moz-transform: translateZ(0);
+									  -ms-transform: translateZ(0);
+									  -o-transform: translateZ(0);
+									  transform: translateZ(0);
+									  -webkit-transform: translateY(-100%);
+									  -moz-transform: translateY(-100%);
+									  -ms-transform: translateY(-100%);
+									  -o-transform: translateY(-100%);
+									  transform: translateY(-100%);
+									  -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0.5s;
+									  -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0.5s;
+									  transition: transform 0.5s 0s, visibility 0s 0.5s;
+									}
+									.cd-dropdown h2 {
+									  /* dropdown title - mobile version only */
+									  margin: 0;
+									  font-size: 26px;
+									  position: relative;
+									  z-index: 1;
+									  color: white;
+									  background-color: rgb(0,89,73);
+									  border-bottom: solid 1px #ffffff;
+									  font-size:14px;
+									  padding-right: 40px;
+									}
+									.cd-dropdown .cd-close {
+									  /* 'X' close icon - mobile version only */
+									  position: absolute;
+									  z-index: 1;
+									  right: 0;
+									  top: 0;
+									  height: 50px;
+									  width: 50px;
+									  /* image replacement */
+									  overflow: hidden;
+									  text-indent: 100%;
+									  white-space: nowrap;
+									  color: transparent;
+									}
+									.cd-dropdown .cd-close::after, .cd-dropdown .cd-close::before {
+									  /* this is the 'X' icon */
+									  content: '';
+									  position: absolute;
+									  left: 50%;
+									  top: 50%;
+									  bottom: auto;
+									  right: auto;
+									  -webkit-transform: translateX(-50%) translateY(-50%);
+									  -moz-transform: translateX(-50%) translateY(-50%);
+									  -ms-transform: translateX(-50%) translateY(-50%);
+									  -o-transform: translateX(-50%) translateY(-50%);
+									  transform: translateX(-50%) translateY(-50%);
+									  height: 20px;
+									  width: 2px;
+									  background-color: #ffffff;
+									}
+									.cd-dropdown .cd-close::after {
+									  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+									}
+									.cd-dropdown .cd-close::before {
+									  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  -o-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+									}
+									.cd-dropdown.dropdown-is-active {
+									  visibility: visible;
+									  -webkit-transform: translateY(0);
+									  -moz-transform: translateY(0);
+									  -ms-transform: translateY(0);
+									  -o-transform: translateY(0);
+									  transform: translateY(0);
+									  -webkit-transition: -webkit-transform 0.5s 0s, visibility 0s 0s;
+									  -moz-transition: -moz-transform 0.5s 0s, visibility 0s 0s;
+									  transition: transform 0.5s 0s, visibility 0s 0s;
+									}
+
+
+									.cd-dropdown-content, .cd-dropdown-content ul {
+									  position: absolute;
+									  top: 0;
+									  left: 0;
+									  width: 100%;
+									  height: 100%;
+									  overflow-x: hidden;
+									  overflow-y: auto;
+									  -webkit-transition: -webkit-transform 0.3s;
+									  -moz-transition: -moz-transform 0.3s;
+									  transition: transform 0.3s;
+									  padding-top: 50px;
+									  padding-bottom: 40%;
+									  display:block;
+									}
+
+									.cd-dropdown-content ul.move-out
+									{
+										overflow:hidden;
+									}
+
+
+									.cd-dropdown-content a, .cd-dropdown-content ul a {
+									  display: block;
+									  color: #ffffff;
+									  /* truncate text with ellipsis if too long */
+									  overflow: hidden;
+									  text-overflow: ellipsis;
+									  white-space: nowrap;
+									  /*border-top-width: 1px;
+									  border-color: #242643;
+									  border-style: solid;*/
+									  border-top:solid 1px white;
+									}
+
+
+									.cd-dropdown-content li:first-of-type > a, .cd-dropdown-content ul li:first-of-type > a {
+									  border-top-width: 0;
+									}
+									.cd-dropdown-content li:last-of-type > a, .cd-dropdown-content ul li:last-of-type > a {
+									  border-bottom:solid 1px white;
+									}
+
+									.cd-dropdown-content li:last-child> a, .cd-dropdown-content ul li:last-child > a {
+									  border-bottom:solid 1px white;
+									}
+
+
+									/*
+									.cd-dropdown-content li
+									{
+										border-top:solid 1px white;
+									}
+									.cd-dropdown-content li:last-of-type, .cd-dropdown-content ul li:last-of-type{
+									  border-bottom:solid 1px white;
+									}*/
+
+
+
+
+
+
+
+
+
+									.cd-dropdown-content .cd-divider, .cd-dropdown-content ul .cd-divider {
+									  padding-top: 10px;
+									  padding-bottom: 10px;
+									  background-color: #0b0e23;
+									  font-size: 1.1rem;
+									  font-weight: bold;
+									  letter-spacing: 1px;
+									  color: #585a70;
+									  text-transform: uppercase;
+									}
+									.cd-dropdown-content .cd-divider + li > a, .cd-dropdown-content ul .cd-divider + li > a {
+									  border-top-width: 0;
+									}
+									.cd-dropdown-content a, .cd-dropdown-content .cd-search, .cd-dropdown-content .cd-divider, .cd-dropdown-content ul a, .cd-dropdown-content ul .cd-search, .cd-dropdown-content ul .cd-divider {
+									  /* Force Hardware Acceleration */
+									  -webkit-transform: translateZ(0);
+									  -moz-transform: translateZ(0);
+									  -ms-transform: translateZ(0);
+									  -o-transform: translateZ(0);
+									  transform: translateZ(0);
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+									  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+									  transition: opacity 0.3s, transform 0.3s;
+									}
+
+
+									.cd-dropdown-content.is-hidden, .cd-dropdown-content ul.is-hidden {
+									  /* push the secondary dropdown items to the right */
+									  -webkit-transform: translateX(100%);
+									  -moz-transform: translateX(100%);
+									  -ms-transform: translateX(100%);
+									  -o-transform: translateX(100%);
+									  transform: translateX(100%);
+									  display:none;
+									}
+
+
+									.cd-dropdown-content.is-hidden > li > a, .cd-dropdown-content.is-hidden > li > .cd-search, .cd-dropdown-content.is-hidden > .cd-divider, .cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider, .cd-dropdown-content ul.is-hidden > li > a, .cd-dropdown-content ul.is-hidden > li > .cd-search, .cd-dropdown-content ul.is-hidden > .cd-divider, .cd-dropdown-content ul.move-out > li > a, .cd-dropdown-content ul.move-out > li > .cd-search, .cd-dropdown-content ul.move-out > .cd-divider {
+									  /* lower down the dropdown items opacity - when secondary dropdown slides in or for dropdown items hidden on the right */
+									  opacity: 0;
+									}
+									.cd-dropdown-content.move-out > li > a, .cd-dropdown-content.move-out > li > .cd-search, .cd-dropdown-content.move-out > .cd-divider, .cd-dropdown-content ul.move-out > li > a, .cd-dropdown-content ul.move-out > li > .cd-search, .cd-dropdown-content ul.move-out > .cd-divider {
+									  /* push the dropdown items to the left when secondary dropdown slides in */
+									  -webkit-transform: translateX(-100%);
+									  -moz-transform: translateX(-100%);
+									  -ms-transform: translateX(-100%);
+									  -o-transform: translateX(-100%);
+									  transform: translateX(-100%);
+									}
+									.dropdown-is-active .cd-dropdown-content, .dropdown-is-active .cd-dropdown-content ul {
+									  -webkit-overflow-scrolling: touch;
+									}
+
+
+									.cd-dropdown-content .see-all a {
+									  /* different style for the See all links */
+									  /*color: #3f8654;*/
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
+									  /* items with picture (or icon) and title */
+									  height: 80px;
+									  line-height: 80px;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item h3, .cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item h3 {
+									  /* truncate text with ellipsis if too long */
+									  overflow: hidden;
+									  text-overflow: ellipsis;
+									  white-space: nowrap;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery .cd-dropdown-item {
+									  padding-left: 90px;
+									}
+									.cd-dropdown-content .cd-dropdown-gallery img {
+									  position: absolute;
+									  display: block;
+									  height: 40px;
+									  width: auto;
+									  left: 20px;
+									  top: 50%;
+									  margin-top: -20px;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item {
+									  padding-left: 75px;
+									  position: relative;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item p {
+									  color: #111433;
+									  font-size: 1.3rem;
+									  /* hide description on small devices */
+									  display: none;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item::before {
+									  /* item icon */
+									  content: '';
+									  display: block;
+									  position: absolute;
+									  left: 20px;
+									  top: 50%;
+									  margin-top: -20px;
+									  width: 40px;
+									  height: 40px;
+									  background-repeat: no-repeat;
+									  background-position: center center;
+									  background-size: 40px 40px;
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-1::before {
+									  background-image: url("../img/nucleo-icon-1.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-2::before {
+									  background-image: url("../img/nucleo-icon-2.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-3::before {
+									  background-image: url("../img/nucleo-icon-3.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-4::before {
+									  background-image: url("../img/nucleo-icon-4.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-5::before {
+									  background-image: url("../img/nucleo-icon-5.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-6::before {
+									  background-image: url("../img/nucleo-icon-6.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-7::before {
+									  background-image: url("../img/nucleo-icon-7.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-8::before {
+									  background-image: url("../img/nucleo-icon-8.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-9::before {
+									  background-image: url("../img/nucleo-icon-9.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-10::before {
+									  background-image: url("../img/nucleo-icon-10.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-11::before {
+									  background-image: url("../img/nucleo-icon-11.svg");
+									}
+									.cd-dropdown-content .cd-dropdown-icons .cd-dropdown-item.item-12::before {
+									  background-image: url("../img/nucleo-icon-12.svg");
+									}
+
+
+									@-webkit-keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@-moz-keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@keyframes cd-fade-in {
+									  0% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									}
+									@-webkit-keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									@-moz-keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									@keyframes cd-fade-out {
+									  0% {
+									    opacity: 1;
+									    visibility: visible;
+									  }
+									  100% {
+									    opacity: 0;
+									    visibility: visible;
+									  }
+									}
+									.cd-search input[type="search"] {
+									  width: 100%;
+									  height: 50px;
+									  padding: 0 20px;
+									  -webkit-appearance: none;
+									  -moz-appearance: none;
+									  -ms-appearance: none;
+									  -o-appearance: none;
+									  appearance: none;
+									  background-color: #242643;
+									  color: #ffffff;
+									  border: none;
+									  border-radius: 0;
+									}
+									.cd-search input[type="search"]::-webkit-input-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]::-moz-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:-moz-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:-ms-input-placeholder {
+									  color: #ffffff;
+									}
+									.cd-search input[type="search"]:focus {
+									  background: #ffffff;
+									  color: #111433;
+									  outline: none;
+									}
+									.cd-search input[type="search"]:focus::-webkit-input-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus::-moz-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus:-moz-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									.cd-search input[type="search"]:focus:-ms-input-placeholder {
+									  color: rgba(17, 20, 51, 0.4);
+									}
+									@media only screen and (min-width: 1024px) {
+									  .cd-search input[type="search"] {
+									    background-color: #ebebeb;
+									  }
+									  .cd-search input[type="search"]::-webkit-input-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]::-moz-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]:-moz-placeholder {
+									    color: #b3b3b3;
+									  }
+									  .cd-search input[type="search"]:-ms-input-placeholder {
+									    color: #b3b3b3;
+									  }
+									}
+
+									.has-children > a, .go-back a {
+									  position: relative;
+									}
+									.has-children > a::before, .has-children > a::after, .go-back a::before, .go-back a::after {
+									  /* arrow icon in CSS - for element with nested unordered lists */
+									  content: '';
+									  position: absolute;
+									  top: 50%;
+									  margin-top: -1px;
+									  display: inline-block;
+									  height: 2px;
+									  width: 10px;
+									  background: #ffffff;
+									  -webkit-backface-visibility: hidden;
+									  backface-visibility: hidden;
+									}
+									.has-children > a::before, .go-back a::before {
+									  -webkit-transform: rotate(45deg);
+									  -moz-transform: rotate(45deg);
+									  -ms-transform: rotate(45deg);
+									  -o-transform: rotate(45deg);
+									  transform: rotate(45deg);
+									}
+									.has-children > a::after, .go-back a::after {
+									  -webkit-transform: rotate(-45deg);
+									  -moz-transform: rotate(-45deg);
+									  -ms-transform: rotate(-45deg);
+									  -o-transform: rotate(-45deg);
+									  transform: rotate(-45deg);
+									}
+
+
+									.has-children > a {
+									  padding-right: 40px;
+									}
+									.has-children > a::before, .has-children > a::after {
+									  /* arrow goes on the right side - children navigation */
+									  right: 20px;
+									  -webkit-transform-origin: 9px 50%;
+									  -moz-transform-origin: 9px 50%;
+									  -ms-transform-origin: 9px 50%;
+									  -o-transform-origin: 9px 50%;
+									  transform-origin: 9px 50%;
+									}
+
+
+									.cd-dropdown-content .go-back a {
+									  padding-left: 40px;
+									}
+									.cd-dropdown-content .go-back a::before, .cd-dropdown-content .go-back a::after {
+									  /* arrow goes on the left side - go back button */
+									  left: 20px;
+									  -webkit-transform-origin: 1px 50%;
+									  -moz-transform-origin: 1px 50%;
+									  -ms-transform-origin: 1px 50%;
+									  -o-transform-origin: 1px 50%;
+									  transform-origin: 1px 50%;
+									}
+
+									.cd-main-content {
+									  background-color: #e6e6e6;
+									  min-height: calc(100vh - 100px);
+									  padding: 2em 5%;
+									  line-height: 2;
+									}
+
+									.no-js .cd-dropdown-wrapper:hover .cd-dropdown {
+									  visibility: visible;
+									  opacity: 1;
+									  -webkit-transform: translateY(0);
+									  -moz-transform: translateY(0);
+									  -ms-transform: translateY(0);
+									  -o-transform: translateY(0);
+									  transform: translateY(0);
+									}
+
+									.no-js .cd-dropdown-wrapper .cd-close {
+									  display: none;
+									}
+
+
+									ul.cd-dropdown-content{
+										margin:0 0 0 0;
+									}
+
+									.cd-dropdown-content ul{
+										margin:0 0 0 0;
+									}
+
+									.row
+									{
+										margin-left:0;
+									}
+
+
+									.cd-dropdown-wrapper *, .cd-dropdown-wrapper *::after, .cd-dropdown-wrapper *::before {
+									  box-sizing: border-box;
+									}
+
+									form.cd-search
+									{
+										margin:0;
+									}
+
+							
+									@media only screen and (max-width: 767px) {
+										  .navbar-inverse {
+										    display:none; 
+											}
+											.main-header #toggle-mobile-search {
+											   display:none !important;
+											  }
+									}
+									
+
+									@media only screen and (min-width: 767px) {
+										.cd-dropdown-wrapper
+										{
+											display:none;
+										}
+										 a:hover
+							       			 {
+							        				color: #63c44d !important;
+							      			  }
+									}
+
+
+									/* Color CSS - Mobile Nav*/
+
+									.cd-dropdown-content li
+									{
+										background-color: transparent;
+									}
+
+									.cd-dropdown
+									{
+										/*background-color: rgba(26,157,92,0.97);*/
+										background-color: rgb(26,157,92);
+									}
+									
+									li.has-children.zerowaste-color
+									{
+										/*background-color: rgba(247,139,30,0.9);*/
+										background-color: rgb(247,139,30);
+									}
+
+									.navbar-inverse .navbar-inner
+									{
+										background-color: #0e8c1b;
+									}
+
+
+									/* Desktop General Green Color  */
+									.menu-style
+									{
+										background-color: #0e8c1b;
+									}
+
+
+
+
+									#nav .active
+									{
+										background-color: #0e8c1b !important;
+									}
+
+
+
+									#zw-menu.active 
+									{
+										background-color: #e26e25 !important;
+										color : white;
+									}
+
+
+									.menu-bar
+									{
+										background-color: #686868;
+									}
+
+									.dropdown-menu > li > a
+									{
+										background-color: #686868;
+									}
+
+
+							        a.dropdown-toggle:hover
+							        {
+							        	background-color:#3ab239;
+							        	color:white !important;
+							        }
+
+
+							        .popover-title
+							        {
+  										background-color: #63c44d;
+  										color: white;
+							        }
+
+							        .popover
+							        {
+							        	background-color: rgb(230, 230, 230);
+							        }
+
+							        
+
+
+
+
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#0e8c1b;
+							        	text-shadow:none;
+							        	font-size: 16px;
+							        }
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#686868;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style:hover
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+
+
+							        .navbar-inverse .nav .active.current-location> a.dropdown-toggle.top-menu-style
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+									
+									.navbar-inverse .nav .active > a.top-menu-style
+							        {
+							        	background-color:#0e8c1b;
+							        	text-shadow:none;
+							        	font-size: 16px;
+							        }
+
+							        .navbar-inverse .nav .active > a.top-menu-style:hover
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.top-menu-style
+							        {
+							        	background-color:#686868;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.top-menu-style:hover
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+
+
+							        .navbar-inverse .nav .active.current-location> a.top-menu-style
+							        {
+							        	background-color:#686868;
+							        	color: white !important;
+							        }
+
+
+							        .top-menu-orange .popover-title
+							        {
+							        	background-color: #feb913;
+							        	color : #636466;
+
+							        }
+
+							        .open > .menu-style
+							        {
+							        	background-color: #686868;
+							        }
+
+
+							        .navbar .dropdown-menu > li > a:hover {
+							            background-image: none;
+							            color: white !important;
+							            background-color: #63c44d;
+							        }
+
+							        .navbar .dropdown-menu > li > a.maintainHover {
+							            color: white;
+							            background-color: #63c44d;
+							        }
+
+							       
+
+
+									/* Zero waste orange */
+							        #desktop-orange
+							        {
+							        	background-color: #e26e25;
+							        }
+
+									#desktop-orange .menu-style
+									{
+										background-color: #e26e25;
+									}
+
+									#desktop-orange .open > .menu-style
+									{
+										background-color: #f78b1e;
+									}
+
+
+									#desktop-orange .menu-bar
+									{
+										background-color: #f78b1e;
+									}
+
+									#desktop-orange .dropdown-menu > li > a
+									{
+										background-color: #f78b1e;
+									}
+
+							        #desktop-orange .dropdown-menu > li > a:hover {
+							            background-image: none;
+							            color: #636466 !important;
+							            background-color: #feb913;
+							        }
+
+							        #desktop-orange .dropdown-menu > li > a.maintainHover {
+							            color: #636466;
+							            background-color: #feb913;
+							        }
+
+							        #desktop-orange .popover-title
+							        {
+							        	 color: #636466;
+							        	 background-color: #feb913;
+							        }
+
+							         #desktop-orange .popover-content > a:hover
+							         {
+							         	color: #e26e25 !important;
+							         }
+
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style.top-menu-orange
+							        {
+							        	background-color:#e26e25;
+							        	text-shadow:none;
+							        }
+
+							        .navbar-inverse .nav .active > a.dropdown-toggle.top-menu-style:hover.top-menu-orange
+							        {
+							        	background-color:#f78b1e;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style.top-menu-orange
+							        {
+							        	background-color:#f78b1e;
+							        }
+
+							        .navbar-inverse .nav .active.open > a.dropdown-toggle.top-menu-style:hover.top-menu-orange
+							        {
+							        	background-color:#f78b1e;
+							        	color: white !important;
+							        }
+
+
+							        .navbar-inverse .nav .active.current-location > a.dropdown-toggle.top-menu-style.top-menu-orange
+							        {
+							        	background-color:#f78b1e;
+							        }
+
+
+							        .menu-zerowaste
+							        {
+							        	background-color:#e26e25;
+							        	color: white;
+							        }
+
+							        .menu-zerowaste > a
+							        {
+							        	color: white !important;
+							        }
+
+							        .main-header nav ul li:hover
+							        {
+							        	background-color: #686868;
+							        	color: white;
+							        }
+
+							        .main-header nav ul li a:link
+							        {
+							        	color: #005949;
+							        	font-size: 16px;
+							        }
+
+							        .main-header nav ul li a:visited, .main-header nav ul li a:active
+							        {
+							        	color: #005949;
+							        	font-size: 16px;
+							        }							        
+
+
+									.main-header nav ul li.nav-home a
+									{
+										background: url("/assets/dsny/img/nav-sprite.png") no-repeat center 14px;
+									}
+
+
+									.main-header .global-input-search .field-search .ico-search									
+									{
+										background: url("/assets/dsny/img/sprite-ico-search.png") no-repeat white left 6px;
+									}
+
+									.main-header .global-input-search .field-search .input-search
+									{
+										color: #005949;
+									}
+
+									.agencies-about-links ul li a
+									{
+										color : #379800;
+									}
+									
+									.agencies-about-links ul li.active a,.agencies-about-links ul li.active a:hover, .agencies-about-links ul li.active a:focus 
+									{
+										color: #686868 !important;									
+									}
+
+									.page-breadcrumb
+									{
+										font-size: 14px;
+										color: #686868;
+									}
+
+									.page-breadcrumb a, .page-breadcrumb a:visited
+									{
+										color: #0e8c1b;
+									}
+
+									.page-breadcrumb a.breadcrumb-active-page, a.breadcrumb-active-page:link, a.breadcrumb-active-page:visited 
+									{
+										color: #686868;
+									}
+
+									.page-breadcrumb a.breadcrumb-active-page:hover
+									{
+										color: #686868 !important;
+									}
+
+
+									#desktop-orange .popover-content a
+									{
+										color: #e26e25;
+									}
+
+									#desktop-orange .popover-content a:hover
+									{
+										color: #feb913 !important;
+									}
+
+									.ui-widget
+									{
+										font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+									}
+
+
+									.ui-widget-content a {
+
+									  color: #0e8c1b;
+
+									}
+
+									.ui-state-default
+
+									{
+
+									  border: 0;
+
+									  background: none;
+
+									  font-weight: normal;
+
+									  color: #FFFFFF;
+
+									  background-color: #0e8c1b;
+
+									}
+
+									.ui-state-hover
+
+									{
+
+									  border: 0;
+
+									  background: none;
+
+									  font-weight: normal;
+
+									  color: #FFFFFF;
+
+									  background-color: #686868;
+
+									}
+
+									.ui-state-active {
+
+									  border: 0;
+
+									  background: none;
+
+									  font-weight: normal;
+
+									  color: #FFFFFF;
+
+									  background-color: #686868;
+
+									}
+
+									.ui-state-default .ui-icon {
+
+									  background-image: url("/assets/dsny/img/ui-icons_888888_256x240_white.png");
+
+									}
+
+									.ui-state-default .ui-state-active .ui-icon {
+
+									  background-image: url("/assets/dsny/img/ui-icons_888888_256x240_white.png");
+
+									}
+
+									.ui-state-default:focus
+
+									{
+
+									outline:none;
+
+									}
+
+									.ui-widget-content {
+									  border: 0;
+									  background: #f3f3f3;
+									  color: #222222;
+									}
+
+									.ui-accordion .ui-accordion-header .ui-accordion-header-icon
+									{
+									  left: 0.7em;
+									}
+
+
+
+
+									/*.cd-dropdown-content
+									{
+										background-color: #005949;
+									}*/
+
+									.content-container
+									{
+									   min-height: 550px;
+									   margin-top: 2px;			
+									}
+									.agencies-about-links ul li:last-child a {
+									   border-bottom: 0px solid #eeeeee;  
+								    }
+
+								    .share
+								    {
+								    	z-index:500;
+								    }								
+									
+								  @media (max-width: 767px), screen and (max-device-width: 767px)
+									{
+										.wrapper-banner-top
+										{
+											overflow-x:hidden;
+										}
+										.wrapper-banner-top img.banner-top
+										{
+											max-width: none;
+									    	height: 75px;
+									    	width: auto;
+										}
+
+										.old-social {
+										    display: block;
+										}
+										
+										.agencies-about-share {
+										  padding: 20px 0 0px 0 !important;										
+										}
+										
+										.agency-logo-wrapper{top:0px; width: 88%;}
+
+										.new-social
+										{
+											display: none;
+										}							
+										
+										.leftimage
+										{
+											margin-right: 80px !important;
+										}
+										
+									}
+
+								.about-description h1, h1
+								{ 
+								  font-size: 32px;	
+								  margin-bottom: 10px;
+								}
+								
+								.about-description h2, h2
+								{ 
+								  font-size: 28px;	
+								  color: #686868;
+								}
+
+								h3
+								{ 
+								  font-size: 24px;	
+								}
+								
+								  .btn, .btn:focus
+								  {
+								    position: relative;
+								    text-shadow: none;
+								    box-shadow: none;
+								    background-image: none;
+								    color: white;
+								    width: 15.7%;
+								    padding: 5px 0;
+								    background-color: #63c44d;
+								    border: 1px solid white;
+								    border-radius: 0;
+								  }
+
+								  .btn:hover
+								  {
+								    color:white;
+								    background-color:#686868;
+								    border:1px solid white;
+								  }
+
+								  @media only screen and (max-width: 500px)
+								  { 
+								    .btn
+								    {
+								    width:25%;
+								    }
+								  }
+
+								  @media only screen and (max-width: 767px), screen and (max-device-width: 767px)
+								  {
+								  	.about-main-image
+								  	{
+								  		margin-top:20px;
+								  	}
+
+								  	.about-description h1, h1
+								  	{
+								  		line-height:35px;
+								  	}
+
+								  	.about-description h2, h2
+								  	{
+								  		line-height:30px;
+								  	}									
+								  }
+								  
+								  @media only screen and (min-width: 767px) and (max-width: 900px) {
+									  .longTxtMenu
+									{
+									  line-height: 25.5px !important;
+									} 
+									
+									.open .longTxtMenu
+									{
+									  line-height: 26px !important;
+									} 
+									
+								}								
+								
+								.share .facebook_custom {background: url("/assets/dsny/img/facebook20px.png") no-repeat; }
+									  
+								.share .twitter_custom {background: url("/assets/dsny/img/twitter20px.png") no-repeat; }
+									  
+								.share .googleplus_custom {background: url("/assets/dsny/img/google-plus20px.png") no-repeat; }
+									  
+								.share .tumblr_custom {background: url("/assets/dsny/img/tumblr20px.png") no-repeat; }
+									  
+								.share .email_custom {background: url("/assets/dsny/img/email20px.png") no-repeat; }
+									
+									
+							    </style>
+								
+								<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css" >
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+
+    <!--[if lte IE 8]>
+	<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-old-ie-min.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<!--<![endif]-->
+<link href="/assets/donate/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="/assets/donate/css/bootstrap-glyphicon.css" rel="stylesheet">
+
+<style>
+	
+
+    #msform fieldset
+    {
+        border: none;
+        max-width: 940px; /*stacking fieldsets above each other*/
+        position: relative;
+    }
+    /*Hide all except first fieldset*/
+    .fieldset2
+    {
+        display: block;
+    }
+    .fieldset3
+    {
+        display: none;
+    }
+    .fieldset4
+    {
+        display: none;
+    }
+    .error
+    {
+        border-color: #e9322d !important;
+    }
+    .chkCls
+    {
+        width:50%!important;
+        /* margin: .5em 0 .2em!important; */
+     }
+    
+	.txtValue{
+	    width: 30PX!important;
+		align-items: center;
+		margin:0px!important;
+		text-align:center;
+	}
+	.table td {
+		border-top:0px!important;
+	}
+	.divimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	.divdecimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	
+	.ctglistdiv{
+		 line-height: 25px;
+	}
+	.ctgDiv{
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0px;
+	}
+	.tvSubCtg{
+	    line-height: 36px;
+	}
+	.sbClass { 
+		background-color: #F5F5F5;
+		font-size:14px!important;
+	}
+	.section {
+		background-color: #CCCCCC!important;
+		color:white!important;
+	}
+	.clsBottomborder{
+		border-bottom: 1px solid #ccc;
+	}
+	#subcontainer {
+ 
+		border: 0px!important;
+		font-size:14px!important;
+	}
+	.label{
+			background-color:transparent!important;
+			text-align: right;			 
+			display: block;
+			line-height: 20px;
+			font-weight: bold!important;
+		}
+	.data_long{
+		background-color:transparent!important;
+		line-height: 20px;
+	} 
+	.ctgName div:after{
+		content: "_____________________________________________________________________";
+	}
+	.disableText{
+		background-color: transparent!important;
+		color: #000!important;
+	}
+	.ctgAddressInfo{
+		background-color:#F5F5F5;
+		padding:10px 0px;
+	}
+	.textbold{
+	    font-size: 14px;		 
+		color: #333;
+		font-weight: bold;
+		margin: 0 0 0 10px; 
+		float:left;
+		padding-right: 5px;
+	}
+	.addressText{
+	    font-size: 14px;		 
+		color: #333;		
+		margin: 0 0 0 10px; 
+	} 
+	.pure-u-md-3-24 {
+		text-align: right;			
+	}  
+	
+	.step4{
+		display: inline-block;
+		background: url('/assets/dsny/images/content/webforms/step4-comfirm.png');
+		width: 133px;
+		height: 56px;
+		margin: 0 10px 10px 0;
+		opacity: 0.7;
+		transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-webkit-transition: opacity 1s ease-in-out;
+	}
+	.step4:hover {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+		opacity: 1.0;
+		transition: opacity .55s ease-in-out;
+		-moz-transition: opacity .55s ease-in-out;
+		-webkit-transition: opacity .55s ease-in-out;
+	}
+	.active4 {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+	}
+	.fieldset5{
+		font-size: 14px!important;
+	}
+	.errormsg{
+		color:red!important;
+	}	
+	img.imginchv:hover {
+		background: url('/assets/dsny/img/plus.png') no-repeat;    
+		background-position: center;
+		background-size: cover;
+	}
+	img.imgdechv:hover {
+		background: url('/assets/dsny/img/minus.png') no-repeat;    
+		background-position: center;
+		background-size: cover;   
+	}
+	@media (max-width: 767px){
+		.pure-u-sm-2-24 {
+			width: 8.3333%;
+			float: left;
+		} 
+		.pure-u-sm-19-24{
+			width: 60.1667%;
+			float: left;
+		} 
+		.pure-u-sm-18-24{
+			width: 60.1667%;
+			float: left;
+		}
+		.pure-u-md-1-24{
+			width: 6%;
+			float:left;
+		}
+		.pure-u-md-20-24 {
+			width: 63%;
+			float:left;
+		}
+		.pure-u-md-3-24 {
+			width: 31%;
+			float: right;
+			text-align: right;			
+		} 
+		.chkCls
+		{
+			width:80%!important;        
+		}
+		.pure-u-8-24, .pure-u-4-24, .pure-u-11-24 {
+			width: 100% !important;
+		} 
+		
+	}
+	
+	ul.leaders {
+	  padding: 0;
+	  font-size:14px!important;
+	}
+	ul.leaders li {
+	  display: table;
+	  line-height: 25px!important;
+	}
+	ul.leaders li span {
+	  display:        table-cell;
+	}
+	ul.leaders li span:first-child { /* TITLE */
+	  position:       relative;
+	  overflow:       hidden;       /* Don't go underneath the price */
+	}
+	ul.leaders li span:first-child:after { /* DASHES */
+	  content:        "";
+	  position:       absolute;
+	  bottom:         0.5em;        /* Set as you want */       
+	  margin-left:    0.5em;        /* Keep same for the next span's left padding */
+	  width:          100%;
+	  border-bottom:  1px solid #c7c7c7; 
+	}
+	ul.leaders li span + span {     /* PRICE */
+	  text-align:     right;
+	  width:          1%;           /* Trick it */
+	  vertical-align: bottom;       /* Keep Price text bottom-aligned */
+	  padding-left:   0.5em;
+	  /* white-space: nowrap;       /* Uncomment if needed */
+	}
+	
+	.bootstrap-datetimepicker-widget table td.disabled, .bootstrap-datetimepicker-widget table td.disabled:hover {         
+        color: #e3e3e2 !important;        
+    }
+    .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+        background-color: #eeeeee !important;   
+    }
+	
+	
+	.agency-header, .main-header{
+		display: none !important
+	}
+
+	#search-input {
+		display: inline-block;
+		max-width: 85%;
+		margin-right: 10px;
+	}
+	
+	
+	#searchSR{
+			background-color:#000000; 
+			padding: 0.1em 1em;
+			vertical-align: top; 
+			height: 28px;
+			color: #fff;
+		}
+		
+	#searchSR:hover{
+		background-color: #454545; 
+		padding: 0.1em 1em;
+		vertical-align: top; 
+		height: 28px;
+		color: #fff;
+		/*border: 1px solid #000;*/
+	}
+	
+	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq, #btnCancel, #btnStep2, #closeSR{
+		background-color:#000000; 
+		padding: 0.1em 1em;
+		vertical-align: top; 
+		height: 28px;
+		color: #fff;
+	}
+	
+	#submitrq[disabled], #submitrq[disabled]:hover{
+	  background-color: #000000 !important;
+	}
+		
+	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover{
+		background-color:#454545 !important; 
+		padding: 0.1em 1em;
+		vertical-align: top; 
+		height: 28px;
+		color: #fff !important;
+		/*border: 1px solid #000;*/
+	}
+	
+	.page-breadcrumb, .socialPlugin, .agencies-about-share { display: none !important}
+	
+	/*.button {
+  /*margin: 0 0 0 5px;*/
+  text-indent: -9999px;
+ /* cursor: pointer; */
+  width: 20px;
+  height: 20px;
+  float: left;
+  text-align: center;
+}*/
+
+.inc
+ {
+ /*	margin: 8px; */
+ /* float: right !important; */
+/*	display: inline-block; */
+/*	 background: url(/assets/dsny/img/hover-plus.png) no-repeat; */
+}
+
+.dec , .inc
+{
+	/* margin: 8px 0 0 16px; */
+	display: inline-block;
+	 /* background: url(/assets/dsny/img/hover-minus.png) no-repeat; */
+}
+ 
+.helpicon
+{
+	margin: 6px 0 -2px 8px;
+	display: inline-block;
+	background: url(/assets/dsny/img/helpicon.png) no-repeat;
+	text-indent: -9999px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+}
+
+/*.incpointer
+ {
+	cursor: pointer;
+	margin: 8px;
+	float: right !important;
+	display: inline-block;
+	background: url(/assets/dsny/img/plus.png) no-repeat;
+	}
+.decpointer
+{
+	cursor: pointer;
+	margin: 8px 0 0 16px;
+	display: inline-block;
+	 background: url(/assets/dsny/img/minus.png) no-repeat;
+}*/
+
+.inchide
+ {
+	cursor: pointer;
+	margin: 8px;
+	float: right !important;
+	display: inline-block;
+	}
+.dechide
+{
+	cursor: pointer;
+	margin: 8px 0 0 16px;
+	display: inline-block;
+}
+
+input[disabled], input[disabled]:hover{
+  cursor: none;
+}
+.divlable{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #333;
+	font-weight: bold;	
+	margin: .5em 0 .2em;
+	float:left;
+}
+.divlableNote{
+	font-size: 12px;	
+	color: #333;	
+	margin: .5em 0 .2em;
+}
+</style>
+ 
+
+								<!--[if (gte IE 6)&(lte IE 8)]>        <script type="text/javascript" src="/assets/home/js/libs/selectivizr.js"></script>        <![endif]--><!--[if IE 8]>        <script type="text/javascript" src="/assets/home/js/libs/respond.min.js"></script>        <![endif]--><script src="/assets/home/js/libs/modernizr-2.6.2.min.js" type="text/javascript"></script><!--
+									ls:end[head-injection]
+								--><!--
+									ls:begin[script]
+								--><!--
+									ls:end[script]
+								-->
+								<script src="/assets/dsny/js/agencies/megamenu/modernizr.js"></script> <!-- Modernizr -->
+								<script type="text/javascript"> 
+									
+										if (location.href.indexOf("https://") == -1) { 
+											location.href = location.href.replace("http://", "https://"); 
+										} 
+									
+								</script>
+								</head>
+								
+								
+								<!--#include virtual="/assets/dsny/templates/mobilenav/mobilenavigation.shtml" -->
+<!--#include virtual="/assets/dsny/templates/level1menu/level1menu.shtml" -->
+
+	<div class="ls-cmp-wrap ls-1st" id="w1407802447993"><!--
+		ls:begin[component-
+		1407802447993
+		]
+	--><div class="iw_component" id="1407802447993">
+
+	<!--<div class="row" style="background-color:#FFF200">-->
+	<div class="row" style="background-color: #5B4D7C; height:80px;">
+      
+			<div class="container">
+				<h1 style="margin-top:20px;margin-bottom:20px;"><span id="top-header" style="color:#FFFFFF">BULK PICKUP FORM</span></h1>
+			</div>		
+		
+    </div>
+
+				</div>
+				</div><!--
+							ls:end[component-
+							1407802447993
+							]
+						--></div>
+
+
+
+
+
+<!--#include virtual="/assets/dsny/templates/breadcrumb/breadcrumb.shtml" -->
+
+<title>DSNY - Contact - Supervisor Bulk Pickup Form</title>
+
+<div id="contentsection" class="about-main-image" style="margin-top: -15px">
+    <div class="span6 about-description">
+        <div id="container">
+            <!--<div id="header">  
+                <h1>
+                    <span class="subtitle" id="ReqHeader" >Step 1 - General Info</span></h1>
+            </div>-->
+            
+            <!-- <form id="msform" class="pure-form" method="post" type="external" name="BWPRR Participation Request Form"    action="http://www.nyc.gov/doittcaptcha/validatecap"> -->
+			<form id="msform" class="pure-form" method="post"  type="external" name="E-Pick up Request Form" >  
+             
+            <input name="app_key" type="hidden" value="06F6620746865206F" /> 
+            <input name="GEOcity" id="GEOcity" type="hidden" />
+            <input name="GEOzipcode" id="GEOzipcode" type="hidden" />
+			<input name="GEOCrossStreet" id="GEOCrossStreet" type="hidden" />
+			<input name="GEOPickupStreet" id="GEOPickupStreet" type="hidden" />
+			<input name="GEODistrict" id="GEODistrict" type="hidden" /> 
+            <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
+            <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
+			<input name="Lat" id="Lat" type="hidden" /> 
+			<input name="Long" id="Long" type="hidden" /> 
+			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
+			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
+
+            <div style="text-align: right; font-size: 12px" id="reqfld">
+                <span class="red">*</span>Denotes required field</div>
+            <fieldset class="fieldset1">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section">Enter your address</div>
+                        <div class="table">
+							
+                            <div class="pure-u-8-24">
+                                <label for="boro">
+                                    Boro<span class="red">*</span></label>
+                                <select id="boro" name="boroughName" required type="select-one" tabindex="3">
+                                    <option selected="selected" value="">Select a borough</option>
+                                    <option value="2">Bronx</option>
+                                    <option value="3">Brooklyn</option>
+                                    <option value="1">Manhattan</option>
+                                    <option value="4">Queens</option>
+                                    <option value="5">Staten Island</option>
+                                </select>
+                            </div> 
+                            <div class="pure-u-4-24">
+                                <label for="houseNumber">
+                                    BLDG#<span class="red">*</span></label>
+                                <input id="houseNumber" name="houseNumber" tabindex="4" type="text" required maxlength="10" />
+                            </div>
+                            <div class="pure-u-9-24"> 
+                                <label for="street">
+                                    Street<span class="red">*</span></label>
+                                <input id="street" name="streetName" tabindex="5" type="text" required maxlength="50" />
+                            </div>
+							<div style="display: inline;">
+							
+								<button id="nextstep2" class="pure-button next" style="margin-top: 28px; float: right" tabindex="6">
+									Verify</button>
+							</div>
+                            
+                            <br />
+                            <div id="results" class="pure-u-sm-24-24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </fieldset>
+			
+			<div id="divNonDualBin" style="display:none" >
+				<p>Your address and recycling day have been verified as:</p>
+				<div class="ctgAddressInfo">
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Address: </div> <div id="rdAddressNonDual" class="addressText" > </div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Cross Street: </div>  <div id="rdStreetNonDual" class="addressText"> </div>
+					</div>
+				</div>
+				<br/>
+				<p><b>Good news! You do need to schedule for bulk garbage pickups. Just place your bulk garbage curbside after 4pm the night before your scheduled collection day.</b></p>
+				<p>Your Regular collection days are: <span id="collectionDays"></span></p>
+            </div>
+			
+			<div id="Step2div" style="display:none" >  
+                <!--<p><div id="stepmsg" > 
+                    Your address and recycling day have been verified as:
+				 </div></p>-->
+				<div class="ctgAddressInfo"> 
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Address: </div> <div id="rdAddress" class="addressText" > </div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Cross Street: </div>  <div id="rdStreet" class="addressText"> </div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-3-b" id="currentAppDate" style="display:none">
+							<div class="textbold"> Current Appointment Date: </div>  <div id="currentAppDateVal" class="addressText"> </div>
+					</div>
+				</div>   
+            </div> 
+			
+			<!--<div id="header2">  
+                <h1>
+                    <span class="subtitle">Step 2 - Specific Info</span></h1>
+            </div>-->
+			
+            <fieldset class="fieldset2">
+                <div class="pure-g">
+                    <div id="subcontainer">
+                        <div class="section">Specific information</div>
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="PICKUP LOCATION">
+                                    Pick up location<span class="red">*</span></label>
+                                <select name="PICKUP LOCATION" id="lstPickUpLocation" type="select-one" tabindex="14"
+                                    disabled>
+                                    <option selected="selected" value="">Please select one:</option>
+                                    <!-- <option value="1">Center Street</option>
+                                    <option value="2">White Street</option> -->
+                                </select>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="ApptDate">
+                                    Appointment Date<span class="red">*</span></label>
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' onkeydown="return false" id="slapptdate" disabled tabindex="15" maxlength="15" />
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div> 
+                            </div>
+                            <!--<div class="pure-u-1 pure-u-md-1-3-b">
+                                <div class="divlable">Electronic Category<span class="red">*</span> </div>
+								<div class="divlableNote"> (Maximum of 20 items including no more than 5 TVs per request) </div> 
+							</div>-->
+							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
+							</div>
+							
+					   </div>
+                        <br />
+                        <div class="section">Contact information </div>
+                        <div class="table">
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-FIRST-NAME">
+                                    First Name<span class="red">*</span></label>
+                                <input maxlength="25" name="CONTACT-1-FIRST-NAME" id="CONTACT-1-FIRST-NAME" type="text"
+                                    tabindex="26" disabled />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-LAST-NAME">
+                                    Last Name<span class="red">*</span></label>
+                                <input maxlength="25" name="CONTACT-1-LAST-NAME" id="CONTACT-1-LAST-NAME" type="text"
+                                    tabindex="27" disabled />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-1-PHONE">
+                                    Phone<span class="red">*</span></label>
+                                <input maxlength="21" name="CONTACT-1-PHONE" id="CONTACT-1-PHONE" type="text" tabindex="28"
+                                    disabled />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-EMAIL">
+                                    Email<span class="red">*</span></label>
+                                <input maxlength="50" name="CONTACT-EMAIL" id="CONTACT-1-EMAIL" type="text" tabindex="29"
+                                    disabled />
+                            </div>
+                            <div class="pure-u-1 pure-u-md-1-3">
+                                <label for="CONTACT-CONFRIM-EMAIL">
+                                    Confirm Email<span class="red">*</span></label>
+                                <input maxlength="50" name="CONTACT-CONFRIM-EMAIL" id="CONTACT-CONFRIM-EMAIL" type="text"
+                                    tabindex="30" disabled />
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+             	
+				<div>
+						
+						<button id="nextstep3" class="pure-button next" style="margin-top: 28px; float: right" tabindex="48">
+							Next</button>
+				</div>
+            </fieldset>
+			<!--<div id="header3" style="display: none">  
+                <h1>
+                    <span class="subtitle">Step 3 - Submit</span></h1>
+            </div>-->
+            <fieldset class="fieldset3" >
+                <div class="pure-g"> 
+                    <div id="subcontainer" class="sbClass" style="background-color:#ffffff">  
+                        <!--<div id="step3section" class="section">Review and Submit</div>-->
+						
+						<!--<div id="step3buttons" class="pure-u-1 pure-u-md-24-24" style="display:none">
+							
+							<div class="pure-u-1-3">
+								<button id="cancelSR" class="pure-button next" style="margin-top: 8px; margin-left: 10px; float: left" tabindex="49">
+									Cancel Request</button>
+							</div>
+							
+							<div class="pure-u-1-3">
+								<div id="disSRNo" style="text-align: center; margin-top: 10px"></div>
+							</div>
+							
+							<div style="display: inline;" class="pure-u-1-3">
+								<button id="rescheduleSR" class="pure-button next" style="margin-top: 8px; margin-right: 10px; float: right" tabindex="50">
+									Reschedule</button>
+							</div>
+						
+						</div>-->
+                        <div class="table">
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Address :</div>
+                                <div id="disaddress" class="data_long">
+                                </div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Cross Street :</div>
+                                <div id="disCrsStrt" class="data_long"></div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24">							
+                            </div>	 
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Pick Up Location :</div>
+                                <div id="disPckLocation" class="data_long">
+                                </div>
+                            </div>  
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Appointment Date :</div>
+                                <div id="disApptDate" class="data_long">
+                                </div>
+                            </div>
+							<br>
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
+							
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                              <!--   <div id="displayItem" class="ctglistdiv"></div>  -->
+								<ul id="displayItem" class=leaders>
+								
+								</ul>
+                            </div>
+							<br> 
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">First Name :</div>
+                                <div id="disfname" class="data_long">
+                                </div>
+                            </div>   
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Last Name :</div>
+                                <div id="dislname" class="data_long">
+                                </div> 
+                            </div>  
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Phone :</div>
+                                <div id="disphone" class="data_long">
+                                </div>
+                            </div>  							
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Email :</div>
+                                <div id="disemail" class="data_long"> 
+                                </div> 
+                            </div>                           
+                        </div>
+						<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
+							
+							<div class="pure-u-1-3">
+									&nbsp;
+							</div>
+							
+							<div class="pure-u-1-3" style="text-align:center">
+									<button id="closeSR" class="pure-button next" style="margin-top: 8px; margin-right: 10px; margin-bottom: 8px;" tabindex="51">
+									Close</button>
+							</div>
+							
+							<div style="display: inline;" class="pure-u-1-3">
+									&nbsp;
+							</div>
+						
+						</div>
+                        <br />
+                    </div>
+                
+					
+				</div>
+                <br />
+            </fieldset>
+            <div id="fieldset4" class="fieldset4">
+			 <div class="pure-u-1 pure-u-md-1-3-b" style="display:none"> 
+					<div class="pure-u-md-11-24"> &nbsp; </div>
+					<div class="pure-u-md-12-24" style="text-align:right;"> 
+						<input type="checkbox" id="chkTC" required checked="checked"/>  I certify that this request is not for a commercial business.<span class="red">*</span>
+					</div>
+					<br>
+				 </div> 
+				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>
+                <div class="row"> 
+                    <!-- 
+					<div class="container">
+                        <div class="span4">
+                            &nbsp;</div>
+                        <div id="captcha" class="span5">
+                            <script type="text/javascript" src="http://www.nyc.gov/apps/doittcaptchascript/captcha_script.js?theme=white&amp;key=6LcmfNESAAAAADLfXuprBbgteVnCruh8RAVC3hO7"></script>
+                        </div>
+                        <div class="span6">
+                        </div>
+                    </div>
+					
+					<div class="container" style="text-align: center; text-align: -webkit-center;">
+                            <div class="g-captcha" id="rcaptcha">
+                                <script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=6Ldi8iETAAAAADBF2c6b2b9qBUGe3YDJp5Gp9MTq"></script>
+                                <textarea id="recaptcha_challenge_field" name="recaptcha_challenge_field" rows="3" cols="40" style="display: none"></textarea>
+                                <input type="hidden" id="recaptcha_response_field" name="recaptcha_response_field" value="manual_challenge" />
+                            </div>
+                            <div id="divInvalidMessage" style="color: red; font-size: 14px; height: 15px"></div>  
+                        </div> -->
+                </div> 
+				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>				
+               
+				<div> 
+						<!--<button id="previousstep2" class="pure-button next">
+                        &nbsp;<strong>Previous</strong>&nbsp;</button>-->
+						
+						<button id="submitrq" class="pure-button next" style="margin-top: 0px; float: right">
+							Submit</button>
+				</div>
+            </div>
+			 <fieldset class="fieldset5" style="display:none;">
+				<div class="pure-g"> 
+                    <div id="subcontainer"   style="text-align:center">
+									Thank you for submitting the pickup request. <br>The Service Request number is <br/><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/> Use this number when you check the status of this request. 
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnNewReq" class="pure-button next" style="margin-top: 28px; align: center">
+							Schedule Another Pick Up</button>
+                </div>
+				</div>
+			 </fieldset>
+			 <fieldset class="fieldset6" style="display:none;">
+				<div class="pure-g">  
+                    <div id="subcontainer" class="errormsg" style="text-align:center">  
+						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+						
+					</div>
+					<!--<br>
+					<br> 
+					<div id="buttons">
+                    <button id="btnCancel" class="pure-button next">
+                        &nbsp;<strong>Cancel</strong>&nbsp;</button>
+                    <button id="btnStep2" class="pure-button next">
+                        &nbsp;<strong>Reschedule</strong>&nbsp;</button>
+                </div>-->
+				</div>
+			 </fieldset>
+			 <fieldset class="fieldset7" style="display:none;">
+				<div class="pure-g">  
+                    <div id="subcontainer" class="errormsg" style="text-align:center">  
+						Sorry, there already exists a request for this address on the same pick up date. 
+						
+					</div>
+						<br>
+					<br> 
+					<div id="buttons">
+					<button id="btnNewReq1" class="pure-button next" style="margin-top: 28px; align: center">
+						Schedule Another Pick Up</button>
+					
+					</div>
+				</div>
+			 </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/GeoValidation_epickup.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="/assets/donate/js/bootstrap.min.js"></script>
+<script src="/assets/donate/js/moment-2.8.3.js"></script>
+<script type="text/javascript" src="/assets/dsny/js/webforms/es5-shim.min.js"></script>
+<script src="/assets/dsny/js/webforms/bootstrap-datetimepicker.js"></script>
+<script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+//var APIUrl = 'http://msdwvw-dsndny01.csc.nycnet';
+//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
+//var APIUrl = 'https://a827-donatenyc.nyc.gov'
+ 
+ function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
+    var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
+    var centerTop = parseInt(((window.screen.availHeight - windowHeight) / 2) - windowOuterHeight);
+ 
+    var misc_features;
+    if (features) {
+      misc_features = ', ' + features;
+    }
+    else {
+      misc_features = ', status=no, location=no, scrollbars=no, resizable=no';
+    }
+    var windowFeatures = 'width=' + windowWidth + ',height=' + windowHeight + ',left=' + centerLeft + ',top=' + centerTop + misc_features;
+    var win = window.open(url, wname, windowFeatures);
+    win.focus();
+    return win;
+  }
+
+function loadCategories()
+   {
+   jQuery.support.cors = true; 
+	var arrCtg = []
+	var ctgcheck=$.ajax({
+			async: false,
+			url: APIUrl + "/BulkAPI/api/bulkpickups/GetItemCategories",
+			type: "GET",
+			dataType: 'json',		
+			crossDomain: true,
+			success: function (json) {
+				if (json != undefined){
+				var ctgStr = '';
+				$.each(json, function(key, item) {
+					ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ctgDiv" id="'+item.CategoryId+'">\
+						<div class="pure-u-md-1-24 pure-u-sm-1-24">\
+							<input type="checkbox" disabled id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
+							</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category
+						
+						/*if (item.CategoryId == 1){
+							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(350,350,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=1\',\'demo_win\');"><div class="helpicon"></div></a>'
+						}
+						else if (item.CategoryId == 17){
+							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(350,350,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=17\',\'demo_win\');"><div class="helpicon"></div></a>'
+						}
+						else if (item.CategoryId == 2){
+							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(300,300,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=2\',\'demo_win\');"><div class="helpicon"></div></a>'
+						}
+						else if (item.CategoryId == 7){
+							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(300,300,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=7\',\'demo_win\');"><div class="helpicon"></div></a>'
+						}
+						else if (item.CategoryId == 15){
+							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(300,300,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=15\',\'demo_win\');"><div class="helpicon"></div></a>'
+						}*/
+						
+						
+						ctgStr +='</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'
+						
+						if (item.hasSubCategory >= 1){
+							/*ctgStr +='<div class="inchide button" style="width:20px;" > </div>\
+								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" onkeydown="return false" value="0">\
+								<input name="ctgsum'+ item.CategoryId +'" id="ctgsum'+ item.CategoryId +'" type="hidden" />\
+								<div class="dechide button" style="width:20px;" ></div>'*/
+						}
+						else{
+							ctgStr +='<div class="dec button"><img  src="/assets/dsny/img/icon_minus.png" class="divdecimage "></div>\
+								<input type="text" class="txtValue" name="elecCtgCount" disabled id="Count'+ item.CategoryId +'" value="0">\
+								<div class="inc button"><img  src="/assets/dsny/img/icon_plus.png" class="divimage"></div>'
+						} 
+						ctgStr += '</div> '				
+						if (item.hasSubCategory  >= 1){		
+
+							arrCtg.push(item.CategoryId);
+							
+							
+						} 
+						ctgStr += '</div>'  					
+				});
+				
+					
+				$('#ElecCtg').append(ctgStr);
+				
+				$('#msform input[type="checkbox"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});
+				$('#msform input[type="text"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});   
+						
+				}
+			}
+        });
+		
+		 
+		
+		 
+		$.when(ctgcheck).done(function () { 
+			$.each(arrCtg, function(key, item) {
+			var CategoryID = item
+			var SubCategoryURL = APIUrl + '/BulkAPI/api/bulkpickups/GetItemSubCategories?CategoryID='+ CategoryID ;
+			$.ajax({
+				async: false,
+				url: SubCategoryURL ,
+				type: "GET",
+				dataType: 'json',
+				crossDomain: true,
+				success: function (json) {
+					if (json != undefined){
+					var SubctgStr = '<div class="pure-u-1 pure-u-md-1-3-b tvSubCtg" id="tvSubCategory"  style="display:none" >';
+					$.each(json, function(key, item) {
+						SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b">	<div class="pure-u-md-2-24 pure-u-sm-2-24"> &nbsp;</div><div class="pure-u-md-19-24 pure-u-sm-18-24">\
+									<label for="ELEC-CATEGORY">'+ item.SubCategory +'</label></div><div class="pure-u-md-3-24 pure-u-sm-3-24" id="'+ CategoryID +'" name="'+ item.SubCategoryId+'" >\
+											<div class="dec button"><img  src="/assets/dsny/img/icon_minus.png" class="divdecimage "></div>\
+											<input type="text" class="txtValue" name="tvSubCat'+ CategoryID +'" disabled  id="subCategory'+ item.SubCategoryId +'" value="0">\
+											<div class="inc button"><img  src="/assets/dsny/img/icon_plus.png" class="divimage" > </div>\
+										</div>\
+									</div>';
+					});
+					SubctgStr += '</div>';
+					
+					//ctgStr += SubctgStr;									
+					$('#ElecCtg').find('#'+item).append(SubctgStr);
+					
+						
+					
+				$('#msform input[type="checkbox"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});
+				$('#msform input[type="text"]').tooltipster({
+					trigger: 'custom',
+					onlyOne: true,
+					position: 'bottom'
+				});   
+					
+					}
+				}
+			});
+						
+						
+			});
+		
+		});
+	}
+
+var reqId = 0;
+	//jQuery.support.cors = true;
+    $(document).ready(function () {
+	  
+		loadCategories();
+		   
+		
+	    //$("#txtboxToFilter").keydown(
+		$(document).on("keydown","input:text.txtValue",function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             // Allow: Ctrl+A, Command+A
+            (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) || 
+             // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+		});    
+		
+	   var sum = 0 ;   
+	   //  Textbox change value 
+	   $(document).on("change","input:text.txtValue", function() {				
+		    var $button = $(this);
+		    var TextValue = parseFloat($button.val());
+		    var CatID = $button.parent()[0].id;
+		    var SubCtgSum =  parseFloat($('#ctgsum'+CatID).val());		    
+		    var TotalCategory = 0;
+			
+			if (($button[0].name == 'elecCtgCount')  ){	
+			//$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(){
+				TotalCategory = TextValue;
+			//});
+			}
+		  
+			if(($button[0].name == 'tvSubCat'+CatID ) )
+			  {   
+					TotalCategory += TextValue;
+					$('#Count'+CatID).tooltipster('hide');
+					var TotalSubCategory = 0;
+					//var SubCtgTotalValue = parseFloat(SubCtgSum + TextValue)   // Total of individual category.
+					var SubCtgTotalValue = 0;
+					
+					// Total of individual TV category
+					//$button.parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
+						SubCtgTotalValue = TextValue;
+					//});
+					
+					// Total of both TV category
+					//$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(){
+						//TotalSubCategory += parseFloat(this.value);
+					//}); 
+					 
+			  
+					if ( SubCtgTotalValue <= 99){
+					
+						//$('#Count'+CatID).val(SubCtgTotalValue);
+						//$('#ctgsum'+CatID).val(SubCtgTotalValue);
+						$button.val(TextValue); 
+					}
+					else if (SubCtgTotalValue <= 0){
+						//$('#Count'+CatID).val(1);
+						//$('#ctgsum'+CatID).val(1); 
+						$button.val(0);				
+					}
+					else if (SubCtgTotalValue  > 99){
+						//$('#Count'+CatID).val(1);
+						//$('#ctgsum'+CatID).val(1); 
+						$button.val(0);
+						$button.tooltipster('update', "You can not enter more than 99 quantity for this category.");
+						$button.tooltipster('show');
+						
+						return false;						
+					}					
+			  }
+			  else if (($button[0].name == 'elecCtgCount')  )
+			  {
+			   $button.tooltipster('update', "You can not enter more than 99 quantity for this category.");
+				$button.tooltipster('hide');
+				
+				 if (TotalCategory <= 99)
+					$button.val(TextValue); 
+				else{
+					$button.tooltipster('show');
+					$button.val(0); 
+					return false;				
+				}
+			  }		
+		});
+	   
+	   
+	   
+	   // Plus and minus quantity.
+	   $(document).on("click","div.button", function() {
+		  
+		  var $button = $(this);
+		  var oldValue = $button.parent().find("input[type=text]").val();
+		  var CatID = $button.parent()[0].id;
+		  var SubCtgSum = 0 ;
+		  if ($button.parent().find("input[type=text]").hasClass('disableText')){
+			  if ($button.hasClass("inc"))
+			  {
+				  var newVal = parseFloat(oldValue) + 1;
+				} else {
+			   // Don't allow decrementing below zero
+				if (oldValue > 1) {
+					var newVal = parseFloat(oldValue) - 1;
+				   } else {
+				   newVal = 0;				  		 
+				}
+			  }
+				var TotalCategory =  0
+			
+				if (($button.parent().find("input")[0].name == 'elecCtgCount') )
+				{
+				//$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(index, element){
+						TotalCategory = newVal;
+					//});
+				}
+			
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter quantity more than 99 for this category.");
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
+			
+				//TotalCategory = parseFloat((TotalCategory + newVal) - oldValue );
+			  
+				//SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;			  
+				
+			  if(($button.parent().find("input")[0].name == 'tvSubCat'+CatID ))
+			  {   
+					var TotalValue = 0; 					
+					//$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(index, element){
+						TotalValue = newVal;
+					//});
+					
+					TotalValue = parseFloat((TotalValue + newVal) - oldValue ); 
+					
+					if ( TotalValue <= 99){		
+							//$('#Count'+CatID).val(SubCtgTotalValue);
+							//$('#ctgsum'+CatID).val(SubCtgTotalValue); 
+							$button.parent().find("input").val(newVal);
+						}
+						else if (TotalValue <= 0){					
+							//$('#Count'+CatID).val(1);
+							//$('#ctgsum'+CatID).val(1); 
+							$button.parent().find("input").val(1);					
+						}
+						//else if (TotalValue >= 5 && TotalCategory <= 20) {
+						else if (TotalValue >= 99) {
+							$button.parent().find("input").val(oldValue)
+							//$('#Count'+CatID).val(SubCtgSum);
+							//$('#ctgsum'+CatID).val(SubCtgSum); 						
+							//$('#Count'+CatID).tooltipster('show');
+							$button.parent().find("input").tooltipster('update', "You cannot enter quantity more than 99 for this category.");
+							$button.parent().find("input").tooltipster('show');							
+						}  							 
+			  }
+			  else if (($button.parent().find("input")[0].name == 'elecCtgCount') )
+			  {  
+				
+				if ( TotalCategory <= 99){
+					$button.parent().find("input[name=elecCtgCount]").val(newVal);				
+				}
+				else{
+					$button.parent().find("input[name=elecCtgCount]").val(oldValue);
+					$button.parent().find("input[name=elecCtgCount]").tooltipster('show');
+					return false;
+				}
+			  }
+		  }
+		});
+			   
+		$(document).on('change', '.pure-u-md-1-24 input[type=checkbox]', function() {
+			//alert('clicked');
+			//var divShow =  $(this).parent().parent().find('.pure-u-md-3-24')[0].name;
+		
+			
+			if (this.checked)	 {
+				//$(this).parent().parent().find('.pure-u-md-3-24').show();
+				$(this).parent().parent().find('input[type=text]').removeAttr("disabled");
+				$(this).parent().parent().find('input[type=text]').addClass('disableText');
+				//$(this).parent().parent().find('img.divdecimage').addClass('imgdechv');
+				//$(this).parent().parent().find('img.divimage').addClass('imginchv');  
+				$(this).parent().parent().find('.dec').addClass('decpointer');
+				$(this).parent().parent().find('.inc').addClass('incpointer');  
+				 				
+				$(this).parent().parent().find('input[type=text]').val(0);
+				//if ($(this).parent().parent().hasClass('tvSubCtg')) { 
+				if ($(this).parent().parent().find('#tvSubCategory').length > 0) {  
+				 //if ($(this).parent().parent().has('#tvSubCategory') ) {	
+					$(this).parent().parent().find('#tvSubCategory').show();
+					$(this).parent().parent().find('input[type=text]').val(0);
+					$(this).parent().parent().find('input[type=hidden]').val(0);
+				}
+				$('#chkbox1').tooltipster('hide');
+				//$('#chkbox1').removeClass("tooltipstered error");
+					//$(firstchk).removeAttr("aria-invalid");
+					//$(firstchk).removeAttr("aria-required");
+					//$(firstchk).removeAttr("required");
+			 }  
+			 else {
+				$(this).parent().parent().find('input[type=text]').attr("disabled","disabled");
+				$(this).parent().parent().find('input[type=text]').removeClass("disableText");
+				//$(this).parent().parent().find('img.divdecimage').removeClass('imgdechv');
+				//$(this).parent().parent().find('img.divimage').removeClass('imginchv');		
+				$(this).parent().parent().find('.dec').removeClass('decpointer');
+				$(this).parent().parent().find('.inc').removeClass('incpointer');  
+				$(this).parent().parent().find('input[type=text]').val(0);				
+				//$(this).parent().parent().find('.pure-u-md-3-24').hide();
+				//$(this).parent().parent().find('input[name=elecCtgCount]').val(0);
+				 if ($(this).parent().parent().find('#tvSubCategory').length > 0 ) {
+					$(this).parent().parent().find('#tvSubCategory').find('input[name=tvSubCat]').val(0);
+					$(this).parent().parent().find('input[type=hidden]').val(0); 
+					//sum = 0;
+					$(this).parent().parent().find('#tvSubCategory').hide();
+				}
+			 }
+	 }); 
+	   // $('.pure-u-md-1-24 checkbox').on("click", function(){
+		//	 if (this.checked)
+		//	 {
+		//		$divShow.show();
+		//	 }
+		//	 else
+		//	 {
+		//		$divShow.hide();
+		//	 }
+		//});  
+	    $('#tvchkbox').change(function(e){
+			if (this.checked){
+				$('#tvSubCategory').show();
+			}
+			else{
+				$('#tvSubCategory').hide();
+			}
+		});
+		
+		$('#msform input[type="checkbox"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform textarea').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('#msform select').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+        $('textarea[maxlength]').keyup(function () {
+            var limit = parseInt($(this).attr('maxlength'));
+            var text = $(this).val();
+            var chars = text.length;
+            if (chars > limit) {
+                var new_text = text.substr(0, limit);
+                $(this).val(new_text);
+            }
+        });
+        $('#CONTACT-1-PHONE').mask("(999) 999-9999");
+        //$('#CONTACT-2-PHONE').mask('(999) 999-9999? x99999');
+        $('#CONTACT-1-ZIP').mask('99999');
+        $('#CONTACT-2-ZIP').mask('99999');
+        $('#EVENT-START-DATE').mask('99/99/9999');
+        $('#EVENT-END-DATE').mask('99/99/9999');
+
+		$('#datetimepicker1').bind('cut copy paste', function (e) {
+			e.preventDefault();
+		});
+	   
+		//Disable mouse right click
+		$("#datetimepicker1").on("contextmenu",function(e){
+			return false;
+		});
+    });
+	
+	$(document).click(function() {
+		if($(event.target).closest('.inc').length > 0 || $(event.target).closest('.dec').length > 0 || $(event.target).closest('input[name=tvSubCat]').length > 0  ||  $(event.target).closest('input[name=elecCtgCount]').length > 0 ) {
+			return false;
+		}
+		  
+		$("input[name=elecCtgCount]").tooltipster('hide');  
+		$("input[name^='tvSubCat']").tooltipster('hide');  
+	});
+</script>
+<script type="text/javascript">
+    var current_fs, next_fs, previous_fs;
+	var CatgoryList = [];
+    var left, opacity, scale;
+    $("#cancel").click(function () {
+        $("#houseNumber").val("");
+		$('#divNonDualBin').hide();
+        $("#street").val("");
+        $("#boro").val("");
+        $("#additionalinfo").val("");
+        $("#results").empty();
+        $('#msform input[type="text"]').attr("class", "tooltipstered");
+        $('#msform input[type="text"]').removeAttr("aria-invalid");
+        $('#msform select').attr("class", "tooltipstered");
+        $('#msform select').removeAttr("aria-invalid");
+        $('#msform textarea').attr("class", "tooltipstered");
+        $('#msform textarea').removeAttr("aria-invalid");
+    }); 
+    var validator;
+    function validateForm() {
+        validator = $('#msform').validate({
+            errorPlacement: function (error, element) {
+                if (element.attr("type") == "text" && element.val() == "") {
+                    $(element).tooltipster('update', "This field is required");
+                } else if (element.attr("type") == "select-one") {
+                    $(element).tooltipster('update', "Please select from the list");
+                }
+                else {
+                    $(element).tooltipster('update', "This field is required");
+                }
+                if (element.attr("name") == "CONTACT-1-EMAIL") {
+                    $(element).tooltipster('update', "Please enter valid email address");
+                }
+                if (element.attr("name") == "CONTACT-2-EMAIL") {
+                    $(element).tooltipster('update', "Please enter valid email address");
+                }
+                if (element.attr("name") == "EVENT-START-DATE") {
+                    $(element).tooltipster('update', "Please enter valid date");
+                }
+                if (element.attr("name") == "EVENT-END-DATE") {
+                    $(element).tooltipster('update', "Please enter valid date");
+                }
+                $('element').tooltipster({
+                    functionInit: function () {
+                        return $('element').html();
+                    },
+                    functionReady: function () {
+                        $('element').attr('aria-hidden', false);
+                    },
+                    functionAfter: function () {
+                        $('element').attr('aria-hidden', true);
+                    }
+                });
+                $(element).focus(function () {
+                    if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+                    { $(this).tooltipster('show'); }
+                })
+                   .blur(function () {
+                       $(this).tooltipster('hide');
+                   });
+            },
+            success: function (label, element) {
+                $(element).tooltipster('hide');
+            },
+            invalidHandler: function () {
+                $(this).find(".error:first").focus();
+            }
+        });
+        if (!$('#msform').valid()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    $("#nextstep2").click(function (event) {
+		var disableDT = [];
+		var minDate; //moment()//.format("MM-DD-YYYY")
+        var MaxDate; //moment().add(21, 'days');
+        //MaxDate = MaxDate.format("MM-DD-YYYY"); 
+		
+		if($('#datetimepicker1').data('DateTimePicker')){
+			$('#datetimepicker1').data('DateTimePicker').destroy();
+		}
+		
+		$('#msform input[type="text"]').removeAttr("required");  
+        $('#msform select').removeAttr("required");
+        $('#msform textarea').removeAttr("required");
+        $('#msform input[type="checkbox"]').removeAttr("required");
+		$('#boro').attr("required",'true');
+		$('#houseNumber').attr("required",'true');
+		$('#street').attr("required",'true');
+		$('#divNonDualBin').hide();
+		
+        if (validateForm()) {
+            var retCode = false;
+            current_fs = $(this).parent().parent();
+            next_fs = $(this).parent().parent().next();
+            event.preventDefault();
+            validateAddress(function (output) {
+                if (output == true) {
+                    retCode = true;
+                }
+                if (retCode == true && ($('#results').text().length == 0)) {
+				
+					//$('#ReqHeader').text('Step 2 - Specific Info');
+					
+                    var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
+					//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
+					$('#rdAddress').html(fullAddress);
+					$('#rdStreet').html($("#GEOCrossStreet").val());
+					$('#rdAddressNonDual').html(fullAddress);
+					$('#rdStreetNonDual').html($("#GEOCrossStreet").val());
+					
+					
+					$('select').attr("required",'true');
+					
+						$('#msform input[type="checkbox"]').tooltipster({
+							trigger: 'custom',
+							onlyOne: true,
+							position: 'bottom'
+						});
+						$('#msform input[type="text"]').tooltipster({
+							trigger: 'custom',
+							onlyOne: true,
+							position: 'bottom'
+						});
+						$('#msform select').tooltipster({
+							trigger: 'custom',
+							onlyOne: true,
+							position: 'bottom'
+						});
+					
+                    //$("#EVENT-LOCATION").val(fullAddress);
+					jQuery.support.cors = true;
+					$.ajax({
+					 type: 'GET',
+					url: APIUrl + '/BulkAPI/api/bulkpickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
+					 crossDomain: true,
+					 dataType: 'json',
+					 async: false,
+					 success: function (data) {
+						if (data) {
+						
+							$('#Step2div').show();
+					
+							$('#lstPickUpLocation').find('option:gt(0)').remove();
+							$('#lstPickUpLocation').append($("#GEOPickupStreet").val()); 
+							
+							$('#slapptdate').removeAttr("disabled");
+							$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
+							$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
+							$('#CONTACT-1-PHONE').removeAttr("disabled");
+							$('#CONTACT-1-EMAIL').removeAttr("disabled");
+							$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
+							$('#msform input[type="checkbox"]').removeAttr("disabled");
+							
+							$('select').removeAttr("disabled");
+							
+							$('#slapptdate').attr("required",'true');
+							$('#CONTACT-1-FIRST-NAME').attr("required",'true');
+							$('#CONTACT-1-LAST-NAME').attr("required",'true');
+							$('#CONTACT-1-PHONE').attr("required",'true');
+							$('#CONTACT-1-EMAIL').attr("required",'true');
+							$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
+						
+						
+							//var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+							var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
+							$.ajax({
+								async:false,
+								url: getDateUrl,
+								type: "GET",
+								dataType: 'json',
+								crossDomain: true,
+								success: function(data){
+									if (data != undefined)
+									{
+										//disableDT = data ;
+										$.each(data, function(key, item) {                                     
+											//var d=moment(item);//.format("MM-DD-YYYY"); 
+											//disableDT.push(d); 
+											
+											var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
+											//var d=new Date(item); 
+											//d.setDate(d.getDate()+ 1); 
+											disableDT.push(d); 
+											minDate = item.StartDate;									
+											MaxDate = item.EndDate;
+										});   
+										
+										$('#datetimepicker1').datetimepicker({
+											debug: true,
+											format: 'MM-DD-YYYY',
+											minDate: minDate,
+											maxDate : MaxDate,
+											widgetPositioning: {
+												horizontal: 'auto',
+												vertical: 'bottom'
+											},                                        
+											//daysOfWeekDisabled: [0,6],
+											disabledDates: disableDT,
+											keyBinds: {
+														up: null,
+														down: function (widget) {
+																	if (!widget) {
+																	this.show();
+																	return;
+																	}
+																},
+														left: null,
+														right: null,
+														t : null,
+														'delete' : null
+													} 									
+										});
+									}
+								}
+							});  
+
+						//next_fs.show();
+						//current_fs.hide();
+						//$('#astep1').removeClass('active1');
+						//$('#astep2').addClass('active2');
+						return false;
+					}
+					else
+					{
+						 $("#collectionDays").html($("#RegularCollectionDayNames").val());
+						 $('#divNonDualBin').show();
+						 return false;
+					}
+				 }
+			 });
+				return false;
+			}
+		});
+	 }
+	else {
+            validator.focusInvalid();
+            return false;
+        }
+    });
+	
+	$('#datetimepicker1').on('dp.show', function (e) {
+		$('#datetimepicker1').not(e.target).each(function (index) { $(this).data('DateTimePicker').hide();     });
+	});
+
+	$(document).click(function(e) {
+    var target = $(e.target);
+		if (target.parents('.bootstrap-datetimepicker-widget').length < 1 && !target.hasClass('input-group-addon') && !target.hasClass('glyphicon')) {
+			if ($('.bootstrap-datetimepicker-widget').length > 0) {
+				$('#datetimepicker1').each(function(index) {
+					$(this).data('DateTimePicker').hide();
+				});
+			}
+		}
+	});
+	
+	$(document).click(function(e){
+				var target = $(e.target);
+				if(target.parents('.bootstrap-datetimepicker-widget').length < 1 && !target.hasClass('datetimepickerInput') && !target.hasClass('datepickerIcon') && !target.hasClass('clockpickerIcon')){
+					if($('.bootstrap-datetimepicker-widget').length > 0){
+						
+						$('.datetimepickerInput').blur();
+						$('.bootstrap-datetimepicker-widget').focus();
+						$('.bootstrap-datetimepicker-widget').css('cursor', 'pointer');
+					}
+				}
+	});
+	
+    $("#previousstep1").click(function () {
+        //$('#msform input[type="text"]').attr("class", "tooltipstered");
+        //$('#msform select').attr("class", "tooltipstered");
+        //$('#msform textarea').attr("class", "tooltipstered");  
+        $('#msform input[type="text"]').removeAttr("aria-invalid");  
+        $('#msform select').removeAttr("aria-invalid");
+        $('#msform textarea').removeAttr("aria-invalid");
+        //$('#msform input[type="checkbox"]').attr("class", "tooltipstered");
+        $('#msform input[type="checkbox"]').removeAttr("aria-invalid");
+		$('#ReqHeader').text('Step 1 - General Info');
+		$('#Step2div').hide();
+		 
+        current_fs = $(this).parent().parent();
+        previous_fs = $(this).parent().parent().prev();
+        previous_fs.show();
+        current_fs.hide();
+        $('#astep2').removeClass('active2');
+        $('#astep1').addClass('active1');
+        return false;
+    });
+	
+	function validateCategory(){
+	
+		var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
+		var firstchk = $('#ElecCtg').find('input[type=checkbox]')[0]
+		var checked = false;
+		var CtgVAL = 0 ;
+		$.each(arr, function(key, item) {				
+					if (item.checked){	
+						$(firstchk).removeClass("tooltipstered error");
+						$(firstchk).removeAttr("aria-invalid");
+						$(firstchk).removeAttr("aria-required");
+						$(firstchk).removeAttr("required");
+						checked = true;
+						
+						CtgVAL = 0;
+						
+						 if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
+						 {
+							$(item).parent().parent().find('input[name^="tvSubCat"]').each(function(){
+								CtgVAL += parseFloat(this.value);
+							});
+						 }
+						 else
+						 {
+							 CtgVAL = $(item).parent().parent().find('input[type=text]').val();
+						 }
+						 
+						 $(item).parent().parent().find('input[type=text]').tooltipster('hide');   
+						if (CtgVAL == 0){
+						  
+							var ctgTextbox = $(item).parent().parent().find('input[type=text]')[0];
+							$(ctgTextbox).addClass("tooltipstered error");
+							$(ctgTextbox).attr("required",'true');
+							$(ctgTextbox).attr("aria-invalid",'true');
+							$(ctgTextbox).attr("aria-required",'true');
+							$(ctgTextbox).tooltipster('update', "Qunatity should be greater than zero.");
+							$(ctgTextbox).tooltipster('show'); 
+							$(ctgTextbox).focus();  
+							return false;   
+							//break;  
+						}
+						//break;
+						return true;
+					}
+		}); 		
+		if (checked ){
+			
+			if (CtgVAL == 0){
+				return false;
+			}
+			else{
+				return true;
+			}
+		}
+		else {
+			$(firstchk).addClass("tooltipstered error");
+			$(firstchk).attr("required",'true');
+			$(firstchk).attr("aria-invalid",'true');
+			$(firstchk).attr("aria-required",'true');
+			$(firstchk).tooltipster('update', "Please select one category");
+			$(firstchk).tooltipster('show'); 
+			$(firstchk).focus(); 
+			return false;
+		}
+		
+		
+	
+	}
+    $("#nextstep3").click(function () {
+        current_fs = $(this).parent().parent();
+        next_fs = $(this).parent().parent().next();
+        if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
+		
+			if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
+			
+				$('#CONTACT-CONFRIM-EMAIL').tooltipster('update', "Confrim email address should match to email address.");
+				$('#CONTACT-CONFRIM-EMAIL').tooltipster('show'); 
+				return false; 
+			} 
+		
+		
+			var strAddress =  $('#houseNumber').val() + ' ' + $('#street').val() + ', ' + $("#boro option:selected").text()
+            $('#disaddress').html(strAddress);
+			$('#disCrsStrt').text($('#GEOCrossStreet').val());
+            //$('#disbldg').text($('#houseNumber').val());
+            //$('#disstreet').text($('#street').val());  
+            //$('#disCrsStrt').text();
+            $('#disPckLocation').text($("#lstPickUpLocation option:selected").text());
+			$('#disApptDate').text($('#slapptdate').val()); 
+			$('#displayItem').empty();
+			var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
+			CatgoryList = []; 
+			
+			$.each(arr, function(key, item) {				
+				if (item.checked){				
+					//alert('selected');					
+					
+					ctgStr = '';
+					//var CategoryDiv = $(item).parent().parent();
+					var CtgID = $(item).parent().parent()[0].id
+					var Ctgname = $(item).parent().parent().find('.pure-u-md-20-24').html();
+					var CtgVAL = $(item).parent().parent().find('input[type=text]').val();
+					var SubCategoryID = 0;
+					
+					
+					//ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">\	<div class="pure-u-md-1-24 pure-u-sm-1-24">\</div><div class="pure-u-md-20-24 pure-u-sm-20-24 ctgName ">'+ Ctgname +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ CtgVAL +'</div> </div>'
+					//ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+					
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
+					{
+						ctgStr += ' <li> <span>'+ Ctgname +'</span> </li>';
+					}
+					else
+					{
+						ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+					}
+					
+					
+					$('#displayItem').append(ctgStr); 							
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0)	
+					{
+						 var arrSubCat = $(item).parent().parent().find('#tvSubCategory').find('.pure-u-1')
+					     //$(item).parent().parent().find('#tvSubCategory').find('input[type=text]')
+						 var SubctgStr = '<ul class=leaders> ';  
+						 $.each(arrSubCat, function(Subkey, Subitem) {
+							//SubctgStr = '';
+							if ($(Subitem).find('input[type=text]').val() > 0)
+							{				
+								CtgVAL = $(Subitem).find('input[type=text]').val();
+							    SubCategoryID = $(Subitem).find('.pure-u-md-3-24').attr('name');  
+								//SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">'
+								//SubctgStr +='<div class="pure-u-md-2-24 pure-u-sm-2-24">'
+								//SubctgStr +='</div><div class="pure-u-md-19-24 pure-u-sm-19-24 ctgName ">'+ $(Subitem).find('label')[0].innerText +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ $(Subitem).find('input[type=text]').val() +'</div> </div>'
+								SubctgStr += '<li>  <span>'+ $(Subitem).find('label')[0].innerText +'</span>   <span>'+ $(Subitem).find('input[type=text]').val() +'</span>  </li>';
+								
+								
+								CatgoryList.push({
+								 CategoryID: CtgID,
+								 SubCategoryId: SubCategoryID,
+								 RequestedQty: CtgVAL
+								});
+								
+							}
+						 }); 
+							SubctgStr += '</ul>'
+						$('#displayItem').append(SubctgStr);
+					}
+					else{
+						CatgoryList.push({
+							 CategoryID: CtgID,
+							 SubCategoryId: SubCategoryID,
+							 RequestedQty: CtgVAL
+						 });
+					
+					}
+					
+					//$(item).parent().parent().html()					 					
+				}
+			});
+						
+			//$('displayItem').text();
+			//$('#disApptDate').text();						
+			$('#disfname').text($('#CONTACT-1-FIRST-NAME').val());
+            $('#dislname').text($('#CONTACT-1-LAST-NAME').val());
+			$('#disphone').text($('#CONTACT-1-PHONE').val());
+			$('#disemail').text($('#CONTACT-1-EMAIL').val());
+            //$('#ReqHeader').text('Step 3 - Sumbit');
+			$('#stepmsg').text('Review the form before submitting:');
+           next_fs.show();
+		   $('#header3').show();
+		    $('#header').hide();
+			$('#header2').hide();
+			$('#Step2div').hide();
+			$('.fieldset1').hide();
+			$('.fieldset2').hide();
+			$('.fieldset3').show();
+            $('.fieldset4').show();
+			$('#step3section').show();
+			$('#step3buttons').hide();
+			$('#step3closebutton').hide();
+			$('.helpicon').hide();
+			//window.ScrollTop(0);
+			
+            //$('#astep2').removeClass('active2');
+            //$('#astep3').addClass('active3');
+           current_fs.hide();
+            return false;
+        } else {
+            validator.focusInvalid();
+            return false;
+        }
+    });
+    $("#previousstep2").click(function () {
+        $('.fieldset2').show();
+		$('#ReqHeader').text('Step 2 - Specific Info');
+		$('#stepmsg').text('Your address and recycling day have been verified as:');
+        $('#astep3').removeClass('active3');
+        $('#astep2').addClass('active2');
+        $('.fieldset3').hide();
+        $('.fieldset4').hide();
+        return false;
+    });
+	
+	$('#chkTC').change( function(){
+		if ($('#chkTC')[0].checked) 
+		{		
+			$('#chkTC').tooltipster('hide'); 
+		}
+	}) ;
+	
+	$("#submitrq").click(function (){		
+		if (!$('#chkTC')[0].checked) 
+		{		
+			$('#chkTC').addClass("tooltipstered error");
+			$('#chkTC').attr("required",'true');
+			$('#chkTC').attr("aria-invalid",'true');
+			$('#chkTC').attr("aria-required",'true');
+			$('#chkTC').tooltipster('update', "Please certify the request.");
+			$('#chkTC').tooltipster('show'); 
+			$('#chkTC').focus(); 			
+			//return false;
+		}
+		else{
+			$("#submitrq").attr('disabled', 'disabled');
+			$('#chkTC').tooltipster('hide'); 		
+		
+		
+			/*var captchaInfo = {
+                 challengeValue: $("#recaptcha_challenge_field").val(),
+                 responseValue: $("#recaptcha_response_field").val()
+             }; 
+             $.ajax({
+                 type: 'POST',
+                 url: 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/ValidateCaptcha',
+                 data: captchaInfo,
+                 crossDomain: true,
+                 dataType: 'json',
+                 async: false,
+                 success: function (data) {
+                     if (data) {*/
+                         //Save user information if captcha is valid
+				 var Requestdata= {
+						RequestId:	reqId,
+						FirstName: $('#disfname').text(),
+						LastName : $('#dislname').text(),
+						Phone : $('#disphone').text(),
+						Email : $('#disemail').text(),
+						BuildingNumber : $('#houseNumber').val(),
+						Street : $('#street').val(),
+						District : $('#GEODistrict').val(),
+						PickUpLocation :$('#disPckLocation').text(),
+						AppointmentDate : $('#disApptDate').text(),
+						Source : '311',
+						CrossStreets : $('#GEOCrossStreet').val(),
+						PickupRequestItems : CatgoryList
+					}		
+					var RequestURL = APIUrl + '/BulkAPI/api/bulkpickups/AddUpdatePickUpRequest';
+					$.ajax({
+						async: false,
+						url: RequestURL ,
+						data: Requestdata,
+						type: "POST",
+						dataType: 'json',
+						crossDomain: true,
+						success: function (json) {				
+							if (json != undefined){
+							 var data = json  
+                                $('#reqfld').hide();  
+								$('.fieldset4').hide();
+								$('.fieldset3').hide();
+								$('#header3').hide();
+							  /*if (json.length == 0){
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#stepmsg').hide();
+								$('.fieldset5').show();	 				   
+								
+							  } 
+							  else if (json.length > 0){
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset6').show();		
+							  }*/
+							  
+							  if (json.toUpperCase() == 'NOT AVAILABLE'){
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset6').show();
+							  }
+							  else if (json.toUpperCase() == 'DUPLICATE REQUEST'){
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#errorDate').text($('#disApptDate').text());
+								$('.fieldset7').show();	
+							  }
+							  else {								
+								$('#srnumer').text(json);
+								$('#ReqHeader').text('Step 4 - Confirmation');
+								$('#stepmsg').hide();
+								$('.fieldset5').show();								
+							  }
+							 
+							 
+							}			
+							//$('#ElecCtg').find('#'+SubCategoryID).append(SubctgStr);
+						}			
+					});	 
+                         //return true;
+                     /*}
+                     else {
+                         $("#divInvalidMessage").html('The security code you entered is invalid. Please try again!');
+                         Recaptcha.reload();
+                         return false;
+                     }
+                 },
+                 error: function (request, status, error) {
+                     //alert(error);
+                 }
+             });*/
+			
+		}		
+		return false;
+	});
+	  
+	$('#btnNewReq,#btnNewReq1').click(function (){
+		//location.reload();
+		window.location.href = '/assets/dsny/contact/services/dev-supervisor-bulk-pickup-request.shtml';
+		return false;
+	})
+	$('#btnStep2').click(function(){
+		$("#submitrq").removeAttr("disabled");
+		$('.fieldset6').hide();
+		$('.fieldset7').hide(); 
+		$('.fieldset1').show();
+		$('.fieldset2').show();
+		$('#header').show();
+		$('#header2').show();
+		$('#Step2div').show();
+		$('.fieldset3').hide();
+		
+		
+		$('#datetimepicker1').data('DateTimePicker').destroy();
+		
+        var disableDT = []; //['09/28/2016', '2016-09-27',d];
+        /*var MaxDate = new Date(); // Parse date
+        MaxDate.setDate(MaxDate.getDate() + 14); // Add 7 days
+        var minDate = new Date();
+        minDate.setDate(minDate.getDate() + 1); // Add 7 days  
+		*/
+		var minDate; //moment()//.format("MM-DD-YYYY")
+        var MaxDate;//moment().add(21, 'days'); 
+		
+        var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+                var getdisDAte =$.ajax({
+                    async:false,
+                    url: getDateUrl,
+                    dataType: 'json',
+                    crossDomain: true,
+                    success: function(data){
+                        if (data != undefined)
+                        {
+                            //disableDT = data ;
+							/*$.each(data, function(key, item) {                                     
+                                    var d=new Date(item); 
+                                    d.setDate(d.getDate()); 
+                                    disableDT.push(d);
+							});*/
+							
+							 
+							$.each(data, function(key, item) {                                     
+                                    //var d=moment(item);//.format("MM-DD-YYYY"); 
+                                    //disableDT.push(d); 
+									
+									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
+									//var d=new Date(item); 
+									//d.setDate(d.getDate()+ 1); 
+									disableDT.push(d); 
+									minDate = item.StartDate;									
+									MaxDate = item.EndDate;
+                                });  
+							
+                             
+                            $('#datetimepicker1').datetimepicker({
+                                format: 'MM-DD-YYYY',
+                                minDate: minDate,
+                                maxDate : MaxDate,
+                                widgetPositioning: {
+                                    horizontal: 'auto',
+                                    vertical: 'bottom'
+                                },
+                                //daysOfWeekDisabled: [0,6],
+                                disabledDates: disableDT,
+								keyBinds: {
+										up: null,
+										down: function (widget) {
+													if (!widget) {
+													this.show();
+													return;
+													}
+												},
+										left: null,
+										right: null,
+										t : null,
+										'delete' : null
+									} 
+                            });
+                            //$('#datetimepicker1').datetimepicker('update'); 
+                            
+                        }                        
+                    }
+                });
+		
+		return false;
+		
+		
+		
+	});
+	
+	$("#searchSR").click(function (event) {
+			var apptDate ;
+			$("#submitrq").removeAttr("disabled");
+			
+			if( $('#search-input').val() == '' || $('#search-input').val() == 'Search SR#')
+			{
+				$("#search-input").val('');
+				window.location.href = '/assets/dsny/contact/services/311-ewaste-pickup-search.shtml';
+			}
+			
+			//$("#ElecCtg").empty();
+			//loadCategories();
+			
+			if($('#datetimepicker1').data('DateTimePicker')){
+				$('#datetimepicker1').data('DateTimePicker').destroy();
+			}
+			
+			//Clear everything
+			$("#ElecCtg").find('input:checkbox').attr('checked', false);
+			$("#ElecCtg").find('input[type=text]').val(0);
+			$("#ElecCtg").find('input[type=text]').attr("disabled","disabled");
+			$("#ElecCtg").find('#tvSubCategory').hide();
+			$("#ElecCtg").find('.dec').removeClass('decpointer');
+			$("#ElecCtg").find('.inc').removeClass('incpointer');  
+			$("#ElecCtg").find('input[type=text]').removeClass("disableText");
+		
+			var disableDT = [];
+			var minDate; // = moment();//.format("MM-DD-YYYY")
+			var MaxDate; //= moment().add(21, 'days');
+			//MaxDate = MaxDate.format("MM-DD-YYYY");  
+
+		
+			$.ajax({
+				async: false,
+				url: APIUrl + '/BulkAPI/api/PickupRequest/SearchPickUpRequest?SRNumber='+ $('#search-input').val(),
+				type: "GET",
+				dataType: 'json',	
+				crossDomain: true,
+				success: function (data) {
+				
+					if ( data != undefined && data.RequestId > 0){
+					
+						$('.fieldset1').hide();
+						$('.fieldset2').hide();
+						$('.fieldset5').hide();
+						$('.fieldset6').hide();
+						$('.fieldset7').hide(); 
+						 $('#header').hide();
+						$('#header2').hide();
+						$('.fieldset3').show();
+						$('#step3section').hide();
+						$('#Step2div').hide();
+						$('#step3buttons').show();
+						$('#step3closebutton').show();
+						
+						$('#currentAppDate').show();
+						$('#disSRNo').text(data.SRNumber);
+						data.CanCancel == 0 ? $('#cancelSR').hide() : $('#cancelSR').show();
+						data.CanReschedule == 0 ? $('#rescheduleSR').hide() : $('#rescheduleSR').show();
+							
+						reqId = data.RequestId;
+						apptDate = data.AppointmentDate
+						
+						
+						
+						
+						//Step 1 data fill
+						$("#boro option:contains(" + data.Borough + ")").attr('selected', 'selected');
+						//$('#boro').text(data.Borough);
+						
+						$('#houseNumber').val(data.BuildingNumber);
+                        $('#street').val(data.Street);
+						$('#rdAddress').val(strAddress);
+						$('#rdStreet').val(data.Street);
+						
+						//Step 2 data fill
+						
+						var arr =  data.PickupRequestItems;	 
+						CatgoryList = []; 
+						
+						$.each(arr, function(key, item) {				
+							 
+							ctgStr = '';
+							var CtgID =  item.CategoryId
+							var Ctgname = item.Category
+							var CtgVAL = item.RequestedQty;
+							
+							$('#'+CtgID).find('input:checkbox:first').prop('checked', true);
+							$('#'+CtgID).find('input:checkbox:first').attr('checked', true);
+							$('#'+CtgID).find('input:checkbox:first').attr('checked', 'checked');
+							$('#'+CtgID).find('input[type=text]:first').val(item.RequestedQty);
+							$('#'+CtgID).find('input[type=text]:first').removeAttr('disabled');
+							$('#'+CtgID).find('input[type=text]').addClass('disableText');
+							$('#'+CtgID).find('.dec').addClass('decpointer');
+							$('#'+CtgID).find('.inc').addClass('incpointer');  
+							
+							if ($('#'+CtgID).find('#tvSubCategory').length > 0 && item.RequestedQty > 0) {  
+								$('#'+CtgID).find('#tvSubCategory').show();
+								$('#'+CtgID).find('input[type=text]').removeAttr('disabled');
+								$('#'+CtgID).find('input[type=text]').addClass('disableText');
+								$('#'+CtgID).find('input[type=hidden]').val(item.RequestedQty);
+							}
+																					
+							
+							if (item.PickupRequestSubItems != undefined && item.PickupRequestSubItems.length > 0 )	
+							{
+								 var arrSubCat = item.PickupRequestSubItems
+								
+								 var SubctgStr = ''; 
+								 $.each(arrSubCat, function(Subkey, Subitem) { 
+								 
+									$('#'+CtgID).find('#subCategory'+Subitem.SubCategoryId).val(Subitem.Quantity);
+									$('#'+CtgID).find('#subCategory'+ Subitem.SubCategoryId).removeAttr('disabled');
+									$('#'+CtgID).find('.dec').addClass('decpointer');
+									$('#'+CtgID).find('.inc').addClass('incpointer');  
+								 }); 
+							}		
+							
+						
+						});
+						
+						var formatedDate =  moment(data.AppointmentDate).format("MM-DD-YYYY"); 
+						
+						$('#currentAppDateVal').text(formatedDate); 						
+						
+						$('#CONTACT-1-FIRST-NAME').val(data.FirstName); 
+						$('#CONTACT-1-LAST-NAME').val(data.LastName); 
+						$('#CONTACT-1-PHONE').val(data.Phone); 
+						$('#CONTACT-1-EMAIL').val(data.Email); 
+						$('#CONTACT-CONFRIM-EMAIL').val(data.Email); 
+					
+						
+						//Step 3 Review Mode data fill
+						$('#dvTitle').text('SR#  '+ $('#txtSR').val() + '  ' + data.Status )
+						var strAddress =  data.BuildingNumber + ' ' + data.Street + ', ' + data.Borough
+						$('#disaddress').html(strAddress);
+						$('#disCrsStrt').text(data.CrossStreets);
+						
+						$('#disPckLocation').text(data.PickUpLocation);
+						$('#disApptDate').text(formatedDate); 
+						$('#displayItem').empty();
+						
+						if (data.PickupRequestItems != undefined){
+							arr =  data.PickupRequestItems;	 
+							CatgoryList = []; 
+						
+							$.each(arr, function(key, item) {				
+						
+								ctgStr = '';
+								
+								var CtgID =  item.CategoryId
+								var Ctgname = item.Category
+								var CtgVAL = item.RequestedQty;
+								
+								if ($('#search-input').val().indexOf('BP') >= 0 && item.PickupRequestSubItems != undefined) {
+									ctgStr += ' <li> <span>'+ Ctgname +'</span></li>';															
+								}
+								else
+								{
+									ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';	
+								}
+								
+								$('#displayItem').append(ctgStr); 
+								if (item.PickupRequestSubItems != undefined){
+								
+									if (item.PickupRequestSubItems.length > 0 )	
+									{
+										 var arrSubCat = item.PickupRequestSubItems
+										
+										 var SubctgStr =  '<ul class=leaders> ';  
+										 $.each(arrSubCat, function(Subkey, Subitem) { 
+											
+											 SubctgStr += '<li>  <span>'+ Subitem.SubCategoryName +'</span>   <span>'+ Subitem.Quantity +'</span>  </li>';
+											//SubctgStr += '<li>  <span>'+ $(Subitem).find('label')[0].innerText +'</span>   <span>'+ $(Subitem).find('input[type=text]').val() +'</span>  </li>';
+											
+										 }); 
+										SubctgStr +=  '</ul> '; 
+										$('#displayItem').append(SubctgStr);	
+									}		
+								}
+								
+							});
+						}		
+								
+						$('#disfname').text(data.FirstName);
+						$('#dislname').text(data.LastName);
+						$('#disphone').text(data.Phone);
+						$('#disemail').text(data.Email);
+					}
+					
+					else{
+						alert("Please enter a valid service request number");
+					}
+						
+					if (validateForm()) {
+								var retCode = false;
+								event.preventDefault();
+								validateAddress(function (output) {
+									if (output == true) {
+										retCode = true;
+									}
+									if (retCode == true) {
+									
+										//$('#ReqHeader').text('Step 2 - Specific Info');
+										
+										var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
+										//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
+										$('#rdAddress').html(fullAddress);
+										$('#rdStreet').html($("#GEOCrossStreet").val());
+										
+										$('#lstPickUpLocation').find('option:gt(0)').remove();
+										$('#lstPickUpLocation').append($("#GEOPickupStreet").val()); 
+										$("#lstPickUpLocation option:contains(" + data.PickUpLocation + ")").attr('selected', 'selected');
+										
+										$('#slapptdate').removeAttr("disabled");
+										$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
+										$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
+										$('#CONTACT-1-PHONE').removeAttr("disabled");
+										$('#CONTACT-1-EMAIL').removeAttr("disabled");
+										$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
+										$('#msform input[type="checkbox"]').removeAttr("disabled");
+										
+										$('select').removeAttr("disabled");
+										
+										$('#slapptdate').attr("required",'true');
+										$('#CONTACT-1-FIRST-NAME').attr("required",'true');
+										$('#CONTACT-1-LAST-NAME').attr("required",'true');
+										$('#CONTACT-1-PHONE').attr("required",'true');
+										$('#CONTACT-1-EMAIL').attr("required",'true');
+										$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
+										
+										
+										$('select').attr("required",'true');
+										
+											$('#msform input[type="checkbox"]').tooltipster({
+												trigger: 'custom',
+												onlyOne: true,
+												position: 'bottom'
+											});
+											$('#msform input[type="text"]').tooltipster({
+												trigger: 'custom',
+												onlyOne: true,
+												position: 'bottom'
+											});
+											$('#msform select').tooltipster({
+												trigger: 'custom',
+												onlyOne: true,
+												position: 'bottom'
+											});
+										
+									
+										jQuery.support.cors = true;
+										var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+										$.ajax({
+											async:false,
+											url: getDateUrl,
+											type: "GET",
+											dataType: 'json',
+											crossDomain: true,
+											success: function(datedata){
+												if (datedata != undefined)
+												{
+													//disableDT = data ;
+													$.each(datedata, function(key, item) {                                     
+														//var d=moment(item)//.format("MM-DD-YYYY"); 
+														//disableDT.push(d); 
+														
+														var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY"); 
+														//var d=new Date(item); 
+														//d.setDate(d.getDate()+ 1); 
+														disableDT.push(d); 
+														minDate = item.StartDate;									
+														MaxDate = item.EndDate;
+													});  
+													
+													//When reschedule is called, if previous appt date is disabled then remove the disable feature for that date
+													//var aptDt = moment(apptDate)//.format("MM-DD-YYYY") //new Date(apptDate)
+													//disableDT = jQuery.grep(disableDT, function(value) {
+                                                      //return value != aptDt;
+                                                    //});
+													
+													$('#datetimepicker1').datetimepicker({
+														debug: true,
+														format: 'MM-DD-YYYY',
+														minDate: minDate,
+														maxDate : MaxDate,
+														widgetPositioning: {
+															horizontal: 'auto',
+															vertical: 'bottom'
+														},                                        
+														//daysOfWeekDisabled: [0,6],
+														disabledDates: disableDT,
+														keyBinds: {
+																	up: null,
+																	down: function (widget) {
+																				if (!widget) {
+																				this.show();
+																				return;
+																				}
+																			},
+																	left: null,
+																	right: null,
+																	t : null,
+																	'delete' : null
+																}
+													});                          
+												}
+											}
+										});  
+
+										return false;
+									}
+								});
+							}
+						
+						
+						
+					
+				}
+					
+					
+				});
+				return false;
+      });
+	
+	
+	$("#rescheduleSR").click(function () {
+		$("#submitrq").removeAttr("disabled");
+		$('.fieldset1').show();
+		$('.fieldset2').show();
+		$('.helpicon').show();
+		$('#header').show();
+		$('#header2').show();
+		$('#Step2div').show();
+		$('.fieldset3').hide();
+		$('.fieldset4').hide();
+		
+		return false;
+    });
+	
+	$("#cancelSR").click(function () {
+
+		var txt;
+		var r = confirm("Do you want to cancel this service request?");
+		if (r == true) {
+		
+			jQuery.support.cors = true;
+			var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled'; 
+			$.ajax({
+				async:false,
+				url: getDateUrl,
+				type: "GET",
+				dataType: 'json',
+				crossDomain: true,
+				success: function(data){
+					if (data != undefined)
+					{
+						$("#search-input").val('');
+						window.location.href = '/assets/dsny/contact/services/311-ewaste-pickup-search.shtml';
+					}
+				}
+			});
+		
+			
+		} else {
+			//return false;
+		}
+		
+		return false;
+    });
+	
+	$("#closeSR").click(function () {
+		$("#search-input").val('');
+		window.location.href = '/assets/dsny/contact/services/311-ewaste-pickup-search.shtml';
+	});
+   
+	
+</script>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/jquery.xdomainrequest.js" type="text/javascript"></script>

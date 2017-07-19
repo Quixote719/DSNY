@@ -852,7 +852,7 @@ $('#btnaddonSubmit').click(function (event) {
 									CustomCard += '<button type="button" class=" expose btn dropdown dropdown-split truckMenuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="float:right;background-color:#457cfb; border-radius:5px;margin:2px 5px 0px 0px; padding:0px 3px 0px 3px;height:30px;">\
 									 <span class="AssignedTruck" style="margin-bottom:3px; color:white;">' + item.TruckSerialNo + '</span>\
 								 </button>\
-									 <div class="dropdown-menu truckDropDown_menu truckDropDown_menu_list" data-mcs-theme="minimal-dark" style="border:0px; width:100%; max-height:150px;overflow:auto;"></div></div></div>'
+									 <div class="dropdown-menu truckDropDown_menu truckDropDown_menu_list" data-mcs-theme="minimal-dark" style="border:0px; width:100%;"></div></div></div>'
 								 } else {
 										CustomCard += '<div style="float:right;background-color:#457cfb; border-radius:5px;margin:2px 5px 0px 0px; padding:5px 3px 0px 3px;height:30px;">\
 									 <span class="AssignedTruck" style="margin-bottom:-3px; color:white;">' + item.TruckSerialNo + '</span>\
