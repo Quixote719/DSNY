@@ -49,10 +49,15 @@
 						<li>Obtaining a clothing donation bin (<a href="/assets/dsny/zerowaste/residents/re-fashionyc.shtml">refashionNYC</a>)</li>
 						<li>Setting up an electronics recycling program for your apartment building (<a href="/assets/dsny/zerowaste/residents/e-cyclenyc.shtml" >ecycleNYC</a>)</li>
 						<!--<li>Improving recycling in your apartment building&nbsp;(<a href="/assets/dsny/zerowaste/residents/apartment-building-recycling-initiative.shtml" >Apartment Building Recycling Initiative</a>)</li>-->
-						<li>Receiving <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml" title="organics collection in large apartment buildings" >NYC Organics Collection</a> at your building</li>
-					</ul>
+<!-- 						<li>Receiving <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml" title="organics collection in large apartment buildings" >NYC Organics Collection</a> at your building</li>
+ -->					
+ 					</ul>
 				</p> 
-				<p>For written registrations, please download and complete the DSNY <a href="/assets/dsny/downloads/pdf/contact/DSNY-apt-programs-enrollment-form.pdf">apartment programs enrollment form</a>. </p>     
+				<p>For written registrations, please download and complete the DSNY <a href="/assets/dsny/downloads/pdf/contact/DSNY-apt-programs-enrollment-form.pdf">apartment programs enrollment form</a>. </p>
+				<p>
+				To request curbside <a href="/assets/dsny/zerowaste/residents/nyc-organics-collection.shtml">organics collection</a> for your building, please submit the <a href="/assets/dsny/contact/programs/organics-collection-application.shtml">Organics Collection Application</a>. 
+				</p>
+				<br>
 			</div>
 
 			<form id="msform" class="pure-form" method="post" type="external" name="NYCWasteLess Program Enrollment" action="http://www.nyc.gov/doittcaptcha/validatecap">
