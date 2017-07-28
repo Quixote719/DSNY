@@ -15,7 +15,7 @@
 		<h2>Find Food Scrap Drop-Off Sites</h2>
 		
 		<p>Food scrap drop-off sites are located in public spaces. Do not leave food scraps when sites are closed. </p>
-		<p>Site schedules are subject to change. In cases of severe weather, food scrap drop-off sites may be closed early or canceled. Please check the interactive drop-off map for the latest schedule updates.</p>
+		<p>Site schedules are subject to change. In cases of severe weather or holidays, food scrap drop-off sites may be closed early or canceled. Please check the interactive drop-off map for the latest schedule updates.</p>
 		<div class="fluid-wrapper"><iframe width="640" src="https://www.google.com/maps/d/embed?mid=z5s-Esx5TUSw.kWl2wbCJ6ykU" height="480"></iframe></div>
 
 	</div>
