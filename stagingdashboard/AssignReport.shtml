@@ -27,7 +27,7 @@
 
     .container {
       max-width: 1800px !important;
-      width: 1800px !important;
+      width: 100% !important;
     }
 
     .tblspecial {
@@ -122,7 +122,7 @@
       width: 26% !important;
       padding: 8px !important;
       background-color: rgb(14, 140, 27) !important;
-      border-radius: 0 !important;
+      border-radius: 5px !important;
       text-transform: none !important;
       border: 0 !important;
       font-weight: bold !important;
@@ -261,7 +261,7 @@
     }
 
     .dataTables_scrollBody {
-      height: 700px !important;
+      height: 650px !important;
     }
 
 
@@ -354,9 +354,9 @@
       <button class="btn logoutButton" type="submit">Logout</button>
     </form>
   </nav>
-  <div class="container-fluid FirstRow" style="width:90%">
+  <!-- <div class="container-fluid FirstRow" style="width:90%">
     <div style="font-size:18pt; font-color:#4A4A4A; line-height:26px; padding-left: 65px;padding-top: 20px; padding-bottom: 10px; font-weight:bold"> <b>Assignments Report </b> <label id='lblDate' for="ScheduledDate"></label> </div>
-  </div>
+  </div> -->
   <div class="container noflow">
     <div id="divListingMenu"></div>
     <!-- listingcode -->
@@ -434,7 +434,7 @@
       var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
       var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
       var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
-      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + prevdate + '&ToDate=' + currentdate + '&District=' + vDist + '&Equipment=' + vEqu + '&Status=' + vStat + '&Address=' + vtxtAddress;
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + prevdate + '&ToDate=' + currentdate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress;
       $.ajax({
         async: false,
         url: RequestUrl,
@@ -462,7 +462,7 @@
       var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
       var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
       var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
-      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + vStartDate + '&ToDate=' + vEndDate + '&District=' + vDist + '&Equipment=' + vEqu + '&Status=' + vStat + '&Address=' + vtxtAddress;
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + vStartDate + '&ToDate=' + vEndDate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress;
       $.ajax({
         async: false,
         url: RequestUrl,
@@ -484,27 +484,33 @@
 
     function setDist(value) {
       var e = document.getElementById("dlDistrict");
-      var strUser = e.options[e.selectedIndex].value;
+      var strUser = e.options[e.selectedIndex].text;
       if (!(strUser.trim() == $("#hdnDist").val())) {
         $("#hdnDist").val(strUser.trim());
+        $('#hdnEqu').val($("#dlEquipment").val());
+        $('#hdnStat').val($("#dlStatus").val());
         getReport();
       }
     }
 
     function setEqu(value) {
       var e = document.getElementById("dlEquipment");
-      var strUser = e.options[e.selectedIndex].value;
+      var strUser = e.options[e.selectedIndex].text;
       if (!(strUser.trim() == $("#hdnEqu").val())) {
         $("#hdnEqu").val(strUser.trim());
+        $("#hdnDist").val($('#dlDistrict').val());
+        $('#hdnStat').val($("#dlStatus").val());
         this.getReport();
       }
     }
 
     function setStat(value) {
       var e = document.getElementById("dlStatus");
-      var strUser = e.options[e.selectedIndex].value;
+      var strUser = e.options[e.selectedIndex].text;
       if (!(strUser.trim() == $("#hdnStat").val())) {
-        $("#hdnStat").val(strUser.trim());
+        $("#hdnStat").val(strUser);
+        $("#hdnDist").val($('#dlDistrict').val());
+        $('#hdnEqu').val($("#dlEquipment").val());
         this.getReport();
       }
     }
@@ -521,62 +527,62 @@
           return a.DistrictName;
         });
         var ddlDistricts = unique.filter(this.onlyUnique);
-        ddlDistricts.unshift(' ');
+        ddlDistricts.unshift('All');
         $("#hdnDistList").val(ddlDistricts);
 
         unique = dbRows.map(function(a) {
           return a.TruckSerialNo;
         });
         var ddlEquipments = unique.filter(this.onlyUnique);
-        ddlEquipments.unshift(' ');
+        ddlEquipments.unshift('All');
         $("#hdnEquList").val(ddlEquipments);
 
         unique = dbRows.map(function(a) {
           return a.Status;
         });
         var ddlStatuss = unique.filter(this.onlyUnique);
-        ddlStatuss.unshift(' ');
+        ddlStatuss.unshift('All');
         $("#hdnStatList").val(ddlStatuss);
       }
 
       $('#divListingDetail').html('');
       var serverCounter = dbRows.length;
       var columnDefs = [
-        {width: '160px', "bSortable": false, targets: 0, className:'font600' }, { width: '120px', "bSortable": false, targets: 1 },
+        {width: '160px', "bSortable": false, targets: 0, className:'font600' }, { width: '110px', "bSortable": false, targets: 1 },
         { width: '100px', "bSortable": false, targets: 2 }, { width: '100px', "bSortable": false, targets: 3 },
-        { width: '100px', "bSortable": false, targets: 4 }, { width: '210px', "bSortable": false, targets: 5 },
+        { width: '100px', "bSortable": false, targets: 4 }, { width: '200px', "bSortable": false, targets: 5 },
         { width: '80px', "bSortable": false, targets: 6, className:'font600' }, { width: '80px', "bSortable": false, targets: 7, className:'font600' },
         { width: '80px', "bSortable": false, targets: 8 }, { width: '80px', "bSortable": false, targets: 9 },
-        { width: '80px', "bSortable": false, targets: 10 }, { width: '75px', "bSortable": false, targets: 11 }
+        { width: '80px', "bSortable": false, targets: 10 }, { width: '70px', "bSortable": false, targets: 11 }
       ];
-      var twoDet = '';
+      var twoDet = '<div class="container-fluid FirstRow" style="width:100%"><div style="font-size:18pt; font-color:#4A4A4A; line-height:22px; padding-left: 0px;padding-top: 10px; padding-bottom: 5px; font-weight:bold"> <b>Reports </b> <label id="lblDate" for="ScheduledDate"></label> </div> </div>';
       var memdet = '';
-      memdet = memdet + "<table id='tblListingDetail' class='table table-striped table-hover tblspecial' style='width:1780px;align-items:middle;height=700px;'>";
+      memdet = memdet + "<table id='tblListingDetail' class='table table-striped table-hover tblspecial' style='width:98%;min-width:99%;align-items:middle;height=700px;'>";
 
-      twoDet = twoDet + "<div class='container noflow' style='padding:0px'><div class='row bordered menuRow' style='color:white;height:110px;width:1770px;' >" +
+      twoDet = twoDet + "<div class='container noflow' style='padding:0px'><div class='row bordered menuRow' style='color:white;height:110px;width:100%;' >" +
         " <div class='col-xs-7 purpl' >" +
-        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17%'><div class='row font600'> Request # </div><div class='row' style='height:40px;'/>" +
+        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17%'><div class='row font600'> Request No. </div><div class='row' style='height:40px;'/>" +
         "<div class='row'><input type='text' id='txtSrNo' class='purpl UnderlineO' style='max-width:120px;align-items:left;'><button onclick='getReport();' class='purpl '><img src='/assets/dsny/stagingdashboard/includes/img/icon_search.png' style='height:15px;border:0px;'></button></div></div>"+
-        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17.5%'><div class='row font600'> Appointment Date </div><div class='row' style='height:10px;''></div>" +
+        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17.5%'><div class='row font600'> Scheduled Date </div><div class='row' style='height:10px;''></div>" +
         "<div class='row'>" +
         "<div class='input-group date purpl' id='datetimepicker2'><input class='purpl NoUnderlineO' style='width=80px;height:30px;' type='text' id='slstartdate' /><span class='input-group-addon '><span class='glyphicon glyphicon-calendar ' ></span></span></div>" +
         "<div class='input-group date purpl' id='datetimepicker1'><input class='purpl NoUnderlineO' style='width=100px;height:30px;' type='text' id='slenddate' /><span class='input-group-addon '><span class='glyphicon glyphicon-calendar ' ></span></span></div></div></td></div>"
         +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> District</div><div class='row'  style='height:35px;'/>" +
         "<div class='row'><select id='dlDistrict' type='number' onchange='setDist()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
       for (var count = 0; count < $("#hdnDistList").val().split(',').length; count++) {
-        twoDet = twoDet + "<option value=" + $("#hdnDistList").val().split(',')[count] + ">" + $("#hdnDistList").val().split(',')[count] + "</option>"
+        twoDet = twoDet + "<option value='" + $("#hdnDistList").val().split(',')[count] + "'>" + $("#hdnDistList").val().split(',')[count] + "</option>"
       }
       twoDet = twoDet + "</select></div></div>"
         +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> Equipment</div><div class='row' style='height:35px;'/>" +
         "<div class='row'><select id='dlEquipment' type='number' onchange='setEqu()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
       for (var count = 0; count < $("#hdnEquList").val().split(',').length; count++) {
-        twoDet = twoDet + "<option value=" + $("#hdnEquList").val().split(',')[count] + ">" + $("#hdnEquList").val().split(',')[count] + "</option>"
+        twoDet = twoDet + "<option value='" + $("#hdnEquList").val().split(',')[count] + "'>" + $("#hdnEquList").val().split(',')[count] + "</option>"
       }
       twoDet = twoDet + "</select></div></div>"
         +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> Status</div><div class='row' style='height:35px;'/>" +
         "<div class='row'><select id='dlStatus' type='number' onchange='setStat()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
       for (var count = 0; count < $("#hdnStatList").val().split(',').length; count++) {
-        twoDet = twoDet + "<option value=" + $("#hdnStatList").val().split(',')[count] + ">" + $("#hdnStatList").val().split(',')[count] + "</option>"
+        twoDet = twoDet + "<option value='" + $("#hdnStatList").val().split(',')[count] + "'>" + $("#hdnStatList").val().split(',')[count] + "</option>"
       }
       twoDet = twoDet + "</select></div></div>"
 
@@ -591,7 +597,7 @@
         "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'><label id='lblRTv'>" + data.SumRequestedTVs + "</label></div></div>" +
         "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPTv'>" + data.SumPickedUpTVs + "</label></div></div></div></div>"
         +"<div class='col-xs-4 avatar vcenter sec1 ' style='height:100%;padding-top: 5px;padding-left: 10px;padding-right: 5px;'>" +
-        "<div class='row font600' style='text-align: left;padding-left:10px;'> Other </div><div class='row' style='height:25px;'/>" +
+        "<div class='row font600' style='text-align: left;padding-left:10px;'> Other Electronics</div><div class='row' style='height:25px;'/>" +
         "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'><label id='lblRO'>" + data.SumRequestedOther + "</label></div></div>" +
         "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPO'>" + data.SumPickedUpOther + "</label></div></div></div></div></div>"
 
@@ -622,7 +628,7 @@
         deferRender: true,
         bProcessing: true,
         scrollY: 500,
-        scrollX: true,
+        scrollX: false,
         scrollCollapse: true,
         paging: false,
         bSort: false,

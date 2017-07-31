@@ -1936,7 +1936,7 @@
 		/*border: 1px solid #000;*/
 	}
 	
-	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq, #btnCancel, #btnStep2, #closeSR{
+	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq1, #btnCancel, #btnStep2, #closeSR, #logOut, #btnNewReq2{
 		background-color:#000000; 
 		padding: 0.1em 1em;
 		vertical-align: top; 
@@ -1948,7 +1948,7 @@
 	  background-color: #000000 !important;
 	}
 		
-	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover{
+	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq1:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover, #logOut:hover, #btnNewReq2:hover{
 		background-color:#454545 !important; 
 		padding: 0.1em 1em;
 		vertical-align: top; 
@@ -2041,6 +2041,17 @@ input[disabled], input[disabled]:hover{
 	color: #333;	
 	margin: .5em 0 .2em;
 }
+
+.tvSubCtg label{
+	text-transform: none !important;
+}
+
+@media only screen and (max-width: 767px), screen and (max-device-width: 767px) {
+	.pure-u-9-24 {
+		width: 67.5%;
+	}
+}
+
 </style>
  
 
@@ -2075,8 +2086,9 @@ input[disabled], input[disabled]:hover{
 	<div class="row" style="background-color: #5B4D7C; height:80px;">
       
 			<div class="container">
-				<h1 style="margin-top:20px;margin-bottom:20px;display:inline"><span id="top-header" style="color:#FFFFFF">BULK PICKUP FORM</span></h1>
-				<button type="button" id="searchSR" style="margin-top:5px;margin-right:10px;float:right;display:inline" class="pure-button search-button" tabindex="2">Logout</button>
+				<h1 style="margin-top:10px;margin-bottom:10px;"><span id="top-header" style="color:#FFFFFF">BULK PICKUP FORM</span>
+				<button type="button" id="logOut" style="margin-top:5px;float:right;display:inline" class="pure-button search-button" tabindex="2">Logout</button>
+				</h1>
 			</div>
 		
     </div>
@@ -2177,7 +2189,7 @@ input[disabled], input[disabled]:hover{
 				</div>
 				<br/>
 				<p><b>Good news! You do need to schedule for bulk garbage pickups. Just place your bulk garbage curbside after 4pm the night before your scheduled collection day.</b></p>
-				<p>Your Regular collection days are: <span id="collectionDays"></span></p>
+				<!--<p>Your Regular collection days are: <span id="collectionDays"></span></p>-->
             </div>
 			
 			<div id="Step2div" style="display:none" >  
@@ -2190,6 +2202,9 @@ input[disabled], input[disabled]:hover{
 					</div>
 					<div class="pure-u-1 pure-u-md-1-3-b">
 							<div class="textbold"> Cross Street: </div>  <div id="rdStreet" class="addressText"> </div>
+					</div>
+					<div class="pure-u-1 pure-u-md-1-3-b">
+							<div class="textbold"> Frequency: </div>  <div id="collectionDays" class="addressText"> </div>
 					</div>
 					<div class="pure-u-1 pure-u-md-1-3-b" id="currentAppDate" style="display:none">
 							<div class="textbold"> Current Appointment Date: </div>  <div id="currentAppDateVal" class="addressText"> </div>
@@ -2233,9 +2248,11 @@ input[disabled], input[disabled]:hover{
 							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
 							</div>
 							
+							<!--<div style="margin-top:20px; font-weight:bold">Others Items – Considered regular refuse and should be placed out on the next scheduled collection day. No appointments necessary.</div>-->
+							
 					   </div>
                         <br />
-                        <div class="section">Contact information </div>
+                        <!--<div class="section">Contact information </div>
                         <div class="table">
                             <div class="pure-u-1 pure-u-md-1-3">
                                 <label for="CONTACT-1-FIRST-NAME">
@@ -2268,7 +2285,7 @@ input[disabled], input[disabled]:hover{
                                     tabindex="30" disabled />
                             </div>
                         </div>
-                        <br />
+                        <br />-->
                     </div>
                 </div>
              	
@@ -2337,7 +2354,7 @@ input[disabled], input[disabled]:hover{
 								
 								</ul>
                             </div>
-							<br> 
+							<!--<br> 
 							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
                             </div>
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
@@ -2360,7 +2377,7 @@ input[disabled], input[disabled]:hover{
                                 <div class="label">Email :</div>
                                 <div id="disemail" class="data_long"> 
                                 </div> 
-                            </div>                           
+                            </div> -->                           
                         </div>
 						<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
 							
@@ -2441,8 +2458,15 @@ input[disabled], input[disabled]:hover{
 			 <fieldset class="fieldset6" style="display:none;">
 				<div class="pure-g">  
                     <div id="subcontainer" class="errormsg" style="text-align:center">  
-						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+						<!--Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.-->
+						Sorry, there already exists a request for this address on the same pick up date. Please setout items at curbside for pickup.
 						
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnNewReq2" class="pure-button next" style="margin-top: 28px; align: center">
+							Schedule Another Pick Up</button>
 					</div>
 					<!--<br>
 					<br> 
@@ -2486,6 +2510,7 @@ input[disabled], input[disabled]:hover{
 
 <script type="text/javascript">
  $('body').css('background-color', backgroundcolor);
+ 
  
  function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
     var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
@@ -2638,6 +2663,9 @@ var reqId = 0;
 	//jQuery.support.cors = true;
     $(document).ready(function () {
 	  
+		if(sessionStorage.length == 0)
+			window.location.href = '/assets/dsny/contact/services/login.shtml';
+ 
 		loadCategories();
 		   
 		
@@ -3041,7 +3069,7 @@ var reqId = 0;
 					$('#rdStreet').html($("#GEOCrossStreet").val());
 					$('#rdAddressNonDual').html(fullAddress);
 					$('#rdStreetNonDual').html($("#GEOCrossStreet").val());
-					
+					$("#collectionDays").html($("#RegularCollectionDayNames").val());
 					
 					$('select').attr("required",'true');
 					
@@ -3062,7 +3090,7 @@ var reqId = 0;
 						});
 					
                     //$("#EVENT-LOCATION").val(fullAddress);
-					jQuery.support.cors = true;
+					/*jQuery.support.cors = true;
 					$.ajax({
 					 type: 'GET',
 					url: APIUrl + '/BulkAPI/api/bulkpickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
@@ -3070,7 +3098,7 @@ var reqId = 0;
 					 dataType: 'json',
 					 async: false,
 					 success: function (data) {
-						if (data) {
+						if (data) { */
 						
 							$('#Step2div').show();
 					
@@ -3078,25 +3106,49 @@ var reqId = 0;
 							$('#lstPickUpLocation').append($("#GEOPickupStreet").val()); 
 							
 							$('#slapptdate').removeAttr("disabled");
-							$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
+							/*$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
 							$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
 							$('#CONTACT-1-PHONE').removeAttr("disabled");
 							$('#CONTACT-1-EMAIL').removeAttr("disabled");
-							$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
+							$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled"); */
 							$('#msform input[type="checkbox"]').removeAttr("disabled");
 							
 							$('select').removeAttr("disabled");
 							
 							$('#slapptdate').attr("required",'true');
-							$('#CONTACT-1-FIRST-NAME').attr("required",'true');
+							/*$('#CONTACT-1-FIRST-NAME').attr("required",'true');
 							$('#CONTACT-1-LAST-NAME').attr("required",'true');
 							$('#CONTACT-1-PHONE').attr("required",'true');
 							$('#CONTACT-1-EMAIL').attr("required",'true');
-							$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
+							$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');*/
+							
+							
+							$('#datetimepicker1').datetimepicker({
+											debug: true,
+											format: 'MM-DD-YYYY',
+											defaultDate: Date(),
+											widgetPositioning: {
+												horizontal: 'auto',
+												vertical: 'bottom'
+											},                                        
+											keyBinds: {
+														up: null,
+														down: function (widget) {
+																	if (!widget) {
+																	this.show();
+																	return;
+																	}
+																},
+														left: null,
+														right: null,
+														t : null,
+														'delete' : null
+													} 									
+										});
 						
-						
+							
 							//var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
-							var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
+							/*var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
 							$.ajax({
 								async:false,
 								url: getDateUrl,
@@ -3161,7 +3213,7 @@ var reqId = 0;
 						 return false;
 					}
 				 }
-			 });
+			 }); */
 				return false;
 			}
 		});
@@ -3255,7 +3307,7 @@ var reqId = 0;
 							$(ctgTextbox).attr("required",'true');
 							$(ctgTextbox).attr("aria-invalid",'true');
 							$(ctgTextbox).attr("aria-required",'true');
-							$(ctgTextbox).tooltipster('update', "Qunatity should be greater than zero.");
+							$(ctgTextbox).tooltipster('update', "Quantity should be greater than zero.");
 							$(ctgTextbox).tooltipster('show'); 
 							$(ctgTextbox).focus();  
 							return false;   
@@ -3291,14 +3343,15 @@ var reqId = 0;
     $("#nextstep3").click(function () {
         current_fs = $(this).parent().parent();
         next_fs = $(this).parent().parent().next();
-        if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
+        //if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
+		if ( validateForm() && ($('#results').text().length == 0) && validateCategory()) {
 		
-			if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
+			/*if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
 			
 				$('#CONTACT-CONFRIM-EMAIL').tooltipster('update', "Confrim email address should match to email address.");
 				$('#CONTACT-CONFRIM-EMAIL').tooltipster('show'); 
 				return false; 
-			} 
+			} */
 		
 		
 			var strAddress =  $('#houseNumber').val() + ' ' + $('#street').val() + ', ' + $("#boro option:selected").text()
@@ -3463,16 +3516,16 @@ var reqId = 0;
                          //Save user information if captcha is valid
 				 var Requestdata= {
 						RequestId:	reqId,
-						FirstName: $('#disfname').text(),
-						LastName : $('#dislname').text(),
-						Phone : $('#disphone').text(),
-						Email : $('#disemail').text(),
+						FirstName: '',
+						LastName : '',
+						Phone : '',
+						Email : '',
 						BuildingNumber : $('#houseNumber').val(),
 						Street : $('#street').val(),
 						District : $('#GEODistrict').val(),
 						PickUpLocation :$('#disPckLocation').text(),
 						AppointmentDate : $('#disApptDate').text(),
-						Source : '311',
+						Source : 'SUPERVISOR',
 						CrossStreets : $('#GEOCrossStreet').val(),
 						PickupRequestItems : CatgoryList
 					}		
@@ -3540,7 +3593,7 @@ var reqId = 0;
 		return false;
 	});
 	  
-	$('#btnNewReq,#btnNewReq1').click(function (){
+	$('#btnNewReq,#btnNewReq1,#btnNewReq2').click(function (){
 		//location.reload();
 		window.location.href = '/assets/dsny/contact/services/supervisor-bulk-pickup-request.shtml';
 		return false;
@@ -4010,6 +4063,10 @@ var reqId = 0;
 		window.location.href = '/assets/dsny/contact/services/311-ewaste-pickup-search.shtml';
 	});
    
+   $("#logOut").click(function () {
+		sessionStorage.removeItem("userId");
+		window.location.href = '/assets/dsny/contact/services/login.shtml';
+	});
 	
 </script>
 <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

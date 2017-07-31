@@ -2430,7 +2430,7 @@ input[disabled], input[disabled]:hover{
                     <div id="subcontainer"   style="text-align:center">
 									Thank you for submitting your Bulk pick-up request. <br>The Service Request number is <br/><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/> Use this number when you check the status of this request. <br>
 <!--The resident will receive a confirmation email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request please call 311.  <br> <br> <br>-->
-The resident will receive a confirmation email with this information. <br> To check the status of this request please visit the DSNY Website. To cancel your request please call 311.  <br> <br> <br>
+To check the status of this request please visit the DSNY Website. To cancel your request please call 311.  <br> <br> <br>
 <!--<strong> Where to leave your E-Waste items?  <br>
 Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB. </strong>-->
 						 					

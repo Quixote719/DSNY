@@ -445,10 +445,10 @@ var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
                     $('.TotalPickedUpItems').append('0');
 
                     if (TruckId == '0') {
-                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island, ' + $('.selectedDistrict').text() + '.</strong></div>');
+                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island.</strong></div>');
                     } else {
 
-                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island, ' + $('.selectedDistrict').text() + ',' + TruckId + '.</strong></div>');
+                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island, ' + TruckId + '.</strong></div>');
                     }
 
 

@@ -4052,15 +4052,32 @@ var reqId = 0;
 		$("#reasonCancel").click(function (){
 
 		jQuery.support.cors = true;
-		var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled&ReasonType=' + $("#ddlReasonCancel").val() + '&Comments=' + $("#txtReasonCancel").val();
-		$.ajax({
-			async:false,
-			url: getDateUrl,
-			type: "GET",
-			dataType: 'json',
-			crossDomain: true,
-			success: function(data){
-				if (data != undefined)
+		// var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled&ReasonType=' + $("#ddlReasonCancel").val() + '&Comments=' + $("#txtReasonCancel").val();
+		// $.ajax({
+		// 	async:false,
+		// 	url: getDateUrl,
+		// 	type: "GET",
+		// 	dataType: 'json',
+		// 	crossDomain: true,
+		// 	success: function(data){
+		// 		if (data != undefined)
+
+var Requestdata= {
+	 strRequestId:	reqId,
+	 Status: "Request Cancelled" ,
+	 Comments : $('#txtReasonCancel').text(),
+	 ReasonType :$('#ddlReasonCancel').text()
+ }
+
+ var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest';
+$.ajax({
+	async: false,
+	url: getDateUrl ,
+	data: Requestdata,
+	type: "POST",
+	dataType: 'json',
+	crossDomain: true,
+	success: function (json) {
 				{
 					$("#search-input").val('');
 					window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
