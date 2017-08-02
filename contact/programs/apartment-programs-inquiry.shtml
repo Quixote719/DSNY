@@ -146,7 +146,7 @@
 									<input name="PROGRAM" type="checkbox" value="re-fashioNYC" tabindex="6" required> refashionNYC<br />
 									<input name="PROGRAM" type="checkbox" value="e-cycleNYC" tabindex="7" required> ecycleNYC<br />
 									<!--<input name="PROGRAM" type="checkbox" value="Apt Building Recycling Initiative (ABRI)" tabindex="8" required> Apartment Building Recycling Initiative<br />-->
-									<input name="PROGRAM" type="checkbox" value="organics collection" tabindex="9" required> Organics Collection
+									<!-- <input name="PROGRAM" type="checkbox" value="organics collection" tabindex="9" required> Organics Collection -->
 								</div>
 								<br /><br />
 								<div class="pure-u-md-3-4"> Upon receipt of your application, staff from the program(s) you have selected will contact you separately to follow-up.</div>
