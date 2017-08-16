@@ -1,4 +1,4 @@
-﻿g<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
 <title>DSNY - About - Annual and Monthly Statistics </title>
 <!--#include virtual="/assets/dsny/templates/abouttemplates.shtml" -->
 
@@ -15,6 +15,7 @@
 
 		<p>Annual breakdown, by borough and Community District, of recycling and garbage tonnages collected curbside by DSNY, along with diversion and capture rates.</p>
 		<p>
+			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2017.pdf">Fiscal Year 2017 DSNY Curbside Collections</a><br />
 			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2016.pdf">Fiscal Year 2016 DSNY Curbside Collections</a><br />
 			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2015_0815.pdf">Fiscal Year 2015 DSNY Curbside Collections</a><br />
 			<a href="/assets/dsny/docs/about_dsny-curbside-collections-FY2014_0815.pdf">Fiscal Year 2014 DSNY Curbside Collections</a> <br />
@@ -49,6 +50,7 @@
 		<p>Monthly breakdown, by borough and Community District, of recycling and garbage tonnages collected, along with diversion and capture rates.</p>
 
 		<p>
+			<a href="/assets/dsny/docs/about_dsny-collections-monthly-2017-06.pdf">June 2017 DSNY Curbside Collections</a> <br />
 			<a href="/assets/dsny/docs/about_dsny-collections-monthly-2017-05.pdf">May 2017 DSNY Curbside Collections</a> <br />
 			<a href="/assets/dsny/docs/about_dsny-collections-monthly-2017-04.pdf">April 2017 DSNY Curbside Collections</a> <br />
 			<a href="/assets/dsny/docs/about_dsny-collections-monthly-2017-03.pdf">March 2017 DSNY Curbside Collections</a> <br />
