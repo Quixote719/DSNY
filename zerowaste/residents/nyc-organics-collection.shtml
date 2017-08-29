@@ -10,181 +10,205 @@
 		<h2> Neighborhoods Served </h2>
 
 		<p>The Department of Sanitation currently serves more than two million residents in all five boroughs with curbside organics service, and will grow to 
-		serve 3.3 million residents by the end of 2017. By the end of 2018, all New Yorkers will receive either curbside service or have access to 
-		convenient neighborhood drop-off sites.</p>
+			serve 3.3 million residents by the end of 2017. By the end of 2018, all New Yorkers will receive either curbside service or have access to 
+			convenient neighborhood drop-off sites.</p>
 
-		<p>See the map of <a href="/assets/dsny/docs/nyc-organics-collection-areas.pdf">participating neighborhoods</a> (pdf).</p>
+			<p>See the map of <a href="/assets/dsny/docs/nyc-organics-collection-areas.pdf">participating neighborhoods</a> (pdf).</p>
 
-		<div>
 			<div>
-				<div class="span12" style="margin-top:10px;">
-					<p><b>Check your collection schedule</b> to see if your building is included.  Enter your building number and street name, select borough, and then click Search.</p>
-					<div id="formErrorMessage"> 
-					</div>
-					<form id="msform" name="msform" class="pure-form" type="external" method="get" style="margin:0px">
-						<input name="app_key" type="hidden" value="06F6620746865206F" />
-						<div class="span12">
-							<div class="span3">
-								<label id="houseNumberLabel">Building Number:<span class="red">*</span></label>
-								<input name="houseNumber" id="houseNumber" maxlength="10" style="width:100%; box-shadow:none;"  type="text" tabindex="1" required/>
-							</div>
-							<div class="span3">
-								<label id="streetLabel">Street Name:<span class="red">*</span></label>
-								<input name="street" id="street" maxlength="50" style="width:100%; box-shadow:none;" type="text" tabindex="2" required />
-							</div>
-							<div class="span3">
-								<label id="boroughLabel">Borough:<span class="red">*</span></label>
-								<select name="borough" id="borough" style="width:100%; box-shadow:none;margin-top:-1px;" type="select-one" tabindex="3" required >
-									<option selected="selected" value="">Select your borough</option>
-									<option value="2">Bronx</option>
-									<option value="3">Brooklyn</option>
-									<option value="1">Manhattan</option>
-									<option value="4">Queens</option>
-									<option value="5">Staten Island</option>
-								</select>
-							</div>
-							<div class="span3">
-								<label>&nbsp;</label>
-								<button type="submit" class="btn" tabindex="4" id="search" style="width:  100%;margin-top: -3px;background-color: #e26e25">Search</button>            
-							</div>
-						</div>        
-						<div class="span12">
-							<div id="results" style="margin-top:10px;margin-bottom:10px;" class="pure-u-sm-22-24"></div>
+				<div>
+					<div class="span12" style="margin-top:10px;">
+						<p><b>Check your collection schedule</b> to see if your building is included.  Enter your building number and street name, select borough, and then click Search.</p>
+						<div id="formErrorMessage"> 
 						</div>
-					</form>
+						<form id="msform" name="msform" class="pure-form" type="external" method="get" style="margin:0px">
+							<input name="app_key" type="hidden" value="06F6620746865206F" />
+							<div class="span12">
+								<div class="span3">
+									<label id="houseNumberLabel">Building Number:<span class="red">*</span></label>
+									<input name="houseNumber" id="houseNumber" maxlength="10" style="width:100%; box-shadow:none;"  type="text" tabindex="1" required/>
+								</div>
+								<div class="span3">
+									<label id="streetLabel">Street Name:<span class="red">*</span></label>
+									<input name="street" id="street" maxlength="50" style="width:100%; box-shadow:none;" type="text" tabindex="2" required />
+								</div>
+								<div class="span3">
+									<label id="boroughLabel">Borough:<span class="red">*</span></label>
+									<select name="borough" id="borough" style="width:100%; box-shadow:none;margin-top:-1px;" type="select-one" tabindex="3" required >
+										<option selected="selected" value="">Select your borough</option>
+										<option value="2">Bronx</option>
+										<option value="3">Brooklyn</option>
+										<option value="1">Manhattan</option>
+										<option value="4">Queens</option>
+										<option value="5">Staten Island</option>
+									</select>
+								</div>
+								<div class="span3">
+									<label>&nbsp;</label>
+									<button type="submit" class="btn" tabindex="4" id="search" style="width:  100%;margin-top: -3px;background-color: #e26e25">Search</button>            
+								</div>
+							</div>        
+							<div class="span12">
+								<div id="results" style="margin-top:10px;margin-bottom:10px;" class="pure-u-sm-22-24"></div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
 
-		<h2> New Organics Collection Service Areas </h2>
+			<h2> New Organics Collection Service Areas </h2>
 
-		<p>The Department of Sanitation is expanding NYC Organics to serve all New Yorkers by the end of 2018 with either curbside service or convenient neighborhood drop-off sites. </p>
+			<p>The Department of Sanitation is expanding NYC Organics to serve all New Yorkers by the end of 2018 with either curbside service or convenient neighborhood drop-off sites. </p>
 
-		<p>These neighborhoods are the newest to receive curbside organics collection service: </p>
-		<br>
+			<p>These neighborhoods are the newest to receive curbside organics collection service: </p>
+			<br>
 
-		<b>Queens Community Board 07</b> - Auburndale, Bay Terrace, Beechhurst, College Point, Flushing, Linden Hill, Malba, Queensboro Hill, Whitestone, Willets Point
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>September</b></li>
-			<li>Organics collection service starts: Week of <b>Oct 2</b></li>
-			<li>Collection schedule:  Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Queens Community Board 02</b> – Long Island City, Sunnyside, Woodside
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>October</b></li>
+				<li>Organics collection service starts: Week of <b>Oct 30</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Queens Community Board 08</b> - Briarwood, Flushing South, Fresh Meadows, Hillcrest, Holliswood, Jamaica Estates, Jamaica Hills, Kew Gardens Hills, Utopia
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>September</b></li>
-			<li>Organics collection service starts: Week of <b>Oct 2</b></li>
-			<li>Collection schedule:  Twice/Week on Trash Day</li>
-		</ul>
-		<br>
+			<b>Queens Community Board 09</b> – Ozone Park, Kew Gardens, Richmond Hill, Woodhaven
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>October</b></li>
+				<li>Organics collection service starts: Week of <b>Oct 30</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Bronx Community Board 08</b> – Fieldston, Kingsbridge, Kingsbridge Heights, Marble Hill, Riverdale, Spuyten Duyvil, Van Cortlandt Village
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>August</b></li>
-			<li>Organics collection service starts: Week of <b>Sept 4</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Queens Community Board 14</b> - Breezy Point, Belle Harbor, Broad Channel, Neponsit, Arverne, Bayswater, Edgemere, Rockaway Park, Rockaway, Far Rockaway
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>October</b></li>
+				<li>Organics collection service starts: Week of <b>Oct 30</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
+			
+			<b>Queens Community Board 07</b> - Auburndale, Bay Terrace, Beechhurst, College Point, Flushing, Linden Hill, Malba, Queensboro Hill, Whitestone, Willets Point
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>September</b></li>
+				<li>Organics collection service starts: Week of <b>Oct 2</b></li>
+				<li>Collection schedule:  Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Bronx Community Board 12</b> – Baychester, Eastchester, Edenwald, Fishbay, Olinville, Wakefield, Willamsbridge, Woodlawn
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>August</b></li>
-			<li>Organics collection service starts: Week of <b>Sept 4</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Queens Community Board 08</b> - Briarwood, Flushing South, Fresh Meadows, Hillcrest, Holliswood, Jamaica Estates, Jamaica Hills, Kew Gardens Hills, Utopia
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>September</b></li>
+				<li>Organics collection service starts: Week of <b>Oct 2</b></li>
+				<li>Collection schedule:  Twice/Week on Trash Day</li>
+			</ul>
+			<br>
 
-		<b>Bronx Community Board 10</b> – City Island, Co-op City, Country Club, Eastchester Bay, Edgewater, Ferry Point, Locust Point, Pelham Bay, Schuylerville, Silver Beach, Spencer Estates, Throggs Neck, Westchester Square, and Zerega
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>July</b></li>
-			<li>Organics collection service starts: Week of <b>July 30</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Bronx Community Board 08</b> – Fieldston, Kingsbridge, Kingsbridge Heights, Marble Hill, Riverdale, Spuyten Duyvil, Van Cortlandt Village
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>August</b></li>
+				<li>Organics collection service starts: Week of <b>Sept 4</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Bronx Community Board 11</b> – Allerton, Bronx Park East, Bronxdale, Eastchester Gardens, Indian Village, Laconia, Morris Park, Olinville, Parkside, Pelham Gardens, Pelham Parkway, Van Nest, Westchester Heights
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>July</b></li>
-			<li>Organics collection service starts: Week of <b>July 30</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Bronx Community Board 12</b> – Baychester, Eastchester, Edenwald, Fishbay, Olinville, Wakefield, Willamsbridge, Woodlawn
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>August</b></li>
+				<li>Organics collection service starts: Week of <b>Sept 4</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 7</b> - Sunset Park, Windsor Terrace*
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>June</b></li>
-			<li>Organics collection service starts: Week of <b>July 2</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-			<li><i><b>*Service Update:</b> Residents in Windsor Terrace who currently receive twice/week organics collection on trash days will receive once/week organics collection on recycling days beginning July 2</i></li>
-		</ul>
-		<br>
+			<b>Bronx Community Board 10</b> – City Island, Co-op City, Country Club, Eastchester Bay, Edgewater, Ferry Point, Locust Point, Pelham Bay, Schuylerville, Silver Beach, Spencer Estates, Throggs Neck, Westchester Square, and Zerega
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>July</b></li>
+				<li>Organics collection service starts: Week of <b>July 30</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 11</b> - Bath Beach, Bensonhurst, Gravesend, Mapleton
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>June</b></li>
-			<li>Service Collection Starts: Week of <b>July 2</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Bronx Community Board 11</b> – Allerton, Bronx Park East, Bronxdale, Eastchester Gardens, Indian Village, Laconia, Morris Park, Olinville, Parkside, Pelham Gardens, Pelham Parkway, Van Nest, Westchester Heights
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>July</b></li>
+				<li>Organics collection service starts: Week of <b>July 30</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 12</b> - Boro Park, Kensington, Midwood, Ocean Parkway
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>June</b></li>
-			<li>Organics collection service starts: Week of <b>July 2</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 7</b> - Sunset Park, Windsor Terrace*
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>June</b></li>
+				<li>Organics collection service starts: Week of <b>July 2</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+				<li><i><b>*Service Update:</b> Residents in Windsor Terrace who currently receive twice/week organics collection on trash days will receive once/week organics collection on recycling days beginning July 2</i></li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 2</b> - Boerum Hill, Bridge Plaza, Brooklyn Heights, Brooklyn Navy Yard, Clinton Hill, Downtown Brooklyn, DUMBO, Farragut, Fort Greene, Fulton Ferry Landing, Vinegar Hill, Wallabout
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>May</b></li>
-			<li>Organics collection service starts: Week of <b>June 4</b></li>
-			<li>Collection schedule:  Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 11</b> - Bath Beach, Bensonhurst, Gravesend, Mapleton
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>June</b></li>
+				<li>Service Collection Starts: Week of <b>July 2</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 13</b> - Brighton Beach, Coney Island, Gravesend, Seagate, West Brighton
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>May</b></li>
-			<li>Organics collection service starts: Week of <b>June 4</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 12</b> - Boro Park, Kensington, Midwood, Ocean Parkway
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>June</b></li>
+				<li>Organics collection service starts: Week of <b>July 2</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 15</b> - East Gravesend, Gerritsen Beach, Gravesend, Homecrest, Kings Bay, Kings Highway, Madison, Manhattan Beach, Plumb Beach,  Sheepshead Bay
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>May</b></li>
-			<li>Organics collection service starts: Week of <b>June 4</b></li>
-			<li>Collection schedule: Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 2</b> - Boerum Hill, Bridge Plaza, Brooklyn Heights, Brooklyn Navy Yard, Clinton Hill, Downtown Brooklyn, DUMBO, Farragut, Fort Greene, Fulton Ferry Landing, Vinegar Hill, Wallabout
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>May</b></li>
+				<li>Organics collection service starts: Week of <b>June 4</b></li>
+				<li>Collection schedule:  Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 1</b> - East Williamsburg, Greenpoint, Northside, Southside, Williamsburg
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>April</b></li>
-			<li>Organics collection service starts: Week of <b>April 30</b></li>
-			<li>Collection schedule:  Once/Week on your Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 13</b> - Brighton Beach, Coney Island, Gravesend, Seagate, West Brighton
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>May</b></li>
+				<li>Organics collection service starts: Week of <b>June 4</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<b>Brooklyn Community Board 16</b> - Broadway Junction, Brownsville, Ocean Hill
-		<ul style="list-style: none;">
-			<li>Your brown bin arrives: <b>April</b></li>
-			<li>Organics collection service starts: Week of <b>April 30</b></li>
-			<li>Collection schedule:  Once/Week on Recycling Day</li>
-		</ul>
-		<br>
+			<b>Brooklyn Community Board 15</b> - East Gravesend, Gerritsen Beach, Gravesend, Homecrest, Kings Bay, Kings Highway, Madison, Manhattan Beach, Plumb Beach,  Sheepshead Bay
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>May</b></li>
+				<li>Organics collection service starts: Week of <b>June 4</b></li>
+				<li>Collection schedule: Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<br>
+			<b>Brooklyn Community Board 1</b> - East Williamsburg, Greenpoint, Northside, Southside, Williamsburg
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>April</b></li>
+				<li>Organics collection service starts: Week of <b>April 30</b></li>
+				<li>Collection schedule:  Once/Week on your Recycling Day</li>
+			</ul>
+			<br>
 
-		<h2>Why is DSNY offering this service?</h2>
+			<b>Brooklyn Community Board 16</b> - Broadway Junction, Brownsville, Ocean Hill
+			<ul style="list-style: none;">
+				<li>Your brown bin arrives: <b>April</b></li>
+				<li>Organics collection service starts: Week of <b>April 30</b></li>
+				<li>Collection schedule:  Once/Week on Recycling Day</li>
+			</ul>
+			<br>
 
-		<p>Organic waste accounts for about 31% of all waste generated by residents in New York City. Organic waste includes yard waste, food scraps, compostable paper (napkins, paper plates, etc.), and other materials suitable for industrial-scale composting.</p>
+			<br>
 
-		<p>Operating a curbside program helps NYC reduce waste sent to costly landfills, deters pests by storing food waste in special rodent-resistant bins, and creates compost (a natural soil amendment) or renewable energy.</p>
+			<h2>Why is DSNY offering this service?</h2>
 
-		<br>
+			<p>Organic waste accounts for about 31% of all waste generated by residents in New York City. Organic waste includes yard waste, food scraps, compostable paper (napkins, paper plates, etc.), and other materials suitable for industrial-scale composting.</p>
+
+			<p>Operating a curbside program helps NYC reduce waste sent to costly landfills, deters pests by storing food waste in special rodent-resistant bins, and creates compost (a natural soil amendment) or renewable energy.</p>
+
+			<br>
 <!-- 		<div class="fluid-wrapper"><iframe width="700" frameborder="0" src="http://www.youtube.com/embed/GBeA53ZsumY" height="393"></iframe></div>
 -->	
 
