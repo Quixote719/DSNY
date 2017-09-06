@@ -1,0 +1,68 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/styles.shtml"-->
+<style>
+.ui-state-default {background-color: #e26e25; }
+
+.ui-state-hover {background-color: #f78b1e; }
+
+.agencies-about-links ul li a
+{
+	color : #e26e25;
+}
+
+.agencies-about-links ul li.active a,.agencies-about-links ul li.active a:hover, .agencies-about-links ul li.active a:focus 
+{
+	color: #f78b1e !important;									
+}
+
+.page-breadcrumb
+{
+	color:#e26e25;
+}
+
+.page-breadcrumb a, .page-breadcrumb a:visited
+{
+	color: #e26e25;
+}
+
+.page-breadcrumb a.breadcrumb-active-page, a.breadcrumb-active-page:link, a.breadcrumb-active-page:visited 
+{
+	color:  #f78b1e;
+}
+
+.page-breadcrumb,.page-breadcrumb a.breadcrumb-active-page:hover, .page-breadcrumb a.breadcrumb-active-page
+{
+	color:  #686868 !important;
+}
+.ui-widget-content a {
+
+  color: #e26e25;
+
+}
+/*.breadcrumb-arrow
+{
+	font-size: 10px;
+	color: rgb(256,128,128);
+	position: relative;
+	bottom: 1px;
+}*/
+.navbar .popover-content a, a:link, a:visited
+{
+	color: #e26e25;
+}
+									
+@media only screen and (min-width: 767px) {
+
+	 a:hover
+		 {
+				color: #f78b1e !important;
+		  }
+}
+.cd-dropdown-content a, .cd-dropdown-content ul a
+{
+	color: #ffffff !important;
+}
+</style>
+<!--#include virtual="/assets/dsny/templates/mobilenav/mobilenavigation.shtml"-->
+<!--#include virtual="/assets/dsny/templates/level1menu/level1menu.shtml"-->
+<!--#include virtual="/assets/dsny/templates/megamenu/zerowastemegamenu.shtml"-->
+<!--#include virtual="/assets/dsny/templates/breadcrumb/breadcrumb_wp.shtml"-->

@@ -1,0 +1,249 @@
+﻿<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<title>DSNY - Zero Waste - Residents </title>
+<!--#include virtual="/assets/dsny/templates/zerowastetemplates.shtml" -->
+
+
+
+
+<link href="/assets/dsny/css/pages/webforms/bootstrap_input.css" media="screen" rel="stylesheet" type="text/css" />
+
+<style>
+	.control-group .tt-dataset-aNames{max-height:200px; overflow-y:auto; width: 99%; border: 1px solid #e5e5e5; border-radius:3px; background-color:#ffffff;}
+	.btn,.btn:focus { padding : 6px 12px; width: auto; }		
+	.control-group .tt-dropdown-menu {width: 74.50%; z-index: 1000 !important;}
+	.btn:hover, .btn:focus, .btn.focus { color: white;}	
+	.input-group {width: 100%;}	
+	.input-group-btn { font-size: 14px;}
+	.input-group .form-control {width: 97% }
+	
+	@media only screen and (max-width: 767px), screen and (max-device-width: 767px) 
+	{
+		.input-group .span3 {
+			width: 23.40426% !important;
+			float: right !important; 
+		}		
+		.input-group .span9 {
+			width: 71.19% !important;
+			float: left !important; 
+		}
+		.control-group .tt-dropdown-menu
+		{
+			width: 76%; z-index: 1000 !important;
+		}
+	}
+	.ui-state-default,.btn,.btn:focus {background-color: #e26e25; }
+	.ui-state-hover, .btn:hover {background-color: #f78b1e; }	
+	.ui-accordion .ui-accordion-content{ overflow:visible;}
+</style>
+
+
+
+<div id="contentsection" class="about-main-image">
+
+	<div class="span6 about-description">
+
+		<h1>Residents</h1>
+
+
+		<p> <strong>  0X30: New York City will be contributing zero waste to landfills by 2030. Take the <a href="/assets/dsny/contact/programs/zero-waste-pledge.shtml">Zero Waste Pledge</a>!</strong></p>
+		<p> There’s no “away” when we throw garbage into a can or litter basket.  Trash goes into landfills, where it decomposes – sending methane, carbon dioxide and toxins into our air, soil and water.  0X30 minimizes this: By contributing zero waste to landfills by 2030, New Yorkers will be protecting our environment more than ever before.</p>
+		<p> The best way to keep garbage from landfills is by limiting the materials you use. Reduce use when you can – and reuse and <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/recycling.shtml">recycle</a> the rest.  For example, opt out from receiving <a href="/assets/dsny/zerowaste/residents/junk-mail.shtml">junk mail</a>, and <a href="/assets/dsny/zerowaste/residents/donate.shtml"> donate or sell items</a> you no longer need. </p>
+		<p><!-- <a href="/assets/dsny/zerowaste/residents/holiday-tips.shtml">Reduce, reuse, and recycle – tips for the holidays.</a>--></p>
+
+		<div id= accordion> 
+
+			<p>  Residential Collection:  Schedule + Service Requests </p>
+			<div>
+				<p> <a href="/assets/dsny/zerowaste/residents/collection-schedule-for-residents.shtml"> Check Your Collection Schedule </a> </p> 
+				<p> <a href="/assets/dsny/zerowaste/residents/curbside-setout-for-residents.shtml">Setout Times + Overview</a></p>
+				<p> <a href="/assets/dsny/contact/services/request-collection-service.shtml"> Request Collection Service </a> </p> 
+				<p> <a href="http://www1.nyc.gov/nyc-resources/service/2031/missed-garbage-recycling-or-organics-collection"> Report a Missed Collection </a></p> 
+			</div>
+
+			<p>  Foam Products </p>
+			<div>
+				<p>Some products can’t be easily recycled. Case in point: expanded polystyrene, or EPS. Known as the foam used to make coffee cups, the Department 
+					collects more than 28,000 tons of EPS each year. Foam is lightweight and comprises a substantial amount of litter on our streets, waterway and beaches – and banning EPS cups, plates, 
+					containers and packing peanuts is the best way to keep this foam from landfills. In January 2015, Commissioner Garcia determined that 
+					foam recycling is not feasible. While a New York State judge has recently overturned the City’s ban on EPS, DSNY is exploring ways to 
+					keep this material from landfills. On May 12, 2017 Commissioner Garcia issued a <a href="http://www1.nyc.gov/assets/dsny/docs/2017-05-12FoamDetermination_FINAL.pdf"> new determination </a> on the recyclability of food-service foam. </p>	
+				</div>
+			</div>
+
+			<div id="accordion1">
+
+				<p>How to Get Rid Of...</p>
+				<div>
+					<p>To learn the best way to dispose of products, scroll through the topics below or search  by item:</p>
+					<div>
+						<div class="span12">
+
+							<form method="get"  type="external" action="/assets/dsny/zerowaste/residents_wpd.shtml" class="form-search" style="margin:0"> 
+
+								<div class="input-group control-group typeahead-div" style="overflow: visible">
+									<div class="span9">
+										<input type="text" class="typeahead form-control" placeholder="How to Get Rid Of..." id="filter-term" name="filter-term" style="font-size: 12px;position: relative; vertical-align: top; background-color: transparent;box-shadow: none;border: 1px solid #ccc;color: #686868;" tabindex="1"/> 
+									</div>
+									<div class="span3">
+										<span class="input-group-btn">
+											<button type="submit" class="btn" tabindex="4" id="search" style="margin-left: 3px;margin-top: 2px;height: 40px; width: 90%" tabindex="2">Search</button>
+										</span>
+									</div>
+								</div>
+							</form> 
+						</div>
+						<div id="results-div" style="display:none"></div>
+					</div>
+
+					<h3 style="margin:0px;padding: 0px; line-height: 0px">&nbsp;</h3>
+				</div>
+			</div>
+
+
+			<div id="accordion2"> 
+
+				<p>  Disposing Electronics </p>
+				<div>
+
+					<p> Because heavy metals are used to produce electronic equipment, under New York State law it’s illegal to throw away electronics with other garbage. Televisions, electronic readers, scanners, printers, digital music players and other equipment must be recycled by the manufacturers. <a href="/assets/dsny/zerowaste/residents/electronics.shtml">Learn more</a>.</p>
+					<p> <a href="/assets/dsny/zerowaste/residents/batteries.shtml"> Batteries </a></p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cell-phones.shtml"> Cell Phones </a></p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/electronics.shtml"> Electronics </a></p>
+				</div>
+
+				<p>  Automotive Products  </p>  
+				<div>
+
+					<p>  <a href="/assets/dsny/zerowaste/residents/antifreeze.shtml"> Antifreeze </a></p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/auto-batteries.shtml"> Auto Batteries </a></p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/motor-oil.shtml"> Motor Oil </a></p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/tires.shtml"> Tires </a></p> 
+
+				</div> 
+
+				<p>  Food Scraps + Yard Waste </p>  
+				<div> 
+					<p>Don’t treat food scraps and yard trimmings like garbage!  Collectively, this waste is called organics – and DSNY is turning this into compost to improve our soil. </p>
+					<p> <a href="/assets/dsny/zerowaste/residents/food-scraps-and-yard-waste.shtml"> Food Scraps </a>  </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/yard-waste.shtml"> Yard Waste </a>  </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/fall-leaf-collection.shtml"> Fall Leaf Collection </a>  </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/christmas-trees.shtml"> Christmas Trees </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/wood-debris-disposal.shtml"> Wood Debris </a> </p> 
+				</div>
+
+				<p> Harmful Products </p>  
+				<div>
+					<p> <a href="/assets/dsny/zerowaste/residents/asbestos.shtml"> Asbestos </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/corrosive-and-flammable.shtml"> Corrosive + Flammable Items </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/gas-tanks.shtml"> Gas Tanks </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/household-medical-waste.shtml"> Household Medical Waste </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/mercury-containing-devices.shtml"> Mercury-Containing Devices </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/paint.shtml"> Paint </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/pesticides.shtml"> Pesticides </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/smoke-detectors.shtml"> Smoke Detectors </a> </p> 
+				</div>
+
+				<p>  Other Household Items </p>  
+				<div>
+					<p> <a href="/assets/dsny/zerowaste/residents/appliances.shtml"> Appliances </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/art-supplies.shtml"> Art Supplies </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/books-and-media.shtml"> Books + Media </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/childrens-items.shtml"> Children's Items </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cleaning-products.shtml"> Cleaning Products </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cosmetics.shtml"> Cosmetics </a> </p>  
+					<p> <a href="/assets/dsny/zerowaste/residents/deposit-bottles.shtml"> Deposit Bottles </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/eyeglasses.shtml"> Eyeglasses </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/furniture.shtml"> Furniture </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/home-improvement-waste.shtml"> Home Improvement Waste </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/housewares.shtml"> Housewares </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/ink-and-toner-cartridges.shtml"> Ink + Toner Cartridges </a> </p> 							<p> <a href="/assets/dsny/zerowaste/residents/junk-mail.shtml"> Junk Mail </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/lighting.shtml"> Lighting </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/medical-equipment.shtml"> Medical Equipment </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/musical-instruments.shtml"> Musical Instruments </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/non-recyclable-plastics.shtml"> Non-Rigid Plastics </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/packaging.shtml"> Packaging </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/sport-equipment.shtml"> Sport Equipment </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/textiles.shtml"> Textiles </a> </p> 
+				</div>
+
+				<p>  Drop-off + Take-Back Programs  </p> 
+				<div>
+					<p> Many used products that are harmful or difficult to recycle can be returned to their manufacturers for recycling. </p>
+
+					<p> <a href="/assets/dsny/zerowaste/residents/appliances.shtml"> Appliances </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cell-phones.shtml"> Auto Batteries </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/batteries.shtml"> Batteries </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/deposit-bottles.shtml"> Deposit Bottles </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cell-phones.shtml"> Cell Phones </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/cosmetics.shtml"> Cosmetics </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/electronics.shtml"> Electronics </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/gas-tanks.shtml"> Gas Tanks </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/ink-and-toner-cartridges.shtml"> Ink + Toner Cartridges </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/lighting.shtml"> Lighting </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/motor-oil.shtml"> Motor Oil </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/household-medical-waste.shtml"> Household Medical Waste </a> </p> 
+					<p> <a href="/assets/dsny/zerowaste/residents/mercury-containing-devices.shtml"> Thermostats </a> </p> 
+
+				</div>
+
+				<p>Bring Your Own Reusable Bag</p> 
+				<div>
+					<p>We encourage New Yorkers to carry reusable bags and to drop off used plastic bags for recycling at participating stores. (Paper bags should be recycled with <a href="/assets/dsny/zerowaste/residents/what-to-recycle-for-residents.shtml">mixed paper and cardboard</a>.)</p>
+					<p><a href="/assets/dsny/zerowaste/residents/carryout-bag-fee.shtml" title="bring your own reusable bag">Learn more</a></p>
+
+				</div>
+
+
+				<p> Stopping Theft of Recyclables </p> 
+				<div>
+					<p> When recyclable materials are placed curbside for collection, they become property of the City, and removing them is illegal. It’s theft.  </p>
+
+					<p> People who remove and drive away with recyclables ready for collection in front of a residential, institutional or commercial building can face fines up to $2,000 – and the City can <a href="/assets/dsny/docs/zerowaste_theft-of-recycling-award-program-instructions-and-form_0815.pdf"> reward people </a> 
+						who help us identify thieves who are fined. </p>
+						<p> <a href="/assets/dsny/contact/complaints.shtml"> Report Recycling Theft </a></p>
+
+
+					</div>
+
+
+				</div> 
+			</div>
+		</div>
+
+		<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml" -->
+		<script type="text/javascript"> 
+
+			$(document).ready(function() {	
+				var param = getParameterByName('filter-term');
+				if(param.length > 0)
+				{
+					$('#results-div hr').remove();
+					$('#results-div').attr('style','display:block;');
+					var sections = $('#accordion1').find("p");
+					sections.each(function(index, section){
+						if ($(section).hasClass('ui-state-default')) {
+							$(section).click();
+						}
+					});
+				}
+				else
+				{
+					$('#results-div').attr('style','display:none')
+				}
+
+			});
+
+			function getParameterByName( name )
+			{
+				name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				var regexS = "[\\?&]"+name+"=([^&#]*)";
+				var regex = new RegExp( regexS );
+				var results = regex.exec( window.location.href );
+				if( results == null )
+					return "";
+				else
+					return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+		</script>
+		<script src="/assets/dsny/js/agencies/dispose-filter_wpd.js" type="text/javascript"></script>
+ <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml" -->
