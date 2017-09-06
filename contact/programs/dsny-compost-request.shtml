@@ -36,6 +36,24 @@
 
 #datetimepicker1 td.disabled { color: #C0C0C0 !important; }
 
+#notice p {
+	color: #ff0000;
+	font-weight: bold;
+}
+#notice a:link {
+	color: Orange !important;
+}
+#notice a:visited {
+	color: Orange !important;
+}
+#notice a:active {
+	color: DarkOrange !important;
+}
+#notice a:hover {
+	color: DarkOrange !important;
+}
+
+
 </style>
 
 <div id="contentsection" class="about-main-image">
@@ -46,6 +64,12 @@
 
 			<div>
 				<h1> DSNY Compost Request</h1>	
+				
+				<div id="notice">
+				<p>Distributions are currently closed for the 2017 season. Check back at <a href="http://nyc.gov/getcompost">nyc.gov/getcompost</a> for updates on next season’s distribution schedule.
+				</p>
+				</div>
+
 				<p>Please use this form to request pallet-loads of free compost for NYC street trees, community gardens or public greening initiatives. This program provides bagged compost for New Yorkers to use within New York City. (Requests for compost for use outside the five boroughs will not be accepted.)
 				</p>
 				
