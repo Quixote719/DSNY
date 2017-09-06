@@ -17,8 +17,8 @@ var getFormInput = function () {
 };
 
 var setFormInput = function (input) {
-    $("form :input[id='houseNumber']").val(input.houseNumber);
-    
+
+	$("form :input[id='houseNumber']").val(input.houseNumber);
     $("form :input[id='boro']").val(getBoroughCode(input.borough));
 };
 
@@ -156,6 +156,9 @@ var parse = function(json) {
     result.houseNumber = a(json).houseNumber;
     result.street = a(json).firstStreetNameNormalized;
 	$("form :input[id='street']").val(a(json).firstStreetNameNormalized);
+	if (result.houseNumber) {
+		$("form :input[id='houseNumber']").val(a(json).houseNumber);
+	}
     result.borough = a(json).firstBoroughName;
 
     result.city = a(json).uspsPreferredCityName;
@@ -186,8 +189,10 @@ var parse = function(json) {
 		result.trashPickup = a(json).sanitationRegularCollectionSchedule;
 		result.trashPickupWithFullDayName = parseSchedule(a(json).sanitationRegularCollectionSchedule);
         result.recyclePickup = parseSchedule(a(json).sanitationRecyclingCollectionSchedule);
-		result.Lat = parseSchedule(a(json).latitude);
-		result.Long = parseSchedule(a(json).longitude);
+		result.latitude = a(json).latitude;
+		result.longitude = a(json).longitude;
+		result.sanitationCollectionSchedulingSectionAndSubsection = a(json).sanitationCollectionSchedulingSectionAndSubsection;
+		result.bbl = a(json).bbl;
 		result.possiblegiStreet = '';
 		var arryStreet = [];
         //result.hasPossibleStreets = num > 0;
@@ -246,7 +251,7 @@ var parse = function(json) {
         //}
 		
 		//result.giStreetName1 = a(json).giStreetName1;
-		//result.giStreetName2 = a(json).giStreetName2; 
+		//result.giStreetName2 = a(json).giStreetName2;
 		result.communityDistrict = a(json).communityDistrict;
 		//result.highCrossStreetName = a(json).highCrossStreetName1;
 		//result.lowCrossStreetName = a(json).lowCrossStreetName1;
@@ -360,7 +365,9 @@ function successCallback(json) {
 			$("form :input[name='Long']").val(result.longitude);
 			$("form :input[name='RegularCollectionSchedule']").val(result.trashPickup);
 			$("form :input[name='RegularCollectionDayNames']").val(result.trashPickupWithFullDayName);
-			
+			$("form :input[name='SectionAndSubsection']").val(result.sanitationCollectionSchedulingSectionAndSubsection);
+			$("form :input[name='BBL']").val(result.bbl);
+						
 			if (result.possiblelowCrossStreetName.length > 0 &&  result.possiblehighCrossStreetName.length > 0 ){ 
 				$("form :input[name='GEOCrossStreet']").val(result.possiblelowCrossStreetName.substring(0, (result.possiblelowCrossStreetName.length - 2) ) +' / '+ result.possiblehighCrossStreetName.substring(0, (result.possiblehighCrossStreetName.length - 2) ));
 			}

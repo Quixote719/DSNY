@@ -2,10 +2,6 @@
  * Dashboard Application JS
  */
 // JAVASCRIPT (jQuery)
-//"http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/GetDashboard?SearchDate=09%2F24%2F2016&Borough=ALL&DistrictId=0&TruckId=0",
-
-//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
-//var APIUrl = 'https://msdwvw-dsndny01.csc.nycnet';
 
 jQuery.support.cors = true;
 var CustomCard = '';
@@ -36,12 +32,9 @@ if (sessionStorage.getItem("truckId") != undefined)
     truckId = sessionStorage.getItem("truckId");
 
 
-if (SearchDate == "" || SelecteBorough == "" || selectedDistrictID == "") {
+if (SearchDate == "" && SelecteBorough == "") {
     window.location.href = '/assets/dsny/stagingdashboard/login.shtml';
 }
-
-var SuperVisorRequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetEmployees';
-var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough=staten Island&DistrictId=0';
 
 function dayOfWeekAsString(dayIndex) {
     return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][dayIndex];
@@ -82,6 +75,13 @@ $(function () {
         format: 'L',
         format: 'MM/DD/YYYY',
         defaultDate: Date()
+    });
+
+    $('#Reschedule').datetimepicker({
+        format: 'L',
+        minDate: Date(),
+				widgetPositioning:{horizontal: 'auto',
+            vertical: 'top'}
     });
 
     $('#open-datetimepicker').click(function (event) {
@@ -148,9 +148,9 @@ $(document).click(function () {
 });
 
 
-var Request_Truck_list = function (Borough, DistrictID, SelectedDate) {
+var Request_Truck_list = function () {
     $('.truckDropDown_menu_list').empty();
-    var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough=' + Borough + '&DistrictId=0&searchdate=' + SelectedDate;
+    var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough='+sessionStorage.getItem("borough")+'&DistrictId=0&searchdate='+$('.selectedDate').val();
     $.ajax({
         async: false,
         url: AssignmnetsUrl,
@@ -170,10 +170,10 @@ var Request_Truck_list = function (Borough, DistrictID, SelectedDate) {
 }
 
 
-var Request_Assignments = function (Borough, DistrictID, SelectedDate) {
+var Request_Assignments = function () {
     $('.AssignedTruckDetails').mCustomScrollbar("destroy")
     $('.AssignedTruckDetails').empty();
-    var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough=' + Borough + '&DistrictId=0&searchdate=' + SelectedDate;
+    var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough='+sessionStorage.getItem("borough")+'&DistrictId=0&searchdate='+$('.selectedDate').val();
 
     $.ajax({
         async: false,
@@ -279,7 +279,7 @@ var Request_Assignments = function (Borough, DistrictID, SelectedDate) {
 
                     // if the relative offset is greater than half the window height,
                     // reverse the dropdown.
-                    if (relativeOffset > (windowHeight - 300)) {
+                    if (relativeOffset > (windowHeight - 350)) {
                         $(this).parent().find(".dropdown-menu").addClass("reverse");
                     }
                     else {
@@ -312,7 +312,7 @@ var Request_Supervisor_Driver_loader_list = function () {
     $('.truckDropDown_menu_LoaderList').empty();
     $.ajax({
         async: false,
-        url: SuperVisorRequestUrl,
+        url:  APIUrl + '/ePickupsAPI/api/Dashboard/GetEmployees?Borough='+sessionStorage.getItem("borough"),
         type: "GET",
         dataType: 'json',
         crossDomain: true,
@@ -375,7 +375,7 @@ var Task_cards_layout = function (key, item) {
     }
     CustomCard += '<div class="card-block" style="padding:0px 5px 5px 5px"; >\
 													 <p class="card-text">\
-															 <span class="box">'+ item.BuildingNumber + ' ' + item.Street + '</span>\
+															 <div class="box TaskCardAddressLabel">'+ item.BuildingNumber + ' ' + item.Street + '</div>\
 															 <span style="float:right;">\
 																	 <b>' + DistrictIDName + '</b>\
 															 </span>\
@@ -409,10 +409,13 @@ var Task_cards_layout = function (key, item) {
 };
 
 
-var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
+var RequestDashboard = function (TruckId) {
     $('.dynamicData').mCustomScrollbar("destroy")
     $(".dynamicData").empty();
-    var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetDashboard?SearchDate=' + Date + '&Borough=' + Borough + '&DistrictId=0&TruckId=' + TruckId;
+    if ((sessionStorage.getItem("borough") != undefined) && (sessionStorage.getItem("borough").length > 0 ))  {
+      $("#SelecteBorough").text(sessionStorage.getItem("borough"));
+
+    var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetDashboard?SearchDate='+$('.selectedDate').val()+'&Borough='+sessionStorage.getItem("borough")+'&DistrictId=0&TruckId=' + TruckId;
 
     $.ajax({
         async: false,
@@ -422,6 +425,11 @@ var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
         crossDomain: true,
         success: function (json) {
             if (json != undefined) {
+              $('#msgModal').modal('hide');
+              $('.Checked').removeClass('Checked').addClass('UnChecked');
+              $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
+              SelectedTaskIDS = [];
+              SelectedSRNOS = [];
                 CustomCard = '';
                 var DistrictIDName = '';
                 var DistrictID = new Array();
@@ -434,21 +442,21 @@ var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
                 if (json[0] == undefined) {
 
                     RequestedQuantitiesDescriptions.forEach(function (desc) {
-                        $('#' + desc).append('0');
+                        $('#' + desc).html('0');
                     });
 
                     RequestedTVSDescriptions.forEach(function (desc) {
-                        $('.' + desc).append('0');
+                        $('.' + desc).html('0');
                     });
 
-                    $('.TotalPendingItems').append('0');
-                    $('.TotalPickedUpItems').append('0');
+                    $('.TotalPendingItems').html('0');
+                    $('.TotalPickedUpItems').html('0');
 
                     if (TruckId == '0') {
-                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island.</strong></div>');
+                        $('#target').html('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no Assignments on <strong>' + $('.selectedDate').val() + ', '+sessionStorage.getItem("borough")+'.</strong></div>');
                     } else {
 
-                        $('#target').append('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no tasks on <strong>' + $('.selectedDate').val() + ', Staten Island, ' + TruckId + '.</strong></div>');
+                        $('#target').html('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert">There are no Assignments on <strong>' + $('.selectedDate').val() + ', '+sessionStorage.getItem("borough")+', ' + TruckId + '.</strong></div>');
                     }
 
 
@@ -462,15 +470,15 @@ var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
 
 
                     RequestedQuantitiesDescriptions.forEach(function (desc) {
-                        $('#' + desc).append(FirstOject[desc]);
+                        $('#' + desc).html(FirstOject[desc]);
                     });
 
                     RequestedTVSDescriptions.forEach(function (desc) {
-                        $('.' + desc).append(FirstOject[desc]);
+                        $('.' + desc).html(FirstOject[desc]);
                     });
 
-                    $('.TotalPendingItems').append(TotalPendingRequestedQuantity);
-                    $('.TotalPickedUpItems').append(TotalPickedUpRequestedQuantity);
+                    $('.TotalPendingItems').html(TotalPendingRequestedQuantity);
+                    $('.TotalPickedUpItems').html(TotalPickedUpRequestedQuantity);
 
                     if (SortByDistrict) {
                         DistrictID.forEach(function (dist) {
@@ -501,18 +509,24 @@ var RequestDashboard = function (Date, Borough, DistrictID, TruckId) {
                 //$("#target").mCustomScrollbar({ theme: "minimal-dark" });
                 //$("#target").mCustomScrollbar("update");
                 $('.dynamicData').mCustomScrollbar();
+              HideFooter();
             }
         }
 
     });
 
+}else{
+    $('#target').html('<div class="alert alert-warning" style="margin:20px;text-align:center;" role="alert"><strong>Please select a borough to get Assignment details.</strong></div>');
+}
 }
 
-//$('body').ready(RequestDashboard($('.selectedDate').val(), 'All', '0', '0'));
-//$('body').ready(Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val()));
-
 // To hide the footer
-var HideFooter = function () { $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected') };
+var HideFooter = function () {
+  $('.Checked').removeClass('Checked').addClass('UnChecked');
+  $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
+  SelectedTaskIDS = [];
+  SelectedSRNOS = [];
+};
 
 //Selected Taks with multi select option
 $(document).on('click', '.OverlaymultiSelect', function (e) {
@@ -546,7 +560,7 @@ var SelectedIds = function (x) {
     console.log(SelectedTaskIDS);
     $('#totalSelected').text(SelectedTaskIDS.length);
     if (SelectedTaskIDS.length == 0) {
-        HideFooter();
+        $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected') ;
     } else {
         $('#SelectedTasks').removeClass('FooterNotSelected').addClass('FooterSelected');
     }
@@ -572,17 +586,16 @@ var SortSRNO = function (x) {
 
 // to change the filter
 $(document).on("click", ".SelectedStatusList a", function () {
-
     var SortType = $(this).text();
-    $("#SelectedStatus").text($(this).text())
+    $("#SelectedStatusType").text($(this).text())
 
     if ($(this).text() == "District") {
         SortByDistrict = true
     } else if ($(this).text() == "Status") {
         SortByDistrict = false
     }
-    RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-    Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+    RequestDashboard('0');
+    Request_Assignments();
 
 
 });
@@ -614,8 +627,8 @@ $(document).on("click", ".BulktruckDropDown_list", function () {
     var TruckNumber = $(this).text();
     var TruckID = $(this).attr('id');
     var selectedClass = this;
-
-    var Update_truck_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateTruckForPickupRequest?SRNo=' + SelectedSRNOS.toString() + '&TruckId=' + $(this).attr("id");
+console.log(SelectedTaskIDS.toString());
+    var Update_truck_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateTruckForPickupRequest?SRNo=' + SelectedSRNOS.toString() + '&TruckId=' + $(this).attr("id")+'&UserName='+sessionStorage.getItem("userId");
     $.ajax({
         async: false,
         url: Update_truck_post_url,
@@ -638,13 +651,7 @@ $(document).on("click", ".BulktruckDropDown_list", function () {
                 $('.alertModal').modal('show');
 
             } else {
-                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-                $('.Checked').removeClass('Checked').addClass('UnChecked');
-                $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
-                SelectedTaskIDS = [];
-                SelectedSRNOS = [];
-
+                ResetFooterToDefault();
             }
         }
     });
@@ -656,7 +663,8 @@ $(document).on("click", "#BulkUpdateComplete", function () {
     var BulkSnow = {
         Status: 'Completed',
         strRequestId: '' + SelectedTaskIDS.toString(),
-        ReasonType: 'Bulk',
+          UserName:sessionStorage.getItem("userId"),
+        ReasonType: '',
         StatusId: 2,
         IsCompleteRequest: true
 
@@ -671,13 +679,7 @@ $(document).on("click", "#BulkUpdateComplete", function () {
         crossDomain: true,
         success: function (data) {
             if (data != undefined) {
-                $('#msgModal').modal('hide');
-                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-                $('.Checked').removeClass('Checked').addClass('UnChecked');
-                $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
-                SelectedTaskIDS = [];
-                SelectedSRNOS = [];
+                ResetFooterToDefault();
 
             }
         }
@@ -688,13 +690,34 @@ $(document).on("click", "#BulkUpdateComplete", function () {
 
 
 //To cancel multiple tasks for snow
-$(document).on("click", "#BulkUpdateCancel", function () {
+$(document).on("click", "#BulkCancellation", function () {
+
+  var alertModal = '<div class="modal-header" style="color:white;background-color:#EDA51B;height:30px;padding:3px; margin:0px">\
+          <b style="margin-left:10px;">Cancel Assignments</b>\
+           </div>\
+        <div class="modal-body" style="height:80px;">\
+          <p><b>Do you want to cancel selected Assignments? </b></p>\
+           </div>\
+        <div class="modal-footer" style="height:60px;border:0px;">\
+       <button type="button" style="color:white;background-color:#BDBDBD; width:100px;" class="btn" id="dismisscancleWithNoreason" data-dismiss="modal">Not now</button>\
+       <button type="button" style="color:white;background-color:#2E8B15;  width:300px; margin-left:30px;" class="btn" id="cancleWithNoreason"  data-dismiss="modal">Yes, Cancel Assignments</button>\
+      </div>'
+                    $('.AlertContent').html(alertModal);
+                    $('.alertModal').modal('show');
+
+                    $('.alertModal').on("click", "#dismisscancleWithNoreason", function () {
+                    ResetFooterToDefault();
+                    });
+
+                    $('.alertModal').on("click", "#cancleWithNoreason", function () {
+
     jQuery.support.cors = true;
 
     var BulkSnow = {
         Status: 'Request Cancelled',
         strRequestId: '' + SelectedTaskIDS.toString(),
-        ReasonType: 'Bulk',
+          UserName:sessionStorage.getItem("userId"),
+        ReasonType: '',
         StatusId: 5,
         IsCompleteRequest: false
 
@@ -709,19 +732,14 @@ $(document).on("click", "#BulkUpdateCancel", function () {
         crossDomain: true,
         success: function (data) {
             if (data != undefined) {
-                $('#msgModal').modal('hide');
-                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-                $('.Checked').removeClass('Checked').addClass('UnChecked');
-                $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
-                SelectedTaskIDS = [];
-                SelectedSRNOS = [];
+                ResetFooterToDefault();
 
             }
         }
     });
 
     return false;
+  });
 });
 
 
@@ -731,8 +749,9 @@ $(document).on("click", "#BulkUpdateNOL", function () {
 
     var BulkSnow = {
         Status: 'Not on Location',
+          UserName:sessionStorage.getItem("userId"),
         strRequestId: '' + SelectedTaskIDS.toString(),
-        ReasonType: 'Bulk',
+        ReasonType: '',
         StatusId: 3,
         IsCompleteRequest: false
 
@@ -747,13 +766,7 @@ $(document).on("click", "#BulkUpdateNOL", function () {
         crossDomain: true,
         success: function (data) {
             if (data != undefined) {
-                $('#msgModal').modal('hide');
-                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-                $('.Checked').removeClass('Checked').addClass('UnChecked');
-                $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
-                SelectedTaskIDS = [];
-                SelectedSRNOS = [];
+              ResetFooterToDefault();
 
             }
         }
@@ -763,12 +776,30 @@ $(document).on("click", "#BulkUpdateNOL", function () {
 });
 
 //To delete multiple tasks for snow
-$(document).on("click", "#BulkCancellation", function () {
-    jQuery.support.cors = true;
+$(document).on("click", "#BulkCancellationSnow", function () {
 
+  var alertModal = '<div class="modal-header" style="color:white;background-color:#EDA51B;height:30px;padding:3px; margin:0px">\
+<b style="margin-left:10px;">Cancel Assignments</b>\
+</div>\
+<div class="modal-body" style="height:80px;">\
+<p><b>Do you want to cancel selected Assignments? </b></p>\
+</div>\
+<div class="modal-footer" style="height:60px;border:0px;">\
+<button type="button" style="color:white;background-color:#BDBDBD; width:100px;" class="btn" id="dismisscancleWithSnowreason" data-dismiss="modal">Not now</button>\
+<button type="button" style="color:white;background-color:#2E8B15; width:300px; margin-left:30px;" class="btn" id="cancleWithSnowreason"  data-dismiss="modal">Yes, Cancel Assignments</button>\
+</div>'
+  $('.AlertContent').html(alertModal);
+  $('.alertModal').modal('show');
+$('.alertModal').on("click", "#dismisscancleWithSnowreason", function () {
+ResetFooterToDefault();
+});
+  $('.alertModal').on("click", "#cancleWithSnowreason", function () {
+
+    jQuery.support.cors = true;
     var BulkSnow = {
         Status: 'Request Cancelled',
         strRequestId: '' + SelectedTaskIDS.toString(),
+        UserName:sessionStorage.getItem("userId"),
         ReasonType: 'Snow',
         StatusId: 5,
         IsCompleteRequest: false
@@ -784,22 +815,56 @@ $(document).on("click", "#BulkCancellation", function () {
         crossDomain: true,
         success: function (data) {
             if (data != undefined) {
-                $('#msgModal').modal('hide');
-                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-                $('.Checked').removeClass('Checked').addClass('UnChecked');
-                $('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
-                SelectedTaskIDS = [];
-                SelectedSRNOS = [];
-
+                ResetFooterToDefault();
             }
         }
     });
 
     return false;
+  });
 });
 
 
+//To delete multiple tasks for reason snow
+$(document).on("click", ".UnserviceableReason", function () {
+  jQuery.support.cors = true;
+
+  var BulkSnow = {
+      Status: 'Unserviceable',
+      strRequestId: '' + SelectedTaskIDS.toString(),
+        UserName:sessionStorage.getItem("userId"),
+      ReasonType: ''+$(this).text(),
+      StatusId: 4,
+      IsCompleteRequest: false
+
+  };
+  var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/BulkUpdatePickupRequest';
+  $.ajax({
+      async: false,
+      url: getDateUrl,
+      data: BulkSnow,
+      type: "POST",
+      dataType: 'json',
+      crossDomain: true,
+      success: function (data) {
+          if (data != undefined) {
+              ResetFooterToDefault();
+
+          }
+      }
+  });
+  return false;
+});
+
+var ResetFooterToDefault = function () {
+	$('#msgModal').modal('hide');
+	RequestDashboard('0');
+  Request_Assignments();
+	$('.Checked').removeClass('Checked').addClass('UnChecked');
+	$('#SelectedTasks').removeClass('FooterSelected').addClass('FooterNotSelected');
+	SelectedTaskIDS = [];
+	SelectedSRNOS = [];
+}
 
 $(document).keypress("a", function (e) {
     if (e.ctrlKey) {
@@ -829,17 +894,7 @@ $('body').ready(function () {
 
 });
 
-//$('body').ready(RequestDashboard(SearchDate, SelecteBorough, selectedDistrictID, '0'));
-//$('body').ready(Request_Assignments(SelecteBorough, selectedDistrictID, SearchDate));
-
-
-
 $(function () {
-    //          $(window).on("load",function(){
-    //            $(".content").mCustomScrollbar();
-    //        });
-
-
 
     jQuery.support.cors = true;
 
@@ -849,12 +904,15 @@ $(function () {
     $("#datetimepicker2").val(SearchDate);
     $(".selectedDistrict").attr("id", selectedDistrictID);
     $(".selectedDistrict").text(selectedDistrictName);
+      if ((sessionStorage.getItem("borough") != undefined) && (sessionStorage.getItem("borough").length > 0 ))  {
+    $("#SelecteBorough").text(sessionStorage.getItem("borough"));
+}
     $("#SelectedDay").text(dayOfWeekAsString(new Date(SearchDate).getDay()));
-    RequestDashboard(SearchDate, SelecteBorough, selectedDistrictID, '0');
-    Request_Assignments(SelecteBorough, selectedDistrictID, SearchDate);
+    RequestDashboard('0');
+    Request_Assignments();
 
     $(document).on("click", ".truckMenuDropdown", function () {
-        Request_Truck_list('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val())
+        Request_Truck_list()
     });
 
     $(document).on("click", ".RequestList", function () {
@@ -873,20 +931,50 @@ $(function () {
 
         sessionStorage.setItem("district", $('.selectedDistrict').attr('id'));
         sessionStorage.setItem("districtName", $(".selectedDistrict").text());
-        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-        Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+        RequestDashboard( '0');
+        Request_Assignments();
 
     });
 
     $(document).on("click", ".TotalAssignmentFilter", function () {
-        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
+        RequestDashboard('0');
         sessionStorage.setItem("truckId", 0);
     });
     $(document).on("click", ".AssignmentFilter", function () {
-        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), $(this).attr('id'));
+        RequestDashboard($(this).attr('id'));
         sessionStorage.setItem("truckId", $(this).attr('id'));
     });
 
+    // update multiple Boroughs dropDown
+    $(document).on("click", "#reqBorough", function () {
+    	$('#BoroughDropDown').empty();
+    $.ajax({
+    		async: false,
+    		url: APIUrl + '/ePickupsAPI/api/PickupRequest/GetBoroughs',
+    		type: "GET",
+    		dataType: 'json',
+    		crossDomain: true,
+    		success: function (json) {
+    				if (json != undefined) {
+    						var BoroughList = json;
+    						var BoroughName = '';
+
+    						$.each(BoroughList, function (key, item) {
+    								BoroughName += '<a class="dropdown-item box" style="color:white;" href="#" id = ' + item.Id + '>' + item.Borough + '</a>'
+    						});
+    						$('#BoroughDropDown').append(BoroughName);
+    				}
+    		}
+    });
+    });
+
+    // update dashboard wrt Borough
+    $(document).on("click", "#BoroughDropDown a", function () {
+    	var borough = $(this).text();
+    	sessionStorage.setItem("borough",borough);
+      RequestDashboard('0');
+      Request_Assignments();
+    });
 
     // to Update the DropDown Items  selectedDistrict
 
@@ -905,8 +993,8 @@ $(function () {
                 });
             }
 
-            RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-            Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+            RequestDashboard('0');
+            Request_Assignments();
         }
 
     });
@@ -930,7 +1018,7 @@ $(function () {
         var truckElementID = '#ID_' + $(this).parents(".btn-group").find('.AssignedSRNumber').text();
 
 
-        var Update_truck_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateTruckForPickupRequest?SRNo=' + $(this).parents(".btn-group").find('.AssignedSRNumber').text() + '&TruckId=' + $(this).attr("id");
+        var Update_truck_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateTruckForPickupRequest?SRNo=' + $(this).parents(".btn-group").find('.AssignedSRNumber').text() + '&TruckId=' + $(this).attr("id")+'&UserName='+sessionStorage.getItem("userId");
         $.ajax({
             async: false,
             url: Update_truck_post_url,
@@ -953,9 +1041,7 @@ $(function () {
                     $('.alertModal').modal('show');
 
                 } else {
-                    //RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                    //Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
-
+                     Request_Assignments();
                     $(truckElementID).text( TruckNumber);
                 }
             }
@@ -966,7 +1052,7 @@ $(function () {
 
     $(document).on("click", " #SupervisorDropDown a", function () {
         var EmployeeId = $(this).attr("id");
-        var Update_Supervisor_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Supervisor&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=0&OverRide=false&Borough=Staten Island';
+        var Update_Supervisor_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Supervisor&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=0&OverRide=false&Borough='+sessionStorage.getItem("borough");
 
         $.ajax({
             async: false,
@@ -993,13 +1079,13 @@ $(function () {
 
 
                     $('.alertModal').on("click", "#Dont_update_supervisor", function () {
-                        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                        Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                        RequestDashboard( '0');
+                        Request_Assignments();
 
                     });
 
                     $('.alertModal').on("click", "#update_supervisorAssignment", function () {
-                        var Update_Supervisor_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Supervisor&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=0&OverRide=true&Borough=Staten Island';
+                        var Update_Supervisor_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Supervisor&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=0&OverRide=true&Borough='+sessionStorage.getItem("borough");
 
                         $.ajax({
                             async: false,
@@ -1009,8 +1095,8 @@ $(function () {
                             crossDomain: true,
                             success: function (json) {
 
-                                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                                RequestDashboard( '0');
+                                Request_Assignments();
                             }
                         });
 
@@ -1018,8 +1104,8 @@ $(function () {
 
                 } else {
 
-                    RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                    Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                    RequestDashboard('0');
+                    Request_Assignments();
 
                 }
             }
@@ -1031,7 +1117,7 @@ $(function () {
 
         var EmployeeId = $(this).attr("id");
         var TruckId = $(this).parents(".Truck_details").find(".AssignmentFilter").attr("id");
-        var Update_Driver_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Driver&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=false&Borough=Staten Island';
+        var Update_Driver_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Driver&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=false&Borough='+sessionStorage.getItem("borough");
 
         $.ajax({
             async: false,
@@ -1057,15 +1143,15 @@ $(function () {
                     $('.alertModal').modal('show');
 
                     $('.alertModal').on("click", ".Dont_update_Driver", function () {
-                        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                        Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                        RequestDashboard('0');
+                        Request_Assignments();
 
                     });
 
 
                     $('.alertModal').on("click", ".update_DriverAssignment", function () {
 
-                        var Update_Driver_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Driver&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=true&Borough=Staten Island';
+                        var Update_Driver_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Driver&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=true&Borough='+sessionStorage.getItem("borough");
 
                         $.ajax({
                             async: false,
@@ -1075,8 +1161,8 @@ $(function () {
                             crossDomain: true,
                             success: function (json) {
 
-                                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                                RequestDashboard('0');
+                                Request_Assignments();
                             }
                         });
 
@@ -1084,8 +1170,8 @@ $(function () {
 
                 } else {
 
-                    RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                    Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                    RequestDashboard( '0');
+                    Request_Assignments();
 
                 }
             }
@@ -1099,7 +1185,7 @@ $(function () {
 
         var EmployeeId = $(this).attr("id");
         var TruckId = $(this).parents(".Truck_details").find(".AssignmentFilter").attr("id");
-        var Update_Loader_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Loader&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=false&Borough=Staten Island';
+        var Update_Loader_post_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Loader&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=false&Borough='+sessionStorage.getItem("borough");
         $.ajax({
             async: false,
             url: Update_Loader_post_url,
@@ -1125,7 +1211,7 @@ $(function () {
 
                     $('.alertModal').on("click", ".update_LoaderAssignment", function () {
 
-                        var Update_Loader_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Loader&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=true&Borough=Staten Island';
+                        var Update_Loader_url = APIUrl + '/ePickupsAPI/api/Dashboard/UpdateEmployeeAssignment?EmployeeType=Loader&DistrictId=0&EmployeeId=' + EmployeeId + '&TruckId=' + TruckId + '&OverRide=true&Borough='+sessionStorage.getItem("borough");
 
                         $.ajax({
                             async: false,
@@ -1134,8 +1220,8 @@ $(function () {
                             dataType: 'json',
                             crossDomain: true,
                             success: function (json) {
-                                RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                                Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                                RequestDashboard('0');
+                              Request_Assignments();
                             }
                         });
 
@@ -1143,15 +1229,15 @@ $(function () {
 
                     $('.alertModal').on("click", ".Dont_update_Loade", function () {
 
-                        RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                        Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                        RequestDashboard('0');
+                      Request_Assignments();
 
                     });
 
                 } else {
 
-                    RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-                    Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+                    RequestDashboard('0');
+                  Request_Assignments();
 
                 }
             }
@@ -1162,12 +1248,12 @@ $(function () {
     //bulkTruck
 
     $(document).on("click", ".BulktruckMenuDropdown", function () {
-        Bulk_Request_Truck_list('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val())
+        Bulk_Request_Truck_list()
     });
 
     var Bulk_Request_Truck_list = function (Borough, DistrictID, SelectedDate) {
         $('.truckDropDown_menu_list').empty();
-        var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough=' + Borough + '&DistrictId=0&searchdate=' + SelectedDate;
+        var AssignmnetsUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetTrucks?Borough='+sessionStorage.getItem("borough")+'&DistrictId=0&searchdate='+$('.selectedDate').val();
         $.ajax({
             async: false,
             url: AssignmnetsUrl,
@@ -1186,7 +1272,6 @@ $(function () {
         });
     }
 
-
     $("#SR_search_input").keyup(function (event) {
         if (event.keyCode == 13) {
             complete_Popup("SRNO", $("#SR_search_input").val());
@@ -1194,21 +1279,33 @@ $(function () {
         }
     });
 
+    $('#EODReport').click(function () {
+        window.location.href = '/assets/dsny/stagingdashboard/EODReport.shtml';
+        return false;
+    });
 
-        $('#EODReport').click(function () {
-            window.location.href = '/assets/dsny/stagingdashboard/EODReport.shtml';
-            return false;
-        });
-
-        $('#AssReport').click(function () {
-            window.location.href = '/assets/dsny/stagingdashboard/AssignReport.shtml';
-            return false;
-        });
-
-
+    $('#AssReport').click(function () {
+        window.location.href = '/assets/dsny/stagingdashboard/AssignReport.shtml';
+        return false;
+    });
 
     $('#print').click(function () {
         window.location.href = '/assets/dsny/stagingdashboard/printdashboard.shtml';
+        return false;
+    });
+    $('#BulkPickup').click(function () {
+        window.location.href = '/assets/dsny/stagingdashboard/BulkIndex.shtml';
+        sessionStorage.setItem("districtName", "");
+        sessionStorage.setItem("borough", "");
+        sessionStorage.setItem("district", "");
+        return false;
+    });
+
+    $('#eWastePickup').click(function () {
+      sessionStorage.setItem("districtName", "");
+      sessionStorage.setItem("borough", "");
+      sessionStorage.setItem("district", "");
+        window.location.href = '/assets/dsny/stagingdashboard/index.shtml';
         return false;
     });
 
@@ -1219,6 +1316,79 @@ $(function () {
         window.location.href = '/assets/dsny/stagingdashboard/login.shtml';
         return false;
     });
+
+    $('#RescheduleButton').click(function (event) {
+        if ($(".bootstrap-datetimepicker-widget").is(':visible'))
+            $("#Reschedule").datetimepicker("hide");
+        else
+            $("#Reschedule").datetimepicker("show");
+    });
+
+
+    $(document).on('click', '#RescheduleButton', function (e) {
+    	if ($(".bootstrap-datetimepicker-widget").is(':visible'))
+    			$("#Reschedule").datetimepicker("hide");
+    	else
+    			$("#Reschedule").datetimepicker("show");
+    });
+
+    function Reschedule_Taks(){
+  jQuery.support.cors = true;
+  if ($(".bootstrap-datetimepicker-widget").is(':visible')){
+    var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/UpdatePickupRequestDates?pickupRequestIds='+SelectedTaskIDS.toString()+'&appointmentDate='+$('#Reschedule').val()+'&UserName='+sessionStorage.getItem("userId");
+    $.ajax({
+        async: false,
+        url: getDateUrl,
+        type: "POST",
+        dataType: 'json',
+        crossDomain: true,
+        success: function (data) {
+          var returnList =  data;
+          if (returnList != undefined && returnList.length > 0){
+            var alertModal = '<div class="modal-header" style="color:white;background-color:#D0021B;height:30px;padding:3px; margin:0px">\
+  <b style="margin-left:10px;">Reschedule</b>\
+   </div>\
+<div class="modal-body" style="height:80px;">\
+  <p><b>There were '+returnList.length+' appointment(s) could not be rescheduled because an appointment already exists for the selected date.</b></p>\
+   </div>\
+<div class="modal-footer" style="height:60px;border:0px;">\
+<button type="button" style="color:white;background-color:#D0021B; width:100px;" class="btn"  data-dismiss="modal">OK</button>\
+</div>'
+            $('.AlertContent').html(alertModal);
+            $('.alertModal').modal('show');
+          }
+            if (data != undefined) {
+              ResetFooterToDefault();
+            }
+        }
+    });
+    return false;
+  }
+ }
+
+$("#Reschedule").on("dp.update", function (e) {
+    register_select_same_day();
+});
+$("#Reschedule").on("dp.show", function (e) {
+    register_select_same_day();
+});
+
+$("#Reschedule").on("dp.change", function () {
+Reschedule_Taks();
+});
+function register_select_same_day(){
+    // since dp.change doesn't trigger if the date doesn't change, we have to check ourself
+    $(".datepicker .datepicker-days td.day.active").click(function(){
+     Reschedule_Taks();
+    });
+    $(".datepicker .datepicker-days td.day.old.today").click(function(){
+     Reschedule_Taks();
+    });
+    $(".datepicker .datepicker-days td.day.today").click(function(){
+     Reschedule_Taks();
+    });
+}
+
 
 });
 

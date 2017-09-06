@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/assets/dsny/dashboard/includes/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/dsny/dashboard/includes/css/application.css">
+  <link href="/assets/dsny/dashboard/includes/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="/assets/dsny/dashboard/includes/css/bootstrap-glyphicon.css" rel="stylesheet">
+  <link href="/assets/dsny/dashboard/includes/css/dataTables.bootstrap.css" rel="stylesheet">
+  <link href="/assets/dsny/dashboard/includes/css/dataTables.responsive.css" rel="stylesheet">
+  <link href="/assets/dsny/dashboard/includes/css/dataTables.tableTools.min.css" rel="stylesheet">
+  <link href="/assets/dsny/dashboard/includes/css/buttons.dataTables.min.css" rel="stylesheet">
+
+  <style type="text/css">
+    @page {
+      margin: 0;
+    }
+
+    .dataTables_scrollHead{
+      height:0px;
+    }
+
+    .container {
+      max-width: 1800px !important;
+      width: 100% !important;
+    }
+
+    .tblspecial {
+      border: 2px black;
+    }
+
+    .clsstartdate {
+      margin-right: 40px!important;
+    }
+
+    .clsenddate {
+      margin-right: 34px!important;
+    }
+
+
+    .input-group-addon {
+      cursor: pointer;
+      float: left !important;
+      display: table;
+      background: #7461A2 !important;
+      border: none;
+      position: static !important;
+      color:white;
+    }
+
+    div.dataTables_scrollBody thead td::after {
+      display: none;
+    }
+
+    .input-sm {
+      margin-bottom: 0 !important;
+    }
+
+    .dt-buttons {
+      margin-top: 10px !important;
+      float: right !important;
+      width: 30% !important;
+    }
+
+    .toolbar {
+      float: left;
+      width: 75% !important;
+      position: absolute !important;
+    }
+
+    .dataTables_filter {
+      float: bottom !important;
+      width: 25% !important;
+      visibility: hidden;
+    }
+
+    .tabButton-Active {
+      width: 100% !important;
+    }
+
+    .tabButton {
+      width: 100% !important;
+    }
+
+    #slstartdate,
+    #slenddate {
+      margin-left: 0px;
+      font-size: 14px !important;
+      height: 30px !important;
+      font-weight: normal !important;
+      box-shadow: none !important;
+      float: left !important;
+      width: 90px;
+    }
+
+    .bootstrap-datetimepicker-widget.dropdown-menu {
+      width: 19em !important;
+      top: 35px !important;
+      left: -14px !important;
+      z-index: 1234443;
+    }
+
+    #activeMemberDetail {
+      border-right: 0 !important;
+    }
+
+    .buttons-csv {
+      visibility:hidden;
+    }
+
+    .buttons-csv {
+        text-shadow: none !important;
+        box-shadow: none !important;
+        background-image: none !important;
+        color: white !important;
+        padding: 8px !important;
+        background-color: rgb(14, 140, 27) !important;
+        border-radius: 5px !important;
+        text-transform: none !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+        text-align: center !important;
+        float: right !important;
+        /*visibility: hidden;*/
+      }
+
+    .buttons-excel {
+      text-shadow: none !important;
+      box-shadow: none !important;
+      background-image: none !important;
+      color: white !important;
+      padding: 8px !important;
+      background-color: rgb(14, 140, 27) !important;
+      border-radius: 5px !important;
+      text-transform: none !important;
+      border: 0 !important;
+      font-weight: bold !important;
+      margin-right: 0 !important;
+      margin-left: 20px !important;
+      text-align: center !important;
+      float: right !important;
+      visibility: visible;
+    }
+
+        .buttons-csv::after{
+            content: 'Download Excel';
+            text-shadow: none !important;
+            box-shadow: none !important;
+            background-image: none !important;
+            color: white !important;
+            padding: 8px !important;
+            background-color: rgb(14, 140, 27) !important;
+            border-radius: 5px !important;
+            text-transform: none !important;
+            border: 0 !important;
+            font-weight: bold !important;
+            margin-right: 0 !important;
+            margin-left: 20px !important;
+            text-align: center !important;
+            float: right !important;
+            visibility: visible;
+          }
+
+      .buttons-excel::after {
+        content: 'Download Excel';
+        text-shadow: none !important;
+        box-shadow: none !important;
+        background-image: none !important;
+        color: white !important;
+        padding: 8px !important;
+        background-color: rgb(14, 140, 27) !important;
+        border-radius: 5px !important;
+        text-transform: none !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+        text-align: center !important;
+        float: right !important;
+        visibility: visible;
+      }
+
+    .buttons-csv:hover, .buttons-excel:hover {
+      color: white !important;
+      background-color: #686868 !important;
+    }
+
+    .table {
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+    }
+
+    .span-us {
+      width: 16.9%;
+      float: left;
+      margin-right: 2.12766%;
+      display: inline;
+    }
+
+    table.dataTable {
+      margin-top: 0px !important;
+    }
+
+    .input-sm {
+      height: 23px !important;
+    }
+
+    table.dataTable thead .sorting,
+    table.dataTable thead .sorting_asc:after,
+    table.dataTable thead .sorting_desc,
+    table.dataTable thead .sorting_asc_disabled,
+    table.dataTable thead .sorting_desc_disabled {
+      background: transparent;
+    }
+
+    table.dataTable thead .sorting_asc:after {
+      content: "\f0de";
+      margin-left: 10px;
+      font-family: fontawesome;
+    }
+
+    table.dataTable thead .sorting_desc:after {
+      content: "\f0dd";
+      margin-left: 10px;
+      font-family: fontawesome;
+    }
+
+    table.dataTable thead .sorting:after {
+      margin-left: 10px;
+      font-family: fontawesome;
+    }
+
+    .dataTables_wrapper {
+      padding-bottom: 30px;
+    }
+
+    .table td {
+      word-wrap: break-word;
+    }
+
+    .table {
+      table-layout: fixed;
+    }
+
+    .menuRow {
+      color: white;
+    }
+
+
+    .purpl {
+      background: #7461A2 !important;
+      color: white;
+      padding: 0px !important;
+      height:100%;
+      border: 0px;
+    }
+
+    .font600{
+      font-weight: 600;
+    }
+
+    .UnderlineO {
+      border: 0px;
+      border-bottom: thin solid white;
+    }
+
+    .NoUnderlineO {
+      border: 0px;
+    }
+
+    .col-xs-6 {
+    float: left;
+    width: 50%;
+    padding-right: 5px !important;
+    padding-left: 5px;
+    }
+
+    .yello {
+      background: #EAC454 !important;
+      color: black;
+      padding: 0px !important;
+    }
+
+    dataTable thead:nth-child(n+5) {
+      background: #e0ca8f !important;
+    }
+
+    thead:nth-child(n+5) {
+      background: #e0ca6f !important;
+    }
+
+    .datepicker {
+      osition: relative;
+      z-index: 1100000000000 !important;
+      overflow-y: visible !important;
+    }
+
+    .ui-datepicker {
+      position: relative;
+      z-index: 100000000 !important;
+      overflow-y: visible !important;
+    }
+
+    .hasDatepicker {
+      position: relative;
+      z-index: 100000000 !important;
+      overflow-y: visible !important;
+    }
+
+    .dataTables_scrollBody {
+      height: 650px !important;
+    }
+
+
+    body {
+      max-width: 100%;
+      font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+      font-weight: 300;
+    }
+
+    .gap {
+      margin: 4px 0px padding: 0px 15px;
+    }
+
+    table {
+      padding: 0px;
+      margin: 0px;
+      height: 0px !important
+    }
+
+    .border {
+      border: 2px solid #cbcbcb;
+      padding: 0px 15px;
+      background-color: white;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .gray {
+      background-color: #dbdbdb !important;
+    }
+
+    .comments {
+      background-color: white !important;
+      height: 100%;
+      float: left;
+    }
+
+    .rowItem {
+      background-color: white !important;
+      border-right: 2px solid #dbdbdb;
+    }
+
+    .lgrey {
+      background-color: #f0f0f0 !important;
+      border-right: 2px solid #dbdbdb;
+    }
+
+    .borderW {
+      border-right: 4px solid white;
+      height:100%;
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 5px;
+    }
+
+    .borderB {
+      border-right: 1px solid black;
+    }
+
+    .row {
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+    }
+
+    .buttonImg{
+      background: url(/assets/dsny/dashboard/includes/img/icon_search.png)
+    }
+  </style>
+  <script type="text/javascript">
+    if (location.href.indexOf("https://") == -1) {
+      location.href = location.href.replace("http://", "https://");
+    }
+  </script>
+</head>
+
+<body style="-webkit-print-color-adjust: exact;font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:16px;">
+  <nav class="navbar navbar-full bgcolor">
+    <div class="navbar-brand navbar-margin">
+      <div class="navbar-div">
+        <span><b class="navbar-div">e-waste</b></span>
+      </div>
+      <div class="navbar-div">
+        <span><p class="navbar-div">PICK UP</p></span>
+      </div>
+    </div>
+    <form class="form-inline pull-xs-right">
+      <button id="btnback" class="btn navButton" type="submit" onmouseover="this.style.background='#0d8219';" onmouseout="this.style.background='#0e8c1b';">Back to Dashboard</button>
+      <button class="btn logoutButton" type="submit">Logout</button>
+    </form>
+  </nav>
+  <!-- <div class="container-fluid FirstRow" style="width:90%">
+    <div style="font-size:18pt; font-color:#4A4A4A; line-height:26px; padding-left: 65px;padding-top: 20px; padding-bottom: 10px; font-weight:bold"> <b>Assignments Report </b> <label id='lblDate' for="ScheduledDate"></label> </div>
+  </div> -->
+  <div class="container noflow">
+    <div id="divListingMenu"></div>
+    <!-- listingcode -->
+    <div id="contentsection" class="about-main-image" style="color:black;">
+      <div class="span12">
+        <div id="divListingDetail"></div>
+      </div>
+
+      <input type="hidden" id="hdnstartdate" name="hdnclassnew" value="" />
+      <input type="hidden" id="hdnenddate" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnSrNo" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnDist" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnDistList" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnEqu" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnEquList" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnStat" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnStatList" name="hdnclassold" value="" />
+      <input type="hidden" id="hdnAddr" name="hdnclassold" value="" />
+    </div>
+  </div>
+
+
+  <!-- jQuery first, then Tether, then Bootstrap JS.-->
+  <!-- <script src="/assets/dsny/dashboard/includes/js/jquery.min.js"></script> -->
+  <script src="/assets/donate/js/jquery-2.1.1.js"></script>
+  <script src="/assets/dsny/js/webforms/jquery.xdomainrequest.js" type="text/javascript"></script>
+  <script src="/assets/dsny/dashboard/includes/js/tether.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/bootstrap.min.js"></script>
+  <!--<script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>-->
+  <script src="/assets/dsny/js/webforms/production_staging_config.js" type="text/javascript"></script>
+  <script src="/assets/dsny/dashboard/includes/js/jquery.jeditable.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/jquery.dataTables.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/dataTables.bootstrap.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/dataTables.responsive.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/dataTables.tableTools.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/pace.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/moment-2.8.3.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/bootstrap-datetimepicker.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/dataTables.buttons.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/buttons.html5.min.js"></script>
+  <script src="/assets/dsny/dashboard/includes/js/buttons.flash.min.js"></script>
+
+  <script type="text/javascript">
+    //var APIUrl = 'http://localhost:36186';
+    //var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
+    //var APIUrl = 'https://msdwvw-dsndny01.csc.nycnet';
+
+    var SearchDate = sessionStorage.getItem("pickupdate");
+    var Borough = sessionStorage.getItem("borough");
+    var DistrictId = sessionStorage.getItem("district");
+    var TruckId = 0;
+
+    if (sessionStorage.getItem("truckId") != undefined)
+      TruckId = sessionStorage.getItem("truckId");
+
+    $(document).ready(function() {
+
+      var dt = new Date();
+      var currentdate = moment(dt).format('MM-DD-YYYY');
+      var prevdate = moment(dt).subtract(1, 'months').format('MM-DD-YYYY');
+      $("#hdnstartdate").val(prevdate);
+      $("#hdnenddate").val(currentdate);
+
+
+      jQuery.support.cors = true;
+      $("#printlink").show();
+      $("#lblDate").text(SearchDate);
+
+      $("#slstartdate").val($('#hdnstartdate').val());
+      $("#slenddate").val($('#hdnenddate').val());
+
+      var vEndDate = (typeof $('#slenddate').val() === "undefined" ? '' : $('#slenddate').val());
+      var vStartDate = (typeof $('#slstartdate').val() === "undefined" ? '' : $('#slstartdate').val());
+      var vSrNo = (typeof $('#txtSrNo').val() === "undefined" ? '' : $('#txtSrNo').val());
+      var vtxtAddress = (typeof $('#txtAddress').val() === "undefined" ? '' : $('#txtAddress').val());
+      var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
+      var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
+      var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + prevdate + '&ToDate=' + currentdate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress + '&Borough=' + Borough ;
+      $.ajax({
+        async: false,
+        url: RequestUrl,
+        type: 'GET',
+        dataType: 'json',
+        crossDomain: true,
+        success: function(data) {
+          DrawListingDetail(data, 1);
+        }
+      });
+    });
+
+    function getReport() {
+      jQuery.support.cors = true;
+      $("#printlink").show();
+      $("#lblDate").text(SearchDate);
+
+      $("#hdnAddr").val($('#txtAddress').val());
+      $("#hdnSrNo").val($('#txtSrNo').val());
+
+      var vEndDate = (typeof $('#slenddate').val() === "undefined" ? '' : $('#slenddate').val());
+      var vStartDate = (typeof $('#slstartdate').val() === "undefined" ? '' : $('#slstartdate').val());
+      var vSrNo = (typeof $('#txtSrNo').val() === "undefined" ? '' : $('#txtSrNo').val());
+      var vtxtAddress = (typeof $('#txtAddress').val() === "undefined" ? '' : $('#txtAddress').val());
+      var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
+      var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
+      var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + vStartDate + '&ToDate=' + vEndDate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress + '&Borough=' + Borough ;
+      $.ajax({
+        async: false,
+        url: RequestUrl,
+        type: 'GET',
+        dataType: 'json',
+        crossDomain: true,
+        success: function(data) {
+          DrawListingDetail(data, 0);
+          $('#txtSrNo').val($("#hdnSrNo").val());
+          $('#txtAddress').val($("#hdnAddr").val());
+          $('#slstartdate').val($("#hdnstartdate").val());
+          $('#slenddate').val($("#hdnenddate").val());
+          $('#dlDistrict').val($("#hdnDist").val());
+          $('#dlEquipment').val($("#hdnEqu").val());
+          $('#dlStatus').val($("#hdnStat").val());
+        }
+      });
+    }
+
+    function setDist(value) {
+      var e = document.getElementById("dlDistrict");
+      var strUser = e.options[e.selectedIndex].text;
+      if (!(strUser.trim() == $("#hdnDist").val())) {
+        $("#hdnDist").val(strUser.trim());
+        $('#hdnEqu').val($("#dlEquipment").val());
+        $('#hdnStat').val($("#dlStatus").val());
+        getReport();
+      }
+    }
+
+    function setEqu(value) {
+      var e = document.getElementById("dlEquipment");
+      var strUser = e.options[e.selectedIndex].text;
+      if (!(strUser.trim() == $("#hdnEqu").val())) {
+        $("#hdnEqu").val(strUser.trim());
+        $("#hdnDist").val($('#dlDistrict').val());
+        $('#hdnStat').val($("#dlStatus").val());
+        this.getReport();
+      }
+    }
+
+    function setStat(value) {
+      var e = document.getElementById("dlStatus");
+      var strUser = e.options[e.selectedIndex].text;
+      if (!(strUser.trim() == $("#hdnStat").val())) {
+        $("#hdnStat").val(strUser);
+        $("#hdnDist").val($('#dlDistrict').val());
+        $('#hdnEqu').val($("#dlEquipment").val());
+        this.getReport();
+      }
+    }
+
+    function onlyUnique(value, index, self) {
+      return self.indexOf(value) === index;
+    }
+
+    function DrawListingDetail(data, isInit) {
+
+      var dbRows = data.ReportItems;
+      var filRows = data.FilterItems;
+
+      if (isInit == 1) {
+
+        var ddlDistricts = filRows.filter(function(a) { return a.ColType === '1'; }).map(function(b) { return b.Value ; });
+        ddlDistricts.unshift('All');
+        $("#hdnDistList").val(ddlDistricts);
+
+        var ddlEquipments = filRows.filter(function(a) {return a.ColType === '2';}).map(function(b) { return b.Value ; });
+        ddlEquipments.unshift('All');
+        $("#hdnEquList").val(ddlEquipments);
+
+        var ddlStatuss = filRows.filter(function(a) {return a.ColType === '3';  }).map(function(b) { return b.Value ; });
+        ddlStatuss.unshift('All');
+        $("#hdnStatList").val(ddlStatuss);
+
+      }
+
+            // var dbRows = data.ReportItems;
+            // if (isInit == 1) {
+            //   var unique = dbRows.map(function(a) {
+            //     return a.DistrictName;
+            //   });
+            //   var ddlDistricts = unique.filter(this.onlyUnique);
+            //   ddlDistricts.unshift('All');
+            //   $("#hdnDistList").val(ddlDistricts);
+            //
+            //   unique = dbRows.map(function(a) {
+            //     return a.TruckSerialNo;
+            //   });
+            //   var ddlEquipments = unique.filter(this.onlyUnique);
+            //   ddlEquipments.unshift('All');
+            //   $("#hdnEquList").val(ddlEquipments);
+            //
+            //   unique = dbRows.map(function(a) {
+            //     return a.Status;
+            //   });
+            //   var ddlStatuss = unique.filter(this.onlyUnique);
+            //   ddlStatuss.unshift('All');
+            //   $("#hdnStatList").val(ddlStatuss);
+            // }
+
+      $('#divListingDetail').html('');
+      var serverCounter = dbRows.length;
+      var columnDefs = [
+        {"title": "Request No.", width: '160px',"bSortable": false, targets: 0, className:'font600' }, { "title": "Scheduled Date", width: '110px', "bSortable": false, targets: 1 },
+        { "title": "District", width: '100px', "bSortable": false, targets: 2 }, { "title": "Equipment", width: '100px', "bSortable": false, targets: 3 },
+        { "title": "Status", width: '100px', "bSortable": false, targets: 4 }, { "title": "Address", width: '200px', "bSortable": false, targets: 5 },
+        { "title": "Requested Total", width: '80px', "bSortable": false, targets: 6, className:'font600' }, { "title": "PickedUp Total", width: '80px', "bSortable": false, targets: 7, className:'font600' },
+        { "title": "Requested TVs", width: '80px', "bSortable": false, targets: 8 }, { "title": "PickedUp TVs", width: '80px', "bSortable": false, targets: 9 },
+        { "title": "Requested Other", width: '80px', "bSortable": false, targets: 10 }, { "title": "PickedUp Other", width: '70px', "bSortable": false, targets: 11 }
+      ];
+      var twoDet = '<div class="container-fluid FirstRow" style="width:100%"><div style="font-size:18pt; font-color:#4A4A4A; line-height:22px; padding-left: 0px;padding-top: 10px; padding-bottom: 5px; font-weight:bold"> <b>Reports </b> <label id="lblDate" for="ScheduledDate"></label> </div> </div>';
+      var memdet = '';
+      memdet = memdet + "<table id='tblListingDetail' class='table table-striped table-hover tblspecial' style='width:98%;min-width:99%;align-items:middle;height=700px;'>";
+
+      twoDet = twoDet + "<div class='container noflow' style='padding:0px'><div class='row bordered menuRow' style='color:white;height:110px;width:100%;' >" +
+        " <div class='col-xs-7 purpl' >" +
+        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17%'><div class='row font600'> Request No. </div><div class='row' style='height:40px;'/>" +
+        "<div class='row'><input type='text' id='txtSrNo' class='purpl UnderlineO' style='max-width:120px;align-items:left;'><button onclick='getReport();' class='purpl '><img src='/assets/dsny/dashboard/includes/img/icon_search.png' style='height:15px;border:0px;'></button></div></div>"+
+        "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:17.5%'><div class='row font600'> Scheduled Date </div><div class='row' style='height:10px;''></div>" +
+        "<div class='row'>" +
+        "<div class='input-group date purpl' id='datetimepicker2'><input class='purpl NoUnderlineO' style='width=80px;height:30px;' type='text' id='slstartdate' /><span class='input-group-addon '><span class='glyphicon glyphicon-calendar ' ></span></span></div>" +
+        "<div class='input-group date purpl' id='datetimepicker1'><input class='purpl NoUnderlineO' style='width=100px;height:30px;' type='text' id='slenddate' /><span class='input-group-addon '><span class='glyphicon glyphicon-calendar ' ></span></span></div></div></td></div>"
+        +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> District</div><div class='row'  style='height:35px;'/>" +
+        "<div class='row'><select id='dlDistrict' type='number' onchange='setDist()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
+      for (var count = 0; count < $("#hdnDistList").val().split(',').length; count++) {
+        twoDet = twoDet + "<option value='" + $("#hdnDistList").val().split(',')[count] + "'>" + $("#hdnDistList").val().split(',')[count] + "</option>"
+      }
+      twoDet = twoDet + "</select></div></div>"
+        +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> Equipment</div><div class='row' style='height:35px;'/>" +
+        "<div class='row'><select id='dlEquipment' type='number' onchange='setEqu()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
+      for (var count = 0; count < $("#hdnEquList").val().split(',').length; count++) {
+        twoDet = twoDet + "<option value='" + $("#hdnEquList").val().split(',')[count] + "'>" + $("#hdnEquList").val().split(',')[count] + "</option>"
+      }
+      twoDet = twoDet + "</select></div></div>"
+        +"<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:13.5%'><div class='row font600'> Status</div><div class='row' style='height:35px;'/>" +
+        "<div class='row'><select id='dlStatus' type='number' onchange='setStat()' class='purpl NoUnderlineO' style='width:110px;height:25px;'>";
+      for (var count = 0; count < $("#hdnStatList").val().split(',').length; count++) {
+        twoDet = twoDet + "<option value='" + $("#hdnStatList").val().split(',')[count] + "'>" + $("#hdnStatList").val().split(',')[count] + "</option>"
+      }
+      twoDet = twoDet + "</select></div></div>"
+
+        + "<div class='col-xs-2 avatar vcenter sec1 borderW' style='width:25%'><div class='row font600'>Address</div><div class='row' style='height:40px;'/>"
+        + "<div class='row'><input type='text' id='txtAddress' style='max-width:200px;align-items:left;width:200px' class='purpl UnderlineO' /><button class='purpl' onclick= 'getReport();''><img src='/assets/dsny/dashboard/includes/img/icon_search.png' style='height:15px;border:0px;'></button></div></div></div>"
+        + "<div class='col-xs-5 yello'><div class='col-xs-4 avatar vcenter sec1 borderW'>" +
+        "<div class='row font600' style='text-align: left;padding-left:10px;'> Total </div><div class='row' style='height:25px;'/>" +
+        "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'> <label id='lblRT'>" + data.SumRequestedTotal + "</label> </div> </div>" +
+        "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPT'>" + data.SumPickedUpTotal + "</label></div></div></div></div>"
+        +"<div class='col-xs-4 avatar vcenter sec1 borderW'>" +
+        "<div class='row font600' style='text-align: left;padding-left:10px;'> TVs </div><div class='row' style='height:25px;'/>" +
+        "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'><label id='lblRTv'>" + data.SumRequestedTVs + "</label></div></div>" +
+        "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPTv'>" + data.SumPickedUpTVs + "</label></div></div></div></div>"
+        +"<div class='col-xs-4 avatar vcenter sec1 ' style='height:100%;padding-top: 5px;padding-left: 10px;padding-right: 5px;'>" +
+        "<div class='row font600' style='text-align: left;padding-left:10px;'> Other Electronics</div><div class='row' style='height:25px;'/>" +
+        "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'><label id='lblRO'>" + data.SumRequestedOther + "</label></div></div>" +
+        "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPO'>" + data.SumPickedUpOther + "</label></div></div></div></div></div>"
+
+      memdet += '<thead><tr><th>Request No</th><th>Scheduled Date</th><th>District</th><th>Equipment</th><th>Status</th><th>Address</th><th>Requested</th><th>PickedUp</th><th>Requested</th><th>PickedUp</th><th>Requested</th><th>PickedUp</th></tr></thead>'
+
+      memdet = memdet + "<tbody>";
+      for (var counter = 0; counter < serverCounter; counter++) {
+
+        memdet = memdet + "<tr><td>" + dbRows[counter].SRNo + "</td>" +
+          "<td>" + dbRows[counter].AppointmentDate + "</td>" +
+          "<td>" + dbRows[counter].DistrictName + "</td>" +
+          "<td>" + dbRows[counter].TruckSerialNo + "</td>" +
+          "<td>" + dbRows[counter].Status + "</td>" +
+          "<td>" + dbRows[counter].Address + "</td>" +
+          "<td>" + dbRows[counter].RequestedTotal + "</td>" +
+          "<td>" + dbRows[counter].PickedUpTotal + "</td>" +
+          "<td>" + dbRows[counter].RequestedTVs + "</td>" +
+          "<td>" + dbRows[counter].PickedUpTVs + "</td>" +
+          "<td>" + dbRows[counter].RequestedOther + "</td>" +
+          "<td>" + dbRows[counter].PickedUpOther + "</td>";
+
+        memdet = memdet + "</tr>";
+      }
+      memdet = memdet + "</tbody>";
+      memdet = memdet + "</table>";
+
+      $('#divListingDetail').html(memdet);
+      $('#divListingMenu').html(twoDet);
+      $('#tblListingDetail').dataTable({
+        deferRender: true,
+        bProcessing: true,
+        scrollY: 500,
+        scrollX: true,
+        scrollCollapse: false,
+        paging: false,
+        bSort: false,
+
+        language: {
+          "lengthMenu": "",
+          "zeroRecords": "No matching records found.",
+          "info": "_MAX_ Total Requests.",
+          "infoEmpty": "",
+          "infoFiltered": "Showing _TOTAL_ search results.",
+        },
+        columnDefs: columnDefs,
+        order: [
+          [0, "desc"]
+        ],
+        dom: '<"toolbar">ftiB',
+        buttons: [{
+                          extend: 'csv',
+                          fieldBoundary: '"',
+                          extension:'Assignments Report.csv'
+                      }
+                  ],
+        initComplete: function() {
+          var tlb = '';
+            $("div.toolbar").html(tlb);
+
+          $("#slstartdate").val($('#hdnstartdate').val());
+          $("#slenddate").val($('#hdnenddate').val());
+
+          $('#datetimepicker1').datetimepicker({
+            format: 'MM-DD-YYYY',
+            widgetPositioning: {
+              horizontal: 'auto',
+              vertical: 'auto'
+            },
+          }).on('dp.change', function(e) {
+            $("#hdnenddate").val($('#slenddate').val());
+            getReport();
+          });
+
+          $('#datetimepicker2').datetimepicker({
+            format: 'MM-DD-YYYY',
+            widgetPositioning: {
+              horizontal: 'auto',
+              vertical: 'auto'
+            }
+          }).on('dp.change', function(e) {
+            $("#hdnstartdate").val($('#slstartdate').val());
+            getReport();
+          });
+        }
+      });
+    }
+
+    $("#btnback").click(function() {
+      window.location.href = "/assets/dsny/dashboard/index.shtml";
+      return false;
+    });
+
+    $('.logoutButton').click(function() {
+      sessionStorage.setItem("pickupdate", "");
+      sessionStorage.setItem("borough", "");
+      sessionStorage.setItem("district", "");
+      window.location.href = '/assets/dsny/dashboard/login.shtml';
+      return false;
+    });
+
+    $("#btnprint").click(function() {
+      $("#printlink").hide();
+      var originalContents = $("body").html();
+      var printContents = $("#divPrint").html();
+      $("body").html(printContents);
+      window.print();
+      $("body").html(originalContents);
+    });
+
+    function getParameter(paramName) {
+      var searchString = window.location.search.substring(1),
+        i, val, params = searchString.split("&");
+      for (i = 0; i < params.length; i++) {
+        val = params[i].split("=");
+        if (val[0] == paramName) {
+          return val[1];
+        }
+      }
+      return null;
+    }
+  </script>
+
+  <script type="text/javascript">
+    jQuery(function($) {
+      $("#exportButton").click(function() {
+        // parse the HTML table element having an id=exportTable
+        var dataSource = shield.DataSource.create({
+          data: "#exportTable",
+          schema: {
+            type: "table",
+            fields: {
+              Name: {
+                type: String
+              },
+              Age: {
+                type: Number
+              },
+              Email: {
+                type: String
+              }
+            }
+          }
+        });
+
+        // when parsing is done, export the data to Excel
+        dataSource.read().then(function(data) {
+          new shield.exp.OOXMLWorkbook({
+            author: "PrepBootstrap",
+            worksheets: [{
+              name: "PrepBootstrap Table",
+              rows: [{
+                cells: [{
+                    style: {
+                      bold: true
+                    },
+                    type: String,
+                    value: "Name"
+                  },
+                  {
+                    style: {
+                      bold: true
+                    },
+                    type: String,
+                    value: "Age"
+                  },
+                  {
+                    style: {
+                      bold: true
+                    },
+                    type: String,
+                    value: "Email"
+                  }
+                ]
+              }].concat($.map(data, function(item) {
+                return {
+                  cells: [{
+                      type: String,
+                      value: item.Name
+                    },
+                    {
+                      type: Number,
+                      value: item.Age
+                    },
+                    {
+                      type: String,
+                      value: item.Email
+                    }
+                  ]
+                };
+              }))
+            }]
+          }).saveAs({
+            fileName: "PrepBootstrapExcel"
+          });
+        });
+      });
+    });
+  </script>
+
+  <style>
+    #exportButton {
+      border-radius: 0;
+    }
+  </style>
+</body>
+</html>

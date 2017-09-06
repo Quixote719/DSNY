@@ -71,7 +71,7 @@
             <img src="/assets/dsny/dashboard/includes/img/DSNYLogo_Desktop.png" alt="dsny logo" />
         </div>
         <div style="font-weight: bold; color: #006646; margin-top: 25px">
-            Bulk Pickups Dashboard
+            Bulk Pickups
         </div>
         <form id="msform" class="pure-form" method="post" name="loginform">
             <div class="card card-block text-xs-center" id="divlogin">
@@ -119,7 +119,7 @@
         </div>
         <div style="color: #9b9b9b">
             <i class="fa fa-phone" aria-hidden="true" style="margin-right: 5px"></i>
-            212-437-4286
+            212-291-1111
         </div>
         <div style="font-weight: 500; color: #006646">
             <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 5px"></i>

@@ -53,11 +53,10 @@ $(document).on("click", ".completePopup", function () {
 				   if (ReqType == "ID"){
 							 CompleteURL = APIUrl + '/ePickupsAPI/api/PickupRequest/GetPickUpRequestForDashboard?RequestId=' + reqNumber;
 						 }else if (ReqType == "SRNO"){
-							 CompleteURL = APIUrl + '/ePickupsAPI/api/PickupRequest/GetPickUpRequest?SRNumber=' + reqNumber;
+							 CompleteURL = APIUrl + '/ePickupsAPI/api/PickupRequest/GetPickUpRequestForDashboardBySR?SRNumber=' + reqNumber;
 						 }else {
 							CompleteURL = APIUrl + '/ePickupsAPI/api/PickupRequest/GetPickUpRequestForDashboard?RequestId=' + reqNumber;
 						 }
-
 
 
 					$.ajax({
@@ -95,7 +94,7 @@ $(document).on("click", ".completePopup", function () {
 										</div></div>\
 											<div class="card-block" style="padding:0px 5px 5px 5px"; >\
 												<p class="card-text">\
-													<span class="box">' + item.BuildingNumber + ' ' + item.Street + '</span>\
+													<div class="box TaskCardAddressLabel">' + item.BuildingNumber + ' ' + item.Street + '</div>\
 													<span style="float:right;">\
 														<b>' + item.District + '</b>\
 													</span>\
@@ -116,9 +115,9 @@ $(document).on("click", ".completePopup", function () {
 											<p style="padding:5px; margin-left:10px;"><span><b>' + item.Status + '</b></span><span style="float:right; margin-right:10px;">' + item.TotalRequestItems + '</span></p></div></div></div>'
 
 											CardComments = '';
-											if (item.StatusId == 5) {
+											if (item.Comments.length > 0) {
 
-											CardComments = '<div class="card"><div style=" width:100%;"><div style="height: 36px; background-color:#535a5f; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;vertical-align: middle;">Comments</span></div> </div><div class="row divrowmargin"><div class="col-xs-12"><span id="canComments" class="dynamicData col-xs-8-margin"> &nbsp;' + item.Comments + '</span></div></div></div>'
+											CardComments = '<div class="card"><div style=" width:100%;"><div style="height: 36px; background-color:#535a5f; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;vertical-align: middle;">Comments</span></div> </div><div class="row divrowmargin"><div class="col-xs-12"><span id="canComments" class="dynamicData col-xs-8-margin" style=" word-wrap: break-word;"> &nbsp;' + item.Comments + '</span></div></div></div>'
 										}
 
 
@@ -129,6 +128,10 @@ $(document).on("click", ".completePopup", function () {
 								$('[id=pplname]').text(data.LastName);
 								$('[id=ppPhone]').text(data.Phone);
 								$('[id=ppEmail]').text(data.Email);
+								$('[id=ppAppointmentDate]').text(moment(data.AppointmentDate).format("MM/DD/YYYY"));
+								$('[id=ppCreatedOn]').text(data.CreatedDate);
+								$('[id=ppLastUpdatedOn]').text(data.LastUpdatedDate);
+								$('[id=ppUpdatedUser]').text(data.UserName);
 								var strAddress = data.BuildingNumber + ' ' + data.Street + ', ' + data.Borough
 								$('[id=ppaddress]').text(strAddress);
 								$('[id=ppCrsStreet]').text(data.CrossStreets);
@@ -343,6 +346,7 @@ $(document).on("click", ".completePopup", function () {
 				insertData.StatusId = 4;
 				insertData.ReasonType = $('input[name=gridRadios]:checked', '.form-group').val();
 				insertData.Status = 'Unserviceable';
+				  insertData.UserName = sessionStorage.getItem("userId"),
 				insertData.IsCompleteRequest = false;
 				delete insertData.$id;
 				var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest';
@@ -378,6 +382,7 @@ $(document).on("click", ".completePopup", function () {
 				insertData.Source = 'Dashboard';
 				insertData.StatusId = 2;
 				insertData.Status = 'Completed';
+				insertData.UserName = sessionStorage.getItem("userId"),
 				insertData.IsCompleteRequest = true;
 				delete insertData.$id;
 				var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
@@ -395,8 +400,8 @@ $(document).on("click", ".completePopup", function () {
 				success: function (json) {
 						if (json != undefined) {
 						$('#msgModal').modal('hide');
-						RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-						Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+						RequestDashboard('0');
+						Request_Assignments();
 						}
 				}
 			});
@@ -406,6 +411,7 @@ $(document).on("click", ".completePopup", function () {
 		$("#btnDelete").click(function () {
 			jQuery.support.cors = true;
 				insertData.Status = 'Request Cancelled';
+				insertData.UserName = sessionStorage.getItem("userId"),
 					insertData.strRequestId = ''+insertData.RequestId;
 					insertData.StatusId = 5;
 						insertData.IsCompleteRequest = false;
@@ -421,8 +427,8 @@ $(document).on("click", ".completePopup", function () {
 				success: function (data) {
 					if (data != undefined) {
 						$('#msgModal').modal('hide');
-						RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-						Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+						RequestDashboard('0');
+						Request_Assignments();
 
 					}
 				}
@@ -436,6 +442,7 @@ $(document).on("click", ".completePopup", function () {
 			jQuery.support.cors = true;
 			insertData.strRequestId = ''+insertData.RequestId;
 			insertData.Status = 'Not on Location';
+			insertData.UserName = sessionStorage.getItem("userId"),
 			insertData.StatusId = 3;
 			insertData.IsCompleteRequest = false;
 			delete insertData.$id;
@@ -450,8 +457,8 @@ $(document).on("click", ".completePopup", function () {
 				success: function (data) {
 					if (data != undefined) {
 						$('#msgModal').modal('hide');
-						RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-						Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+						RequestDashboard('0');
+						Request_Assignments();
 
 					}
 				}

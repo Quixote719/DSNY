@@ -9,8 +9,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/assets/dsny/stagingdashboard/includes/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/dsny/stagingdashboard/includes/css/application.css">
-  <link href="/assets/donate/css/bootstrap-datetimepicker.css" rel="stylesheet">
-  <link href="/assets/donate/css/bootstrap-glyphicon.css" rel="stylesheet">
+  <link href="/assets/dsny/stagingdashboard/includes/css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="/assets/dsny/stagingdashboard/includes/css/bootstrap-glyphicon.css" rel="stylesheet">
   <link href="/assets/dsny/stagingdashboard/includes/css/dataTables.bootstrap.css" rel="stylesheet">
   <link href="/assets/dsny/stagingdashboard/includes/css/dataTables.responsive.css" rel="stylesheet">
   <link href="/assets/dsny/stagingdashboard/includes/css/dataTables.tableTools.min.css" rel="stylesheet">
@@ -98,8 +98,6 @@
       width: 90px;
     }
 
-
-
     .bootstrap-datetimepicker-widget.dropdown-menu {
       width: 19em !important;
       top: 35px !important;
@@ -111,15 +109,33 @@
       border-right: 0 !important;
     }
 
-    .buttons-csv
-    {visibility: hidden;}
+    .buttons-csv {
+      visibility:hidden;
+    }
+
+    .buttons-csv {
+        text-shadow: none !important;
+        box-shadow: none !important;
+        background-image: none !important;
+        color: white !important;
+        padding: 8px !important;
+        background-color: rgb(14, 140, 27) !important;
+        border-radius: 5px !important;
+        text-transform: none !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+        text-align: center !important;
+        float: right !important;
+        /*visibility: hidden;*/
+      }
 
     .buttons-excel {
       text-shadow: none !important;
       box-shadow: none !important;
       background-image: none !important;
       color: white !important;
-      width: 26% !important;
       padding: 8px !important;
       background-color: rgb(14, 140, 27) !important;
       border-radius: 5px !important;
@@ -130,10 +146,48 @@
       margin-left: 20px !important;
       text-align: center !important;
       float: right !important;
+      visibility: visible;
     }
 
-    .buttons-csv:hover,
-    .buttons-excel:hover {
+        .buttons-csv::after{
+            content: 'Download Excel';
+            text-shadow: none !important;
+            box-shadow: none !important;
+            background-image: none !important;
+            color: white !important;
+            padding: 8px !important;
+            background-color: rgb(14, 140, 27) !important;
+            border-radius: 5px !important;
+            text-transform: none !important;
+            border: 0 !important;
+            font-weight: bold !important;
+            margin-right: 0 !important;
+            margin-left: 20px !important;
+            text-align: center !important;
+            float: right !important;
+            visibility: visible;
+          }
+
+      .buttons-excel::after {
+        content: 'Download Excel';
+        text-shadow: none !important;
+        box-shadow: none !important;
+        background-image: none !important;
+        color: white !important;
+        padding: 8px !important;
+        background-color: rgb(14, 140, 27) !important;
+        border-radius: 5px !important;
+        text-transform: none !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        margin-right: 0 !important;
+        margin-left: 20px !important;
+        text-align: center !important;
+        float: right !important;
+        visibility: visible;
+      }
+
+    .buttons-csv:hover, .buttons-excel:hover {
       color: white !important;
       background-color: #686868 !important;
     }
@@ -386,17 +440,17 @@
   <script src="/assets/dsny/stagingdashboard/includes/js/tether.min.js"></script>
   <script src="/assets/dsny/stagingdashboard/includes/js/bootstrap.min.js"></script>
   <script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>
-  <script src="/assets/donate/js/plugins/jeditable/jquery.jeditable.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/jquery.dataTables.min.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/dataTables.bootstrap.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/dataTables.responsive.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/jquery.jeditable.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/jquery.dataTables.min.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/dataTables.bootstrap.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/dataTables.responsive.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/dataTables.tableTools.min.js"></script>
   <script src="/assets/donate/js/plugins/pace/pace.min.js"></script>
   <script src="/assets/donate/js/moment-2.8.3.js"></script>
   <script src="/assets/donate/js/bootstrap-datetimepicker.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/dataTables.buttons.min.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/buttons.html5.min.js"></script>
-  <script src="/assets/donate/js/plugins/dataTables/buttons.flash.min.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/dataTables.buttons.min.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/buttons.html5.min.js"></script>
+  <script src="/assets/dsny/stagingdashboard/includes/js/buttons.flash.min.js"></script>
 
   <script type="text/javascript">
     //var APIUrl = 'http://localhost:36186';
@@ -415,7 +469,7 @@
 
       var dt = new Date();
       var currentdate = moment(dt).format('MM-DD-YYYY');
-      var prevdate = moment(dt).subtract(6, 'months').format('MM-DD-YYYY');
+      var prevdate = moment(dt).subtract(1, 'months').format('MM-DD-YYYY');
       $("#hdnstartdate").val(prevdate);
       $("#hdnenddate").val(currentdate);
 
@@ -434,7 +488,7 @@
       var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
       var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
       var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
-      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + prevdate + '&ToDate=' + currentdate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress;
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + prevdate + '&ToDate=' + currentdate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress + '&Borough=' + Borough ;
       $.ajax({
         async: false,
         url: RequestUrl,
@@ -462,7 +516,7 @@
       var vDist = (typeof $("#hdnDist").val() === "undefined" ? '' : $("#hdnDist").val());
       var vEqu = (typeof $("#hdnEqu").val() === "undefined" ? '' : $("#hdnEqu").val());
       var vStat = (typeof $("#hdnStat").val() === "undefined" ? '' : $("#hdnStat").val());
-      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + vStartDate + '&ToDate=' + vEndDate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress;
+      var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetAssignmentReport?SRNo=' + vSrNo + '&FromDate=' + vStartDate + '&ToDate=' + vEndDate + '&District=' + vDist.replace('All',' ') + '&Equipment=' + vEqu.replace('All',' ') + '&Status=' + vStat.replace('All',' ') + '&Address=' + vtxtAddress + '&Borough=' + Borough ;
       $.ajax({
         async: false,
         url: RequestUrl,
@@ -520,40 +574,59 @@
     }
 
     function DrawListingDetail(data, isInit) {
-
+      
       var dbRows = data.ReportItems;
+      var filRows = data.FilterItems;
+      
       if (isInit == 1) {
-        var unique = dbRows.map(function(a) {
-          return a.DistrictName;
-        });
-        var ddlDistricts = unique.filter(this.onlyUnique);
+        
+        var ddlDistricts = filRows.filter(function(a) { return a.ColType === '1'; }).map(function(b) { return b.Value ; });
         ddlDistricts.unshift('All');
         $("#hdnDistList").val(ddlDistricts);
-
-        unique = dbRows.map(function(a) {
-          return a.TruckSerialNo;
-        });
-        var ddlEquipments = unique.filter(this.onlyUnique);
+          
+        var ddlEquipments = filRows.filter(function(a) {return a.ColType === '2';}).map(function(b) { return b.Value ; });
         ddlEquipments.unshift('All');
         $("#hdnEquList").val(ddlEquipments);
-
-        unique = dbRows.map(function(a) {
-          return a.Status;
-        });
-        var ddlStatuss = unique.filter(this.onlyUnique);
+            
+        var ddlStatuss = filRows.filter(function(a) {return a.ColType === '3';  }).map(function(b) { return b.Value ; });
         ddlStatuss.unshift('All');
         $("#hdnStatList").val(ddlStatuss);
+        
       }
+      
+            // var dbRows = data.ReportItems;
+            // if (isInit == 1) {
+            //   var unique = dbRows.map(function(a) {
+            //     return a.DistrictName;
+            //   });
+            //   var ddlDistricts = unique.filter(this.onlyUnique);
+            //   ddlDistricts.unshift('All');
+            //   $("#hdnDistList").val(ddlDistricts);
+            // 
+            //   unique = dbRows.map(function(a) {
+            //     return a.TruckSerialNo;
+            //   });
+            //   var ddlEquipments = unique.filter(this.onlyUnique);
+            //   ddlEquipments.unshift('All');
+            //   $("#hdnEquList").val(ddlEquipments);
+            // 
+            //   unique = dbRows.map(function(a) {
+            //     return a.Status;
+            //   });
+            //   var ddlStatuss = unique.filter(this.onlyUnique);
+            //   ddlStatuss.unshift('All');
+            //   $("#hdnStatList").val(ddlStatuss);
+            // }
 
       $('#divListingDetail').html('');
       var serverCounter = dbRows.length;
       var columnDefs = [
-        {width: '160px', "bSortable": false, targets: 0, className:'font600' }, { width: '110px', "bSortable": false, targets: 1 },
-        { width: '100px', "bSortable": false, targets: 2 }, { width: '100px', "bSortable": false, targets: 3 },
-        { width: '100px', "bSortable": false, targets: 4 }, { width: '200px', "bSortable": false, targets: 5 },
-        { width: '80px', "bSortable": false, targets: 6, className:'font600' }, { width: '80px', "bSortable": false, targets: 7, className:'font600' },
-        { width: '80px', "bSortable": false, targets: 8 }, { width: '80px', "bSortable": false, targets: 9 },
-        { width: '80px', "bSortable": false, targets: 10 }, { width: '70px', "bSortable": false, targets: 11 }
+        {"title": "Request No.", width: '160px',"bSortable": false, targets: 0, className:'font600' }, { "title": "Scheduled Date", width: '110px', "bSortable": false, targets: 1 },
+        { "title": "District", width: '100px', "bSortable": false, targets: 2 }, { "title": "Equipment", width: '100px', "bSortable": false, targets: 3 },
+        { "title": "Status", width: '100px', "bSortable": false, targets: 4 }, { "title": "Address", width: '200px', "bSortable": false, targets: 5 },
+        { "title": "Requested Total", width: '80px', "bSortable": false, targets: 6, className:'font600' }, { "title": "PickedUp Total", width: '80px', "bSortable": false, targets: 7, className:'font600' },
+        { "title": "Requested TVs", width: '80px', "bSortable": false, targets: 8 }, { "title": "PickedUp TVs", width: '80px', "bSortable": false, targets: 9 },
+        { "title": "Requested Other", width: '80px', "bSortable": false, targets: 10 }, { "title": "PickedUp Other", width: '70px', "bSortable": false, targets: 11 }
       ];
       var twoDet = '<div class="container-fluid FirstRow" style="width:100%"><div style="font-size:18pt; font-color:#4A4A4A; line-height:22px; padding-left: 0px;padding-top: 10px; padding-bottom: 5px; font-weight:bold"> <b>Reports </b> <label id="lblDate" for="ScheduledDate"></label> </div> </div>';
       var memdet = '';
@@ -601,6 +674,8 @@
         "<div class='row'><div class='col-xs-6 borderB'> <div class='row font600'> Requested </div> <div class='row' style='text-align-last:left;'><label id='lblRO'>" + data.SumRequestedOther + "</label></div></div>" +
         "<div class='col-xs-6'> <div class='row font600'> Picked-Up </div> <div class='row' style='text-align-last:left;'><label id='lblPO'>" + data.SumPickedUpOther + "</label></div></div></div></div></div>"
 
+      memdet += '<thead><tr><th>Request No</th><th>Scheduled Date</th><th>District</th><th>Equipment</th><th>Status</th><th>Address</th><th>Requested</th><th>PickedUp</th><th>Requested</th><th>PickedUp</th><th>Requested</th><th>PickedUp</th></tr></thead>'
+
       memdet = memdet + "<tbody>";
       for (var counter = 0; counter < serverCounter; counter++) {
 
@@ -628,8 +703,8 @@
         deferRender: true,
         bProcessing: true,
         scrollY: 500,
-        scrollX: false,
-        scrollCollapse: true,
+        scrollX: true,
+        scrollCollapse: false,
         paging: false,
         bSort: false,
 
@@ -645,13 +720,12 @@
           [0, "desc"]
         ],
         dom: '<"toolbar">ftiB',
-        buttons: [
-          'excel',
-          {
-            extend: 'csv',
-            fieldBoundary: '"',
-          }
-        ],
+        buttons: [{
+                          extend: 'csv',
+                          fieldBoundary: '"',
+                          extension:'Assignments Report.csv'
+                      }
+                  ],
         initComplete: function() {
           var tlb = '';
             $("div.toolbar").html(tlb);
@@ -675,7 +749,7 @@
             widgetPositioning: {
               horizontal: 'auto',
               vertical: 'auto'
-            },
+            }
           }).on('dp.change', function(e) {
             $("#hdnstartdate").val($('#slstartdate').val());
             getReport();

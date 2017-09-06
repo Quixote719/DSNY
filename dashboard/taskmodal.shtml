@@ -1,396 +1,456 @@
 <!-- Pending Modal popup -->
-    <div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="msgModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
+<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="msgModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
 
-                    <button id="btnComplete" class="btn navButton" type="submit" style="float:left;margin-left: 15px;">Complete</button>
-                     <button id="btnUnserviceable" class="btn navButton" type="submit" style="float:left;background-color:#F5A623">Unserviceable</button>
-                    <button id="btnPckUp" class="btn navButton" type="submit" style="float:left; background-color:#dc645c">Not On Location</button>
-                    <button id="btnDelete" class="btn navButton" type="submit" style="float:left; background-color:#706f72">Delete</button>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <!-- <div class="post_close" data-dismiss="modal"><img src="/assets/zws/images/mobile_close_button.png"></div>-->
-                    <!-- <h4 class="modal-title">Messages</h4> -->
+        <button id="btnComplete" class="btn navButton" type="submit" style="float:left;margin-left: 15px;">Complete</button>
+        <button id="btnPckUp" class="btn navButton" type="submit" style="float:left; background-color:#dc645c">Not On Location</button>
+        <button id="btnUnserviceable" class="btn navButton" type="submit" style="float:left;background-color:#F5A623">Unserviceable</button>
+        <button id="btnDelete" class="btn navButton" type="submit" style="float:left; background-color:#706f72">Cancel Assignment</button>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <!-- <div class="post_close" data-dismiss="modal"><img src="/assets/zws/images/mobile_close_button.png"></div>-->
+        <!-- <h4 class="modal-title">Messages</h4> -->
+      </div>
+      <div class="modal-body js-modalBody">
+        <div class="modal-body-scroller">
+          <div>
+            <div class="media-list media-list-users list-group js-msgGroup" id="dialogRequest">
+
+              <div class="row">
+                <div class="col-lg-4" style="padding-left:0px; width:20%;" id="card">
+
                 </div>
-                <div class="modal-body js-modalBody">
-                    <div class="modal-body-scroller">
-                        <div>
-                            <div class="media-list media-list-users list-group js-msgGroup" id="dialogRequest">
+                <div class="col-lg-4" style="line-height:35px;padding-left:0px; width:40%;">
+                  <div id="hardCategory">
 
-                                <div class="row">
-                                    <div class="col-lg-4" style="padding-left:0px; width:20%;" id="card">
-
-                                    </div>
-                                    <div class="col-lg-4" style="line-height:35px;padding-left:0px; width:40%;">
-                                        <div id="hardCategory">
-
-                                            <div class="card">
-                                                <div style=" width:100%; ">
-                                                    <div style="height: 36px; background-color:#5393E7; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Contact Info</span></div>
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">
-                                                        First Name :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-
-                                                        <span id='ppfname' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Last Name :</div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='pplname' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Phone Number : </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppPhone' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">
-                                                        Email :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppEmail' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="card">
-                                                <div style=" width:100%;">
-                                                    <div style="height: 36px; background-color:#7461A2; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Pick Up Location</span></div>
-                                                </div>
-                                                <div class="row divrowmargin">
-
-                                                    <div class="col-xs-4">
-                                                        Address :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-
-                                                        <span id='ppaddress' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-
-                                                    <div class="col-xs-4">
-                                                        Cross Streets :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppCrsStreet' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-
-                                                    <div class="col-xs-4">
-                                                        Pick Up Location :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-
-                                                        <span id='ppLocation' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="card" style=" height:130px;">
-                                                <div style="height:100%;">
-                                                    <div class="cadrdivfullwidthheight">
-                                                        <div class="tvbgcolor"><span style="margin-left:10px;">Televisions CRT</span><span class="tvmargin" id='CRTTVsHeaderTotal' class="dynamicData"></span></div>
-                                                        <div class="carddivstyle">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='CRTTV1' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='CRTTV2' class="dynamicData"></span></p>
-                                                        </div>
-                                                        <div class="carddivstyle">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='CRTTV3' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='CRTTV4' class="dynamicData"></span></p>
-
-                                                        </div>
-                                                        <div style=" width:33%;height:70%;float:left; padding-left:10px;">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='CRTTV5' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='CRTTV6' class="dynamicData"></span></p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card" style=" height:130px;">
-                                                <div style="height:100%;">
-                                                    <div class="cadrdivfullwidthheight">
-                                                        <div class="tvbgcolor"><span style="margin-left:10px;">Televisions LCD</span><span class="tvmargin" id='LCDTVsHeaderTotal' class="dynamicData"></span></div>
-                                                        <div class="carddivstyle">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='LCDTV1' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='LCDTV2' class="dynamicData"></span></p>
-                                                        </div>
-                                                        <div class="carddivstyle">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='LCDTV3' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='LCDTV4' class="dynamicData"></span></p>
-                                                        </div>
-                                                        <div style=" width:33%;height:70%;float:left; padding-left:10px;">
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='LCDTV5' class="dynamicData"></span></p>
-                                                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='LCDTV6' class="dynamicData"></span></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="tvCategory" style="display:none;"></div>
-
-                                    </div>
-                                    <div class="col-lg-4" style="padding-left:0px;padding-right:0px; width:40%;">
-                                        <div class="categorycard" style="line-height:35px;">
-                                            <div id="pndSubCategory">
-                                                <div class="row" style="background-color:#EAC454;color:white;">
-                                                    <div class="col-md-6ths col-xs-9 ctgName ">Items</div> <div class="col-md-3ths col-xs-3 qtyRight"><span id="othItmTotal"> </span> </div>
-                                                </div>
-                                                <div id="otherpndCtegory">
-                                                </div>
-                                            </div>
-
-                                            <div id="cmpSubCategory" style="display:none;">
-                                                <div class="row" style="background-color:#EAC454;color:white;">
-                                                    <div class="col-md-6ths col-xs-6 ctgName ">Items</div><div class="col-md-3ths col-xs-3">Requested</div> <div class="col-md-3ths col-xs-3">Picked Up</div>
-                                                </div>
-                                                <div id="otherCtegory">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row" id="submitreq">
-                                    <button id="btnCompleteSubmit" class="btn navButton" type="submit" style="float:right;margin-left: 15px;">Submit</button>
-                                </div>
-                            </div>
-
+                    <div class="card">
+                      <div style=" width:100%; ">
+                        <div style="height: 36px; background-color:#5393E7; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Contact Info</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4">
+                          First Name :
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	
-	<!-- Completed Modal popup -->
-    <div class="modal fade" id="cmpModal" tabindex="-1" role="dialog" aria-labelledby="cmpModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <!-- <div class="post_close" data-dismiss="modal"><img src="/assets/zws/images/mobile_close_button.png"></div>-->
-                    <!-- <h4 class="modal-title">Messages</h4> -->
-                </div>
-                <div class="modal-body js-modalBody">
-                    <div class="modal-body-scroller">
-                        <div>
-                            <div class="media-list media-list-users list-group js-msgGroup" id="dialogRequest">
+                        <div class="col-xs-8 col-xs-8-border">
 
-                                <div class="row">
-                                    <div class="col-md-2ths col-xs-2" style="padding-left:0px" id="cmlcard">
-
-                                    </div>
-                                    <div class="col-md-6ths col-xs-5" style="line-height:35px;padding-left:0px">
-                                        <div id="hardCategory">
-
-                                            <div class="card">
-                                                <div style=" width:100%; ">
-                                                    <div style="height: 36px; background-color:#5393E7; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Contact Info</span></div>
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">
-                                                        First Name :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppfname' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Last Name :</div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='pplname' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Phone Number : </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppPhone' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">
-                                                        Email :
-                                                    </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppEmail' class="dynamicData col-xs-8-margin">&nbsp;</span>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-                                            <div class="card">
-                                                <div style=" width:100%;">
-                                                    <div style="height: 36px; background-color:#7461A2; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Pick Up Location</span></div>
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Address :</div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-
-                                                        <span id='ppaddress' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Cross Streets : </div>
-                                                    <div class="col-xs-8 " class="col-xs-8-border">
-                                                        <span id='ppCrsStreet' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-4">  Pick Up Location :  </div>
-                                                    <div class="col-xs-8 col-xs-8-border">
-                                                        <span id='ppLocation' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="card">
-                                                <div style=" width:100%;">
-                                                    <div style="height: 36px; background-color:#535a5f; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Comments</span></div>
-                                                </div>
-                                                <div class="row divrowmargin">
-                                                    <div class="col-xs-12">
-                                                        <span id='ppComments' class="dynamicData col-xs-8-margin"> &nbsp;</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                    <!-- <div id ="tvCategory" style="display:none;" ></div> -->
-
-
-                                    <div class="col-md-6ths col-xs-5 " style="padding-left:0px;padding-right:0px">
-                                        <div class="" style="line-height:35px;">
-                                            <div id="pndSubCategory">
-
-                                                <div class="card" style=" height:130px;">
-                                                    <div style="height:100%;">
-                                                        <div class="cadrdivfullwidthheight">
-                                                            <div class="tvbgcolor"><span style="margin-left:10px;">Televisions CRT</span><span class="tvmargin" id='CRTTVsHeaderTotal' class="dynamicData"></span></div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='CRTTV1' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='CRTTV2' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='CRTTV3' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='CRTTV4' class="dynamicData"></span></p>
-
-                                                            </div>
-                                                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='CRTTV5' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='CRTTV6' class="dynamicData"></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card" style=" height:130px;">
-                                                    <div style="height:100%;">
-                                                        <div class="cadrdivfullwidthheight">
-                                                            <div class="tvbgcolor"><span style="margin-left:10px;">Televisions LCD</span><span class="tvmargin" id='LCDTVsHeaderTotal' class="dynamicData"></span></div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='LCDTV1' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='LCDTV2' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='LCDTV3' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='LCDTV4' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='LCDTV5' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='LCDTV6' class="dynamicData"></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="row" style="background-color:#EAC454;color:white;">
-                                                        <div class="col-md-6ths col-xs-9 ctgName ">Items</div> <div class="col-md-3ths col-xs-3 qtyRight"><span id="othItmTotal"> </span> </div>
-                                                    </div>
-                                                    <div id="Itemctg">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div id="cmpSubCategory">
-
-                                                <div class="card" style=" height:130px;">
-                                                    <div style="height:100%;">
-                                                        <div class="cadrdivfullwidthheight">
-                                                            <div style="height: 36px; background-color:#efb43C; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Actual Televisions CRT</span><span class="tvmargin" id='pckCRTTVsHeaderTotal' class="dynamicData"></span></div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='pckCRTTV1' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='pckCRTTV2' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='pckCRTTV3' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='pckCRTTV4' class="dynamicData"></span></p>
-
-                                                            </div>
-                                                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='pckCRTTV5' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='pckCRTTV6' class="dynamicData"></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card" style=" height:130px;">
-                                                    <div style="height:100%;">
-                                                        <div class="cadrdivfullwidthheight">
-                                                            <div style="height: 36px; background-color:#efb43C; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Actual Televisions LCD</span><span class="tvmargin" id='pckLCDTVsHeaderTotal' class="dynamicData"></span></div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='pckLCDTV1' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='pckLCDTV2' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div class="carddivstyle">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='pckLCDTV3' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='pckLCDTV4' class="dynamicData"></span></p>
-                                                            </div>
-                                                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='pckLCDTV5' class="dynamicData"></span></p>
-                                                                <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='pckLCDTV6' class="dynamicData"></span></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="row" style="background-color:#efb43C;color:white;">
-                                                        <div class="col-md-6ths col-xs-9 ctgName ">Actual Items</div> <div class="col-md-3ths col-xs-3 qtyRight"><span id="pckothItmTotal"> </span> </div>
-                                                    </div>
-                                                    <div id="pckItemctg">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <span id='ppfname' class="dynamicData col-xs-8-margin">&nbsp;</span>
                         </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Last Name :</div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='pplname' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Phone Number : </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppPhone' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4">
+                          Email :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppEmail' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+
                     </div>
+
+                    <div class="card">
+                      <div style=" width:100%;">
+                        <div style="height: 36px; background-color:#7461A2; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Pick Up Location</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+
+                        <div class="col-xs-4">
+                          Address :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+
+                          <span id='ppaddress' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+
+                        <div class="col-xs-4">
+                          Cross Streets :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppCrsStreet' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+
+                        <div class="col-xs-4">
+                          Pick Up Location :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+
+                          <span id='ppLocation' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <div class="card">
+                      <div style=" width:100%;">
+                        <div style="height: 36px; background-color:#535A5F; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Ticket Activities</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+
+                        <div class="col-xs-6 col-xs-6-border">
+                          Appointment Date: <span id='ppAppointmentDate' class=""></span>
+                        </div>
+                        <div class="col-xs-6">
+                          Created On:
+                          <span id='ppCreatedOn' class=""></span>
+                        </div>
+                      </div>
+                      <div class="row divrowmargin">
+
+                        <div class="col-xs-6 ">
+                          Last Updated On:
+                          <span id='ppLastUpdatedOn' class=""></span>
+                        </div>
+                        <div class="col-xs-6">
+                          Updated User:
+                          <span id='ppUpdatedUser' class=""></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card" style=" height:130px;">
+                      <div style="height:100%;">
+                        <div class="cadrdivfullwidthheight">
+                          <div class="tvbgcolor"><span style="margin-left:10px;">Televisions CRT</span><span class="tvmargin" id='CRTTVsHeaderTotal' class="dynamicData"></span></div>
+                          <div class="carddivstyle">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='CRTTV1' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='CRTTV2' class="dynamicData"></span></p>
+                          </div>
+                          <div class="carddivstyle">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='CRTTV3' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='CRTTV4' class="dynamicData"></span></p>
+
+                          </div>
+                          <div style=" width:33%;height:70%;float:left; padding-left:10px;">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='CRTTV5' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='CRTTV6' class="dynamicData"></span></p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="card" style=" height:130px;">
+                      <div style="height:100%;">
+                        <div class="cadrdivfullwidthheight">
+                          <div class="tvbgcolor"><span style="margin-left:10px;">Televisions LCD</span><span class="tvmargin" id='LCDTVsHeaderTotal' class="dynamicData"></span></div>
+                          <div class="carddivstyle">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='LCDTV1' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='LCDTV2' class="dynamicData"></span></p>
+                          </div>
+                          <div class="carddivstyle">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='LCDTV3' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='LCDTV4' class="dynamicData"></span></p>
+                          </div>
+                          <div style=" width:33%;height:70%;float:left; padding-left:10px;">
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='LCDTV5' class="dynamicData"></span></p>
+                            <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='LCDTV6' class="dynamicData"></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card" id="UnserviceableReason" style=" height:160px; display:none;">
+                    <div style="height:100%;">
+                      <div class="cadrdivfullwidthheight">
+                        <div class="tvbgcolor"><span style="margin-left:10px;">Reason For Unserviceable</span></div>
+                        <fieldset class="form-group row">
+                          <div class="col-sm-10">
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Construction" checked>     Construction</label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Behind Fence">      Behind Fence</label>
+                            </div>
+                            <div class="form-check">
+                              <label class="form-check-label">
+                                                              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="In the Yard">     In the Yard</label>
+                            </div>
+                            <!-- <div class="form-check">
+                              <label class="form-check-label">
+                                                               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Other">Other</label>
+                            </div>
+                            <div class="form-group">
+                              <textarea class="form-control" id="UnserviceableComment" maxlength="250" style="width:100%;resize:none;border: 1px solid rgba(0,0,0,.125);"></textarea></div> -->
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="tvCategory" style="display:none;"></div>
+
                 </div>
+                <div class="col-lg-4" style="padding-left:0px;padding-right:0px; width:40%;">
+                  <div class="categorycard" style="line-height:35px;">
+                    <div id="pndSubCategory">
+                      <div class="row" style="background-color:#EAC454;color:white;">
+                        <div class="col-md-6ths col-xs-9 ctgName ">Items</div>
+                        <div class="col-md-3ths col-xs-3 qtyRight"><span id="othItmTotal"> </span> </div>
+                      </div>
+                      <div id="otherpndCtegory">
+                      </div>
+                    </div>
+
+                    <div id="cmpSubCategory" style="display:none;">
+                      <div class="row" style="background-color:#EAC454;color:white;">
+                        <div class="col-md-6ths col-xs-6 ctgName ">Items</div>
+                        <div class="col-md-3ths col-xs-3">Requested</div>
+                        <div class="col-md-3ths col-xs-3">Picked Up</div>
+                      </div>
+                      <div id="otherCtegory">
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="row" id="submitreq">
+                <button id="btnCompleteSubmit" class="btn navButton" type="submit" style="float:right;margin-left: 15px;">Submit</button>
+              </div>
             </div>
+
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- Completed Modal popup -->
+<div class="modal fade" id="cmpModal" tabindex="-1" role="dialog" aria-labelledby="cmpModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <!-- <div class="post_close" data-dismiss="modal"><img src="/assets/zws/images/mobile_close_button.png"></div>-->
+        <!-- <h4 class="modal-title">Messages</h4> -->
+      </div>
+      <div class="modal-body js-modalBody">
+        <div class="modal-body-scroller">
+          <div>
+            <div class="media-list media-list-users list-group js-msgGroup" id="dialogRequest">
+
+              <div class="row">
+                <div class="col-md-2ths col-xs-2" style="padding-left:0px" id="cmlcard">
+
+                </div>
+                <div class="col-md-6ths col-xs-5" style="line-height:35px;padding-left:0px">
+                  <div id="hardCategory">
+
+                    <div class="card">
+                      <div style=" width:100%; ">
+                        <div style="height: 36px; background-color:#5393E7; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Contact Info</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4">
+                          First Name :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppfname' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Last Name :</div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='pplname' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Phone Number : </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppPhone' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4">
+                          Email :
+                        </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppEmail' class="dynamicData col-xs-8-margin">&nbsp;</span>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="card">
+                      <div style=" width:100%;">
+                        <div style="height: 36px; background-color:#7461A2; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Pick Up Location</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Address :</div>
+                        <div class="col-xs-8 col-xs-8-border">
+
+                          <span id='ppaddress' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Cross Streets : </div>
+                        <div class="col-xs-8 " class="col-xs-8-border">
+                          <span id='ppCrsStreet' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-4"> Pick Up Location : </div>
+                        <div class="col-xs-8 col-xs-8-border">
+                          <span id='ppLocation' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div style=" width:100%;">
+                        <div style="height: 36px; background-color:#535a5f; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Comments</span></div>
+                      </div>
+                      <div class="row divrowmargin">
+                        <div class="col-xs-12">
+                          <span id='ppComments' class="dynamicData col-xs-8-margin"> &nbsp;</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                </div>
+                <!-- <div id ="tvCategory" style="display:none;" ></div> -->
+
+
+                <div class="col-md-6ths col-xs-5 " style="padding-left:0px;padding-right:0px">
+                  <div class="" style="line-height:35px;">
+                    <div id="pndSubCategory">
+
+                      <div class="card" style=" height:130px;">
+                        <div style="height:100%;">
+                          <div class="cadrdivfullwidthheight">
+                            <div class="tvbgcolor"><span style="margin-left:10px;">Televisions CRT</span><span class="tvmargin" id='CRTTVsHeaderTotal' class="dynamicData"></span></div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img//Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='CRTTV1' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='CRTTV2' class="dynamicData"></span></p>
+                            </div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='CRTTV3' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='CRTTV4' class="dynamicData"></span></p>
+
+                            </div>
+                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='CRTTV5' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='CRTTV6' class="dynamicData"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style=" height:130px;">
+                        <div style="height:100%;">
+                          <div class="cadrdivfullwidthheight">
+                            <div class="tvbgcolor"><span style="margin-left:10px;">Televisions LCD</span><span class="tvmargin" id='LCDTVsHeaderTotal' class="dynamicData"></span></div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='LCDTV1' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='LCDTV2' class="dynamicData"></span></p>
+                            </div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='LCDTV3' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='LCDTV4' class="dynamicData"></span></p>
+                            </div>
+                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='LCDTV5' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='LCDTV6' class="dynamicData"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="row" style="background-color:#EAC454;color:white;">
+                          <div class="col-md-6ths col-xs-9 ctgName ">Items</div>
+                          <div class="col-md-3ths col-xs-3 qtyRight"><span id="othItmTotal"> </span> </div>
+                        </div>
+                        <div id="Itemctg">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="cmpSubCategory">
+
+                      <div class="card" style=" height:130px;">
+                        <div style="height:100%;">
+                          <div class="cadrdivfullwidthheight">
+                            <div style="height: 36px; background-color:#efb43C; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Actual Televisions CRT</span><span class="tvmargin" id='pckCRTTVsHeaderTotal' class="dynamicData"></span></div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 20'</span><span class="tvmargin" id='pckCRTTV1' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>20' - 30'</span><span class="tvmargin" id='pckCRTTV2' class="dynamicData"></span></p>
+                            </div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>31' - 40'</span><span class="tvmargin" id='pckCRTTV3' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>41' - 50'</span><span class="tvmargin" id='pckCRTTV4' class="dynamicData"></span></p>
+
+                            </div>
+                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>51' - 60'</span><span class="tvmargin" id='pckCRTTV5' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/Black-CRT-TV-Icon.svg" alt="TV Icon" class="tvimagemargin"></span><span>&#60; 60'</span><span class="tvmargin" id='pckCRTTV6' class="dynamicData"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card" style=" height:130px;">
+                        <div style="height:100%;">
+                          <div class="cadrdivfullwidthheight">
+                            <div style="height: 36px; background-color:#efb43C; color:white; border-bottom:1px solid white;"><span style="margin-left:10px;">Actual Televisions LCD</span><span class="tvmargin" id='pckLCDTVsHeaderTotal' class="dynamicData"></span></div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 20'</span><span class="tvmargin" id='pckLCDTV1' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>20' - 30'</span><span class="tvmargin" id='pckLCDTV2' class="dynamicData"></span></p>
+                            </div>
+                            <div class="carddivstyle">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>31' - 40'</span><span class="tvmargin" id='pckLCDTV3' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>41' - 50'</span><span class="tvmargin" id='pckLCDTV4' class="dynamicData"></span></p>
+                            </div>
+                            <div style=" width:33%;height:70%;float:left;padding-left:10px;">
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>51' - 60'</span><span class="tvmargin" id='pckLCDTV5' class="dynamicData"></span></p>
+                              <p class="palign"><span><img src="/assets/dsny/dashboard/includes/img/black-TV.svg" alt="TV Icon" class="lcdtvimgmargin"></span><span>&#60; 60'</span><span class="tvmargin" id='pckLCDTV6' class="dynamicData"></span></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="row" style="background-color:#efb43C;color:white;">
+                          <div class="col-md-6ths col-xs-9 ctgName ">Actual Items</div>
+                          <div class="col-md-3ths col-xs-3 qtyRight"><span id="pckothItmTotal"> </span> </div>
+                        </div>
+                        <div id="pckItemctg">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

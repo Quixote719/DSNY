@@ -1850,7 +1850,7 @@
 			width: 6%;
 			float:left;
 		}
-		.pure-u-md-20-24 {
+		.pure-u-md-20-24, .pure-u-md-21-24 {
 			width: 63%;
 			float:left;
 		}
@@ -1936,7 +1936,7 @@
 		/*border: 1px solid #000;*/
 	}
 	
-	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq1, #btnCancel, #btnStep2, #closeSR, #logOut, #btnNewReq2{
+	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq1, #btnCancel, #btnCancel2, #btnStep2,#btnStep2Reschedule, #closeSR, #btnNewReq2, #reasonCancel,#previousstep2{
 		background-color:#000000; 
 		padding: 0.1em 1em;
 		vertical-align: top; 
@@ -1948,7 +1948,7 @@
 	  background-color: #000000 !important;
 	}
 		
-	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq1:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover, #logOut:hover, #btnNewReq2:hover{
+	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq1:hover, #btnCancel:hover, #btnCancel2:hover, #btnStep2:hover, #btnStep2Reschedule:hover, #closeSR:hover, #btnNewReq2:hover, #reasonCancel:hover,#previousstep2:hover{
 		background-color:#454545 !important; 
 		padding: 0.1em 1em;
 		vertical-align: top; 
@@ -2045,11 +2045,83 @@ input[disabled], input[disabled]:hover{
 .tvSubCtg label{
 	text-transform: none !important;
 }
-
+#discomments {
+		max-width: 850px;
+	}
+	
 @media only screen and (max-width: 767px), screen and (max-device-width: 767px) {
 	.pure-u-9-24 {
 		width: 67.5%;
 	}
+	
+	#discomments {
+		max-width: 270px;
+	}
+	
+}	
+	
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+{
+     #discomments {
+		max-width: 850px !important;
+	 }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+{
+	#discomments {
+		max-width: 650px !important;
+	 }
+}
+
+@media only screen and (min-device-width : 414px) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait)
+{
+	#discomments {
+		max-width: 330px !important;
+	}
+}
+
+@media only screen and (max-device-width : 640px) and (-webkit-device-pixel-ratio: 3) and (orientation : portrait)
+{
+	#discomments {
+		max-width: 290px !important;
+	}
+}
+
+@media only screen and (min-device-width : 360px) and (-webkit-device-pixel-ratio: 3) and (orientation : landscape)
+{
+	#discomments {
+		max-width: 570px !important;
+	}
+}
+
+@media only screen and (min-device-width : 414px) and (-webkit-device-pixel-ratio: 3) and (orientation : landscape)
+{
+	#discomments {
+		max-width: 630px !important;
+	}
+}
+
+
+@media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation : landscape)
+{
+	#discomments {
+		max-width: 570px !important;
+	}
+}
+@media only screen and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation : portrait)
+{
+	#discomments {
+		max-width: 290px !important;
+	}
+}
+
+
+	
+
+
+textarea {
+    max-width: 100%; 
 }
 
 </style>
@@ -2087,7 +2159,7 @@ input[disabled], input[disabled]:hover{
       
 			<div class="container">
 				<h1 style="margin-top:10px;margin-bottom:10px;"><span id="top-header" style="color:#FFFFFF">BULK PICKUP FORM</span>
-				<button type="button" id="logOut" style="margin-top:5px;float:right;display:inline" class="pure-button search-button" tabindex="2">Logout</button>
+				<button type="button" id="logOut" style="margin-top:-5px;float:right;display:inline" class="pure-button search-button" tabindex="2">Logout</button>
 				</h1>
 			</div>
 		
@@ -2131,6 +2203,7 @@ input[disabled], input[disabled]:hover{
 			<input name="Long" id="Long" type="hidden" /> 
 			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
 			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
+			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
 
             <div style="text-align: right; font-size: 12px" id="reqfld">
                 <span class="red">*</span>Denotes required field</div>
@@ -2223,15 +2296,27 @@ input[disabled], input[disabled]:hover{
                         <div class="section">Specific information</div>
                         <div class="table">
                             <div class="pure-u-1 pure-u-md-1-3">
-                                <label for="PICKUP LOCATION">
+                                <label for="PICKUP STREET">
                                     Pick up location<span class="red">*</span></label>
-                                <select name="PICKUP LOCATION" id="lstPickUpLocation" type="select-one" tabindex="14"
+                                <select name="PICKUP STREET" id="lstPickUpLocation" type="select-one" tabindex="14"
                                     disabled>
                                     <option selected="selected" value="">Please select one:</option>
                                     <!-- <option value="1">Center Street</option>
                                     <option value="2">White Street</option> -->
                                 </select>
                             </div>
+							
+							<div class="pure-u-1 pure-u-md-1-3">
+                                <label for="PICKUP LOCATION">
+                                    Location<span class="red">*</span></label>
+                                <select name="PICKUP LOCATION" id="pickupLocations" type="select-one" tabindex="16"
+                                    disabled>
+                                    <option selected="selected" value="">Please select one:</option>
+                                    <!-- <option value="1">Center Street</option>
+                                    <option value="2">White Street</option> -->
+                                </select>
+                            </div>
+							
                             <div class="pure-u-1 pure-u-md-1-3">
                                 <label for="ApptDate">
                                     Appointment Date<span class="red">*</span></label>
@@ -2246,6 +2331,11 @@ input[disabled], input[disabled]:hover{
 								<div class="divlableNote"> (Maximum of 20 items including no more than 5 TVs per request) </div> 
 							</div>-->
 							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
+							</div>
+							
+							<div class="pure-u-1 pure-u-md-1-3-b">
+								<label for="comments">Comments</label>
+								<textarea id="comments" name="comments" maxlength="250" tabindex="47" disabled></textarea>
 							</div>
 							
 							<!--<div style="margin-top:20px; font-weight:bold">Others Items – Considered regular refuse and should be placed out on the next scheduled collection day. No appointments necessary.</div>-->
@@ -2334,9 +2424,14 @@ input[disabled], input[disabled]:hover{
                             </div>
 							<div class="pure-u-1 pure-u-md-24-24">							
                             </div>	 
-                            <div class="pure-u-1 pure-u-md-24-24">
-                                <div class="label">Pick Up Location :</div>
+                           <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Pickup Street:</div>
                                 <div id="disPckLocation" class="data_long">
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Location:</div>
+                                <div id="disLocation" class="data_long">
                                 </div>
                             </div>  
                             <div class="pure-u-1 pure-u-md-24-24">
@@ -2344,20 +2439,24 @@ input[disabled], input[disabled]:hover{
                                 <div id="disApptDate" class="data_long">
                                 </div>
                             </div>
-							<br>
-							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
+							<br><br>
+							<!--<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	-->
 							
-							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Bulk Category: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                               <!--   <div id="displayItem" class="ctglistdiv"></div>  -->
 								<ul id="displayItem" class=leaders>
 								
 								</ul>
                             </div>
-							<!--<br> 
-							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
+							<br><br> 
+							<!--<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                              																
+                            </div>-->
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Comments: </label></div>
+							<div id="discomments" class="pure-u-1 pure-u-md-24-24 data_long">
                             </div>
-							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
+							
+							<!--<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">First Name :</div>
                                 <div id="disfname" class="data_long">
@@ -2379,7 +2478,7 @@ input[disabled], input[disabled]:hover{
                                 </div> 
                             </div> -->                           
                         </div>
-						<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
+						<!--<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
 							
 							<div class="pure-u-1-3">
 									&nbsp;
@@ -2394,9 +2493,18 @@ input[disabled], input[disabled]:hover{
 									&nbsp;
 							</div>
 						
-						</div>
+						</div>-->
                         <br />
                     </div>
+					
+					<div id="step3buttons" class="pure-u-1 pure-u-md-24-24" style="display:none">
+
+						<div class="pure-u-1">
+							<button id="closeSR" class="pure-button next" style="margin-top: 20px; margin-bottom: 8px; float: right; width: 16%" tabindex="51">
+									Close</button>
+						</div>
+
+					</div>
                 
 					
 				</div>
@@ -2435,8 +2543,8 @@ input[disabled], input[disabled]:hover{
 				 <div class="pure-u-1 pure-u-md-1-3-b"> &nbsp;</div>				
                
 				<div> 
-						<!--<button id="previousstep2" class="pure-button next">
-                        &nbsp;<strong>Previous</strong>&nbsp;</button>-->
+						<button id="previousstep2" class="pure-button next">
+                        &nbsp;<strong>Previous</strong>&nbsp;</button>
 						
 						<button id="submitrq" class="pure-button next" style="margin-top: 0px; float: right">
 							Submit</button>
@@ -2456,41 +2564,35 @@ input[disabled], input[disabled]:hover{
 				</div>
 			 </fieldset>
 			 <fieldset class="fieldset6" style="display:none;">
-				<div class="pure-g">  
-                    <div id="subcontainer" class="errormsg" style="text-align:center">  
-						<!--Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.-->
-						Sorry, there already exists a request for this address on the same pick up date. Please setout items at curbside for pickup.
-						
+				<div class="pure-g">
+                    <div id="subcontainer" class="errormsg" style="text-align:center">
+						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+
 					</div>
 					<br>
 					<br>
-					<div id="buttons">
-                    <button id="btnNewReq2" class="pure-button next" style="margin-top: 28px; align: center">
-							Schedule Another Pick Up</button>
-					</div>
-					<!--<br>
-					<br> 
 					<div id="buttons">
                     <button id="btnCancel" class="pure-button next">
                         &nbsp;<strong>Cancel</strong>&nbsp;</button>
                     <button id="btnStep2" class="pure-button next">
                         &nbsp;<strong>Reschedule</strong>&nbsp;</button>
-                </div>-->
+                </div>
 				</div>
 			 </fieldset>
 			 <fieldset class="fieldset7" style="display:none;">
-				<div class="pure-g">  
-                    <div id="subcontainer" class="errormsg" style="text-align:center">  
-						Sorry, there already exists a request for this address on the same pick up date. 
-						
+				<div class="pure-g">
+                    <div id="subcontainer" class="errormsg" style="text-align:center">
+                        A request already exists at the current address on the same date <div id="addrDate"> </div> Please place your items at the designated area or choose a different date to schedule a separate appointment.
+
 					</div>
-						<br>
-					<br> 
+					<br>
+					<br>
 					<div id="buttons">
-					<button id="btnNewReq1" class="pure-button next" style="margin-top: 28px; align: center">
-						Schedule Another Pick Up</button>
-					
-					</div>
+                    <button id="btnCancel2" class="pure-button next">
+                        &nbsp;<strong>Cancel</strong>&nbsp;</button>
+                    <button id="btnStep2Reschedule" class="pure-button next">
+                        &nbsp;<strong>Reschedule</strong>&nbsp;</button>
+                </div>
 				</div>
 			 </fieldset>
             </form>
@@ -2506,11 +2608,61 @@ input[disabled], input[disabled]:hover{
 <script src="/assets/donate/js/moment-2.8.3.js"></script>
 <script type="text/javascript" src="/assets/dsny/js/webforms/es5-shim.min.js"></script>
 <script src="/assets/dsny/js/webforms/bootstrap-datetimepicker.js"></script>
+<!--<script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>-->
 <script src="/assets/dsny/js/webforms/production_staging_config.js" type="text/javascript"></script>
 
 <script type="text/javascript">
- $('body').css('background-color', backgroundcolor);
- 
+ $('body').css('background-color', supervisorbackgroundcolor);
+  var retCode = false;
+ 	
+	//if (!sessionStorage.length && localStorage.getItem('removeSessionStorage') == undefined) {
+	if (!sessionStorage.length) {
+		 // Ask other tabs for session storage
+		 localStorage.setItem('getSessionStorage', Date.now());
+	};
+
+	window.addEventListener('storage', function(event) {
+
+		//console.log('storage event', event);
+
+		if (event.key == 'getSessionStorage') {
+			// Some tab asked for the sessionStorage -> send it
+
+			localStorage.setItem('sessionStorage', JSON.stringify(sessionStorage));
+			localStorage.removeItem('sessionStorage');
+
+		}
+		else if (event.key == 'sessionStorage' && !sessionStorage.length) {
+		//else if (event.key == 'sessionStorage' && !sessionStorage.length && localStorage.getItem('removeSessionStorage') == undefined) {
+			// sessionStorage is empty -> fill it
+
+			var data = JSON.parse(event.newValue);
+
+			for (key in data) {
+				sessionStorage.setItem(key, data[key]);
+			}
+	
+			//showSessionStorage();
+		}
+
+		if (event.key == 'removeSessionStorage') {
+			// Some tab asked for the sessionStorage -> send it
+
+			localStorage.setItem('deletesessionStorage', JSON.stringify(sessionStorage));
+			localStorage.removeItem('deletesessionStorage');
+			localStorage.removeItem('getSessionStorage');
+			//localStorage.clear();
+
+		} else if (event.key == 'deletesessionStorage') {
+			// sessionStorage is empty -> fill it
+
+			sessionStorage.clear();
+			//localStorage.clear();
+
+		}
+	})
+
+
  
  function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
     var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
@@ -2528,6 +2680,23 @@ input[disabled], input[disabled]:hover{
     win.focus();
     return win;
   }
+  
+function loadPikcupLocations()
+{
+	$.ajax({
+		url: APIUrl + '/ePickupsAPI/api/BulkPickups/GetDashboardPickupLocations',
+		type: 'GET',
+		dataType: 'json',
+		success: function (data) {
+			//$("#pickupLocations").append('<option value="">Please select one:</option>');
+			$.each(data, function (i, item) {
+				$("#pickupLocations").append('<option value="' + item.Id + '">' + item.Name + '</option>');
+			});
+			
+			$("#pickupLocations").val("1");
+		}
+	});
+}
 
 function loadCategories()
    {
@@ -2535,7 +2704,7 @@ function loadCategories()
 	var arrCtg = []
 	var ctgcheck=$.ajax({
 			async: false,
-			url: APIUrl + "/BulkAPI/api/bulkpickups/GetItemCategories",
+			url: APIUrl + "/ePickupsAPI/api/BulkPickups/GetItemCategories",
 			type: "GET",
 			dataType: 'json',		
 			crossDomain: true,
@@ -2544,9 +2713,9 @@ function loadCategories()
 				var ctgStr = '';
 				$.each(json, function(key, item) {
 					ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ctgDiv" id="'+item.CategoryId+'">\
-						<div class="pure-u-md-1-24 pure-u-sm-1-24">\
-							<input type="checkbox" disabled id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
-							</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category
+						<div class="pure-u-md-1-24 pure-u-sm-1-24" style="display:none">\
+							<input type="checkbox" disabled style="display:none" checked="checked" id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
+							</div><div class="pure-u-md-21-24 pure-u-sm-21-24">'+ item.DashboardCategory
 						
 						/*if (item.CategoryId == 1){
 							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(350,350,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=1\',\'demo_win\');"><div class="helpicon"></div></a>'
@@ -2612,7 +2781,7 @@ function loadCategories()
 		$.when(ctgcheck).done(function () { 
 			$.each(arrCtg, function(key, item) {
 			var CategoryID = item
-			var SubCategoryURL = APIUrl + '/BulkAPI/api/bulkpickups/GetItemSubCategories?CategoryID='+ CategoryID ;
+			var SubCategoryURL = APIUrl + '/ePickupsAPI/api/BulkPickups/GetItemSubCategories?CategoryID='+ CategoryID ;
 			$.ajax({
 				async: false,
 				url: SubCategoryURL ,
@@ -2621,10 +2790,10 @@ function loadCategories()
 				crossDomain: true,
 				success: function (json) {
 					if (json != undefined){
-					var SubctgStr = '<div class="pure-u-1 pure-u-md-1-3-b tvSubCtg" id="tvSubCategory"  style="display:none" >';
+					var SubctgStr = '<div class="pure-u-1 pure-u-md-1-3-b tvSubCtg" id="tvSubCategory">';
 					$.each(json, function(key, item) {
 						SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b">	<div class="pure-u-md-2-24 pure-u-sm-2-24"> &nbsp;</div><div class="pure-u-md-19-24 pure-u-sm-18-24">\
-									<label for="ELEC-CATEGORY">'+ item.SubCategory +'</label></div><div class="pure-u-md-3-24 pure-u-sm-3-24" id="'+ CategoryID +'" name="'+ item.SubCategoryId+'" >\
+									<label for="ELEC-CATEGORY">'+ item.DashboardSubCategory +'</label></div><div class="pure-u-md-3-24 pure-u-sm-3-24" id="'+ CategoryID +'" name="'+ item.SubCategoryId+'" >\
 											<div class="dec button"><img  src="/assets/dsny/img/icon_minus.png" class="divdecimage "></div>\
 											<input type="text" class="txtValue" name="tvSubCat'+ CategoryID +'" disabled  id="subCategory'+ item.SubCategoryId +'" value="0">\
 											<div class="inc button"><img  src="/assets/dsny/img/icon_plus.png" class="divimage" > </div>\
@@ -2660,13 +2829,23 @@ function loadCategories()
 	}
 
 var reqId = 0;
+var ipAddress = "";
+var userId = "";
 	//jQuery.support.cors = true;
     $(document).ready(function () {
 	  
+	    $.getJSON("https://jsonip.com/?callback=?", function (data) {
+			ipAddress = data.ip;
+		});
+		userId = sessionStorage.getItem("userId");
+		
+		setTimeout(function() {
 		if(sessionStorage.length == 0)
 			window.location.href = '/assets/dsny/contact/services/login.shtml';
+		}, 300)
  
 		loadCategories();
+		loadPikcupLocations();
 		   
 		
 	    //$("#txtboxToFilter").keydown(
@@ -2797,10 +2976,10 @@ var reqId = 0;
 			  {   
 					var TotalValue = 0; 					
 					//$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(index, element){
-						TotalValue = newVal;
+					TotalValue = newVal;
 					//});
 					
-					TotalValue = parseFloat((TotalValue + newVal) - oldValue ); 
+					//TotalValue = parseFloat((TotalValue + newVal) - oldValue ); 
 					
 					if ( TotalValue <= 99){		
 							//$('#Count'+CatID).val(SubCtgTotalValue);
@@ -2813,7 +2992,7 @@ var reqId = 0;
 							$button.parent().find("input").val(1);					
 						}
 						//else if (TotalValue >= 5 && TotalCategory <= 20) {
-						else if (TotalValue >= 99) {
+						else if (TotalValue > 99) {
 							$button.parent().find("input").val(oldValue)
 							//$('#Count'+CatID).val(SubCtgSum);
 							//$('#ctgsum'+CatID).val(SubCtgSum); 						
@@ -2922,6 +3101,12 @@ var reqId = 0;
             onlyOne: true,
             position: 'bottom'
         });
+		$('#msform button').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+		
         $('textarea[maxlength]').keyup(function () {
             var limit = parseInt($(this).attr('maxlength'));
             var text = $(this).val();
@@ -2937,6 +3122,10 @@ var reqId = 0;
         $('#CONTACT-2-ZIP').mask('99999');
         $('#EVENT-START-DATE').mask('99/99/9999');
         $('#EVENT-END-DATE').mask('99/99/9999');
+		
+		$('input[name=houseNumber]').change(function() { retCode = false; });
+		$('input[name=streetName]').change(function() { retCode = false; });
+		$('#boro').on('change', function() { retCode = false; });
 
 		$('#datetimepicker1').bind('cut copy paste', function (e) {
 			e.preventDefault();
@@ -2948,13 +3137,19 @@ var reqId = 0;
 		});
     });
 	
+	$('#nextstep2').hover(function () {
+          $(this).tooltipster('hide');
+     });
+	
 	$(document).click(function() {
 		if($(event.target).closest('.inc').length > 0 || $(event.target).closest('.dec').length > 0 || $(event.target).closest('input[name=tvSubCat]').length > 0  ||  $(event.target).closest('input[name=elecCtgCount]').length > 0 ) {
 			return false;
 		}
 		  
 		$("input[name=elecCtgCount]").tooltipster('hide');  
-		$("input[name^='tvSubCat']").tooltipster('hide');  
+		$("input[name^='tvSubCat']").tooltipster('hide'); 
+		$('#ElecCtg').find('input[type=checkbox]').tooltipster('hide');
+		$('#nextstep2').tooltipster('hide');		
 	});
 </script>
 <script type="text/javascript">
@@ -3051,14 +3246,14 @@ var reqId = 0;
 		$('#divNonDualBin').hide();
 		
         if (validateForm()) {
-            var retCode = false;
+           
             current_fs = $(this).parent().parent();
             next_fs = $(this).parent().parent().next();
             event.preventDefault();
             validateAddress(function (output) {
                 if (output == true) {
                     retCode = true;
-                }
+                
                 if (retCode == true && ($('#results').text().length == 0)) {
 				
 					//$('#ReqHeader').text('Step 2 - Specific Info');
@@ -3093,7 +3288,7 @@ var reqId = 0;
 					/*jQuery.support.cors = true;
 					$.ajax({
 					 type: 'GET',
-					url: APIUrl + '/BulkAPI/api/bulkpickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
+					url: APIUrl + '/ePickupsAPI/api/BulkPickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
 					 crossDomain: true,
 					 dataType: 'json',
 					 async: false,
@@ -3114,6 +3309,7 @@ var reqId = 0;
 							$('#msform input[type="checkbox"]').removeAttr("disabled");
 							
 							$('select').removeAttr("disabled");
+							$('#comments').removeAttr("disabled");
 							
 							$('#slapptdate').attr("required",'true');
 							/*$('#CONTACT-1-FIRST-NAME').attr("required",'true');
@@ -3121,12 +3317,16 @@ var reqId = 0;
 							$('#CONTACT-1-PHONE').attr("required",'true');
 							$('#CONTACT-1-EMAIL').attr("required",'true');
 							$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');*/
-							
+							$('#ElecCtg').find('input[type=text]').removeAttr("disabled");
+							$('#ElecCtg').find('input[type=text]').addClass('disableText');
+							$('#ElecCtg').find('.dec').addClass('decpointer');
+							$('#ElecCtg').find('.inc').addClass('incpointer');  
+							$('#ElecCtg').find('input[type=text]').val(0);
 							
 							$('#datetimepicker1').datetimepicker({
 											debug: true,
+											minDate: new Date(),
 											format: 'MM-DD-YYYY',
-											defaultDate: Date(),
 											widgetPositioning: {
 												horizontal: 'auto',
 												vertical: 'bottom'
@@ -3146,9 +3346,10 @@ var reqId = 0;
 													} 									
 										});
 						
-							
+							$('#datetimepicker1').datetimepicker('show');
+							$('#datetimepicker1').datetimepicker('hide');
 							//var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
-							/*var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
+							/*var getDateUrl = APIUrl + '/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
 							$.ajax({
 								async:false,
 								url: getDateUrl,
@@ -3215,7 +3416,12 @@ var reqId = 0;
 				 }
 			 }); */
 				return false;
-			}
+		   }
+		} 
+		else
+		{
+			disableSpecificInfo();
+		}
 		});
 	 }
 	else {
@@ -3223,6 +3429,56 @@ var reqId = 0;
             return false;
         }
     });
+	
+	 function disableSpecificInfo()
+	{
+  
+  		$('#rdAddress').html('');
+		$('#rdStreet').html('');
+		$('#Step2div').hide();
+		$('#lstPickUpLocation').find('option:gt(0)').remove();
+		$('#lstPickUpLocation').append('');
+		$('#lstPickUpLocation').attr('disabled', 'disabled');
+		$('#pickupLocations').attr('disabled', 'disabled');
+		$('#comments').val('');
+		$('#comments').attr('disabled', 'disabled');
+		if($('#datetimepicker1').data('DateTimePicker')){
+			$('#datetimepicker1').data('DateTimePicker').destroy();
+		}
+		$('#slapptdate').val('');
+		$('#slapptdate').attr('disabled', 'disabled');
+		$('#CONTACT-1-FIRST-NAME').attr('disabled', 'disabled');
+		$('#CONTACT-1-LAST-NAME').attr('disabled', 'disabled');
+		$('#CONTACT-1-PHONE').attr('disabled', 'disabled');
+		$('#CONTACT-1-EMAIL').attr('disabled', 'disabled');
+		$('#CONTACT-CONFRIM-EMAIL').attr('disabled', 'disabled');
+		//$('#msform input[type="checkbox"]').attr('checked', false);
+		$('#ElecCtg input[type="text"]').attr('disabled', 'disabled');
+		$('#msform input[type="checkbox"]').attr('disabled', 'disabled');
+
+				//Subcategory to be unselected & hidden
+				$('#ElecCtg').find('input[type=text]').removeClass("disableText");
+				$('#ElecCtg').find('.dec').removeClass('decpointer');
+				$('#ElecCtg').find('.inc').removeClass('incpointer');
+				$('#ElecCtg').find('input[type=text]').val(0);
+				
+				$('#ElecCtg').find('#tvSubCategory').find('input[name=tvSubCat]').val(0);
+				$('#ElecCtg').find('input[type=hidden]').val(0);
+				//$('#ElecCtg').find('#tvSubCategory').hide();
+				
+		$('#slapptdate').removeAttr("required");
+		$('#CONTACT-1-FIRST-NAME').removeAttr("required");
+		$('#CONTACT-1-LAST-NAME').removeAttr("required");
+		$('#CONTACT-1-PHONE').removeAttr("required");
+		$('#CONTACT-1-EMAIL').removeAttr("required");
+		$('#CONTACT-CONFRIM-EMAIL').removeAttr("required");
+		$('#CONTACT-1-FIRST-NAME').val('');
+		$('#CONTACT-1-LAST-NAME').val('');
+		$('#CONTACT-1-PHONE').val('');
+		$('#CONTACT-1-EMAIL').val('');
+		$('#CONTACT-CONFRIM-EMAIL').val('');
+		
+	}
 	
 	$('#datetimepicker1').on('dp.show', function (e) {
 		$('#datetimepicker1').not(e.target).each(function (index) { $(this).data('DateTimePicker').hide();     });
@@ -3286,7 +3542,7 @@ var reqId = 0;
 						$(firstchk).removeAttr("required");
 						checked = true;
 						
-						CtgVAL = 0;
+						//CtgVAL = 0;
 						
 						 if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
 						 {
@@ -3296,27 +3552,34 @@ var reqId = 0;
 						 }
 						 else
 						 {
-							 CtgVAL = $(item).parent().parent().find('input[type=text]').val();
+							 CtgVAL += $(item).parent().parent().find('input[type=text]').val();
 						 }
 						 
 						 $(item).parent().parent().find('input[type=text]').tooltipster('hide');   
-						if (CtgVAL == 0){
-						  
-							var ctgTextbox = $(item).parent().parent().find('input[type=text]')[0];
-							$(ctgTextbox).addClass("tooltipstered error");
-							$(ctgTextbox).attr("required",'true');
-							$(ctgTextbox).attr("aria-invalid",'true');
-							$(ctgTextbox).attr("aria-required",'true');
-							$(ctgTextbox).tooltipster('update', "Quantity should be greater than zero.");
-							$(ctgTextbox).tooltipster('show'); 
-							$(ctgTextbox).focus();  
-							return false;   
-							//break;  
-						}
+						
 						//break;
-						return true;
+						//return true;
 					}
-		}); 		
+		});
+
+		if (CtgVAL == 0){
+						  
+				var ctgTextbox = $('#ElecCtg').find('input[type=text]')[0];
+				$(ctgTextbox).addClass("tooltipstered error");
+				$(ctgTextbox).attr("required",'true');
+				$(ctgTextbox).attr("aria-invalid",'true');
+				$(ctgTextbox).attr("aria-required",'true');
+				$(ctgTextbox).tooltipster('update', "Quantity should be greater than zero.");
+				$(ctgTextbox).tooltipster('show'); 
+				$(ctgTextbox).focus();  
+				return false;   
+				//break;  
+		}
+		else 		
+		{
+			return true;
+		}
+		
 		if (checked ){
 			
 			if (CtgVAL == 0){
@@ -3343,6 +3606,22 @@ var reqId = 0;
     $("#nextstep3").click(function () {
         current_fs = $(this).parent().parent();
         next_fs = $(this).parent().parent().next();
+		
+		if($("#boro").val() != "" && $("#houseNumber").val() != "" && $("#street").val() != "")
+		{
+			if(!retCode)
+			{
+				$('#nextstep2').addClass("tooltipstered error");
+						//$('#nextstep2').attr("required",'true');
+						//$('#nextstep2').attr("aria-invalid",'true');
+						//$('#nextstep2').attr("aria-required",'true');
+						$('#nextstep2').tooltipster('update', "Please verify the address");
+						$('#nextstep2').tooltipster('show');
+						$('#nextstep2').focus();
+				return false;
+			}
+		}
+		
         //if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
 		if ( validateForm() && ($('#results').text().length == 0) && validateCategory()) {
 		
@@ -3361,7 +3640,9 @@ var reqId = 0;
             //$('#disstreet').text($('#street').val());  
             //$('#disCrsStrt').text();
             $('#disPckLocation').text($("#lstPickUpLocation option:selected").text());
+			$('#disLocation').text($("#pickupLocations option:selected").text());
 			$('#disApptDate').text($('#slapptdate').val()); 
+			$('#discomments').text($('#comments').val()); 
 			$('#displayItem').empty();
 			var arr =  $('#ElecCtg').find('input[type=checkbox]');	 
 			CatgoryList = []; 
@@ -3373,26 +3654,30 @@ var reqId = 0;
 					ctgStr = '';
 					//var CategoryDiv = $(item).parent().parent();
 					var CtgID = $(item).parent().parent()[0].id
-					var Ctgname = $(item).parent().parent().find('.pure-u-md-20-24').html();
+					var Ctgname = $(item).parent().parent().find('.pure-u-md-21-24').html();
 					var CtgVAL = $(item).parent().parent().find('input[type=text]').val();
 					var SubCategoryID = 0;
-					
+					var child = false;
 					
 					//ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">\	<div class="pure-u-md-1-24 pure-u-sm-1-24">\</div><div class="pure-u-md-20-24 pure-u-sm-20-24 ctgName ">'+ Ctgname +'</div><div class="pure-u-md-3-24 pure-u-sm-3-24" >'+ CtgVAL +'</div> </div>'
 					//ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
 					
-					if ($(item).parent().parent().find('#tvSubCategory').length > 0 )
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0)
 					{
-						ctgStr += ' <li> <span>'+ Ctgname +'</span> </li>';
+						//ctgStr += ' <li> <span>'+ Ctgname +'</span> </li>';
 					}
 					else
 					{
-						ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+						if(CtgVAL > 0)
+						{
+							ctgStr += ' <li> <span>'+ Ctgname +'</span>   <span>'+ CtgVAL +'</span>  </li>';
+							$('#displayItem').append(ctgStr); 							
+						}
 					}
 					
 					
-					$('#displayItem').append(ctgStr); 							
-					if ($(item).parent().parent().find('#tvSubCategory').length > 0)	
+					
+					if ($(item).parent().parent().find('#tvSubCategory').length > 0)
 					{
 						 var arrSubCat = $(item).parent().parent().find('#tvSubCategory').find('.pure-u-1')
 					     //$(item).parent().parent().find('#tvSubCategory').find('input[type=text]')
@@ -3400,7 +3685,8 @@ var reqId = 0;
 						 $.each(arrSubCat, function(Subkey, Subitem) {
 							//SubctgStr = '';
 							if ($(Subitem).find('input[type=text]').val() > 0)
-							{				
+							{	
+								child = true;	
 								CtgVAL = $(Subitem).find('input[type=text]').val();
 							    SubCategoryID = $(Subitem).find('.pure-u-md-3-24').attr('name');  
 								//SubctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ">'
@@ -3417,8 +3703,13 @@ var reqId = 0;
 								
 							}
 						 }); 
+						 if(child)
+						 {
+							ctgStr += ' <li> <span>'+ Ctgname +'</span> </li>';
+							$('#displayItem').append(ctgStr);
 							SubctgStr += '</ul>'
-						$('#displayItem').append(SubctgStr);
+							$('#displayItem').append(SubctgStr);
+						}
 					}
 					else{
 						CatgoryList.push({
@@ -3441,6 +3732,7 @@ var reqId = 0;
 			$('#disemail').text($('#CONTACT-1-EMAIL').val());
             //$('#ReqHeader').text('Step 3 - Sumbit');
 			$('#stepmsg').text('Review the form before submitting:');
+			$("#reqfld").hide();
            next_fs.show();
 		   $('#header3').show();
 		    $('#header').hide();
@@ -3466,7 +3758,10 @@ var reqId = 0;
         }
     });
     $("#previousstep2").click(function () {
-        $('.fieldset2').show();
+        $('.fieldset1').show();
+		$('#Step2div').show();
+		$('.fieldset2').show();
+		$("#reqfld").show();
 		$('#ReqHeader').text('Step 2 - Specific Info');
 		$('#stepmsg').text('Your address and recycling day have been verified as:');
         $('#astep3').removeClass('active3');
@@ -3484,21 +3779,8 @@ var reqId = 0;
 	}) ;
 	
 	$("#submitrq").click(function (){		
-		if (!$('#chkTC')[0].checked) 
-		{		
-			$('#chkTC').addClass("tooltipstered error");
-			$('#chkTC').attr("required",'true');
-			$('#chkTC').attr("aria-invalid",'true');
-			$('#chkTC').attr("aria-required",'true');
-			$('#chkTC').tooltipster('update', "Please certify the request.");
-			$('#chkTC').tooltipster('show'); 
-			$('#chkTC').focus(); 			
-			//return false;
-		}
-		else{
-			$("#submitrq").attr('disabled', 'disabled');
-			$('#chkTC').tooltipster('hide'); 		
 		
+			$("#submitrq").attr('disabled', 'disabled');
 		
 			/*var captchaInfo = {
                  challengeValue: $("#recaptcha_challenge_field").val(),
@@ -3516,7 +3798,7 @@ var reqId = 0;
                          //Save user information if captcha is valid
 				 var Requestdata= {
 						RequestId:	reqId,
-						FirstName: '',
+						FirstName: userId,
 						LastName : '',
 						Phone : '',
 						Email : '',
@@ -3527,9 +3809,19 @@ var reqId = 0;
 						AppointmentDate : $('#disApptDate').text(),
 						Source : 'SUPERVISOR',
 						CrossStreets : $('#GEOCrossStreet').val(),
-						PickupRequestItems : CatgoryList
+						PickupRequestItems : CatgoryList,
+						LocationId: $("#pickupLocations option:selected").val(),
+						SectionAndSubsection: $("#SectionAndSubsection").val(),
+						
+						Frequency : $("#RegularCollectionDayNames").val(),
+						Longitude : $("#Long").val(),
+						Latitude : $("#Lat").val(),
+						UserName: userId,
+						IPAddress: ipAddress,
+						Comments: $("#comments").val()/*,
+						LastUpdatedBy: userId*/
 					}		
-					var RequestURL = APIUrl + '/BulkAPI/api/bulkpickups/AddUpdatePickUpRequest';
+					var RequestURL = APIUrl + '/ePickupsAPI/api/BulkPickups/AddUpdatePickUpRequest';
 					$.ajax({
 						async: false,
 						url: RequestURL ,
@@ -3589,7 +3881,7 @@ var reqId = 0;
                  }
              });*/
 			
-		}		
+				
 		return false;
 	});
 	  
@@ -3598,7 +3890,8 @@ var reqId = 0;
 		window.location.href = '/assets/dsny/contact/services/supervisor-bulk-pickup-request.shtml';
 		return false;
 	})
-	$('#btnStep2').click(function(){
+	$('#btnStep2, #btnStep2Reschedule').click(function(){
+		retCode = true;
 		$("#submitrq").removeAttr("disabled");
 		$('.fieldset6').hide();
 		$('.fieldset7').hide(); 
@@ -3621,7 +3914,7 @@ var reqId = 0;
 		var minDate; //moment()//.format("MM-DD-YYYY")
         var MaxDate;//moment().add(21, 'days'); 
 		
-        var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
+        /*var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
                 var getdisDAte =$.ajax({
                     async:false,
                     url: getDateUrl,
@@ -3638,7 +3931,7 @@ var reqId = 0;
 							});*/
 							
 							 
-							$.each(data, function(key, item) {                                     
+							/*$.each(data, function(key, item) {                                     
                                     //var d=moment(item);//.format("MM-DD-YYYY"); 
                                     //disableDT.push(d); 
 									
@@ -3679,7 +3972,32 @@ var reqId = 0;
                             
                         }                        
                     }
-                });
+                }); */
+				
+				$('#datetimepicker1').datetimepicker({
+					debug: true,
+					 minDate: new Date(),
+					format: 'MM-DD-YYYY',
+					widgetPositioning: {
+						horizontal: 'auto',
+						vertical: 'bottom'
+					},                                        
+					keyBinds: {
+								up: null,
+								down: function (widget) {
+											if (!widget) {
+											this.show();
+											return;
+											}
+										},
+								left: null,
+								right: null,
+								t : null,
+								'delete' : null
+							} 									
+				});
+				$('#datetimepicker1').datetimepicker('show');
+				$('#datetimepicker1').datetimepicker('hide');
 		
 		return false;
 		
@@ -3689,6 +4007,7 @@ var reqId = 0;
 	
 	$("#searchSR").click(function (event) {
 			var apptDate ;
+			retCode = true;
 			$("#submitrq").removeAttr("disabled");
 			
 			if( $('#search-input').val() == '' || $('#search-input').val() == 'Search SR#')
@@ -3910,6 +4229,7 @@ var reqId = 0;
 										$('#msform input[type="checkbox"]').removeAttr("disabled");
 										
 										$('select').removeAttr("disabled");
+										$('#comments').removeAttr("disabled");
 										
 										$('#slapptdate').attr("required",'true');
 										$('#CONTACT-1-FIRST-NAME').attr("required",'true');
@@ -4014,6 +4334,7 @@ var reqId = 0;
 	
 	
 	$("#rescheduleSR").click(function () {
+		retCode = true;
 		$("#submitrq").removeAttr("disabled");
 		$('.fieldset1').show();
 		$('.fieldset2').show();
@@ -4064,9 +4385,18 @@ var reqId = 0;
 	});
    
    $("#logOut").click(function () {
-		sessionStorage.removeItem("userId");
-		window.location.href = '/assets/dsny/contact/services/login.shtml';
+		logout();
 	});
+	
+	function logout()
+	{
+		localStorage.setItem('removeSessionStorage', Date.now());
+		localStorage.setItem('deletesessionStorage', JSON.stringify(sessionStorage));
+		localStorage.removeItem('deletesessionStorage');
+		localStorage.removeItem('getSessionStorage');
+		sessionStorage.clear();
+		window.location.href = '/assets/dsny/contact/services/login.shtml';
+	}
 	
 </script>
 <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

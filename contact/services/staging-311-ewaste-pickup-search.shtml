@@ -157,11 +157,6 @@
 									  right : 25.63%
 									}
 
-									body
-									{
-										background-color: #ffcdcb !important;
-									}
-
 									.navbar .alignleftlastcolumn
 									{
 									   right : 0.1%
@@ -1935,7 +1930,7 @@
 		/*border: 1px solid #000;*/
 	}
 
-	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq, #btnCancel, #btnStep2, #closeSR, #confirmCancel{
+	#nextstep2, #nextstep3, #submitrq, #btnNewReq, #cancelSR, #rescheduleSR, #btnNewReq1, #btnCancel, #btnCancel2, #btnStep2, #btnStep2Reschedule, #closeSR, #reasonCancel{
 		background-color:#000000;
 		padding: 0.1em 1em;
 		vertical-align: top;
@@ -1947,7 +1942,7 @@
 	  background-color: #000000 !important;
 	}
 
-	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq:hover, #btnCancel:hover, #btnStep2:hover, #closeSR:hover, #confirmCancel:hover{
+	#nextstep2:hover, #nextstep3:hover, #submitrq:hover, #btnNewReq:hover, #cancelSR:hover, #rescheduleSR:hover, #btnNewReq1:hover, #btnCancel:hover, #btnCancel2:hover, #btnStep2:hover, #btnStep2Reschedule:hover, #closeSR:hover, #reasonCancel:hover{
 		background-color:#454545 !important;
 		padding: 0.1em 1em;
 		vertical-align: top;
@@ -2026,8 +2021,19 @@
 input[disabled], input[disabled]:hover{
   cursor: none;
 }
-
-
+.divlable{
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #333;
+	font-weight: bold;
+	margin: .5em 0 .2em;
+	float:left;
+}
+.divlableNote{
+	font-size: 12px;
+	color: #333;
+	margin: .5em 0 .2em;
+}
 </style>
 
 
@@ -2107,8 +2113,14 @@ input[disabled], input[disabled]:hover{
 			<input name="GEOCrossStreet" id="GEOCrossStreet" type="hidden" />
 			<input name="GEOPickupStreet" id="GEOPickupStreet" type="hidden" />
 			<input name="GEODistrict" id="GEODistrict" type="hidden" />
+			<input name="BBL" id="BBL" type="hidden" />
             <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
             <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
+			<input name="Lat" id="Lat" type="hidden" /> 
+			<input name="Long" id="Long" type="hidden" /> 
+			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
+			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
+			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
 
             <div style="text-align: right; font-size: 12px" id="reqfld">
                 <span class="red">*</span>Denotes required field</div>
@@ -2124,9 +2136,9 @@ input[disabled], input[disabled]:hover{
                                 <select id="boro" name="boroughName" required type="select-one" tabindex="3">
                                     <option selected="selected" value="">Select a borough</option>
                                     <!-- <option value="2">Bronx</option>
-                                    <option value="3">Brooklyn</option>
                                     <option value="1">Manhattan</option>
                                     <option value="4">Queens</option> -->
+                                    <option value="3">Brooklyn</option>
                                     <option value="5">Staten Island</option>
                                 </select>
                             </div>
@@ -2154,6 +2166,15 @@ input[disabled], input[disabled]:hover{
                 </div>
 
             </fieldset>
+			
+			<div class="modal fade alertModal" style="z-index: 99999">
+				<div class="modal-dialog" role="document">
+				  <div class="modal-content AlertContent">
+				  </div>
+				  <!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+		   </div>
 
 			<div id="Step2div" style="display:none" >
                 <!--<p><div id="stepmsg" >
@@ -2202,8 +2223,8 @@ input[disabled], input[disabled]:hover{
                                 </div>
                             </div>
                             <div class="pure-u-1 pure-u-md-1-3-b">
-                                <label for="ELEC-CATEGORY">
-                                    Electronic Category<span class="red">*</span></label>
+                                <div class="divlable">Electronic Category<span class="red">*</span> </div>
+								<div class="divlableNote"> (Maximum of 20 items including no more than 5 TVs per request) </div>
 							</div>
 							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
 							</div>
@@ -2261,24 +2282,17 @@ input[disabled], input[disabled]:hover{
                 <div class="pure-g">
                     <div id="subcontainer" class="sbClass">
                         <div id="step3section" class="section">Review and Submit</div>
-
-						<div id="step3buttons" class="pure-u-1 pure-u-md-24-24" style="display:none">
-
-							<div class="pure-u-1-3">
-				              <button id="cancelSR" class="pure-button next" data-toggle="modal" data-target="#cancelModal" style="margin-top: 8px; margin-left: 10px; float: left" tabindex="49">
-									Cancel Request</button>
+						<div id="step3Header" class="pure-u-1 pure-u-md-24-24" style="display:none; background-color: #686868!important; color: white!important;">
+							<div style="float:left">
+								<div id="disSRNo" style="margin-top: 10px;margin-bottom: 10px;margin-left: 10px;font-size: 18px;"></div>
 							</div>
 
-							<div class="pure-u-1-3">
-								<div id="disSRNo" style="text-align: center; margin-top: 10px"></div>
-							</div>
-
-							<div style="display: inline;" class="pure-u-1-3">
-								<button id="rescheduleSR" class="pure-button next" style="margin-top: 8px; margin-right: 10px; float: right" tabindex="50">
-									Reschedule</button>
+							<div style="float:right">
+								<div id="disStatus" style="margin-top: 10px;margin-right: 10px;">	</div>
 							</div>
 
 						</div>
+
                         <div class="table">
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
                             <div class="pure-u-1 pure-u-md-24-24">
@@ -2337,7 +2351,7 @@ input[disabled], input[disabled]:hover{
                                 </div>
                             </div>
                         </div>
-						<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
+						<!--<div id="step3closebutton" class="pure-u-1 pure-u-md-24-24" style="display:none">
 
 							<div class="pure-u-1-3">
 									&nbsp;
@@ -2352,10 +2366,22 @@ input[disabled], input[disabled]:hover{
 									&nbsp;
 							</div>
 
-						</div>
+						</div>-->
                         <br />
                     </div>
+					
+					<div id="step3buttons" class="pure-u-1 pure-u-md-24-24" style="display:none">
 
+						<div class="pure-u-1">
+							<button id="cancelSR" class="pure-button next" style="margin-top: 20px; float: left" tabindex="49">
+								Cancel Request</button>
+							<button id="rescheduleSR" class="pure-button next" style="margin-top: 20px; margin-right: 10px; margin-left: 20px" tabindex="50">
+								Reschedule</button>
+							<button id="closeSR" class="pure-button next" style="margin-top: 20px; margin-bottom: 8px; float: right; width: 16%" tabindex="51">
+									Close</button>
+						</div>
+
+					</div>
 
 				</div>
                 <br />
@@ -2395,6 +2421,7 @@ input[disabled], input[disabled]:hover{
 				<div>
 						<!--<button id="previousstep2" class="pure-button next">
                         &nbsp;<strong>Previous</strong>&nbsp;</button>-->
+
 						<button id="submitrq" class="pure-button next" style="margin-top: 28px; float: right">
 							Submit</button>
 				</div>
@@ -2403,7 +2430,7 @@ input[disabled], input[disabled]:hover{
 				<div class="pure-g">
                     <div id="subcontainer"   style="text-align:center">
 									Thank you for submitting your E-Waste pick-up request. <br>The Service Request number is <br/><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/> Use this number when you check the status of this request. <br>
-The resident will receive a confirmation email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request please call 311.  <br> <br> <br>
+The resident will receive a confirmation email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request, please call 311.  <br> <br> <br>
 <strong> Where to leave your E-Waste items?  <br>
 Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB. </strong>
 
@@ -2419,7 +2446,7 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 			 <fieldset class="fieldset6" style="display:none;">
 				<div class="pure-g">
                     <div id="subcontainer" class="errormsg" style="text-align:center">
-                        Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
 
 					</div>
 					<br>
@@ -2432,7 +2459,7 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
                 </div>
 				</div>
 			 </fieldset>
-            	 <fieldset class="fieldset7" style="display:none;">
+			 <fieldset class="fieldset7" style="display:none;">
 				<div class="pure-g">
                     <div id="subcontainer" class="errormsg" style="text-align:center">
                         A request already exists at the current address on the same date <div id="addrDate"> </div> Please place your items at the designated area or choose a different date to schedule a separate appointment.
@@ -2441,41 +2468,58 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 					<br>
 					<br>
 					<div id="buttons">
-                    <button id="btnCancel" class="pure-button next">
+                    <button id="btnCancel2" class="pure-button next">
                         &nbsp;<strong>Cancel</strong>&nbsp;</button>
-                    <button id="btnStep2" class="pure-button next">
+                    <button id="btnStep2Reschedule" class="pure-button next">
                         &nbsp;<strong>Reschedule</strong>&nbsp;</button>
                 </div>
 				</div>
 			 </fieldset>
-                <!--vainika -->
-                <br>
-				<br>
-                <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                             <div class="modal-header">
-                                  <p class="modal-title" style="font-weight: bold">Reason for Cancel</p>
-                             </div>
-                             <div class="modal-body js-modalBody">
-															 <select id="ddlReasonCancel" required type="select-one" tabindex="1">
-																	<option selected="selected" value="">Select a reason</option>
-																	<option value="1">Item picked up by others</option>
-																	<option value="2">Decided to keep</option>
-																	<option value="3">Donated</option>
-																	<option value="4">Other</option>
-															</select>
-                                <textarea id="txtReasonCancel" disabled class="form-control" rows="4" cols="50" id="cancelReason"></textarea>
-                            </div>
-                        <div class="modal-footer" style="background-color:white">
-                            <div class="pure-u-1-3">
-				            <button id="reasonCancel" class="pure-button next" data-toggle="modal" data-target="#confirmModal" style="margin-top: 8px; margin-right: 10px; margin-bottom: 8px;">
-									Confirm</button>
-							</div>
-                        </div>
-                        </div>
-                    </div>
-                 </div>
+			 <fieldset class="fieldset8" style="display:none;">
+				<div class="pure-g">
+                    <div id="subcontainer" class="errormsg" style="text-align:center">
+						Request <div id="cancelSRNo" style="display:inline"> </div> has been successfully cancelled.
+
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+						<button id="btnNewReq1" class="pure-button next" style="margin-top: 28px; align: center">
+								Schedule Another Pick Up</button>
+					</div>
+				</div>
+			 </fieldset>
+			 
+			<br>
+			<br>
+			<div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel" aria-hidden="true" style="display:none">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						 <div class="modal-header">
+							  <button type="button" class="close" data-dismiss="modal">&times;</button>
+							  <p class="modal-title" style="font-weight: bold; margin-top: 8px">Reason for Cancel</p>
+						 </div>
+						 <div class="modal-body js-modalBody">
+														 <select id="ddlReasonCancel" required type="select-one" tabindex="1">
+																<option selected="selected" value="">Select a reason</option>
+																<option value="1">Already picked up</option>
+																<option value="2">Decided to keep</option>
+																<option value="3">Donated</option>
+																<option value="4">Other</option>
+														</select>
+							<textarea id="txtReasonCancel" disabled class="form-control" rows="4" cols="50" id="cancelReason" style="width:95.526315789474%"></textarea>
+						</div>
+					<div class="modal-footer" style="background-color:white">
+						<div class="pure-u-1-3">
+						<button id="reasonCancel" class="pure-button next" data-toggle="modal" data-target="#confirmModal" style="margin-top: 8px; margin-right: 10px; margin-bottom: 8px;">
+								Confirm</button>
+						</div>
+					</div>
+					</div>
+				</div>
+			 </div>
+
+			 
             </form>
         </div>
     </div>
@@ -2490,12 +2534,15 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
 <script type="text/javascript" src="/assets/dsny/js/webforms/es5-shim.min.js"></script>
 <script src="/assets/dsny/js/webforms/bootstrap-datetimepicker.js"></script>
 <script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>
+<!--<script src="/assets/dsny/js/webforms/production_staging_config.js" type="text/javascript"></script>-->
 <script type="text/javascript">
-//var APIUrl = 'http://msdwvw-dsndny01.csc.nycnet';
- //var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
-
-
-  function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
+//var APIUrl = 'https://msdwvw-dsndny01.csc.nycnet';
+//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
+ //var APIUrl = 'https://a827-donatenyc.nyc.gov';
+ $('body').css('background-color', backgroundcolor);
+ var retCode = false;
+ 
+ function CenterWindow(windowWidth, windowHeight, windowOuterHeight, url, wname, features) {
     var centerLeft = parseInt((window.screen.availWidth - windowWidth) / 2);
     var centerTop = parseInt(((window.screen.availHeight - windowHeight) / 2) - windowOuterHeight);
 
@@ -2511,7 +2558,6 @@ Place your E-Waste items at the curb for DSNY collection after 4 PM the day befo
     win.focus();
     return win;
   }
-
 
 function loadCategories()
    {
@@ -2530,7 +2576,7 @@ function loadCategories()
 					ctgStr +='<div class="pure-u-1 pure-u-md-1-3-b ctgDiv" id="'+item.CategoryId+'">\
 						<div class="pure-u-md-1-24 pure-u-sm-1-24">\
 							<input type="checkbox" disabled id="chkbox'+ item.CategoryId +'" class="chkCls"/>\
-						</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category
+							</div><div class="pure-u-md-20-24 pure-u-sm-20-24">'+ item.Category
 
 						if (item.CategoryId == 1){
 							ctgStr +='<a href="javascript:void(0)" onclick="CenterWindow(350,350,50,\'/assets/dsny/contact/services/ewastehelp.shtml?id=1\',\'demo_win\');"><div class="helpicon"></div></a>'
@@ -2648,6 +2694,15 @@ var reqId = 0;
     $(document).ready(function () {
 
 		loadCategories();
+		
+		$('#search-input').on('keyup keypress', function(e) {
+		  var keyCode = e.keyCode || e.which;
+		  if (keyCode === 13) { 
+			$("#searchSR").click();
+			return false;
+		  }
+		});
+
 
 	    //$("#txtboxToFilter").keydown(
 		$(document).on("keydown","input:text.txtValue",function (e) {
@@ -2669,18 +2724,15 @@ var reqId = 0;
 	   var sum = 0 ;
 	   //  Textbox change value
 	   $(document).on("change","input:text.txtValue", function() {
-
-		  var $button = $(this);
-		  var TextValue = parseFloat($button.val());
-		  var CatID = $button.parent()[0].id;
-		  var SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;
-
-		  var TotalCategory =  0;
+		    var $button = $(this);
+		    var TextValue = parseFloat($button.val());
+		    var CatID = $button.parent()[0].id;
+		    var SubCtgSum =  parseFloat($('#ctgsum'+CatID).val());
+		    var TotalCategory = 0;
 
 			$button.parent().parent().parent().parent().parent().find('input[name^="elecCtgCount"]').each(function(){
 				TotalCategory += parseFloat(this.value);
 			});
-
 
 			if(($button[0].name == 'tvSubCat'+CatID ) )
 			  {
@@ -2716,7 +2768,7 @@ var reqId = 0;
 						$button.val(0);
 						$('#Count'+CatID).val(SubCtgTotalValue - TextValue);
 						$('#ctgsum'+CatID).val(SubCtgTotalValue - TextValue);
-						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
 						$('#Count'+CatID).tooltipster('show');
 
 					}
@@ -2724,13 +2776,13 @@ var reqId = 0;
 						$button.parent().find("input").val(0)
 						$('#Count'+CatID).val(SubCtgSum);
 						$('#ctgsum'+CatID).val(SubCtgSum);
-						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
 						$('#Count'+CatID).tooltipster('show');
 					}
 			  }
 			  else if (($button[0].name == 'elecCtgCount')  )
 			  {
-			   $button.tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+			   $button.tooltipster('update', "You can not enter more than 20 quantity for this request.");
 				$button.tooltipster('hide');
 
 				if  (TotalCategory <= 20)
@@ -2749,6 +2801,7 @@ var reqId = 0;
 
 	   // Plus and minus quantity.
 	   $(document).on("click","div.button", function() {
+
 		  var $button = $(this);
 		  var oldValue = $button.parent().find("input[type=text]").val();
 		  var CatID = $button.parent()[0].id;
@@ -2771,7 +2824,7 @@ var reqId = 0;
 					TotalCategory += parseFloat(element.value);
 				});
 
-				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+				$button.parent().find("input[name=elecCtgCount]").tooltipster('update', "You can not enter more than 20 quantity for this request.");
 				$button.parent().find("input[name=elecCtgCount]").tooltipster('hide');
 
 				TotalCategory = parseFloat((TotalCategory + newVal) - oldValue );
@@ -2779,9 +2832,8 @@ var reqId = 0;
 				SubCtgSum =  parseFloat($('#ctgsum'+CatID).val()) ;
 			  if(($button.parent().find("input")[0].name == 'tvSubCat'+CatID ))
 			  {
-					$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
+					$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
 					$('#Count'+CatID).tooltipster('hide');
-					//var SubCtgTotalValue = parseFloat((SubCtgSum + newVal) - oldValue ) // Total of individual category.
 					var SubCtgTotalValue = 0;
 
 					// Total of individual TV category
@@ -2792,7 +2844,6 @@ var reqId = 0;
 					SubCtgTotalValue = parseFloat((SubCtgTotalValue + newVal) - oldValue );
 					// Total both TV category
 					var TotalValue = 0;
-					// $button.parent().parent().parent().parent().find('input[name^="tvSubCat"]')
 					$button.parent().parent().parent().parent().parent().find('input[name^="tvSubCat"]').each(function(index, element){
 						TotalValue += parseFloat(element.value);
 					});
@@ -2813,58 +2864,17 @@ var reqId = 0;
 						$button.parent().find("input").val(oldValue)
 						$('#Count'+CatID).val(SubCtgSum);
 						$('#ctgsum'+CatID).val(SubCtgSum);
-						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 5 televisions.");
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 5 quantity for TV.");
 						$('#Count'+CatID).tooltipster('show');
 						//$button.val(0);
 					}
 					else if (TotalCategory >= 20) {
-
 						$button.parent().find("input").val(oldValue)
 						$('#Count'+CatID).val(SubCtgSum);
 						$('#ctgsum'+CatID).val(SubCtgSum);
-						$('#Count'+CatID).tooltipster('update', "You cannot enter more than 20 items (including televisions).");
+						$('#Count'+CatID).tooltipster('update', "You can not enter more than 20 quantity for this request.");
 						$('#Count'+CatID).tooltipster('show');
 					}
-
-					/* *****************
-					if ( TotalValue <= 5){
-
-						$('#Count'+CatID).val(TotalValue);
-						$('#ctgsum'+CatID).val(TotalValue);
-						$button.parent().find("input").val(newVal);
-					}
-					else if (TotalValue <= 0){
-
-						$('#Count'+CatID).val(1);
-						$('#ctgsum'+CatID).val(1);
-						$button.parent().find("input").val(1);
-
-					}
-					else{
-
-						$('#Count'+CatID).val(SubCtgSum);
-						$('#ctgsum'+CatID).val(SubCtgSum);
-						$('#Count'+CatID).tooltipster('show');
-						$button.val(0);
-
-					} ******************  */
-
-
-				    /*SubCtgSum = 0 ;
-				  //$('input[name^="tvSubCat'+CatID+'"]').each(function(){
-					$button.parent().parent().parent().find('input[name^="tvSubCat'+CatID+'"]').each(function(){
-						SubCtgSum += parseFloat(this.value);
-					});
-
-
-
-
-					if (SubCtgSum == 0){
-						SubCtgSum = 1;
-						$button.parent().find("input").val(1);
-					}*/
-
-
 			  }
 			  else if (($button.parent().find("input")[0].name == 'elecCtgCount') )
 			  {
@@ -2877,22 +2887,6 @@ var reqId = 0;
 					$button.parent().find("input[name=elecCtgCount]").tooltipster('show');
 					return false;
 				}
-
-			  /*
-				$button.parent().find("input").tooltipster('hide');
-				if (parseFloat(newVal) <= 20){
-					$button.parent().find("input").val(newVal);
-
-				}
-				else{
-
-					$button.parent().find("input").tooltipster('update', "You can not enter more than 20 quantity for this category.");
-					$button.parent().find("input").tooltipster('show');
-					return false;
-
-				}
-				*/
-
 			  }
 		  }
 		});
@@ -2982,6 +2976,12 @@ var reqId = 0;
             onlyOne: true,
             position: 'bottom'
         });
+		$('#msform button').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+		
         $('textarea[maxlength]').keyup(function () {
             var limit = parseInt($(this).attr('maxlength'));
             var text = $(this).val();
@@ -2997,6 +2997,10 @@ var reqId = 0;
         $('#CONTACT-2-ZIP').mask('99999');
         $('#EVENT-START-DATE').mask('99/99/9999');
         $('#EVENT-END-DATE').mask('99/99/9999');
+		
+		$('input[name=houseNumber]').change(function() { retCode = false; });
+		$('input[name=streetName]').change(function() { retCode = false; });
+		$('#boro').on('change', function() { retCode = false; });
 
 		$('#datetimepicker1').bind('cut copy paste', function (e) {
 			e.preventDefault();
@@ -3007,6 +3011,10 @@ var reqId = 0;
 			return false;
 		});
     });
+	
+	$('#nextstep2').hover(function () {
+          $(this).tooltipster('hide');
+     });
 
 	$(document).click(function() {
 		if($(event.target).closest('.inc').length > 0 || $(event.target).closest('.dec').length > 0 || $(event.target).closest('input[name=tvSubCat]').length > 0  ||  $(event.target).closest('input[name=elecCtgCount]').length > 0 ) {
@@ -3015,6 +3023,8 @@ var reqId = 0;
 
 		$("input[name=elecCtgCount]").tooltipster('hide');
 		$("input[name=tvSubCat]").tooltipster('hide');
+		$('#ddlReasonCancel').tooltipster('hide');
+		$('#nextstep2').tooltipster('hide');
 	});
 </script>
 <script type="text/javascript">
@@ -3090,11 +3100,8 @@ var reqId = 0;
             return true;
         }
     }
+
     $("#nextstep2").click(function (event) {
-		var disableDT = [];
-		var minDate; //moment()//.format("MM-DD-YYYY")
-        var MaxDate; //moment().add(21, 'days');
-        //MaxDate = MaxDate.format("MM-DD-YYYY");
 
 		if($('#datetimepicker1').data('DateTimePicker')){
 			$('#datetimepicker1').data('DateTimePicker').destroy();
@@ -3110,130 +3117,240 @@ var reqId = 0;
 
 
         if (validateForm()) {
-            var retCode = false;
             current_fs = $(this).parent().parent();
             next_fs = $(this).parent().parent().next();
             event.preventDefault();
             validateAddress(function (output) {
                 if (output == true) {
                     retCode = true;
-                }
-                if (retCode == true && ($('#results').text().length == 0)) {
+				
 
-					//$('#ReqHeader').text('Step 2 - Specific Info');
-
-                    var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
-					//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
-					$('#rdAddress').html(fullAddress);
-					$('#rdStreet').html($("#GEOCrossStreet").val());
-					$('#Step2div').show();
-
-					$('#lstPickUpLocation').find('option:gt(0)').remove();
-					$('#lstPickUpLocation').append($("#GEOPickupStreet").val());
-
-					$('#slapptdate').removeAttr("disabled");
-					$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
-					$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
-					$('#CONTACT-1-PHONE').removeAttr("disabled");
-					$('#CONTACT-1-EMAIL').removeAttr("disabled");
-					$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
-					$('#msform input[type="checkbox"]').removeAttr("disabled");
-
-					$('select').removeAttr("disabled");
-
-					$('#slapptdate').attr("required",'true');
-					$('#CONTACT-1-FIRST-NAME').attr("required",'true');
-					$('#CONTACT-1-LAST-NAME').attr("required",'true');
-					$('#CONTACT-1-PHONE').attr("required",'true');
-					$('#CONTACT-1-EMAIL').attr("required",'true');
-					$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
-
-
-					$('select').attr("required",'true');
-
-						$('#msform input[type="checkbox"]').tooltipster({
-							trigger: 'custom',
-							onlyOne: true,
-							position: 'bottom'
-						});
-						$('#msform input[type="text"]').tooltipster({
-							trigger: 'custom',
-							onlyOne: true,
-							position: 'bottom'
-						});
-						$('#msform select').tooltipster({
-							trigger: 'custom',
-							onlyOne: true,
-							position: 'bottom'
-						});
-
-                    //$("#EVENT-LOCATION").val(fullAddress);
-					jQuery.support.cors = true;
-					var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true';
-					$.ajax({
-						async:false,
-						url: getDateUrl,
-						type: "GET",
-						dataType: 'json',
-						crossDomain: true,
-						success: function(data){
-							if (data != undefined)
-                            {
-                                //disableDT = data ;
-								$.each(data, function(key, item) {
-                                    //var d=moment(item);//.format("MM-DD-YYYY");
-                                    //disableDT.push(d);
-
-									var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY");
-									//var d=new Date(item);
-									//d.setDate(d.getDate()+ 1);
-									disableDT.push(d);
-									minDate = item.StartDate;
-									MaxDate = item.EndDate;
-                                });
-
-                                $('#datetimepicker1').datetimepicker({
-                                    debug: true,
-									format: 'MM-DD-YYYY',
-                                    minDate: minDate,
-                                    maxDate : MaxDate,
-                                    widgetPositioning: {
-                                        horizontal: 'auto',
-                                        vertical: 'bottom'
-                                    },
-                                    //daysOfWeekDisabled: [0,6],
-                                    disabledDates: disableDT,
-									keyBinds: {
-											up: null,
-											down: function (widget) {
-														if (!widget) {
-														this.show();
-														return;
-														}
-													},
-											left: null,
-											right: null,
-											t : null,
-											'delete' : null
+					if (($('#results').text().length == 0)) {
+					
+							var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/IsDistrictActive?districtCode='+ $('#GEODistrict').val();
+							var objReturn =$.ajax({
+								async:false,
+								url: getDateUrl,
+								dataType: 'json',
+								crossDomain: true,
+								success: function(data){
+									if (data != undefined)
+									{
+										if (data == false)
+										{
+											showInactiveDistrictResults();
+											disableSpecificInfo();
+											validator.focusInvalid();
+											return false;
 										}
-                                });
-							}
-						}
-					});
+											
+										if($("#BBL").val().length > 0)
+										{
+												//10+ Units Check by calling Pluto Service				
+												var getPlutoURL = 'https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl%3D%27'+ $("#BBL").val() +'%27&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json';
 
-                    //next_fs.show();
-                    //current_fs.hide();
-                    //$('#astep1').removeClass('active1');
-                    //$('#astep2').addClass('active2');
+												var objReturn =$.ajax({
+													async:false,
+													url: getPlutoURL,
+													dataType: 'json',
+													crossDomain: true,
+													success: function(data){
+														if (data != undefined)
+														{
+															console.log(data.features[0].attributes.UnitsRes);
+															//console.log(data[0].UnitsRes);
+															if(data.features[0].attributes.UnitsRes >= 10)
+															{
+																showTenPlusUnitsMessage();
+																disableSpecificInfo();
+																validator.focusInvalid();
+																return false;
+															}
+														}
+														
+														getUnavailableDates();
+
+											}
+										});
+
+										}
+										else
+										{
+											getUnavailableDates();
+										}
+							
+									}
+						}
+					});	
+                }
+                else {
+					
+                    validator.focusInvalid();
                     return false;
                 }
-            });
-        }
-        else {
-            validator.focusInvalid();
-            return false;
-        }
-    });
+            	
+          }
+		  else
+		  {
+			disableSpecificInfo();
+		  }
+		  
+        });
+      }
+  });
+  
+  function disableSpecificInfo()
+  {
+  
+  		$('#rdAddress').html('');
+		$('#rdStreet').html('');
+		$('#Step2div').hide();
+		$('#lstPickUpLocation').find('option:gt(0)').remove();
+		$('#lstPickUpLocation').append('');
+		$('#lstPickUpLocation').attr('disabled', 'disabled');
+		if($('#datetimepicker1').data('DateTimePicker')){
+			$('#datetimepicker1').data('DateTimePicker').destroy();
+		}
+		$('#slapptdate').val('');
+		$('#slapptdate').attr('disabled', 'disabled');
+		$('#CONTACT-1-FIRST-NAME').attr('disabled', 'disabled');
+		$('#CONTACT-1-LAST-NAME').attr('disabled', 'disabled');
+		$('#CONTACT-1-PHONE').attr('disabled', 'disabled');
+		$('#CONTACT-1-EMAIL').attr('disabled', 'disabled');
+		$('#CONTACT-CONFRIM-EMAIL').attr('disabled', 'disabled');
+		$('#msform input[type="checkbox"]').attr('checked', false);
+		$('#ElecCtg input[type="text"]').attr('disabled', 'disabled');
+		$('#msform input[type="checkbox"]').attr('disabled', 'disabled');
+
+				//Subcategory to be unselected & hidden
+				$('#ElecCtg').find('input[type=text]').removeClass("disableText");
+				$('#ElecCtg').find('.dec').removeClass('decpointer');
+				$('#ElecCtg').find('.inc').removeClass('incpointer');
+				$('#ElecCtg').find('input[type=text]').val(0);
+				
+				$('#ElecCtg').find('#tvSubCategory').find('input[name=tvSubCat]').val(0);
+				$('#ElecCtg').find('input[type=hidden]').val(0);
+				$('#ElecCtg').find('#tvSubCategory').hide();
+				
+		$('#slapptdate').removeAttr("required");
+		$('#CONTACT-1-FIRST-NAME').removeAttr("required");
+		$('#CONTACT-1-LAST-NAME').removeAttr("required");
+		$('#CONTACT-1-PHONE').removeAttr("required");
+		$('#CONTACT-1-EMAIL').removeAttr("required");
+		$('#CONTACT-CONFRIM-EMAIL').removeAttr("required");
+		$('#CONTACT-1-FIRST-NAME').val('');
+		$('#CONTACT-1-LAST-NAME').val('');
+		$('#CONTACT-1-PHONE').val('');
+		$('#CONTACT-1-EMAIL').val('');
+		$('#CONTACT-CONFRIM-EMAIL').val('');
+		
+  }  
+  
+   function getUnavailableDates()
+   {
+   		var disableDT = [];
+		var minDate; //moment()//.format("MM-DD-YYYY")
+        var MaxDate; //moment().add(21, 'days');
+        //MaxDate = MaxDate.format("MM-DD-YYYY");
+		
+		
+											
+		var fullAddress = $("#houseNumber").val() + " " + $("#street").val() + " " + $("#GEOcity").val();
+		//+ " " + $("#GEOzipcode").val() + " " + $("#additionalinfo").val();
+
+		$('#rdAddress').html(fullAddress);
+		$('#rdStreet').html($("#GEOCrossStreet").val());
+		$('#Step2div').show();
+		$('#lstPickUpLocation').find('option:gt(0)').remove();
+		$('#lstPickUpLocation').append($("#GEOPickupStreet").val());
+		$('#slapptdate').removeAttr("disabled");
+		$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
+		$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
+		$('#CONTACT-1-PHONE').removeAttr("disabled");
+		$('#CONTACT-1-EMAIL').removeAttr("disabled");
+		$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
+		$('#msform input[type="checkbox"]').removeAttr("disabled");
+		$('select').removeAttr("disabled");
+		$('#slapptdate').attr("required",'true');
+		$('#CONTACT-1-FIRST-NAME').attr("required",'true');
+		$('#CONTACT-1-LAST-NAME').attr("required",'true');
+		$('#CONTACT-1-PHONE').attr("required",'true');
+		$('#CONTACT-1-EMAIL').attr("required",'true');
+		$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
+		$('select').attr("required",'true');
+
+			$('#msform input[type="checkbox"]').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+			$('#msform input[type="text"]').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+			$('#msform select').tooltipster({
+				trigger: 'custom',
+				onlyOne: true,
+				position: 'bottom'
+			});
+
+		  //$("#EVENT-LOCATION").val(fullAddress);
+		jQuery.support.cors = true;
+		var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true';
+		$.ajax({
+			async:false,
+			url: getDateUrl,
+			type: "GET",
+			dataType: 'json',
+			crossDomain: true,
+			success: function(data){
+				if (data != undefined)
+				  {
+					  //disableDT = data ;
+					$.each(data, function(key, item) {
+						  //var d=moment(item);//.format("MM-DD-YYYY");
+						  //disableDT.push(d);
+
+						var d=moment(item.UnavailableDate);//.format("MM-DD-YYYY");
+						//var d=new Date(item);
+						//d.setDate(d.getDate()+ 1);
+						disableDT.push(d);
+						minDate = item.StartDate;
+						MaxDate = item.EndDate;
+					  });
+
+					  $('#datetimepicker1').datetimepicker({
+						  debug: true,
+						format: 'MM-DD-YYYY',
+						  minDate: minDate,
+						  maxDate : MaxDate,
+						  widgetPositioning: {
+							  horizontal: 'auto',
+							  vertical: 'bottom'
+						  },
+						  //daysOfWeekDisabled: [0,6],
+						  disabledDates: disableDT,
+						keyBinds: {
+									up: null,
+									down: function (widget) {
+												if (!widget) {
+												this.show();
+												return;
+												}
+											},
+									left: null,
+									right: null,
+									t : null,
+									'delete' : null
+								}
+					  });
+				}
+			}
+		});
+return false;
+   
+   }
 
 	$('#datetimepicker1').on('dp.show', function (e) {
 		$('#datetimepicker1').not(e.target).each(function (index) { $(this).data('DateTimePicker').hide();     });
@@ -3340,9 +3457,24 @@ var reqId = 0;
 
 	}
     $("#nextstep3").click(function () {
-
-		current_fs = $(this).parent().parent();
+        current_fs = $(this).parent().parent();
         next_fs = $(this).parent().parent().next();
+		
+		if($("#boro").val() != "" && $("#houseNumber").val() != "" && $("#street").val() != "")
+		{
+			if(!retCode)
+			{
+				$('#nextstep2').addClass("tooltipstered error");
+						//$('#nextstep2').attr("required",'true');
+						//$('#nextstep2').attr("aria-invalid",'true');
+						//$('#nextstep2').attr("aria-required",'true');
+						$('#nextstep2').tooltipster('update', "Please verify the address");
+						$('#nextstep2').tooltipster('show');
+						$('#nextstep2').focus();
+				return false;
+			}
+		}
+		
         if ( validateForm() && ($('#results').text().length == 0) && validateCategory() && isValidEmailAddress($('#CONTACT-1-EMAIL')) && isValidEmailAddress($("#CONTACT-CONFRIM-EMAIL"))) {
 
 			if ($('#CONTACT-1-EMAIL').val() != $("#CONTACT-CONFRIM-EMAIL").val()){
@@ -3373,7 +3505,6 @@ var reqId = 0;
 					//var CategoryDiv = $(item).parent().parent();
 					var CtgID = $(item).parent().parent()[0].id
 					var Ctgname = $(item).parent().parent().find('.pure-u-md-20-24').html();
-
 					var CtgVAL = $(item).parent().parent().find('input[type=text]').val();
 					var SubCategoryID = 0;
 
@@ -3440,6 +3571,7 @@ var reqId = 0;
 			$('.fieldset3').show();
             $('.fieldset4').show();
 			$('#step3section').show();
+			$('#step3Header').hide();
 			$('#step3buttons').hide();
 			$('#step3closebutton').hide();
 			$('.helpicon').hide();
@@ -3473,7 +3605,6 @@ var reqId = 0;
 	}) ;
 
 	$("#submitrq").click(function (){
-
 		if (!$('#chkTC')[0].checked)
 		{
 			$('#chkTC').addClass("tooltipstered error");
@@ -3486,7 +3617,6 @@ var reqId = 0;
 			//return false;
 		}
 		else{
-
 			$("#submitrq").attr('disabled', 'disabled');
 			$('#chkTC').tooltipster('hide');
 
@@ -3518,7 +3648,8 @@ var reqId = 0;
 						AppointmentDate : $('#disApptDate').text(),
 						Source : '311',
 						CrossStreets : $('#GEOCrossStreet').val(),
-						PickupRequestItems : CatgoryList
+						PickupRequestItems : CatgoryList,
+						UserName : '311'
 					}
 					var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
 					$.ajax({
@@ -3535,7 +3666,7 @@ var reqId = 0;
 								$('.fieldset4').hide();
 								$('.fieldset3').hide();
 								$('#header3').hide();
-							 /* if (json.length == 0){
+							  /*if (json.length == 0){
 								$('#ReqHeader').text('Step 4 - Confirmation');
 								$('#stepmsg').hide();
 								$('.fieldset5').show();
@@ -3546,12 +3677,12 @@ var reqId = 0;
 								$('.fieldset6').show();
 							  }*/
 
-							   if (json.toUpperCase() == 'NOT AVAILABLE'){
-
+							  if (json.toUpperCase() == 'NOT AVAILABLE'){
 								$('#errorDate').text($('#disApptDate').text());
 								$('.fieldset6').show();
 							  }
-                              else if (json.toUpperCase() == 'DUPLICATE ADDRESS'){
+							  else if (json.toUpperCase() == 'DUPLICATE ADDRESS'){
+                                //$('#ReqHeader').text('Step 4 - Confirmation');
 								$('#addrDate').text($('#disApptDate').text());
 								$('.fieldset7').show();
 							  }
@@ -3584,21 +3715,26 @@ var reqId = 0;
 		return false;
 	});
 
-	$('#btnNewReq').click(function (){
+	$('#btnNewReq, #btnNewReq1').click(function (){
 		//location.reload();
 		window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
 		return false;
 	})
-	$('#btnStep2').click(function(){
+	$('#btnStep2, #btnStep2Reschedule').click(function(){
+		retCode = true;
 		$("#submitrq").removeAttr("disabled");
 		$('.fieldset6').hide();
-        $('.fieldset7').hide();
+		$('.fieldset7').hide();
 		$('.fieldset1').show();
 		$('.fieldset2').show();
 		$('#header').show();
 		$('#header2').show();
 		$('#Step2div').show();
 		$('.fieldset3').hide();
+		$("#boro").attr('disabled','disabled');
+		$("#houseNumber").attr('disabled','disabled');
+		$("#street").attr('disabled','disabled');
+		$("#nextstep2").attr('disabled','disabled');
 
 
 		$('#datetimepicker1').data('DateTimePicker').destroy();
@@ -3650,21 +3786,21 @@ var reqId = 0;
                                     horizontal: 'auto',
                                     vertical: 'bottom'
                                 },
-                                //daysOfWeekDisabled: [0, 6],
+                                //daysOfWeekDisabled: [0,6],
                                 disabledDates: disableDT,
-								keyBinds:{
-											up: null,
-											down: function (widget) {
-														if (!widget) {
-														this.show();
-														return;
-														}
-													},
-											left: null,
-											right: null,
-											t : null,
-											'delete' : null
-										}
+								keyBinds: {
+										up: null,
+										down: function (widget) {
+													if (!widget) {
+													this.show();
+													return;
+													}
+												},
+										left: null,
+										right: null,
+										t : null,
+										'delete' : null
+									}
                             });
                             //$('#datetimepicker1').datetimepicker('update');
 
@@ -3674,13 +3810,14 @@ var reqId = 0;
 
 		return false;
 
+
+
 	});
 
 	$("#searchSR").click(function (event) {
 			var apptDate ;
-
+			retCode = true;
 			$("#submitrq").removeAttr("disabled");
-			$("#submitrq").prop("disabled", false);
 
 			if( $('#search-input').val() == '' || $('#search-input').val() == 'Search SR#')
 			{
@@ -3724,17 +3861,18 @@ var reqId = 0;
 						$('.fieldset2').hide();
 						$('.fieldset5').hide();
 						$('.fieldset6').hide();
-                        $('.fieldset7').hide();
 						 $('#header').hide();
 						$('#header2').hide();
 						$('.fieldset3').show();
 						$('#step3section').hide();
 						$('#Step2div').hide();
+						$('#step3Header').show();
 						$('#step3buttons').show();
 						$('#step3closebutton').show();
 
 						$('#currentAppDate').show();
 						$('#disSRNo').text(data.SRNumber);
+						$('#disStatus').text("Status: " + data.Status);
 						data.CanCancel == 0 ? $('#cancelSR').hide() : $('#cancelSR').show();
 						data.CanReschedule == 0 ? $('#rescheduleSR').hide() : $('#rescheduleSR').show();
 
@@ -3864,7 +4002,21 @@ var reqId = 0;
 					}
 
 					else{
-						alert("Please enter a valid service request number");
+						
+						var duplicateaddress = '<div class="modal-header" style="color:white;background-color:#D0021B;height:30px;padding:3px; margin:0px">\
+							<b style="margin-left:10px;">Error</b>\
+							 </div>\
+								<div class="modal-body" style="height:70px;">\
+									<p>You have entered an invalid Service Request No.(SR#). Please check and resubmit.\n Please verify that you are entering an e-Waste Request Number e.g. 2017<b>EW</b>XXXXXXX</p>\
+									 </div>\
+								<div class="modal-footer" style="height:30px;border:0px;">\
+							 <button type="button" style="color:white;background-color:grey; width:100px;" class="btn dismissAlert" data-dismiss="modal">OK</button>\
+							</div>'
+								$('.AlertContent').html(duplicateaddress);
+								$('.alertModal').modal('show');
+						return false;
+					//alert("You have entered an invalid Service Request No.(SR#). Please check and resubmit.\n Please verify that you are entering a Bulk Request Number e.g. 2017BPXXXXXXX");
+					
 					}
 
 					if (validateForm()) {
@@ -4000,8 +4152,8 @@ var reqId = 0;
 
 
 	$("#rescheduleSR").click(function () {
+		retCode = true;
 		$("#submitrq").removeAttr("disabled");
-
 		$('.fieldset1').show();
 		$('.fieldset2').show();
 		$('.helpicon').show();
@@ -4009,12 +4161,52 @@ var reqId = 0;
 		$('#header2').show();
 		$('#Step2div').show();
 		$('.fieldset3').hide();
+		$('.fieldset4').hide();
+    $(".fieldset1").attr('disabled','disabled');
+    //$("#nextstep2").hide();
+		$("#boro").attr('disabled','disabled');
+		$("#houseNumber").attr('disabled','disabled');
+		$("#street").attr('disabled','disabled');
+		$("#nextstep2").attr('disabled','disabled');
+	
 
 		return false;
     });
 
-	$("#cancelSR").click(function () {
+	/*$("#cancelSR").click(function () {
 
+		var txt;
+		var r = confirm("Do you want to cancel this service request?");
+		if (r == true) {
+
+			jQuery.support.cors = true;
+			var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled';
+			$.ajax({
+				async:false,
+				url: getDateUrl,
+				type: "GET",
+				dataType: 'json',
+				crossDomain: true,
+				success: function(data){
+					if (data != undefined)
+					{
+						$("#search-input").val('');
+						window.location.href = '/assets/dsny/contact/services/311-ewaste-pickup-search.shtml';
+					}
+				}
+			});
+
+
+		} else {
+			//return false;
+		}
+
+		return false;
+    }); */
+	
+	$("#cancelSR").click(function () {
+		
+		$('#cancelModal').attr("style","display:block");
         $('#cancelModal').modal();
     //     var txt;
     //     var r = confirm("Do you want to cancel this service request?");
@@ -4045,11 +4237,15 @@ var reqId = 0;
 		return false;
     });
 
-		$('#ddlReasonCancel').change(function(){
-				$("#txtReasonCancel").prop("disabled", !($(this).val() == 4));
-		});
+	$('#ddlReasonCancel').change(function(){
+			$("#txtReasonCancel").prop("disabled", !($(this).val() == 4));
+			
+			if($(this).val() > 0)
+				$('#ddlReasonCancel').tooltipster('hide');
+				
+	});
 
-		$("#reasonCancel").click(function (){
+	$("#reasonCancel").click(function (){
 
 		jQuery.support.cors = true;
 		// var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest?RequestId='+ reqId +  '&Status=Request Cancelled&ReasonType=' + $("#ddlReasonCancel").val() + '&Comments=' + $("#txtReasonCancel").val();
@@ -4062,38 +4258,76 @@ var reqId = 0;
 		// 	success: function(data){
 		// 		if (data != undefined)
 
-var Requestdata= {
-	 strRequestId:	reqId,
-	 Status: "Request Cancelled" ,
-	 Comments : $('#txtReasonCancel').text(),
-	 ReasonType :$('#ddlReasonCancel').text()
- }
+		if($('#ddlReasonCancel').val() == 0)
+		{ 
+			$('#ddlReasonCancel').addClass("tooltipstered error");
+			$('#ddlReasonCancel').attr("required",'true');
+			$('#ddlReasonCancel').attr("aria-invalid",'true');
+			$('#ddlReasonCancel').attr("aria-required",'true');
+			$('#ddlReasonCancel').tooltipster('update', "Please select a reason for cancellation");
+			$('#ddlReasonCancel').tooltipster('show');
+			$('#ddlReasonCancel').focus();
+			return false;
+		}
+		else
+		{
+			$('#ddlReasonCancel').tooltipster('hide');
+		}
+		
+			var Requestdata= {
+				 strRequestId:	reqId,
+				 Status: "Request Cancelled" ,
+				 Comments : $('#txtReasonCancel').val(),
+				 ReasonType :$('#ddlReasonCancel option:selected').text(),
+				 UserName : "311"
+			 }
 
- var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest';
-$.ajax({
-	async: false,
-	url: getDateUrl ,
-	data: Requestdata,
-	type: "POST",
-	dataType: 'json',
-	crossDomain: true,
-	success: function (json) {
-				{
-					$("#search-input").val('');
-					window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
-				}
-			}
-		});
+			 var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/CancelPickupRequest';
+			$.ajax({
+				async: false,
+				url: getDateUrl ,
+				data: Requestdata,
+				type: "POST",
+				dataType: 'json',
+				crossDomain: true,
+				success: function (json) {
+							{
+								$("#search-input").val('');
+								//window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
+								$('#cancelModal').modal('hide');
+								$('#ReqHeader').text('Cancellation Confirmation');
+								$('#cancelSRNo').text($('#search-input').val());
+								$("#search-input").val('');
+								$('#reqfld').hide();  
+								$('.fieldset4').hide();
+								$('.fieldset3').hide();
+								$('#header3').hide();
+								$('.fieldset8').show();
+							}
+						}
+					});
 
 		return false;
-		});
+	});
 
+	
 
 	$("#closeSR").click(function () {
 		$("#search-input").val('');
 		window.location.href = '/assets/dsny/contact/services/staging-311-ewaste-pickup-search.shtml';
 	});
 
+  function showInactiveDistrictResults() {
+      var msg = "<h4 style='font-size:15px !important'>The resident resides at an address that is currently not enrolled in the e-waste pilot. Please direct them to check <a href='http://www1.nyc.gov/site/dsny/index.page'>nyc.gov/dsny</a> for updates to the program ";
+          msg += "</p>";
+      showMessage(msg);
+  };
+  
+ function showTenPlusUnitsMessage() {
+      var msg = "<h4 style='font-size:15px !important'>The resident resides in a building greater than 10 units. Please direct them to place items in the area designated by their building manager / superintendent";
+          msg += "</p>";
+      showMessage(msg);
+  };
 
 </script>
 <!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->

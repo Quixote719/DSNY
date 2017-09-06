@@ -266,9 +266,9 @@
 			
 			<fieldset class="fieldsetsr">
                 <div class="pure-g"> 
-                    <div id="subcontainer" class="sbClass">  
-                        <div class="section" id="dvTitle">Review and Submit </div>
-                        <div class="table">
+                    <div id="subcontainer" class="sbClass">
+						<div class="section"><span id="dvTitle">Review and Submit</span> <span id="dvStatus" style="float: right; margin-right:10px;"> </span></div>					
+						<div class="table">
 							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
                             <div class="pure-u-1 pure-u-md-24-24">
                                 <div class="label">Address :</div>
@@ -295,7 +295,7 @@
                             </div>	
 							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
 							
-							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div style="font-weight:bold" class="pure-u-1 pure-u-md-24-24 clsTitle categoryName"><label>Electronic Category: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                                 <!-- <div id="displayItem" class="ctglistdiv">			</div>  -->
 								<ul id="displayItem" class=leaders>
@@ -345,11 +345,11 @@
 <script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
 <script src="/assets/donate/js/bootstrap.min.js"></script>
+<!--<script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>-->
 <script src="/assets/dsny/js/webforms/production_staging_config.js" type="text/javascript"></script>
 <script type="text/javascript">
 	//jQuery.support.cors = true;
 	//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
-	$('body').css('background-color', backgroundcolor);
 	
     $(document).ready(function () {
 	 
@@ -438,7 +438,7 @@
 				$.ajax({
 				async: false,
 				//url:   APIUrl + "/ePickupsAPI/api/PickupRequest/GetPickUpRequest?SRNumber="+ $('#txtSR').val(),
-				url: APIUrl + '/BulkAPI/api/PickupRequest/SearchPickUpRequest?SRNumber='+ $('#txtSR').val(),
+				url: APIUrl + '/ePickupsApi/api/PickupRequest/SearchPickUpRequest?SRNumber='+ $('#txtSR').val(),
 				type: "GET",
 				dataType: 'json',	
 				crossDomain: true,
@@ -446,7 +446,8 @@
 					if ( data != undefined){										
 						if (data.RequestId > 0) {										
 							$('.fieldsetsr').show();
-							$('#dvTitle').text('SR#  '+ $('#txtSR').val() + ':  ' + data.Status )
+							$('#dvTitle').text('SR#  '+ $('#txtSR').val() )
+							$('#dvStatus').text('Status: ' + data.Status) 
 							var strAddress =  data.BuildingNumber + ' ' + data.Street + ', ' + data.Borough
 							$('#disaddress').html(strAddress);
 							$('#disCrsStrt').text(data.CrossStreets);							
@@ -455,9 +456,15 @@
 							$('#displayItem').empty(); 
 							
 							if ($('#txtSR').val().indexOf('EW') >= 0)
+							{
 								$("#call311").show();
+								$(".categoryName").text("Electronic Category:");
+							}
 							else
+							{
 								$("#call311").hide();
+								$(".categoryName").text("Bulk Category:");
+							}
 							
 							if (data.PickupRequestItems != undefined){	 													
 								var arr =  data.PickupRequestItems;	 

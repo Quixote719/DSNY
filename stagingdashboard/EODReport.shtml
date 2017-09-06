@@ -10,15 +10,16 @@
 	<link rel="stylesheet" href="/assets/dsny/stagingdashboard/includes/css/application.css">
     <style type="text/css">
 		@page { margin: 0; }
-		
+
 		@media print {
-			@page { margin: 0;  size: landscape; font-size:24px;}
-			body { margin: 0.6cm;font-size:24px; font-family:Calibri}
+			@page { margin: 0;  size: landscape; font-size:11px !Important;}
+			body { margin: 0.1cm;font-size:11px !Important; font-family: Calibri, sans-serif;width:98%; max-width: 100%;}
 		}
 
         body {
             max-width: 100%;
-            font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+            /*font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;*/
+            font-family: Calibri, sans-serif;
             font-weight: 300;
         }
 
@@ -27,23 +28,23 @@
             padding: 0px 15px;
         }
 
-        table 
-        {         
+        table
+        {
             padding: 0px;
             margin: 0px;
 			height: 0px !important
         }
-   
+
         .border{
             border:2px solid #cbcbcb;
             padding: 0px 15px;
             background-color:white;
-        } 
+        }
 
         .bold{
             font-weight:bold;
         }
-        
+
         .gray{
             background-color:#dbdbdb !important;
         }
@@ -63,15 +64,15 @@
         }
 
     </style>
-	<script type="text/javascript"> 
-		
-        if (location.href.indexOf("https://") == -1) { 
-            location.href = location.href.replace("http://", "https://"); 
-        } 
-		
+	<script type="text/javascript">
+
+        if (location.href.indexOf("https://") == -1) {
+            location.href = location.href.replace("http://", "https://");
+        }
+
 	</script>
 </head>
-<body style="-webkit-print-color-adjust: exact;font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:20px;" >
+<body style="-webkit-print-color-adjust: exact;font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size:15px;" >
     <nav class="navbar navbar-full bgcolor">
         <div class="navbar-brand navbar-margin">
             <div class="navbar-div">
@@ -86,14 +87,14 @@
             <button class="btn logoutButton" type="submit">Logout</button>
         </form>
     </nav>
-    <div class="container-fluid FirstRow" style="width:90%">
+    <div class="container-fluid FirstRow" style="width:95%">
         <div class="divPrint" style="text-align:center">
             <table id="tblReport">
                 <tr>
                     <td>
                         <table style="padding:0px;">
-                            <th style="font-size:12pt; font-color:#4A4A4A; line-height:26px; padding-top: 20px; padding-bottom: 10px; font-weight:bold"> <b>EOD Report: </b> <label id='lblDate' for="ScheduledDate"></label> </th>
-                            <th style="font-size:12pt; font-color:#4A4A4A; line-height:26px; padding-top: 20px; padding-bottom: 10px; text-align:right;"><span id="printlink"><i class="fa fa-print" style="color:&#xf02f"></i> <a id="btnprint" href="" style="color: #006646; text-decoration: underline"> Print this page</a></span></th>
+                            <th style="font-size:12pt; font-color:#4A4A4A; line-height:26px; padding-top: 10px; padding-bottom: 10px; font-weight:bold"> <b>EOD Report: </b> <label id='lblDate' for="ScheduledDate"></label> </th>
+                            <th style="font-size:12pt; font-color:#4A4A4A; line-height:26px; padding-top: 10px; padding-bottom: 10px; text-align:right;"><span id="printlink"><i class="fa fa-print" style="color:&#xf02f"></i> <a id="btnprint" href="" style="color: #006646; text-decoration: underline"> Print this page</a></span></th>
                         </table>
                     </td>
                 </tr>
@@ -102,7 +103,7 @@
     </div>
 
     <div id="Injected">        </div>
-    
+
 
 
 
@@ -162,11 +163,9 @@
                         <div class="col-sm-6 comments">Comments</div>
                     </div>
                 </div>
-         
+
         </div>
     </div>-->
-
-
 
         <!-- jQuery first, then Tether, then Bootstrap JS.-->
         <script src="/assets/dsny/stagingdashboard/includes/js/jquery.min.js"></script>
@@ -193,7 +192,7 @@
                 $("#printlink").show();
                 $("#lblDate").text(SearchDate);
 
-                var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetEndOfDayEquipmentReportAbbr?searchDate=' + SearchDate;
+                var RequestUrl = APIUrl + '/ePickupsAPI/api/Dashboard/GetEndOfDayEquipmentReportAbbr?searchDate=' + SearchDate + '&borough=' + Borough;
                 $.ajax({
                     async: false,
                     url: RequestUrl,
@@ -201,9 +200,13 @@
                     dataType: 'json',
                     crossDomain: true,
                     success: function (data) {
+                        if(data.length == 0)
+                        {
+                            $("#Injected").append('<div class="container-fluid" style="width:95%;color:red;">There is no available data for the selected parameters</div>');
+                        }
                         $.each(data, function (i, item) {
 
-                            var reportFull = '   <div class="container-fluid " style="width:90%; padding:10px 10px;">';
+                            var reportFull = '   <div class="container-fluid " style="width:95%; padding:5px 5px;">';
 
                             var struct = '<div id="divborder" >'
                                         + '<div class="gap">'

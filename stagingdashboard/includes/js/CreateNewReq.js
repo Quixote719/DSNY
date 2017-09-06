@@ -1,5 +1,6 @@
+var retCode = false;
 
-// Intiate ToolTipster. 
+// Intiate ToolTipster.
   $(document).ready(function () {
 
         $('#msform input[type="text"]').tooltipster({
@@ -17,6 +18,12 @@
             onlyOne: true,
             position: 'bottom'
         });
+		$('#msform button').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+		
 		$('#CONTACT-1-PHONE').mask("(999) 999-9999");
 
          if ($("#boro").attr("type") != "select a borough"){
@@ -28,8 +35,25 @@
           if ($("#houseNumber").val() != "" ){
            $("#houseNumber").tooltipster('hide');
           }
+		 
+		 $('input[name=houseNumber]').change(function() { retCode = false; });
+		 $('input[name=streetName]').change(function() { retCode = false; });
+		 $('#boro').on('change', function() { retCode = false; });		 
 
      });
+	 
+	 $(document).click(function() {
+		$('#nextstep2').tooltipster('hide');
+	 });
+	 
+	 $('#nextstep2').hover(function () {
+          $(this).tooltipster('hide');
+     });
+	 
+	 $('#AddOnModal').on('hidden.bs.modal', function () {
+	  // do something…
+	  $('.alertModal').modal('hide');
+	})
 
 // Validate the required field
  var validator;
@@ -111,15 +135,15 @@
 		$('#street').attr("required",'true');
 
 		$('#Step2div').hide();
-		$('#CONTACT-1-FIRST-NAME').val("");
+		$('#CONTACT-1-FIRST-NAME').val(sessionStorage.getItem("userId"));
 		$('#CONTACT-1-LAST-NAME').val("");
 		$('#CONTACT-1-PHONE').val("");
 		$('#CONTACT-1-EMAIL').val("");
 
-		$('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
-		$('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
-		$('#CONTACT-1-PHONE').attr("disabled","disabled");
-		$('#CONTACT-1-EMAIL').attr("disabled","disabled");
+		// $('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
+		// $('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
+		// $('#CONTACT-1-PHONE').attr("disabled","disabled");
+		// $('#CONTACT-1-EMAIL').attr("disabled","disabled");
 
 		var d = new Date();
 		var month = d.getMonth()+1;
@@ -131,9 +155,9 @@
 		Add_New_Task_ItemCategories();
 		 $('#AddOnModal').modal('show');
 		return false;
-	});	
-	
-	
+	});
+
+
 	 var Add_New_Task_ItemCategories = function () {
         $('#NewRequestItemSubCtegory').empty();
         $('#SubCateogry_items').empty();
@@ -238,13 +262,13 @@
 		});
 	}
 
-// Button click to validate the address 
+// Button click to validate the address
 $("#nextstep2").click(function (event) {
 		var disableDT = [];
 		var minDate = moment()//.format("MM-DD-YYYY")
         var MaxDate = moment().add(14, 'days');
         //MaxDate = MaxDate.format("MM-DD-YYYY");
-    
+
 
 		$('#msform input[type="text"]').removeAttr("required");
         $('#msform select').removeAttr("required");
@@ -256,10 +280,10 @@ $("#nextstep2").click(function (event) {
 
 		$('#Step2div').hide();
 
-		$('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
-		$('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
-		$('#CONTACT-1-PHONE').attr("disabled","disabled");
-		$('#CONTACT-1-EMAIL').attr("disabled","disabled");
+		// $('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
+		// $('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
+		// $('#CONTACT-1-PHONE').attr("disabled","disabled");
+		// $('#CONTACT-1-EMAIL').attr("disabled","disabled");
 		var d = new Date();
 
 		var month = d.getMonth()+1;
@@ -272,13 +296,36 @@ $("#nextstep2").click(function (event) {
 
 
        if (validateForm()) {
-            var retCode = false;
+            //var retCode = false;
             current_fs = $(this).parent().parent();
             next_fs = $(this).parent().parent().next();
             event.preventDefault();
             validateAddress(function (output) {
                 if (output == true) {
                     retCode = true;
+                    //new3 code
+                    var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/IsDistrictActive?districtCode='+ $('#GEODistrict').val();
+            				var objReturn =$.ajax({
+            					async:false,
+            					url: getDateUrl,
+            					dataType: 'json',
+            					crossDomain: true,
+            					success: function(data){
+            						if (data != undefined)
+            						{
+            							if (data == false)
+            							{
+            								//showInactiveDistrictResults();
+                            var Errmsg = "<h4 style='font-size:15px !important'><span style='color:red'>This address is currently not enrolled in the e-waste pilot.</span></h4>";
+                            //<h4 style='font-size:15px !important'>
+                            $("#results").html(Errmsg);
+            								validator.focusInvalid();
+            								return false;
+            							}
+            						}
+                      }
+                    });
+                    //new3 code
                 }else{
                  $('#Step2div').hide();
                 }
@@ -298,21 +345,21 @@ $("#nextstep2").click(function (event) {
 					$('#lstPickUpLocation').append($("#GEOPickupStreet").val());
 
 					$('#slapptdate').removeAttr("disabled");
-					$('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
-					$('#CONTACT-1-LAST-NAME').removeAttr("disabled");
-					$('#CONTACT-1-PHONE').removeAttr("disabled");
-					$('#CONTACT-1-EMAIL').removeAttr("disabled");
-					$('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
+					// $('#CONTACT-1-FIRST-NAME').removeAttr("disabled");
+					// $('#CONTACT-1-LAST-NAME').removeAttr("disabled");
+					// $('#CONTACT-1-PHONE').removeAttr("disabled");
+					// $('#CONTACT-1-EMAIL').removeAttr("disabled");
+					// $('#CONTACT-CONFRIM-EMAIL').removeAttr("disabled");
 					$('#msform input[type="checkbox"]').removeAttr("disabled");
 
 					$('select').removeAttr("disabled");
 
 					$('#slapptdate').attr("required",'true');
-					$('#CONTACT-1-FIRST-NAME').attr("required",'true');
-					$('#CONTACT-1-LAST-NAME').attr("required",'true');
-					$('#CONTACT-1-PHONE').attr("required",'true');
-					$('#CONTACT-1-EMAIL').attr("required",'true');
-					$('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
+					// $('#CONTACT-1-FIRST-NAME').attr("required",'true');
+					// $('#CONTACT-1-LAST-NAME').attr("required",'true');
+					// $('#CONTACT-1-PHONE').attr("required",'true');
+					// $('#CONTACT-1-EMAIL').attr("required",'true');
+					// $('#CONTACT-CONFRIM-EMAIL').attr("required",'true');
 
 
 					$('select').attr("required",'true');
@@ -348,9 +395,24 @@ $("#nextstep2").click(function (event) {
 
         return   false  ;
     });
-	
+
 // Button click to save the request.
 $('#btnaddonSubmit').click(function (event) {
+
+	if($("#boro").val() != "" && $("#houseNumber").val() != "" && $("#street").val() != "")
+	{
+		if(!retCode)
+		{
+			$('#nextstep2').addClass("tooltipstered error");
+					//$('#nextstep2').attr("required",'true');
+					//$('#nextstep2').attr("aria-invalid",'true');
+					//$('#nextstep2').attr("aria-required",'true');
+					$('#nextstep2').tooltipster('update', "Please verify the address");
+					$('#nextstep2').tooltipster('show');
+					$('#nextstep2').focus();
+			return false;
+		}
+	}
 
 	if (validateForm() && isValidEmailAddressAPP($('#CONTACT-1-EMAIL')) ) {
 
@@ -394,13 +456,15 @@ $('#btnaddonSubmit').click(function (event) {
 						PickUpLocation :$("#lstPickUpLocation option:selected").text(),
 						AppointmentDate : $('#datetimepicker3').val(),
 						Source : 'Dashboard',
+						Comments:$("#NewReqComment").val(),
 						CrossStreets : $('#GEOCrossStreet').val(),
-						PickupRequestItems : CatgoryList
+						PickupRequestItems : CatgoryList,
+						UserName: sessionStorage.getItem("userId")
 					}
 
 
 			var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
-			//'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
+
 			$.ajax({
 				async: false,
 				url: RequestURL,
@@ -410,17 +474,37 @@ $('#btnaddonSubmit').click(function (event) {
 				crossDomain: true,
 				success: function (json) {
 					if (json != undefined) {
+					 if (json.toUpperCase() == 'NOT AVAILABLE'){
+							$('#errorDate').text($('#disApptDate').text());
+							$('.fieldset6').show();
+					  }
+					  else if (json.toUpperCase() == 'DUPLICATE ADDRESS'){
+							var duplicateaddress = '<div class="modal-header" style="color:white;background-color:#D0021B;height:30px;padding:3px; margin:0px">\
+								<b style="margin-left:10px;">Error</b>\
+								 </div>\
+									<div class="modal-body" style="height:25px;">\
+										<p>A request already exists at the current address on the same date. Please place your items at the designated area or choose a different date to schedule a separate appointment.</p>\
+										 </div>\
+									<div class="modal-footer" style="height:60px;border:0px;">\
+								 <button type="button" style="color:white;background-color:grey; width:100px;" class="btn dismissAlert" data-dismiss="modal">OK</button>\
+								</div>'
+									$('.AlertContent').html(duplicateaddress);
+									$('.alertModal').modal('show');
+							return false;
+					  }
+					  else {
 
 						$('#AddOnModal').modal('hide');
-						RequestDashboard($('.selectedDate').val(), 'Staten Island', $('.selectedDistrict').attr('id'), '0');
-						Request_Assignments('staten Island', $('.selectedDistrict').attr('id'), $('.selectedDate').val());
+						RequestDashboard('0');
+						Request_Assignments();
 						$('#Step2div').hide();
 
-						$('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
-						$('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
-						$('#CONTACT-1-PHONE').attr("disabled","disabled");
-						$('#CONTACT-1-EMAIL').attr("disabled","disabled");
+						// $('#CONTACT-1-FIRST-NAME').attr("disabled","disabled");
+						// $('#CONTACT-1-LAST-NAME').attr("disabled","disabled");
+						// $('#CONTACT-1-PHONE').attr("disabled","disabled");
+						// $('#CONTACT-1-EMAIL').attr("disabled","disabled");
 						$('#msform').trigger("reset");
+						}
 					}
 				}
 			});

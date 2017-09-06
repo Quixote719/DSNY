@@ -253,6 +253,9 @@
 		color: #333;
 		margin: .5em 0 .2em;
 	}
+	.tvSubCtg label{
+		text-transform: none !important;
+	}
 </style>
  <script type="text/javascript">
  var RecaptchaOptions = {
@@ -276,7 +279,7 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 <p>
 Note: Collections are postponed and will be rescheduled in the event of <a href="http://www1.nyc.gov/site/severeweather/index.page">severe weather conditions</a>.
 </p>
-<p><a href="/assets/dsny/contact/services/dev-bulk-ewaste-pickup-search.shtml">Check Status of Bulk Pickup</a></p>
+<p><a href="/assets/dsny/contact/services/bulk-ewaste-pickup-search.shtml">Check Status of Bulk Pickup</a></p>
 
 
             </div>
@@ -320,6 +323,7 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 			<input name="Long" id="Long" type="hidden" /> 
 			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
 			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
+			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
 			
             <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
             <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
@@ -422,6 +426,9 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 							</div>-->
 							<div id="ElecCtg" class="pure-u-1 pure-u-md-1-3-b ctglistdiv" >
 							</div>
+							
+							<div style="margin-top:20px; font-weight:bold">Others Items – Considered regular refuse and should be placed out on the next scheduled collection day. No appointments necessary.</div>
+							
 							<div  class="pure-u-1 pure-u-md-1-3-b" style="display:none" >
                             <div class="pure-u-1 pure-u-md-1-3-b">
                                 <div class="pure-u-md-1-24 pure-u-sm-1-24">
@@ -739,10 +746,8 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 			 <fieldset class="fieldset5" style="display:none;">
 				<div class="pure-g"> 
                     <div id="subcontainer"   style="text-align:center">  
-						Thank you for submitting your E-Waste pick-up request. <br>The Service Request number is <br><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/>Use this number when you check the status of your request. <br>
-						You will also receive an email with this information. <br> To check the status of this request please visit the DSNY Website. To reschedule or cancel your request please call 311.  <br> <br> <br>
-						<strong> Where to leave your E-Waste items? <br> 
-						Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB. </strong>						
+						Thank you for submitting your Bulk pick-up request. <br>The Service Request number is <br><strong> <div id="srnumer" style="display:inline"> </div></strong> <br/>Use this number when you check the status of your request. <br>
+						To check the status of this request please visit the DSNY Website. To cancel your request please call 311.  <br> <br> <br>
 					</div>
 					<br>
 					<br>
@@ -757,8 +762,15 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 			 <fieldset class="fieldset6" style="display:none;">
 				<div class="pure-g">  
                     <div id="subcontainer" class="errormsg" style="text-align:center">  
-						Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.
+						<!--Sorry, the pick up date <div id="errorDate"> </div> you chose is no longer available. Please reschedule for another date.-->
+						Sorry, there already exists a request for this address on the same pick up date. Please setout items at curbside for pickup.
 						
+					</div>
+					<br>
+					<br>
+					<div id="buttons">
+                    <button id="btnNewReq2" class="pure-button next" style="margin-top: 28px; align: center">
+							Schedule Another Pick Up</button>
 					</div>
 					<!--<br>
 					<br> 
@@ -817,9 +829,9 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 <script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>
 
 <script type="text/javascript">
-	//jQuery.support.cors = true;
-	//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
-	//var APIUrl = 'https://a827-donatenyc.nyc.gov'; 
+
+	$('body').css('background-color', backgroundcolor);
+	
     $(document).ready(function () {
 	  
 	jQuery.support.cors = true; 
@@ -1352,6 +1364,10 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 		if (minDate.getDay() == 0){
 			minDate.setDate(minDate.getDate() + 1);
 		} */
+		if($('#datetimepicker1').data('DateTimePicker')){
+			$('#datetimepicker1').data('DateTimePicker').destroy();
+		}
+		
 		$('#divNonDualBin').hide();
 		var minDate; //= moment();//.format("MM-DD-YYYY");
 		var MaxDate; //= moment().add(21, 'days'); 
@@ -1385,16 +1401,16 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
                     //$("#EVENT-LOCATION").val(fullAddress);
                     //$("#EVENT-CITY").val($("#GEOcity").val()); 
 					
-					$.ajax({
+					/*$.ajax({
 					 type: 'GET',
 					url: APIUrl + '/BulkAPI/api/bulkpickups/IsDualBinDistrict?DistrictCode=' + $("#GEODistrict").val() + '',
 					 crossDomain: true,
 					 dataType: 'json',
 					 async: false,
 					 success: function (data) {
-						 if (data) {
+						 if (data) {*/
 								//var getDateUrl = APIUrl + '/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District='+ $('#GEODistrict').val() +'&IsInsert=true'; 
-								var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + ''; 
+								var getDateUrl = APIUrl + '/BulkAPI/api/bulkpickups/GetUnavailableDates?GarbageSchedule=' + $("#RegularCollectionSchedule").val() + '&DistrictCode=' + $('#GEODistrict').val();
 								var getdisDAte =$.ajax({
 									async:false,
 									url: getDateUrl,
@@ -1448,7 +1464,7 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 								current_fs.hide();
 								$('#astep1').removeClass('active1');
 								$('#astep2').addClass('active2');
-					}
+					/*}
 					else
 					{
 					     $("#collectionDays").html($("#RegularCollectionDayNames").val());
@@ -1456,7 +1472,7 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
                          return false;
                     }
 				  }
-				 });
+				 });*/
                     return false;
                 }
             });
@@ -1812,7 +1828,7 @@ Note: Collections are postponed and will be rescheduled in the event of <a href=
 		return false;
 	});
 	 
-	$('#btnNewReq, #btnNewReq1').click(function(){
+	$('#btnNewReq, #btnNewReq1, #btnNewReq2').click(function(){
 		//location.reload();
 		window.location.href = '/assets/dsny/contact/services/dev-bulk-pickup-request.shtml'; 
 	})

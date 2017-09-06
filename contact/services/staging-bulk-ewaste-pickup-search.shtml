@@ -1,0 +1,520 @@
+<!--#include virtual="/assets/dsny/templates/header-footer/htmlheader.shtml" -->
+<!--#include virtual="/assets/dsny/templates/ewastecontacttemplates.shtml" -->
+
+<title>DSNY - Contact - Request Service Status</title>
+<link rel="stylesheet" media="screen" href="/assets/dsny/css/pages/webforms/webforms_styles.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/pure-min.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/tooltipster.css">
+<link rel="stylesheet" href="/assets/dsny/css/pages/webforms/grids-responsive-min.css">
+<link href="/assets/donate/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<link href="/assets/donate/css/bootstrap-glyphicon.css" rel="stylesheet">
+<style> 
+	body
+	{
+		/*background-color:#ffcdcb; */
+	}
+   #msform fieldset
+    {
+        border: none;
+        max-width: 940px; /*stacking fieldsets above each other*/
+        position: relative;
+    }
+    /*Hide all except first fieldset*/
+    .fieldsetsr
+    {
+        display: none;
+    }    
+	.txtmargin{
+		margin:0px!important
+	}
+    .error
+    {
+        border-color: #e9322d !important;
+    }
+    .chkCls
+    {
+        width:50%!important;
+        /* margin: .5em 0 .2em!important; */
+     }
+     .inc
+     {
+			/*float: left;*/
+			display: inline-block;
+        }
+      .dec
+      {
+			display: inline-block;
+    	}
+	.txtValue{
+	    width: 30PX!important;
+		align-items: center;
+		margin:0px!important;
+		text-align:center;
+	}
+	.table td {
+		border-top:0px!important;
+	}
+	.divimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	.divdecimage{
+		width: 20px!important;
+		height: 20px;
+		cursor:pointer;
+	}
+	
+	.ctglistdiv{
+		 line-height: 25px;
+	}
+	.ctgDiv{
+		border-bottom: 1px solid #ccc;
+		padding: 5px 0px;
+	}
+	.tvSubCtg{
+	    line-height: 36px;
+	}
+	.sbClass { 
+		background-color: #F5F5F5;
+		font-size:14px!important;
+	}
+	.section {
+		background-color: #686868!important;
+		color:white!important;
+	}
+	.clsBottomborder{
+		border-bottom: 1px solid #ccc;
+	}
+	#subcontainer {
+ 
+		border: 0px!important;
+		font-size:14px!important;
+	}
+	.label{
+			background-color:transparent!important;
+			text-align: right;			 
+			display: block;
+			line-height: 20px;
+			font-weight: bold!important;
+		}
+	.data_long{
+		background-color:transparent!important;
+		line-height: 20px;
+	} 
+	.ctgName div:after{
+		content: "_____________________________________________________________________";
+	}
+	.disableText{
+		background-color: transparent!important;
+		color: #000!important;
+	}
+	.ctgAddressInfo{
+		background-color:#F5F5F5;
+		padding:10px 0px;
+	}
+	.textbold{
+	    font-size: 14px;		 
+		color: #333;
+		font-weight: bold;
+		margin: 0 0 0 10px; 
+		float:left;
+		padding-right: 5px;
+	}
+	.addressText{
+	    font-size: 14px;		 
+		color: #333;		
+		margin: 0 0 0 10px; 
+	} 
+	.pure-u-md-3-24 {
+		text-align: right;			
+	}  
+	
+	.step4{
+		display: inline-block;
+		background: url('/assets/dsny/images/content/webforms/step4-comfirm.png');
+		width: 133px;
+		height: 56px;
+		margin: 0 10px 10px 0;
+		opacity: 0.7;
+		transition: opacity 1s ease-in-out;
+		-moz-transition: opacity 1s ease-in-out;
+		-webkit-transition: opacity 1s ease-in-out;
+	}
+	.step4:hover {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+		opacity: 1.0;
+		transition: opacity .55s ease-in-out;
+		-moz-transition: opacity .55s ease-in-out;
+		-webkit-transition: opacity .55s ease-in-out;
+	}
+	.active4 {
+		background: url('/assets/dsny/images/content/webforms/step4-confirm-active.png');
+	}
+	.fieldset5{
+		font-size: 14px!important;
+	}
+	.errormsg{
+		color:red!important;
+	}	
+	img.imginchv:hover {
+		background: url('/assets/dsny/img/plus.svg') no-repeat;    
+		background-position: center;
+		background-size: cover;
+	}
+	img.imgdechv:hover {
+		background: url('/assets/dsny/img/minus.svg') no-repeat;    
+		background-position: center;
+		background-size: cover;   
+	}
+	@media (max-width: 767px){
+		.pure-u-sm-2-24 {
+			width: 8.3333%;
+			float: left;
+		} 
+		.pure-u-sm-19-24{
+			width: 60.1667%;
+			float: left;
+		} 
+		.pure-u-sm-18-24{
+			width: 60.1667%;
+			float: left;
+		}
+		.pure-u-md-1-24{
+			width: 6%;
+			float:left;
+		}
+		.pure-u-md-20-24 {
+			width: 63%;
+			float:left;
+		}
+		.pure-u-md-3-24 {
+			width: 31%;
+			float: right;
+			text-align: right;			
+		} 
+		.chkCls
+		{
+			width:80%!important;        
+		}
+		.pure-u-8-24, .pure-u-4-24, .pure-u-11-24 {
+			width: 100% !important;
+		} 
+	}
+	
+	ul.leaders {
+	  padding: 0;	  
+	}
+	ul.leaders li {
+	  display: table;
+	  font-size:14px!important;
+	  line-height: 25px!important; 
+	}
+	ul.leaders li span {
+	  display:        table-cell;
+	}
+	ul.leaders li span:first-child { /* TITLE */
+	  position:       relative;
+	  overflow:       hidden;       /* Don't go underneath the price */
+	}
+	ul.leaders li span:first-child:after { /* DASHES */
+	  content:        "";
+	  position:       absolute;
+	  bottom:         0.5em;        /* Set as you want */       
+	  margin-left:    0.5em;        /* Keep same for the next span's left padding */
+	  width:          100%;
+	  border-bottom:  1px solid #c7c7c7; 
+	}
+	ul.leaders li span + span {     /* PRICE */
+	  text-align:     right;
+	  width:          1%;           /* Trick it */
+	  vertical-align: bottom;       /* Keep Price text bottom-aligned */
+	  padding-left:   0.5em;
+	  /* white-space: nowrap;       /* Uncomment if needed */
+	}
+</style>
+
+<div id="contentsection" class="about-main-image">
+    <div class="span6 about-description">
+        <div id="container">
+            <div id="header">  
+                <h1>
+                    <span class="subtitle" id="ReqHeader" >Request Service Status</span></h1>
+            </div>
+			<form id="msform" class="pure-form" method="post"  type="external" name="E-Pick up Request Form" >  
+			 <div class="pure-g">
+				<div id="subcontainer">
+
+						<div class="pure-u-24-24">
+							<div class="pure-u-20-24">
+								<label for="txtSR">Search SR#<span class="red">*</span></label>
+							   <input id="txtSR" name="txtSR" tabindex="1" type="text" class="txtmargin" required maxlength="20" style="width:99%" />
+							</div><div class="pure-u-4-24" style="vertical-align: bottom">
+								<button id="searchsr" class="pure-button next" tabindex="2" style="width:100%;padding: .3em 1em;">
+										&nbsp;<strong>Search</strong>&nbsp;</button> 
+							</div> 
+						</div>
+						<div class="pure-u-24-24">
+						&nbsp;
+						</div>  
+						<div class="pure-u-24-24" id="call311" style="display:none">
+							Call 311 to Reschedule or Cancel an appointment.
+						</div>
+						
+				</div>			
+			</div>
+			
+			<fieldset class="fieldsetsr">
+                <div class="pure-g"> 
+                    <div id="subcontainer" class="sbClass">
+						<div class="section"><span id="dvTitle">Review and Submit</span> <span id="dvStatus" style="float: right; margin-right:10px;"> </span></div>					
+						<div class="table">
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User General Info:</label></div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Address :</div>
+                                <div id="disaddress" class="data_long">
+                                </div>
+                            </div>
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Cross Street :</div>
+                                <div id="disCrsStrt" class="data_long"></div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24">							
+                            </div>	 
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Pick Up Location :</div>
+                                <div id="disPckLocation" class="data_long">
+                                </div>
+                            </div>  
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Appointment Date :</div>
+                                <div id="disApptDate" class="data_long">
+                                </div>
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24">							
+                            </div>	
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
+							
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <!-- <div id="displayItem" class="ctglistdiv">			</div>  -->
+								<ul id="displayItem" class=leaders>
+								
+								</ul>
+                            </div>
+							<br> 
+							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">                               																
+                            </div>
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>User Contact Info: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">First Name :</div>
+                                <div id="disfname" class="data_long">
+                                </div>
+                            </div>   
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Last Name :</div>
+                                <div id="dislname" class="data_long">
+                                </div> 
+                            </div>  
+							<div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Phone :</div>
+                                <div id="disphone" class="data_long">
+                                </div>
+                            </div>  							
+                            <div class="pure-u-1 pure-u-md-24-24">
+                                <div class="label">Email :</div>
+                                <div id="disemail" class="data_long"> 
+                                </div> 
+                            </div>                           
+                        </div>
+                        <br />
+                    </div>
+                
+					
+				</div>
+                <br />
+            </fieldset>
+			
+			</form>
+	</div>
+</div>
+</div>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/GeoValidation_ewaste.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.validate.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="/assets/dsny/js/webforms/jquery.tooltipster.js" type="text/javascript"></script>
+<script src="/assets/donate/js/bootstrap.min.js"></script>
+<script src="/assets/dsny/js/webforms/stagingConfig.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//jQuery.support.cors = true;
+	//var APIUrl = 'https://msswvw-dnsdnyvp.csc.nycnet';
+	
+    $(document).ready(function () {
+	 
+		jQuery.support.cors = true; 
+		 $('#msform input[type="text"]').tooltipster({
+            trigger: 'custom',
+            onlyOne: true,
+            position: 'bottom'
+        });
+		
+		
+		function qs(key) {
+			key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx control chars
+			var match = location.search.match(new RegExp("[?&]" + key + "=([^&]+)(&|$)"));
+			return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+		};	
+		
+		var SR = qs('SRNumber');  
+		
+		if (SR != undefined ){
+			 
+			$('#txtSR').val(SR);
+			searchSR();  
+		
+		}
+		
+	
+		 var validator;
+		function validateForm() {
+			validator = $('#msform').validate({
+			errorPlacement: function (error, element) {
+                if (element.attr("type") == "text") {
+                    $(element).tooltipster('update', "This field is required");
+                } 
+                else {
+                    $(element).tooltipster('update', "This field is required");
+                }
+                
+                $('element').tooltipster({
+                    functionInit: function () {
+                        return $('element').html();
+                    },
+                    functionReady: function () {
+                        $('element').attr('aria-hidden', false);
+                    },
+                    functionAfter: function () {
+                        $('element').attr('aria-hidden', true);
+                    }
+                });
+                $(element).focus(function () {
+                    if ((element.attr("required") == "required" && element.attr("class") != "tooltipstered valid"))
+                    { $(this).tooltipster('show'); }
+                })
+                   .blur(function () {
+                       $(this).tooltipster('hide');
+                   });
+            },
+            success: function (label, element) {
+                $(element).tooltipster('hide');
+            },
+            invalidHandler: function () {
+                $(this).find(".error:first").focus();
+            }
+        });
+			if (!$('#msform').valid()) {
+				return false;
+			} else {
+				return true;
+			} 
+		}	
+		$("#searchsr").click(function () {
+        //current_fs = $(this).parent().parent();
+        //next_fs = $(this).parent().parent().next();
+			if (validateForm()) {
+		
+			searchSR();
+            return false;
+        } else {
+            validator.focusInvalid();
+            return false;
+        }
+		});
+	
+		function searchSR(){
+		
+				$.ajax({
+				async: false,
+				//url:   APIUrl + "/ePickupsAPI/api/PickupRequest/GetPickUpRequest?SRNumber="+ $('#txtSR').val(),
+				url: APIUrl + '/ePickupsApi/api/PickupRequest/SearchPickUpRequest?SRNumber='+ $('#txtSR').val(),
+				type: "GET",
+				dataType: 'json',	
+				crossDomain: true,
+				success: function (data) {		        
+					if ( data != undefined){										
+						if (data.RequestId > 0) {										
+							$('.fieldsetsr').show();
+							$('#dvTitle').text('SR#  '+ $('#txtSR').val() )
+							$('#dvStatus').text('Status: ' + data.Status) 
+							var strAddress =  data.BuildingNumber + ' ' + data.Street + ', ' + data.Borough
+							$('#disaddress').html(strAddress);
+							$('#disCrsStrt').text(data.CrossStreets);							
+							$('#disPckLocation').text(data.PickUpLocation);
+							$('#disApptDate').text(data.AppointmentDate); 
+							$('#displayItem').empty(); 
+							
+							if ($('#txtSR').val().indexOf('EW') >= 0)
+								$("#call311").show();
+							else
+								$("#call311").hide();
+							
+							if (data.PickupRequestItems != undefined){	 													
+								var arr =  data.PickupRequestItems;	 
+								CatgoryList = []; 
+								$.each(arr, function(key, item) {
+								
+									ctgStr = '';
+
+									if ($('#txtSR').val().indexOf('BP') >= 0 && item.PickupRequestSubItems != undefined) {	
+										ctgStr += ' <li> <span>'+ item.Category +'</span></li>';
+									}
+									else
+									{									
+										ctgStr += ' <li> <span>'+ item.Category +'</span>   <span>'+ item.RequestedQty +'</span>  </li>';	 							
+									}
+									
+									$('#displayItem').append(ctgStr); 
+									if (item.PickupRequestSubItems != undefined){									
+										if (item.PickupRequestSubItems.length > 0 )	
+										{
+											 var arrSubCat = item.PickupRequestSubItems											 
+											 var SubctgStr = '<ul class=leaders> '; 
+											 $.each(arrSubCat, function(Subkey, Subitem) {
+												SubctgStr += '<li>  <span>'+ Subitem.SubCategoryName +'</span>   <span>'+ Subitem.Quantity +'</span>  </li>';												
+											 }); 
+											SubctgStr += '</ul>'	
+											$('#displayItem').append(SubctgStr); 
+										}		
+									}									
+								});	
+							}												
+							$('#disfname').text(data.FirstName);
+							$('#dislname').text(data.LastName);
+							$('#disphone').text(data.Phone);
+							$('#disemail').text(data.Email); 						
+						}					
+						else{
+							$('#txtSR').addClass("tooltipstered error"); 
+							$('#txtSR').attr("required",'true');
+							$('#txtSR').attr("aria-invalid",'true');
+							$('#txtSR').attr("aria-required",'true');						
+							$('#txtSR').tooltipster('update', "The SR# that you may have entered is not valid. Please check your SR # and search again.");
+							$('#txtSR').tooltipster('show'); 
+							
+							$('.fieldsetsr').hide();
+						
+						}
+					}
+					}
+					
+					
+				});
+		
+		}
+	
+	});
+
+</script>
+<!--#include virtual="/assets/dsny/templates/header-footer/footer_megamenu_includes.shtml"-->
+<script src="/assets/dsny/js/webforms/jquery.xdomainrequest.js" type="text/javascript"></script>
