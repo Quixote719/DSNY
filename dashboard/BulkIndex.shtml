@@ -169,7 +169,7 @@
           <!--/Scond div first row end-->
           <div class="row rowstyle" id="TaskHeader" style="padding:5px; margin:0px">
             <div class="TaskHeaderTitle">Assignments</div>
-            <div class="TaskHeaderText"><span class="RouteNote"> *Routing is available after 3:30PM, Thurs-Sat</span> Sort by
+            <div class="TaskHeaderText"><span class="RouteNote"> *Routing is available after 3:30PM, Thurs-Sat. All assignments entered after 2:00PM will not be routed.</span> Sort by
               <div class="btn-group">
                 <button type="button" id='SelectedStatusType' class="btn  dropdown-toggle TaskHeaderDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    Route
