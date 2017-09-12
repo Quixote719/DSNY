@@ -341,6 +341,7 @@
 			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
 			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
 			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
+			<input name="BBL" id="BBL" type="hidden" />
 			
             <!-- <input name="EVENT-LOCATION" id="EVENT-LOCATION" type="hidden" />
             <input name="EVENT-CITY" id="EVENT-CITY" type="hidden" /> -->
@@ -1817,7 +1818,8 @@ function loadPikcupLocations()
 						Frequency : $("#RegularCollectionDayNames").val(),
 						Longitude : $("#Long").val(),
 						Latitude : $("#Lat").val(),
-						UserName: 'DSNY'
+						UserName: 'DSNY',
+						BBL: $("#BBL").val()
 					}		
 					var RequestURL = APIUrl + '/ePickupsAPI/api/BulkPickups/AddUpdatePickUpRequest';
 					$.ajax({
