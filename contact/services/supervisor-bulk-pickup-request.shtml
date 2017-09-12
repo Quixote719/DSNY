@@ -2204,6 +2204,7 @@ textarea {
 			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
 			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
 			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
+			<input name="BBL" id="BBL" type="hidden" />
 
             <div style="text-align: right; font-size: 12px" id="reqfld">
                 <span class="red">*</span>Denotes required field</div>
@@ -3818,7 +3819,9 @@ var userId = "";
 						Latitude : $("#Lat").val(),
 						UserName: userId,
 						IPAddress: ipAddress,
-						Comments: $("#comments").val()/*,
+						Comments: $("#comments").val(),
+						BBL: $("#BBL").val()
+						/*,
 						LastUpdatedBy: userId*/
 					}		
 					var RequestURL = APIUrl + '/ePickupsAPI/api/BulkPickups/AddUpdatePickUpRequest';
