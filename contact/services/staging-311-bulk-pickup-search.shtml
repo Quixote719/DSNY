@@ -2124,6 +2124,7 @@ input[disabled], input[disabled]:hover{
 			<input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
 			<input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
 			<input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
+			<input name="BBL" id="BBL" type="hidden" />
 
             <div style="text-align: right; font-size: 12px" id="reqfld">
                 <span class="red">*</span>Denotes required field</div>
@@ -2356,7 +2357,7 @@ input[disabled], input[disabled]:hover{
 							<br>
 							<div class="pure-u-1 pure-u-md-24-24 clsBottomborder">      </div>	
 							
-							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Electronic Category: </label></div>
+							<div class="pure-u-1 pure-u-md-24-24 clsTitle"><label>Bulk Category: </label></div>
 							<div class="pure-u-1 pure-u-md-24-24">
                               <!--   <div id="displayItem" class="ctglistdiv"></div>  -->
 								<ul id="displayItem" class=leaders>
@@ -3711,7 +3712,8 @@ var reqId = 0;
 						Frequency : $("#RegularCollectionDayNames").val(),
 						Longitude : $("#Long").val(),
 						Latitude : $("#Lat").val(),
-						UserName: '311'
+						UserName: '311',
+						BBL: $("#BBL").val()
 					}		
 					var RequestURL = APIUrl + '/ePickupsAPI/api/bulkpickups/AddUpdatePickUpRequest';
 					$.ajax({
