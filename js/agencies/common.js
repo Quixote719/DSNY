@@ -1,4 +1,0 @@
-function callGEO()
-{
-	alert('Success');
-}
