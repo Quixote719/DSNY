@@ -459,7 +459,8 @@ $('#btnaddonSubmit').click(function (event) {
 						Comments:$("#NewReqComment").val(),
 						CrossStreets : $('#GEOCrossStreet').val(),
 						PickupRequestItems : CatgoryList,
-						UserName: sessionStorage.getItem("userId")
+						UserName: sessionStorage.getItem("userId"),
+						BBL: $("#BBL").val()
 					}
 
 

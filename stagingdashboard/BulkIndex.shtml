@@ -268,6 +268,7 @@
                           <input name="RegularCollectionSchedule" id="RegularCollectionSchedule" type="hidden" />
                           <input name="RegularCollectionDayNames" id="RegularCollectionDayNames" type="hidden" />
                           <input name="SectionAndSubsection" id="SectionAndSubsection" type="hidden" />
+						  <input name="BBL" id="BBL" type="hidden" />
 
                           <div class="AddressSection">
                             <label class="PopUpmargin" for="Address"><b>Address</b><span class="red">*</span></label>

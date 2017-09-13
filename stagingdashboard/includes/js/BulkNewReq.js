@@ -453,7 +453,8 @@ $('#btnaddonSubmit').click(function (event) {
 						Frequency : $("#RegularCollectionDayNames").val(),
 						Longitue : $("#Long").val(),
 						Latitude : $("#Lat").val(),
-						UserName : sessionStorage.getItem("userId")
+						UserName : sessionStorage.getItem("userId"),
+						BBL: $("#BBL").val()
 					}
 
 
