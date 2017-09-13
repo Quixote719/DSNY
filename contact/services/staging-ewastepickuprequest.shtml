@@ -1718,7 +1718,8 @@ NOTE: DSNY will NOT come inside your house or ring your bell; items must be at t
 						Source : 'DSNY',
 						CrossStreets : $('#GEOCrossStreet').val(),
 						PickupRequestItems : CatgoryList,
-						UserName : 'DSNY'
+						UserName : 'DSNY',
+						BBL: $("#BBL").val()
 					}
 					var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
 					$.ajax({
