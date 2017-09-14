@@ -3649,7 +3649,8 @@ return false;
 						Source : '311',
 						CrossStreets : $('#GEOCrossStreet').val(),
 						PickupRequestItems : CatgoryList,
-						UserName : '311'
+						UserName : '311',
+						BBL: $("#BBL").val()
 					}
 					var RequestURL = APIUrl + '/ePickupsAPI/api/PickupRequest/AddUpdatePickUpRequest';
 					$.ajax({
