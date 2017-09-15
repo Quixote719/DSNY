@@ -1902,7 +1902,8 @@ function loadPikcupLocations()
 	 
 	$('#btnNewReq, #btnNewReq1, #btnNewReq2').click(function(){
 		//location.reload();
-		window.location.href = '/assets/dsny/contact/services/staging-bulk-pickup-request.shtml'; 
+		window.location.href = '/assets/dsny/contact/services/staging-bulk-pickup-request.shtml';
+		return false; 
 	})
 	
 	$('#btnTrkReq').click(function(){
