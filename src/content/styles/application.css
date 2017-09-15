@@ -1,0 +1,11 @@
+#headerContent{
+min-height: calc(100vh - 341px);
+}
+
+
+@media (min-width:0)and (max-width: 767px)
+{
+  #headerContent{
+      min-height: calc(100vh - 1063px);
+  }
+}
