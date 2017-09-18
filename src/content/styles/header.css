@@ -1,0 +1,670 @@
+/*DESKTOP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Oxygen"!important;
+}
+@font-face {
+    font-family: "Oxygen";
+    src: url("../fonts/Oxygen.otf");
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a
+{
+    background-image: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+}
+
+
+.homeMobile {
+    display: none !important;
+}
+.close {
+    font-size: 42px;
+    color: #6C6C6C !important;
+    opacity: 0.8;
+}
+.modal-dialog {
+    display: none;
+}
+.modal-backdrop {
+    visibility: hidden;
+}
+.modal {
+    overflow: hidden;
+}
+.mainLinks>li.selectedParent>a {
+    border-bottom: 4px solid #85C559 !important;
+    color: #1A8D44 !important;
+    padding-bottom: 11px;
+}
+.mainLinks {
+    font-size: 19px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 27px;
+}
+.mainLinks a:hover {
+    text-decoration-line: none;
+    color: #4f4c4c;
+}
+.mainLinks a:not(hover) {
+    text-decoration-line: none;
+}
+#slideNav .container {
+    max-height: 77px;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+#logo {
+    cursor: pointer; 
+    cursor: hand;
+    width: 310px;
+    height: 55px;
+    margin-left: 18px;
+    padding: 0px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+.navbar-default {
+    background-color: #FFF;
+    border-color: #e7e7e7;
+    background-image: none;
+    margin: 0;
+}
+.navButtons {
+    color: #c8c8c8;
+    padding: 0;
+    margin-left: 5px;
+    font-size: 17px;
+}
+.navbarToggle {
+    margin-top: 15px;
+}
+#Sign-up,
+#Login {
+    width: 110px;
+    height: 40px;
+}
+#signUpText{
+    font-size: 18px;
+    height: 22px;
+    width: 123.71px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+}
+#Login {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #85C559;
+    color: #FFF;
+    border: 1px solid #85C559;
+}
+#Sign-up {
+    border-radius: 4px;
+    background-color: #FFF;
+    font-weight: bold;
+    color: #1A8D44;
+    border: 1px solid #1A8D44;
+}
+.navButtons>li>a {
+    padding: 18px 8px;
+}
+.mainLinks>li>a {
+    padding: 15px 14px;
+        color: #6C6C6C;
+}
+.forMessage {
+    padding-top: 10px;
+    font-size: 18px;
+    margin-top: 0px;
+}
+.navbar-default .navbar-text {
+    color: #CBCBCB;
+}
+.btn {
+    padding-top: 0px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+.navbar-toggle {
+    margin-top: 15px;
+    margin-right: 0px;
+}
+#logoipad {
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.nav>li>a:focus,
+.nav>li>a:hover {
+    text-decoration: none;
+    background-color: #FFF;
+}
+.navbar-default .navbar-toggle{
+    border: 0px solid #FFF !important;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #FFF;
+    border: 0px solid #FFF !important;
+}
+.VendorNameHeader{
+    margin-right: 7px;
+    color: #1A8D44;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.VendorNameHeader .a{
+    border-right: 2px solid #f5f5f5;
+    color: #1A8D44;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.VendorNameHeaderBtn{
+    padding-left: 0px;
+    background-color: white;
+    margin-top: 8px;
+    color: #9B9B9B;
+    font-size: 16px;	
+    line-height: 20px;
+}
+.navButtons>li.VendorNameHeader>a {
+    color: #1A8D44 !important;
+}
+.headerLogInIcon{
+    margin-right: 5px;
+    margin-top: 8px;
+}
+.navButtons>li.headerLogOutButton>a>button.VendorNameHeaderBtn{
+    padding-left: 0px;
+}
+.navButtons>li.headerLogOutButton>a{
+    padding-left: 0px;
+}
+.navButtons>li.myAccountMobile>a{
+	color: #6C6C6C;	
+  font-family: 'Oxygen';	
+  font-size: 16px;	
+  font-weight: bold;	
+  line-height: 20px;
+}
+.logOutMobile{
+  padding-left: 0px;
+  color: #6C6C6C;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  background-color: white;
+}
+
+/*@-webkit-keyframes slideIn {
+    100% {
+        transform: translateY(0);
+    }
+    0% {
+        transform: translateX(900px);
+    }   
+}*/
+    .nav>li.disabled>a {
+     color: #CBCBCB!important; 
+}
+    .nav>li.disabled>a {
+     color: #CBCBCB!important;
+}
+/*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media only screen and (max-width: 499px) {
+    .VendorNameHeader{
+        margin-top: 18px;
+    }
+    .modal.fade:not(.in) .modal-dialog {
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
+}
+
+    .navbar-collapse {
+        /*visibility: hidden;*/
+        display: none !important;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+     .navbar-collapse.collapsing {
+        display: none !important;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .modal-dialog {
+        margin-right: 0px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 100%;
+        max-height: 100%;
+        display: block!important;
+        -webkit-animation: slideIn 0.7s forwards !important;
+    }
+    .modal-content {
+        height: 100%;
+        overflow: hidden;
+    }
+    .modal-header {
+        border-bottom: none;
+        padding: 0;
+    }
+    .modal-body {
+        padding:0;
+    }
+    .modal-header .close {
+        margin-top: -2px;
+        padding-right: 10px;
+        padding-top: 7px;
+    }
+    .mainLinks {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navButtons>li>a {
+        margin-left: 10px;
+        margin-right: 24px;
+        padding: 13px 8px;
+    }
+    .navbar-default .navbar-text {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .forMessage {
+        margin-top: 16px;
+        margin-bottom: 11px;
+        padding-left: 19px;
+    }
+    #Sign-up,
+    #Login {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+    .navbarToggle {
+        margin-bottom: 10px;
+    }
+    .homeMobile {
+        display: inline!important;
+    }
+    .navbar-collapse.collapsing {
+        height: 0 !important;
+        max-height: 0 !important;
+    }
+    #slideNav .container >.navbar-header {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    #logo {
+        width: 245px;
+        height: 44px;
+        margin-left: 7px;
+    }
+    #homeHeader{
+        padding-top: 27px;
+    }
+}
+/*IPHONE5 AND IPHONE 6 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media only screen and (max-width: 390px) {
+    .VendorNameHeader{
+        margin-top: 18px;
+    }
+    .modal.fade:not(.in) .modal-dialog {
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
+    }
+    .navbar-collapse {
+        visibility: hidden;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapsing {
+        max-height: 0;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .modal-dialog {
+        display: block!important;
+        margin-right: 0px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-animation: slideIn 0.7s forwards !important;
+    }
+    .modal-content {
+        height: 100%;
+        overflow: hidden;
+    }
+    .modal-header {
+        border-bottom: none;
+                padding: 0;
+
+    }
+    .modal-body {
+        padding:0;
+    }
+    .modal-header .close {
+        margin-top: -2px;
+        padding-right: 10px;
+        padding-top: 7px;
+    }
+    .mainLinks {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navButtons>li>a {
+        margin-left: 10px;
+        margin-right: 24px;
+        padding: 13px 8px;
+    }
+    .navbar-default .navbar-text {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .forMessage {
+        margin-top: 16px;
+        margin-bottom: 11px;
+        padding-left: 19px;
+    }
+    #Sign-up,
+    #Login {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+    .navbarToggle {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .navbar-toggle:hover {
+        background-color: #FFF;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #FFF;
+    }
+    .homeMobile {
+        display: inline!important;
+    }
+    #logoipad {
+        vertical-align: middle;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .nav>li>a:focus,
+    .nav>li>a:hover {
+        text-decoration: none;
+        background-color: #FFF;
+    }
+        #homeHeader{
+        padding-top: 27px;
+    }
+}
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (min-width: 500px) and (max-width: 959px) {
+    .modal.fade:not(.in) .modal-dialog {
+	-webkit-transform: translate3d(300px, 0, 0);
+	transform: translate3d(300px, 0, 0);
+    }
+    .navbar-collapse {
+        visibility: hidden;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .modal-dialog {
+        display: block!important;
+        margin-right: 0px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 40%;
+        height: 100%;
+        -webkit-animation: slideIn 0.7s forwards !important;
+
+    }
+    .modal-content {
+        min-height: 100%;
+        overflow: hidden;
+    }
+    .modal-header {
+        border-bottom: none;
+    }
+    .modal-body {
+        padding: 0;
+    }
+    .mainLinks {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navButtons>li>a {
+        margin-left: 10px;
+        margin-right: 24px;
+        padding: 13px 8px;
+
+    }
+    .navbar-default .navbar-text {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    #Sign-up,
+    #Login {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+    .navbarToggle {
+        margin-bottom: 10px;
+        margin-top: 20px;
+
+    }
+    .homeMobile {
+        display: inline!important;
+    }
+    .forMessage {
+        margin-top: 35px;
+        margin-bottom: 1px;
+        float: none;
+        padding-left: 1px;
+    }
+    #logoipad {
+        display: none!important;
+    }
+    #slideNav .container >.navbar-header {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .navbar-collapse.collapsing {
+        max-height: 0;
+    }
+    .nav>li>a:focus,
+    .nav>li>a:hover {
+        text-decoration: none;
+        background-color: #FFF;
+    }
+    .VendorNameHeader{
+        margin-top: 18px;
+    }
+}
+
+/*BETWEEN TABLET AND DESKTOP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media (min-width: 960px) and (max-width: 1323px) {
+    .mainLinks {
+        font-size: 16px;
+        margin-top: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-left: 27px;
+    }
+    #logo {
+        width: 250px;
+        height: 45px;
+    }
+    .navButtons>li>a {
+        padding: 15px 8px;
+    }
+    .forMessage {
+        display: none!important;
+    }
+}
+
+/*Phone landscape!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media only screen and (max-width: 736px) {
+    .VendorNameHeader{
+        margin-top: 18px;
+    }
+    .modal.fade:not(.in) .modal-dialog {
+	-webkit-transform: translate3d(350px, 0, 0);
+	transform: translate3d(350px, 0, 0);
+    }
+    #logoipad {
+        display: block!important;
+    }
+    #slideNav .container  {
+        max-height: 66px !important;
+    }
+    .navbar-collapse {
+        visibility: hidden;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .modal-dialog {
+        margin-right: 0px;
+        margin-top: 0;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-animation: slideIn 0.7s forwards !important;
+    }
+    .modal-header {
+        border-bottom: none;
+        padding: 0;
+    }
+    .modal-body {
+        padding: 0
+    }
+    .modal-header .close {
+        margin-top: -2px;
+        padding-right: 10px;
+        padding-top: 7px;
+    }
+    .mainLinks {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .navButtons>li>a {
+        margin-left: 10px;
+        margin-right: 24px;
+        padding: 13px 8px;
+    }
+    .navbar-default .navbar-text {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .forMessage {
+        margin-top: 16px;
+        margin-bottom: 2px;
+        padding-left: 2px;
+    }
+    #Sign-up,
+    #Login {
+        width: 100%;
+        font-size: 20px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+    }
+    .homeMobile {
+        display: inline!important;
+    }
+    .navbar-collapse.collapsing {
+        max-height: 0;
+    }
+        #homeHeader{
+        padding-top: 27px;
+    }
+}
+@media (min-width: 960px) and (max-width: 1156px){
+.VendorNameHeader{
+    display: none!important;
+}
+.headerLogInIcon{
+    display: none!important;
+}
+}
