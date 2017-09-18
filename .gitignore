@@ -6,11 +6,9 @@
 # testing
 /coverage
 
-# production
-/build
-# package.json
-/package-lock.json
-/package.json
+bundle.js
+npm-debug.log
+.DS_Store
 
 # misc
 .DS_Store
