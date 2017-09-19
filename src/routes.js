@@ -13,7 +13,7 @@ const routes = (
             <Route exact path={"/" + window.staticUrl + "/home"} component={Home} />
         </div>
         <div id="footer">
-            <Footer />
+            {/*<Footer />*/}
         </div>
 
     </div>
