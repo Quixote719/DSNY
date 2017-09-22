@@ -4,7 +4,7 @@
     height: 25px;
 }
 .upperHeaderContainer{
-    /*background: white;*/
+    width: 950px;
     height: 25px;
 }
 .NYCUpperHeaderLogo{
@@ -39,6 +39,9 @@
 .NYCUpperHeaderDivider2{
     float:right;
 }
+.middleHeader{
+    width: 960px;
+}
 .middleHeaderTextLeft{
     display: inline-block;
     padding-top: 32px;
@@ -49,11 +52,12 @@
     line-height: 17px;
 }
 .middleHeaderLogo{
+    margin-left: -3px;
+    padding-top: 9px;
     padding-bottom: 8px;
-    padding-left: 104px;
 }
 .middleHeaderContainerParent{
-    border-bottom: 1px solid #D5D5D5;
+    border-bottom: 1px solid transparent;;
 }
 .headerTabs>ul{
     border: 0px solid transparent;
@@ -67,8 +71,712 @@
 .headerTabs> .nav-tabs>li>a, .headerTabs> .nav-tabs>li>a:hover, .headerTabs> .nav-tabs>li>a:focus{
     border: 0px solid transparent;
 }
-.headerTabs>ul>.active>a, .headerTabs>ul>.active>a:focus{
-    border-radius: 0;
+.headerTabs>ul>li:hover>a{
+    background-color: transparent;
+}
+.homeLogoHeader{
+    border-left: 1px solid #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+    background: url('../images/nav-sprite.png') no-repeat center 14px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 61px;
+}
+.homeLogoHeader:hover a{
+    background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
+    width: 61px;
+}
+#slideNav{
+    border-top: 1px solid #E0E0E0;;
+    border-bottom: 0px solid transparent;
+    margin-bottom: 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #FCFCFC 42.13%, #F4F4F4 57.5%, #F5F5F5 100%);
+    box-shadow: none;
+}
+/*#slideNav{
+    border-bottom: 0px solid transparent;
+    border-top: 1px solid #E0E0E0;;
+}*/
+#navBar>ul>.homeLogoHeader.selectedParent.active>a{
+    box-shadow: none;
+    background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
+}
+#navBar>ul>.homeLogoHeader.active>a:hover{
+    box-shadow: none;
+    background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
+}
+
+#navBar>ul>.aboutHeaderTitle.bottomHeaderTitles.active>a{
     color: white;
-    background: green!important;
+    background-color: #0D925C!important;
+    box-shadow: none;
+    border-right: 1px solid #E0E0E0;
+    background-image: none;
+}
+#navBar>ul>.bottomHeaderTitles.active>a:hover{
+    color: white;
+    background-color: #0D925C!important;
+    box-shadow: none;
+    border-right: 1px solid #E0E0E0;
+    background-image: none;
+}
+#navBar>ul li:hover {
+    background-color: #0D925C;
+    cursor: pointer;
+}
+#navBar>ul>li>a:hover {
+    color: #333333;
+    color: white;
+}
+#navBar>ul>li>a {
+    font-weight: bold;
+    font-size: 16px;
+}
+#slideNav>.container{
+    padding-left: 0;
+}
+
+.bottomHeaderTitles{
+    border-right: 1px solid #E0E0E0;
+    text-align: center;
+    width: 131px;
+}
+#slideNav>.container{
+    padding-right: 0;
+    width: 970px;
+}
+#slideNav>.container>.navbar-collapse{
+    padding-right: 0;
+}
+.searchMessagesInput{
+    margin-top: 8px;
+    height: 32px;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    margin-left: 8px;
+    width: 210px;
+    padding-left: 10px;
+    font-weight: bold;
+    color: #666666;;	
+    background-image: url("../images/Search.png");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    border-radius: 3px;
+    font-size: 15px;
+}
+input.searchMessagesInput:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+    border-color: #7CC04B !important;
+}
+.mobileSanitationLogo{
+    display: none;
+}
+
+.close {
+    font-weight: normal;
+    font-size: 42px;
+    color: #000000 !important;
+    opacity: 0.8;
+}
+.modal-dialog {
+    display: none;
+}
+.modal-backdrop {
+    visibility: hidden;
+}
+.modal {
+    overflow: hidden;
+}
+.selectedParent>a{
+    color: white !important;
+    background-color: #0D925C!important;   
+    width: inherit;
+}
+.selectedParent.active>a{
+    color: white !important;
+    background-color: #0D925C!important;   
+}
+.homeLogoHeader.selectedParent>a {
+    background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
+}
+.navbar-default .navbar-nav>.active>a{
+    background-image: none;     
+    box-shadow: none !important;
+    background-color: inherit;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+.close:focus{
+    opacity: 1;
+}
+.carouselContainer{
+    padding-bottom: 48px;
+    padding-top: 48px;
+    width: 957px;
+}
+.newsEventsCarousel{
+    float: right;
+    width: auto;
+}
+.newsEventsCarousel>.carousel-inner>.item>img{
+    height: 500px;
+    width: 820px;
+}
+.carousel-control.left {
+    background-image: none;
+    background-color: rgba(0, 0, 0, .1);
+    width: 41px;
+    height: 41px;
+    margin: -20px -52px 0;    
+    display: block;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    color: #fff !important;
+}
+.carousel-control.right {
+    background-image: none;
+    background-color: rgba(0, 0, 0, .1);
+    width: 41px;
+    height: 41px;
+    margin: -20px -52px 0;    
+    display: block;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    color: #fff !important;
+}
+.newsEventsCarousel>a:hover {
+    background-color: rgba(0,0,0,.3);
+}
+.newsEventsCarousel>.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after{
+    display: none;
+}
+.carousel-caption {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 38px;
+    position: absolute;
+    right: 0; 
+    bottom: 2px;
+    left: 18px;
+    color: #fff;
+    text-align: start; 
+}
+.carousel-indicators{
+    display: none;
+}
+.carouselContainerParent{
+    background-color: #0D925C;
+}
+/*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media only screen and (max-width: 499px) {
+.carouselContainer {
+    padding-bottom: 31px;
+    padding-top: 20px;
+    width: auto;
+}
+.carousel-control.left {
+    display: none;
+}
+.carousel-control.right {
+    display: none;
+}
+.newsEventsCarousel {
+    float: none; 
+    width: auto;
+}
+.carousel-indicators {
+    display: block;
+    bottom: -37px;
+}
+.newsEventsCarousel>.carousel-inner>.item>img {
+    height: 260px;
+    width: 380px;
+}
+    .navbar-brand{
+        padding: 0;
+    }
+    #slideNav>.container>.navbar-brand>img {
+     display: inline; 
+}
+    .mobileSanitationHeaderText{
+    margin-left: 12px;
+    margin-top: 24px;
+    position: absolute;
+    display: inline-block;
+    color: #000000;	
+    font-size: 22px;	
+    font-weight: bold;	
+    line-height: 27px;
+    }
+    .middleHeaderLogoMobile {
+    margin-left: 17px;      
+    width: 45.96px;
+    height: 45.98px;
+    margin-top: 14px;
+}
+    .searchMessagesInput {
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-top: 23px;        
+        height: 40px;
+        border: 1px solid #D5D5D5;
+        border-radius: 3px;
+        width: 100%;
+        padding-left: 14px;
+        font-weight: 200;
+        color: #B6B6B6;        
+    }
+    .mainLinks {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0;
+    }
+    .nav>li>a {
+        padding: 19px 9px;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .modal.fade:not(.in) .modal-dialog {
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0);
+    }
+    .modal-dialog {
+        margin-right: 0px;
+        margin-top: 24px;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 100%;
+        max-height: 100%;
+        display: block!important;
+        -webkit-animation: slideIn 0.7s forwards !important;
+    }
+    .modal-content, .modal-dialog {
+        height: 100%;
+        overflow: hidden;
+    }
+    .modal-header {
+        border-bottom: none;
+        padding: 0;
+    }
+    .modal-body {
+        padding:0;
+    }
+    .modal-header .close {
+        padding-right: 14px;
+        margin-top: -2px;
+        padding-top: 20px;
+    }
+    .navbar-collapse {
+        display: none !important;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+     .navbar-collapse.collapsing {
+        display: none !important;
+    }
+    .navbar-collapse.collapsing {
+        height: 0 !important;
+        max-height: 0 !important;
+    }
+    #slideNav .container >.navbar-header {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .upperHeaderContainer {
+        padding-left: 23px;
+        width: 100%;
+    }
+    .middleHeader {
+        width: 100%;
+    }
+    #slideNav>.container {
+        height: 73px;
+        width: 100%;
+    }
+    .upperHeaderTitle2 {
+        display: none;
+    }
+    .upperHeaderTitle1{
+        display: none;
+    }
+    .NYCUpperHeaderDivider2{
+        display: none;
+    }
+    .upperHeaderTitle{
+        font-size: 10px;
+    }
+    .NYCUpperHeaderLogo {
+        height: 13px;
+        width: 34px;
+    }
+    .middleHeader{
+        display: none;
+    }
+    .mobileSanitationLogo{
+        display: inline;
+    }
+    .homeLogoHeader {
+        border: none;
+        width: 100%;
+    }
+    .homeHeaderTitles{
+        border-top: 1px solid #E0E0E0!important;
+    }
+    .bottomHeaderTitles{
+        text-align: left;
+        border: none;        
+        width: 100%;
+    }
+    .bottomHeaderTitles>a{
+        color: #333333!important;	
+        font-size: 16px;	
+        font-weight: 700;	
+        line-height: 19px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        height: 2.3px;
+        background-color: black;
+    }
+    .navbar-default .navbar-toggle {
+        border: none;
+    }
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-toggle{
+        margin-top: 21px;
+    }
+}
+
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px){
+.upperHeaderContainer {
+    padding-right: 20px;
+    width: 753px;
+}
+.middleHeader {
+    width: 758px;
+}
+#slideNav>.container {
+    width: 741px;
+}
+.bottomHeaderTitles{
+    width: auto;
+}
+#navBar>ul>.homeLogoHeader.selectedParent.active>a {
+    background: url('../images/nav-sprite.png') no-repeat 11px -28.2px;    
+}
+.homeLogoHeader:hover a{
+    background: url('../images/nav-sprite.png') no-repeat 10.5px -28.2px;
+}
+.searchMessagesInput{
+    font-weight: 500;
+    width: 185px;
+    margin-top: 10px;
+}
+.homeLogoHeader{
+    width: 44.25px;
+}
+#navBar{
+    padding-left: 9px;
+}
+.carousel-control.left{
+    display: none;
+}
+.carousel-control.right{
+    display: none;
+}
+.carouselContainer{
+    padding-bottom: 41px;
+    padding-top: 25px;
+    width: 750px;
+}
+.newsEventsCarousel{
+    width: 720px;
+}
+.carousel-indicators{
+    display: block;
+    bottom: -42px;
+}
+.carousel-caption{
+    text-shadow: none;
+    padding-left: 20px;
+    background-color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 38px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 1px;
+    color: black;
+    text-align: start;
+    padding-bottom: 21px
+}
+}
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
+.carouselContainer {
+    padding-bottom: 31px;
+    padding-top: 20px;
+    width: auto;
+}
+.newsEventsCarousel {
+    float: none; 
+    width: auto;
+}
+.carousel-indicators {
+    display: block;
+    bottom: -37px;
+}
+.newsEventsCarousel>.carousel-inner>.item>img {
+    height: 391px;
+    width: 700px;
+}
+    .navbar-brand{
+        padding: 0;
+    }
+    #slideNav>.container>.navbar-brand>img {
+     display: inline; 
+}
+    .mobileSanitationHeaderText{
+    margin-left: 12px;
+    margin-top: 24px;
+    position: absolute;
+    display: inline-block;
+    color: #000000;	
+    font-size: 22px;	
+    font-weight: bold;	
+    line-height: 27px;
+    }
+    .middleHeaderLogoMobile {
+    margin-left: 17px;      
+    width: 45.96px;
+    height: 45.98px;
+    margin-top: 14px;
+}
+    .searchMessagesInput {
+        margin-bottom: 20px;
+        margin-left: 0px;
+        margin-top: 23px;        
+        height: 40px;
+        border: 1px solid #D5D5D5;
+        border-radius: 3px;
+        width: 100%;
+        padding-left: 14px;
+        font-weight: 200;
+        color: #B6B6B6;        
+    }
+    .mainLinks {
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0;
+    }
+    .nav>li>a {
+        padding: 19px 9px;
+    }
+    .mainLinks>li>a {
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .modal.fade:not(.in) .modal-dialog {
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0);
+    }
+    .modal-dialog {
+        margin-right: 0px;
+        margin-top: 24px;
+        margin-left: auto;
+        margin-bottom: 0;
+        width: 100%;
+        max-height: 100%;
+        display: block!important;
+        -webkit-animation: slideIn 0.7s forwards !important;
+    }
+    .modal-content, .modal-dialog {
+        height: 100%;
+        overflow: scroll;
+    }
+    .modal-header {
+        border-bottom: none;
+        padding: 0;
+    }
+    .modal-body {
+        padding:0;
+    }
+    .modal-header .close {
+        padding-right: 14px;
+        margin-top: -2px;
+        padding-top: 20px;
+    }
+    .navbar-collapse {
+        display: none !important;
+    }
+    .navbar-header .collapse,
+    .navbar-toggle {
+        display: block !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: none !important;
+    }
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+     .navbar-collapse.collapsing {
+        display: none !important;
+    }
+    .navbar-collapse.collapsing {
+        height: 0 !important;
+        max-height: 0 !important;
+    }
+    #slideNav .container >.navbar-header {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .navbar-header {
+        float: none;
+    }
+    .upperHeaderContainer {
+        padding-left: 23px;
+        width: 100%;
+    }
+    .middleHeader {
+        width: 100%;
+    }
+    #slideNav>.container {
+        height: 73px;
+        width: 100%;
+    }
+    .upperHeaderTitle2 {
+        display: none;
+    }
+    .upperHeaderTitle1{
+        display: none;
+    }
+    .NYCUpperHeaderDivider2{
+        display: none;
+    }
+    .upperHeaderTitle{
+        font-size: 10px;
+    }
+    .NYCUpperHeaderLogo {
+        height: 13px;
+        width: 34px;
+    }
+    .middleHeader{
+        display: none;
+    }
+    .mobileSanitationLogo{
+        display: inline;
+    }
+    .homeLogoHeader {
+        border: none;
+        width: 100%;
+    }
+    .homeHeaderTitles{
+        border-top: 1px solid #E0E0E0!important;
+    }
+    .bottomHeaderTitles{
+        text-align: left;
+        border: none;        
+        width: 100%;
+    }
+    .bottomHeaderTitles>a{
+        color: #333333!important;	
+        font-size: 16px;	
+        font-weight: 700;	
+        line-height: 19px;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        height: 2.3px;
+        background-color: black;
+    }
+    .navbar-default .navbar-toggle {
+        border: none;
+    }
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-toggle{
+        margin-top: 21px;
+    }
+}
+/*BETWEEN DESKTOP AND TABLET*/
+@media (min-width: 960px) and (max-width: 1284px){
+.upperHeaderContainer{
+    padding-right: 4px;
+    width: 941px;
+}
+.middleHeader {
+    width: 950px;
+}
+#slideNav>.container {
+    width: 961px;
+}
+.carousel-control.left{
+    display: none;
+}
+.carousel-control.right{
+    display: none;
+}
+.carouselContainer{
+    width: 972px;
+}
+.newsEventsCarousel{
+    float: none;
+    width: 100%;
+}
+.carousel-indicators{
+    display: block;
+}
+.newsEventsCarousel>.carousel-inner>.item>img{
+    width: 942px;
+}
+.carouselContainer{
+    padding-bottom: 62px;
+    padding-top: 41px;
+    margin-left: 24px;
+    margin-right: auto;
+}
+.carousel-indicators{
+    bottom: -52px;
+}
+.carousel-caption{
+    text-shadow: none;
+    padding-left: 20px;
+    background-color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 38px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 1px;
+    color: black;
+    text-align: start;
+    padding-bottom: 21px
+}
 }
