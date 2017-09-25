@@ -4,7 +4,8 @@ import { Route } from 'react-router-dom';
 import Home from './components/home';
 import About from './components/about';
 import Header from './components/shared/header';
-import Footer from './components/shared/footer';
+import Footer from './components/shared/footer/footer';
+import NYCFooter from './components/shared/footer/NYCfooter';
 
 const routes = (
     <div>
@@ -17,7 +18,8 @@ const routes = (
             <Route exact path={"/" + window.staticUrl + "/home"} component={Home} />*/}
         </div>
         <div id="footer">
-            {/*<Footer />*/}
+            <Footer />
+            <NYCFooter />
         </div>
 
     </div>
