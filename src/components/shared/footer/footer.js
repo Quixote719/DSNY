@@ -8,9 +8,9 @@ import '../../../content/styles/footer.css';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 // Test
-var Footer = React.createClass({
+class Footer extends Component{
 
-    render: function () {
+    render() {
       const Service = [{name:'Collection',link:'Cpage'},{name:'Cleaning',link:'CL'},{name:'Snow',link:'Spage'}];
       const App = [{name:'DSNY Info',link:'https://medium.com/',AppStore:'https://www.google.com/',GooglePlay:'https://www.facebook.com/nycsanitation'},
       {name:'donateNYC',link:'https://medium.com/',AppStore:'',GooglePlay:''},
@@ -46,7 +46,7 @@ var Footer = React.createClass({
         </div>
         );
     }
-});
+};
 
 
 export default Footer;

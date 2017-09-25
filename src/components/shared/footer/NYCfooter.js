@@ -4,9 +4,9 @@ import { ListGroup } from 'react-bootstrap';
 import '../../../content/styles/footer.css';
 
 // Test
-var NYCFooter = React.createClass({
+class NYCFooter extends Component{
 
-    render: function () {
+    render (){
         return (
             <div id="NYCFooter">
               <div className="FooterBox">
@@ -33,7 +33,7 @@ var NYCFooter = React.createClass({
             </div>
         );
     }
-});
+};
 
 
 export default NYCFooter;
