@@ -1,0 +1,32 @@
+.GBanner{
+    background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
+}
+
+.GTexture {
+    height: 215px;
+    background: url('../images/Darkgreen.png');
+}
+
+.GBannerTitle{
+    padding-top: 60px;
+  	color: #FFFFFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.GBannerContent{
+    margin: 0 auto;
+    width: 750px;
+    padding-top: 25px;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 23px;
+    text-align: center;
+}
