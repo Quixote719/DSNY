@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Banner from './banner';
+import RoundProfile from './RoundProfile';
 
 class About extends Component {
 

@@ -7,13 +7,12 @@ import FooterArchive from './FooterArchive.js';
 import '../../../content/styles/footer.css';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 
-// Test
 class Footer extends Component{
 
     render() {
       const Service = [{name:'Collection',link:'Cpage'},{name:'Cleaning',link:'CL'},{name:'Snow',link:'Spage'}];
-      const App = [{name:'DSNY Info',link:'https://medium.com/',AppStore:'https://www.google.com/',GooglePlay:'https://www.facebook.com/nycsanitation'},
-      {name:'donateNYC',link:'https://medium.com/',AppStore:'',GooglePlay:''},
+      const App = [{name:'DSNY Info',link:'https://medium.com/',AppStore:'https://itunes.apple.com/us/app/dsny-info/id1139303678?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.dsny&hl=en'},
+      {name:'donateNYC',link:'https://medium.com/',AppStore:'https://itunes.apple.com/us/app/donatenyc/id1112567037?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.donate&hl=en'},
       {name:'Zero Waste School',link:'https://medium.com/',AppStore:'',GooglePlay:''}];
       const Archive = [{name:'Newsletters',link:'l1'},
                        {name:'Memoranda of Understanding',link:'l2'},

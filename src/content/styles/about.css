@@ -30,3 +30,9 @@
     line-height: 23px;
     text-align: center;
 }
+
+.RoundProfile{
+  height: 215px;
+  width: 215px;
+  border-radius: 50%;
+}
