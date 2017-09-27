@@ -1,6 +1,7 @@
 let initStore = {
     carouselItems: [],
-    AboutBigData:{}
+    AboutBigData:{},
+    LeadershipBigData:{}
 };
 
 export default initStore;

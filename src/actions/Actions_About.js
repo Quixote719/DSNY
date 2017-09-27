@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-export function AboutData(successCallback) {
+export function AboutData() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pages/?slug=about-dsny')
             .then((response) => {
@@ -13,23 +13,30 @@ export function AboutData(successCallback) {
                             payload: response.data,
                         }
                     )
-                    successCallback();
+                    // successCallback();
                 })
     }
 }
 
-export function AboutLeadership(successCallback) {
+export function AboutLeadership() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection/?slug=leadership')
             .then((response) => {
-              alert('Leadership');
                 console.log(response.data[0]);
                 let ProfileId = response.data[0].feature_image.ID;
                 console.log(ProfileId);
                 console.log('!!!')
-                axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/387')
+                axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + ProfileId)
                 .then((response)=>{
-                  alert('ID');
+                  console.log('L');
+                  console.log(response.data);
+                  console.log(response.data.source_url);
+                  dispatch(
+                      {
+                          type: 'SET_ABOUT_LEADERSHIP',
+                          payload: response.data,
+                      }
+                  )
                 })
             })
     }

@@ -5,11 +5,11 @@ import '../../content/styles/about.css';
 class RoundProfile extends Component {
 
   render() {
-
+      let that = this
     return (
-      <div >
-        <img className="RoundProfile" src={require('../../content/images/DSNY-Web_logo.png')} alt=""/>
-        <img className="RoundProfile" src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' alt=""/>
+
+      <div>
+        <img className="RoundProfile" src={that.props.ProfileUrl} alt=""/>
       </div>
     )
   }
