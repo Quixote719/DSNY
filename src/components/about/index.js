@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Banner from './banner';
-import RoundProfile from './RoundProfile';
+import Banner from '../shared/banner';
+import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/Actions_About';
 import { connect } from 'react-redux';
 
