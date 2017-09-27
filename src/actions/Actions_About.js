@@ -24,8 +24,10 @@ export function AboutLeadership(successCallback) {
             .then((response) => {
               alert('Leadership');
                 console.log(response.data[0]);
-                let ProfileId = response.data[0].id;
-                axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection/?slug=leadership?feature_image=' + ProfileId)
+                let ProfileId = response.data[0].feature_image.ID;
+                console.log(ProfileId);
+                console.log('!!!')
+                axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/387')
                 .then((response)=>{
                   alert('ID');
                 })
