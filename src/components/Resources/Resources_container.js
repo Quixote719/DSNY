@@ -3,7 +3,7 @@ import PressRelease from './PressReleases/press_release_list'
 import ReportStatsardList from './ReportsStats/Report_stats_card_list'
 import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
-import Banner from '../about/banner'
+import Banner from '../shared/banner'
 
 class ResourcesContainer extends Component {
 
