@@ -4,9 +4,8 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {fetchPrSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
-import PressReleaseListItem from './press_release_list_item';
 import SubSectionButton from '../../shared/sub_section_button';
-
+import PressReleaseListItem from './press_release_list_item';
 class PressRelease extends Component {
   componentDidMount() {
     this.props.fetchPrSubList();
