@@ -24,8 +24,6 @@ export function AboutLeadership() {
             .then((response) => {
                 console.log(response.data[0]);
                 let ProfileId = response.data[0].feature_image.ID;
-                console.log(ProfileId);
-                console.log('!!!')
                 axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + ProfileId)
                 .then((response)=>{
                   console.log('L');
