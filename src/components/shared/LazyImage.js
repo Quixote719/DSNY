@@ -19,17 +19,17 @@ export default class LazyImage extends Component {
     img.onerror = () => {
       this.setState({error: true});
     };
-    this.fetchmedia({this.props.id});
+
   }
 
-  export function fetchmedia(id) {
-
-    axios.get('http://dsnydev.staging.wpengine.com/wp-json/wp/v2/media/' + id).then((dataMedia) => {
-
-      this.setState({src: dataMedia.data.source_url});
-
-    })
-  }
+  // function fetchmedia(id) {
+  //
+  //   axios.get('http://dsnydev.staging.wpengine.com/wp-json/wp/v2/media/' + id).then((dataMedia) => {
+  //
+  //     this.setState({src: dataMedia.data.source_url});
+  //
+  //   })
+  // }
 
   render() {
     if (this.state.error) {
