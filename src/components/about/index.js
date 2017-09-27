@@ -18,9 +18,14 @@ class About extends Component {
     this.forceUpdate();
   }
   render() {
-    console.log(this.props.AboutBigData);
-    const BannerText = {title:'About DSNY',
-    content:'Lorem ipsum dolor sit amet consectetuer adipiscing elit enean commodo ligula eget dolorAenean massa. Cum sociis natoque penatibus.'}
+    console.log(this.props.AboutBigData[0]);
+    let AboutBigData = this.props.AboutBigData[0];
+    let BannerText = {};
+    if(AboutBigData!= undefined){
+      BannerText = {title: AboutBigData.slug,
+      content: AboutBigData.content.rendered}
+    }
+
     return (
       <div>
         <Banner text={BannerText}/>
