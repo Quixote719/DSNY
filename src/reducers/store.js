@@ -1,5 +1,11 @@
 let initStore = {
-    carouselItems: []
+  carouselItems: [],
+  PresssReleasesSubList: {},
+  ReportCardSubList: {},
+  StatsCardSubList: {},
+  LawsSubList: {},
+  EmPromotionalSubList: {},
+  EmForSchoolSubList: {}
 };
 
 export default initStore;
