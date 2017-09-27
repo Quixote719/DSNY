@@ -1,0 +1,108 @@
+/*card with title and body*/
+
+.subSectioncardTB {
+  min-height: 220px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.NBsubSectioncardTB {
+  min-height: 220px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cardTitle {
+  min-height: 88px;
+  min-width: 190px;
+}
+
+.cardTitleText {
+  color: #00764D;
+  font-family: "Helvetica Neue";
+  font-size: 17.5px;
+  font-weight: bold;
+  line-height: 19px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  max-height: 57px;
+}
+
+.cardBody {
+  min-height: 72px;
+  min-width: 186px;
+}
+
+.cardBodyText {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  max-height: 72px;
+}
+
+
+/*hover*/
+
+.subSectioncardTB:hover .cardTitleText, .subSectioncardTI:hover .cardTitleText, .subSectioncardT:hover .cardTitleText, .NBsubSectioncardTB:hover .cardTitleText {
+  color: #7CC04B;
+}
+
+
+/*card with title and image*/
+
+.subSectioncardTI {
+  min-height: 220px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.subSectioncardTI .cardTitleText {
+  padding: 15px;
+  max-height: 70px;
+  margin-top: 35px;
+}
+
+.cardImage {
+  min-height: 65px;
+  min-width: 190px;
+  overflow: hidden;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/*card with title and image*/
+
+.subSectioncardT {
+  min-height: 90px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.subSectioncardT .cardTitleText {
+  max-height: 80px;
+}

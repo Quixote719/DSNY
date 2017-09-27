@@ -1,48 +1,60 @@
 import axios from 'axios';
+import * as types from '../constants/ActionTypes';
+import {
+  MEDIAS_ALL_URL,
+  MEDIA_URL,
+  PRESS_RELEASE_SUB_LIST_URL,
+  FETCH_REPORT_CARD_SUB_LIST_URL,
+  FETCH_STATS_CARD_SUB_LIST_URL,
+  FETCH_LAWS_SUB_LIST_URL,
+  FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST_URL,
+  FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL
+} from '../constants/ApiConstants';
 
-export const FETCH_POSTS = 'fetch_posts';
-export const FETCH_POST = 'fetch_post';
-export const CREATE_POST = 'create_post';
-export const DELETE_POST = 'delete_post';
+export function fetchmedias() {
+  const request = axios.get(MEDIAS_ALL_URL);
 
-const ROOT_URL = 'http://reduxblog.herokuapp.com/api';
-const API_KEY = '?key=PAPERCLIP1234';
-
-export function fetchPosts() {
-  const request = axios.get(`${ROOT_URL}/posts${API_KEY}`);
-
-  return {
-    type: FETCH_POSTS,
-    payload: request
-  };
+  return {type: types.FETCH_MEDIAS, payload: request};
 }
 
-export function createPost(values, callback) {
-  const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, values)
-    .then(() => callback());
+export function fetchPrSubList() {
+  const request = axios.get(PRESS_RELEASE_SUB_LIST_URL);
 
-  return {
-    type: CREATE_POST,
-    payload: request
-  };
-}
-// this is a test change one
-export function fetchPost(id) {
-  const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
-
-  return {
-    type: FETCH_POST,
-    payload: request
-  };
+  return {type: types.FETCH_PRESS_RELEASE_SUB_LIST, payload: request};
 }
 
-export function deletePost(id, callback) {
-  const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
-    .then(() => callback());
+export function fetchmedia(id) {
+  const request = axios.get(MEDIA_URL.replace(':id', id));
 
-  return {
-    type: DELETE_POST,
-    payload: id
-  }
+  return {type: types.FETCH_MEDIA, payload: request};
 }
-// this is a test change one// this is a test change one// this is a test change one// this is a test change one
+
+export function fetchRcSubList() {
+  const request = axios.get(FETCH_REPORT_CARD_SUB_LIST_URL);
+
+  return {type: types.FETCH_REPORT_CARD_SUB_LIST, payload: request};
+}
+
+export function fetchScSubList() {
+  const request = axios.get(FETCH_STATS_CARD_SUB_LIST_URL);
+
+  return {type: types.FETCH_STATS_CARD_SUB_LIST, payload: request};
+}
+
+export function fetchLawsSubList() {
+  const request = axios.get(FETCH_LAWS_SUB_LIST_URL);
+
+  return {type: types.FETCH_LAWS_SUB_LIST, payload: request};
+}
+
+export function fetchEmPSubList() {
+  const request = axios.get(FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL);
+
+  return {type: types.FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST, payload: request};
+}
+
+export function fetchEmFsSubList() {
+  const request = axios.get(FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST_URL);
+
+  return {type: types.FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST, payload: request};
+}

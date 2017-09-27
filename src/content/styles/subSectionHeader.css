@@ -1,0 +1,16 @@
+.sectionHeader {
+  height: 33px;
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+
+.patternLineGreen {
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background: repeating-linear-gradient(135deg, white 0px, white 1px, #7cc04b 2px, #7cc04b 2px);
+}
