@@ -2,16 +2,15 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {fetchEmPSubList, fetchEmFsSubList} from "../../../actions";
+import {fetchEmPSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
-import CardTitleImage from '../../shared/Card_title_image';
+import CardTitleBody from '../../shared/Card_title_body';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class EducationalMaterialsList extends Component {
   componentDidMount() {
     this.props.fetchEmPSubList();
-    this.props.fetchEmFsSubList();
   }
 
   constructor() {
@@ -28,7 +27,7 @@ class EducationalMaterialsList extends Component {
 
   renderPosts(cards) {
     return _.map(this.firstN(cards, 8), Item => {
-      return (<CardTitleImage className='NBsubSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
+      return (<CardTitleBody className='subSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
     });
   }
 
@@ -55,23 +54,8 @@ class EducationalMaterialsList extends Component {
       <div>
         <SubSectionHeader title='Educational Materials'/>
         <div>
-          <div>
-            <h1>
-              <b>Promotional</b>
-            </h1>
-          </div>
           <Row>
             {this.renderPosts(promotional)}
-          </Row>
-        </div>
-        <div>
-          <div>
-            <h1>
-              <b>For Schools</b>
-            </h1>
-          </div>
-          <Row>
-            {this.renderPosts(forSchool)}
           </Row>
         </div>
       </div>
@@ -81,7 +65,7 @@ class EducationalMaterialsList extends Component {
 }
 
 function mapStateToProps(state) {
-  return {promotional: state.resources.EmPromotionalSubList, forSchool: state.resources.EmForSchoolSubList};
+  return {promotional: state.resources.EmPromotionalSubList};
 }
 
-export default connect(mapStateToProps, {fetchEmPSubList, fetchEmFsSubList})(EducationalMaterialsList);
+export default connect(mapStateToProps, {fetchEmPSubList})(EducationalMaterialsList);
