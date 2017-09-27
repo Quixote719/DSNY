@@ -13,6 +13,7 @@ class About extends Component {
   }
   componentWillMount() {
     this.props.AboutData(this.successCallback);
+    this.props.AboutLeadership(this.successCallback);
   }
   successCallback() {
     this.forceUpdate();
@@ -22,7 +23,7 @@ class About extends Component {
     let AboutBigData = this.props.AboutBigData[0];
     let BannerText = {};
     if(AboutBigData!= undefined){
-      BannerText = {title: AboutBigData.slug,
+      BannerText = {title: AboutBigData.title.rendered,
       content: AboutBigData.content.rendered}
     }
 
@@ -37,11 +38,13 @@ class About extends Component {
 function mapStateToProps(state) {
   return {
     AboutBigData: state.AboutDataReducer.AboutBigData,
+    LeadershipBigData: state.AboutDataReducer.LeadershipBigData
   }
 }
 
 let actionList = {
   AboutData: actions.AboutData,
+  AboutLeadership: actions.AboutLeadership
 };
 
 About = connect(mapStateToProps, actionList)(About);
