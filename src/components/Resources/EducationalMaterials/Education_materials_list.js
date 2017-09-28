@@ -31,15 +31,6 @@ class EducationalMaterialsList extends Component {
     });
   }
 
-  ViewAllButton(l) {
-    if (l > 4) {
-      return (<SubSectionButton title='VIEW ALL'/>);
-    } else {
-      return null;
-    }
-
-  }
-
   render() {
 
     const {promotional, forSchool} = this.props;
