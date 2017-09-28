@@ -44,7 +44,7 @@ import data from './panelData.json';
 // }
 export function carouselData(successCallback) {
     return function (dispatch) {
-        axios.get('http://dsnydev.staging.wpengine.com/wp-json/wp_query/args?post_type=herocard&orderby=date&order=DESC')
+        axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=41orderby=date&order=DESC&post_per_page=5')
             .then((data) => {
                 let c = 0;
                 console.log(data.data)
