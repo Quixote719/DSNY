@@ -5,7 +5,11 @@ let initStore = {
   StatsCardSubList: {},
   LawsSubList: {},
   EmPromotionalSubList: {},
-  EmForSchoolSubList: {}
+  EmForSchoolSubList: {},
+  About: {
+    AboutBigData:{},
+    LeadershipBigData:{}
+  }
 };
 
 export default initStore;
