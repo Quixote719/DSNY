@@ -9,6 +9,7 @@ let initStore = {
   About: {
     AboutBigData:{},
     LeadershipBigData:{},
+    LeadershipImage:{},
     LocationsBigData:{},
     OperationsBigData:{},
     StrategicPlanBigData:{},

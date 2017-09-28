@@ -31,16 +31,19 @@ class About extends Component {
   render() {
       let AboutBigData = this.props.AboutBigData.data;
       let LeadershipBigData = this.props.LeadershipBigData;
+      let LeadershipImage = this.props.LeadershipImage;
       let BureausBigData = this.props.BureausBigData.data;
       let StrategicPlanBigData = this.props.StrategicPlanBigData.data;
       let FoundationBigData = this.props.FoundationBigData.data;
       let LocationsBigData = this.props.LocationsBigData;
       let OperationsBigData = this.props.OperationsBigData;
       let BannerText = {};
-      let ProfileUrl = '';
+      let LeadershipProps = {};
       let BureausTitle = '';
       let StrategicPlanProps = {};
       let FoundationTitle = '';
+
+      console.log('!!!!!!!!432'+this.props.LeadershipBigData);
 
       if(AboutBigData != undefined){
         console.log('AboutBigData');
@@ -51,7 +54,16 @@ class About extends Component {
       if(LeadershipBigData != undefined){
         console.log('LeadershipBigData');
         console.log(LeadershipBigData);
-        ProfileUrl = LeadershipBigData.source_url;
+        if(!(Object.keys(LeadershipBigData).length === 0 && LeadershipBigData.constructor === Object)){
+          LeadershipProps.title = LeadershipBigData[0].title.rendered;
+          LeadershipProps.content = LeadershipBigData[0].content.rendered;
+        }
+
+      }
+      if(LeadershipImage != undefined){
+        console.log('LeadershipImage');
+        console.log(LeadershipImage);
+        LeadershipProps.ProfileUrl = LeadershipImage.source_url;
       }
       if(BureausBigData != undefined){
         console.log('BureausBigData');
@@ -82,12 +94,12 @@ class About extends Component {
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
-            <Leadership title = 'Leadership' ProfileUrl = {ProfileUrl}/>
+            <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
             <Bureaus BureausTitle = {BureausTitle}/>
             <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
-            <Foundation ProfileUrl = {ProfileUrl}/>
-            <Locations ProfileUrl = {ProfileUrl}/>
-            <Operations ProfileUrl = {ProfileUrl}/>
+            <Foundation/>
+            <Locations/>
+            <Operations/>
           </div>
         </div>
       )
@@ -98,6 +110,7 @@ function mapStateToProps(state) {
   return {
     AboutBigData: state.AboutDataReducer.About.AboutBigData,
     LeadershipBigData: state.AboutDataReducer.About.LeadershipBigData,
+    LeadershipImage: state.AboutDataReducer.About.LeadershipImage,
     LocationsBigData: state.AboutDataReducer.About.LocationsBigData,
     OperationsBigData: state.AboutDataReducer.About.OperationsBigData,
     StrategicPlanBigData: state.AboutDataReducer.About.StrategicPlanBigData,

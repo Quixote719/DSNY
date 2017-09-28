@@ -10,8 +10,11 @@ class Leadership extends Component {
   render() {
     return (
       <div className="Leadership">
-        <SubSectionHeader title = {this.props.title}/>
-        <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
+        <SubSectionHeader title = {this.props.LeadershipProps.title}/>
+        <RoundProfile ProfileUrl = {this.props.LeadershipProps.ProfileUrl}/>
+        <div>
+          {this.props.LeadershipProps.content}
+        </div>
       </div>
     )
   }

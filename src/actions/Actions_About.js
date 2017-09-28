@@ -9,15 +9,11 @@ export function AboutLeadership() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection/?slug=leadership')
             .then((response) => {
+                dispatch({ type: 'SET_ABOUT_LEADERSHIP', payload: response.data});
                 let ProfileId = response.data[0].feature_image.ID;
                 axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + ProfileId)
                 .then((response)=>{
-                  dispatch(
-                      {
-                          type: 'SET_ABOUT_LEADERSHIP',
-                          payload: response.data
-                      }
-                  )
+                  dispatch({ type: 'SET_ABOUT_LEADERSHIP_IMAGE', payload: response.data});
                 })
             })
     }

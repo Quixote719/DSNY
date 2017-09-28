@@ -6,6 +6,8 @@ export default function AboutDataReducer(state = initStore, action) {
       return { ...state, About: {...state.About, AboutBigData: action.payload}};
     case 'SET_ABOUT_LEADERSHIP':
       return { ...state, About: {...state.About, LeadershipBigData: action.payload}};
+    case 'SET_ABOUT_LEADERSHIP_IMAGE':
+      return { ...state, About: {...state.About, LeadershipImage: action.payload}};
     case 'SET_ABOUT_BUREAUS':
       return { ...state, About: {...state.About, BureausBigData: action.payload}};
     case 'SET_ABOUT_STRATEGICPLAN':
