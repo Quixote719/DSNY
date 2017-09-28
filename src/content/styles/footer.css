@@ -1,990 +1,212 @@
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-  width:auto;
+.FooterBox{
+    max-width: 980px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
-.list-group
-{
-    border-radius: 0px;
-    box-shadow: none !important;
+.FooterCol a, .FooterCol span{
+    color: #FFFFFF;
 }
-
-#body {
-  /* Margin bottom by footer height */
-  margin-bottom: 0;
-}
-
-#footer {
-    /* bottom: 0; */
-    /* position: absolute; */
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
-    background-color: #4A4A4A ;
-    /*height: 341px;*/
-    width: 100%;
-    padding: 0 auto;
-}
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-#container {
-  display: block;
-  margin: 0 auto!important;
-  width:1300px;
-}
-.container .text-muted {
-  margin: 0px 0;
-}
-
-#p{
-  font-family: "oxygen";
-  font-weight: 400;
-  position: relative;
-  left: 150px;
-  color: white
-
-
-}
-
-#s{
-  font-family: "oxygen";
-  list-style-type:none;
-   position: relative;
-  left: 110px;
-  color: #9B9B9B
-}
-
-#r{
-  font-family: "oxygen";
-  font-size: 12px;
-   position: relative;
-   left: 150px;
-  color: lightgrey
-
-}
-/* unvisited link */
-a:link {
-text-decoration: none;
-     color: #9B9B9B;
-}
-
-/* visited link */
-a:visited {
-     color: #9B9B9B;
-}
-
-/* mouse over link */
-a:hover {
-     color: none;
-}
-
-/* selected link */
-a:active {
-     color: #9B9B9B;
+.FooterCol a:hover, .FooterCol span:hover {
+    color: #83BF48;
     text-decoration: none;
 }
 
-
-#a{
-  text-decoration: none;
-     color: white;
+.FooterCol{
+    margin: 0 6% 0 0;
+    vertical-align: top;
+    width: 27.3%;
+    display: inline-block;
 }
 
-#columns {
-    max-width:90%;
-    columns: 3;
-    min-width:100px;
-     white-space: nowrap;
+.FooterSubt{
+    margin: 14px auto 18px auto;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-
-
-#ColumnSubElements{
-  height: 20px;
-  width: 246.17px;
-  font-size: 16px;
-  font-family: "oxygen";
-  line-height: 20px;
-  color: #9B9B9B;
-  list-style-type:none;
-  left: 110px;
-  position: relative;
-  margin: 9px 0;
-  min-width:100px;
+.FooterRow{
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue-bold", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
 }
 
-#ColumnHeadElements{
-  height: 20px;
-	width: 246.17px;
-  color: #FFFFFF;
-  font-family: "oxygen";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  list-style-type:none;
-   left: 110px;
-   position: relative;
-   min-width:100px;
-}
-.a{
-text-decoration: none;
-    color:white;
-}
-#y{
-  position: relative;
-  list-style-type:none;
-  left: 110px;
-  color: #9B9B9B;
-  bottom:-22px;
-   font-family: "oxygen";
-}
-#AppleStore{
-  margin: -20px 0;
-   left: 110px;
-  position: relative;
-  height: 43.92px;
-  	width: 149px;
-
-    border-radius: 5px;
-    background-color: #000000;
-  bottom:-5px;
+.FooterBoldRow{
+    margin: 22px 0;
+    color: #FFFFFF;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-#PlayStore{
-    margin: -20px 0;
-height: 43.92px;
-width: 149px;
-
-border-radius: 5px;
-	background-color: #000000;
-   left: 265px;
-  position: relative;
-  bottom: 16px;
+.FooterBtn{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #EDEDEE;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
 }
 
-#qw{
-	height: 20px;
-  width: 246.17px;
-  color: #FFFFFF;
-  font-family: "oxygen";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  position:relative;
-  top:34px;
-  left:110px;
-  list-style-type:none;
-  }
-
-
-#FacebookLink{
-   left:-95px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
-}
-#TwitterLink{
-   left:-85px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
-}
-#InstagramLink{
-   left:-75px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
+.fa{
+    margin: 0 2%;
+    color: #FFFFFF;
+    font-size: 21px!important;
+    cursor: pointer;
 }
 
-#mo{
-  position:relative;
-  bottom:30px;
-
-
-  border: 1px solid #535353;
-  background-color: grey;
-
-
+.fa-apple,.fa-android{
+    float: right;
 }
 
-
-#column{
-
-column-gap: 100px;
-
+.fa:hover{
+  color: #83BF48;
 }
 
-#column3{
-  float:right;
+.SpLine{
+    margin: 8px 0;
+    opacity: 0.5;
+    background-color: #DFDFDF;
 }
 
-#text-nowrap {
-    white-space: nowrap;
+.NYCfooter-links{
+    font-size: 16px;
+    width: 76%;
+    height: 90px;
+    display: inline-block;
 }
 
-Link{
-   white-space: nowrap;
-}
-
-#g{
-  list-style-type:none;
-}
-
-#sd{
-  	height: 30px;
-  width: 200px;
-   position: relative;
-   top:20px;
-
-}
-
-#sdmm{
-  	height: 30px;
-  width: 200px;
-   position: relative;
-   top:5px;
-
-}
-.spaced-columns  {
-  padding: 0px 35px;
-  width: 350px;
-  position: relative;
-}
-
-.sp{
-  padding: -20px 0px;
-}
-#sdm{
-  position: relative;
-  margin-top: -60px;
-  margin-left:50px;
-}
-
-.L{
-  padding: 0 10px;
-}
-
-.nowrap {
-  white-space: nowrap ;
-}
-
-.L1{
-
- padding: 0 18px;
-}
-
-.L2{
-  padding:0 35px;
-}
-
-@media (min-width:1200px) and (max-width:1441px)
-{
-  #container {
+.NYCfooter-links a {
+    height: 30px;
+    width: 30%;
+    color: #FFFFFF;
     display: block;
-    margin: 0 auto!important;
-    width: 100%!important;
-    padding-left: 0;
-}
-  html {
-  position: relative;
-  min-height: 100%;
-  width:auto;
-}
-
-.list-group
-{
-    border-radius: 0px;
-    box-shadow: none !important;
-}
-
-#body {
-  /* Margin bottom by footer height */
-  margin-bottom: 0;
-}
-
-#footer {
-    /* bottom: 0; */
-    /* position: absolute; */
-    /* overflow-x: hidden; */
-    /* overflow-y: hidden; */
-    background-color: #4A4A4A ;
-    /*height: 341px;*/
-    width: 100%;
-    padding: 0 auto;
-}
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-/*#container {
-
- width: auto;
-  padding: 0 15px;
-  left: 700px;
-}*/
-.container .text-muted {
-  margin: 0px 0;
-}
-
-#p{
-  font-family: "oxygen";
-  font-weight: 400;
-  position: relative;
-  left: 150px;
-  color: white
-
-
-}
-
-#s{
-  font-family: "oxygen";
-  list-style-type:none;
-   position: relative;
-  left: 110px;
-  color: #9B9B9B
-}
-
-#r{
-  font-family: "oxygen";
-  font-size: 12px;
-   position: relative;
-   left: 150px;
-  color: lightgrey
-
-}
-/* unvisited link */
-a:link {
-text-decoration: none;
-     color: #9B9B9B;
-}
-
-/* visited link */
-a:visited {
-     color: #9B9B9B;
-}
-
-/* mouse over link */
-a:hover {
-     color: none;
-}
-
-/* selected link */
-a:active {
-     color: #9B9B9B;
+    font-weight: 700;
+    float: left;
+    margin-right: 2.13%;
+    padding: 5px 0px;
     text-decoration: none;
 }
 
+.NYCfooter-links a:hover{
+    color: #83BF48;
+}
 
-#a{
+.SearchBlock{
+  vertical-align: top;
+  width: 23%;
+  display: inline-block;
+}
+
+.copyright{
+    margin-top: 5px;
+    color: #FFFFFF;
+    font-size: 10px;
+}
+
+.copyright p{
+  margin: 0;
+}
+
+.copyright a{
+  color: #FFFFFF;
   text-decoration: none;
-     color: white;
 }
-
-#columns {
-    max-width:90%;
-    columns: 3;
-    min-width:100px;
-     white-space: nowrap;
+.copyright a:hover{
+  color: #83BF48;
 }
 
 
 
-#ColumnSubElements{
-  height: 20px;
-  width: 246.17px;
-  font-size: 16px;
-  font-family: "oxygen";
-  line-height: 20px;
-  color: #9B9B9B;
-  list-style-type:none;
-  left: 110px;
+#Footer {
+  padding: 15px 0;
+  height: 400px;
+  background-color: #58585A;
+}
+
+#NYCFooter {
+  height: 155px;
+  padding: 35px 0 30px 0;
+  background-color: #000000;
+}
+
+#SignupCol{
+  margin: 0 auto;
+  vertical-align: top;
+  width: 32%;
+}
+
+#NYCFooterLogo{
+    width: 93px;
+    height: 31px;
+    margin-right: 15px;
+}
+
+#SearchImg{
   position: relative;
-  margin: 9px 0;
-  min-width:100px;
+  right: 15px;
 }
 
-#ColumnHeadElements{
-  height: 20px;
-	width: 246.17px;
-  color: #FFFFFF;
-  font-family: "oxygen";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  list-style-type:none;
-   left: 110px;
-   position: relative;
-   min-width:100px;
-}
-.a{
-text-decoration: none;
-    color:white;
-}
-#y{
-  position: relative;
-  list-style-type:none;
-  left: 110px;
-  color: #9B9B9B;
-  bottom:-22px;
-   font-family: "oxygen";
-}
-#AppleStore{
-  margin: -20px 0;
-   left: 110px;
-  position: relative;
-  height: 43.92px;
-  	width: 149px;
-
-    border-radius: 5px;
-    background-color: #000000;
-  bottom:-5px;
-}
-
-#PlayStore{
-    margin: -20px 0;
-    height: 43.92px;
-    width: 149px;
-    border-radius: 5px;
-    background-color: #000000;
-    left: 267px;
-    position: relative;
-    bottom: 14px;
-}
-
-#qw{
-	height: 20px;
-  width: 246.17px;
-  color: #FFFFFF;
-  font-family: "oxygen";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  position:relative;
-  top:34px;
-  left:110px;
-  list-style-type:none;
+@media only screen and (max-width: 980px) {
+  .NYCfooter-links{
+    width: 67%;
+    margin-right: auto;
+    height: 150px;
   }
 
+  .FooterBox{
+    width: auto;
+  }
 
-#FacebookLink{
-   left:-95px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
-}
-#TwitterLink{
-   left:-85px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
-}
-#InstagramLink{
-   left:-75px;
-  bottom:-30px;
-  position: relative;
-  color: white;
-  font-family: "oxygen";
-	font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  height: 35.98px;
-  width: 35.98px;
-}
+  .NYCfooter-links a {
+    width: 47%;
+  }
 
-#mo{
-  position:relative;
-    margin-top: 17px !important;
-
-
-  border: 1px solid #535353;
-  background-color: grey;
-
+  #NYCFooter {
+    padding: 15px 0;
+    height: 185px;
+  }
 
 }
 
-
-#column{
-
-column-gap: 100px;
-
-}
-
-#column3{
-  float:right;
-}
-
-#text-nowrap {
-    white-space: nowrap;
-}
-
-Link{
-   white-space: nowrap;
-}
-
-#g{
-  list-style-type:none;
-}
-
-#sd{
-  	height: 30px;
-  width: 200px;
-   position: relative;
-   top:20px;
-
-}
-
-#sdmm{
-  	height: 30px;
-  width: 200px;
-   position: relative;
-   top:5px;
-
-}
-.spaced-columns  {
-  padding: 0px 35px;
-  width: 350px;
-  position: relative;
-}
-
-.sp{
-  padding: -20px 0px;
-}
-#sdm{
-  position: relative;
-  margin-bottom: 30px;
-  margin-left:47px!important;
-}
-
-.L{
-  padding: 0 10px;
-}
-
-.nowrap {
-  white-space: nowrap ;
-}
-
-.L1{
-
- padding: 0 18px;
-}
-
-.L2{
-  padding:0 35px;
-}
-
-}
-
-@media only screen and (min-width: 950px) and (max-width: 1200px){
-.spaced-columns {
-    padding: 0px 61px;
-}
-.col-md-push-7 {
-    left: 55.333333%;
-}
-.col-md-5 {
-    width: 45.666667%;
-    right: 22%!important;
-}
-  .col-md-push-6 {
-    left: 46%;
-}
-  #container{
+@media only screen and (max-width: 700px) {
+  .FooterCol{
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+  }
+  #Footer {
+    height: 950px;
+    background-color: #58585A;
+  }
+  #SignupCol {
+    margin: 0 auto;
+    vertical-align: top;
+    width: 90%;
+  }
+  .NYCfooter-links{
+    margin: 25px 5%;
     width: 100%;
-    padding-left: 0;
+    display: block;
   }
-  #PlayStore{
-    margin: -20px 0;
-height: 43.92px;
-width: 149px;
-
-border-radius: 5px;
-	background-color: #000000;
-   left: 265px;
-  position: relative;
-  bottom: 17px;
-}
-.col-sm-pull-3 {
-    right: 29%;
-}
-.col-sm-3 {
-    width: 18%;
-}
-.large{
-  display: none;
-}
-  .ipad{
-       display: block;
+  .NYCfooter-links a {
+    width: 90%;
   }
-
-  .imo{
-   padding: -50px 0;
-
+  .SearchBlock{
+    margin: 20px 5%;
+    width: 90%;
   }
-
-  .ims{
-    margin-top: 92px;
+  #NYCFooter{
+    height: 480px;
   }
-
-  .iss{
-    top: -5px;
-  }
-
-#footer {
-  /*position: fixed;*/
-  bottom: 0;
-  min-height: 375px;
-  /* Set the fixed height of the footer here */
-  background-color: #4A4A4A;
-  width: 100%;
-  padding: 0 auto;
-
-}
-  .space{
-    margin-top: 10px;
-    height:100px;
-   width: 70px;
-    margin-bottom: -200px;
-
-  }
-   #sdm{
-    margin-top: -50px;
-    margin-left: 41px;
-}
-.spaced-columns1{
-    padding: 0px 61px;
-}
-
-
-}
-
-
-
-
-
-
-
-@media only screen and (min-width: 1200px)
-{
-
-  .large{
-    visibility: hidden;
-    margin-bottom: -200px;
-    display:none;
-  }
-  #mo{
-    margin-top:30px;
-  }
-
-/*#PlayStore {
-    margin: -20px 0;
-    height: 43.92px;
-    width: 149px;
-    border-radius: 5px;
-    background-color: #000000;
-    left: 265px;
-    position: relative;
-    bottom: 14px;
-
-}*/
-#sdm {
-    position: relative;
-    margin-top: -43px;
-    left: 100px;
-      margin-bottom:20px;
-}
-.col-lg-push-6 {
-    left: 55%;
-}
-.desktopFooterColumns{
-  right:11%;
-}
-}
-
-@media (min-width:0)and (max-width: 767px)
-{
-  #mobile{
-    visibility: hidden;
-
-
-  }
-
-#footer {
- position:relative;
-
- overflow-x: hidden;
- /*overflow-y:auto;*/
-
-
-  /* Set the fixed height of the footer here */
-  background-color: #4A4A4A;
-
-  height: 1063px;
-  width: 100%;
-
-}
-#container {
-
-  position: absolute;
-  left: 10px;
-  top: -24px;
-  width: 100%;
-  margin-left:16px!important;
-  padding-left: 0;
-}
-
-#ColumnHeadElements{
-  height: 20px;
-	width: 246.17px;
-  color: #FFFFFF;
-  font-family: "oxygen";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 20px;
-  list-style-type:none;
-   left: -85px;
-   position: relative;
-   min-width:100px;
-   bottom:250px;
-}
-#ColumnSubElements{
-  height: 20px;
-  width: 246.17px;
-  font-size: 16px;
-  font-family: "oxygen";
-  line-height: 20px;
-  color: #9B9B9B;
-  list-style-type:none;
-  left: -85px;
-  position: relative;
-  margin: 9px 0;
-  min-width:100px;
-  bottom:250px;
-}
-
-
-#res{
-   margin-left: 35px;
-   margin-top:55px;
-
-}
-#rvp{
-  margin-top:-110px;
-}
-
-#r3{
-   margin-top:-270px;
-   margin-left:-195px;
-
-}
-
-#mob{
-   margin-top:-200px;
-   margin-left:-120px;
-   position: absolute;
-
-
-}
-
-#mob1{
-     margin-top:-80px;
-   margin-left:-275px;
-   position: absolute;
-
-}
-
-
-.ims{
-    margin-top: 80px;
-    bottom: -20px;
-    width:100%;
-  }
-
- .iss{
-    top: 48px;
-    margin-left: -315px;
-    left: -55px;
-  }
-
-  #PlayStore{
-    margin: -20px 0;
-height: 43.92px;
-width: 149px;
-
-border-radius: 5px;
-	background-color: #000000;
-   left: 265px;
-  position: relative;
-  bottom: 17px;
-  margin-top:0px;
-}
-#mo{
-  margin-left: -26px;
-  bottom: -20px;
-}
-.spaced-columns1{
-  padding: 0px 35px;
-}
-}
-
-
-@media (min-width:403px)and (max-width: 767px)
-{
-
-#rvp{
-  margin-top:-90px;
-}
-
-}
-
-
-
-@media only screen and (min-width: 768px) and (max-width: 950px)
-{
-  #PlayStore{
-    margin: -20px 0;
-height: 43.92px;
-width: 149px;
-
-border-radius: 5px;
-	background-color: #000000;
-   left: 265px;
-  position: relative;
-  bottom: 17px;
-}
-  #container {
-    margin-left: -100px!important;
-    width: 110%;
-}
-.ipad{
-       visibility: hidden;
-       display: none;
-  }
-
-  .imo{
-   padding: -50px 0;
-
-  }
-
-  .ims{
-    margin-top: 80px;
-    bottom: -213px!important;
-  }
-
-  .iss{
-    top: -5px;
-  }
-
-#footer {
-  /*position: fixed;*/
-  bottom: 0;
-
-  /* Set the fixed height of the footer here */
-  background-color: #4A4A4A;
-  min-height: 497px;
-  width: 100%;
-  padding: 0 auto;
-}
-  .space{
-    margin-top: 40px;
-    height:100px;
-   width: 70px;
-    margin-bottom: -200px;
-
-  }
-   #sdm{
-    left: 73px;
-    margin-top: 217px;
-}
-#mo{
-    margin-right: -23px;
-}
-.col-sm-3 {
-    width: 22%;
-}
-.col-sm-push-3 {
-    left: 0%;
-}
-.col-sm-push-4 {
-    left: 8.333333%;
-}
-.spaced-columns {
-    padding: 0px 61px;
-    width: 350px;
-    position: relative;
-}
-.spaced-columns1{
-    padding: 0px 129px;
-    width: 350px;
-    position: relative;
-}
-.column1Space{
-  left: -3%;
-}
-}
-
-
-@media only screen and (min-width: 2165px)
-{
-  #PlayStore{
-    margin: -20px 0;
-height: 43.92px;
-width: 149px;
-
-border-radius: 5px;
-	background-color: #000000;
-   left: 265px;
-  position: relative;
-  bottom: 15px;
-}
-#mo{
-  position:relative;
-  bottom:30px;
-
-
-  border: 1px solid #535353;
-  background-color: grey;
-}
-  #sdm{
-  position: relative;
-  margin-left:48px;
-  margin-bottom:20px;
-
-}
-
 }

@@ -1,0 +1,36 @@
+.subSectionButton {
+  font-size: 14px;
+  height: 44px;
+  width: 181px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 118, 77);
+  font-family: "Helvetica Neue";
+  border-radius: 0.188em;
+  border: 0px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.subSectionButton:active {
+  background-color: #5ca470;
+  transform: translateY(2px);
+  transition: 0.25s;
+}
+
+.subSectionButton:hover {
+  background-color: #5ca470;
+}
+
+.subSectionButton:focus {
+  background-color: #5ca470;
+}
+
+.subSectionButton:disabled {
+  background-color: #EDEDEE;
+  color: #9b9b9b;
+  cursor: '';
+}
