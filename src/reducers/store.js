@@ -1,5 +1,6 @@
 let initStore = {
-    carouselItems: []
+    carouselItems: [],
+    carouselPanelItemsTemporary: []    
 };
 
 export default initStore;
