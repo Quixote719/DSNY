@@ -40,8 +40,8 @@ class About extends Component {
 
 function mapStateToProps(state) {
   return {
-    AboutBigData: state.AboutDataReducer.AboutBigData,
-    LeadershipBigData: state.AboutDataReducer.LeadershipBigData
+    AboutBigData: state.AboutDataReducer.About.AboutBigData,
+    LeadershipBigData: state.AboutDataReducer.About.LeadershipBigData
   }
 }
 
