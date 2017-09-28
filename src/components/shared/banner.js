@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../../content/styles/RoundProfile.css';
+import '../../content/styles/banner.css';
 
 class Banner extends Component {
 
