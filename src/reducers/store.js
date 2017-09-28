@@ -5,7 +5,8 @@ let initStore = {
   StatsCardSubList: {},
   LawsSubList: {},
   EmPromotionalSubList: {},
-  EmForSchoolSubList: {}
+  EmForSchoolSubList: {},
+  subSectionHeader: {}
 };
 
 export default initStore;

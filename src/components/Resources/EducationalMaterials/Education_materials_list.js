@@ -52,11 +52,12 @@ class EducationalMaterialsList extends Component {
 
     return (
       <div>
-        <SubSectionHeaderImage imgSrc="http://dsnydev.wpengine.com/wp-content/uploads/2017/08/cropped-about_history-while-you-sleep-truck_0815-150x150.jpg" title='Educational Materials' body="<p>Lorem ipsum dolor sit amet, cum an erant instructior. Est ut eros dolor inciderint. Vis sonet iudico soluta ne. Omnis minim no duo, sit voluptaria persequeris comprehensam ei. Aeque essent scaevola no vix, wisi ullum disputationi ei est. At nec affert voluptatum, justo adversarium liberavisse pri eu.</p>"/>
+        <SubSectionHeaderImage id='educational-materials'/>
         <div className='container'>
           <Row>
             {this.renderPosts(promotional)}
           </Row>
+          <SubSectionButton title='VIEW ALL'/>
         </div>
       </div>
     );
