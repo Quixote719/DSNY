@@ -7,7 +7,6 @@ import {
   FETCH_REPORT_CARD_SUB_LIST_URL,
   FETCH_STATS_CARD_SUB_LIST_URL,
   FETCH_LAWS_SUB_LIST_URL,
-  FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST_URL,
   FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL
 } from '../constants/ApiConstants';
 
@@ -51,10 +50,4 @@ export function fetchEmPSubList() {
   const request = axios.get(FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL);
 
   return {type: types.FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST, payload: request};
-}
-
-export function fetchEmFsSubList() {
-  const request = axios.get(FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST_URL);
-
-  return {type: types.FETCH_EDUCATIONAL_MATERIALS_FOR_SCHOOL_SUB_LIST, payload: request};
 }

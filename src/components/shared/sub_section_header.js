@@ -13,22 +13,4 @@ const SubSectionHeader = props => {
   );
 };
 
-// const styles = {
-//   sectionHeader: {
-//     display: 'flex',
-//     height: 33,
-//     color: '#000000',
-//     fontFamily: "Helvetica Neue",
-//     fontSize: 36,
-//     fontWeight: 800,
-//     letterSpacing: -1
-//   },
-//   patternLineGreen: {
-//     height: 10,
-//     marginTop: 20,
-//     marginBottom: 25,
-//     background: 'repeating-linear-gradient(135deg, white 0px, white 1px,  #7cc04b 2px,  #7cc04b 2px)'
-//   }
-// };
-
 export default SubSectionHeader;

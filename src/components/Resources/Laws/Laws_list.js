@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {fetchLawsSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Row} from 'react-bootstrap';
 import LawsListItem from './Laws_list_item';
 
 class LawsList extends Component {

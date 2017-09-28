@@ -1,5 +1,5 @@
 .sectionHeader {
-  height: 33px;
+  min-height: 33px;
   color: #333333;
   font-family: "Helvetica Neue";
   font-size: 36px;
