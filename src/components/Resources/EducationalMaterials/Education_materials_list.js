@@ -2,16 +2,15 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {fetchEmPSubList, fetchEmFsSubList} from "../../../actions";
-import SubSectionHeader from '../../shared/sub_section_header';
+import {fetchEmPSubList} from "../../../actions";
+import SubSectionHeaderImage from '../../shared/sub_section_header_image';
 import SubSectionButton from '../../shared/sub_section_button';
-import CardTitleImage from '../../shared/Card_title_image';
+import CardTitleBody from '../../shared/Card_title_body';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class EducationalMaterialsList extends Component {
   componentDidMount() {
     this.props.fetchEmPSubList();
-    this.props.fetchEmFsSubList();
   }
 
   constructor() {
@@ -28,7 +27,7 @@ class EducationalMaterialsList extends Component {
 
   renderPosts(cards) {
     return _.map(this.firstN(cards, 8), Item => {
-      return (<CardTitleImage className='NBsubSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
+      return (<CardTitleBody className='subSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
     });
   }
 
@@ -53,25 +52,10 @@ class EducationalMaterialsList extends Component {
 
     return (
       <div>
-        <SubSectionHeader title='Educational Materials'/>
-        <div>
-          <div>
-            <h1>
-              <b>Promotional</b>
-            </h1>
-          </div>
+        <SubSectionHeaderImage imgSrc="http://dsnydev.wpengine.com/wp-content/uploads/2017/08/cropped-about_history-while-you-sleep-truck_0815-150x150.jpg" title='Educational Materials' body="<p>Lorem ipsum dolor sit amet, cum an erant instructior. Est ut eros dolor inciderint. Vis sonet iudico soluta ne. Omnis minim no duo, sit voluptaria persequeris comprehensam ei. Aeque essent scaevola no vix, wisi ullum disputationi ei est. At nec affert voluptatum, justo adversarium liberavisse pri eu.</p>"/>
+        <div className='container'>
           <Row>
             {this.renderPosts(promotional)}
-          </Row>
-        </div>
-        <div>
-          <div>
-            <h1>
-              <b>For Schools</b>
-            </h1>
-          </div>
-          <Row>
-            {this.renderPosts(forSchool)}
           </Row>
         </div>
       </div>
@@ -81,7 +65,7 @@ class EducationalMaterialsList extends Component {
 }
 
 function mapStateToProps(state) {
-  return {promotional: state.resources.EmPromotionalSubList, forSchool: state.resources.EmForSchoolSubList};
+  return {promotional: state.resources.EmPromotionalSubList};
 }
 
-export default connect(mapStateToProps, {fetchEmPSubList, fetchEmFsSubList})(EducationalMaterialsList);
+export default connect(mapStateToProps, {fetchEmPSubList})(EducationalMaterialsList);

@@ -1,0 +1,32 @@
+.subSectionHeaderImageTitleText {
+  color: #FFFFFF;
+  font-family: "Helvetica Neue";
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.subSectionHeaderImagetitleBodyText {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+  padding: 25px;
+}
+
+.subSectionHeaderImage {
+  min-height: 65px;
+  min-width: 190px;
+  overflow: hidden;
+  object-fit: cover;
+  background-position: center;
+  background-size: 100%;
+}
+
+.subSectionHeaderImagetitleBody {
+  background-color: #FFFFFF;
+  max-height: 226px;
+  margin-bottom: 35px;
+}

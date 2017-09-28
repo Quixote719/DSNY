@@ -54,9 +54,8 @@ class PressRelease extends Component {
     return (
       <div>
         <SubSectionHeader title="Press Release"/>
-        <ul className="list-group">
-          {this.renderPosts(pr)}
-        </ul>
+        <div>{this.renderPosts(pr)}</div>
+
         {this.ViewAllButton(_.size(pr))}
       </div>
     );
