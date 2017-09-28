@@ -12,7 +12,7 @@ class Bureaus extends Component {
 
     return (
       <div className="Bureaus">
-        <SubSectionHeader title="Bureaus"/>
+        <SubSectionHeader title={this.props.BureausTitle}/>
         <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
       </div>
     )

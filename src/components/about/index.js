@@ -22,30 +22,72 @@ class About extends Component {
   componentWillMount() {
     this.props.AboutData();
     this.props.AboutLeadership();
+    this.props.AboutBureaus();
+    this.props.AboutStrategicPlan();
+    this.props.AboutFoundation();
+    this.props.AboutLocations();
+    this.props.AboutOperations();
   }
   render() {
-      let AboutBigData = this.props.AboutBigData[0];
+      let AboutBigData = this.props.AboutBigData.data;
       let LeadershipBigData = this.props.LeadershipBigData;
+      let BureausBigData = this.props.BureausBigData.data;
+      let StrategicPlanBigData = this.props.StrategicPlanBigData.data;
+      let FoundationBigData = this.props.FoundationBigData.data;
+      let LocationsBigData = this.props.LocationsBigData;
+      let OperationsBigData = this.props.OperationsBigData;
       let BannerText = {};
       let ProfileUrl = '';
+      let BureausTitle = '';
+      let StrategicPlanProps = {};
+      let FoundationTitle = '';
+
       if(AboutBigData != undefined){
-        BannerText = {title: AboutBigData.title.rendered,
-        content: AboutBigData.content.rendered}
+        console.log('AboutBigData');
+        console.log(AboutBigData);
+        BannerText = {title: AboutBigData[0].title.rendered,
+        content: AboutBigData[0].content.rendered}
       }
       if(LeadershipBigData != undefined){
+        console.log('LeadershipBigData');
+        console.log(LeadershipBigData);
         ProfileUrl = LeadershipBigData.source_url;
+      }
+      if(BureausBigData != undefined){
+        console.log('BureausBigData');
+        console.log(BureausBigData);
+        BureausTitle = BureausBigData[0].title.rendered;
+      }
+      if(StrategicPlanBigData != undefined){
+        console.log('StrategicPlanBigData');
+        console.log(StrategicPlanBigData);
+        StrategicPlanProps = {title: StrategicPlanBigData[0].title.rendered,
+        content: StrategicPlanBigData[0].content.rendered}
+      }
+      if(FoundationBigData != undefined){
+        console.log('FoundationBigData');
+        console.log(FoundationBigData);
+        FoundationBigData = FoundationBigData[0].title.rendered;
+      }
+      if(LocationsBigData != undefined){
+        console.log('LocationsBigData');
+        console.log(LocationsBigData);
+      }
+      if(OperationsBigData != undefined){
+        console.log('OperationsBigData');
+        console.log(OperationsBigData);
       }
 
       return (
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
-            <Leadership ProfileUrl = {ProfileUrl}/>
+            <Leadership title = 'Leadership' ProfileUrl = {ProfileUrl}/>
+            <Bureaus BureausTitle = {BureausTitle}/>
+            <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
+            <Foundation ProfileUrl = {ProfileUrl}/>
             <Locations ProfileUrl = {ProfileUrl}/>
             <Operations ProfileUrl = {ProfileUrl}/>
-            <StrategicPlan ProfileUrl = {ProfileUrl}/>
-            <Bureaus ProfileUrl = {ProfileUrl}/>
-            <Foundation ProfileUrl = {ProfileUrl}/>
           </div>
         </div>
       )
@@ -55,13 +97,23 @@ class About extends Component {
 function mapStateToProps(state) {
   return {
     AboutBigData: state.AboutDataReducer.About.AboutBigData,
-    LeadershipBigData: state.AboutDataReducer.About.LeadershipBigData
+    LeadershipBigData: state.AboutDataReducer.About.LeadershipBigData,
+    LocationsBigData: state.AboutDataReducer.About.LocationsBigData,
+    OperationsBigData: state.AboutDataReducer.About.OperationsBigData,
+    StrategicPlanBigData: state.AboutDataReducer.About.StrategicPlanBigData,
+    BureausBigData: state.AboutDataReducer.About.BureausBigData,
+    FoundationBigData: state.AboutDataReducer.About.FoundationBigData,
   }
 }
 
 let actionList = {
   AboutData: actions.AboutData,
-  AboutLeadership: actions.AboutLeadership
+  AboutLeadership: actions.AboutLeadership,
+  AboutBureaus: actions.AboutBureaus,
+  AboutStrategicPlan: actions.AboutStrategicPlan,
+  AboutFoundation: actions.AboutFoundation,
+  AboutLocations: actions.AboutLocations,
+  AboutOperations: actions.AboutOperations,
 };
 
 About = connect(mapStateToProps, actionList)(About);

@@ -7,12 +7,10 @@ import SubSectionHeader from '../shared/sub_section_header'
 
 
 class Leadership extends Component {
-
   render() {
-
     return (
       <div className="Leadership">
-        <SubSectionHeader title="Leadership"/>
+        <SubSectionHeader title = {this.props.title}/>
         <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
       </div>
     )
