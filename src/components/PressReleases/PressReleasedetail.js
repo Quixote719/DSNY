@@ -7,6 +7,8 @@ import {fetchPressReleaseDetails} from "../../actions";
 import '../../content/styles/subSectionHeaderImage.css';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import PressReleaseHeader from './pressReleaseHeader';
+import PressReleaseBody from './pressReleaseBody';
+
 import moment from 'moment';
 
 class PressReleaseDetail extends Component {
@@ -18,7 +20,13 @@ class PressReleaseDetail extends Component {
 
   renderHeader(PR) {
     return _.map(PR, Item => {
-      return (<PressReleaseHeader title={Item.title.rendered} date={Item.date} status={Item.status_text}/>);
+      return (<PressReleaseHeader title={Item.title.rendered} date={moment(Item.date).format('dddd, MMMM Do, YYYY')} status={Item.status_text}/>);
+    });
+  }
+
+  renderBody(PR) {
+    return _.map(PR, Item => {
+      return (<PressReleaseBody body={Item.content.rendered} prid={Item.pr_number} contactinfo={Item.contact}/>);
     });
   }
 
@@ -30,8 +38,9 @@ class PressReleaseDetail extends Component {
     return (
 
       <div >
-        {this.renderHeader(prd)}
+        <div>{this.renderHeader(prd)}</div>
 
+        <div>{this.renderBody(prd)}</div>
       </div>
 
     );
