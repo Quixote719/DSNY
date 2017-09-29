@@ -29,6 +29,7 @@ class LazyImage extends Component {
 
   renderImg(img) {
     return _.map(img, Item => {
+
       return (<img className={this.props.className} style={{
         width: '100%',
         margin: '5px 0px'

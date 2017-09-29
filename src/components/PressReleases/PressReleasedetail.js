@@ -33,17 +33,15 @@ class PressReleaseDetail extends Component {
 
   renderimg(PR) {
     return _.map(PR, Item => {
-
-      return (<LazyImage id='432'/>);
-
+      if (Item.featured_media > 0) {
+        return (<LazyImage id={Item.featured_media}/>);
+      }
     });
   }
 
   render() {
 
     const {prd} = this.props;
-    console.log('yeshu');
-    console.log(prd);
     return (
 
       <div >
