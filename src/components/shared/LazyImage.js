@@ -33,7 +33,7 @@ class LazyImage extends Component {
       return (<img className={this.props.className} style={{
         width: '100%',
         margin: '5px 0px'
-      }} src={Item.source_url} alt={this.props.alt}/>);
+      }} src={Item.source_url} alt={this.props.alt} key={Item.id}/>);
     });
   }
 
@@ -58,7 +58,7 @@ class LazyImage extends Component {
 }
 
 LazyImage.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.number,
   className: PropTypes.string
 };
 
