@@ -8,7 +8,8 @@ import {
   FETCH_STATS_CARD_SUB_LIST_URL,
   FETCH_LAWS_SUB_LIST_URL,
   SUB_SECTION_HEADER_URL,
-  FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL
+  FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL,
+  FETCH_PRESS_RELEASE_DETAILS_URL
 } from '../constants/ApiConstants';
 
 export function fetchmedias() {
@@ -41,6 +42,14 @@ export function fetchsubSectionHeader(id) {
         src['imgSrc'] = media.data.source_url;
         dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
       })
+    })
+  }
+}
+
+export function fetchPressReleaseDetails(slug) {
+  return function(dispatch) {
+    axios.get(FETCH_PRESS_RELEASE_DETAILS_URL.replace('id', slug)).then((data) => {
+      dispatch({type: types.FETCH_PRESS_RELEASE_DETAILS, payload: data})
     })
   }
 }
