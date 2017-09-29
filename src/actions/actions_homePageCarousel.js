@@ -53,7 +53,7 @@ export function carouselData(successCallback) {
                     let temp = {};
                     let heroFeaturedMediaID;
                     temp['heroTitle'] = item.title.rendered;
-                    heroFeaturedMediaID = item.featured_media;
+                    heroFeaturedMediaID = item.image.ID;
                     axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + heroFeaturedMediaID)
                         .then((dataMedia) => {
                             temp['heroImage'] = dataMedia.data.source_url;

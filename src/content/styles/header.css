@@ -4,8 +4,10 @@
     height: 25px;
 }
 .upperHeaderContainer{
-    width: 950px;
+    padding-left: 10px;
+    width: 940px;
     height: 25px;
+    padding-right: 0;
 }
 .NYCUpperHeaderLogo{
     height: 15px;
@@ -40,7 +42,7 @@
     float:right;
 }
 .middleHeader{
-    width: 960px;
+    width: 958px;
 }
 .middleHeaderTextLeft{
     display: inline-block;
@@ -110,20 +112,20 @@
 
 #navBar>ul>.aboutHeaderTitle.bottomHeaderTitles.active>a{
     color: white;
-    background-color: #0D925C!important;
+    background-color: #096543!important;
     box-shadow: none;
     border-right: 1px solid #E0E0E0;
     background-image: none;
 }
 #navBar>ul>.bottomHeaderTitles.active>a:hover{
     color: white;
-    background-color: #0D925C!important;
+    background-color: #096543!important;
     box-shadow: none;
     border-right: 1px solid #E0E0E0;
     background-image: none;
 }
 #navBar>ul li:hover {
-    background-color: #0D925C;
+    background-color: #096543;
     cursor: pointer;
 }
 #navBar>ul>li>a:hover {
@@ -145,9 +147,10 @@
 }
 #slideNav>.container{
     padding-right: 0;
-    width: 970px;
+    width: 940px;
 }
 #slideNav>.container>.navbar-collapse{
+    padding-left: 0;
     padding-right: 0;
 }
 .searchMessagesInput{
@@ -156,7 +159,7 @@
     border: 1px solid #D5D5D5;
     border-radius: 3px;
     margin-left: 8px;
-    width: 210px;
+    width: 216px;
     padding-left: 10px;
     font-weight: bold;
     color: #666666;;	
@@ -192,12 +195,12 @@ input.searchMessagesInput:focus {
 }
 .selectedParent>a{
     color: white !important;
-    background-color: #0D925C!important;   
+    background-color: #096543!important;   
     width: inherit;
 }
 .selectedParent.active>a{
     color: white !important;
-    background-color: #0D925C!important;   
+    background-color: #096543!important;   
 }
 .homeLogoHeader.selectedParent>a {
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
@@ -214,24 +217,30 @@ input.searchMessagesInput:focus {
     opacity: 1;
 }
 .carouselContainer{
+    padding-left: 0;
+    padding-right: 0;
     padding-bottom: 48px;
     padding-top: 48px;
-    width: 957px;
+    width: 940px;;
 }
 .newsEventsCarousel{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.56) 100%);
     float: right;
     width: auto;
 }
 .newsEventsCarousel>.carousel-inner>.item>img{
     height: 500px;
-    width: 820px;
+    width: 820px;;
 }
 .carousel-control.left {
+    margin-top: -20px;
+    margin-right: -52px;
+    margin-bottom: 0px;
+    margin-left: -171px;
     background-image: none;
     background-color: rgba(0, 0, 0, .1);
     width: 41px;
     height: 41px;
-    margin: -20px -52px 0;    
     display: block;
     border-radius: 100%;
     position: absolute;
@@ -277,11 +286,13 @@ input.searchMessagesInput:focus {
     display: none;
 }
 .carouselContainerParent{
-    background-color: #0D925C;
+    background-image: url('../images/Darkgreen.png');
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
 .carouselContainer {
+    padding-left: 16px!important;
+    padding-right: 16px!important;
     padding-bottom: 31px;
     padding-top: 20px;
     width: auto;
@@ -301,7 +312,7 @@ input.searchMessagesInput:focus {
     bottom: -37px;
 }
 .newsEventsCarousel>.carousel-inner>.item>img {
-    height: 260px;
+    height: 280px;
     width: 380px;
 }
     .navbar-brand{
@@ -384,6 +395,7 @@ input.searchMessagesInput:focus {
     }
     .navbar-header .collapse,
     .navbar-toggle {
+        margin-right: 6px!important;
         display: block !important;
     }
     .navbar-collapse.collapse.in {
@@ -470,19 +482,38 @@ input.searchMessagesInput:focus {
     .navbar-toggle{
         margin-top: 21px;
     }
+    .carousel-caption{
+    padding-bottom: 0;
+    padding-top: 10px;
+    font-size: 16px!important;
+    text-shadow: none;
+    padding-left: 11px;
+    background-color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    color: black;
+    text-align: start;
+    height: 85px;
+    padding-right: 11px;
+    }
 }
 
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px){
 .upperHeaderContainer {
-    padding-right: 20px;
-    width: 753px;
+    padding-right: 12px;
+    width: 730px;
 }
 .middleHeader {
-    width: 758px;
+    width: 749px;
 }
 #slideNav>.container {
-    width: 741px;
+    width: 712px;
 }
 .bottomHeaderTitles{
     width: auto;
@@ -495,7 +526,7 @@ input.searchMessagesInput:focus {
 }
 .searchMessagesInput{
     font-weight: 500;
-    width: 185px;
+    width: 178px;
     margin-top: 10px;
 }
 .homeLogoHeader{
@@ -512,38 +543,48 @@ input.searchMessagesInput:focus {
 }
 .carouselContainer{
     padding-bottom: 41px;
-    padding-top: 25px;
-    width: 750px;
+    padding-top: 28px;;
+    width: 712px;
 }
 .newsEventsCarousel{
-    width: 720px;
+    width: 712px;
 }
 .carousel-indicators{
     display: block;
     bottom: -42px;
 }
 .carousel-caption{
+    font-size: 28px!important;
     text-shadow: none;
     padding-left: 20px;
     background-color: white;
     font-size: 36px;
     font-weight: bold;
-    line-height: 38px;
+    line-height: 30px;
     position: absolute;
     right: 0;
     bottom: 0px;
     left: 1px;
     color: black;
     text-align: start;
-    padding-bottom: 21px
+    padding-bottom: 21px;
+    height: 100px;
 }
 }
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
 .carouselContainer {
+    padding-left: 16px!important;
+    padding-right: 16px!important;
     padding-bottom: 31px;
     padding-top: 20px;
     width: auto;
+}
+.carousel-control.left {
+    display: none;
+}
+.carousel-control.right {
+    display: none;
 }
 .newsEventsCarousel {
     float: none; 
@@ -554,8 +595,8 @@ input.searchMessagesInput:focus {
     bottom: -37px;
 }
 .newsEventsCarousel>.carousel-inner>.item>img {
-    height: 391px;
-    width: 700px;
+    height: 280px;
+    width: 100%;;
 }
     .navbar-brand{
         padding: 0;
@@ -618,7 +659,7 @@ input.searchMessagesInput:focus {
     }
     .modal-content, .modal-dialog {
         height: 100%;
-        overflow: scroll;
+        overflow: hidden;
     }
     .modal-header {
         border-bottom: none;
@@ -637,6 +678,7 @@ input.searchMessagesInput:focus {
     }
     .navbar-header .collapse,
     .navbar-toggle {
+        margin-right: 6px!important;
         display: block !important;
     }
     .navbar-collapse.collapse.in {
@@ -723,18 +765,37 @@ input.searchMessagesInput:focus {
     .navbar-toggle{
         margin-top: 21px;
     }
+    .carousel-caption{
+    padding-bottom: 0;
+    padding-top: 10px;
+    font-size: 16px!important;
+    text-shadow: none;
+    padding-left: 11px;
+    background-color: white;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    left: 0;
+    color: black;
+    text-align: start;
+    height: 85px;
+    padding-right: 11px;
+    }
 }
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px){
 .upperHeaderContainer{
     padding-right: 4px;
-    width: 941px;
+    width: 940px;
 }
 .middleHeader {
-    width: 950px;
+    width: 958px;
 }
 #slideNav>.container {
-    width: 961px;
+    width: 939px;;
 }
 .carousel-control.left{
     display: none;
@@ -743,7 +804,7 @@ input.searchMessagesInput:focus {
     display: none;
 }
 .carouselContainer{
-    width: 972px;
+    width: 939px;
 }
 .newsEventsCarousel{
     float: none;
@@ -758,25 +819,30 @@ input.searchMessagesInput:focus {
 .carouselContainer{
     padding-bottom: 62px;
     padding-top: 41px;
-    margin-left: 24px;
+    margin-left: auto;
     margin-right: auto;
 }
 .carousel-indicators{
     bottom: -52px;
 }
 .carousel-caption{
+    font-size: 28px!important;
     text-shadow: none;
     padding-left: 20px;
     background-color: white;
     font-size: 36px;
     font-weight: bold;
-    line-height: 38px;
+    line-height: 30px;
     position: absolute;
     right: 0;
     bottom: 0px;
     left: 1px;
     color: black;
     text-align: start;
-    padding-bottom: 21px
+    padding-bottom: 21px;
+    height: 100px;
+}
+.searchMessagesInput{
+    width: 215px
 }
 }
