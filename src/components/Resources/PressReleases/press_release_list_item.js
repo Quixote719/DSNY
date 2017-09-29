@@ -13,8 +13,10 @@ class PressReleaseListItem extends Component {
       <div >
         <Row>
           <Col xs={12} md={8}>
-            <div className='PressReleaseTitle'>
-              {this.props.title}
+            <div >
+              <Link className='PressReleaseTitle' to={`/pressRelease/${this.props.slug}`}>
+                {this.props.title}
+              </Link>
             </div>
           </Col>
           <Col xs={12} md={4}>

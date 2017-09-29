@@ -19,9 +19,7 @@ class ResourcesContainer extends Component {
         <div>
           <Banner text={BannerText}/>
         </div>
-        <div className='container'>
-          <PressReleaseDetail id='dsny-announces-promotion-of-salvatore-ceraulo-to-three-star-chief'/>
-        </div>
+        <div className='container'></div>
         <div className='container'>
           <PressRelease/>
         </div>

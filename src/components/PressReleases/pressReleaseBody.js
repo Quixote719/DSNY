@@ -4,6 +4,7 @@ import '../../content/styles/PressReleaseBody.css';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class PressReleaseBody extends Component {
+
   render() {
     return (
       <div className='PressReleaseBody'>

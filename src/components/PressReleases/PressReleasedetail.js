@@ -15,8 +15,8 @@ import moment from 'moment';
 class PressReleaseDetail extends Component {
 
   componentDidMount() {
-    const {id} = this.props
-    this.props.fetchPressReleaseDetails(id);
+    const {slug} = this.props.match.params;
+    this.props.fetchPressReleaseDetails(slug);
   }
 
   renderHeader(PR) {
@@ -43,23 +43,26 @@ class PressReleaseDetail extends Component {
 
     const {prd} = this.props;
     return (
-
-      <div >
-        <div>{this.renderHeader(prd)}</div>
-        <div>{this.renderimg(prd)}</div>
-        <div>{this.renderBody(prd)}</div>
+      <div>
+        <div className='container'>
+          <div>{this.renderHeader(prd)}</div>
+          <div>{this.renderimg(prd)}</div>
+          <div>{this.renderBody(prd)}</div>
+        </div>
       </div>
 
     );
   };
 };
 
-PressReleaseDetail.propTypes = {
-  id: PropTypes.string
-};
+// PressReleaseDetail.propTypes = {
+//   slug: PropTypes.string
+// };
 
-function mapStateToProps(state) {
-  return {prd: state.PressRelease.pressRelease.details};
+function mapStateToProps({
+  PressRelease
+}, ownProps) {
+  return {prd: PressRelease.pressRelease.details};
 }
 
 export default connect(mapStateToProps, {fetchPressReleaseDetails})(PressReleaseDetail);;
