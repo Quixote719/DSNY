@@ -69,7 +69,6 @@ class ReportStatsardList extends Component {
         </div>
       </div>
     );
-
   }
 }
 

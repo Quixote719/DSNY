@@ -14,6 +14,7 @@ let initStore = {
     OperationsBigData:{},
     StrategicPlanBigData:{},
     BureausBigData:{},
+    BureausDpBigData:{},
     FoundationBigData:{}
   }
 };

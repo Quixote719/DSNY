@@ -13,7 +13,6 @@ class Foundation extends Component {
     return (
       <div className="Foundation">
         <SubSectionHeader title="Foundation"/>
-        <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
       </div>
     )
   }

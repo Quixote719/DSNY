@@ -24,6 +24,11 @@ export function AboutBureaus() {
   return {type: 'SET_ABOUT_BUREAUS', payload: request};
 }
 
+export function AboutBureausDepartment(){
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=32&order=ASC&meta_key=rank&orderby=meta_value_num');
+  return {type: 'SET_ABOUT_BUREAUS_DP', payload: request};
+}
+
 export function AboutStrategicPlan() {
   const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection?slug=strategic-plan');
   return {type: 'SET_ABOUT_STRATEGICPLAN', payload: request};

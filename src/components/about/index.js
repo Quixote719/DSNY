@@ -23,6 +23,7 @@ class About extends Component {
     this.props.AboutData();
     this.props.AboutLeadership();
     this.props.AboutBureaus();
+    this.props.AboutBureausDepartment();
     this.props.AboutStrategicPlan();
     this.props.AboutFoundation();
     this.props.AboutLocations();
@@ -33,6 +34,7 @@ class About extends Component {
       let LeadershipBigData = this.props.LeadershipBigData;
       let LeadershipImage = this.props.LeadershipImage;
       let BureausBigData = this.props.BureausBigData.data;
+      let BureausDpBigData = this.props.BureausDpBigData.data;
       let StrategicPlanBigData = this.props.StrategicPlanBigData.data;
       let FoundationBigData = this.props.FoundationBigData.data;
       let LocationsBigData = this.props.LocationsBigData;
@@ -69,6 +71,10 @@ class About extends Component {
         console.log('BureausBigData');
         console.log(BureausBigData);
         BureausTitle = BureausBigData[0].title.rendered;
+      }
+      if(BureausDpBigData != undefined){
+        console.log('BureausDpBigData');
+        console.log(BureausDpBigData);
       }
       if(StrategicPlanBigData != undefined){
         console.log('StrategicPlanBigData');
@@ -115,6 +121,7 @@ function mapStateToProps(state) {
     OperationsBigData: state.AboutDataReducer.About.OperationsBigData,
     StrategicPlanBigData: state.AboutDataReducer.About.StrategicPlanBigData,
     BureausBigData: state.AboutDataReducer.About.BureausBigData,
+    BureausDpBigData: state.AboutDataReducer.About.BureausDpBigData,
     FoundationBigData: state.AboutDataReducer.About.FoundationBigData,
   }
 }
@@ -123,6 +130,7 @@ let actionList = {
   AboutData: actions.AboutData,
   AboutLeadership: actions.AboutLeadership,
   AboutBureaus: actions.AboutBureaus,
+  AboutBureausDepartment: actions.AboutBureausDepartment,
   AboutStrategicPlan: actions.AboutStrategicPlan,
   AboutFoundation: actions.AboutFoundation,
   AboutLocations: actions.AboutLocations,
