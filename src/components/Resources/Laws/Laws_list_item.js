@@ -22,9 +22,9 @@ class LawsListItem extends Component {
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                <div className='lawsDesc'>
-                  {this.props.body}
-                </div>
+                <div className='lawsDesc' dangerouslySetInnerHTML={{
+                  __html: this.props.body
+                }}/>
               </Col>
               <Col xs={12}>
                 <div className='lawsLink'>SEE ALL RULES</div>

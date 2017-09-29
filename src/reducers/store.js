@@ -13,8 +13,11 @@ let initStore = {
   About: {
     AboutBigData: {},
     LeadershipBigData: {}
+  },
+  pressRelease: {
+    list: {},
+    details: {}
   }
-
 };
 
-export default initStore;
+export default initStore

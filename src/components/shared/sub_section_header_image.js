@@ -32,7 +32,9 @@ class SubSectionHeaderImage extends Component {
                     <div className='subSectionHeaderImageTitleText'>{sch.title}</div>
                   </div>
                   <div className='subSectionHeaderImagetitleBody'>
-                    <div className='subSectionHeaderImagetitleBodyText'>{sch.body}</div>
+                    <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
+                      __html: sch.body
+                    }}/>
                   </div>
                 </Col>
               </Row>
@@ -53,4 +55,4 @@ function mapStateToProps(state) {
   return {sch: state.resources.subSectionHeader};
 }
 
-export default connect(mapStateToProps, {fetchsubSectionHeader})(SubSectionHeaderImage);;
+export default connect(mapStateToProps, {fetchsubSectionHeader})(SubSectionHeaderImage);

@@ -1,0 +1,33 @@
+.PressReleaseHeadertitle {
+  color: #015949;
+  font-family: "Helvetica Neue";
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 48px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.PressReleasedetailDate {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 17.5px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.PressReleasedetailStatus {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.patternLineGreen {
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background: url('../images/Lightgreen.png');
+}

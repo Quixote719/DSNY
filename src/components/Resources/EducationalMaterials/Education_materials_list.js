@@ -26,18 +26,9 @@ class EducationalMaterialsList extends Component {
   }
 
   renderPosts(cards) {
-    return _.map(this.firstN(cards, 8), Item => {
+    return _.map(this.firstN(cards, 4), Item => {
       return (<CardTitleBody className='subSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
     });
-  }
-
-  ViewAllButton(l) {
-    if (l > 8) {
-      return (<SubSectionButton title='VIEW ALL'/>);
-    } else {
-      return null;
-    }
-
   }
 
   render() {
