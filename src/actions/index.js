@@ -25,7 +25,7 @@ export function fetchPrSubList() {
 }
 
 export function fetchmedia(id) {
-  const request = axios.get(MEDIA_URL.replace(':id', id));
+  const request = axios.get(MEDIA_URL.replace('id', id));
 
   return {type: types.FETCH_MEDIA, payload: request};
 }

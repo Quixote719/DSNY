@@ -8,6 +8,7 @@ import '../../content/styles/subSectionHeaderImage.css';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import PressReleaseHeader from './pressReleaseHeader';
 import PressReleaseBody from './pressReleaseBody';
+import LazyImage from '../shared/LazyImage';
 
 import moment from 'moment';
 
@@ -30,6 +31,14 @@ class PressReleaseDetail extends Component {
     });
   }
 
+  renderimg(PR) {
+    return _.map(PR, Item => {
+
+      return (<LazyImage id='432'/>);
+
+    });
+  }
+
   render() {
 
     const {prd} = this.props;
@@ -39,7 +48,7 @@ class PressReleaseDetail extends Component {
 
       <div >
         <div>{this.renderHeader(prd)}</div>
-
+        <div>{this.renderimg(prd)}</div>
         <div>{this.renderBody(prd)}</div>
       </div>
 

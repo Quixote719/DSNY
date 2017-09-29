@@ -55,4 +55,4 @@ function mapStateToProps(state) {
   return {sch: state.resources.subSectionHeader};
 }
 
-export default connect(mapStateToProps, {fetchsubSectionHeader})(SubSectionHeaderImage);;
+export default connect(mapStateToProps, {fetchsubSectionHeader})(SubSectionHeaderImage);

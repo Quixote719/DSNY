@@ -4,7 +4,8 @@ import carouselDataReducer from './reducer_carouselData';
 import ResourcesReducer from './reducer_resources';
 import AboutDataReducer from './Reducer_AboutData';
 import PressReleaseReducer from './Reducer_PressRelease';
+import mediaReducer from './Reducer_media';
 
-const rootReducer = combineReducers({carouselDataReducer: carouselDataReducer, resources: ResourcesReducer, AboutDataReducer: AboutDataReducer, PressRelease: PressReleaseReducer});
+const rootReducer = combineReducers({carouselDataReducer: carouselDataReducer, media: mediaReducer, resources: ResourcesReducer, AboutDataReducer: AboutDataReducer, PressRelease: PressReleaseReducer});
 
 export default rootReducer;
