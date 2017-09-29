@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import '../../content/styles/banner.css';
+import '../../content/styles/RoundProfile.css';
 
 class RoundProfile extends Component {
-
   render() {
-
     return (
-      <div >
-        <img className="RoundProfile" src={require('../../content/images/DSNY-Web_logo.png')} alt=""/>
-        <img className="RoundProfile" src='http://keenthemes.com/preview/metronic/theme/assets/pages/media/profile/profile_user.jpg' alt=""/>
+      <div>
+        <img className="RoundProfile" src={this.props.ProfileUrl} alt=""/>
       </div>
     )
   }

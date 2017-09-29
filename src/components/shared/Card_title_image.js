@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../content/styles/card.css';
+import LazyImage from './LazyImage';
 
 class CardTitleImage extends Component {
 

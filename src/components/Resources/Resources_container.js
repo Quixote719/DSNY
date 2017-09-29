@@ -31,7 +31,7 @@ class ResourcesContainer extends Component {
         <div className='container'>
           <LawsList/>
         </div>
-        <div className='container'>
+        <div >
           <EducationalMaterialsList/>
         </div>
       </div>
