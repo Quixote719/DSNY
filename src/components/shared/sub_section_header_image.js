@@ -32,7 +32,9 @@ class SubSectionHeaderImage extends Component {
                     <div className='subSectionHeaderImageTitleText'>{sch.title}</div>
                   </div>
                   <div className='subSectionHeaderImagetitleBody'>
-                    <div className='subSectionHeaderImagetitleBodyText'>{sch.body}</div>
+                    <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
+                      __html: sch.body
+                    }}/>
                   </div>
                 </Col>
               </Row>
