@@ -1,5 +1,7 @@
 let initStore = {
-  carouselItems: [],
+
+    carouselItems: [],
+    carouselPanelItemsTemporary: [],    
   PresssReleasesSubList: {},
   ReportCardSubList: {},
   StatsCardSubList: {},
