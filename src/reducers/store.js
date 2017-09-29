@@ -2,6 +2,7 @@ let initStore = {
 
     carouselItems: [],
     carouselPanelItemsTemporary: [],    
+    programListData: [],
   PresssReleasesSubList: {},
   ReportCardSubList: {},
   StatsCardSubList: {},

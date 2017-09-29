@@ -288,6 +288,38 @@ input.searchMessagesInput:focus {
 .carouselContainerParent{
     background-image: url('../images/Darkgreen.png');
 }
+.textSizeHeader{
+    cursor: pointer;
+    padding-left: 20px;
+    padding-top: 34px;
+    float: right;
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+    font-size: 14px;
+}
+.textSizeTranslate{
+    float: right;
+    padding-top: 34px;
+}
+.translateIcon{
+    float: right;
+    padding-top: 34px;
+}
+.translateHeader{
+    cursor: pointer;
+    float: right;
+    padding-top: 34px;
+}
+.gifHeader{
+    padding-right: 4px;
+    padding-top: 36px;
+    float: right;
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+    font-size: 14px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
 .carouselContainer {

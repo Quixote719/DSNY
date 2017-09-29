@@ -8,6 +8,8 @@ export default function carouselDataReducer(state = initStore, action) {
       return { ...state, carouselPanelItems: action.payload };
     case 'SET_PANEL_ITEMS_TEMPORARY':
       return { ...state, carouselPanelItemsTemporary: action.payload };
+    case 'SET_PROGRAM_CARDS':
+      return { ...state, programListData: action.payload };
     default:
       return state;
   }

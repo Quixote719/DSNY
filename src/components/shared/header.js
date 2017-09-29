@@ -53,6 +53,11 @@ class Header extends React.Component {
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
                         <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
+                        <span className = "textSizeHeader">Text Size</span>
+                        <span className = "textSizeTranslate">&#8203;</span>                        
+                        <span aria-hidden="true" className ="translateIcon">▼</span>                        
+                        <span className="translateHeader">Translate</span>
+                        <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" />
                     </div>
                 </div>
                 <Navbar collapseOnSelect id="slideNav">
@@ -88,7 +93,7 @@ class Header extends React.Component {
                 </Navbar>
                 <Modal show={this.state.showModal} onHide={this.close} id="menu">
                     <Modal.Header closeButton>
-                        
+
                         <img src={require('../../content/images/DSNY-Web_logo.png')} className="middleHeaderLogoMobile" />
                         <span className="mobileSanitationHeaderText">Sanitation</span>                    </Modal.Header>
                     <Modal.Body>
