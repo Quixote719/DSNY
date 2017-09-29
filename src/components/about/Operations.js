@@ -13,7 +13,6 @@ class Operations extends Component {
     return (
       <div className="Operations">
         <SubSectionHeader title="Operations"/>
-        <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
       </div>
     )
   }

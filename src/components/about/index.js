@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Banner from '../shared/banner';
+import LargeContentCard from '../shared/LargeContentCard';
 import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/Actions_About';
 import CardTitle from '../shared/Card_title';
+import LargeCardTitle from '../shared/LargeCardTitle';
 import SubSectionHeader from '../shared/sub_section_header';
 import Leadership from './Leadership';
 import Locations from './Locations';
@@ -106,6 +108,12 @@ class About extends Component {
             <Foundation/>
             <Locations/>
             <Operations/>
+            <LargeContentCard/>
+            <LargeContentCard/>
+            <LargeContentCard/>
+          </div>
+          <div className = 'SContainer'>
+            <LargeCardTitle/>
           </div>
         </div>
       )

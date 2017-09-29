@@ -13,7 +13,6 @@ class Locations extends Component {
     return (
       <div className="Locations">
         <SubSectionHeader title="Locations"/>
-        <RoundProfile ProfileUrl = {this.props.ProfileUrl}/>
       </div>
     )
   }
