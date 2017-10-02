@@ -7,14 +7,12 @@ class TitleContentCard extends Component {
     const styles={
       narrow:{
         'width': '220px',
-        'height': '90px',
         'background-color':'lightblue',
         'display':'inline-block',
         'min-height': '90px'
       },
       wide:{
         'width': '303px',
-        'height': '90px',
         'background-color':'lightblue',
         'display':'inline-block',
         'min-height': '90px'

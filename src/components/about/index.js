@@ -104,11 +104,15 @@ class About extends Component {
 function mapStateToProps(state) {
   return {
     AboutSectionsData: state.AboutDataReducer.About.AboutSectionsData,
+    // BureausBigData: state.AboutDataReducer.About.BureausBigData,
+    // BureausDpBigData: state.AboutDataReducer.About.BureausDpBigData,
   }
 }
 
 let actionList = {
   AboutSections: actions.AboutSections,
+  // AboutBureaus: actions.AboutBureaus,
+  // AboutBureausDepartment: actions.AboutBureausDepartment,
 };
 
 About = connect(mapStateToProps, actionList)(About);

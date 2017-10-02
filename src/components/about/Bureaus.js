@@ -5,7 +5,7 @@ import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/Actions_About';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
-import CardTitle from '../shared/Card_title';
+import TitleCard from '../shared/TitleCard';
 import ReportStatsardList from '../Resources/ReportsStats/Report_stats_card_list'
 import {connect} from "react-redux";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
@@ -33,7 +33,7 @@ class Bureaus extends Component {
     console.log(cards);
     let html = '';
     return cards.data.map(function(item){
-      return <CardTitle className='NBsubSectioncardTB'  title={item.title.rendered}/>;
+      return <TitleCard/>;
     })
   }
 
@@ -61,9 +61,9 @@ class Bureaus extends Component {
       <div>
         <div>
           <SubSectionHeader title='Reports'/>
-          <Row>
+          <div>
             {this.renderPosts(BureausDpBigData)}
-          </Row>
+          </div>
           {this.ViewAllButton()}
         </div>
       </div>
