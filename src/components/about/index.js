@@ -30,8 +30,10 @@ class About extends Component {
     this.props.AboutFoundation();
     this.props.AboutLocations();
     this.props.AboutOperations();
+    this.props.AboutSections();
   }
   render() {
+      let AboutSections = this.props.AboutSectionsData.data;
       let AboutBigData = this.props.AboutBigData.data;
       let LeadershipBigData = this.props.LeadershipBigData;
       let LeadershipImage = this.props.LeadershipImage;
@@ -45,9 +47,46 @@ class About extends Component {
       let LeadershipProps = {};
       let BureausTitle = '';
       let StrategicPlanProps = {};
-      let FoundationTitle = '';
+      let FoundationProps = {};
 
-      console.log('!!!!!!!!432'+this.props.LeadershipBigData);
+
+      console.log('AboutSections');
+      console.log(AboutSections);
+
+      if(AboutSections != undefined){
+        console.log(AboutSections);
+        AboutSections.map((item)=>{
+          if(item.categories.length>1){
+            switch (item.categories[1]){
+              case 32:                      // Bureaus
+                BureausTitle = item.title.rendered;
+                break;
+              case 34:                      // Foundation
+                FoundationProps.title = item.title.rendered;
+                FoundationProps.content = item.content.rendered;
+                console.log('FoundationProps');
+                  console.log(FoundationProps);
+                break;
+              case 35:                      // Locations
+                break;
+              case 36:                      // Operations
+                break;
+              case 73:                      // Leadership
+                LeadershipProps.title = item.title.rendered;
+                LeadershipProps.content = item.content.rendered;
+                LeadershipProps.ProfileUrl = item.feature_image.guid;
+                break;
+              case 76:                      // Strategic Plan
+                StrategicPlanProps = {title:item.title.rendered,
+                content: item.content.rendered};
+                break;
+            }
+          }
+          else{
+            console.log(31);
+          }
+        })
+      }
 
       if(AboutBigData != undefined){
         console.log('AboutBigData');
@@ -55,20 +94,11 @@ class About extends Component {
         BannerText = {title: AboutBigData[0].title.rendered,
         content: AboutBigData[0].content.rendered}
       }
-      if(LeadershipBigData != undefined){
-        console.log('LeadershipBigData');
-        console.log(LeadershipBigData);
-        if(!(Object.keys(LeadershipBigData).length === 0 && LeadershipBigData.constructor === Object)){
-          LeadershipProps.title = LeadershipBigData[0].title.rendered;
-          LeadershipProps.content = LeadershipBigData[0].content.rendered;
-        }
-
-      }
-      if(LeadershipImage != undefined){
-        console.log('LeadershipImage');
-        console.log(LeadershipImage);
-        LeadershipProps.ProfileUrl = LeadershipImage.source_url;
-      }
+      // if(LeadershipImage != undefined){
+      //   console.log('LeadershipImage');
+      //   console.log(LeadershipImage);
+      //   LeadershipProps.ProfileUrl = LeadershipImage.source_url;
+      // }
       if(BureausBigData != undefined){
         console.log('BureausBigData');
         console.log(BureausBigData);
@@ -78,16 +108,16 @@ class About extends Component {
         console.log('BureausDpBigData');
         console.log(BureausDpBigData);
       }
-      if(StrategicPlanBigData != undefined){
-        console.log('StrategicPlanBigData');
-        console.log(StrategicPlanBigData);
-        StrategicPlanProps = {title: StrategicPlanBigData[0].title.rendered,
-        content: StrategicPlanBigData[0].content.rendered}
-      }
+      // if(StrategicPlanBigData != undefined){
+      //   console.log('StrategicPlanBigData');
+      //   console.log(StrategicPlanBigData);
+      //   StrategicPlanProps = {title: StrategicPlanBigData[0].title.rendered,
+      //   content: StrategicPlanBigData[0].content.rendered}
+      // }
       if(FoundationBigData != undefined){
         console.log('FoundationBigData');
         console.log(FoundationBigData);
-        FoundationBigData = FoundationBigData[0].title.rendered;
+        // FoundationBigData = FoundationBigData[0].title.rendered;
       }
       if(LocationsBigData != undefined){
         console.log('LocationsBigData');
@@ -97,15 +127,16 @@ class About extends Component {
         console.log('OperationsBigData');
         console.log(OperationsBigData);
       }
-
+      console.log('StrategicPlanProps');
+      console.log(StrategicPlanProps);
       return (
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
-
+            <Bureaus/>
             <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
-            <Foundation/>
+            <Foundation FoundationProps = {FoundationProps}/>
             <Locations/>
             <Operations/>
             <LargeContentCard/>
@@ -122,6 +153,7 @@ class About extends Component {
 
 function mapStateToProps(state) {
   return {
+    AboutSectionsData: state.AboutDataReducer.About.AboutSectionsData,
     AboutBigData: state.AboutDataReducer.About.AboutBigData,
     LeadershipBigData: state.AboutDataReducer.About.LeadershipBigData,
     LeadershipImage: state.AboutDataReducer.About.LeadershipImage,
@@ -135,6 +167,7 @@ function mapStateToProps(state) {
 }
 
 let actionList = {
+  AboutSections: actions.AboutSections,
   AboutData: actions.AboutData,
   AboutLeadership: actions.AboutLeadership,
   AboutBureaus: actions.AboutBureaus,

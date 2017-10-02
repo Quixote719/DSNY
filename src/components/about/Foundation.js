@@ -12,7 +12,10 @@ class Foundation extends Component {
 
     return (
       <div className="Foundation">
-        <SubSectionHeader title="Foundation"/>
+        <SubSectionHeader title = {this.props.FoundationProps.title}/>
+        <div>
+            {this.props.FoundationProps.content}
+        </div>
       </div>
     )
   }

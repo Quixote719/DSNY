@@ -7,6 +7,7 @@ let initStore = {
   EmPromotionalSubList: {},
   EmForSchoolSubList: {},
   About: {
+    AboutSectionsData:{},
     AboutBigData:{},
     LeadershipBigData:{},
     LeadershipImage:{},

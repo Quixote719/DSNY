@@ -1,5 +1,16 @@
 import axios from 'axios';
 
+
+
+
+export function AboutSections() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=pagesection&cat=31&meta_key=rank&orderby=meta_value_num&order=ASC');
+  console.log('Sections!!');
+  console.log(request);
+  return {type: 'SET_ABOUT_SECTIONS', payload: request};
+}
+
+
 export function AboutData() {
   const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pages/?slug=about-dsny');
   return {type: 'SET_ABOUT_TITLE', payload: request};
