@@ -4,20 +4,12 @@ import ReportStatsardList from './ReportsStats/Report_stats_card_list'
 import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import Banner from '../shared/banner'
-import SubSectionDropdown from '../shared/Sub_section_dropdown'
 import PressReleaseDetail from '../PressReleases/PressReleasedetail'
 
 class ResourcesContainer extends Component {
 
   constructor(props) {
     super(props);
-
-    this.fetchPressRelease = this.fetchPressRelease.bind(this);
-  }
-
-  fetchPressRelease(year) {
-    console.log('yeshu');
-    console.log(year);
   }
 
   render() {
@@ -30,10 +22,6 @@ class ResourcesContainer extends Component {
       <div>
         <div>
           <Banner text={BannerText}/>
-        </div>
-        <div className='container'></div>
-        <div className='container'>
-          <SubSectionDropdown ondropDownChange={this.fetchPressRelease}/>
         </div>
         <div className='container'>
           <PressRelease/>

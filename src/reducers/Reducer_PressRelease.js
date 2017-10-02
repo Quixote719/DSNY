@@ -12,7 +12,14 @@ export default function(state = initStore, action) {
           details: _.mapKeys(action.payload.data, "id")
         }
       };
-
+    case types.FETCH_PRESS_RELEASE_LIST:
+      return {
+        ...state,
+        pressRelease: {
+          ...state.pressRelease,
+          list: _.mapKeys(action.payload.data, "id")
+        }
+      };
     default:
       return state;
   }

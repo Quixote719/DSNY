@@ -11,9 +11,10 @@ class PressRelease extends Component {
     this.props.fetchPrSubList();
   }
 
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
     this.firstN = this.firstN.bind(this);
+    this._reroute = this._reroute.bind(this);
   }
 
   renderPosts(pr) {
@@ -31,7 +32,9 @@ class PressRelease extends Component {
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (<SubSectionButton title='VIEW ALL' onClick={this._reroute}/>);
+      return (
+        <Link to="/PressReleaseList"><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
+      );
     } else {
       return null;
     }
@@ -39,6 +42,7 @@ class PressRelease extends Component {
   }
   _reroute() {
     console.log('re routing this module to a sub module');
+    //this.props.history.push("/" + window.staticUrl + '/PressReleaseList');
   }
 
   render() {
@@ -53,7 +57,7 @@ class PressRelease extends Component {
 
     return (
       <div>
-        <SubSectionHeader title="Press Release"/>
+        <SubSectionHeader title="Press Release" onClick={this._reroute}/>
         <div>{this.renderPosts(pr)}</div>
 
         {this.ViewAllButton(_.size(pr))}

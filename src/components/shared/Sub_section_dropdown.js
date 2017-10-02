@@ -24,12 +24,14 @@ class SubSectionDropdown extends Component {
   render() {
     return (
       <div>
-        <DropdownButton className='dropDownButtonText' bsStyle="default" title={< div className = "col-xs-12 dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-          {this.state.term}
-        </div> < div className = "col-xs-2" > fa < /div> < /div >} noCaret id="dropdown-no-caret">
-          <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2016">2016</MenuItem>
-        </DropdownButton>
-        <div className='hairlineGreen'></div>
+        <div className='SubSectionDropdown'>
+          <DropdownButton className='dropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+            {this.state.term}
+          </div> < div className = "col-xs-2 downArrow" > fa < /div> < /div >} noCaret id="dropdown-no-caret">
+            <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2016">2016</MenuItem>
+          </DropdownButton>
+          <div className='hairlineGreen'></div>
+        </div>
       </div>
     );
   };
