@@ -51,8 +51,9 @@
   width: 100%;
 }
 
-.SubSectionDropdownMenu selected {
-  background-color: #7CC04B;
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+  background: #7CC04B;
+  color: white;
 }
 
 .dropdown-menu {
