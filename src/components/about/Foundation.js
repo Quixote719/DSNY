@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/Actions_About';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+import RoundProfile from '../shared/RoundProfile'
+import * as actions from '../../actions/Actions_About'
 import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
-
+import LargeContentCard from '../shared/LargeContentCard'
+import TitleCard from '../shared/TitleCard'
+import '../../content/styles/ContentCard.css';
 
 class Foundation extends Component {
 
@@ -14,7 +16,14 @@ class Foundation extends Component {
       <div className="Foundation">
         <SubSectionHeader title = {this.props.FoundationProps.title}/>
         <div>
-            {this.props.FoundationProps.content}
+            <div className='leftSec'>
+              <LargeContentCard type='2' content={this.props.FoundationProps.content}/>
+            </div>
+            <div className='rightSec'>
+              <TitleCard type='2'/>
+              <hr/>
+              <TitleCard type='2'/>
+            </div>
         </div>
       </div>
     )

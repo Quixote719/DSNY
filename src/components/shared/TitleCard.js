@@ -8,23 +8,20 @@ class TitleCard extends Component {
       narrow:{
         'width': '220px',
         'height': '90px',
-        'background-color':'grey',
+        'background-color':'#FFFFFF',
         'display':'inline-block'
       },
       wide:{
         'width': '303px',
         'height': '90px',
-        'background-color': 'lightblue',
+        'background-color': '#FFFFFF',
         'display': 'inline-block'
       }
     }
 
-
-
-    // let style= {this.props.style}=='narrow'?{styles.narrow}:{styles.wide};
     return (
         <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='ContentCard'>
-           <div className="Cardtext">
+           <div className="CardTitle">
              Permit Inspection + Environmental Police
            </div>
         </div>

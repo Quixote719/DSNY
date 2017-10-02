@@ -8,15 +8,6 @@ let initStore = {
   EmForSchoolSubList: {},
   About: {
     AboutSectionsData:{},
-    AboutBigData:{},
-    LeadershipBigData:{},
-    LeadershipImage:{},
-    LocationsBigData:{},
-    OperationsBigData:{},
-    StrategicPlanBigData:{},
-    BureausBigData:{},
-    BureausDpBigData:{},
-    FoundationBigData:{}
   }
 };
 

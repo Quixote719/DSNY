@@ -22,8 +22,8 @@ class TitleContentCard extends Component {
     }
     return (
         <div style={styles.narrow} className='ContentCard'>
-           <div className="CardTitle"></div>
-           <div className="CardContent"></div>
+           <div className="CardTitle">James</div>
+           <div className="CardContent">Bond</div>
         </div>
     );
   };
