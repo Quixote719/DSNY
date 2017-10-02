@@ -4,6 +4,20 @@
   font-size: 24px;
   font-weight: bold;
   line-height: 33px;
+  width: 90%;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropDownButtonText:hover, .dropDownButtonText:active, .dropDownButtonText:focus, .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+  background: transparent;
+}
+
+.dropdown {
+  width: 100%;
 }
 
 .chevron-down-font-awesome {
@@ -25,14 +39,16 @@
   font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 18px;
+  width: 100%;
 }
 
 .SubSectionDropdownMenu selected {
   background-color: #7CC04B;
 }
 
-.SubSectionDropdownMenu {
+.dropdown-menu {
   border-radius: 3px;
   background-color: #FFFFFF;
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+  width: 100%;
 }
