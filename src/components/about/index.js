@@ -103,7 +103,7 @@ class About extends Component {
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
-            <Bureaus BureausTitle = {BureausTitle}/>
+
             <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
             <Foundation/>
             <Locations/>
