@@ -1,0 +1,38 @@
+.dropDownButtonText {
+  color: #231F20;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 33px;
+}
+
+.chevron-down-font-awesome {
+  height: 20px;
+  width: 20px;
+  color: #7CC04B;
+  font-family: FontAwesome;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.hairlineGreen {
+  height: 2px;
+  background-color: #7CC04B;
+}
+
+.SubSectionDropdownMenuItem {
+  color: #000000;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.SubSectionDropdownMenu selected {
+  background-color: #7CC04B;
+}
+
+.SubSectionDropdownMenu {
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15);
+}
