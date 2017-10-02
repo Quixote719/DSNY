@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Banner from '../shared/banner';
-import LargeContentCard from '../shared/LargeContentCard';
 import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/Actions_About';
 import CardTitle from '../shared/Card_title';
-import LargeCardTitle from '../shared/LargeCardTitle';
+import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
 import Leadership from './Leadership';
 import Locations from './Locations';
@@ -13,6 +12,8 @@ import Operations from './Operations';
 import StrategicPlan from './StrategicPlan';
 import Bureaus from './Bureaus';
 import Foundation from './Foundation';
+import LargeContentCard from '../shared/LargeContentCard';
+import TitleContentCard from '../shared/TitleContentCard';
 
 import { connect } from 'react-redux';
 
@@ -83,17 +84,18 @@ class About extends Component {
             }
           }
           else{
-            console.log(31);
+            BannerText = {title: item.title.rendered,
+            content: item.content.rendered}
           }
         })
       }
 
-      if(AboutBigData != undefined){
-        console.log('AboutBigData');
-        console.log(AboutBigData);
-        BannerText = {title: AboutBigData[0].title.rendered,
-        content: AboutBigData[0].content.rendered}
-      }
+      // if(AboutBigData != undefined){
+      //   console.log('AboutBigData');
+      //   console.log(AboutBigData);
+      //   BannerText = {title: AboutBigData[0].title.rendered,
+      //   content: AboutBigData[0].content.rendered}
+      // }
       // if(LeadershipImage != undefined){
       //   console.log('LeadershipImage');
       //   console.log(LeadershipImage);
@@ -108,27 +110,7 @@ class About extends Component {
         console.log('BureausDpBigData');
         console.log(BureausDpBigData);
       }
-      // if(StrategicPlanBigData != undefined){
-      //   console.log('StrategicPlanBigData');
-      //   console.log(StrategicPlanBigData);
-      //   StrategicPlanProps = {title: StrategicPlanBigData[0].title.rendered,
-      //   content: StrategicPlanBigData[0].content.rendered}
-      // }
-      if(FoundationBigData != undefined){
-        console.log('FoundationBigData');
-        console.log(FoundationBigData);
-        // FoundationBigData = FoundationBigData[0].title.rendered;
-      }
-      if(LocationsBigData != undefined){
-        console.log('LocationsBigData');
-        console.log(LocationsBigData);
-      }
-      if(OperationsBigData != undefined){
-        console.log('OperationsBigData');
-        console.log(OperationsBigData);
-      }
-      console.log('StrategicPlanProps');
-      console.log(StrategicPlanProps);
+
       return (
         <div>
           <Banner text = {BannerText}/>
@@ -139,12 +121,13 @@ class About extends Component {
             <Foundation FoundationProps = {FoundationProps}/>
             <Locations/>
             <Operations/>
-            <LargeContentCard/>
-            <LargeContentCard/>
-            <LargeContentCard/>
+            <LargeContentCard type = '1'/>
+            <LargeContentCard type = '2'/>
           </div>
           <div className = 'SContainer'>
-            <LargeCardTitle/>
+            <TitleCard type = '1'/>
+            <br/>
+            <TitleCard type = '2'/>
           </div>
         </div>
       )
