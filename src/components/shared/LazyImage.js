@@ -1,7 +1,10 @@
 import React, {Component} from "react";
-import axios from 'axios';
+import PropTypes from 'prop-types';
+import {connect} from "react-redux";
+import {fetchmedia} from "../../actions";
+import _ from "lodash";
 
-export default class LazyImage extends Component {
+class LazyImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,6 +15,8 @@ export default class LazyImage extends Component {
   }
 
   componentDidMount() {
+    const {id} = this.props;
+    this.props.fetchmedia(id);
     const img = new Image();
     img.onload = () => {
       this.setState({loaded: true});
@@ -22,21 +27,43 @@ export default class LazyImage extends Component {
 
   }
 
-  // function fetchmedia(id) {
-  //
-  //   axios.get('http://dsnydev.staging.wpengine.com/wp-json/wp/v2/media/' + id).then((dataMedia) => {
-  //
-  //     this.setState({src: dataMedia.data.source_url});
-  //
-  //   })
-  // }
+  renderImg(img) {
+    return _.map(img, Item => {
+
+      return (<img className={this.props.className} style={{
+        width: '100%',
+        margin: '5px 0px'
+      }} src={Item.source_url} alt={this.props.alt} key={Item.id}/>);
+    });
+  }
 
   render() {
-    if (this.state.error) {
-      return <img className={this.props.className} style={this.props.style} src={this.props.unloadedSrc} alt={this.props.alt}/>
-    } else if (!this.state.loaded) {
-      return <img className={this.props.className} style={this.props.style} src={this.props.unloadedSrc} alt={this.props.alt}/>
-    }
-    return <img className={this.props.className} style={this.props.style} src={this.props.src} alt={this.props.alt}/>
+    const {imgSrc} = this.props;
+    // if (this.state.error) {
+    //   return <img className={this.props.className} style={this.props.style} src={this.props.unloadedSrc} alt={this.props.alt}/>
+    // } else if (!this.state.loaded) {
+    //   return <img className={this.props.className} style={this.props.style} src={this.props.unloadedSrc} alt={this.props.alt}/>
+    // }
+    return (
+
+      <div >
+        <div>{this.renderImg(imgSrc)}</div>
+
+      </div>
+
+    );
+
   }
+
 }
+
+LazyImage.propTypes = {
+  id: PropTypes.number,
+  className: PropTypes.string
+};
+
+function mapStateToProps(state) {
+  return {imgSrc: state.media};
+}
+
+export default connect(mapStateToProps, {fetchmedia})(LazyImage);;

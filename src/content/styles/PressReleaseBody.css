@@ -1,0 +1,43 @@
+.patternLineGreen {
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  background: url('../images/Lightgreen.png');
+}
+
+.PressReleaseBodytext {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 60px;
+}
+
+.PressReleaseBodySubHeaders {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 29px;
+  margin-bottom: 10px;
+}
+
+.PressReleaseBodyprid {
+  height: 24px;
+  width: 220px;
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.PressReleaseBodycontact {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.PressReleaseBodycontact a {
+  color: #00764D;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+}

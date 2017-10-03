@@ -4,8 +4,13 @@ import ReportStatsardList from './ReportsStats/Report_stats_card_list'
 import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import Banner from '../shared/banner'
+import PressReleaseDetail from '../PressReleases/PressReleasedetail'
 
 class ResourcesContainer extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     const BannerText = {

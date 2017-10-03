@@ -2,24 +2,24 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {fetchPrSubList} from "../../../actions";
+import {fetchEventSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
-import PressReleaseListItem from './press_release_list_item';
-class PressRelease extends Component {
+import EventListItem from './event_list_item';
+
+class Event extends Component {
   componentDidMount() {
-    this.props.fetchPrSubList();
+    this.props.fetchEventSubList();
   }
 
-  constructor(props, context) {
-    super(props, context);
+  constructor() {
+    super();
     this.firstN = this.firstN.bind(this);
-    this._reroute = this._reroute.bind(this);
   }
 
   renderPosts(pr) {
-    return _.map(this.firstN(pr, 4), prItem => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.slug} title={prItem.title.rendered} date={prItem.date} key={prItem.id}/>);
+    return _.map(this.firstN(pr, 4), eventItem => {
+      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} date={eventItem.FormattedEventDate} key={eventItem.EventID}/>);
     });
   }
 
@@ -32,9 +32,7 @@ class PressRelease extends Component {
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (
-        <Link to="/PressReleaseList"><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
-      );
+      return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
     } else {
       return null;
     }
@@ -42,7 +40,6 @@ class PressRelease extends Component {
   }
   _reroute() {
     console.log('re routing this module to a sub module');
-    //this.props.history.push("/" + window.staticUrl + '/PressReleaseList');
   }
 
   render() {
@@ -57,7 +54,7 @@ class PressRelease extends Component {
 
     return (
       <div>
-        <SubSectionHeader title="Press Release" onClick={this._reroute}/>
+        <SubSectionHeader title="DSNY Events"/>
         <div>{this.renderPosts(pr)}</div>
 
         {this.ViewAllButton(_.size(pr))}
@@ -67,7 +64,7 @@ class PressRelease extends Component {
 }
 
 function mapStateToProps(state) {
-  return {pr: state.resources.PresssReleasesSubList};
+  return {pr: state.resources.EventsSubList};
 }
 
-export default connect(mapStateToProps, {fetchPrSubList})(PressRelease);
+export default connect(mapStateToProps, {fetchEventSubList})(Event);

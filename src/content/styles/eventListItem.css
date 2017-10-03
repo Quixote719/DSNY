@@ -1,0 +1,30 @@
+.listItemTag {
+  height: 22px;
+  color: rgb(155, 155, 155);
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+}
+
+.PressReleaseTitle {
+  color: rgb(0, 118, 77);
+  font-family: "Helvetica Neue";
+  font-size: 17.5px;
+  font-weight: 800;
+}
+
+.PressReleaseTitle:hover {
+  color: #7CC04B;
+}
+
+.PressReleaseDate {
+  color: rgb(51, 51, 51);
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.eventhairline {
+  height: 1px;
+  margin-top: 30px;
+  margin: 20px 0px;
+}

@@ -12,8 +12,9 @@ class CardTitleBody extends Component {
             <div className='cardTitleText'>{this.props.title}</div>
           </div>
           <div className='cardBody'>
-            <div className='cardBodyText'>{this.props.body}
-            </div>
+            <div className='cardBodyText' dangerouslySetInnerHTML={{
+              __html: this.props.body
+            }}/>
           </div>
         </div>
       </Col>

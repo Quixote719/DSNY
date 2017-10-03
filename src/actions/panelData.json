@@ -1,0 +1,26 @@
+[
+        {
+"date": "Tuesday, September 26, 2017",
+"today_id": "20170926",
+"items": [
+                {
+"icon": "/portal/apps/311_images/ico-parking.png",
+"details": "Alternate side parking and meters in effect",
+"status": "IN EFFECT",
+"type": "Parking"
+                },
+                {
+"icon": "/portal/apps/311_images/ico-trash.png",
+"details": "Garbage, recycling, and organics collections on schedule",
+"status": "ON SCHEDULE",
+"type": "Garbage and Recycling"
+                },
+                {
+"icon": "/portal/apps/311_images/ico-school.png",
+"details": "Public schools in session",
+"status": "OPEN",
+"type": "Schools"
+                }
+            ]
+        }
+]

@@ -1,8 +1,9 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 #headerContent {
   min-height: calc(100vh - 341px);
 }
 
-.SContainer{
+.SContainer {
   width: 940px;
   margin: 0 auto;
   overflow: hidden;
@@ -12,9 +13,8 @@
   background-color: #F2F2F2;
 }
 
-
-@media only screen and (max-width: 940px){
-  .SContainer{
+@media only screen and (max-width: 940px) {
+  .SContainer {
     width: auto;
   }
 }
