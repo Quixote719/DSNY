@@ -10,7 +10,7 @@ class Banner extends Component {
       <div className="GBanner">
         <div className="GTexture">
           <div className="GBannerTitle">{this.props.text.title}</div>
-          <div className="GBannerContent">{this.props.text.content}</div>
+          <div className="GBannerContent" dangerouslySetInnerHTML={{__html: this.props.text.content}}></div>
         </div>
       </div>
     )

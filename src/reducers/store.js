@@ -1,7 +1,6 @@
 let initStore = {
-
-    carouselItems: [],
-    carouselPanelItemsTemporary: [],
+  carouselItems: [],
+  carouselPanelItemsTemporary: [],
   PresssReleasesSubList: {},
   ReportCardSubList: {},
   StatsCardSubList: {},
@@ -11,20 +10,8 @@ let initStore = {
   subSectionHeader: {},
   About: {
     AboutSectionsData:{},
-    AboutBigData:{},
-    LeadershipBigData:{},
-    LeadershipImage:{},
-    LocationsBigData:{},
-    OperationsBigData:{},
-    StrategicPlanBigData:{},
-    BureausBigData:{},
     BureausDpBigData:{},
-    FoundationBigData:{},
-    AboutBigData:{},
-    LeadershipBigData:{}
   },
-
-
   pressRelease: {
     list: {},
     details: {}

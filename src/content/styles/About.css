@@ -1,0 +1,12 @@
+.LeadershipLeft{
+  width: 300px;
+  height: 300px;
+  display:inline-block;
+}
+.LeadershipRight{
+  width: 600px;
+  height: 300px;
+  padding: 20px;
+  display:inline-block;
+  box-sizing: border-box;
+}

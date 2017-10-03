@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Banner from '../shared/banner';
 import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/Actions_About';
+import * as actions from '../../actions/actions_about';
 import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
@@ -14,6 +14,7 @@ import Bureaus from './Bureaus';
 import Foundation from './Foundation';
 import LargeContentCard from '../shared/LargeContentCard';
 import TitleContentCard from '../shared/TitleContentCard';
+import '../../content/styles/About.css';
 
 import { connect } from 'react-redux';
 
@@ -108,15 +109,11 @@ class About extends Component {
 function mapStateToProps(state) {
   return {
     AboutSectionsData: state.AboutDataReducer.About.AboutSectionsData,
-    // BureausBigData: state.AboutDataReducer.About.BureausBigData,
-    // BureausDpBigData: state.AboutDataReducer.About.BureausDpBigData,
   }
 }
 
 let actionList = {
   AboutSections: actions.AboutSections,
-  // AboutBureaus: actions.AboutBureaus,
-  // AboutBureausDepartment: actions.AboutBureausDepartment,
 };
 
 About = connect(mapStateToProps, actionList)(About);
