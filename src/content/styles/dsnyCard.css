@@ -1,0 +1,21 @@
+.TitleCardBox{
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+.CardTitle{
+  width: 190px;
+  max-height: 42px;
+  margin: 10px auto;
+	color: #00764E;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 17.5px;
+	font-weight: bold;
+	line-height: 19px;
+}
+
+.CardContent{
+	color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}

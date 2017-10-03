@@ -6,6 +6,11 @@
 .SContainer {
   width: 940px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.GreyBcg{
+  background-color: #F2F2F2;
 }
 
 @media only screen and (max-width: 940px) {
