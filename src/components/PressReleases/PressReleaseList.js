@@ -4,14 +4,15 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {fetchPressReleaseList} from "../../actions";
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
 import PressReleaseListItem from '../Resources/PressReleases/press_release_list_item';
 import SubSectionDropdown from '../shared/Sub_section_dropdown'
 
 // Set initial state
 let PressReleaseListstate = {
-  year: 2017
+  year: 2017,
+  activePage: 1
 };
 
 class PressReleaseList extends Component {
@@ -27,6 +28,11 @@ class PressReleaseList extends Component {
     this.state = PressReleaseListstate;
 
     this.fetchPressRelease = this.fetchPressRelease.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(eventKey) {
+    this.setState({activePage: eventKey});
   }
 
   componentWillUnmount() {

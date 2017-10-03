@@ -3,6 +3,7 @@
   color: rgb(155, 155, 155);
   font-family: "Helvetica Neue";
   font-size: 14px;
+  margin-left: 15px;
 }
 
 .PressReleaseTitle {
@@ -21,6 +22,7 @@
   font-family: "Helvetica Neue";
   font-size: 16px;
   font-weight: 800;
+  margin-left: 15px;
 }
 
 .PRLIhairline {
