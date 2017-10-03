@@ -1,4 +1,6 @@
-    
+.serviceRequestParentTablet{
+    display: none;
+} 
 .carouselLeftPanel{
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -104,7 +106,7 @@
 }
 #TextureSquare{
     width: 461px;
-    height: 125px;
+    height: 142px;
     padding: 10px;
     background: url('../images/Lightgreen.png')
 }
@@ -114,13 +116,14 @@
     background-color: #FFFFFF ;
 }
 .ridOfSearch, .actual-edit-overlay{
+    height: 33px;
     font-weight: 700;
     color: #000;
     font-size: 24px;
     border-top: none;
     margin-right: 8px;
     width: 420px;
-    margin-top: 25px;
+    margin-top: 29px;
     margin-left: 13px;
     border-bottom: 2px solid #7CC04B;
     border-left: none;
@@ -129,15 +132,262 @@
 }
 #ridSearch{
     position: absolute;
-    top: 50px;
-    right: 34px;
+    top: 42px;
+    right: 31px;
     color: #7CC04B!important;
+}
+#collectionSearch{
+    position: absolute;
+    top: 42px;
+    right: 31px;
+    color: #7CC04B!important;
+}
+.exampleRidSearch{
+    margin-top: 8px;
+    margin-left: 14px;
+    color: #9B9B9B;
+    font-size: 15px;
+    line-height: 17px;
+}
+input.ridOfSearch:focus {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+    .searchRidParent{
+        padding-right: 8px;
+    }
+    .searchCollectionParent{
+        padding-left: 8px;
+    }
+.programContainerParent{
+    background-color: #F2F2F2;
+    height: 288px;
+}
+#programCol{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+    margin-right: 19px;
+    width: 25%;
+    width: 220px;
+    height: 200px;
+    background: white;
+}
+.programContainer {
+    margin-left: auto;
+    width: 1180px;
+    margin-right: auto;
+    padding-top: 44px;
+}
+.programImageDiv>img{
+    height: 65px;
+    width: 65px;
+}
+.programImageDiv{
+    text-align: center;
+    margin-top: 36.5px;
+}
+.programTitleDiv{
+    text-align: center;
+    color: #231F20;	
+    font-size: 16px;	
+    font-weight: bold;	
+    line-height: 20px;
+    margin-top: 16.7px;
+}
+.searchProgramBtnDiv>button{
+    font-family: inherit;
+    font-size: 13px;
+    height: 36px;
+    width: 126px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 118, 77);
+    border-radius: 0.188em;
+    border: 0px;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600; 
+    margin-top: 18px; 
+    margin-bottom: 0px; 
+}
+.searchProgramBtnDiv, .searchProgramBtnDivTablet{
+    text-align: center;
+}
+.serviceRequestTitle {
+    padding-left: 26px;
+    color: #231F20;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    color: #231F20;
+    padding-right: 26px;
+    padding-top: 29px;
+}
+.serviceRequestInput, .serviceRequestInputTablet{
+    text-align: center;
+}
+.serviceRequestSearch{
+    text-align: center;
+    margin-top: 8px;
+    height: 40px;
+    border: 1px solid #EDEDEE;
+    border-radius: 3px;
+    width: 190px;
+    color: #9B9B9B;;
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    border-radius: 3px;
+    font-size: 12px;
+}
+input.serviceRequestSearch:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+    border-color: #7CC04B !important;
+}
+.programMobileData{
+    display: none;
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
     .carouselLeftPanel{
         display: none;
     }
+    .searchContainerRidCollection {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        width: auto;
+    }
+    #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+    .ridOfSearch, .actual-edit-overlay {
+        height: 29px;
+        margin-top: 25px;
+        font-size: 18px;
+        width: 95%;
+        margin-left: 9px;
+    }
+    .exampleRidSearch {
+        margin-left: 10px;
+    }
+    .searchRow {
+       margin: 0;
+    }
+    .searchCollectionParent{
+        margin-top: 15px;
+    }
+    #ridSearch{
+        top: 36px;
+    }
+    #collectionSearch{
+        top: 36px;
+    }
+    .serviceRequestTitleTablet {
+        padding-left: 26px;
+        color: #231F20;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+        color: #231F20;
+        padding-right: 26px;
+        padding-top: 30px;
+    }
+    .serviceRequestSearchTablet{
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 100%;
+        padding-top: 9px;
+        margin-top: 19px;
+    }
+    .serviceRequestSearchTablet:focus{
+        border-color: #7CC04B!important;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+    .serviceRequestInputTablet>.subSectionButton{
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .serviceRequestParentTablet{
+        padding-left: 11px;
+        padding-right: 11px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        border-radius: 3px;
+        margin-bottom: 17px;
+        background-color: white;
+        display: block;
+    } 
+    .programContainerParentTablet{
+        height: 100%;
+    }
+    .programContainer {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 17px;
+    }
+    .programContainer>.row{
+        display: none;
+        margin-left: 0;
+    }
+    .serviceRequestCol{
+        display: none;
+    }
+    #programCol{
+        width: 166px;
+        height: 165px;
+        margin-right: 14px;
+    }
+    .searchRidParent {
+        padding-right: 15px;
+    }
+    .searchCollectionParent {
+        padding-left: 15px;
+    }
+    .programImageDiv{
+        margin-top: 20.6px;
+    }
+    .programTitleDiv{
+        margin-top: 6.5px;
+    }
+    .programMobileData{
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);        
+        display: block;
+    }
+    .programMobileImage{
+        margin-top: 12.92px;
+        float: right;
+        height: 54.17px;
+        width: auto;
+    }
+    .programMobileOuter{
+        display: table;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 14.92px;
+        border-radius: 3px;
+        margin-bottom: 17px;        
+        height: 80px;
+        background-color: white;
+    }
+    .programMobileTitle{
+        vertical-align: middle;
+        color: #231F20;
+        display: inline-block;
+        width: 82%;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 20px;
+        display: table-cell;
+    }
+
 }
 
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -145,16 +395,300 @@
     .carouselLeftPanel{
         display: none;
     }
+    .searchContainerRidCollection{
+        width: 712px;
+    }
+    #TextureSquare {
+        width: 100%;
+    }
+    .ridOfSearch, .actual-edit-overlay {
+        width: 663.88px;
+    }
+    .searchCollectionParent{
+        margin-top: 10px;
+    }
+    #ridSearch{
+        right: 36px;
+    }
+    #collectionSearch{
+        right: 36px;
+    }
+    .serviceRequestTitleTablet {
+        padding-left: 26px;
+        color: #231F20;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+        color: #231F20;
+        padding-right: 26px;
+        padding-top: 28px;
+    }
+    .serviceRequestSearchTablet{
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 520px;
+        padding-top: 9px;
+    }
+    .serviceRequestSearchTablet:focus{
+        border-color: #7CC04B!important;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+    .serviceRequestInputTablet>.subSectionButton{
+        margin-left: 20px;
+        width: 126px;
+        margin-top: 21px;
+        margin-bottom: 37px;
+    }
+    .serviceRequestParentTablet{
+        height: 147px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        border-radius: 3px;
+        margin-bottom: 20px;
+        background-color: white;
+        display: block;
+    } 
+    .programContainerParentTablet{
+        height: 392px;
+    }
+    .programContainer {
+        padding-top: 30px;
+        width: 708px;
+    }
+    .programContainer>.row{
+        margin-left: 0;
+    }
+    .serviceRequestCol{
+        display: none;
+    }
+    #programCol{
+        width: 166px;
+        height: 165px;
+        margin-right: 14px;
+    }
+    .searchRidParent {
+        padding-right: 15px;
+    }
+    .searchCollectionParent {
+        padding-left: 15px;
+    }
+    .programImageDiv{
+        margin-top: 20.6px;
+    }
+    .programTitleDiv{
+        margin-top: 6.5px;
+    }
 }
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
     .carouselLeftPanel{
         display: none;
     }
+    .searchContainerRidCollection {
+        width: auto;
+    }
+    #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+    .ridOfSearch, .actual-edit-overlay {
+        height: 29px;
+        margin-top: 25px;
+        font-size: 18px;
+        width: 95%;
+        margin-left: 9px;
+    }
+    .exampleRidSearch {
+        margin-left: 10px;
+    }
+    .searchRow {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .searchCollectionParent{
+        margin-top: 15px;
+    }
+    #ridSearch{
+        right: 42px;
+        top: 36px;
+    }
+    #collectionSearch{
+        right: 42px;
+        top: 36px;
+    }
+    .serviceRequestTitleTablet {
+        padding-left: 26px;
+        color: #231F20;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+        color: #231F20;
+        padding-right: 26px;
+        padding-top: 30px;
+    }
+    .serviceRequestSearchTablet{
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 100%;
+        padding-top: 9px;
+        margin-top: 19px;
+    }
+    .serviceRequestSearchTablet:focus{
+        border-color: #7CC04B!important;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+    .serviceRequestInputTablet>.subSectionButton{
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .serviceRequestParentTablet{
+        height: auto!important;
+        padding-left: 11px;
+        padding-right: 11px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        border-radius: 3px;
+        margin-bottom: 17px;
+        background-color: white;
+        display: block;
+    } 
+    .programContainerParentTablet{
+        height: 100%;
+    }
+    .programContainer {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 17px;
+    }
+    .programContainer>.row{
+        display: none;
+        margin-left: 0;
+    }
+    .serviceRequestCol{
+        display: none;
+    }
+    #programCol{
+        width: 166px;
+        height: 165px;
+        margin-right: 14px;
+    }
+    .searchRidParent {
+        padding-right: 15px;
+    }
+    .searchCollectionParent {
+        padding-left: 15px;
+    }
+    .programImageDiv{
+        margin-top: 20.6px;
+    }
+    .programTitleDiv{
+        margin-top: 6.5px;
+    }
+    .programMobileData{
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);        
+        display: block;
+    }
+    .programMobileImage{
+        margin-top: 12.92px;
+        float: right;
+        height: 54.17px;
+        width: auto;
+    }
+    .programMobileOuter{
+        display: table;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 14.92px;
+        border-radius: 3px;
+        margin-bottom: 17px;        
+        height: 80px;
+        background-color: white;
+    }
+    .programMobileTitle{
+        vertical-align: middle;
+        color: #231F20;
+        display: inline-block;
+        width: 82%;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 20px;
+        display: table-cell;
+    }
+
+    
 }
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px){
     .carouselLeftPanel{
+        display: block;
+    }
+    .searchRidParent{
+        padding-right: 8px;
+    }
+    .searchCollectionParent{
+        padding-left: 8px;
+    }
+    .programContainer {
+        padding-top: 30px;
+        width: 940px;
+    }
+    .programContainer>.row{
+        margin-left: 0;
+    }
+    .serviceRequestCol{
         display: none;
+    }
+    #programCol{
+        margin-right: 18px;
+    }
+    .serviceRequestTitleTablet {
+        padding-left: 26px;
+        color: #231F20;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 22px;
+        text-align: center;
+        color: #231F20;
+        padding-right: 26px;
+        padding-top: 28px;
+    }
+    .serviceRequestSearchTablet{
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 755px;
+        padding-top: 9px;
+    }
+    .serviceRequestSearchTablet:focus{
+        border-color: #7CC04B!important;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+    .serviceRequestInputTablet>.subSectionButton{
+        margin-left: 20px;
+        width: 126px;
+        margin-top: 21px;
+        margin-bottom: 37px;
+    }
+    .serviceRequestParentTablet{
+        height: 147px;
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        border-radius: 3px;
+        margin-bottom: 20px;
+        background-color: white;
+        display: block;
+    } 
+    .programContainerParentTablet{
+        height: 427px;
     }
 }

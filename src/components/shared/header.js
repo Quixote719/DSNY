@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styles from '../../content/styles/header.css';
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavItem, Modal, Button } from 'react-bootstrap';
-import * as actions from '../../actions/actions_homePageCarousel';
 import { connect } from 'react-redux';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
 
 class Header extends React.Component {
@@ -33,9 +33,6 @@ class Header extends React.Component {
     handleClickHeader() {
         this.forceUpdate();
     }
-    // componentWillMount() {
-    //     this.props.carouselData();
-    // }
     render() {
         var url = window.location.pathname;
         return (
@@ -53,6 +50,11 @@ class Header extends React.Component {
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
                         <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
+                        <span className="textSizeHeader">Text Size</span>
+                        <span className="textSizeTranslate">&#8203;</span>
+                        <span aria-hidden="true" className="translateIcon">▼</span>
+                        <span className="translateHeader">Translate</span>
+                        <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" />
                     </div>
                 </div>
                 <Navbar collapseOnSelect id="slideNav">
@@ -81,20 +83,35 @@ class Header extends React.Component {
                             <LinkContainer to="/contact" className={url === '/contact' ? 'contactHeaderTitle bottomHeaderTitles selectedParent' : 'contactHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={6} className="bottomHeaderTitles contactHeaderTitle">Contact</NavItem>
                             </LinkContainer>
-                            <input className="searchMessagesInput" type="text" placeholder="Search" >
-                            </input>
                         </Nav>
+                        <input className="searchMessagesInput" type="text" placeholder="Search" >
+                        </input>
+                        <i className="fa fa-search searchMessagesInputIcon"></i>
                     </Navbar.Collapse>
                 </Navbar>
                 <Modal show={this.state.showModal} onHide={this.close} id="menu">
+                <div className="upperHeader">
+                    <div className="container upperHeaderContainer">
+                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" />
+                        <span className="upperHeaderTitle">Keeping NYC healthy, safe and clean since 1881</span>
+                        <span className="upperHeaderTitle2">Search all NYC.gov websites</span>
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" />
+                        <span className="upperHeaderTitle1">311</span>
+                    </div>
+                </div>
+
                     <Modal.Header closeButton>
-                        
+
                         <img src={require('../../content/images/DSNY-Web_logo.png')} className="middleHeaderLogoMobile" />
                         <span className="mobileSanitationHeaderText">Sanitation</span>                    </Modal.Header>
                     <Modal.Body>
+                        <div className = "searchMessagesMobileDiv">
+                        <input className="searchMessagesInput" type="text" placeholder="Search" >
+                        </input>
+                        <i className="fa fa-search searchMessagesInputIcon"></i>
+                        </div>
                         <Nav className="mainLinks" onClick={this.close}>
-                            <input className="searchMessagesInput" type="text" placeholder="Search" >
-                            </input>
                             <NavItem eventKey={2} className="bottomHeaderTitles homeHeaderTitles ">Home</NavItem>
                             <LinkContainer to="/about" className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
@@ -118,17 +135,5 @@ class Header extends React.Component {
         );
     }
 };
-
-function mapStateToProps(state) {
-    return {
-        // carouselTitle: state.carouselDataReducer.carouselTitle,
-    }
-}
-
-let actionList = {
-    carouselData: actions.carouselData,
-};
-
-Header = connect(mapStateToProps, actionList)(Header);
 
 export default Header;
