@@ -42,6 +42,8 @@
     float:right;
 }
 .middleHeader{
+    padding-left: 20px;
+    padding-right: 5px;
     width: 958px;
 }
 .middleHeaderTextLeft{
@@ -59,6 +61,7 @@
     padding-bottom: 8px;
 }
 .middleHeaderContainerParent{
+    padding-right: 10px;
     border-bottom: 1px solid transparent;;
 }
 .headerTabs>ul{
@@ -91,6 +94,7 @@
     width: 61px;
 }
 #slideNav{
+    margin-bottom: 0;
     border-top: 1px solid #E0E0E0;;
     border-bottom: 0px solid transparent;
     margin-bottom: 0;
@@ -112,14 +116,14 @@
 
 #navBar>ul>.aboutHeaderTitle.bottomHeaderTitles.active>a{
     color: white;
-    background-color: #096543!important;
+    /*background-color: #096543!important;*/
     box-shadow: none;
     border-right: 1px solid #E0E0E0;
     background-image: none;
 }
 #navBar>ul>.bottomHeaderTitles.active>a:hover{
     color: white;
-    background-color: #096543!important;
+    /*background-color: #096543!important;*/
     box-shadow: none;
     border-right: 1px solid #E0E0E0;
     background-image: none;
@@ -150,6 +154,7 @@
     width: 940px;
 }
 #slideNav>.container>.navbar-collapse{
+    position: relative;
     padding-left: 0;
     padding-right: 0;
 }
@@ -163,7 +168,6 @@
     padding-left: 10px;
     font-weight: bold;
     color: #666666;;	
-    background-image: url("../images/Search.png");
     background-repeat: no-repeat;
     background-position: right 13px center;
     border-radius: 3px;
@@ -183,6 +187,9 @@ input.searchMessagesInput:focus {
     font-size: 42px;
     color: #000000 !important;
     opacity: 0.8;
+}
+.close:focus{
+    outline-color: transparent;
 }
 .modal-dialog {
     display: none;
@@ -209,6 +216,9 @@ input.searchMessagesInput:focus {
     background-image: none;     
     box-shadow: none !important;
     background-color: inherit;
+}
+.navbar-nav{
+    position: relative;
 }
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
     background-color: transparent;
@@ -320,6 +330,13 @@ input.searchMessagesInput:focus {
     font-weight: 700;
     font-size: 14px;
 }
+.searchMessagesInputIcon{
+    position: absolute;
+    top: 16px;
+    right: -5px;
+    color: #767676!important;
+    font-size: 15px!important
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
 .carouselContainer {
@@ -378,10 +395,11 @@ input.searchMessagesInput:focus {
         border-radius: 3px;
         width: 100%;
         padding-left: 14px;
-        font-weight: 200;
+        font-weight: 400;
         color: #B6B6B6;        
     }
     .mainLinks {
+        position: relative;
         margin-left: 16px;
         margin-right: 16px;
         margin-top: 0;
@@ -398,7 +416,7 @@ input.searchMessagesInput:focus {
     }
     .modal-dialog {
         margin-right: 0px;
-        margin-top: 24px;
+        margin-top: 0;
         margin-left: auto;
         margin-bottom: 0;
         width: 100%;
@@ -407,6 +425,8 @@ input.searchMessagesInput:focus {
         -webkit-animation: slideIn 0.7s forwards !important;
     }
     .modal-content, .modal-dialog {
+        border-radius: 0;
+        border: 0 solid transparent;
         height: 100%;
         overflow: hidden;
     }
@@ -533,6 +553,17 @@ input.searchMessagesInput:focus {
     height: 85px;
     padding-right: 11px;
     }
+    .searchMessagesInputIcon {
+        position: absolute;
+        top: 34px;
+        right: 24px;
+        font-size: 16px!important;
+        color: #767676!important;
+    }
+    .searchMessagesMobileDiv{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -542,6 +573,7 @@ input.searchMessagesInput:focus {
     width: 730px;
 }
 .middleHeader {
+    padding-right: 16px;
     width: 749px;
 }
 #slideNav>.container {
@@ -681,17 +713,17 @@ input.searchMessagesInput:focus {
     }
     .modal-dialog {
         margin-right: 0px;
-        margin-top: 24px;
+        margin-top: 0;
         margin-left: auto;
         margin-bottom: 0;
         width: 100%;
-        max-height: 100%;
         display: block!important;
         -webkit-animation: slideIn 0.7s forwards !important;
     }
     .modal-content, .modal-dialog {
-        height: 100%;
-        overflow: hidden;
+        border-radius: 0;
+        border: 0 solid transparent;
+        min-height: 100%;
     }
     .modal-header {
         border-bottom: none;
@@ -816,6 +848,16 @@ input.searchMessagesInput:focus {
     height: 85px;
     padding-right: 11px;
     }
+    .searchMessagesMobileDiv{
+        position: relative;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .searchMessagesInputIcon {
+    position: absolute;
+    top: 35px;
+    right: 2px;
+}
 }
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px){
@@ -824,6 +866,7 @@ input.searchMessagesInput:focus {
     width: 940px;
 }
 .middleHeader {
+    padding-right: 7px;
     width: 958px;
 }
 #slideNav>.container {
@@ -839,8 +882,8 @@ input.searchMessagesInput:focus {
     width: 939px;
 }
 .newsEventsCarousel{
-    float: none;
-    width: 100%;
+    float: right;
+    width: 816px;
 }
 .carousel-indicators{
     display: block;

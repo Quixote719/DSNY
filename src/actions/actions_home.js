@@ -4,31 +4,27 @@ import data from './panelData.json';
 
 export function carouselData(successCallback) {
     return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=41orderby=date&order=DESC&post_per_page=5')
+        axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getHeroCards?posts_per_page=5')
             .then((data) => {
                 let c = 0;
+                console.log("Carousel Values: ")
                 console.log(data.data)
                 let carouselItems = [];
-                data.data.map((item) => {
+                data.data.cards.map((item) => {
                     let temp = {};
-                    let heroFeaturedMediaID;
-                    temp['heroTitle'] = item.title.rendered;
-                    heroFeaturedMediaID = item.image.ID;
-                    axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + heroFeaturedMediaID)
-                        .then((dataMedia) => {
-                            temp['heroImage'] = dataMedia.data.source_url;
-                            carouselItems.push(temp);
-                            c++;
-                            if (c === 3) {
-                                dispatch(
-                                    {
-                                        type: 'SET_CAROUSEL_TITLE',
-                                        payload: carouselItems,
-                                    }
-                                )
-                                successCallback();
+                    temp['heroTitle'] = item.title;
+                    temp['heroImage'] = item.image.file;
+                    carouselItems.push(temp);
+                    c++;
+                    if (c === 3) {
+                        dispatch(
+                            {
+                                type: 'SET_CAROUSEL_TITLE',
+                                payload: carouselItems,
                             }
-                        })
+                        )
+                        successCallback();
+                    }
                 })
             })
     }
@@ -110,13 +106,13 @@ export function programData(successCallback) {
                 let programItems = [];
                 data.data.map((item) => {
                     let temp = {};
-                    if(item.image){
-                    temp['programTitle'] = item.title.rendered;
-                    temp['programImage'] = item.image.guid;
+                    if (item.image) {
+                        temp['programTitle'] = item.title.rendered;
+                        temp['programImage'] = item.image.guid;
                     }
-                    else{
-                    temp['programTitle'] = item.title.rendered;
-                    temp['programImage'] = item.linked_file.guid;
+                    else {
+                        temp['programTitle'] = item.title.rendered;
+                        temp['programImage'] = item.linked_file.guid;
                     }
                     programItems.push(temp);
                     dispatch(

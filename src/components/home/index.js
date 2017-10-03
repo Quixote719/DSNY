@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Carousel } from 'react-bootstrap';
-import * as actions from '../../actions/actions_homePageCarousel';
+import * as actions from '../../actions/actions_home';
 import { connect } from 'react-redux';
 import month from 'month';
 import styles from '../../content/styles/home.css';
@@ -34,9 +34,9 @@ class Home extends Component {
     console.log("Panel Values: ")
     console.log(this.props.carouselPanelItems)
 
-    var carouselDataItemList = this.props.carouselItemsBigData.map(function (item) {
+    var carouselDataItemList = this.props.carouselItemsBigData.map(function (item, index) {
       return (
-        <Carousel.Item>
+        <Carousel.Item key={index}>
           <img src={item.heroImage} />
           <Carousel.Caption>
             {item.heroTitle}
@@ -58,24 +58,39 @@ class Home extends Component {
       })
     }, this)
 
+    var mobileProgramList = this.props.programListData.map(function (item, index) {
+      return (
+        <div className="programMobileData" key={index}>
+          <div className="programMobileOuter">
+            <span className="programMobileTitle">
+              {item.programTitle}
+            </span>
+            <span className="programMobileImageSpan">
+              <img src={item.programImage} className="programMobileImage" />
+            </span>
+          </div>
+        </div>
+      );
+    }, this)
+
     var programsList = this.props.programListData.map(function (item, index) {
       if (index == 0) {
         return (
-          <div>
-            <Col className="programData" >
+          <div key={index}>
+            <Col className="programData serviceRequestCol"  >
               <Col xs={12} lg={2} id="programCol">
-                  <div className="serviceRequestParent">
-                    <div className ="serviceRequestTitle">
-                      Check Service Request Number
+                <div className="serviceRequestParent">
+                  <div className="serviceRequestTitle">
+                    Check Service Request Number
                     </div>
-                    <div className = "serviceRequestInput">
-                      <input className="serviceRequestSearch" type="text" placeholder="Service Request Number" >
-                      </input>
-                    </div>
-                    <div className = "searchProgramBtnDiv">
-                    <SubSectionButton  title='SEARCH'/>
-                    </div>
+                  <div className="serviceRequestInput">
+                    <input className="serviceRequestSearch" type="text" placeholder="Service Request Number" >
+                    </input>
                   </div>
+                  <div className="searchProgramBtnDiv">
+                    <SubSectionButton title='SEARCH' />
+                  </div>
+                </div>
               </Col>
             </Col>
             <Col className="programData" >
@@ -94,7 +109,7 @@ class Home extends Component {
         );
       }
       return (
-        <Col className="programData" >
+        <Col className="programData" key={index}>
           <Col xs={12} lg={2} id="programCol">
             <div>
               <div className="programImageDiv">
@@ -170,13 +185,25 @@ class Home extends Component {
             </Col>
           </Row>
         </div>
-        <div className="programContainerParent">
+        <div className="programContainerParent programContainerParentTablet">
           <div className="programContainer">
+            <div className="serviceRequestParentTablet">
+              <div className="serviceRequestTitleTablet">
+                Check Service Request Number
+              </div>
+              <div className="serviceRequestInputTablet">
+                <input className="serviceRequestSearchTablet" type="text" placeholder="Service Request Number" >
+                </input>
+                <SubSectionButton title='SEARCH' />
+              </div>
+            </div>
+            {mobileProgramList}
             <Row>
               {programsList}
             </Row>
           </div>
         </div>
+
       </div>
     )
   }

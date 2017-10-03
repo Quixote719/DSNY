@@ -1,6 +1,10 @@
 import initStore from './store';
 
-export default function carouselDataReducer(state = initStore, action) {
+export default function carouselDataReducer(state = {
+     carouselItems : [],
+     carouselPanelItemsTemporary : [],    
+     programListData : [],
+  }, action) {
   switch (action.type) {
     case 'SET_CAROUSEL_TITLE':
       return { ...state, carouselItems: action.payload };
