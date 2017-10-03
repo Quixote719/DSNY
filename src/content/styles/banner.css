@@ -8,6 +8,8 @@
 }
 
 .GBannerTitle{
+    margin:0 auto;
+    width: 750px;
     padding-top: 60px;
   	color: #FFFFFF;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,8 +21,8 @@
 }
 
 .GBannerContent{
-    margin: 0 auto;
     width: 750px;
+    margin: 0 auto;
     padding-top: 25px;
     color: #FFFFFF;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -29,4 +31,26 @@
     letter-spacing: -1px;
     line-height: 23px;
     text-align: center;
+}
+
+@media only screen and (max-width: 940px) {
+    .GBannerTitle{
+      width: auto;
+      padding-top: 6%;
+      font-size: 40px;
+    }
+    .GBannerContent{
+      padding: 25px 3%;
+      width: auto;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .GBannerTitle{
+      padding-top: 8%;
+      font-size: 36px;
+    }
+    .GBannerContent{
+      font-size: 16px;
+    }
 }

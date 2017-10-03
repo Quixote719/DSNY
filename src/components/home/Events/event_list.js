@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {fetchEventSubList} from "../../../actions";
+import {fetchEventSubList} from "../../../actions/actions_homePageCarousel";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
 import EventListItem from './event_list_item';
@@ -64,7 +64,7 @@ class Event extends Component {
 }
 
 function mapStateToProps(state) {
-  return {pr: state.resources.EventsSubList};
+  return {pr: state.carouselDataReducer.EventsSubList};
 }
 
 export default connect(mapStateToProps, {fetchEventSubList})(Event);

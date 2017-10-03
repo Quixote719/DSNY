@@ -87,10 +87,3 @@ export function fetchEmPSubList() {
 
   return {type: types.FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST, payload: request};
 }
-
-
-export function fetchEventSubList() {
-  const request = axios.get(FETCH_EVENTS_SUB_LIST_URL);
-
-  return {type: types.FETCH_EVENT_SUB_LIST, payload: request};
-}
