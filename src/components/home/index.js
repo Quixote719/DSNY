@@ -7,6 +7,8 @@ import month from 'month';
 import styles from '../../content/styles/home.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+import EventList from './Events/event_list';
+
 class Home extends Component {
   constructor(props, context) {
     super(props, context);
@@ -114,6 +116,9 @@ class Home extends Component {
               </div>
             </Col>
           </Row>
+        </div>
+        <div className="container">
+            <EventList/>
         </div>
       </div>
     )

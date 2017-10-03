@@ -10,7 +10,8 @@ import {
   SUB_SECTION_HEADER_URL,
   FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL,
   FETCH_PRESS_RELEASE_DETAILS_URL,
-  FETCH_PRESS_RELEASE_LIST_URL
+  FETCH_PRESS_RELEASE_LIST_URL,
+  FETCH_EVENTS_SUB_LIST_URL
 } from '../constants/ApiConstants';
 
 export function fetchmedias() {
@@ -85,4 +86,11 @@ export function fetchEmPSubList() {
   const request = axios.get(FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL);
 
   return {type: types.FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST, payload: request};
+}
+
+
+export function fetchEventSubList() {
+  const request = axios.get(FETCH_EVENTS_SUB_LIST_URL);
+
+  return {type: types.FETCH_EVENT_SUB_LIST, payload: request};
 }
