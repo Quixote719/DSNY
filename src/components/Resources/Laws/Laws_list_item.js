@@ -17,7 +17,9 @@ class LawsListItem extends Component {
       <div >
         <Col>
           <Col xs={12} md={3}>
-            <div className='lawsTitle'>{this.props.title}</div>
+            <div className='lawsTitle' dangerouslySetInnerHTML={{
+              __html: this.props.title
+            }}/>
           </Col>
           <Col xs={12} md={9}>
             <Row>

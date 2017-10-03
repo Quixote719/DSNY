@@ -18,7 +18,7 @@ class EventListItem extends Component {
           </Col>
           <Col xs={12} md={8}>
             <div >
-              <Link className='PressReleaseTitle' to={`/pressRelease/${this.props.description}`}>
+              <Link className='PressReleaseTitle' to={`/eventDetails/${this.props.eventid}`}>
                 {this.props.title}
               </Link>
             </div>

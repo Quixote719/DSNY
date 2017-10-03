@@ -9,9 +9,9 @@ class PressReleaseHeader extends Component {
       <div className='PressReleaseHeader'>
         <Row>
           <Col xs={12}>
-            <div className='PressReleaseHeadertitle'>
-              {this.props.title}
-            </div>
+            <div className='PressReleaseHeadertitle' dangerouslySetInnerHTML={{
+              __html: this.props.title
+            }}/>
           </Col>
           <Col xs={12} md={6}>
             <div className='PressReleasedetailDate'>{this.props.date}</div>

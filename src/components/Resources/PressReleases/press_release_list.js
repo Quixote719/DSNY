@@ -24,7 +24,7 @@ class PressRelease extends Component {
   }
 
   firstN(obj, n) {
-    return _.chain(obj).keys().take(n).reduce(function(memo, current) {
+    return _.chain(obj).keys().sort().take(n).reduce(function(memo, current) {
       memo[current] = obj[current];
       return memo;
     }, {}).value();
