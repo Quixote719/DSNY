@@ -9,15 +9,13 @@ class TitleCard extends Component {
         'width': '220px',
         'height': '90px',
         'background-color': '#FFFFFF',
-        'display':'inline-block',
-        'box-sizing': 'border-box'
+        'display':'inline-block'
       },
       wide:{
         'width': '303px',
         'height': '90px',
         'background-color': '#FFFFFF',
-        'display': 'inline-block',
-        'box-sizing': 'border-box'
+        'display': 'inline-block'
       }
     }
 
