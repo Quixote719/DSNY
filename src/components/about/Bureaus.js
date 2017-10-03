@@ -5,6 +5,7 @@ import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/Actions_About';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
+import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import ReportStatsardList from '../Resources/ReportsStats/Report_stats_card_list'
 import {connect} from "react-redux";
@@ -32,8 +33,10 @@ class Bureaus extends Component {
     console.log('renderPosts');
     console.log(cards);
     let html = '';
-    return cards.data.map(function(item){
-      return <TitleCard/>;
+    return cards.data.map(function(item,i){
+      return (
+            <TitleCard title={item.title.rendered} key={i}/>
+      );
     })
   }
 
@@ -43,14 +46,11 @@ class Bureaus extends Component {
     // } else {
     //   return null;
     // }
-
   }
 
   render() {
 
     const {BureausDpBigData} = this.props;
-    console.log('BureausDpBigData!!!');
-    console.log(BureausDpBigData);
     if (_.isEmpty(BureausDpBigData)) {
       return (
         <div></div>
@@ -60,7 +60,7 @@ class Bureaus extends Component {
     return (
       <div>
         <div>
-          <SubSectionHeader title='Reports'/>
+          <SubSectionHeader title='Bureaus'/>
           <div>
             {this.renderPosts(BureausDpBigData)}
           </div>

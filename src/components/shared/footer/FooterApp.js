@@ -13,11 +13,12 @@ class FooterApp extends Component {
       return (({data})=>(
                 <div>
                   {data.map((item, i)=>(
-                    <div className="FooterRow">
+                    
+                    <div key={i} className="FooterRow">
                       <span onClick={()=>this.RedirectTo(item.link)}>
                           {item.name}
                       </span>
-                  <i className="fa fa-android" onClick={()=>this.RedirectTo(item.GooglePlay)}></i>
+                      <i className="fa fa-android" onClick={()=>this.RedirectTo(item.GooglePlay)}></i>
                       <i className="fa fa-apple" onClick={()=>this.RedirectTo(item.AppStore)}></i>
                       <hr className="SpLine"/>
                     </div>

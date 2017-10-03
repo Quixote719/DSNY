@@ -7,23 +7,25 @@ class TitleCard extends Component {
     const styles={
       narrow:{
         'width': '220px',
-        'height': '90px',
-        'background-color':'#FFFFFF',
-        'display':'inline-block'
+        'min-height': '90px',
+        'background-color': '#FFFFFF',
+        'display':'inline-block',
+        'box-sizing': 'border-box'
       },
       wide:{
         'width': '303px',
-        'height': '90px',
+        'min-height': '90px',
         'background-color': '#FFFFFF',
-        'display': 'inline-block'
+        'display': 'inline-block',
+        'box-sizing': 'border-box'
       }
     }
 
     return (
-        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='ContentCard'>
-           <div className="CardTitle">
-             Permit Inspection + Environmental Police
-           </div>
+        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='TitleCard'>
+             <div className='CardTitle'>
+               {this.props.title}
+             </div>
         </div>
     );
   };

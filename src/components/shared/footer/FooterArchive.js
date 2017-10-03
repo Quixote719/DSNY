@@ -10,7 +10,7 @@ class FooterArchive extends Component {
       return (({data})=>(
                 <div>
                   {data.map((item, i)=>(
-                    <div className="FooterBoldRow">
+                    <div key={i} className="FooterBoldRow">
                       <Link to={item.link}>
                           {item.name}
                       </Link>

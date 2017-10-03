@@ -80,8 +80,14 @@ class About extends Component {
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
-            <Bureaus/>
-            <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
+          </div>
+          <div className = 'GreyBcg'>
+            <div className = 'SContainer'>
+              <Bureaus/>
+            </div>
+          </div>
+          <div className = 'SContainer'>
+             <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
           </div>
           <div className = 'GreyBcg'>
             <div className = 'SContainer'>
