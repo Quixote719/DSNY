@@ -11,9 +11,9 @@ class Leadership extends Component {
     return (
       <div className="Leadership">
         <SubSectionHeader title = {this.props.LeadershipProps.title}/>
-        <div className="LeadershipLeft">
+
           <RoundProfile ProfileUrl = {this.props.LeadershipProps.ProfileUrl}/>
-        </div>
+
         <div className="LeadershipRight" dangerouslySetInnerHTML={{__html: this.props.LeadershipProps.content}}>
         </div>
       </div>
