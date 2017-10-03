@@ -1,6 +1,8 @@
 import _ from "lodash";
 import React, {Component} from "react";
+import Truncate from 'react-truncate';
 import {connect} from "react-redux";
+import Dotdotdot from 'react-dotdotdot'
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {fetchsubSectionHeader} from "../../actions";
@@ -31,10 +33,12 @@ class SubSectionHeaderImage extends Component {
                   <div className='subSectionHeaderImageTitle'>
                     <div className='subSectionHeaderImageTitleText'>{sch.title}</div>
                   </div>
-                  <div className='subSectionHeaderImagetitleBody'>
-                    <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
-                      __html: sch.body
-                    }}/>
+                  <div className='subSectionHeaderImagetitleBody subSectionHeaderImagetitleBodyText'>
+                    <Dotdotdot clamp={6}>
+                      <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
+                        __html: sch.body
+                      }}/>
+                    </Dotdotdot>
                   </div>
                 </Col>
               </Row>
