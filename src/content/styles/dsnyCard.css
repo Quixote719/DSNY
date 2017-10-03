@@ -1,0 +1,34 @@
+.TitleCardBox{
+  margin: 10px 5px;
+  display: inline-block;
+}
+
+.BureausCards{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.CardTitle{
+  margin: 7px 0;
+  padding: 25px 15px;
+	color: #00764E;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 17.5px;
+	font-weight: bold;
+	line-height: 19px;
+}
+
+.CardContent{
+	color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 940px) {
+  .CardTitle{
+    width: 45%!important;
+  }
+}

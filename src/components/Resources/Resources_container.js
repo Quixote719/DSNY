@@ -8,6 +8,10 @@ import PressReleaseDetail from '../PressReleases/PressReleasedetail'
 
 class ResourcesContainer extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const BannerText = {
       title: 'Resources',
@@ -19,7 +23,6 @@ class ResourcesContainer extends Component {
         <div>
           <Banner text={BannerText}/>
         </div>
-        <div className='container'></div>
         <div className='container'>
           <PressRelease/>
         </div>

@@ -8,6 +8,7 @@ import styles from '../../content/styles/home.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import SubSectionButton from '../shared/sub_section_button';
+import EventList from './Events/event_list';
 
 class Home extends Component {
   constructor(props, context) {
@@ -185,6 +186,7 @@ class Home extends Component {
             </Col>
           </Row>
         </div>
+<<<<<<< HEAD
         <div className="programContainerParent programContainerParentTablet">
           <div className="programContainer">
             <div className="serviceRequestParentTablet">
@@ -204,6 +206,11 @@ class Home extends Component {
           </div>
         </div>
 
+=======
+        <div className="container">
+            <EventList/>
+        </div>
+>>>>>>> dev
       </div>
     )
   }

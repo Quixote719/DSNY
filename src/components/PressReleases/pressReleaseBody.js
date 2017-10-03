@@ -5,6 +5,27 @@ import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class PressReleaseBody extends Component {
 
+  constructor(props, context) {
+    super(props, context);
+    this.renderContact = this.renderContact.bind(this);
+  }
+
+  renderContact(event) {
+    if (this.props.contactinfo != "") {
+      return (
+        <div>
+          <div className='PressReleaseBodySubHeaders'>
+            Contact
+          </div>
+          < div className='PressReleaseBodycontact' dangerouslySetInnerHTML={{
+            __html: this.props.contactinfo
+          }}/>
+          <div className='patternLineGreen'></div >
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
       <div className='PressReleaseBody'>
@@ -21,13 +42,7 @@ class PressReleaseBody extends Component {
             </div>
             <div className='PressReleaseBodyprid'>#{this.props.prid}</div>
             <div className='patternLineGreen'></div>
-            <div className='PressReleaseBodySubHeaders'>
-              Contact
-            </div>
-            <div className='PressReleaseBodycontact' dangerouslySetInnerHTML={{
-              __html: this.props.contactinfo
-            }}/>
-            <div className='patternLineGreen'></div>
+            <div>{this.renderContact(this.props.contactinfo)}</div>
           </Col>
         </Row>
       </div>

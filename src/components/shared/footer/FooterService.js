@@ -10,7 +10,7 @@ class FooterService extends Component {
       return (({data})=>(
                 <div>
                   {data.map((item, i)=>(
-                    <div className="FooterRow">
+                    <div key={i} className="FooterRow">
                         <Link to={item.link}>
                             {item.name}
                         </Link>

@@ -1,41 +1,61 @@
 import axios from 'axios';
 
 
+
+
+export function AboutSections() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=pagesection&cat=31&meta_key=rank&orderby=meta_value_num&order=ASC');
+  console.log('Sections!!');
+  console.log(request);
+  return {type: 'SET_ABOUT_SECTIONS', payload: request};
+}
+
+
 export function AboutData() {
-    return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pages/?slug=about-dsny')
-            .then((response) => {
-                console.log(234);
-                console.log(response.data);
-                    dispatch(
-                        {
-                            type: 'SET_ABOUT_TITLE',
-                            payload: response.data,
-                        }
-                    )
-                    // successCallback();
-                })
-    }
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pages/?slug=about-dsny');
+  return {type: 'SET_ABOUT_TITLE', payload: request};
 }
 
 export function AboutLeadership() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection/?slug=leadership')
             .then((response) => {
-                console.log(response.data[0]);
+                dispatch({ type: 'SET_ABOUT_LEADERSHIP', payload: response.data});
                 let ProfileId = response.data[0].feature_image.ID;
                 axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/media/' + ProfileId)
                 .then((response)=>{
-                  console.log('L');
-                  console.log(response.data);
-                  console.log(response.data.source_url);
-                  dispatch(
-                      {
-                          type: 'SET_ABOUT_LEADERSHIP',
-                          payload: response.data,
-                      }
-                  )
+                  dispatch({ type: 'SET_ABOUT_LEADERSHIP_IMAGE', payload: response.data});
                 })
             })
     }
+}
+
+export function AboutBureaus() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pages?slug=bureaus');
+  return {type: 'SET_ABOUT_BUREAUS', payload: request};
+}
+
+export function AboutBureausDepartment(){
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=32&order=ASC&meta_key=rank&orderby=meta_value_num');
+  return {type: 'SET_ABOUT_BUREAUS_DP', payload: request};
+}
+
+export function AboutStrategicPlan() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection?slug=strategic-plan');
+  return {type: 'SET_ABOUT_STRATEGICPLAN', payload: request};
+}
+
+export function AboutFoundation() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection?slug=foundation');
+  return {type: 'SET_ABOUT_FOUNDATION', payload: request};
+}
+
+export function AboutLocations() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection?slug=locations');
+  return {type: 'SET_ABOUT_LOCATIONS', payload: request};
+}
+
+export function AboutOperations() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp/v2/pagesection?slug=operations');
+  return {type: 'SET_ABOUT_OPERATIONS', payload: request};
 }

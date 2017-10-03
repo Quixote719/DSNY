@@ -14,6 +14,7 @@ import Home from './components/home';
 import About from './components/about';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
+import PressReleaseList from './components/PressReleases/PressReleaseList'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -40,6 +41,7 @@ ReactDOM.render(
             <Route path="/home" component={Home}/>
             <Route path="/about" component={About}/>
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
+            <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
           </Switch>
         </div>
