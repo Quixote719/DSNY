@@ -9,11 +9,6 @@ export default function(state = initStore, action) {
         ...state,
         PresssReleasesSubList: _.mapKeys(action.payload.data, "id")
       };
-    case types.FETCH_EVENT_SUB_LIST:
-      return {
-        ...state,
-        EventsSubList: _.mapKeys(action.payload.data, "id")
-      };
     case types.FETCH_REPORT_CARD_SUB_LIST:
       return {
         ...state,

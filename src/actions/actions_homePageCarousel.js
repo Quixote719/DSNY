@@ -1,6 +1,10 @@
 import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
+import * as types from '../constants/ActionTypes';
+import {
+  FETCH_EVENTS_SUB_LIST_URL
+} from '../constants/ApiConstants';
 
 // export function carouselData(successCallback) {
 //     return function (dispatch) {
@@ -167,3 +171,10 @@ export function carouselPanelDataTemporary(successCallback) {
 //                 successCallback();
 
 //             })
+
+
+export function fetchEventSubList() {
+  const request = axios.get(FETCH_EVENTS_SUB_LIST_URL);
+
+  return {type: types.FETCH_EVENT_SUB_LIST, payload: request};
+}
