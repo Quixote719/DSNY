@@ -10,6 +10,7 @@ import TitleCard from '../shared/TitleCard';
 import ReportStatsardList from '../Resources/ReportsStats/Report_stats_card_list'
 import {connect} from "react-redux";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import styles from '../../content/styles/dsnyCard.css';
 
 
 class Bureaus extends Component {
@@ -61,7 +62,7 @@ class Bureaus extends Component {
       <div>
         <div>
           <SubSectionHeader title='Bureaus'/>
-          <div>
+          <div className="BureausCards">
             {this.renderPosts(BureausDpBigData)}
           </div>
           {this.ViewAllButton()}

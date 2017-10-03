@@ -94,9 +94,7 @@ class About extends Component {
                   <Foundation FoundationProps = {FoundationProps}/>
             </div>
           </div>
-          <div className = 'SContainer'>
             <Locations/>
-          </div>
           <div className = 'GreyBcg'>
             <div className = 'SContainer'>
               <Operations/>
