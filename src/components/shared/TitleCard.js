@@ -7,14 +7,14 @@ class TitleCard extends Component {
     const styles={
       narrow:{
         'width': '220px',
-        'min-height': '90px',
+        'height': '90px',
         'background-color': '#FFFFFF',
         'display':'inline-block',
         'box-sizing': 'border-box'
       },
       wide:{
         'width': '303px',
-        'min-height': '90px',
+        'height': '90px',
         'background-color': '#FFFFFF',
         'display': 'inline-block',
         'box-sizing': 'border-box'
@@ -22,10 +22,8 @@ class TitleCard extends Component {
     }
 
     return (
-        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='TitleCard'>
-             <div className='CardTitle'>
+        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='CardTitle'>
                {this.props.title}
-             </div>
         </div>
     );
   };

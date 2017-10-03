@@ -3,10 +3,17 @@
   display: inline-block;
 }
 
+.BureausCards{
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .CardTitle{
-  width: 190px;
-  max-height: 42px;
-  margin: 10px auto;
+  margin: 7px 0;
+  padding: 25px 15px;
 	color: #00764E;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 17.5px;
