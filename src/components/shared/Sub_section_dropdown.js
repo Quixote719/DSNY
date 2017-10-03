@@ -10,11 +10,6 @@ class SubSectionDropdown extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      term: "2017"
-    };
-
   }
   onInputChange(term) {
     this.setState({term});
@@ -26,7 +21,7 @@ class SubSectionDropdown extends Component {
       <div>
         <div className='SubSectionDropdown'>
           <DropdownButton className='dropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-            {this.state.term}
+            {this.props.selectedOption}
           </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-chevron-down chevron-down-font-awesome"></i> < /div> < /div >} noCaret id="dropdown-no-caret">
             <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2017">2017</MenuItem>
             <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2016">2016</MenuItem>
@@ -39,7 +34,8 @@ class SubSectionDropdown extends Component {
 };
 
 SubSectionDropdown.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  selectedOption: PropTypes.string
 };
 
 export default SubSectionDropdown;

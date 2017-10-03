@@ -9,15 +9,29 @@ import moment from 'moment';
 import PressReleaseListItem from '../Resources/PressReleases/press_release_list_item';
 import SubSectionDropdown from '../shared/Sub_section_dropdown'
 
+// Set initial state
+let PressReleaseListstate = {
+  year: 2017
+};
+
 class PressReleaseList extends Component {
 
   componentDidMount() {
     const {id} = this.props
-    this.props.fetchPressReleaseList('2017');
+    const {year} = this.state
+    this.props.fetchPressReleaseList(year);
   }
   constructor(props) {
     super(props);
+    // Retrieve the last state
+    this.state = PressReleaseListstate;
+
     this.fetchPressRelease = this.fetchPressRelease.bind(this);
+  }
+
+  componentWillUnmount() {
+    // Remember state for the next mount
+    PressReleaseListstate = this.state;
   }
 
   renderPosts(prl) {
@@ -27,6 +41,7 @@ class PressReleaseList extends Component {
   }
 
   fetchPressRelease(year) {
+    this.setState({year: year});
     this.props.fetchPressReleaseList(year);
   }
 
@@ -36,7 +51,7 @@ class PressReleaseList extends Component {
     return (
       <div>
         <div className='container'>
-          <SubSectionDropdown ondropDownChange={this.fetchPressRelease}/>
+          <SubSectionDropdown selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/>
           <div>{this.renderPosts(prl)}</div>
         </div>
       </div>
