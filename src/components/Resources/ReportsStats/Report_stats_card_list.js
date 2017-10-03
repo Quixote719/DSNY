@@ -27,13 +27,13 @@ class ReportStatsardList extends Component {
   }
 
   renderPosts(cards) {
-    return _.map(this.firstN(cards, 8), Item => {
+    return _.map(this.firstN(cards, 4), Item => {
       return (<CardTitleBody className='NBsubSectioncardTB' title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
     });
   }
 
   ViewAllButton(l) {
-    if (l > 8) {
+    if (l > 4) {
       return (<SubSectionButton title='VIEW ALL'/>);
     } else {
       return null;
