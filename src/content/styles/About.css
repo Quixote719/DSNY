@@ -18,3 +18,7 @@
   font-weight: bold;
   line-height: 19px;
 }
+
+.BureausCards .CardTitle{
+  margin: 7px 0;
+}

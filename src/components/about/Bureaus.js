@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/Actions_About';
+import * as actions from '../../actions/actions_about';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
 import CardTitle from '../shared/Card_title';

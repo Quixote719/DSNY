@@ -24,7 +24,6 @@ class About extends Component {
     this.componentWillMount = this.componentWillMount.bind(this);
   }
   componentWillMount() {
-
     this.props.AboutSections();
   }
   render() {
@@ -35,6 +34,7 @@ class About extends Component {
       let BureausTitle = '';
       let StrategicPlanProps = {};
       let FoundationProps = {};
+      let OperationProps = {};
 
 
       console.log('AboutSections');
@@ -51,12 +51,14 @@ class About extends Component {
               case 34:                      // Foundation
                 FoundationProps.title = item.title.rendered;
                 FoundationProps.content = item.content.rendered;
-                console.log('FoundationProps');
-                  console.log(FoundationProps);
                 break;
               case 35:                      // Locations
                 break;
               case 36:                      // Operations
+                OperationProps.title = item.title.rendered;
+                OperationProps.content = item.content.rendered;
+                console.log('OperationProps');
+                console.log(OperationProps);
                 break;
               case 73:                      // Leadership
                 LeadershipProps.title = item.title.rendered;
@@ -98,7 +100,7 @@ class About extends Component {
             <Locations/>
           <div className = 'GreyBcg'>
             <div className = 'SContainer'>
-              <Operations/>
+              <Operations OperationProps = {OperationProps}/>
             </div>
           </div>
         </div>

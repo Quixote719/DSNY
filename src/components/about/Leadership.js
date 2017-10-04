@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/actions_about';
 import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 

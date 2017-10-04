@@ -12,7 +12,6 @@
 }
 
 .CardTitle{
-  margin: 7px 0;
   padding: 25px 15px;
 	color: #00764E;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,6 +26,7 @@
 }
 
 .CardContent{
+  padding: 0 15px;
 	color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
