@@ -150,7 +150,7 @@ class Home extends Component {
                   <button className="panelButton">More</button>
                 </li>
               </ul>
-              <Carousel className="newsEventsCarousel" prevIcon={< span className = "newsEventsCarouselIcon" > <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow"/> < /span>} nextIcon={< span className = "newsEventsCarouselIcon" > <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow"/> < /span>}>
+              <Carousel className="newsEventsCarousel" prevIcon={< span className = "newsEventsCarouselIcon" > <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow"/> </span>} nextIcon={< span className = "newsEventsCarouselIcon" > <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow"/> </span>}>
                 {carouselDataItemList}
               </Carousel>
             </div>
@@ -202,7 +202,7 @@ class Home extends Component {
           </div>
         </div>
 
-        <div className="container">
+        <div className="container eventSection">
           <EventList/>
         </div>
 

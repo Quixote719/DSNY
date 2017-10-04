@@ -7,7 +7,6 @@
 
 .PressReleaseTitle {
   color: rgb(0, 118, 77);
-  font-family: "Helvetica Neue";
   font-size: 17.5px;
   font-weight: 800;
 }
@@ -16,15 +15,32 @@
   color: #7CC04B;
 }
 
-.PressReleaseDate {
-  color: rgb(51, 51, 51);
-  font-family: "Helvetica Neue";
-  font-size: 16px;
-  font-weight: 800;
+.eventBoro {
+  color: #00764D;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.eventDate {
+  color: #00764D;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;  
 }
 
 .eventhairline {
   height: 1px;
   margin-top: 30px;
   margin: 20px 0px;
+}
+
+@media (max-width: 667px) and (orientation:portrait) {
+    .eventSection .col-xs-2 {
+         width: 33.33%
+    }
+
+    .eventSection .col-xs-10 {
+         width: 66.67%
+    }
 }

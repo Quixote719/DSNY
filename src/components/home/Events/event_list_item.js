@@ -12,11 +12,16 @@ class EventListItem extends Component {
     return (
       <div >
         <Row>
-          <Col xs={12} md={4}>
-            <div className='PressReleaseDate'>{moment(this.props.date).format('dddd, MMMM Do, YYYY')}</div>
+          <Col xs={2} md={2}>
+            <div id="eventsTextureSquare">
+                <div id="innersquare">
+                    <div className='eventBoro'>{this.props.boro.toUpperCase().substr(0,2)}</div>
+                    <div className='eventDate'>{moment(this.props.date).format('MM.D')}</div>
+                </div>
+            </div>
             {/*<div className='listItemTag'>Press Release #{this.props.prid}</div>*/}
           </Col>
-          <Col xs={12} md={8}>
+          <Col xs={10} md={10}>
             <div >
               <Link className='PressReleaseTitle' to={`/eventDetails/${this.props.eventid}`}>
                 {this.props.title}
