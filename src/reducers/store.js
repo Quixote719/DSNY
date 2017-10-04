@@ -9,8 +9,9 @@ let initStore = {
   EmForSchoolSubList: {},
   subSectionHeader: {},
   About: {
+    AboutData:{},
     AboutSectionsData:{},
-    BureausDpBigData:{},
+    BureausDpBigData:{}
   },
   pressRelease: {
     list: {},

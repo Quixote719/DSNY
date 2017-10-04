@@ -1,6 +1,13 @@
 import axios from 'axios';
 
 
+export function About() {
+  const request = axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=about');
+  console.log('Section???');
+  console.log(request);
+  return {type: 'SET_ABOUT', payload: request};
+}
+
 export function AboutSections() {
   const request = axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=pagesection&cat=31&meta_key=rank&orderby=meta_value_num&order=ASC');
   console.log('Sections!!');
