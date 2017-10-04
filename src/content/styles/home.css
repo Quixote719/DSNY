@@ -1,7 +1,8 @@
-.serviceRequestParentTablet{
+.serviceRequestParentTablet {
     display: none;
-} 
-.carouselLeftPanel{
+}
+
+.carouselLeftPanel {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     border-top-left-radius: 3px;
@@ -9,10 +10,11 @@
     float: left;
     list-style-type: none;
     padding-left: 0;
-    width: 105px;    
+    width: 105px;
     background-color: #fff;
 }
-.statusTitle{    
+
+.statusTitle {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     color: #666;
@@ -23,7 +25,8 @@
     padding: 5px;
     background-color: #e5e5e5;
 }
-.programsList{    
+
+.programsList {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
     color: #666;
@@ -33,37 +36,45 @@
     padding: 0px 5px;
     background-color: #fff;
 }
-.statusProgram{
+
+.statusProgram {
     font-size: 12px;
     font-weight: bold;
     color: #000;
 }
-.detailsProgram{
+
+.detailsProgram {
     font-size: 12px;
 }
+
 .border-top {
     border-top: 1px solid #efefef;
     width: 80%;
     margin: 0 12%;
     float: left;
 }
-.panelData{
+
+.panelData {
     padding-bottom: 6px;
     padding-top: 1px;
     padding-left: 2px;
     padding-right: 2px;
 }
-.dateCarouselPanel{
+
+.dateCarouselPanel {
     font-weight: bold;
     text-align: center;
     font-size: 15px;
     line-height: 34px;
     padding: 0 5px;
 }
-.programImage{
-    padding-top: 13px;;
+
+.programImage {
+    padding-top: 13px;
+    ;
 }
-.monthCarouselPanel{
+
+.monthCarouselPanel {
     float: none;
     text-align: center;
     display: block;
@@ -72,7 +83,11 @@
     letter-spacing: -1px;
     margin-top: -18px;
 }
-.panelButton, .panelButton:active, .panelButton:link, .panelButton:visited {
+
+.panelButton,
+.panelButton:active,
+.panelButton:link,
+.panelButton:visited {
     padding: 8px 25px 8px 12px;
     display: inline-block;
     margin-top: 16px;
@@ -94,28 +109,34 @@
     background-repeat: no-repeat;
     border: none;
 }
-.panelButton:hover{
+
+.panelButton:hover {
     background-color: #096543;
 }
-.searchContainerRidCollection{
+
+.searchContainerRidCollection {
     padding-top: 24px;
     width: 940px;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 24px;
 }
-#TextureSquare{
+
+#TextureSquare {
     width: 461px;
     height: 142px;
     padding: 10px;
     background: url('../images/Lightgreen.png')
 }
+
 #innersquare {
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF ;
+    background-color: #FFFFFF;
 }
-.ridOfSearch, .actual-edit-overlay{
+
+.ridOfSearch,
+.actual-edit-overlay {
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -130,70 +151,83 @@
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
 }
-#ridSearch{
+
+#ridSearch {
     position: absolute;
     top: 42px;
     right: 31px;
     color: #7CC04B!important;
 }
-#collectionSearch{
+
+#collectionSearch {
     position: absolute;
     top: 42px;
     right: 31px;
     color: #7CC04B!important;
 }
-.exampleRidSearch{
+
+.exampleRidSearch {
     margin-top: 8px;
     margin-left: 14px;
     color: #9B9B9B;
     font-size: 15px;
     line-height: 17px;
 }
+
 input.ridOfSearch:focus {
     box-shadow: none !important;
     outline: 0 !important;
 }
-    .searchRidParent{
-        padding-right: 8px;
-    }
-    .searchCollectionParent{
-        padding-left: 8px;
-    }
-.programContainerParent{
+
+.searchRidParent {
+    padding-right: 8px;
+}
+
+.searchCollectionParent {
+    padding-left: 8px;
+}
+
+.programContainerParent {
     background-color: #F2F2F2;
     height: 288px;
 }
-#programCol{
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+
+#programCol {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
     margin-right: 19px;
     width: 25%;
     width: 220px;
     height: 200px;
     background: white;
 }
+
 .programContainer {
     margin-left: auto;
     width: 1180px;
     margin-right: auto;
     padding-top: 44px;
 }
-.programImageDiv>img{
+
+.programImageDiv>img {
     height: 65px;
     width: 65px;
 }
-.programImageDiv{
+
+.programImageDiv {
     text-align: center;
     margin-top: 36.5px;
 }
-.programTitleDiv{
+
+.programTitleDiv {
     text-align: center;
-    color: #231F20;	
-    font-size: 16px;	
-    font-weight: bold;	
+    color: #231F20;
+    font-size: 16px;
+    font-weight: bold;
     line-height: 20px;
     margin-top: 16.7px;
 }
-.searchProgramBtnDiv>button{
+
+.searchProgramBtnDiv>button {
     font-family: inherit;
     font-size: 13px;
     height: 36px;
@@ -205,13 +239,16 @@ input.ridOfSearch:focus {
     padding: 0.4em 1em;
     cursor: pointer;
     outline: none;
-    font-weight: 600; 
-    margin-top: 18px; 
-    margin-bottom: 0px; 
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 0px;
 }
-.searchProgramBtnDiv, .searchProgramBtnDivTablet{
+
+.searchProgramBtnDiv,
+.searchProgramBtnDivTablet {
     text-align: center;
 }
+
 .serviceRequestTitle {
     padding-left: 26px;
     color: #231F20;
@@ -223,34 +260,98 @@ input.ridOfSearch:focus {
     padding-right: 26px;
     padding-top: 29px;
 }
-.serviceRequestInput, .serviceRequestInputTablet{
+
+.serviceRequestInput,
+.serviceRequestInputTablet {
     text-align: center;
 }
-.serviceRequestSearch{
+
+.serviceRequestSearch {
     text-align: center;
     margin-top: 8px;
     height: 40px;
     border: 1px solid #EDEDEE;
     border-radius: 3px;
     width: 190px;
-    color: #9B9B9B;;
+    color: #9B9B9B;
+    ;
     background-repeat: no-repeat;
     background-position: right 13px center;
     border-radius: 3px;
     font-size: 12px;
 }
+
 input.serviceRequestSearch:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     outline: 0 !important;
     border-color: #7CC04B !important;
 }
-.programMobileData{
+
+.programMobileData {
     display: none;
 }
+
+.initiativesContainerParent {
+    background: linear-gradient(111.47deg, #046848 0%, #01855D 100%);
+}
+
+.programInitiativesContainer {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1180px!important;
+}
+
+#initiativesCol {
+    padding: 0;
+    color: white;
+    height: 142px;
+    border-left: 1px solid white;
+    width: 294px;
+}
+
+#initiativesColLast {
+    padding: 0;
+    color: white;
+    height: 142px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    width: 294px;
+}
+
+.initiativesHeaderDiv {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 33px;
+    text-align: center;
+}
+
+.initiativesNoHeaderDiv {
+    height: 33px;
+}
+
+.initiativesTitleDiv {
+    margin-bottom: 14px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 33px;
+    text-align: center;
+}
+
+.initiativesContentDiv {
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
 @media only screen and (max-width: 499px) {
-    .carouselLeftPanel{
+    .carouselLeftPanel {
         display: none;
     }
     .searchContainerRidCollection {
@@ -262,7 +363,8 @@ input.serviceRequestSearch:focus {
         height: 130px;
         width: 100%;
     }
-    .ridOfSearch, .actual-edit-overlay {
+    .ridOfSearch,
+    .actual-edit-overlay {
         height: 29px;
         margin-top: 25px;
         font-size: 18px;
@@ -273,15 +375,15 @@ input.serviceRequestSearch:focus {
         margin-left: 10px;
     }
     .searchRow {
-       margin: 0;
+        margin: 0;
     }
-    .searchCollectionParent{
+    .searchCollectionParent {
         margin-top: 15px;
     }
-    #ridSearch{
+    #ridSearch {
         top: 36px;
     }
-    #collectionSearch{
+    #collectionSearch {
         top: 36px;
     }
     .serviceRequestTitleTablet {
@@ -295,7 +397,7 @@ input.serviceRequestSearch:focus {
         padding-right: 26px;
         padding-top: 30px;
     }
-    .serviceRequestSearchTablet{
+    .serviceRequestSearchTablet {
         border-radius: 3px;
         padding-bottom: 11.2px;
         padding-left: 20px;
@@ -304,27 +406,27 @@ input.serviceRequestSearch:focus {
         padding-top: 9px;
         margin-top: 19px;
     }
-    .serviceRequestSearchTablet:focus{
+    .serviceRequestSearchTablet:focus {
         border-color: #7CC04B!important;
         box-shadow: none !important;
         outline: 0 !important;
     }
-    .serviceRequestInputTablet>.subSectionButton{
+    .serviceRequestInputTablet>.subSectionButton {
         margin-left: 0px;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .serviceRequestParentTablet{
+    .serviceRequestParentTablet {
         padding-left: 11px;
         padding-right: 11px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         border-radius: 3px;
         margin-bottom: 17px;
         background-color: white;
         display: block;
-    } 
-    .programContainerParentTablet{
+    }
+    .programContainerParentTablet {
         height: 100%;
     }
     .programContainer {
@@ -333,14 +435,14 @@ input.serviceRequestSearch:focus {
         padding-right: 15px;
         padding-top: 17px;
     }
-    .programContainer>.row{
+    .programContainer>.row {
         display: none;
         margin-left: 0;
     }
-    .serviceRequestCol{
+    .serviceRequestCol {
         display: none;
     }
-    #programCol{
+    #programCol {
         width: 166px;
         height: 165px;
         margin-right: 14px;
@@ -351,33 +453,33 @@ input.serviceRequestSearch:focus {
     .searchCollectionParent {
         padding-left: 15px;
     }
-    .programImageDiv{
+    .programImageDiv {
         margin-top: 20.6px;
     }
-    .programTitleDiv{
+    .programTitleDiv {
         margin-top: 6.5px;
     }
-    .programMobileData{
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);        
+    .programMobileData {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         display: block;
     }
-    .programMobileImage{
+    .programMobileImage {
         margin-top: 12.92px;
         float: right;
         height: 54.17px;
         width: auto;
     }
-    .programMobileOuter{
+    .programMobileOuter {
         display: table;
         width: 100%;
         padding-left: 15px;
         padding-right: 14.92px;
         border-radius: 3px;
-        margin-bottom: 17px;        
+        margin-bottom: 17px;
         height: 80px;
         background-color: white;
     }
-    .programMobileTitle{
+    .programMobileTitle {
         vertical-align: middle;
         color: #231F20;
         display: inline-block;
@@ -387,30 +489,89 @@ input.serviceRequestSearch:focus {
         line-height: 20px;
         display: table-cell;
     }
-
+    #initiativesCol {
+        padding-top: 18px;
+        padding-bottom: 20px;
+        color: white;
+        height: 118px;
+        border-bottom: 1px solid white;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    #initiativesColLast {
+        padding-top: 18px;
+        padding-bottom: 20px;
+        padding: 0;
+        color: white;
+        height: 118px;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    .programInitiativesContainer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%!important;
+    }
+    .programInitiativesContainer>.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .initiativesHeaderDiv {
+        padding-top: 0px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 27px;
+        text-align: start;
+    }
+    .initiativesNoHeaderDiv {
+        height: 33px;
+    }
+    .initiativesTitleDiv {
+        margin-bottom: 0px;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 33px;
+        text-align: start;
+    }
+    .initiativesContentDiv {
+        margin-top: 3px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: start;
+    }
+    .initiativesParentDiv {
+        padding-left: 16px;
+    }
 }
 
+
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-@media (min-width: 500px) and (max-width: 959px){
-    .carouselLeftPanel{
+
+@media (min-width: 500px) and (max-width: 959px) {
+    .carouselLeftPanel {
         display: none;
     }
-    .searchContainerRidCollection{
+    .searchContainerRidCollection {
         width: 712px;
     }
     #TextureSquare {
         width: 100%;
     }
-    .ridOfSearch, .actual-edit-overlay {
+    .ridOfSearch,
+    .actual-edit-overlay {
         width: 663.88px;
     }
-    .searchCollectionParent{
+    .searchCollectionParent {
         margin-top: 10px;
     }
-    #ridSearch{
+    #ridSearch {
         right: 36px;
     }
-    #collectionSearch{
+    #collectionSearch {
         right: 36px;
     }
     .serviceRequestTitleTablet {
@@ -424,7 +585,7 @@ input.serviceRequestSearch:focus {
         padding-right: 26px;
         padding-top: 28px;
     }
-    .serviceRequestSearchTablet{
+    .serviceRequestSearchTablet {
         border-radius: 3px;
         padding-bottom: 11.2px;
         padding-left: 20px;
@@ -432,39 +593,39 @@ input.serviceRequestSearch:focus {
         width: 520px;
         padding-top: 9px;
     }
-    .serviceRequestSearchTablet:focus{
+    .serviceRequestSearchTablet:focus {
         border-color: #7CC04B!important;
         box-shadow: none !important;
         outline: 0 !important;
     }
-    .serviceRequestInputTablet>.subSectionButton{
+    .serviceRequestInputTablet>.subSectionButton {
         margin-left: 20px;
         width: 126px;
         margin-top: 21px;
         margin-bottom: 37px;
     }
-    .serviceRequestParentTablet{
+    .serviceRequestParentTablet {
         height: 147px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         border-radius: 3px;
         margin-bottom: 20px;
         background-color: white;
         display: block;
-    } 
-    .programContainerParentTablet{
+    }
+    .programContainerParentTablet {
         height: 392px;
     }
     .programContainer {
         padding-top: 30px;
         width: 708px;
     }
-    .programContainer>.row{
+    .programContainer>.row {
         margin-left: 0;
     }
-    .serviceRequestCol{
+    .serviceRequestCol {
         display: none;
     }
-    #programCol{
+    #programCol {
         width: 166px;
         height: 165px;
         margin-right: 14px;
@@ -475,16 +636,74 @@ input.serviceRequestSearch:focus {
     .searchCollectionParent {
         padding-left: 15px;
     }
-    .programImageDiv{
+    .programImageDiv {
         margin-top: 20.6px;
     }
-    .programTitleDiv{
+    .programTitleDiv {
         margin-top: 6.5px;
     }
+    #initiativesCol {
+        margin-top: 13px;
+        padding-bottom: 19px;
+        color: white;
+        height: 118px;
+        border-bottom: 1px solid white;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    #initiativesColLast {
+        padding: 0;
+        color: white;
+        height: 118px;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    .programInitiativesContainer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%!important;
+    }
+    .programInitiativesContainer>.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .initiativesHeaderDiv {
+        padding-top: 0px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 33px;
+        text-align: start;
+    }
+    .initiativesNoHeaderDiv {
+        height: 33px;
+    }
+    .initiativesTitleDiv {
+        margin-bottom: 14px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 33px;
+        text-align: start;
+    }
+    .initiativesContentDiv {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: start;
+    }
+    .initiativesParentDiv {
+        padding-left: 36px;
+    }
 }
+
+
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
-    .carouselLeftPanel{
+
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
+    .carouselLeftPanel {
         display: none;
     }
     .searchContainerRidCollection {
@@ -494,7 +713,8 @@ input.serviceRequestSearch:focus {
         height: 130px;
         width: 100%;
     }
-    .ridOfSearch, .actual-edit-overlay {
+    .ridOfSearch,
+    .actual-edit-overlay {
         height: 29px;
         margin-top: 25px;
         font-size: 18px;
@@ -508,14 +728,14 @@ input.serviceRequestSearch:focus {
         padding-left: 16px;
         padding-right: 16px;
     }
-    .searchCollectionParent{
+    .searchCollectionParent {
         margin-top: 15px;
     }
-    #ridSearch{
+    #ridSearch {
         right: 42px;
         top: 36px;
     }
-    #collectionSearch{
+    #collectionSearch {
         right: 42px;
         top: 36px;
     }
@@ -530,7 +750,7 @@ input.serviceRequestSearch:focus {
         padding-right: 26px;
         padding-top: 30px;
     }
-    .serviceRequestSearchTablet{
+    .serviceRequestSearchTablet {
         border-radius: 3px;
         padding-bottom: 11.2px;
         padding-left: 20px;
@@ -539,28 +759,28 @@ input.serviceRequestSearch:focus {
         padding-top: 9px;
         margin-top: 19px;
     }
-    .serviceRequestSearchTablet:focus{
+    .serviceRequestSearchTablet:focus {
         border-color: #7CC04B!important;
         box-shadow: none !important;
         outline: 0 !important;
     }
-    .serviceRequestInputTablet>.subSectionButton{
+    .serviceRequestInputTablet>.subSectionButton {
         margin-left: 0px;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .serviceRequestParentTablet{
+    .serviceRequestParentTablet {
         height: auto!important;
         padding-left: 11px;
         padding-right: 11px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         border-radius: 3px;
         margin-bottom: 17px;
         background-color: white;
         display: block;
-    } 
-    .programContainerParentTablet{
+    }
+    .programContainerParentTablet {
         height: 100%;
     }
     .programContainer {
@@ -569,14 +789,14 @@ input.serviceRequestSearch:focus {
         padding-right: 15px;
         padding-top: 17px;
     }
-    .programContainer>.row{
+    .programContainer>.row {
         display: none;
         margin-left: 0;
     }
-    .serviceRequestCol{
+    .serviceRequestCol {
         display: none;
     }
-    #programCol{
+    #programCol {
         width: 166px;
         height: 165px;
         margin-right: 14px;
@@ -587,33 +807,33 @@ input.serviceRequestSearch:focus {
     .searchCollectionParent {
         padding-left: 15px;
     }
-    .programImageDiv{
+    .programImageDiv {
         margin-top: 20.6px;
     }
-    .programTitleDiv{
+    .programTitleDiv {
         margin-top: 6.5px;
     }
-    .programMobileData{
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);        
+    .programMobileData {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         display: block;
     }
-    .programMobileImage{
+    .programMobileImage {
         margin-top: 12.92px;
         float: right;
         height: 54.17px;
         width: auto;
     }
-    .programMobileOuter{
+    .programMobileOuter {
         display: table;
         width: 100%;
         padding-left: 15px;
         padding-right: 14.92px;
         border-radius: 3px;
-        margin-bottom: 17px;        
+        margin-bottom: 17px;
         height: 80px;
         background-color: white;
     }
-    .programMobileTitle{
+    .programMobileTitle {
         vertical-align: middle;
         color: #231F20;
         display: inline-block;
@@ -623,31 +843,91 @@ input.serviceRequestSearch:focus {
         line-height: 20px;
         display: table-cell;
     }
-
-    
+    #initiativesCol {
+        margin-top: 0;
+        padding-top: 18px;
+        padding-bottom: 20px;
+        color: white;
+        height: 118px;
+        border-bottom: 1px solid white;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    #initiativesColLast {
+        margin-top: 0;
+        padding-top: 18px;
+        padding-bottom: 20px;
+        padding: 0;
+        color: white;
+        height: 118px;
+        border-right: 0px solid transparent;
+        border-left: 0px solid transparent;
+        width: 100%;
+    }
+    .programInitiativesContainer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%!important;
+    }
+    .programInitiativesContainer>.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .initiativesHeaderDiv {
+        padding-top: 0px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 27px;
+        text-align: start;
+    }
+    .initiativesNoHeaderDiv {
+        height: 33px;
+    }
+    .initiativesTitleDiv {
+        margin-bottom: 0px;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 33px;
+        text-align: start;
+    }
+    .initiativesContentDiv {
+        margin-top: 3px;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: start;
+    }
+    .initiativesParentDiv {
+        padding-left: 16px;
+    }
 }
+
+
 /*BETWEEN DESKTOP AND TABLET*/
-@media (min-width: 960px) and (max-width: 1284px){
-    .carouselLeftPanel{
+
+@media (min-width: 960px) and (max-width: 1284px) {
+    .carouselLeftPanel {
         display: block;
     }
-    .searchRidParent{
+    .searchRidParent {
         padding-right: 8px;
     }
-    .searchCollectionParent{
+    .searchCollectionParent {
         padding-left: 8px;
     }
     .programContainer {
         padding-top: 30px;
         width: 940px;
     }
-    .programContainer>.row{
+    .programContainer>.row {
         margin-left: 0;
     }
-    .serviceRequestCol{
+    .serviceRequestCol {
         display: none;
     }
-    #programCol{
+    #programCol {
         margin-right: 18px;
     }
     .serviceRequestTitleTablet {
@@ -661,7 +941,7 @@ input.serviceRequestSearch:focus {
         padding-right: 26px;
         padding-top: 28px;
     }
-    .serviceRequestSearchTablet{
+    .serviceRequestSearchTablet {
         border-radius: 3px;
         padding-bottom: 11.2px;
         padding-left: 20px;
@@ -669,26 +949,51 @@ input.serviceRequestSearch:focus {
         width: 755px;
         padding-top: 9px;
     }
-    .serviceRequestSearchTablet:focus{
+    .serviceRequestSearchTablet:focus {
         border-color: #7CC04B!important;
         box-shadow: none !important;
         outline: 0 !important;
     }
-    .serviceRequestInputTablet>.subSectionButton{
+    .serviceRequestInputTablet>.subSectionButton {
         margin-left: 20px;
         width: 126px;
         margin-top: 21px;
         margin-bottom: 37px;
     }
-    .serviceRequestParentTablet{
+    .serviceRequestParentTablet {
         height: 147px;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
         border-radius: 3px;
         margin-bottom: 20px;
         background-color: white;
         display: block;
-    } 
-    .programContainerParentTablet{
+    }
+    .initiativesContentDiv {
+        padding-left: 21px;
+        padding-right: 21px;
+        margin-top: 0;
+        ;
+    }
+    .programContainerParentTablet {
         height: 427px;
+    }
+    .programInitiativesContainer {
+        padding-top: 40px;
+        padding-bottom: 48px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 936px!important;
+    }
+    .programInitiativesContainer>.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #initiativesColLast,
+    #initiativesCol {
+        width: 234px;
+    }
+    .initiativesTitleDiv {
+        padding-top: 14px;
+        min-height: 80px;
     }
 }

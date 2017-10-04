@@ -589,6 +589,7 @@ input.searchMessagesInput:focus {
     background: url('../images/nav-sprite.png') no-repeat 10.5px -28.2px;
 }
 .searchMessagesInput{
+    margin-left: 7px;
     font-weight: 500;
     width: 178px;
     margin-top: 10px;

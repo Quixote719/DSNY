@@ -2,35 +2,30 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 
-export function carouselData(successCallback) {
+export function carouselData() {
     return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getHeroCards?posts_per_page=5')
+        axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=home')
             .then((data) => {
-                let c = 0;
                 console.log("Carousel Values: ")
                 console.log(data.data)
                 let carouselItems = [];
-                data.data.cards.map((item) => {
-                    let temp = {};
-                    temp['heroTitle'] = item.title;
-                    temp['heroImage'] = item.image.file;
-                    carouselItems.push(temp);
-                    c++;
-                    if (c === 3) {
-                        dispatch(
-                            {
-                                type: 'SET_CAROUSEL_TITLE',
-                                payload: carouselItems,
-                            }
-                        )
-                        successCallback();
-                    }
+                data.data.sections.sections.map((items) => {
+                    items.cards.map((item) => {
+                        let temp = {};
+                        temp['heroTitle'] = item.title;
+                        temp['heroImage'] = item.image.file;
+                        carouselItems.push(temp);
+                    })
+                })
+                dispatch({
+                    type: 'SET_CAROUSEL_TITLE',
+                    payload: carouselItems,
                 })
             })
     }
 }
 
-export function carouselPanelData(successCallback) {
+export function carouselPanelData() {
     return function (dispatch) {
         var date = new Date();
         var month = ("0" + (date.getUTCMonth() + 1)).slice(-2);
@@ -46,20 +41,16 @@ export function carouselPanelData(successCallback) {
                     let temp = {};
                     if (item.type == 'Parking') {
                         temp['panelItemType'] = 'Alternate Side Parking';
-                    }
-                    else {
+                    } else {
                         temp['panelItemType'] = item.items.type;
                     }
                     temp['panelItemIcon'] = 'http://www1.nyc.gov' + item.items.icon;
                     temp['panelItemStatus'] = item.items.status;
                     carouselPanelItems.push(temp);
-                    dispatch(
-                        {
-                            type: 'SET_PANEL_ITEMS',
-                            payload: carouselPanelItems,
-                        }
-                    )
-                    successCallback();
+                    dispatch({
+                        type: 'SET_PANEL_ITEMS',
+                        payload: carouselPanelItems,
+                    })
                 })
 
             })
@@ -68,7 +59,7 @@ export function carouselPanelData(successCallback) {
 
 }
 
-export function carouselPanelDataTemporary(successCallback) {
+export function carouselPanelDataTemporary() {
     return function (dispatch) {
         let carouselPanelItems = [];
         let temp = [];
@@ -77,8 +68,7 @@ export function carouselPanelDataTemporary(successCallback) {
                 let temp1 = {}
                 if (items.type == 'Parking') {
                     temp1['panelItemType'] = 'Alternate Side Parking';
-                }
-                else {
+                } else {
                     temp1['panelItemType'] = items.type;
                 }
                 temp1['panelItemIcon'] = 'http://www1.nyc.gov' + items.icon;
@@ -87,18 +77,15 @@ export function carouselPanelDataTemporary(successCallback) {
             });
             carouselPanelItems.push(temp)
         })
-        dispatch(
-            {
-                type: 'SET_PANEL_ITEMS_TEMPORARY',
-                payload: carouselPanelItems
-            })
-        successCallback();
+        dispatch({
+            type: 'SET_PANEL_ITEMS_TEMPORARY',
+            payload: carouselPanelItems
+        })
 
     }
-
 }
 
-export function programData(successCallback) {
+export function programData() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=75&order=ASC&meta_key=rank&orderby=meta_value_num&post_per_page=5')
             .then((data) => {
@@ -109,21 +96,37 @@ export function programData(successCallback) {
                     if (item.image) {
                         temp['programTitle'] = item.title.rendered;
                         temp['programImage'] = item.image.guid;
-                    }
-                    else {
+                    } else {
                         temp['programTitle'] = item.title.rendered;
                         temp['programImage'] = item.linked_file.guid;
                     }
                     programItems.push(temp);
-                    dispatch(
-                        {
-                            type: 'SET_PROGRAM_CARDS',
-                            payload: programItems,
-                        }
-                    )
-                    successCallback();
+                })
+                dispatch({
+                    type: 'SET_PROGRAM_CARDS',
+                    payload: programItems,
                 })
             })
     }
 }
 
+export function programInitiatives() {
+    return function (dispatch) {
+        axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=74&order=ASC&meta_key=rank&orderby=meta_value_num&post_per_page=5')
+            .then((data) => {
+                let programInitiativesItems = [];
+                data.data.slice(0, 4).map((item, index) => {
+                    let temp = {};
+                    temp['initiativeRank'] = item.rank;
+                    temp['initiativesHeader'] = item.header;
+                    temp['initiativesTitle'] = item.title.rendered;
+                    temp['initiativesContent'] = item.content.rendered;
+                    programInitiativesItems.push(temp);
+                })
+                dispatch({
+                    type: 'SET_PROGRAM_INITIATIVES',
+                    payload: programInitiativesItems,
+                })
+            })
+    }
+}

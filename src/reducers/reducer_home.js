@@ -2,11 +2,7 @@ import initStore from './store';
 import _ from "lodash";
 import * as types from '../constants/ActionTypes';
 
-export default function carouselDataReducer(state = {
-     carouselItems : [],
-     carouselPanelItemsTemporary : [],    
-     programListData : [],
-  }, action) {
+export default function carouselDataReducer(state = {}, action) {
   switch (action.type) {
     case 'SET_CAROUSEL_TITLE':
       return { ...state, carouselItems: action.payload };
@@ -16,6 +12,8 @@ export default function carouselDataReducer(state = {
       return { ...state, carouselPanelItemsTemporary: action.payload };
     case 'SET_PROGRAM_CARDS':
       return { ...state, programListData: action.payload };
+    case 'SET_PROGRAM_INITIATIVES':
+      return { ...state, programInitiativesData: action.payload };
     case types.FETCH_EVENT_SUB_LIST:
       return {
         ...state,
