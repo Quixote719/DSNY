@@ -22,3 +22,33 @@
 .BureausCards .CardTitle{
   margin: 7px 0;
 }
+
+.leftSec{
+  width: 617px;
+  float: left;
+  display: inline-block;
+}
+
+.rightSec{
+  width: 303px;
+  float: right;
+  display: inline-block;
+}
+
+.SmallLeftSec{
+  width: 460px;
+  float: left;
+  display: inline-block;
+}
+
+.MiddleSec{
+  margin: 0 20px;
+  width: 220px;
+  display: inline-block;
+}
+
+.SmallRightSec{
+  width: 220px;
+  float: right;
+  display: inline-block;
+}

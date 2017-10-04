@@ -36,7 +36,7 @@ class Bureaus extends Component {
     let html = '';
     return cards.data.map(function(item,i){
       return (
-            <TitleCard title={item.title.rendered} key={i}/>
+            <TitleCard title={item.title.rendered} type='1' key={i}/>
       );
     })
   }

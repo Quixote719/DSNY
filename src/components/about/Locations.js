@@ -13,7 +13,6 @@ class Locations extends Component {
     return (
       <div className="Locations">
         <SubSectionHeaderImage id='educational-materials'/>
-
       </div>
     )
   }
