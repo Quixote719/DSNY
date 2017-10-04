@@ -2,7 +2,7 @@ import axios from 'axios';
 import { WORDPRESS_ROOT_URL } from '../constants/ApiConstants';
 
 export function About() {
-  const request = axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=about');
+  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=about`);
   return {type: 'SET_ABOUT', payload: request};
 }
 

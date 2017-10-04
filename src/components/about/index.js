@@ -15,7 +15,6 @@ import Foundation from './Foundation';
 import LargeContentCard from '../shared/LargeContentCard';
 import TitleContentCard from '../shared/TitleContentCard';
 import '../../content/styles/About.css';
-
 import { connect } from 'react-redux';
 
 class About extends Component {
@@ -52,7 +51,7 @@ class About extends Component {
                 content: item.content};
                 break;
               }
-              case 'leadership':{
+              case 'about-leadership':{
                 LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
                 LeadershipProps.ProfileUrl = item.image.file;
@@ -60,12 +59,12 @@ class About extends Component {
                 console.log(LeadershipProps);
                 break;
               }
-              case 'bureaus':{
+              case 'about-bureaus':{
                 BureausTitle = item.header;
                 BureausCards = item.cards;
                 break;
               }
-              case 'strategic-plan-2':{
+              case 'aboiut-strategic-plan':{
                 StrategicPlanProps = {title:item.header, content: item.content};
                 console.log('StrategicPlanProps');
                 console.log(StrategicPlanProps);

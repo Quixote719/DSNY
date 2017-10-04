@@ -19,9 +19,9 @@ class Foundation extends Component {
               <LargeContentCard type='2' content={this.props.FoundationProps.content}/>
             </div>
             <div className='rightSec'>
-              <TitleCard type='2' />
+              <TitleCard type='2'/>
               <hr/>
-              <TitleCard type='2' />
+              <TitleCard type='2'/>
             </div>
         </div>
       </div>
