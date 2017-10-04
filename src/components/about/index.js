@@ -33,7 +33,7 @@ class About extends Component {
       let BannerText = {};
       let LeadershipProps = {};
       let BureausTitle = '';
-      let BureausCards = {}
+      let BureausCards = [];
       let StrategicPlanProps = {};
       let FoundationProps = {};
       let OperationProps = {};
@@ -48,27 +48,31 @@ class About extends Component {
         About.sections.sections.map((item)=>{
             switch (item.name){
               case 'about-top':{
-                BannerText = {title: item.title,
+                BannerText = {title: item.header,
                 content: item.content};
                 break;
               }
               case 'leadership':{
-                LeadershipProps.title = item.title;
+                LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
                 LeadershipProps.ProfileUrl = item.image.file;
+                console.log('LeadershipProps');
+                console.log(LeadershipProps);
                 break;
               }
               case 'bureaus':{
-                BureausTitle = item.title;
+                BureausTitle = item.header;
                 BureausCards = item.cards;
                 break;
               }
               case 'strategic-plan-2':{
-                StrategicPlanProps = {title:item.title, content: item.content};
+                StrategicPlanProps = {title:item.header, content: item.content};
+                console.log('StrategicPlanProps');
+                console.log(StrategicPlanProps);
                 break;
               }
               case 'foundation':{
-                FoundationProps.title = item.title;
+                FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
                 break;
               }
@@ -76,7 +80,7 @@ class About extends Component {
                 break;
               }
               case 'operations':{
-                OperationProps.title = item.title;
+                OperationProps.title = item.header;
                 OperationProps.content = item.content;
                 break;
               }
@@ -100,6 +104,8 @@ class About extends Component {
               case 36:                      // Operations
                 // OperationProps.title = item.title.rendered;
                 OperationProps.content = item.content.rendered;
+                console.log('OperationProps');
+                console.log(OperationProps);
                 break;
               case 73:                      // Leadership
                 // LeadershipProps.title = item.title.rendered;
@@ -135,7 +141,7 @@ class About extends Component {
           </div>
           <div className = 'GreyBcg'>
             <div className = 'SContainer'>
-                  <Foundation FoundationProps = {FoundationProps}/>
+             <Foundation FoundationProps = {FoundationProps}/>
             </div>
           </div>
             <Locations/>

@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 export function About() {
   const request = axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=about');
   console.log('Section???');
