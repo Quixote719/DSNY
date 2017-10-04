@@ -20,8 +20,8 @@ class TitleContentCard extends Component {
     }
     return (
         <div style={styles.narrow} className='ContentCard'>
-           <div className="CardTitle">James</div>
-           <div className="CardContent">Bond</div>
+           <div className="CardTitle">Title</div>
+           <div className="CardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
         </div>
     );
   };

@@ -21,8 +21,8 @@ class LargeContentCard extends Component {
       }
     }
     return (
-        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='CardContent'>
-            {this.props.content}
+        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='CardContent'
+            dangerouslySetInnerHTML={{__html: this.props.content}}>
         </div>
     );
   };

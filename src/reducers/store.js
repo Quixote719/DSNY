@@ -1,5 +1,6 @@
 let initStore = {
-
+  carouselItems: [],
+  carouselPanelItemsTemporary: [],
   PresssReleasesSubList: {},
   ReportCardSubList: {},
   StatsCardSubList: {},
@@ -8,21 +9,10 @@ let initStore = {
   EmForSchoolSubList: {},
   subSectionHeader: {},
   About: {
+    AboutData:{},
     AboutSectionsData:{},
-    AboutBigData:{},
-    LeadershipBigData:{},
-    LeadershipImage:{},
-    LocationsBigData:{},
-    OperationsBigData:{},
-    StrategicPlanBigData:{},
-    BureausBigData:{},
-    BureausDpBigData:{},
-    FoundationBigData:{},
-    AboutBigData:{},
-    LeadershipBigData:{}
+    BureausDpBigData:{}
   },
-
-
   pressRelease: {
     list: {},
     details: {}

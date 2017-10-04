@@ -2,7 +2,7 @@ import {combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
 import carouselDataReducer from './reducer_home';
 import ResourcesReducer from './reducer_resources';
-import AboutDataReducer from './Reducer_AboutData';
+import AboutDataReducer from './reducer_about';
 import PressReleaseReducer from './Reducer_PressRelease';
 import mediaReducer from './Reducer_media';
 
