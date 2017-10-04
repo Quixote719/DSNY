@@ -37,13 +37,13 @@ export function fetchsubSectionHeader(id) {
     axios.get(SUB_SECTION_HEADER_URL.replace('id', id)).then((data) => {
       let src = {};
       let temp = data.data[0]
-      src['title'] = temp.title.rendered
-      src['body'] = temp.content.rendered
-      let featureImage = temp.feature_image.ID
-      axios.get(MEDIA_URL.replace('id', featureImage)).then((media) => {
-        src['imgSrc'] = media.data.source_url;
-        dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
-      })
+      // src['title'] = temp.title.rendered
+      // src['body'] = temp.content.rendered
+      // let featureImage = temp.feature_image.ID
+      // axios.get(MEDIA_URL.replace('id', featureImage)).then((media) => {
+      //   src['imgSrc'] = media.data.source_url;
+      //   dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
+      // })
     })
   }
 }

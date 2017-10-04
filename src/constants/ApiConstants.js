@@ -6,6 +6,7 @@ const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') ===
   ? '?'
   : ''}`;
 
+export const WORDPRESS_ROOT_URL = `${ROOT_WORDPRESS_URL}`;
 export const MEDIAS_ALL_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/`;
 export const MEDIA_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/id`;
 export const SUB_SECTION_HEADER_URL = constructWpUrl('wp/v2/pagesection?slug=id');

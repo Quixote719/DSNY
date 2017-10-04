@@ -19,7 +19,7 @@ class Event extends Component {
 
   renderPosts(pr) {
     return _.map(this.firstN(pr, 4), eventItem => {
-      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} date={eventItem.FormattedEventDate} key={eventItem.EventID}/>);
+      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
     });
   }
 

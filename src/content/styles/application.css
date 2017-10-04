@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-.GreyBcg{
+.GreyBcg {
   background-color: #F2F2F2;
 }
 
@@ -30,3 +30,6 @@
   max-width: 980px;
 }
 
+a:focus, a:hover {
+  text-decoration: none;
+}

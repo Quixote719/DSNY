@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/Actions_About';
 import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 import LargeContentCard from '../shared/LargeContentCard'
@@ -17,10 +16,10 @@ class Operations extends Component {
         <SubSectionHeader title="Operations"/>
         <div>
           <div className='SmallLeftSec'>
-            <LargeContentCard content = 'CONTENT' type = '1'/>
+            <LargeContentCard content = {this.props.OperationProps.content} type = '1'/>
           </div>
           <div className='MiddleSec'>
-            <TitleContentCard type = '1'/>
+            <TitleContentCard content = {this.props.OperationProps.content} type = '1'/>
           </div>
           <div className='SmallRightSec'>
             <TitleContentCard type = '1'/>

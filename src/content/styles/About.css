@@ -1,0 +1,54 @@
+.LeadershipRight{
+  margin-left: 30px;
+  width: 650px;
+  height: 240px;
+  padding: 20px;
+  display:inline-block;
+  box-sizing: border-box;
+}
+.LeadershipRight{
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+.LeadershipRight a{
+  color: #00764E;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+}
+
+.BureausCards .CardTitle{
+  margin: 7px 0;
+}
+
+.leftSec{
+  width: 617px;
+  float: left;
+  display: inline-block;
+}
+
+.rightSec{
+  width: 303px;
+  float: right;
+  display: inline-block;
+}
+
+.SmallLeftSec{
+  width: 460px;
+  float: left;
+  display: inline-block;
+}
+
+.MiddleSec{
+  margin: 0 20px;
+  width: 220px;
+  display: inline-block;
+}
+
+.SmallRightSec{
+  width: 220px;
+  float: right;
+  display: inline-block;
+}
