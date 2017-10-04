@@ -1,9 +1,8 @@
 import axios from 'axios';
+import { WORDPRESS_ROOT_URL } from '../constants/ApiConstants';
 
 export function About() {
   const request = axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=about');
-  console.log('Section???');
-  console.log(request);
   return {type: 'SET_ABOUT', payload: request};
 }
 
