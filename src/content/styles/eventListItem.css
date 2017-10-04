@@ -1,17 +1,16 @@
 .listItemTag {
   height: 22px;
   color: rgb(155, 155, 155);
-  font-family: "Helvetica Neue";
   font-size: 14px;
 }
 
-.PressReleaseTitle {
+.eventTitle {
   color: rgb(0, 118, 77);
   font-size: 17.5px;
-  font-weight: 800;
+  font-weight: bold;
 }
 
-.PressReleaseTitle:hover {
+.eventTitle:hover {
   color: #7CC04B;
 }
 
