@@ -74,6 +74,7 @@ class About extends Component {
               case 'foundation':{
                 FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
+                FoundationProps.cards = item.cards;
                 break;
               }
               case 'locations':{
