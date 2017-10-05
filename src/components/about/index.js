@@ -33,6 +33,7 @@ class About extends Component {
       let LeadershipProps = {};
       let BureausTitle = '';
       let BureausCards = [];
+      let LocationProps = {};
       let StrategicPlanProps = {};
       let FoundationProps = {};
       let OperationProps = {};
@@ -44,13 +45,17 @@ class About extends Component {
       console.log(About);
 
       if(About != undefined){
+        BannerText = {
+                      title: About.header,
+                      content: About.content
+                     };
         About.sections.sections.map((item)=>{
             switch (item.name){
-              case 'about-top':{
-                BannerText = {title: item.header,
-                content: item.content};
-                break;
-              }
+              // case 'about-top':{
+              //   BannerText = {title: item.header,
+              //   content: item.content};
+              //   break;
+              // }
               case 'about-leadership':{
                 LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
@@ -64,8 +69,8 @@ class About extends Component {
                 BureausCards = item.cards;
                 break;
               }
-              case 'aboiut-strategic-plan':{
-                StrategicPlanProps = {title:item.header, content: item.content};
+              case 'about-strategic-plan':{
+                StrategicPlanProps = {title: item.header, content: item.content};
                 console.log('StrategicPlanProps');
                 console.log(StrategicPlanProps);
                 break;
@@ -76,7 +81,10 @@ class About extends Component {
                 FoundationProps.cards = item.cards;
                 break;
               }
-              case 'locations':{
+              case 'about-locations':{
+                LocationProps.image = item.image.file;
+                console.log('image');
+                console.log(LocationProps.image);
                 break;
               }
               case 'operations':{
@@ -88,42 +96,6 @@ class About extends Component {
         });
       }
 
-      if(AboutSections != undefined){
-        AboutSections.map((item)=>{
-          if(item.categories.length>1){
-            switch (item.categories[1]){
-              case 32:                      // Bureaus
-                // BureausTitle = item.title.rendered;
-                break;
-              case 34:                      // Foundation
-                // FoundationProps.title = item.title.rendered;
-                FoundationProps.content = item.content.rendered;
-                break;
-              case 35:                      // Locations
-                break;
-              case 36:                      // Operations
-                // OperationProps.title = item.title.rendered;
-                OperationProps.content = item.content.rendered;
-                console.log('OperationProps');
-                console.log(OperationProps);
-                break;
-              case 73:                      // Leadership
-                // LeadershipProps.title = item.title.rendered;
-                LeadershipProps.content = item.content.rendered;
-                // LeadershipProps.ProfileUrl = item.feature_image.guid;
-                break;
-              case 76:                      // Strategic Plan
-                // StrategicPlanProps = {title:item.title.rendered,
-                // content: item.content.rendered};
-                break;
-            }
-          }
-          else{
-            BannerText = {title: item.title.rendered,
-            content: item.content.rendered}
-          }
-        })
-      }
 
       return (
         <div>
@@ -131,7 +103,7 @@ class About extends Component {
           <div className = 'SContainer'>
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
-          <div className = 'GreyBcg'>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
               <Bureaus cards = {BureausCards}/>
             </div>
@@ -139,13 +111,13 @@ class About extends Component {
           <div className = 'SContainer'>
              <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
           </div>
-          <div className = 'GreyBcg'>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
              <Foundation FoundationProps = {FoundationProps}/>
             </div>
           </div>
-            <Locations/>
-          <div className = 'GreyBcg'>
+            <Locations LocationProps = {LocationProps}/>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
               <Operations OperationProps = {OperationProps}/>
             </div>
