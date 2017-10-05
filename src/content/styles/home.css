@@ -353,8 +353,49 @@ input.serviceRequestSearch:focus {
     line-height: 20px;
     text-align: center;
 }
-
-
+.downloadAppTitle{
+    color: #000000;	
+    font-size: 36px;	
+    font-weight: bold;	
+    letter-spacing: -1px;	
+    line-height: 33px;
+}
+.downloadInfoPart1{
+    width: 480px;
+    padding-top: 22px;    
+    font-size: 17.5px;
+    color: #333333 ;
+    line-height: 21px;
+}
+.downloadInfoPart2{
+    width: 480px;
+    padding-top: 13px;
+    font-size: 14px;
+    color: #333333 ;
+    line-height: 21px;
+}
+.downloadAppContainer{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 56px;
+}
+.downloadAppContainerParent{
+    height: 456px;
+    background-color: #EDEDEE;
+}
+.appStoreIconDiv{
+    padding-top: 53px;
+}
+.iosAppStoreSpan{
+    margin-right: 7px;
+}
+.downloadAppIcon{
+    padding-top: 18px;
+    float: right;
+}
+.AppstoreIcon, .PlaystoreIcon{
+    cursor: pointer;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (max-width: 499px) {
@@ -553,6 +594,39 @@ input.serviceRequestSearch:focus {
     .initiativesParentDiv {
         padding-left: 16px;
     }
+    .downloadAppContainer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .downloadAppContainerParent {
+        height: auto;
+    }
+    .downloadInfoPart1, .downloadInfoPart2{
+        width: 100%;
+    }
+    .downloadInfoPart1{
+        padding-top: 15px;
+    }
+    .downloadAppTitle{
+        font-size: 18px;	
+        font-weight: bold;	
+        line-height: 33px;
+    }
+    .downloadAppContainer{
+        padding-top: 20px;
+    }
+    .appStoreIconDiv {
+        padding-top: 30px;
+    }
+    .downloadAppCol1{
+        padding-top: 19px;
+    }
+    .downloadAppIcon {
+        width: 100%;
+    }
+    .PlaystoreIcon, .AppstoreIcon{
+        width: 138px;
+    }
 }
 
 
@@ -703,6 +777,18 @@ input.serviceRequestSearch:focus {
     }
     .initiativesParentDiv {
         padding-left: 36px;
+    }
+    .downloadInfoPart1{
+        width: 301px;
+    }
+    .downloadInfoPart2{
+        width: 301px;
+    }
+    .downloadAppContainerParent{
+        height: 467px;
+    }
+    .downloadAppIcon{
+        padding-top: 29px;
     }
 }
 
@@ -908,6 +994,40 @@ input.serviceRequestSearch:focus {
     }
     .initiativesParentDiv {
         padding-left: 16px;
+    }
+    .downloadAppContainer{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .downloadAppContainerParent {
+        height: auto;
+    }
+    .downloadInfoPart1, .downloadInfoPart2{
+        width: 100%;
+    }
+    .downloadInfoPart1{
+        padding-top: 15px;
+    }
+    .downloadAppTitle{
+        font-size: 18px;	
+        font-weight: bold;	
+        line-height: 33px;
+    }
+    .downloadAppContainer{
+        padding-top: 20px;
+    }
+    .appStoreIconDiv {
+        padding-top: 30px;
+    }
+    .downloadAppCol1{
+        padding-top: 19px;
+    }
+    .downloadAppIcon {
+        float: none;
+        text-align: center;
+    }
+    .PlaystoreIcon, .AppstoreIcon{
+        width: 138px;
     }
 }
 

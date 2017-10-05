@@ -137,6 +137,7 @@
     color: white;
 }
 #navBar>ul>li>a {
+    color: #333333;
     font-weight: bold;
     font-size: 16px;
 }
@@ -660,7 +661,7 @@ input.searchMessagesInput:focus {
     bottom: -37px;
 }
 .newsEventsCarousel>.carousel-inner>.item>img {
-    height: 280px;
+    height: 380px;
     width: 100%;;
 }
     .navbar-brand{

@@ -22,18 +22,21 @@ class CarouselData extends Component {
     }
     componentWillMount() {
         this.props.carouselPanelDataTemporary();
-        this.props.carouselData();
     }
     carouselDataItemList() {
-        return _.map(this.props.carouselItemsBigData, item => {
-            return (
-                <Carousel.Item key={item.heroTitle}>
-                    <img src={item.heroImage} />
-                    <Carousel.Caption>
-                        {item.heroTitle}
-                    </Carousel.Caption>
-                </Carousel.Item>
-            );
+        return _.map(this.props.carouselItems, item => {
+            if(item.name == "home-hero-section"){
+                return _.map(item.cards, item =>{
+                    return (
+                        <Carousel.Item key={item.heroTitle}>
+                            <img src={item.image.file} />
+                            <Carousel.Caption>
+                                {item.title}
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    );
+                })
+            }
         });
     }
     carouselPanelDataItemList() {
@@ -94,13 +97,11 @@ class CarouselData extends Component {
 
 function mapStateToProps(state) {
     return {
-        carouselItemsBigData: state.carouselDataReducer.carouselItems,
         carouselPanelItems: state.carouselDataReducer.carouselPanelItemsTemporary,
     }
 }
 
 let actionList = {
-    carouselData: actions.carouselData,
     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
 };
 

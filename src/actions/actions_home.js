@@ -6,25 +6,14 @@ export function carouselData() {
     return function (dispatch) {
         axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=home')
             .then((data) => {
-                console.log("Carousel Values: ")
                 console.log(data.data)
-                let carouselItems = [];
-                data.data.sections.sections.map((items) => {
-                    items.cards.map((item) => {
-                        let temp = {};
-                        temp['heroTitle'] = item.title;
-                        temp['heroImage'] = item.image.file;
-                        carouselItems.push(temp);
-                    })
-                })
                 dispatch({
                     type: 'SET_CAROUSEL_TITLE',
-                    payload: carouselItems,
+                    payload: data.data.sections.sections,
                 })
             })
     }
 }
-
 export function carouselPanelData() {
     return function (dispatch) {
         var date = new Date();
@@ -85,48 +74,4 @@ export function carouselPanelDataTemporary() {
     }
 }
 
-export function programData() {
-    return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=75&order=ASC&meta_key=rank&orderby=meta_value_num&post_per_page=5')
-            .then((data) => {
-                console.log(data.data)
-                let programItems = [];
-                data.data.map((item) => {
-                    let temp = {};
-                    if (item.image) {
-                        temp['programTitle'] = item.title.rendered;
-                        temp['programImage'] = item.image.guid;
-                    } else {
-                        temp['programTitle'] = item.title.rendered;
-                        temp['programImage'] = item.linked_file.guid;
-                    }
-                    programItems.push(temp);
-                })
-                dispatch({
-                    type: 'SET_PROGRAM_CARDS',
-                    payload: programItems,
-                })
-            })
-    }
-}
 
-export function programInitiatives() {
-    return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/wp_query/args?post_type=card&cat=74&order=ASC&meta_key=rank&orderby=meta_value_num&post_per_page=5')
-            .then((data) => {
-                let programInitiativesItems = [];
-                data.data.slice(0, 4).map((item, index) => {
-                    let temp = {};
-                    temp['initiativeRank'] = item.rank;
-                    temp['initiativesHeader'] = item.header;
-                    temp['initiativesTitle'] = item.title.rendered;
-                    temp['initiativesContent'] = item.content.rendered;
-                    programInitiativesItems.push(temp);
-                })
-                dispatch({
-                    type: 'SET_PROGRAM_INITIATIVES',
-                    payload: programInitiativesItems,
-                })
-            })
-    }
-}
