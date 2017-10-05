@@ -9,8 +9,16 @@ import '../../content/styles/ContentCard.css';
 
 class Foundation extends Component {
 
+  ListCards(cards){
+    return cards.map((item, i)=>{
+      return (
+          <TitleCard type='2' title={item.title}/>
+      )
+    })
+  }
   render() {
-
+    console.log('this.props.FoundationCards');
+    console.log(this.props.FoundationCards);
     return (
       <div className="Foundation">
         <SubSectionHeader title = {this.props.FoundationProps.title}/>
@@ -19,9 +27,7 @@ class Foundation extends Component {
               <LargeContentCard type='2' content={this.props.FoundationProps.content}/>
             </div>
             <div className='rightSec'>
-              <TitleCard type='2'/>
-              <hr/>
-              <TitleCard type='2'/>
+                {this.ListCards(this.props.FoundationCards)}
             </div>
         </div>
       </div>

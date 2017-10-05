@@ -36,6 +36,7 @@ class About extends Component {
       let LocationProps = {};
       let StrategicPlanProps = {};
       let FoundationProps = {};
+      let FoundationCards = [];
       let OperationProps = {};
 
 
@@ -60,8 +61,6 @@ class About extends Component {
                 LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
                 LeadershipProps.ProfileUrl = item.image.file;
-                console.log('LeadershipProps');
-                console.log(LeadershipProps);
                 break;
               }
               case 'about-bureaus':{
@@ -78,7 +77,9 @@ class About extends Component {
               case 'foundation':{
                 FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
-                FoundationProps.cards = item.cards;
+                FoundationCards = item.cards;
+                console.log('cards');
+                console.log(FoundationCards);
                 break;
               }
               case 'about-locations':{
@@ -113,7 +114,7 @@ class About extends Component {
           </div>
           <div className = 'greyBcg'>
             <div className = 'SContainer'>
-             <Foundation FoundationProps = {FoundationProps}/>
+             <Foundation FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
             </div>
           </div>
             <Locations LocationProps = {LocationProps}/>
