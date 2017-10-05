@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Banner from '../shared/banner';
 import RoundProfile from '../shared/RoundProfile';
-import * as actions from '../../actions/Actions_About';
+import * as actions from '../../actions/actions_about';
 import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
