@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
-import styles from '../../content/styles/card.css';
 
 class LargeContentCard extends Component {
   render() {

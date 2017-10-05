@@ -35,6 +35,9 @@
 
 @media only screen and (max-width: 940px) {
   .CardTitle{
-    width: 45%!important;
+    width: 48% !important;
+  }
+  .CardContent{
+    width: 100% !important;
   }
 }

@@ -20,7 +20,7 @@ class TitleContentCard extends Component {
     }
     let CardType = styles.narrow;
     return (
-        <div style={CardType} className='ContentCard'>
+        <div style={CardType}>
            <div className="CardTitle">{this.props.title}</div>
            <div className="CardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
         </div>
