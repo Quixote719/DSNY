@@ -10,6 +10,14 @@ import '../../content/styles/ContentCard.css';
 
 class Operations extends Component {
 
+  ListCards(cards){
+    return cards.map((item, i)=>{
+      return (
+          <TitleContentCard type='1' title={item.title} content={item.content}/>
+      )
+    })
+  }
+
   render() {
     return (
       <div className="Operations">
@@ -18,12 +26,7 @@ class Operations extends Component {
           <div className='SmallLeftSec'>
             <LargeContentCard content = {this.props.OperationProps.content} type = '1'/>
           </div>
-          <div className='MiddleSec'>
-            <TitleContentCard content = {this.props.OperationProps.content} type = '1'/>
-          </div>
-          <div className='SmallRightSec'>
-            <TitleContentCard type = '1'/>
-          </div>
+            {this.ListCards(this.props.OperationCards)}
         </div>
       </div>
     )

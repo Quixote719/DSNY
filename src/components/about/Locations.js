@@ -9,10 +9,16 @@ import SubSectionHeaderImage from '../shared/sub_section_header_image';
 class Locations extends Component {
 
   render() {
-
+    const style = {
+                    'background-image': `url(${this.props.LocationProps.image})`,
+                    'background-size': '100% 100%',
+                  }
+    console.log(style);
     return (
-      <div className="Locations">
-        <SubSectionHeaderImage id='educational-materials'/>
+      <div className="locations" style={style} >
+        <div className = 'SContainer'>
+            
+        </div>
       </div>
     )
   }

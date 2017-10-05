@@ -6,6 +6,7 @@ import * as actions from '../../actions/actions_about';
 import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
+import PageText from '../shared/PageText';
 import Leadership from './Leadership';
 import Locations from './Locations';
 import Operations from './Operations';
@@ -30,33 +31,35 @@ class About extends Component {
       let AboutSections = this.props.AboutSectionsData.data;
       let About = this.props.AboutData.data;
       let BannerText = {};
+      let PageExplanation = {};
       let LeadershipProps = {};
       let BureausTitle = '';
       let BureausCards = [];
+      let LocationProps = {};
       let StrategicPlanProps = {};
       let FoundationProps = {};
+      let FoundationCards = [];
       let OperationProps = {};
+      let OperationCards = [];
 
-
-      console.log('AboutSections');
-      console.log(AboutSections);
-      console.log('About');
-      console.log(About);
 
       if(About != undefined){
+        BannerText = {
+                      title: About.header,
+                      content: About.content
+                     };
         About.sections.sections.map((item)=>{
             switch (item.name){
               case 'about-top':{
-                BannerText = {title: item.header,
-                content: item.content};
+                PageExplanation = item.content;
+                console.log('PageExplanation');
+                console.log(PageExplanation);
                 break;
               }
               case 'about-leadership':{
                 LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
                 LeadershipProps.ProfileUrl = item.image.file;
-                console.log('LeadershipProps');
-                console.log(LeadershipProps);
                 break;
               }
               case 'about-bureaus':{
@@ -64,8 +67,8 @@ class About extends Component {
                 BureausCards = item.cards;
                 break;
               }
-              case 'aboiut-strategic-plan':{
-                StrategicPlanProps = {title:item.header, content: item.content};
+              case 'about-strategic-plan':{
+                StrategicPlanProps = {title: item.header, content: item.content};
                 console.log('StrategicPlanProps');
                 console.log(StrategicPlanProps);
                 break;
@@ -73,65 +76,38 @@ class About extends Component {
               case 'foundation':{
                 FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
-                FoundationProps.cards = item.cards;
+                FoundationCards = item.cards;
+                console.log('cards');
+                console.log(FoundationCards);
                 break;
               }
-              case 'locations':{
+              case 'about-locations':{
+                LocationProps.image = item.image.file;
+                console.log('image');
+                console.log(LocationProps.image);
                 break;
               }
-              case 'operations':{
+              case 'about-operations':{
                 OperationProps.title = item.header;
                 OperationProps.content = item.content;
+                OperationCards = item.cards;
+                console.log('operations');
+                console.log(LocationProps);
                 break;
               }
             }
         });
       }
 
-      if(AboutSections != undefined){
-        AboutSections.map((item)=>{
-          if(item.categories.length>1){
-            switch (item.categories[1]){
-              case 32:                      // Bureaus
-                // BureausTitle = item.title.rendered;
-                break;
-              case 34:                      // Foundation
-                // FoundationProps.title = item.title.rendered;
-                FoundationProps.content = item.content.rendered;
-                break;
-              case 35:                      // Locations
-                break;
-              case 36:                      // Operations
-                // OperationProps.title = item.title.rendered;
-                OperationProps.content = item.content.rendered;
-                console.log('OperationProps');
-                console.log(OperationProps);
-                break;
-              case 73:                      // Leadership
-                // LeadershipProps.title = item.title.rendered;
-                LeadershipProps.content = item.content.rendered;
-                // LeadershipProps.ProfileUrl = item.feature_image.guid;
-                break;
-              case 76:                      // Strategic Plan
-                // StrategicPlanProps = {title:item.title.rendered,
-                // content: item.content.rendered};
-                break;
-            }
-          }
-          else{
-            BannerText = {title: item.title.rendered,
-            content: item.content.rendered}
-          }
-        })
-      }
 
       return (
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
+            <PageText content = {PageExplanation} />
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
-          <div className = 'GreyBcg'>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
               <Bureaus cards = {BureausCards}/>
             </div>
@@ -139,15 +115,15 @@ class About extends Component {
           <div className = 'SContainer'>
              <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
           </div>
-          <div className = 'GreyBcg'>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
-             <Foundation FoundationProps = {FoundationProps}/>
+             <Foundation FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
             </div>
           </div>
-            <Locations/>
-          <div className = 'GreyBcg'>
+            <Locations LocationProps = {LocationProps}/>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
-              <Operations OperationProps = {OperationProps}/>
+              <Operations OperationProps = {OperationProps} OperationCards={OperationCards}/>
             </div>
           </div>
         </div>
