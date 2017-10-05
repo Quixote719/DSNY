@@ -14,7 +14,7 @@ class Foundation extends Component {
       return (
         <div>
             <TitleCard type='2' title={item.title}/>
-            <hr/>
+            <br/>
         </div>
       )
     })

@@ -35,10 +35,11 @@ class About extends Component {
       let LeadershipProps = {};
       let BureausTitle = '';
       let BureausCards = [];
-      let LocationProps = {};
       let StrategicPlanProps = {};
       let FoundationProps = {};
       let FoundationCards = [];
+      let LocationProps = {};
+      let LocationCards = [];
       let OperationProps = {};
       let OperationCards = [];
 
@@ -83,6 +84,7 @@ class About extends Component {
               }
               case 'about-locations':{
                 LocationProps.image = item.image.file;
+                LocationCards = item.cards;
                 console.log('image');
                 console.log(LocationProps.image);
                 break;
@@ -120,7 +122,7 @@ class About extends Component {
              <Foundation FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
             </div>
           </div>
-            <Locations LocationProps = {LocationProps}/>
+            <Locations LocationProps = {LocationProps} LocationCards = {LocationCards}/>
           <div className = 'greyBcg'>
             <div className = 'SContainer'>
               <Operations OperationProps = {OperationProps} OperationCards={OperationCards}/>
