@@ -5,7 +5,7 @@ import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 import LargeContentCard from '../shared/LargeContentCard'
 import TitleContentCard from '../shared/TitleContentCard'
-import '../../content/styles/ContentCard.css';
+import '../../content/styles/card.css';
 
 
 class Operations extends Component {
@@ -20,10 +20,10 @@ class Operations extends Component {
 
   render() {
     return (
-      <div className="Operations">
-        <SubSectionHeader title="Operations"/>
-        <div>
-          <div className='SmallLeftSec'>
+      <div className = "Operations">
+        <SubSectionHeader title = "Operations"/>
+        <div className = "OperationCards">
+          <div className = "SmallLeftSec">
             <LargeContentCard content = {this.props.OperationProps.content} type = '1'/>
           </div>
             {this.ListCards(this.props.OperationCards)}

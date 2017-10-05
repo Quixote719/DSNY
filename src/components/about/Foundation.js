@@ -12,7 +12,10 @@ class Foundation extends Component {
   ListCards(cards){
     return cards.map((item, i)=>{
       return (
-          <TitleCard type='2' title={item.title}/>
+        <div>
+            <TitleCard type='2' title={item.title}/>
+            <hr/>
+        </div>
       )
     })
   }
