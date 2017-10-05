@@ -6,6 +6,7 @@ import * as actions from '../../actions/actions_about';
 import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
+import PageText from '../shared/PageText';
 import Leadership from './Leadership';
 import Locations from './Locations';
 import Operations from './Operations';
@@ -30,6 +31,7 @@ class About extends Component {
       let AboutSections = this.props.AboutSectionsData.data;
       let About = this.props.AboutData.data;
       let BannerText = {};
+      let PageExplanation = {};
       let LeadershipProps = {};
       let BureausTitle = '';
       let BureausCards = [];
@@ -38,12 +40,8 @@ class About extends Component {
       let FoundationProps = {};
       let FoundationCards = [];
       let OperationProps = {};
+      let OperationCards = [];
 
-
-      console.log('AboutSections');
-      console.log(AboutSections);
-      console.log('About');
-      console.log(About);
 
       if(About != undefined){
         BannerText = {
@@ -52,11 +50,12 @@ class About extends Component {
                      };
         About.sections.sections.map((item)=>{
             switch (item.name){
-              // case 'about-top':{
-              //   BannerText = {title: item.header,
-              //   content: item.content};
-              //   break;
-              // }
+              case 'about-top':{
+                PageExplanation = item.content;
+                console.log('PageExplanation');
+                console.log(PageExplanation);
+                break;
+              }
               case 'about-leadership':{
                 LeadershipProps.title = item.header;
                 LeadershipProps.content = item.content;
@@ -88,9 +87,12 @@ class About extends Component {
                 console.log(LocationProps.image);
                 break;
               }
-              case 'operations':{
+              case 'about-operations':{
                 OperationProps.title = item.header;
                 OperationProps.content = item.content;
+                OperationCards = item.cards;
+                console.log('operations');
+                console.log(LocationProps);
                 break;
               }
             }
@@ -102,6 +104,7 @@ class About extends Component {
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
+            <PageText content = {PageExplanation} />
             <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
           <div className = 'greyBcg'>
@@ -120,7 +123,7 @@ class About extends Component {
             <Locations LocationProps = {LocationProps}/>
           <div className = 'greyBcg'>
             <div className = 'SContainer'>
-              <Operations OperationProps = {OperationProps}/>
+              <Operations OperationProps = {OperationProps} OperationCards={OperationCards}/>
             </div>
           </div>
         </div>
