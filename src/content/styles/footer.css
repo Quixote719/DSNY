@@ -61,7 +61,7 @@
 .fa{
     margin: 0 2%;
     color: #FFFFFF;
-    font-size: 21px;
+    font-size: 21px!important;
     cursor: pointer;
 }
 
