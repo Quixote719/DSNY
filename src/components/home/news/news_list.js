@@ -19,7 +19,7 @@ class News extends Component {
 
   renderPosts(pr) {
     return _.map(this.firstN(pr, 4), eventItem => {
-      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
+      return (<NewsListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
     });
   }
 
