@@ -52,3 +52,19 @@
   float: right;
   display: inline-block;
 }
+
+.locations{
+  height: 600px;
+}
+
+.location_bcgimage{
+  width: 100%;
+  height: 100%;
+}
+
+.OperationCards{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

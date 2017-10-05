@@ -9,8 +9,15 @@
   overflow: hidden;
 }
 
-.GreyBcg {
+.greyBcg {
   background-color: #F2F2F2;
+}
+
+.dsnyParagraph{
+  margin: 30px auto;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 940px) {

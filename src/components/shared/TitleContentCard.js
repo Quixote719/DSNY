@@ -18,9 +18,10 @@ class TitleContentCard extends Component {
         'min-height': '90px'
       }
     }
+    let CardType = styles.narrow;
     return (
-        <div style={styles.narrow} className='ContentCard'>
-           <div className="CardTitle">Title</div>
+        <div style={CardType} className='ContentCard'>
+           <div className="CardTitle">{this.props.title}</div>
            <div className="CardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
         </div>
     );
