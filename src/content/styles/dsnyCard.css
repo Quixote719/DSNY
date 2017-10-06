@@ -11,6 +11,37 @@
   flex-wrap: wrap;
 }
 
+.ProfileCard{
+  width: 220px;
+  height: 317px;
+}
+
+.ImageBox{
+  padding-top: 30px;
+  height: 200px;
+}
+
+.ProfileCardImg{
+  margin: auto;
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+  display: block;
+}
+
+.ProfileCardName{
+  color: #00764D;
+  font-size: 17.5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ProfileCardDuty{
+  color: #333333;
+  font-size: 17.5px;
+  text-align: center;
+}
+
 .CardTitle{
   padding: 25px 15px;
 	color: #00764E;
@@ -34,7 +65,16 @@
 }
 
 @media only screen and (max-width: 940px) {
-  .CardTitle{
-    width: 45%!important;
+  .CardTitleBox .CardTitle{
+    width: 100%!important;
+  }
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 48%!important;
+  }
+  .FoundationSp{
+    display: none;
+  }
+  .CardContent{
+    width: 100% !important;
   }
 }

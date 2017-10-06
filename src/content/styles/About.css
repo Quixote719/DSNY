@@ -68,3 +68,27 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
+.FoundationSp{
+  height: 20px;
+}
+
+
+@media only screen and (max-width: 940px) {
+  .SmallLeftSec{
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+  }
+  .leftSec{
+    margin-bottom: 20px;
+    width: 100%;
+    display: block;
+  }
+  .rightSec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}

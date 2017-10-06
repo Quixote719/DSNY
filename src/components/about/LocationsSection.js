@@ -6,7 +6,7 @@ import TitleContentCard from '../shared/TitleContentCard'
 import SubSectionHeaderImage from '../shared/sub_section_header_image';
 
 
-class Locations extends Component {
+class LocationsSection extends Component {
 
   ListCards(cards){
     return cards.map((item, i)=>{
@@ -28,11 +28,11 @@ class Locations extends Component {
       <div className="locations" style={style} >
         <div className = 'SContainer'>
             <div>Locations</div>
-            {this.ListCards(this.props.LocationCards)}
+            <TitleContentCard type='2' content={this.props.LocationProps.content}/>
         </div>
       </div>
     )
   }
 }
 
-export default Locations;
+export default LocationsSection;

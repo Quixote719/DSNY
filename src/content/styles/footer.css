@@ -8,7 +8,7 @@
     color: #FFFFFF;
 }
 .FooterCol a:hover, .FooterCol span:hover {
-    color: #83BF48;
+    color: #B8E986;
     text-decoration: none;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .fa:hover{
-  color: #83BF48;
+  color: #B8E986;
 }
 
 .SpLine{
@@ -99,7 +99,7 @@
 }
 
 .NYCfooter-links a:hover{
-    color: #83BF48;
+    color: #B8E986;
 }
 
 .SearchBlock{
@@ -123,7 +123,7 @@
   text-decoration: none;
 }
 .copyright a:hover{
-  color: #83BF48;
+  color: #B8E986;
 }
 
 
