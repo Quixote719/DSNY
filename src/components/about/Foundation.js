@@ -17,8 +17,6 @@ class Foundation extends Component {
     })
   }
   render() {
-    console.log('this.props.FoundationCards');
-    console.log(this.props.FoundationCards);
     return (
       <div className="Foundation">
         <SubSectionHeader title = {this.props.FoundationProps.title}/>
