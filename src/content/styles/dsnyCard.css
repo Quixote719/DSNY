@@ -16,12 +16,17 @@
   height: 317px;
 }
 
-.Profile{
-  vertical-align: top;
+.ImageBox{
+  padding-top: 30px;
+  height: 200px;
+}
+
+.ProfileCardImg{
+  margin: auto;
   height: 152px;
   width: 152px;
   border-radius: 50%;
-  display: inline-block;
+  display: block;
 }
 
 .ProfileCardName{
@@ -60,8 +65,14 @@
 }
 
 @media only screen and (max-width: 940px) {
-  .CardTitle, .TitleContentCard{
-    width: 48% !important;
+  .CardTitleBox .CardTitle{
+    width: 100%!important;
+  }
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 48%!important;
+  }
+  .FoundationSp{
+    display: none;
   }
   .CardContent{
     width: 100% !important;

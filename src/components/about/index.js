@@ -7,12 +7,12 @@ import CardTitle from '../shared/Card_title';
 import TitleCard from '../shared/TitleCard';
 import SubSectionHeader from '../shared/sub_section_header';
 import PageText from '../shared/PageText';
-import Leadership from './Leadership';
-import Locations from './Locations';
-import Operations from './Operations';
-import StrategicPlan from './StrategicPlan';
-import Bureaus from './Bureaus';
-import Foundation from './Foundation';
+import LeadershipSection from './LeadershipSection';
+import LocationsSection from './LocationsSection';
+import OperationsSection from './OperationsSection';
+import StrategicPlanSection from './StrategicPlanSection';
+import BureausSection from './BureausSection';
+import FoundationSection from './FoundationSection';
 import LargeContentCard from '../shared/LargeContentCard';
 import TitleContentCard from '../shared/TitleContentCard';
 import '../../content/styles/About.css';
@@ -65,7 +65,7 @@ class About extends Component {
               }
               case 'about-bureaus':{
                 BureausTitle = item.header;
-                BureausCards = item.cards;
+                BureausCards = item.cards.slice(0, 6);
                 break;
               }
               case 'about-strategic-plan':{
@@ -84,6 +84,7 @@ class About extends Component {
               }
               case 'about-locations':{
                 LocationProps.image = item.image.file;
+                LocationProps.content = item.content;
                 LocationCards = item.cards;
                 console.log('image');
                 console.log(LocationProps.image);
@@ -107,25 +108,25 @@ class About extends Component {
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
             <PageText content = {PageExplanation} />
-            <Leadership title = 'Leadership' LeadershipProps = {LeadershipProps}/>
+            <LeadershipSection title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
           <div className = 'greyBcg boxPadding'>
             <div className = 'SContainer'>
-              <Bureaus cards = {BureausCards}/>
+              <BureausSection cards = {BureausCards}/>
             </div>
           </div>
           <div className = 'SContainer'>
-             <StrategicPlan StrategicPlanProps = {StrategicPlanProps}/>
+             <StrategicPlanSection StrategicPlanProps = {StrategicPlanProps}/>
           </div>
           <div className = 'greyBcg boxPadding'>
             <div className = 'SContainer'>
-             <Foundation FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
+             <FoundationSection FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
             </div>
           </div>
-            <Locations LocationProps = {LocationProps} LocationCards = {LocationCards}/>
+            <LocationsSection LocationProps = {LocationProps} LocationCards = {LocationCards}/>
           <div className = 'greyBcg boxPadding'>
             <div className = 'SContainer'>
-              <Operations OperationProps = {OperationProps} OperationCards={OperationCards}/>
+              <OperationsSection OperationProps = {OperationProps} OperationCards={OperationCards}/>
             </div>
           </div>
         </div>

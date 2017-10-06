@@ -7,12 +7,15 @@ import LargeContentCard from '../shared/LargeContentCard'
 import TitleCard from '../shared/TitleCard'
 import '../../content/styles/ContentCard.css';
 
-class Foundation extends Component {
+class FoundationSection extends Component {
 
   ListCards(cards){
     return cards.map((item, i)=>{
       return (
-            <TitleCard type='2' title={item.title}/>
+        <div className='CardTitleBox'>
+          <TitleCard type='2' title={item.title}/>
+          <div className='FoundationSp'></div>
+        </div>
       )
     })
   }
@@ -33,4 +36,4 @@ class Foundation extends Component {
   }
 }
 
-export default Foundation;
+export default FoundationSection;

@@ -6,8 +6,8 @@ class ProfileCard extends Component {
   render() {
     return (
       <div className="ProfileCard">
-          <div>
-            <img className="Profile" src={this.props.ProfileUrl} alt=""/>
+          <div className="ImageBox">
+            <img className="ProfileCardImg" src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" alt=""/>
           </div>
           <div className="ProfileCardName">Kathryn Garcia</div>
           <div className="ProfileCardDuty">Commissioner</div>

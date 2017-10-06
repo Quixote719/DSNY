@@ -6,7 +6,7 @@ import SubSectionHeader from '../shared/sub_section_header';
 import SubSectionButton from '../shared/sub_section_button';
 
 
-class StrategicPlan extends Component {
+class StrategicPlanSection extends Component {
   render() {
     return (
       <div className="StrategicPlan">
@@ -18,4 +18,4 @@ class StrategicPlan extends Component {
   }
 }
 
-export default StrategicPlan;
+export default StrategicPlanSection;

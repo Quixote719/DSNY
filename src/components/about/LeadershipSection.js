@@ -5,7 +5,7 @@ import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 
 
-class Leadership extends Component {
+class LeadershipSection extends Component {
   render() {
     return (
       <div className="Leadership">
@@ -20,4 +20,4 @@ class Leadership extends Component {
   }
 }
 
-export default Leadership;
+export default LeadershipSection;

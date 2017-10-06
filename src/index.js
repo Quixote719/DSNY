@@ -12,6 +12,7 @@ import appstyles from './content/styles/application.css';
 
 import Home from './components/home';
 import About from './components/about';
+import Leader from './components/about/Leader';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
@@ -39,7 +40,8 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/home" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/about/Leader" component={Leader}/>
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>

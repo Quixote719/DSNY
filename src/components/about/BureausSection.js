@@ -7,14 +7,14 @@ import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
 import styles from '../../content/styles/dsnyCard.css';
 
-class Bureaus extends Component {
+class BureausSection extends Component {
 
   renderPosts(cards = []) {
     console.log('rendercards');
     console.log(cards);
       return cards.map(function(item,i){
         return (
-              <TitleCard title={item.title} type='1' key={i}/>
+              <TitleCard title={item.title} type='2' key={i}/>
         );
       })
   }
@@ -39,4 +39,4 @@ class Bureaus extends Component {
 }
 
 
-export default Bureaus;
+export default BureausSection;
