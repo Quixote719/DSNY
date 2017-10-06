@@ -17,8 +17,14 @@ class News extends Component {
     this.firstN = this.firstN.bind(this);
   }
 
-  renderPosts(pr) {
-    return _.map(this.firstN(pr, 4), eventItem => {
+  renderNewsPosts(pr) {
+    return _.map(this.firstN(pr, 2), eventItem => {
+      return (<NewsListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
+    });
+  }
+
+  renderTopNewsContent(pr) {
+    return _.map(this.firstN(pr, 1), eventItem => {
       return (<NewsListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
     });
   }
@@ -55,7 +61,9 @@ class News extends Component {
     return (
       <div>
         <SubSectionHeader title="DSNY Events"/>
-        <div>{this.renderPosts(pr)}</div>
+        <div>{this.renderNewsPosts(pr)}</div>
+
+        <div>{this.renderTopNewsContent(pr)}</div>
 
         {this.ViewAllButton(_.size(pr))}
       </div>
