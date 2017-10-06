@@ -396,6 +396,27 @@ input.serviceRequestSearch:focus {
 .AppstoreIcon, .PlaystoreIcon{
     cursor: pointer;
 }
+.textSizeModalContainer{
+    position: absolute;
+    z-index: 50;
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+}
+.textSizeModal{
+    background-color: white;
+    position: absolute;
+    display: block;
+    visibility: visible;
+    top: 196px;
+    left: 670px;
+    position: absolute;
+    width: 580px;
+    height: 648px;
+    z-index: 60;
+}
+
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (max-width: 499px) {
@@ -878,12 +899,13 @@ input.serviceRequestSearch:focus {
     }
     .programContainer {
         width: 100%;
+        padding-bottom: 17px;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 17px;
     }
     .programContainer>.row {
-        display: none;
+        display: block;
         margin-left: 0;
     }
     .serviceRequestCol {
@@ -907,34 +929,7 @@ input.serviceRequestSearch:focus {
         margin-top: 6.5px;
     }
     .programMobileData {
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-        display: block;
-    }
-    .programMobileImage {
-        margin-top: 12.92px;
-        float: right;
-        height: 54.17px;
-        width: auto;
-    }
-    .programMobileOuter {
-        display: table;
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 14.92px;
-        border-radius: 3px;
-        margin-bottom: 17px;
-        height: 80px;
-        background-color: white;
-    }
-    .programMobileTitle {
-        vertical-align: middle;
-        color: #231F20;
-        display: inline-block;
-        width: 82%;
-        font-size: 17px;
-        font-weight: bold;
-        line-height: 20px;
-        display: table-cell;
+        display: none;
     }
     #initiativesCol {
         margin-top: 0;

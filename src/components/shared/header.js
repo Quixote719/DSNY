@@ -5,10 +5,13 @@ import { Navbar, Nav, NavItem, Modal, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
-
+import TextSizeModal from './TextSizeModal';
 class Header extends React.Component {
     constructor(props, context) {
         super(props, context);
+        this.state = {
+            textSizePopUp: false
+          }
         this.state = { showModal: false };
         this.close = this.close.bind(this);
         this.ReverseAnimate = this.ReverseAnimate.bind(this);
@@ -33,10 +36,18 @@ class Header extends React.Component {
     handleClickHeader() {
         this.forceUpdate();
     }
+    textSizeModal() {
+        this.setState({textSizePopUp: !this.state.textSizePopUp});
+    }
     render() {
         var url = window.location.pathname;
         return (
             <div className="HeaderParent">
+                                        {
+                            this.state.textSizePopUp
+                            ? <TextSizeModal textSizePopUp = {this.state.textSizePopUp}/>
+                            : null
+                        }
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
                         <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
@@ -50,7 +61,8 @@ class Header extends React.Component {
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
                         <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
-                        <span className="textSizeHeader">Text Size</span>
+                        <span className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</span>
+
                         <span className="textSizeTranslate">&#8203;</span>
                         <span aria-hidden="true" className="translateIcon">▼</span>
                         <span className="translateHeader">Translate</span>

@@ -21,6 +21,7 @@ class CarouselData extends Component {
         };
     }
     componentWillMount() {
+        this.forceUpdate();
         this.props.carouselPanelDataTemporary();
     }
     carouselDataItemList() {
@@ -30,9 +31,11 @@ class CarouselData extends Component {
                     return (
                         <Carousel.Item key={item.heroTitle}>
                             <img src={item.image.file} />
+                            <div>
                             <Carousel.Caption>
                                 {item.title}
                             </Carousel.Caption>
+                            </div>
                         </Carousel.Item>
                     );
                 })
