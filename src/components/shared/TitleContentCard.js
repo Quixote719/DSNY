@@ -28,7 +28,6 @@ class TitleContentCard extends Component {
   };
 };
 
-// LargeContentCard.propTypes = {
-// };
+
 
 export default TitleContentCard;

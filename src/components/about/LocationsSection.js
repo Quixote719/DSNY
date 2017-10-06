@@ -23,12 +23,18 @@ class LocationsSection extends Component {
                     'background-image': `url(${this.props.LocationProps.image})`,
                     'background-size': '100% 100%',
                   }
+    const cardStyle={
+                    'float': 'right'
+    }
 
     return (
-      <div className="locations" style={style} >
+      <div className='locations' style={style} >
         <div className = 'SContainer'>
-            <div>Locations</div>
-            <TitleContentCard type='2' content={this.props.LocationProps.content}/>
+            <div className = 'whiteTitle'>Locations</div>
+            <div style={cardStyle}>
+                <TitleContentCard type='2' content={this.props.LocationProps.content}/>
+            </div>
+
         </div>
       </div>
     )

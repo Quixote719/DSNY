@@ -13,7 +13,7 @@ import OperationsSection from './OperationsSection';
 import StrategicPlanSection from './StrategicPlanSection';
 import BureausSection from './BureausSection';
 import FoundationSection from './FoundationSection';
-import LargeContentCard from '../shared/LargeContentCard';
+import ContentCard from '../shared/ContentCard';
 import TitleContentCard from '../shared/TitleContentCard';
 import '../../content/styles/About.css';
 import { connect } from 'react-redux';

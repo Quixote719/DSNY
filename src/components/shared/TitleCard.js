@@ -55,7 +55,5 @@ class TitleCard extends Component {
   };
 };
 
-// LargeContentCard.propTypes = {
-// };
 
 export default TitleCard;

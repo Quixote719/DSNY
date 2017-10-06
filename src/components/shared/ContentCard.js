@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 
-class LargeContentCard extends Component {
+class ContentCard extends Component {
   render() {
     const styles={
       narrow:{
@@ -27,7 +27,6 @@ class LargeContentCard extends Component {
   };
 };
 
-// LargeContentCard.propTypes = {
-// };
 
-export default LargeContentCard;
+
+export default ContentCard;
