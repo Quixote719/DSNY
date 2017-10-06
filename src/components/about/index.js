@@ -110,7 +110,7 @@ class About extends Component {
             <PageText content = {PageExplanation} />
             <LeadershipSection title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
-          <div className = 'greyBcg boxPadding'>
+          <div className = 'greyBcg'>
             <div className = 'SContainer'>
               <BureausSection cards = {BureausCards}/>
             </div>
@@ -118,13 +118,13 @@ class About extends Component {
           <div className = 'SContainer'>
              <StrategicPlanSection StrategicPlanProps = {StrategicPlanProps}/>
           </div>
-          <div className = 'greyBcg boxPadding'>
+          <div className = 'greyBcg boxPaddingBtm'>
             <div className = 'SContainer'>
              <FoundationSection FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
             </div>
           </div>
             <LocationsSection LocationProps = {LocationProps} LocationCards = {LocationCards}/>
-          <div className = 'greyBcg boxPadding'>
+          <div className = 'greyBcg boxPaddingBtm'>
             <div className = 'SContainer'>
               <OperationsSection OperationProps = {OperationProps} OperationCards={OperationCards}/>
             </div>

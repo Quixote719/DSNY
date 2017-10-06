@@ -20,7 +20,7 @@ class BureausSection extends Component {
   }
 
   ViewAllButton() {
-      return (<SubSectionButton title='VIEW ALL'/>);
+      return (<SubSectionButton title='SEE ALL BUREAUS'/>);
   }
 
   render() {
