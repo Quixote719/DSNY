@@ -1,7 +1,6 @@
 .sectionHeader {
   min-height: 33px;
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 36px;
   font-weight: bold;
   letter-spacing: -1px;
@@ -10,7 +9,6 @@
 
 .patternLineGreen {
   height: 10px;
-  margin-top: 20px;
   margin-bottom: 25px;
   background: url('../images/Lightgreen.png');
 }
