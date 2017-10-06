@@ -17,11 +17,11 @@ class News extends Component {
   }
    
 
-  renderNewsPosts(pr) {
+  renderNewsPosts() {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "news-and-updates-section"){
-         return _.map(this.firstN(item.cards, 1), newsItem => {
-            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.file}/>);
+         return _.map(this.firstN(item.cards, 5), newsItem => {
+            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file}/>);
         });
       }
     });
@@ -54,22 +54,14 @@ class News extends Component {
 
   render() {
 
-    const {pr} = this.props;
-
-    if (_.isEmpty(pr)) {
-      return (
-        <div></div>
-      );
-    }
-
     return (
       <div>
         <SubSectionHeader title="DSNY Events"/>
-        <div>{this.renderNewsPosts(pr)}</div>
+        <div>{this.renderNewsPosts()}</div>
 
         {/*<div>{this.renderTopNewsContent(pr)}</div>*/}
 
-        {this.ViewAllButton(_.size(pr))}
+        {/*{this.ViewAllButton(_.size(pr))}*/}
       </div>
     );
   }
