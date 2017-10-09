@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../../content/styles/newsListItem.css';
 import moment from 'moment';
+import Dotdotdot from 'react-dotdotdot'
 
 class NewsListItem extends Component {
 
@@ -43,7 +44,9 @@ class NewsListItem extends Component {
                 <div className='defaultcardImage newscardTitle'>
                     <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
                     <div className='newsDefaultcardTitleText'>{this.props.title}</div>
-                    <div className='newscardDescription'>{this.props.description}</div>
+                    <Dotdotdot clamp={3}>
+                        <div className='newscardDescription'>{this.props.description}</div>
+                     </Dotdotdot>
                 </div>
                 </div>
             </Col>
@@ -85,8 +88,14 @@ class NewsListItem extends Component {
                     <Col xs={7} sm={7} md={7} className='newsMobileSection'>
                         <div className='newsSectioncardTI'>
                         <div className='newscardTitle'>
-                            <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
+                            {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
                             <div className='newscardTitleText'>{this.props.title}</div>
+                        </div>
+                        <div className='newscardDescription'>
+                            {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
+                            <Dotdotdot clamp={3}>
+                                <div className='newscardDescriptionText'>{this.props.description}</div>
+                            </Dotdotdot>
                         </div>
                         </div>
                     </Col>

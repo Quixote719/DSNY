@@ -130,3 +130,21 @@
          width: 100%
     }
 }
+
+/* Mobile & Table Styles */
+
+.newsMobileSection .newsSectioncardTI {
+  min-height: 122px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+ /* border: 1px solid #7CC04B;*/
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.newsMobileSection .newsSectioncardTI .newscardDescription{
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+}
