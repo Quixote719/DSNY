@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
+import Dotdotdot from 'react-dotdotdot';
 import styles from '../../content/styles/dsnyCard.css';
 
 class TitleContentCard extends Component {
@@ -22,7 +23,11 @@ class TitleContentCard extends Component {
     return (
         <div className="TitleContentCard" style={CardType}>
            <div className="CardTitle">{this.props.title}</div>
-           <div className="CardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+           <div className="CardContent" >
+              <Dotdotdot clamp={3}>
+                  <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+              </Dotdotdot>
+           </div>
         </div>
     );
   };
