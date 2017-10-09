@@ -71,6 +71,31 @@
   margin: 7px 0;
 }
 
+.ColorCard{
+	height: 220px;
+	width: 303px;
+}
+
+.ColorCardHeader{
+  height: 65px;
+  width: 303px;
+  padding: 0 20px;
+  font-weight: 600;
+  line-height: 65px;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.ColorCardContent{
+  height: 155px;
+  width: 303px;
+  padding: 40px 20px 0 20px;
+  font-weight: 600;
+  color: #00764D;
+  background-color: #FFFFFF;
+  font-size: 17.5px;
+}
+
 @media only screen and (max-width: 940px) {
   .CardTitleBox .CardTitle{
     width: 100%!important;
