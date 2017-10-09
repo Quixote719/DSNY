@@ -6,9 +6,13 @@
   color: #00764D;
 }
 
-.newsSection {
+.newsDesktopSection, .newsMobileSection {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.newsMobileSection {
+    display: none;
 }
 
 .alignright {
@@ -107,3 +111,22 @@
   cursor: pointer;
 }
 
+@media (max-width: 992px) {
+    .newsMobileSection {
+        display: block;
+    }
+
+    .newsDesktopSection {
+        display: none;
+    }
+}
+
+@media (max-width: 667px) and (orientation:portrait) {
+    .newsMobileSection.col-xs-5 {
+         width: 100%
+    }
+
+    .newsMobileSection.col-xs-7 {
+         width: 100%
+    }
+}
