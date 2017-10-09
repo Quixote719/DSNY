@@ -25,9 +25,9 @@ class Home extends Component {
         </div>
           <SearchCards />
           <ProgramCards carouselItems={this.props.carouselItems}/>
-        {/*<div className="container">
+        <div className="container">
           <NewsList carouselItems={this.props.carouselItems}/>
-        </div>*/}
+        </div>
           <ProgramInitiatives carouselItems={this.props.carouselItems}/>
         <div className="container eventSection">
           <EventList />

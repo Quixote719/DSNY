@@ -31,7 +31,8 @@ class NewsListItem extends Component {
           }}></div>*/}
           <div className='defaultcardImage newscardTitle'>
             <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
-            <div className='newscardTitleText'>{this.props.title}</div>
+            <div className='newsDefaultcardTitleText'>{this.props.title}</div>
+            <div className='newscardDescription'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</div>
           </div>
         </div>
       </Col>

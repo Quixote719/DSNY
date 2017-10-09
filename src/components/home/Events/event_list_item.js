@@ -27,7 +27,7 @@ class EventListItem extends Component {
                 {this.props.title}
               </Link>
             </div>
-            <div className=''>{this.props.description}</div>
+            <div className='eventDescription'>{this.props.description}</div>
           </Col>
           
         </Row>
