@@ -75,11 +75,11 @@
   .CardTitleBox .CardTitle{
     width: 100%!important;
   }
+  .TitleContentCard .CardTitle{
+    width: 100%!important;
+  }
   .CardTitle, .CardTitleBox, .TitleContentCard{
     width: 49%!important;
-  }
-  .FoundationSp{
-    display: none;
   }
   .CardContent{
     width: 100% !important;
