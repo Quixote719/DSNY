@@ -71,6 +71,10 @@
   margin: 7px 0;
 }
 
+.TitleContentCard .CardTitle,.TitleContentCard .CardContent{
+    margin: 0;
+}
+
 .ColorCard{
 	height: 220px;
 	width: 303px;

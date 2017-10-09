@@ -10,13 +10,13 @@ class TitleContentCard extends Component {
         'width': '220px',
         'background-color':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '90px'
+        'min-height': '200px'
       },
       wide:{
         'width': '303px',
         'background-color':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '90px'
+        'min-height': '200px'
       }
     }
     let CardType = styles.narrow;
