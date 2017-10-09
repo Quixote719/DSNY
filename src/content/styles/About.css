@@ -73,12 +73,10 @@
 
 @media only screen and (max-width: 940px) {
   .SmallLeftSec{
-    margin-bottom: 20px;
     width: 100%;
     display: block;
   }
   .leftSec{
-    margin-bottom: 20px;
     width: 100%;
     display: block;
   }
@@ -87,5 +85,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+  }
+  .locations{
+    background-size: 940px 600px!important;
+    background-position: 50% 50%!important;
+    overflow: hidden!important;
   }
 }
