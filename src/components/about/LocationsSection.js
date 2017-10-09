@@ -12,10 +12,11 @@ class LocationsSection extends Component {
   render() {
     const style = {
                     'background-image': `url(${this.props.LocationProps.image})`,
-                    'background-size': '100% 100%',
+                    'background-size': '100% 900px',
                   }
     const cardStyle={
-                    'float': 'right'
+                    'float': 'right',
+                    'margin-top': '25px'
     }
 
     return (
