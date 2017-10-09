@@ -18,10 +18,11 @@ class News extends Component {
    
 
   renderNewsPosts() {
+    let itemCounter = 0;  
     return _.map(this.props.carouselItems, item => {
       if(item.name == "news-and-updates-section"){
          return _.map(this.firstN(item.cards, 5), newsItem => {
-            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file}/>);
+            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file} itemCounter = {itemCounter++}/>);
         });
       }
     });
