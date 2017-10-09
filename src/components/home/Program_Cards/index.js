@@ -15,7 +15,7 @@ class ProgramCards extends Component {
   mobileProgramList() {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
-        return _.map(item.cards, item =>{
+        return _.map(item.cards, (item,index) =>{
           return (
             <div className="programMobileData" key={item.programTitle}>
               <div className="programMobileOuter">

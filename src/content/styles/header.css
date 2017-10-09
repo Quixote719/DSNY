@@ -192,14 +192,56 @@ input.searchMessagesInput:focus {
 .close:focus{
     outline-color: transparent;
 }
-.modal-dialog {
-    display: none;
+.textSizeModalNew{
+    display:block;
 }
-.modal-backdrop {
-    visibility: hidden;
+#menu>.modal-dialog {
+    display: none;
 }
 .modal {
     overflow: hidden;
+}
+.modal-backdrop.in{
+    opacity: 0.9;
+}
+.textSizeModalNew>.modal-dialog>.modal-content>.modal-header{
+    position: absolute;
+    border:none;
+}
+.textSizeModalNew>.modal-dialog>.modal-content>.modal-header>.close, .textSizeModalNew>.modal-dialog>.modal-content>.modal-header>.close:hover, .textSizeModalNew>.modal-dialog>.modal-content>.modal-header>.close:focus{
+    opacity: 1;
+    position: absolute;
+    top: -9px;
+    right: -558px;
+    background: url(http://www1.nyc.gov/assets/home/images/global/ico-close.png) no-repeat 0 0;
+    width: 21px;
+    height: 20px;
+    text-indent: -9999px;
+}
+.textSizeModalNew>.modal-dialog>.modal-content>.modal-body{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 130px;
+}
+.modalTextSizeTitle{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: #096543;    
+}
+.modalTextSizePara{
+    margin-bottom: 17px;
+    line-height: 24px;
+    font-size: 16px;
+}
+.textSizeModalNew>.modal-dialog{
+    margin: 0;
+    width:580px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
 }
 .selectedParent>a{
     color: white !important;
@@ -441,6 +483,7 @@ input.searchMessagesInput:focus {
     .modal-body {
         padding:0;
     }
+
     .modal-header .close {
         padding-right: 14px;
         margin-top: -2px;
