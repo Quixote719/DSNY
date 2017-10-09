@@ -31,7 +31,7 @@ class Event extends Component {
   }
 
   ViewAllButton(l) {
-    if (l > 4) {
+    if (l >= 4) {
       return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
     } else {
       return null;

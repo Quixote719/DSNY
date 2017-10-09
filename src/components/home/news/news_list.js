@@ -28,9 +28,14 @@ class News extends Component {
     });
   }
 
-  renderTopNewsContent(pr) {
-    return _.map(this.firstN(pr, 1), eventItem => {
-      return (<NewsListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
+  renderTopNewsContent() {
+    let itemCounter = 99;
+     return _.map(this.props.carouselItems, item => {
+      if(item.name == "news-and-updates-section"){
+         return _.map(this.firstN(item.cards, 1), newsItem => {
+            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file} itemCounter = {itemCounter}/>);
+        });
+      }
     });
   }
 
@@ -41,14 +46,19 @@ class News extends Component {
     }, {}).value();
   }
 
-  ViewAllButton(l) {
-    if (l > 4) {
-      return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
-    } else {
-      return null;
-    }
+  ViewAllButton() {
 
+    return _.map(this.props.carouselItems, item => {
+      if(item.name == "news-and-updates-section"){
+          if (item.cards.length >= 5) {
+            return (<SubSectionButton title='MORE NEWS' onClick={this._reroute}/>);
+        } else {
+        return null;
+        }
+      }
+    });
   }
+
   _reroute() {
     console.log('re routing this module to a sub module');
   }
@@ -57,12 +67,13 @@ class News extends Component {
 
     return (
       <div>
-        <SubSectionHeader title="DSNY Events"/>
+        <SubSectionHeader title="News &amp; Updates"/>
         <div>{this.renderNewsPosts()}</div>
+        <div>{this.renderTopNewsContent()}</div>
 
         {/*<div>{this.renderTopNewsContent(pr)}</div>*/}
 
-        {/*{this.ViewAllButton(_.size(pr))}*/}
+        <div>{this.ViewAllButton()}</div>
       </div>
     );
   }
