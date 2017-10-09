@@ -25,7 +25,7 @@ class FoundationSection extends Component {
         <SubSectionHeader title = {this.props.FoundationProps.title}/>
         <div>
             <div className='leftSec'>
-              <ContentCard type='2' content={this.props.FoundationProps.content}/>
+              <ContentCard type='3' content={this.props.FoundationProps.content}/>
             </div>
             <div className='rightSec'>
                 {this.ListCards(this.props.FoundationCards)}

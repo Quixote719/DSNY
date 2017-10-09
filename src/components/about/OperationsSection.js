@@ -24,7 +24,7 @@ class OperationsSection extends Component {
         <SubSectionHeader title = {this.props.OperationProps.title}/>
         <div className = "OperationCards">
           <div className = "SmallLeftSec">
-            <ContentCard content = {this.props.OperationProps.content} type = '1'/>
+            <ContentCard content = {this.props.OperationProps.content} type = '2'/>
           </div>
             {this.ListCards(this.props.OperationCards)}
         </div>

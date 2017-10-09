@@ -4,23 +4,38 @@ import PropTypes from 'prop-types';
 class ContentCard extends Component {
   render() {
     const styles={
-      narrow:{
+      small:{
+        'width': '303px',
+        'min-height': '200px',
+        'padding': '15px 20px',
+        'display':'inline-block'
+      },
+      normal:{
         'width': '460px',
         'min-height': '200px',
         'padding': '15px 20px',
-        'background-color':'#FFFFFF',
         'display':'inline-block'
       },
-      wide:{
+      large:{
         'width': '617px',
         'min-height': '200px',
         'padding': '20px',
-        'background-color':'#FFFFFF',
         'display':'inline-block'
       }
     }
+    let cardType = styles.small;
+    if(this.props.type=='1'){
+       cardType = styles.small;
+    }
+    else if(this.props.type=='2'){
+      cardType = styles.normal;
+    }
+    else if(this.props.type=='3'){
+      cardType = styles.large;
+    }
+
     return (
-        <div style = {this.props.type=='2'?styles.wide:styles.narrow} className='CardContent'
+        <div style = {cardType} className='CardContent'
             dangerouslySetInnerHTML={{__html: this.props.content}}>
         </div>
     );
