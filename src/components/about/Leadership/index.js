@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ProfileCard from '../../shared/ProfileCard'
 
-class Leader extends Component {
+class Leadership extends Component {
   render() {
     return (
         <ProfileCard/>
@@ -10,4 +10,4 @@ class Leader extends Component {
   }
 }
 
-export default Leader;
+export default Leadership;

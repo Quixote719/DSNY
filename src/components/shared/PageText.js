@@ -10,7 +10,5 @@ class PageText extends Component {
   };
 };
 
-// LargeContentCard.propTypes = {
-// };
 
 export default PageText;

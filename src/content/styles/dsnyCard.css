@@ -43,6 +43,7 @@
 }
 
 .CardTitle{
+  margin: 7px 0;
   padding: 25px 15px;
 	color: #00764E;
   background-color: #FFFFFF;
@@ -58,23 +59,35 @@
 }
 
 .CardContent{
+  margin: 7px 0;
   padding: 15px;
 	color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color : #FFFFFF;
   font-size: 16px;
+}
+
+.TitleContentCard{
+  margin: 7px 0;
 }
 
 @media only screen and (max-width: 940px) {
   .CardTitleBox .CardTitle{
     width: 100%!important;
   }
-  .CardTitle, .CardTitleBox, .TitleContentCard{
-    width: 48%!important;
+  .TitleContentCard .CardTitle{
+    width: 100%!important;
   }
-  .FoundationSp{
-    display: none;
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 49%!important;
   }
   .CardContent{
     width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 100%!important;
   }
 }
