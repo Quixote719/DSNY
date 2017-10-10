@@ -47,7 +47,7 @@ class About extends Component {
       if(About != undefined){
         BannerText = {
                       title: About.header,
-                      content: About.content
+                      content: About.header_content
                      };
         About.sections.sections.map((item)=>{
             switch (item.name){
