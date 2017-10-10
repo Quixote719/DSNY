@@ -74,11 +74,11 @@ class About extends Component {
                 console.log(StrategicPlanProps);
                 break;
               }
-              case 'foundation':{
+              case 'about-foundation':{
                 FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
                 FoundationCards = item.cards;
-                console.log('cards');
+                console.log('FoundationCards');
                 console.log(FoundationCards);
                 break;
               }
@@ -90,7 +90,7 @@ class About extends Component {
                 console.log(LocationProps.image);
                 break;
               }
-              case 'about-operations':{
+              case 'about-going-green':{
                 OperationProps.title = item.header;
                 OperationProps.content = item.content;
                 OperationCards = item.cards;
