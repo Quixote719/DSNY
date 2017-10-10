@@ -18,6 +18,7 @@ import StrategicPlan from './components/about/StrategicPlan';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
+import DSNYEvents from './components/home/Events/event_list_by_borough'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -49,6 +50,7 @@ ReactDOM.render(
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
+            <Route path="/DSNYEvents" component={DSNYEvents}/>
           </Switch>
         </div>
       </div>

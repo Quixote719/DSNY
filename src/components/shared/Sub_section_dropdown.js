@@ -22,7 +22,7 @@ class SubSectionDropdown extends Component {
         <div className='SubSectionDropdown'>
           <DropdownButton className='dropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
             {this.props.selectedOption}
-          </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-chevron-down chevron-down-font-awesome"></i> < /div> < /div >} noCaret id="dropdown-no-caret">
+          </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-chevron-down chevron-down-font-awesome"></i></div></div>} noCaret id="dropdown-no-caret">
             <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2017">2017</MenuItem>
             <MenuItem className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey="2016">2016</MenuItem>
           </DropdownButton>

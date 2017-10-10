@@ -32,7 +32,8 @@ class Event extends Component {
 
   ViewAllButton(l) {
     if (l >= 4) {
-      return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
+      // return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
+      return (<Link to="/DSNYEvents"><SubSectionButton title='MORE EVENTS'/></Link>);
     } else {
       return null;
     }
