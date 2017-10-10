@@ -12,7 +12,7 @@ class FoundationSection extends Component {
   ListCards(cards){
     return cards.map((item, i)=>{
       return (
-        <div className='CardTitleBox'>
+        <div className='CardTitleBox' key={i}>
           <TitleCard type='2' title={item.title}/>
           <div className='FoundationSp'></div>
         </div>

@@ -13,7 +13,7 @@ class OperationsSection extends Component {
   ListCards(cards){
     return cards.map((item, i)=>{
       return (
-          <TitleContentCard type='1' title={item.title} content={item.content}/>
+          <TitleContentCard key={i} type='1' title={item.title} content={item.content}/>
       )
     })
   }

@@ -49,7 +49,7 @@ class About extends Component {
                       title: About.header,
                       content: About.header_content
                      };
-        About.sections.sections.map((item)=>{
+        About.sections.sections.map((item,i)=>{
             switch (item.name){
               case 'about-top':{
                 PageExplanation = item.content;

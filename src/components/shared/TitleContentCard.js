@@ -8,15 +8,15 @@ class TitleContentCard extends Component {
     const styles={
       narrow:{
         'width': '220px',
-        'background-color':'#FFFFFF',
+        'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '200px'
+        'height': '200px'
       },
       wide:{
         'width': '303px',
-        'background-color':'#FFFFFF',
+        'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '200px'
+        'height': '200px'
       }
     }
     let CardType = styles.narrow;
