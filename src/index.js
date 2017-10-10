@@ -13,6 +13,8 @@ import appstyles from './content/styles/application.css';
 import Home from './components/home';
 import About from './components/about';
 import Leadership from './components/about/Leadership';
+import Bureaus from './components/about/Bureaus';
+import StrategicPlan from './components/about/StrategicPlan';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
@@ -42,6 +44,8 @@ ReactDOM.render(
             <Route path="/home" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/about/Leadership" component={Leadership}/>
+            <Route exact path="/about/Bureaus" component={Bureaus}/>
+            <Route exact path="/about/StrategicPlan" component={StrategicPlan}/>
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
