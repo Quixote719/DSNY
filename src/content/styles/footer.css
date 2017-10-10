@@ -58,18 +58,18 @@
     cursor: pointer;
 }
 
-.fa{
+#Footer .fa{
     margin: 0 2%;
     color: #FFFFFF;
     font-size: 21px!important;
     cursor: pointer;
 }
 
-.fa-apple,.fa-android{
+#Footer .fa-apple,#Footer .fa-android{
     float: right;
 }
 
-.fa:hover{
+#Footer .fa:hover{
   color: #B8E986;
 }
 
