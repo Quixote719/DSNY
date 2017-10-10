@@ -123,6 +123,10 @@
   cursor: pointer;
 }
 
+.newsMobileSection .newsSectioncardTI .newscardTitleText {
+  margin-top: 0px;
+}
+
 .newsMobileSection .newsSectioncardTI .newscardDescription{
   font-size: 16px;
   color: #333333;
@@ -139,6 +143,7 @@
     }
 }
 
+/* For Phone Portrait Mode */
 @media (max-width: 667px) and (orientation:portrait) {
     .newsMobileSection.col-xs-5 {
          width: 100%
