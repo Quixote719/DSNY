@@ -10,11 +10,9 @@ import styles from '../../content/styles/dsnyCard.css';
 class BureausSection extends Component {
 
   renderPosts(cards = []) {
-    console.log('rendercards');
-    console.log(cards);
-      return cards.map(function(item,i){
+    return _.map(cards, item => {
         return (
-              <TitleCard title={item.title} type='2' key={i}/>
+              <TitleCard title={item.title} type='2' key={item.id} />
         );
       })
   }
@@ -27,9 +25,9 @@ class BureausSection extends Component {
     return (
       <div>
         <div>
-          <SubSectionHeader title='Bureaus'/>
+          <SubSectionHeader title={this.props.BureausProps.title}/>
           <div className="BureausCards">
-            {this.renderPosts(this.props.cards)}
+            {this.renderPosts(this.props.BureausProps.cards)}
           </div>
           {this.ViewAllButton()}
         </div>

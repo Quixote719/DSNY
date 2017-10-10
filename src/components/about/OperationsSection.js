@@ -5,15 +5,16 @@ import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 import ContentCard from '../shared/ContentCard'
 import TitleContentCard from '../shared/TitleContentCard'
+import _ from "lodash";
 import '../../content/styles/card.css';
 
 
 class OperationsSection extends Component {
 
   ListCards(cards){
-    return cards.map((item, i)=>{
+    return _.map(cards, item => {
       return (
-          <TitleContentCard key={i} type='1' title={item.title} content={item.content}/>
+          <TitleContentCard key={item.id} type='1' title={item.title} content={item.content}/>
       )
     })
   }
@@ -26,7 +27,7 @@ class OperationsSection extends Component {
           <div className = "SmallLeftSec">
             <ContentCard content = {this.props.OperationProps.content} type = '2'/>
           </div>
-            {this.ListCards(this.props.OperationCards)}
+            {this.ListCards(this.props.OperationProps.cards)}
         </div>
       </div>
     )

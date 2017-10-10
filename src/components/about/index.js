@@ -28,89 +28,33 @@ class About extends Component {
     this.props.About();
   }
 
+
   render() {
 
       let About = {};
       let BannerText = {};
       let PageExplanation = {};
       let LeadershipProps = {};
-      let BureausTitle = '';
-      let BureausCards = [];
+      let BureausProps = {};
       let StrategicPlanProps = {};
       let FoundationProps = {};
-      let FoundationCards = [];
       let LocationProps = {};
-      let LocationCards = [];
       let OperationProps = {};
-      let OperationCards = [];
 
 
-    if(this.props.AboutData!=undefined){
-            About = this.props.AboutData.data;
-    }
-
-      BannerText = {
-                    title: About.header,
-                    content: About.header_content
-                   };
-    if(this.props.AboutData!=undefined){
-        _.map(this.props.AboutData.data.sections.sections, item =>{
-            switch (item.name){
-              case 'about-top':{
-                PageExplanation = item.content;
-                break;
-              }
-              case 'about-leadership':{
-                LeadershipProps.title = item.header;
-                LeadershipProps.content = item.content;
-                LeadershipProps.ProfileUrl = item.image.file;
-                break;
-              }
-              case 'about-bureaus':{
-                BureausTitle = item.header;
-                BureausCards = item.cards.slice(0, 6);
-                break;
-              }
-              case 'about-strategic-plan':{
-                StrategicPlanProps = {title: item.header, content: item.content};
-                break;
-              }
-              case 'about-foundation':{
-                FoundationProps.title = item.header;
-                FoundationProps.content = item.content;
-                FoundationCards = item.cards;
-                console.log('FoundationCards');
-                console.log(FoundationCards);
-                break;
-              }
-              case 'about-locations':{
-                LocationProps.image = item.image.file;
-                LocationProps.content = item.content;
-                LocationCards = item.cards;
-                break;
-              }
-              case 'about-going-green':{
-                OperationProps.title = item.header;
-                OperationProps.content = item.content;
-                OperationCards = item.cards;
-                break;
-              }
-            }
-        });
-    }
-
-
+    this.parseAboutData(About, BannerText, PageExplanation, LeadershipProps, BureausProps, StrategicPlanProps,
+     FoundationProps, LocationProps, OperationProps);
 
       return (
         <div>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
-            <PageText content = {PageExplanation} />
+            <PageText PageExplanation = {PageExplanation} />
             <LeadershipSection title = 'Leadership' LeadershipProps = {LeadershipProps}/>
           </div>
           <div className = 'greyBcg'>
             <div className = 'SContainer'>
-              <BureausSection cards = {BureausCards}/>
+              <BureausSection BureausProps = {BureausProps}/>
             </div>
           </div>
           <div className = 'SContainer'>
@@ -118,17 +62,72 @@ class About extends Component {
           </div>
           <div className = 'greyBcg boxPaddingBtm'>
             <div className = 'SContainer'>
-             <FoundationSection FoundationProps={FoundationProps} FoundationCards={FoundationCards}/>
+             <FoundationSection FoundationProps={FoundationProps}/>
             </div>
           </div>
-            <LocationsSection LocationProps = {LocationProps} LocationCards = {LocationCards}/>
+            <LocationsSection LocationProps = {LocationProps}/>
           <div className = 'greyBcg boxPaddingBtm'>
             <div className = 'SContainer'>
-              <OperationsSection OperationProps = {OperationProps} OperationCards={OperationCards}/>
+              <OperationsSection OperationProps = {OperationProps}/>
             </div>
           </div>
         </div>
       )
+    }
+
+    parseAboutData(About, BannerText, PageExplanation, LeadershipProps, BureausProps, StrategicPlanProps,
+     FoundationProps, LocationProps, OperationProps){
+      if(this.props.AboutData!=undefined){
+              About = this.props.AboutData.data;
+      }
+
+        BannerText.title = About.header;
+        BannerText.content = About.header_content;
+
+      if(this.props.AboutData!=undefined){
+          _.map(this.props.AboutData.data.sections.sections, item =>{
+              switch (item.name){
+                case 'about-top':{
+                  PageExplanation.content = item.content;
+                  break;
+                }
+                case 'about-leadership':{
+                  LeadershipProps.title = item.header;
+                  LeadershipProps.content = item.content;
+                  LeadershipProps.ProfileUrl = item.image.file;
+                  break;
+                }
+                case 'about-bureaus':{
+                  BureausProps.title = item.header;
+                  BureausProps.cards = item.cards.slice(0, 6);
+                  break;
+                }
+                case 'about-strategic-plan':{
+                  StrategicPlanProps.title = item.header;
+                  StrategicPlanProps.content = item.content;
+                  break;
+                }
+                case 'about-foundation':{
+                  FoundationProps.title = item.header;
+                  FoundationProps.content = item.content;
+                  FoundationProps.cards = item.cards;
+                  break;
+                }
+                case 'about-locations':{
+                  LocationProps.image = item.image.file;
+                  LocationProps.content = item.content;
+                  break;
+                }
+                case 'about-going-green':{
+                  OperationProps.title = item.header;
+                  OperationProps.content = item.content;
+                  OperationProps.cards = item.cards;
+
+                  break;
+                }
+              }
+          });
+      }
     }
 }
 
