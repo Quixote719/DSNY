@@ -7,9 +7,9 @@ class TitleBanner extends Component {
   render() {
 
     return (
-      <div className="SmallBanner">
-        <div className="GTexture">
-          <div className="GBannerPath"></div>
+      <div className="TitleBanner">
+        <div className="SGTexture">
+          <div className="GBannerPath">{this.props.path}</div>
           <div className="GBannerTitle">Strategic Plan</div>
         </div>
       </div>

@@ -2,8 +2,17 @@
     background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
 }
 
+.TitleBanner{
+    background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
+}
+
 .GTexture {
     height: 215px;
+    background: url('../images/Darkgreen.png');
+}
+
+.SGTexture {
+    height: 126px;
     background: url('../images/Darkgreen.png');
 }
 
