@@ -91,18 +91,32 @@ class NewsListItem extends Component {
                             {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
                             <div className='newscardTitleText'>{this.props.title}</div>
                         </div>
-                        <div className='newscardDescription'>
-                            {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
-                            <Dotdotdot clamp={3}>
-                                <div className='newscardDescriptionText'>{this.props.description}</div>
-                            </Dotdotdot>
-                        </div>
+                       {this.getDescription(this.props.description)}
                         </div>
                     </Col>
                 </div>
             );
         }
  
+    }
+
+    getDescription(descriptionText)
+    {
+        if(descriptionText.length > 0)
+        {
+            return(
+                <div className='newscardDescription'>
+                    {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
+                    <Dotdotdot clamp={3}>
+                        <div className='newscardDescriptionText'>{this.props.description}</div>
+                    </Dotdotdot>
+                </div>
+            );
+        }
+        else
+            return (
+                null
+            );
     }
 
 }

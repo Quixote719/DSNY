@@ -111,6 +111,24 @@
   cursor: pointer;
 }
 
+/* Mobile & Table Styles */
+
+.newsMobileSection .newsSectioncardTI {
+  min-height: 122px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+ /* border: 1px solid #7CC04B;*/
+  margin-right: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.newsMobileSection .newsSectioncardTI .newscardDescription{
+  font-size: 16px;
+  color: #333333;
+  margin-top: 10px;
+}
+
 @media (max-width: 992px) {
     .newsMobileSection {
         display: block;
@@ -129,22 +147,32 @@
     .newsMobileSection.col-xs-7 {
          width: 100%
     }
+
+    .newsMobileSection .newsSectioncardTI {
+        min-height: auto;
+        min-width: auto;
+        width: 100%;
+        background-color: #FFFFFF;
+        /* border: 1px solid #7CC04B;*/
+        margin-right: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .newscardImage
+    {
+        height: 162px;
+    }
+
+    .newsMobileSection .newsSectioncardTI .newscardTitleText{
+        margin-top: 20px;
+    }
+
+    .newsMobileSection .newsSectioncardTI .newscardDescription{
+        font-size: 16px;
+        color: #333333;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
 }
 
-/* Mobile & Table Styles */
-
-.newsMobileSection .newsSectioncardTI {
-  min-height: 122px;
-  min-width: 220px;
-  background-color: #FFFFFF;
- /* border: 1px solid #7CC04B;*/
-  margin-right: 20px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.newsMobileSection .newsSectioncardTI .newscardDescription{
-  font-size: 16px;
-  color: #333333;
-  margin-top: 10px;
-}
