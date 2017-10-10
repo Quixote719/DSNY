@@ -5,6 +5,7 @@ import ColorCard from '../../shared/ColorCard'
 
 class Leadership extends Component {
   render() {
+    console.log(this.props.location.pathname);
     return (
       <div>
               <ProfileCard/>
