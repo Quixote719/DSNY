@@ -15,6 +15,7 @@ import BureausSection from './BureausSection';
 import FoundationSection from './FoundationSection';
 import ContentCard from '../shared/ContentCard';
 import TitleContentCard from '../shared/TitleContentCard';
+import _ from "lodash";
 import '../../content/styles/About.css';
 import { connect } from 'react-redux';
 
@@ -25,11 +26,11 @@ class About extends Component {
   }
   componentWillMount() {
     this.props.About();
-    this.props.AboutSections();
   }
+
   render() {
-      let AboutSections = this.props.AboutSectionsData.data;
-      let About = this.props.AboutData.data;
+
+      let About = {};
       let BannerText = {};
       let PageExplanation = {};
       let LeadershipProps = {};
@@ -44,17 +45,19 @@ class About extends Component {
       let OperationCards = [];
 
 
-      if(About != undefined){
-        BannerText = {
-                      title: About.header,
-                      content: About.header_content
-                     };
-        About.sections.sections.map((item,i)=>{
+    if(this.props.AboutData!=undefined){
+            About = this.props.AboutData.data;
+    }
+
+      BannerText = {
+                    title: About.header,
+                    content: About.header_content
+                   };
+    if(this.props.AboutData!=undefined){
+        _.map(this.props.AboutData.data.sections.sections, item =>{
             switch (item.name){
               case 'about-top':{
                 PageExplanation = item.content;
-                console.log('PageExplanation');
-                console.log(PageExplanation);
                 break;
               }
               case 'about-leadership':{
@@ -70,8 +73,6 @@ class About extends Component {
               }
               case 'about-strategic-plan':{
                 StrategicPlanProps = {title: item.header, content: item.content};
-                console.log('StrategicPlanProps');
-                console.log(StrategicPlanProps);
                 break;
               }
               case 'about-foundation':{
@@ -86,21 +87,18 @@ class About extends Component {
                 LocationProps.image = item.image.file;
                 LocationProps.content = item.content;
                 LocationCards = item.cards;
-                console.log('image');
-                console.log(LocationProps.image);
                 break;
               }
               case 'about-going-green':{
                 OperationProps.title = item.header;
                 OperationProps.content = item.content;
                 OperationCards = item.cards;
-                console.log('operations');
-                console.log(LocationProps);
                 break;
               }
             }
         });
-      }
+    }
+
 
 
       return (
@@ -136,14 +134,12 @@ class About extends Component {
 
 function mapStateToProps(state) {
   return {
-    AboutData: state.AboutDataReducer.About.AboutData,
-    AboutSectionsData: state.AboutDataReducer.About.AboutSectionsData
+    AboutData: state.AboutDataReducer.AboutData,
   }
 }
 
 let actionList = {
   About: actions.About,
-  AboutSections: actions.AboutSections
 };
 
 About = connect(mapStateToProps, actionList)(About);
