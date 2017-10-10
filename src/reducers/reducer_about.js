@@ -1,13 +1,9 @@
 import initStore from './store';
 
-export default function AboutDataReducer(state = initStore, action) {
+export default function AboutDataReducer(state = {}, action) {
   switch (action.type) {
     case 'SET_ABOUT':
-      return { ...state, About: {...state.About, AboutData: action.payload}};
-    case 'SET_ABOUT_SECTIONS':
-      return { ...state, About: {...state.About, AboutSectionsData: action.payload}};
-    case 'SET_ABOUT_BUREAUS_DP':
-      return { ...state, About: {...state.About, BureausDpBigData: action.payload}};
+      return { ...state, AboutData: action.payload};
     default:
       return state;
   }

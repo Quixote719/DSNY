@@ -25,11 +25,64 @@ class About extends Component {
   }
   componentWillMount() {
     this.props.About();
-    this.props.AboutSections();
+  }
+  test(About, BannerText, PageExplanation, LeadershipProps, BureausTitle, BureausCards, StrategicPlanProps,
+   FoundationProps, FoundationCards, LocationProps, LocationCards, OperationProps, OperationCards){
+     if(this.props.AboutData!=undefined){
+             About = this.props.AboutData.data;
+     }
+
+       BannerText = {
+                     title: About.header,
+                     content: About.header_content
+                    };
+       if(About.sections!=undefined){
+         About.sections.sections.map((item,i)=>{
+             switch (item.name){
+               case 'about-top':{
+                 PageExplanation = item.content;
+                 break;
+               }
+               case 'about-leadership':{
+                 LeadershipProps.title = item.header;
+                 LeadershipProps.content = item.content;
+                 LeadershipProps.ProfileUrl = item.image.file;
+                 break;
+               }
+               case 'about-bureaus':{
+                 BureausTitle = item.header;
+                 BureausCards = item.cards.slice(0, 6);
+                 break;
+               }
+               case 'about-strategic-plan':{
+                 StrategicPlanProps = {title: item.header, content: item.content};
+                 break;
+               }
+               case 'foundation':{
+                 FoundationProps.title = item.header;
+                 FoundationProps.content = item.content;
+                 FoundationCards = item.cards;
+                 break;
+               }
+               case 'about-locations':{
+                 LocationProps.image = item.image.file;
+                 LocationProps.content = item.content;
+                 LocationCards = item.cards;
+                 break;
+               }
+               case 'about-operations':{
+                 OperationProps.title = item.header;
+                 OperationProps.content = item.content;
+                 OperationCards = item.cards;
+                 break;
+               }
+             }
+         });
+       }
   }
   render() {
-      let AboutSections = this.props.AboutSectionsData.data;
-      let About = this.props.AboutData.data;
+
+      let About = {};
       let BannerText = {};
       let PageExplanation = {};
       let LeadershipProps = {};
@@ -42,19 +95,22 @@ class About extends Component {
       let LocationCards = [];
       let OperationProps = {};
       let OperationCards = [];
+      // this.test(About, BannerText, PageExplanation, LeadershipProps, BureausTitle, BureausCards, StrategicPlanProps,
+      //  FoundationProps, FoundationCards, LocationProps, LocationCards, OperationProps, OperationCards);
 
+    if(this.props.AboutData!=undefined){
+            About = this.props.AboutData.data;
+    }
 
-      if(About != undefined){
-        BannerText = {
-                      title: About.header,
-                      content: About.header_content
-                     };
+      BannerText = {
+                    title: About.header,
+                    content: About.header_content
+                   };
+      if(About.sections!=undefined){
         About.sections.sections.map((item,i)=>{
             switch (item.name){
               case 'about-top':{
                 PageExplanation = item.content;
-                console.log('PageExplanation');
-                console.log(PageExplanation);
                 break;
               }
               case 'about-leadership':{
@@ -70,37 +126,30 @@ class About extends Component {
               }
               case 'about-strategic-plan':{
                 StrategicPlanProps = {title: item.header, content: item.content};
-                console.log('StrategicPlanProps');
-                console.log(StrategicPlanProps);
                 break;
               }
               case 'foundation':{
                 FoundationProps.title = item.header;
                 FoundationProps.content = item.content;
                 FoundationCards = item.cards;
-                console.log('cards');
-                console.log(FoundationCards);
                 break;
               }
               case 'about-locations':{
                 LocationProps.image = item.image.file;
                 LocationProps.content = item.content;
                 LocationCards = item.cards;
-                console.log('image');
-                console.log(LocationProps.image);
                 break;
               }
               case 'about-operations':{
                 OperationProps.title = item.header;
                 OperationProps.content = item.content;
                 OperationCards = item.cards;
-                console.log('operations');
-                console.log(LocationProps);
                 break;
               }
             }
         });
       }
+
 
 
       return (
@@ -136,14 +185,12 @@ class About extends Component {
 
 function mapStateToProps(state) {
   return {
-    AboutData: state.AboutDataReducer.About.AboutData,
-    AboutSectionsData: state.AboutDataReducer.About.AboutSectionsData
+    AboutData: state.AboutDataReducer.AboutData,
   }
 }
 
 let actionList = {
   About: actions.About,
-  AboutSections: actions.AboutSections
 };
 
 About = connect(mapStateToProps, actionList)(About);
