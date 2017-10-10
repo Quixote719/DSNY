@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../../content/styles/eventListItem.css';
 import moment from 'moment';
+import Dotdotdot from 'react-dotdotdot'
 
 class EventListItem extends Component {
 
@@ -27,7 +28,9 @@ class EventListItem extends Component {
                 {this.props.title}
               </Link>
             </div>
-            <div className='eventDescription'>{this.props.description}</div>
+            <Dotdotdot clamp={2}>
+              <div className='eventDescription'>{this.props.description}</div>
+            </Dotdotdot>
           </Col>
           
         </Row>
