@@ -17,7 +17,8 @@ class EventListItem extends Component {
             <div id="eventsTextureSquare">
                 <div id="innersquare">
                     <div className='eventBoro'>{this.props.boro.toUpperCase().substr(0,2)}</div>
-                    <div className='eventDate'>{moment(this.props.date).format('MM.D')}</div>
+                    {/*Date Formats such as 02-09 will be displayed as 2.9 using the format and replace function below */}
+                    <div className='eventDate'>{moment(this.props.date).format('MM.D').replace(/(^|-)0+/g, "$1")}</div>
                 </div>
             </div>
             {/*<div className='listItemTag'>Press Release #{this.props.prid}</div>*/}
