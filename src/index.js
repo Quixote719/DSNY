@@ -9,6 +9,7 @@ import reducers from './reducers';
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import appstyles from './content/styles/application.css';
+import ScrollToTop from './scrollToTop';
 
 import Home from './components/home';
 import About from './components/about';
@@ -22,6 +23,7 @@ import DSNYEvents from './components/home/Events/event_list_by_borough'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
+import Howtogetridof from './components/home/howtogetridof';
 
 /*import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
@@ -36,6 +38,7 @@ const middleware = applyMiddleware(promise, thunk, logger);
 ReactDOM.render(
   <Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
+    <ScrollToTop>
     <div>
       <div id="headerContent" className="headerContent">
         <Header/>
@@ -50,6 +53,7 @@ ReactDOM.render(
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
+            <Route path="/howtogetridof/:keyword" component={Howtogetridof}/>
             <Route path="/DSNYEvents" component={DSNYEvents}/>
           </Switch>
         </div>
@@ -59,5 +63,6 @@ ReactDOM.render(
         <NYCFooter/>
       </div>
     </div>
+    </ScrollToTop>
   </BrowserRouter>
 </Provider>, document.getElementById('content'));

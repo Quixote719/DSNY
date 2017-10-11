@@ -1,0 +1,120 @@
+.react-autosuggest__suggestions-container--open{
+    z-index:100;
+    margin-left: 13px;
+    margin-right: 8px;
+}
+.react-autosuggest__suggestions-container--open>ul{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 15px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    padding-left: 0;
+    list-style-type: none;
+}
+.react-autosuggest__suggestions-container--open>ul>li{
+    border-bottom: 1px solid #F0F0F0;    
+}
+.react-autosuggest__suggestions-container--open>ul>li>a{
+    color: black;
+}
+.react-autosuggest__suggestions-container--open>ul>li>a:hover{
+    color: white;
+}
+.react-autosuggest__suggestions-container--open>ul>li:hover{
+    background-color: #7CC04B;
+    color: white;
+}
+.ridOfSuggestions{
+    padding-left: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.GTextureRidOf{
+    height: 126px!important;
+}
+#ridOfSearchResults {
+    position: absolute;
+    top: 30px;
+    right:8px;    
+    color: #7CC04B!important;
+    font-size: 24px;
+}
+#innersquareRidOf{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+#innersquareRidOf>.react-autosuggest__container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 940px;
+}    
+#innersquareRidOf>.react-autosuggest__container>.react-autosuggest__suggestions-container--open{
+    margin-left: 0px;
+    margin-right: 0px;
+}    
+.exampleRidSearchResults {
+    margin-top: 8px;
+    margin-left: 0px;
+    color: #9B9B9B;
+    font-size: 15px;
+    line-height: 17px;
+}
+.ridOfSearchResults{
+    outline: none;
+    height: 33px;
+    font-weight: 700;
+    color: #000;
+    font-size: 24px;
+    border-top: none;
+    margin-top: 29px;
+    border-bottom: 2px solid #7CC04B;
+    border-left: none;
+    border-right: none;
+    -webkit-text-fill-color: #231F20 !important;
+    width: 940px;
+}
+.searchRowRidOf{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.searchRidOfParent {
+    padding-left: 0px;
+    padding-right: 0;
+    height: 134px;
+}
+#react-autowhatever-1{
+    /* margin-right: 0; */
+}
+.ridOfSearchResultsFirstParentDiv{
+    padding-top: 19px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E3E3E3;
+    border-top: 1px solid #E3E3E3;
+}
+.ridOfSearchResultsParentDiv{
+    padding-top: 19px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E3E3E3;
+}
+.ridOfItemTitle{
+    color: #333333;	
+    font-size: 24px;	
+    font-weight: bold;	
+    line-height: 29px;
+}
+.ridOfItemContent{
+    color: #333333;
+    font-size: 16px;	
+    line-height: 24px;
+}
+.searchContainerRidOfCollection {
+    padding-top: 24px;
+    width: 940px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 100px;
+}

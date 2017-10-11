@@ -5,11 +5,11 @@ import { Navbar, Nav, NavItem, Modal, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
-
+import TextSizeModal from './TextSizeModal';
 class Header extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.state = { showModal: false };
+        this.state = { showModal: false,  textSizePopUp: false };
         this.close = this.close.bind(this);
         this.ReverseAnimate = this.ReverseAnimate.bind(this);
         this.showNavModal = this.showNavModal.bind(this);
@@ -33,10 +33,30 @@ class Header extends React.Component {
     handleClickHeader() {
         this.forceUpdate();
     }
+    textSizeModal() {
+        this.setState({textSizePopUp: !this.state.textSizePopUp});
+    }
     render() {
         var url = window.location.pathname;
         return (
             <div className="HeaderParent">
+                <Modal show={this.state.textSizePopUp} onHide={()=>{this.textSizeModal()}} className="textSizeModalNew" animation = {false}>
+                    <Modal.Header closeButton>
+                    </Modal.Header>
+                    <Modal.Body closeButton>
+                    <p className = "modalTextSizePara">To change the text size on NYC.gov you can use your web browser's settings. Most browsers include functionality to let you increase or decrease the text on a web page. For example, to increase text size using:</p>
+                    <h4 className="modalTextSizeTitle">Chrome</h4>
+                    <p className = "modalTextSizePara">In the menu to the right of the address bar, select and set Zoom level. Menu &gt; Zoom &gt; +</p>
+                    <h4 className="modalTextSizeTitle">Firefox</h4>
+                    <p className = "modalTextSizePara">In the View menu, select Zoom. View &gt; Zoom &gt; Zoom In</p>
+                    <h4 className="modalTextSizeTitle">Internet Explorer</h4>
+                    <p className = "modalTextSizePara">In the View menu, select Text Size. View &gt; Text Size &gt; Largest</p>
+                    <h4 className="modalTextSizeTitle">Safari</h4>
+                    <p className = "modalTextSizePara">In the View menu, select Zoom In. View &gt; Zoom In<br />Macintosh Shortcut: Command+</p>
+                    <h4 className="modalTextSizeTitle">No Web Browser Endorsement</h4>
+                    <p className = "modalTextSizePara">Common browsers are included in this page; mention of a specific browser does not imply endorsement or recommendation.</p>
+                    </Modal.Body>
+                </Modal>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
                         <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
@@ -50,7 +70,8 @@ class Header extends React.Component {
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
                         <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
-                        <span className="textSizeHeader">Text Size</span>
+                        <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
+
                         <span className="textSizeTranslate">&#8203;</span>
                         <span aria-hidden="true" className="translateIcon">▼</span>
                         <span className="translateHeader">Translate</span>
@@ -89,7 +110,7 @@ class Header extends React.Component {
                         <i className="fa fa-search searchMessagesInputIcon"></i>
                     </Navbar.Collapse>
                 </Navbar>
-                <Modal show={this.state.showModal} onHide={this.close} id="menu">
+                <Modal show={this.state.showModal} onHide={this.close} id="menu" backdrop={false}>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
                         <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
@@ -101,7 +122,7 @@ class Header extends React.Component {
                     </div>
                 </div>
 
-                    <Modal.Header closeButton>
+                    <Modal.Header closeButton onClick={this.close}>
 
                         <img src={require('../../content/images/DSNY-Web_logo.png')} className="middleHeaderLogoMobile" />
                         <span className="mobileSanitationHeaderText">Sanitation</span>                    </Modal.Header>

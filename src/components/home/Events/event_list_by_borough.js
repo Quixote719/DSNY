@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import {fetchEventSubList} from "../../../actions/actions_homePageCarousel";
+import {fetchEventSubList} from "../../../actions/actions_home";
 import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
 import EventListItem from './event_list_item';

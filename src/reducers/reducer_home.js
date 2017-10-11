@@ -14,7 +14,13 @@ export default function carouselDataReducer(state = {}, action) {
       return { ...state, programListData: action.payload };
     case 'SET_PROGRAM_INITIATIVES':
       return { ...state, programInitiativesData: action.payload };
-    case types.FETCH_EVENT_SUB_LIST:
+    case 'SET_RID_OFF_KEYWORDS':
+      return { ...state, ridOffKeywords: action.payload };
+    case 'SET_RID_OFF_SEARCH_RESULTS':
+      return { ...state, getRidOfSearchResultsData: action.payload };
+    case 'SET_RID_OFF_SEARCH_BOX':
+      return { ...state, getRidOfSearchValue: action.payload };
+      case types.FETCH_EVENT_SUB_LIST:
       return {
         ...state,
         EventsSubList: _.mapKeys(action.payload.data, "$id")
