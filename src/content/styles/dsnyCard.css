@@ -82,7 +82,7 @@
 
 .ColorCardHeader{
   height: 65px;
-  width: 303px;
+  width: 100%;
   padding: 0 20px;
   font-weight: 600;
   line-height: 65px;
@@ -92,7 +92,7 @@
 
 .ColorCardContent{
   height: 155px;
-  width: 303px;
+  width: 100%;
   padding: 40px 20px 0 20px;
   font-weight: 600;
   color: #00764D;

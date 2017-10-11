@@ -3,14 +3,18 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import SubSectionButton from '../../shared/sub_section_button';
 import ColorCard from '../../shared/ColorCard';
-import styles from '../../../content/styles/dsnyCard.css';
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import '../../../content/styles/dsnyCard.css';
+import '../../../content/styles/StrategicPlan.css';
 
 class PlanCardSection extends Component {
 
-  renderPosts(cards = []) {
+  renderCards(cards = []) {
     return _.map(cards, item => {
         return (
+          <Col xs={12} sm={6} md={4}>
               <ColorCard title={item.title} content={item.content} key={item.id} />
+          </Col>
         );
       })
   }
@@ -23,9 +27,9 @@ class PlanCardSection extends Component {
     return (
       <div>
         <div>
-          <div className="BureausCards">
-            {this.renderPosts(this.props.PlanProps.cards)}
-          </div>
+          <Row>
+            {this.renderCards(this.props.PlanProps.cards)}
+          </Row>
           {this.ViewAllButton()}
         </div>
       </div>
