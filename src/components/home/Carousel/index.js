@@ -29,7 +29,7 @@ class CarouselData extends Component {
 
     
     // componentWillMount() {
-    //     this.props.carouselPanelData();
+    //     this.props.carouselPanelDataTemporary();
     // }
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
