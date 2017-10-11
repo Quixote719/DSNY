@@ -3,34 +3,33 @@ import ReactDOM from 'react-dom'
 import RoundProfile from '../shared/RoundProfile'
 import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
-import LargeContentCard from '../shared/LargeContentCard'
+import ContentCard from '../shared/ContentCard'
 import TitleCard from '../shared/TitleCard'
+import _ from "lodash";
 import '../../content/styles/ContentCard.css';
 
-class Foundation extends Component {
+class FoundationSection extends Component {
 
   ListCards(cards){
-    return cards.map((item, i)=>{
+    return _.map(cards, item => {
       return (
-        <div>
-            <TitleCard type='2' title={item.title}/>
-            <br/>
+        <div className='CardTitleBox' key={item.id}>
+          <TitleCard type='2' title={item.title} />
+          <div className='FoundationSp'></div>
         </div>
       )
     })
   }
   render() {
-    console.log('this.props.FoundationCards');
-    console.log(this.props.FoundationCards);
     return (
       <div className="Foundation">
         <SubSectionHeader title = {this.props.FoundationProps.title}/>
         <div>
             <div className='leftSec'>
-              <LargeContentCard type='2' content={this.props.FoundationProps.content}/>
+              <ContentCard type='3' content={this.props.FoundationProps.content}/>
             </div>
             <div className='rightSec'>
-                {this.ListCards(this.props.FoundationCards)}
+                {this.ListCards(this.props.FoundationProps.cards)}
             </div>
         </div>
       </div>
@@ -38,4 +37,4 @@ class Foundation extends Component {
   }
 }
 
-export default Foundation;
+export default FoundationSection;

@@ -11,7 +11,39 @@
   flex-wrap: wrap;
 }
 
+.ProfileCard{
+  width: 220px;
+  height: 317px;
+}
+
+.ImageBox{
+  padding-top: 30px;
+  height: 200px;
+}
+
+.ProfileCardImg{
+  margin: auto;
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+  display: block;
+}
+
+.ProfileCardName{
+  color: #00764D;
+  font-size: 17.5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ProfileCardDuty{
+  color: #333333;
+  font-size: 17.5px;
+  text-align: center;
+}
+
 .CardTitle{
+  margin: 7px 0;
   padding: 25px 15px;
 	color: #00764E;
   background-color: #FFFFFF;
@@ -27,14 +59,64 @@
 }
 
 .CardContent{
+  margin: 7px 0;
   padding: 15px;
 	color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color : #FFFFFF;
   font-size: 16px;
 }
 
+.TitleContentCard{
+  margin: 7px 0;
+}
+
+.TitleContentCard .CardTitle,.TitleContentCard .CardContent{
+    margin: 0;
+}
+
+.ColorCard{
+	height: 220px;
+	width: 303px;
+}
+
+.ColorCardHeader{
+  height: 65px;
+  width: 303px;
+  padding: 0 20px;
+  font-weight: 600;
+  line-height: 65px;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.ColorCardContent{
+  height: 155px;
+  width: 303px;
+  padding: 40px 20px 0 20px;
+  font-weight: 600;
+  color: #00764D;
+  background-color: #FFFFFF;
+  font-size: 17.5px;
+}
+
 @media only screen and (max-width: 940px) {
-  .CardTitle{
-    width: 45%!important;
+  .CardTitleBox .CardTitle{
+    width: 100%!important;
+  }
+  .TitleContentCard .CardTitle{
+    width: 100%!important;
+  }
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 49%!important;
+  }
+  .CardContent{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .CardTitle, .CardTitleBox, .TitleContentCard{
+    width: 100%!important;
   }
 }

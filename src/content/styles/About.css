@@ -6,22 +6,14 @@
   display:inline-block;
   box-sizing: border-box;
 }
-.LeadershipRight{
-  color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
+
 .LeadershipRight a{
   color: #00764E;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
 }
 
-.BureausCards .CardTitle{
-  margin: 7px 0;
-}
 
 .leftSec{
   width: 617px;
@@ -54,7 +46,8 @@
 }
 
 .locations{
-  height: 600px;
+  height: 400px;
+  background-position: 50% 50%;
 }
 
 .location_bcgimage{
@@ -67,4 +60,46 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
+}
+
+.FoundationSp{
+  height: 6px;
+}
+
+@media only screen and (max-width: 1900px) {
+  .locations{
+    background-size: 1900px 900px!important;
+    background-position: 50% 50%!important;
+    overflow: hidden!important;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .LeadershipRight{
+    width: 60%;
+  }
+  .SmallLeftSec{
+    width: 100%;
+    display: block;
+  }
+  .leftSec{
+    width: 100%;
+    display: block;
+  }
+  .rightSec{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .FoundationSp{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .LeadershipRight{
+    margin: 0;
+    width: 100%;
+  }
 }

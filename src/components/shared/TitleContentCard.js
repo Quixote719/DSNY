@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
+import Dotdotdot from 'react-dotdotdot';
 import styles from '../../content/styles/dsnyCard.css';
 
 class TitleContentCard extends Component {
@@ -7,28 +8,31 @@ class TitleContentCard extends Component {
     const styles={
       narrow:{
         'width': '220px',
-        'background-color':'#FFFFFF',
+        'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '90px'
+        'height': '200px'
       },
       wide:{
         'width': '303px',
-        'background-color':'#FFFFFF',
+        'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'min-height': '90px'
+        'height': '200px'
       }
     }
     let CardType = styles.narrow;
     return (
-        <div style={CardType} className='ContentCard'>
+        <div className="TitleContentCard" style={CardType}>
            <div className="CardTitle">{this.props.title}</div>
-           <div className="CardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+           <div className="CardContent" >
+              <Dotdotdot clamp={3}>
+                  <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+              </Dotdotdot>
+           </div>
         </div>
     );
   };
 };
 
-// LargeContentCard.propTypes = {
-// };
+
 
 export default TitleContentCard;

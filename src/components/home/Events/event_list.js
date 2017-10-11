@@ -19,7 +19,7 @@ class Event extends Component {
 
   renderPosts(pr) {
     return _.map(this.firstN(pr, 4), eventItem => {
-      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.Borough} date={eventItem.EventDate} key={eventItem.EventID}/>);
+      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>);
     });
   }
 
@@ -31,8 +31,9 @@ class Event extends Component {
   }
 
   ViewAllButton(l) {
-    if (l > 4) {
-      return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
+    if (l >= 4) {
+      // return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
+      return (<Link to="/DSNYEvents"><SubSectionButton title='MORE EVENTS'/></Link>);
     } else {
       return null;
     }

@@ -3,17 +3,18 @@ import ReactDOM from 'react-dom';
 import RoundProfile from '../shared/RoundProfile';
 import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
-import LargeContentCard from '../shared/LargeContentCard'
+import ContentCard from '../shared/ContentCard'
 import TitleContentCard from '../shared/TitleContentCard'
+import _ from "lodash";
 import '../../content/styles/card.css';
 
 
-class Operations extends Component {
+class OperationsSection extends Component {
 
   ListCards(cards){
-    return cards.map((item, i)=>{
+    return _.map(cards, item => {
       return (
-          <TitleContentCard type='1' title={item.title} content={item.content}/>
+          <TitleContentCard key={item.id} type='1' title={item.title} content={item.content}/>
       )
     })
   }
@@ -21,16 +22,16 @@ class Operations extends Component {
   render() {
     return (
       <div className = "Operations">
-        <SubSectionHeader title = "Operations"/>
+        <SubSectionHeader title = {this.props.OperationProps.title}/>
         <div className = "OperationCards">
           <div className = "SmallLeftSec">
-            <LargeContentCard content = {this.props.OperationProps.content} type = '1'/>
+            <ContentCard content = {this.props.OperationProps.content} type = '2'/>
           </div>
-            {this.ListCards(this.props.OperationCards)}
+            {this.ListCards(this.props.OperationProps.cards)}
         </div>
       </div>
     )
   }
 }
 
-export default Operations;
+export default OperationsSection;

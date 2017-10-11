@@ -9,12 +9,17 @@ import reducers from './reducers';
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import appstyles from './content/styles/application.css';
+import ScrollToTop from './scrollToTop';
 
 import Home from './components/home';
 import About from './components/about';
+import Leadership from './components/about/Leadership';
+import Bureaus from './components/about/Bureaus';
+import StrategicPlan from './components/about/StrategicPlan';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
+import DSNYEvents from './components/home/Events/event_list_by_borough'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -33,6 +38,7 @@ const middleware = applyMiddleware(promise, thunk, logger);
 ReactDOM.render(
   <Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
+    <ScrollToTop>
     <div>
       <div id="headerContent" className="headerContent">
         <Header/>
@@ -40,12 +46,15 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route path="/home" component={Home}/>
-            <Route path="/about" component={About}/>
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/about/Leadership" component={Leadership}/>
+            <Route exact path="/about/Bureaus" component={Bureaus}/>
+            <Route exact path="/about/StrategicPlan" component={StrategicPlan}/>
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
             <Route path="/howtogetridof/:keyword" component={Howtogetridof}/>
-
+            <Route path="/DSNYEvents" component={DSNYEvents}/>
           </Switch>
         </div>
       </div>
@@ -54,5 +63,6 @@ ReactDOM.render(
         <NYCFooter/>
       </div>
     </div>
+    </ScrollToTop>
   </BrowserRouter>
 </Provider>, document.getElementById('content'));

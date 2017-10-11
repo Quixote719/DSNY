@@ -21,4 +21,4 @@ export const FETCH_PRESS_RELEASE_DETAILS_URL = constructWpUrl('wp/v2/press_relea
 export const FETCH_PRESS_RELEASE_LIST_URL = constructWpUrl('wp/v2/press_release?after=:Year-01-01T00:00:49&before=:Year-12-31T00:00:49&orderby=date&order=desc');
 
 
-export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetUpcomingEvents?eventSource=DSNY`;
+export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetAllByBorough?Borough=`;

@@ -8,7 +8,7 @@
     color: #FFFFFF;
 }
 .FooterCol a:hover, .FooterCol span:hover {
-    color: #83BF48;
+    color: #B8E986;
     text-decoration: none;
 }
 
@@ -58,19 +58,19 @@
     cursor: pointer;
 }
 
-.fa{
+#Footer .fa{
     margin: 0 2%;
     color: #FFFFFF;
     font-size: 21px;
     cursor: pointer;
 }
 
-.fa-apple,.fa-android{
+#Footer .fa-apple,#Footer .fa-android{
     float: right;
 }
 
-.fa:hover{
-  color: #83BF48;
+#Footer .fa:hover{
+  color: #B8E986;
 }
 
 .SpLine{
@@ -99,7 +99,7 @@
 }
 
 .NYCfooter-links a:hover{
-    color: #83BF48;
+    color: #B8E986;
 }
 
 .SearchBlock{
@@ -123,7 +123,7 @@
   text-decoration: none;
 }
 .copyright a:hover{
-  color: #83BF48;
+  color: #B8E986;
 }
 
 

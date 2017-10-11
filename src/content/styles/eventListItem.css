@@ -10,6 +10,13 @@
   font-weight: bold;
 }
 
+.eventDescription{
+  margin-top: 14px;
+  font-size: 16px;
+  color: #333333;
+}
+
+
 .eventTitle:hover {
   color: #7CC04B;
 }

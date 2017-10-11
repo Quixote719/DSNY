@@ -3,6 +3,12 @@
   min-height: calc(100vh - 341px);
 }
 
+html body{
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
 .SContainer {
   width: 940px;
   margin: 0 auto;
@@ -13,12 +19,28 @@
   background-color: #F2F2F2;
 }
 
+.boxPadding{
+  padding: 30px 0;
+}
+
+.boxPaddingBtm{
+  padding-bottom: 30px;
+}
+
 .dsnyParagraph{
   margin: 30px auto;
   color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
 }
+
+.whiteTitle{
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 940px) {
   .SContainer {
