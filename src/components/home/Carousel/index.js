@@ -27,9 +27,9 @@ class CarouselData extends Component {
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
             if(item.name == "home-hero-section"){
-                return _.map(item.cards, item =>{
+                return _.map(item.cards, (item,index) =>{
                     return (
-                        <Carousel.Item key={item.heroTitle}>
+                        <Carousel.Item key={index}>
                             <img src={item.image.file} />
                             <div>
                             <Carousel.Caption>

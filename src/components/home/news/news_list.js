@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {fetchEventSubList} from "../../../actions/actions_homePageCarousel";
+import {fetchEventSubList} from "../../../actions/actions_home";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
 import NewsListItem from './news_list_item';

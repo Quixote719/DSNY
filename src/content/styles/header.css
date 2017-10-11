@@ -354,6 +354,9 @@ input.searchMessagesInput:focus {
     font-weight: 700;
     font-size: 14px;
 }
+.middleHeader>a:hover{
+    color: #83BF48;
+}
 .textSizeTranslate{
     float: right;
     padding-top: 34px;

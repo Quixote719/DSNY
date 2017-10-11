@@ -15,6 +15,7 @@ class Home extends Component {
   }
   componentWillMount(){
     this.props.carouselData();    
+    this.props.getRidOffKeywords();    
   }
   render() {
     return (
@@ -22,7 +23,7 @@ class Home extends Component {
         <div className="GBanner">
           <CarouselData carouselItems={this.props.carouselItems}/>
         </div>
-          <SearchCards />
+          <SearchCards ridOffKeywords = {this.props.ridOffKeywords}/>
           <ProgramCards carouselItems={this.props.carouselItems}/>
           <ProgramInitiatives carouselItems={this.props.carouselItems}/>
         <div className="container">
@@ -36,11 +37,13 @@ class Home extends Component {
 function mapStateToProps(state) {
   return {
       carouselItems: state.carouselDataReducer.carouselItems,
+      ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
   }
 }
 
 let actionList = {
   carouselData: actions.carouselData,
+  getRidOffKeywords: actions.getRidOffKeywords,
 };
 
 Home = connect(mapStateToProps, actionList)(Home);

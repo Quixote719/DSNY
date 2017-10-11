@@ -17,7 +17,7 @@ class ProgramCards extends Component {
       if(item.name == "home-services-section"){
         return _.map(item.cards, (item,index) =>{
           return (
-            <div className="programMobileData" key={item.programTitle}>
+            <div className="programMobileData" key={index}>
               <div className="programMobileOuter">
                 <span className="programMobileTitle">
                   {item.title}
@@ -35,9 +35,9 @@ class ProgramCards extends Component {
   programsList() {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
-        return _.map(item.cards, item =>{
+        return _.map(item.cards, (item,index) =>{
           return (
-            <Col className="programData" key={item.programImage}>
+            <Col className="programData" key={index}>
               <Col xs={12} lg={2} id="programCol">
                 <div>
                   <div className="programImageDiv">

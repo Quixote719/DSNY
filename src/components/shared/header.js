@@ -70,7 +70,7 @@ class Header extends React.Component {
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
                         <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
-                        <span className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</span>
+                        <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
 
                         <span className="textSizeTranslate">&#8203;</span>
                         <span aria-hidden="true" className="translateIcon">▼</span>

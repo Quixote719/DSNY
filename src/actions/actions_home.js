@@ -1,15 +1,46 @@
 import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
-
+import * as types from '../constants/ActionTypes';
+import {HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
-        axios.get('http://dsnydev.wpengine.com/wp-json/dsny/v1/getPageData?name=home')
+        axios.get(HOME_PAGE_DATA_URL)
             .then((data) => {
                 console.log(data.data)
                 dispatch({
                     type: 'SET_CAROUSEL_TITLE',
                     payload: data.data.sections.sections,
+                })
+            })
+    }
+}
+
+export function getRidOffKeywords() {
+    return function (dispatch) {
+        axios.get(RID_OF_KEYWORDS_URL)
+            .then((data) => {
+                console.log(data.data)
+                dispatch({
+                    type: 'SET_RID_OFF_KEYWORDS',
+                    payload: data.data.key_words,
+                })
+            })
+    }
+}
+
+export function getRidOfSearchResults(suggestion) {
+    return function (dispatch) {
+        axios.get(RID_OF_SEARCH_RESULTS_URL+"="+suggestion)
+            .then((data) => {
+                console.log(data.data)
+                dispatch({
+                    type: 'SET_RID_OFF_SEARCH_RESULTS',
+                    payload: data.data,
+                })
+                dispatch({
+                    type: 'SET_RID_OFF_SEARCH_BOX',
+                    payload: suggestion,
                 })
             })
     }
@@ -74,4 +105,7 @@ export function carouselPanelDataTemporary() {
     }
 }
 
-
+export function fetchEventSubList() {
+    const request = axios.get(FETCH_EVENTS_SUB_LIST_URL);
+    return {type: types.FETCH_EVENT_SUB_LIST, payload: request};
+}

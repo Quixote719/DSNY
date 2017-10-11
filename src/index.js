@@ -18,6 +18,7 @@ import PressReleaseList from './components/PressReleases/PressReleaseList'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
+import Howtogetridof from './components/home/howtogetridof';
 
 /*import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
@@ -43,6 +44,8 @@ ReactDOM.render(
             <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
             <Route path="/PressReleaseList" component={PressReleaseList}/>
             <Route path="/resources" component={ResourcesContainer}/>
+            <Route path="/howtogetridof/:keyword" component={Howtogetridof}/>
+
           </Switch>
         </div>
       </div>
