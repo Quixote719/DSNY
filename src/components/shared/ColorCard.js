@@ -9,8 +9,8 @@ class ColorCard extends Component {
     }
     return (
       <div className = "ColorCard">
-        <div style={Cardstyle} className = "ColorCardHeader">OPERATIONS</div>
-        <div className = "ColorCardContent">Expand curbside organics collection LOL LOL LOL</div>
+        <div style={Cardstyle} className = "ColorCardHeader">{this.props.title}</div>
+        <div className = "ColorCardContent">{this.props.content}</div>
       </div>
     )
   }

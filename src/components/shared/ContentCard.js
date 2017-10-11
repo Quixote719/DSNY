@@ -37,9 +37,7 @@ class ContentCard extends Component {
 
     return (
         <div style = {cardType} className='CardContent'>
-          <Dotdotdot clamp={8}>
             <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
-          </Dotdotdot>
         </div>
     );
   };
