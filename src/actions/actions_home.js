@@ -50,22 +50,22 @@ export function carouselPanelData() {
         var date = new Date();
         var month = ("0" + (date.getUTCMonth() + 1)).slice(-2);
         var day = ("0" + date.getUTCDate()).slice(-2);
-        var year = date.getUTCFullYear();
-        var currentDate = month.toString() + day.toString() + year.toString();
+        var year = date.getUTCFullYear().toString();
+        var currentDate = parseInt(month + day + year);
         console.log(currentDate)
         axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate)
             .then((data) => {
                 console.log('Call going through')
                 let carouselPanelItems = [];
-                data.data.map((item) => {
+                data.data.items.map((item) => {
                     let temp = {};
                     if (item.type == 'Parking') {
                         temp['panelItemType'] = 'Alternate Side Parking';
                     } else {
-                        temp['panelItemType'] = item.items.type;
+                        temp['panelItemType'] = item.type;
                     }
-                    temp['panelItemIcon'] = 'http://www1.nyc.gov' + item.items.icon;
-                    temp['panelItemStatus'] = item.items.status;
+                    temp['panelItemIcon'] = 'http://www1.nyc.gov' + item.icon;
+                    temp['panelItemStatus'] = item.status;
                     carouselPanelItems.push(temp);
                     dispatch({
                         type: 'SET_PANEL_ITEMS',

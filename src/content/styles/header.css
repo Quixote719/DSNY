@@ -382,7 +382,7 @@ input.searchMessagesInput:focus {
 .searchMessagesInputIcon{
     position: absolute;
     top: 16px;
-    right: -5px;
+    right: 11px;    
     color: #767676!important;
     font-size: 15px!important
 }

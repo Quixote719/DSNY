@@ -100,8 +100,8 @@ class HowToGetRidOf extends Component {
                                     className: "ridOfSearchResults",
                                     placeholder: "How to get rid of ..."
                                 }}/>
-                                <i className="fa fa-search collectionSearch" id="ridOfSearch"></i>
-                                <div className={this.state.suggestions != ""?"noexampleRidSearch":"exampleRidSearch"}> Example: battery, mattress, TVs </div>
+                                <i className="fa fa-search collectionSearch" id="ridOfSearchResults"></i>
+                                <div className={this.state.suggestions != ""?"noexampleRidSearchResults":"exampleRidSearchResults"}> Example: battery, mattress, TVs </div>
 
                                 {/* <div className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div> */}
                             </div>

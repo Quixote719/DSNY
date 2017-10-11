@@ -8,6 +8,7 @@ import styles from '../../../content/styles/home.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
+import {Link} from "react-router-dom";
 
 class CarouselData extends Component {
     constructor(props, context) {
@@ -24,6 +25,12 @@ class CarouselData extends Component {
         this.forceUpdate();
         this.props.carouselPanelDataTemporary();
     }
+    //If depolying uncomment the below and comment the above
+
+    
+    // componentWillMount() {
+    //     this.props.carouselPanelData();
+    // }
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
             if(item.name == "home-hero-section"){
@@ -82,7 +89,7 @@ class CarouselData extends Component {
                             {this.carouselPanelDataItemList()}
                         </li>
                         <li>
-                            <button className="panelButton">More</button>
+                            <Link to = "http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></Link>
                         </li>
                     </ul>
                     <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
@@ -105,8 +112,22 @@ function mapStateToProps(state) {
 }
 
 let actionList = {
+    carouselPanelData: actions.carouselPanelData,    
     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
 };
+
+//If depolying uncomment the below and comment the above
+
+
+// function mapStateToProps(state) {
+//     return {
+//         carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
+//     }
+// }
+
+// let actionList = {
+//     carouselPanelDataTemporary: actions.carouselPanelData,
+// };
 
 CarouselData = connect(mapStateToProps, actionList)(CarouselData);
 
