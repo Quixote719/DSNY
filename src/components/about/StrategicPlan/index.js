@@ -52,7 +52,7 @@ class StrategicPlan extends Component {
               <div className = 'SContainer'>
                 <PageText PageExplanation = {PageExplanation} />
               </div>
-              <div className = 'greyBcg'>
+              <div className = 'greyBcg' >
                 <div className = 'SContainer'>
                   <PlanCardSection PlanProps = {PlanProps}/>
                 </div>

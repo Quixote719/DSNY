@@ -27,7 +27,7 @@ class PlanCardSection extends Component {
     return (
       <div>
         <div>
-          <Row>
+          <Row className='topSpace'>
             {this.renderCards(this.props.PlanProps.cards)}
           </Row>
           {this.ViewAllButton()}
