@@ -5,7 +5,21 @@
     margin-left: 0;
     margin-right: 0;
 }
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+@media (min-width: 992px){
+  .col-md-4{
+      padding: 0;
+  }
+}
+
+
 @media (max-width: 991px){
+
   .ColorCard{
     width:100%;
   }
