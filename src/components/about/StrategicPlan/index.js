@@ -50,7 +50,7 @@ class StrategicPlan extends Component {
     });
   }
     return (
-      <div>
+      <div className="StrategicPlanPage">
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
               <div className = 'SContainer'>
