@@ -7,6 +7,7 @@ import PlanCardSection from './PlanCardSection'
 import PageText from '../../shared/PageText'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class StrategicPlan extends Component {
@@ -50,7 +51,11 @@ class StrategicPlan extends Component {
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
               <div className = 'SContainer'>
+              <Row>
+                <Col xs={12} sm={12} md={12}>
                 <PageText PageExplanation = {PageExplanation} />
+                </Col>
+              </Row>
               </div>
               <div className = 'greyBcg' >
                 <div className = 'SContainer'>

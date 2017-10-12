@@ -12,7 +12,7 @@ class PlanCardSection extends Component {
   renderCards(cards = []) {
     return _.map(cards, item => {
         return (
-          <Col xs={12} sm={6} md={4} className='nopadding '>
+          <Col xs={12} sm={6} md={4}>
               <ColorCard title={item.title} content={item.content} key={item.id} />
           </Col>
         );
