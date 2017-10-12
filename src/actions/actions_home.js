@@ -7,7 +7,6 @@ export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
             .then((data) => {
-                console.log(data.data)
                 dispatch({
                     type: 'SET_CAROUSEL_TITLE',
                     payload: data.data.sections.sections,
@@ -20,7 +19,6 @@ export function getRidOffKeywords() {
     return function (dispatch) {
         axios.get(RID_OF_KEYWORDS_URL)
             .then((data) => {
-                console.log(data.data)
                 dispatch({
                     type: 'SET_RID_OFF_KEYWORDS',
                     payload: data.data.key_words,
@@ -33,7 +31,6 @@ export function getRidOfSearchResults(suggestion) {
     return function (dispatch) {
         axios.get(RID_OF_SEARCH_RESULTS_URL+"="+suggestion)
             .then((data) => {
-                console.log(data.data)
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
@@ -52,12 +49,11 @@ export function carouselPanelData() {
         var day = ("0" + date.getUTCDate()).slice(-2);
         var year = date.getUTCFullYear().toString();
         var currentDate = parseInt(month + day + year);
-        console.log(currentDate)
-        axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate)
+        
+        axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate,  { crossdomain: true } )
             .then((data) => {
-                console.log('Call going through')
                 let carouselPanelItems = [];
-                data.data.items.map((item) => {
+                data.data.items[0].items.map((item) => {
                     let temp = {};
                     if (item.type == 'Parking') {
                         temp['panelItemType'] = 'Alternate Side Parking';
@@ -67,11 +63,12 @@ export function carouselPanelData() {
                     temp['panelItemIcon'] = 'http://www1.nyc.gov' + item.icon;
                     temp['panelItemStatus'] = item.status;
                     carouselPanelItems.push(temp);
-                    dispatch({
-                        type: 'SET_PANEL_ITEMS',
-                        payload: carouselPanelItems,
-                    })
                 })
+                dispatch({
+                    type: 'SET_PANEL_ITEMS',
+                    payload: carouselPanelItems,
+                })
+                
 
             })
 

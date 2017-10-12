@@ -21,10 +21,9 @@ class CarouselData extends Component {
             monthCarouselPanel: monthCarouselPanel,
         };
     }
-    componentWillMount() {
-        this.forceUpdate();
-        this.props.carouselPanelDataTemporary();
-    }
+    // componentWillMount() {
+    //     //this.props.carouselPanelData();
+    // }
     //If depolying uncomment the below and comment the above
 
     
@@ -50,8 +49,8 @@ class CarouselData extends Component {
         });
     }
     carouselPanelDataItemList() {
-        return _.map(this.props.carouselPanelItems, items => {
-            return items.map(function (item, index) {
+        return _.map(this.props.carouselPanelItems, (item, index) => {
+            //return items.map(function (item, index) {
                 return (
                     <div className="panelData" key={index}>
                         <div className="border-top"></div>
@@ -60,14 +59,12 @@ class CarouselData extends Component {
                         <div className="statusProgram">{item.panelItemStatus}</div>
                     </div>
                 );
-            })
+            //})
         });
     }
 
     render() {
-        console.log("Panel Values: ")
-        console.log(this.props.carouselPanelItems)
-
+        
         return (
             <div className="carouselContainerParent ">
                 <div className="container carouselContainer">
@@ -89,7 +86,8 @@ class CarouselData extends Component {
                             {this.carouselPanelDataItemList()}
                         </li>
                         <li>
-                            <Link to = "http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></Link>
+                            {/*<Link to = "http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></Link>*/}
+                            <a href="http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></a>
                         </li>
                     </ul>
                     <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
@@ -105,30 +103,30 @@ class CarouselData extends Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {
-        carouselPanelItems: state.carouselDataReducer.carouselPanelItemsTemporary,
-    }
-}
-
-let actionList = {
-    carouselPanelData: actions.carouselPanelData,    
-    carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
-};
-
-//If depolying uncomment the below and comment the above
-
-
 // function mapStateToProps(state) {
 //     return {
-//         carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
+//         carouselPanelItems: state.carouselDataReducer.carouselPanelData,
 //     }
 // }
 
 // let actionList = {
-//     carouselPanelDataTemporary: actions.carouselPanelData,
+//     carouselPanelData: actions.carouselPanelData,    
+//     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
 // };
 
-CarouselData = connect(mapStateToProps, actionList)(CarouselData);
+// //If depolying uncomment the below and comment the above
+
+
+// // function mapStateToProps(state) {
+// //     return {
+// //         carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
+// //     }
+// // }
+
+// // let actionList = {
+// //     carouselPanelDataTemporary: actions.carouselPanelData,
+// // };
+
+// CarouselData = connect(mapStateToProps, actionList)(CarouselData);
 
 export default CarouselData;

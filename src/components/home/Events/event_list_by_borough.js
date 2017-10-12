@@ -11,13 +11,14 @@ import SubSectionDropdown from '../../shared/Sub_section_dropdown'
 
 // Set initial state
 let PressReleaseListstate = {
-  year: 2017,
+  year: 'ALL',
   activePage: 1
 };
 
 class DSNYEvents extends Component {
 
   componentDidMount() {
+    // window.scrollTo(0, 0); 
     const {id} = this.props
     const {year} = this.state
     // this.props.fetchPressReleaseList(year);
