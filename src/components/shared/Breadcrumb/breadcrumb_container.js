@@ -10,8 +10,6 @@ import Breadcrumb from './breadcrumb';
 class Header extends Component {
 
   render() {
-    console.log(this.props.title);
-    console.log(this.props.breadCrumbList);
     return (
       <div className="GBanner">
         <Breadcrumb breadcrumbList={this.props.breadCrumbList}/>

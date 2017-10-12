@@ -8,7 +8,6 @@ import {Breadcrumb} from 'react-bootstrap';
 class BreadcrumbSec extends Component {
 
   renderBreadcrumbSec(breadcrumbList) {
-    debugger;
     return _.map(breadcrumbList, Item => {
       return (
         <Breadcrumb.Item key={Item.page_slug}>

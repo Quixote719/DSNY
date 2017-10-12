@@ -7,15 +7,12 @@ import ReactDOM from 'react-dom';
 class Title extends Component {
 
   render() {
-
     return (
-
       <div className="BreadcrumbHeaderTitleSection">
         <div className='container'>
           {this.props.title}
         </div>
       </div>
-
     )
   }
 }

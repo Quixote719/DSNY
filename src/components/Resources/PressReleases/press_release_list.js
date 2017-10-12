@@ -14,8 +14,6 @@ class PressRelease extends Component {
   }
 
   renderPosts(pr) {
-    console.log('yeshu');
-    console.log(pr);
     return _.map(this.firstN(pr, 4), prItem => {
       return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.title}/>);
     });
