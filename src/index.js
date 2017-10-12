@@ -8,7 +8,7 @@ import promise from 'redux-promise';
 import reducers from './reducers';
 import thunk from "redux-thunk";
 //import logger from "redux-logger";
-//import appstyles from './content/styles/application.css';
+import appstyles from './content/styles/application.css';
 import ScrollToTop from './scrollToTop';
 
 import Home from './components/home';
