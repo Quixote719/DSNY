@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContentCard from '../../shared/ContentCard'
+import ContentCard from './ContentCard'
 
 
 
