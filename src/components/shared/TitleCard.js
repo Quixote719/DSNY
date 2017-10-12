@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
-import styles from '../../content/styles/dsnyCard.css';
+import '../../content/styles/dsnyCard.css';
 
 class TitleCard extends Component {
   render() {
@@ -44,6 +43,9 @@ class TitleCard extends Component {
       }
       case '4':{
         CardType = styles.wide_border;
+        break;
+      }
+      default:{
         break;
       }
     }

@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
 import Dotdotdot from 'react-dotdotdot';
-import styles from '../../content/styles/dsnyCard.css';
+import '../../content/styles/dsnyCard.css';
 
 class TitleContentCard extends Component {
   render() {

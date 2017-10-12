@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class FooterArchive extends Component {
-  constructor(props){
-  	super(props);
-  }
+
 
   getArchive(){
       return (({data})=>(

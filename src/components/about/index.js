@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Banner from '../shared/banner';
-import RoundProfile from '../shared/RoundProfile';
 import * as actions from '../../actions/actions_about';
-import CardTitle from '../shared/Card_title';
-import TitleCard from '../shared/TitleCard';
-import SubSectionHeader from '../shared/sub_section_header';
 import PageText from '../shared/PageText';
 import LeadershipSection from './LeadershipSection';
 import LocationsSection from './LocationsSection';
@@ -13,8 +8,6 @@ import OperationsSection from './OperationsSection';
 import StrategicPlanSection from './StrategicPlanSection';
 import BureausSection from './BureausSection';
 import FoundationSection from './FoundationSection';
-import ContentCard from '../shared/ContentCard';
-import TitleContentCard from '../shared/TitleContentCard';
 import _ from "lodash";
 import '../../content/styles/About.css';
 import { connect } from 'react-redux';
@@ -77,14 +70,14 @@ class About extends Component {
 
     parseAboutData(About, BannerText, PageExplanation, LeadershipProps, BureausProps, StrategicPlanProps,
      FoundationProps, LocationProps, OperationProps){
-      if(this.props.AboutData!=undefined){
+      if(this.props.AboutData !== undefined){
               About = this.props.AboutData.data;
       }
 
         BannerText.title = About.header;
         BannerText.content = About.header_content;
 
-      if(this.props.AboutData!=undefined){
+      if(this.props.AboutData !== undefined){
           _.map(this.props.AboutData.data.sections.sections, item =>{
               switch (item.name){
                 case 'about-top':{
@@ -122,7 +115,9 @@ class About extends Component {
                   OperationProps.title = item.header;
                   OperationProps.content = item.content;
                   OperationProps.cards = item.cards;
-
+                  break;
+                }
+                default:{
                   break;
                 }
               }

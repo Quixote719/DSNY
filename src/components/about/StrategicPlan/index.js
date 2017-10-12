@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import ProfileCard from '../../shared/ProfileCard'
-import ColorCard from '../../shared/ColorCard'
 import ImageSection from './ImageSection'
 import PlanCardSection from './PlanCardSection'
 import PageText from '../../shared/PageText'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 class StrategicPlan extends Component {
@@ -26,22 +23,28 @@ class StrategicPlan extends Component {
     let PlanProps = {};
     console.log('this.props.StrategicPlanData.data');
     console.log(this.props.StrategicPlanData);
-    if(this.props.StrategicPlanData!=undefined){
+    if(this.props.StrategicPlanData !== undefined){
 
       _.map(this.props.StrategicPlanData.data.sections.sections, item =>{
         switch (item.name){
           case 'top-section-2':{
               ImageProps.image = item.image.file;
               ImageProps.content = item.content;
+              break;
           }
           case 'strategic-plan-body-content':{
               PageExplanation.content = item.content;
+              break;
           }
           case 'strategic-plan-cards-section':{
               PlanProps.cards = item.cards;
+              break;
           }
           case 'strategic-plan-bottom-files-section':{
-
+              break;
+          }
+          default:{
+            break;
           }
       }
     });

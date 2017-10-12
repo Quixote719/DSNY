@@ -1,9 +1,8 @@
 import _ from "lodash";
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import SubSectionButton from '../../shared/sub_section_button';
 import ColorCard from '../../shared/ColorCard';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import '../../../content/styles/dsnyCard.css';
 import '../../../content/styles/StrategicPlan.css';
 

@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import RoundProfile from '../shared/RoundProfile';
 import ContentCard from '../shared/ContentCard'
-
-import SubSectionHeaderImage from '../shared/sub_section_header_image';
 
 
 class LocationsSection extends Component {

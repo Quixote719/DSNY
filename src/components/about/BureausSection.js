@@ -1,11 +1,9 @@
 import _ from "lodash";
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import RoundProfile from '../shared/RoundProfile';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
-import styles from '../../content/styles/dsnyCard.css';
+import '../../content/styles/dsnyCard.css';
 
 class BureausSection extends Component {
 

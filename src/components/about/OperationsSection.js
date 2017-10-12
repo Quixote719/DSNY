@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import RoundProfile from '../shared/RoundProfile';
-import CardTitle from '../shared/Card_title'
 import SubSectionHeader from '../shared/sub_section_header'
 import ContentCard from '../shared/ContentCard'
 import TitleContentCard from '../shared/TitleContentCard'

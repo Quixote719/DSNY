@@ -1,6 +1,4 @@
 import React, {Component} from "react";
-import PropTypes from 'prop-types';
-import Dotdotdot from 'react-dotdotdot';
 
 class ContentCard extends Component {
   render() {
@@ -25,13 +23,13 @@ class ContentCard extends Component {
       }
     }
     let cardType = styles.small;
-    if(this.props.type=='1'){
+    if(this.props.type === '1'){
        cardType = styles.small;
     }
-    else if(this.props.type=='2'){
+    else if(this.props.type === '2'){
       cardType = styles.normal;
     }
-    else if(this.props.type=='3'){
+    else if(this.props.type === '3'){
       cardType = styles.large;
     }
 

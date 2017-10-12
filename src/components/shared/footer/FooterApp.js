@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 class FooterApp extends Component {
-  constructor(props){
-  	super(props);
-  }
+
   RedirectTo(link){
     window.location.href = link;
   }
@@ -13,7 +11,7 @@ class FooterApp extends Component {
       return (({data})=>(
                 <div>
                   {data.map((item, i)=>(
-                    
+
                     <div key={i} className="FooterRow">
                       <span onClick={()=>this.RedirectTo(item.link)}>
                           {item.name}
