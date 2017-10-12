@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
 import TextSizeModal from './TextSizeModal';
+
 class Header extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -86,22 +87,22 @@ class Header extends React.Component {
                     <Navbar.Toggle className="navbarToggle" onClick={this.showNavModal} />
                     <Navbar.Collapse id="navBar">
                         <Nav className="mainLinks">
-                            <LinkContainer to="/home" className={url === '/' || url === '/home' ? 'homeLogoHeader selectedParent' : 'homeLogoHeader'} onClick={() => this.handleClickHeader()} >
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} className={url === '/' || url === '/home' ? 'homeLogoHeader selectedParent' : 'homeLogoHeader'} onClick={() => this.handleClickHeader()} >
                                 <NavItem eventKey={1} className="homeLogoHeader">Home</NavItem>
                             </LinkContainer>
-                            <LinkContainer to="/about" className={url === '/about' ? 'aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle selectedParent' : 'aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className={url === '/about' ? 'aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle selectedParent' : 'aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
                             </LinkContainer>
-                            <LinkContainer to="/services" className={url === '/services' ? 'servicesHeaderTitle bottomHeaderTitles selectedParent' : 'servicesHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} className={url === '/services' ? 'servicesHeaderTitle bottomHeaderTitles selectedParent' : 'servicesHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={3} className="bottomHeaderTitles servicesHeaderTitle">Services</NavItem>
                             </LinkContainer>
-                            <LinkContainer to="/resources" className={url === '/resources' ? 'resourcesHeaderTitle bottomHeaderTitles selectedParent' : 'resourcesHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} className={url === '/resources' ? 'resourcesHeaderTitle bottomHeaderTitles selectedParent' : 'resourcesHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={4} className="bottomHeaderTitles resourcesHeaderTitle">Resources</NavItem>
                             </LinkContainer>
-                            <LinkContainer to="/ourWork" className={url === '/ourWork' ? 'ourWorkHeaderTitle bottomHeaderTitles selectedParent' : 'ourWorkHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/ourWork"} className={url === '/ourWork' ? 'ourWorkHeaderTitle bottomHeaderTitles selectedParent' : 'ourWorkHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={5} className="bottomHeaderTitles workHeaderTitle">Our Work</NavItem>
                             </LinkContainer>
-                            <LinkContainer to="/contact" className={url === '/contact' ? 'contactHeaderTitle bottomHeaderTitles selectedParent' : 'contactHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className={url === '/contact' ? 'contactHeaderTitle bottomHeaderTitles selectedParent' : 'contactHeaderTitle bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={6} className="bottomHeaderTitles contactHeaderTitle">Contact</NavItem>
                             </LinkContainer>
                         </Nav>
@@ -134,7 +135,7 @@ class Header extends React.Component {
                         </div>
                         <Nav className="mainLinks" onClick={this.close}>
                             <NavItem eventKey={2} className="bottomHeaderTitles homeHeaderTitles ">Home</NavItem>
-                            <LinkContainer to="/about" className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
+                            <LinkContainer to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
                             </LinkContainer>
                             {/*<LinkContainer to = "/about" className = "servicesHeaderTitle">*/}
