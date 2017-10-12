@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
-import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import promise from 'redux-promise';
-import routes from './routes';
+// import routes from './routes';
 import reducers from './reducers';
 import thunk from "redux-thunk";
-import logger from "redux-logger";
-import appstyles from './content/styles/application.css';
+//import logger from "redux-logger";
+//import appstyles from './content/styles/application.css';
 import ScrollToTop from './scrollToTop';
 
 import Home from './components/home';
@@ -33,7 +33,7 @@ import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
 */
 
-const middleware = applyMiddleware(promise, thunk, logger);
+const middleware = applyMiddleware(promise, thunk);
 
 ReactDOM.render(
   <Provider store={createStore(reducers, middleware)}>

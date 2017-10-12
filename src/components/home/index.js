@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import EventList from './Events/event_list';
 import NewsList from './news/news_list';
 import CarouselData from './Carousel/index';
@@ -11,18 +11,19 @@ import * as actions from '../../actions/actions_home';
 import { connect } from 'react-redux';
 
 class Home extends Component {
-  constructor(props, context) {
-    super(props, context);
-  }
+  // constructor(props, context) {
+  //   super(props, context);
+  // }
   componentWillMount(){
     this.props.carouselData();    
-    this.props.getRidOffKeywords();    
+    this.props.getRidOffKeywords();
+    this.props.carouselPanelData(); 
   }
   render() {
     return (
       <div>
         <div className="GBanner">
-          <CarouselData carouselItems={this.props.carouselItems}/>
+          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems}/>
         </div>
           <SearchCards ridOffKeywords = {this.props.ridOffKeywords}/>
           <ProgramCards carouselItems={this.props.carouselItems}/>
@@ -42,12 +43,14 @@ function mapStateToProps(state) {
   return {
       carouselItems: state.carouselDataReducer.carouselItems,
       ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
+      carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
   }
 }
 
 let actionList = {
   carouselData: actions.carouselData,
   getRidOffKeywords: actions.getRidOffKeywords,
+  carouselPanelData: actions.carouselPanelData,
 };
 
 Home = connect(mapStateToProps, actionList)(Home);

@@ -22,7 +22,7 @@ class News extends Component {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "news-and-updates-section"){
          return _.map(this.firstN(item.cards, 5), newsItem => {
-            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file} itemCounter = {itemCounter++} key={newsItem.date}/>);
+            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image != null? newsItem.image.file : ''} itemCounter = {itemCounter++} key={newsItem.date}/>);
         });
       }
     });
@@ -33,7 +33,7 @@ class News extends Component {
      return _.map(this.props.carouselItems, item => {
       if(item.name == "news-and-updates-section"){
          return _.map(this.firstN(item.cards, 1), newsItem => {
-            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image.base_path + newsItem.image.file} itemCounter = {itemCounter} key={newsItem.date}/>);
+            return (<NewsListItem description={newsItem.excerpt} title={newsItem.title} date={newsItem.date} image={newsItem.image != null? newsItem.image.file : ''} itemCounter = {itemCounter} key={newsItem.date}/>);
         });
       }
     });
