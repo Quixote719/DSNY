@@ -1,17 +1,13 @@
 import _ from "lodash";
 import React, {Component} from "react";
-import {connect} from "react-redux";
+import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
-import {fetchLawsSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
 import {Row} from 'react-bootstrap';
 import LawsListItem from './Laws_list_item';
 
 class LawsList extends Component {
-  componentDidMount() {
-    this.props.fetchLawsSubList();
-  }
 
   constructor() {
     super();
@@ -27,7 +23,7 @@ class LawsList extends Component {
 
   renderPosts(laws) {
     return _.map(this.firstN(laws, 8), Item => {
-      return (<LawsListItem title={Item.title.rendered} body={Item.content.rendered} key={Item.id}/>);
+      return (<LawsListItem title={Item.title} body={Item.content} key={Item.id}/>);
     });
   }
 
@@ -42,7 +38,7 @@ class LawsList extends Component {
 
   render() {
 
-    const {laws} = this.props;
+    const {laws, n} = this.props;
 
     if (_.isEmpty(laws)) {
       return (
@@ -62,8 +58,9 @@ class LawsList extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return {laws: state.resources.LawsSubList};
-}
+LawsList.propTypes = {
+  laws: PropTypes.array.isRequired,
+  n: PropTypes.string.isRequired
+};
 
-export default connect(mapStateToProps, {fetchLawsSubList})(LawsList);
+export default LawsList;

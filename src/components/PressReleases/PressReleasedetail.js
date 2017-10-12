@@ -21,20 +21,23 @@ class PressReleaseDetail extends Component {
 
   renderHeader(PR) {
     return _.map(PR, Item => {
-      return (<PressReleaseHeader title={Item.title.rendered} date={moment(Item.date).format('dddd, MMMM Do, YYYY')} status={Item.status_text} key={Item.id}/>);
+      return (<PressReleaseHeader title={Item.title} date={moment(Item.date).format('dddd, MMMM Do, YYYY')} status={Item.status} key={Item.id}/>);
     });
   }
 
   renderBody(PR) {
     return _.map(PR, Item => {
-      return (<PressReleaseBody body={Item.content.rendered} prid={Item.pr_number} contactinfo={Item.contact} key={Item.id}/>);
+      return (<PressReleaseBody body={Item.content} prid={Item.pr_number} contactinfo={Item.contact} key={Item.id}/>);
     });
   }
 
   renderimg(PR) {
     return _.map(PR, Item => {
-      if (Item.featured_media > 0) {
-        return (<LazyImage id={Item.featured_media} key={Item.id}/>);
+      if (Item.image) {
+        return (<img alt={Item.image.name} style={{
+          width: '100%',
+          margin: '5px 0px'
+        }} src={`${Item.image.base_path}${Item.image.file} `} key={Item.image.image_id}/>);
       }
     });
   }
@@ -55,14 +58,7 @@ class PressReleaseDetail extends Component {
   };
 };
 
-// PressReleaseDetail.propTypes = {
-//   slug: PropTypes.string
-// };
-
-function mapStateToProps({
-  PressRelease
-}, ownProps) {
-  return {prd: PressRelease.pressRelease.details};
+function mapStateToProps(state) {
+  return {prd: state.resources.pressRelease.details};
 }
-
 export default connect(mapStateToProps, {fetchPressReleaseDetails})(PressReleaseDetail);;

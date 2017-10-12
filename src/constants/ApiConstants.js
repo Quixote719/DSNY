@@ -12,13 +12,9 @@ export const RID_OF_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchDis
 export const MEDIAS_ALL_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/`;
 export const MEDIA_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/id`;
 export const SUB_SECTION_HEADER_URL = constructWpUrl('wp/v2/pagesection?slug=id');
-export const PRESS_RELEASE_SUB_LIST_URL = `${ROOT_WORDPRESS_URL}wp_query/args?post_type=press_release&order=DESC&orderby=date&posts_per_page=5`;
-export const FETCH_REPORT_CARD_SUB_LIST_URL = `${ROOT_WORDPRESS_URL}wp_query/args?post_type=card&cat=52&order=ASC&meta_key=rank&orderby=meta_value_num&posts_per_page=5`;
-export const FETCH_STATS_CARD_SUB_LIST_URL = `${ROOT_WORDPRESS_URL}wp_query/args?post_type=card&cat=53&order=DESC&meta_key=rank&orderby=meta_value_num`;
-export const FETCH_LAWS_SUB_LIST_URL = `${ROOT_WORDPRESS_URL}wp_query/args?post_type=card&cat=54&order=DESC&meta_key=rank&orderby=meta_value_num`;
-export const FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST_URL = `${ROOT_WORDPRESS_URL}wp_query/args?post_type=card&cat=61&order=ASC&meta_key=rank&orderby=meta_value_num&posts_per_page=5`;
-export const FETCH_PRESS_RELEASE_DETAILS_URL = constructWpUrl('wp/v2/press_release/?slug=id');
-export const FETCH_PRESS_RELEASE_LIST_URL = constructWpUrl('wp/v2/press_release?after=:Year-01-01T00:00:49&before=:Year-12-31T00:00:49&orderby=date&order=desc');
-
-
-export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetAllByBorough?Borough=`;
+export const FETCH_PRESS_RELEASE_DETAILS_URL = constructWpUrl('dsny/v1/getPressReleasePage?name=id');
+export const FETCH_PRESS_RELEASE_LIST_URL = constructWpUrl('dsny/v1/getPressReleaseByYear?year=:Year');
+export const FETCH_LANDING_PAGE_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:category`;
+export const FETCH_CARD_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:category`;
+export const FETCH_DROPDOWN_LIST = `${ROOT_WORDPRESS_URL}dsny/v1/getDropdownOptions?cat=:category`;
+export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetUpcomingEvents?eventSource=DSNY`;

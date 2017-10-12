@@ -42,7 +42,7 @@ class PressReleaseList extends Component {
 
   renderPosts(prl) {
     return _.map(prl, prItem => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.slug} title={prItem.title.rendered} date={prItem.date} key={prItem.id}/>);
+      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.id}/>);
     });
   }
 
@@ -57,7 +57,7 @@ class PressReleaseList extends Component {
     return (
       <div>
         <div className='container'>
-          <SubSectionDropdown selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/>
+          <SubSectionDropdown category='press-release' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/>
           <div>{this.renderPosts(prl)}</div>
         </div>
       </div>
@@ -66,10 +66,8 @@ class PressReleaseList extends Component {
   };
 };
 
-function mapStateToProps({
-  PressRelease
-}, ownProps) {
-  return {prl: PressRelease.pressRelease.list};
+function mapStateToProps(state) {
+  return {prl: state.resources.pressRelease.list};
 }
 
 export default connect(mapStateToProps, {fetchPressReleaseList})(PressReleaseList);

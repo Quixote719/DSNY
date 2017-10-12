@@ -19,6 +19,15 @@
   cursor: pointer;
 }
 
+.NBsubSectioncardType {
+  min-height: 90px;
+  min-width: 300px;
+  background-color: #FFFFFF;
+  padding: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
 .cardTitle {
   min-height: 88px;
   min-width: 190px;
