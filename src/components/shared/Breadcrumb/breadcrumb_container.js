@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import '../../../content/styles/banner.css';
 import Title from './title';
 import Breadcrumb from './breadcrumb';
+import Banner from '../banner'
 
 class Header extends Component {
 
@@ -15,32 +16,46 @@ class Header extends Component {
   }
 
   renderTitle() {
-    return (
-      <div></div>
-    )
+    const {title, body} = this.props;
+
+    if (title) {
+
+      return (
+        <div><Title title={title}/></div>
+      )
+    }
   }
 
   renderBreadcrumb() {
-
     let blist = this.props.breadCrumbList;
-    let l = _.dropRight(blist);
-    let title = _.last(blist);
-    let tClassName = this.props.has_children
-      ? 'BreadcrumbHeaderTitleSection'
-      : 'BreadcrumbHeaderTitleSectionNoBg'
+    const {title, body} = this.props;
+    if (blist.length > 2) {
+      let l = _.dropRight(blist);
+      let title = _.last(blist);
+      let tClassName = this.props.has_children
+        ? 'BreadcrumbHeaderTitleSection'
+        : 'BreadcrumbHeaderTitleSectionNoBg'
+      return (
+        <div>
+          <Breadcrumb breadcrumbList={l}/> {this.renderTitle()}
+        </div>
 
-    return (
-      <div>
-        <div><Breadcrumb breadcrumbList={l}/>
-          <Title classsName={tClassName} title={title.display_name}/></div>
-      </div>
-    )
+      )
+    } else {
+      let BannerText = {};
+      BannerText.title = title;
+      BannerText.content = body;
+      return (
+        <div><Banner text={BannerText}/></div>
+      )
+    }
   }
 
   render() {
     return (
       <div className="GBanner">
         {this.renderBreadcrumb()}
+
       </div>
     )
   }

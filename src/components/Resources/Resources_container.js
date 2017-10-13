@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {fetchLandinPageDetails} from "../../actions";
 
 //Sub Components
-import Banner from '../shared/banner'
+import Header from '../shared/Breadcrumb/breadcrumb_container'
 import PressRelease from './PressReleases/press_release_list'
 import ReportCardList from './ReportsStats/report_card_list'
 import StatsCardList from './ReportsStats/stats_card_list'
@@ -41,7 +41,7 @@ class ResourcesContainer extends Component {
       if (prItem.tilte != '') {
         banner = (
           <div key={prItem.id}>
-            banner
+            <Header title={prItem.title} breadCrumbList={prItem.breadcrumb} body={prItem.header_content}/>
           </div>
         )
       }
