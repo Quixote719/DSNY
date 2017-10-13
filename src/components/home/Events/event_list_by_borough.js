@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React, {Component} from "react";
+import LazyLoad from 'react-lazyload';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
@@ -44,7 +45,11 @@ class DSNYEvents extends Component {
 
   renderPosts(eventData) {
     return _.map(eventData, eventItem => {
-      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>);
+      return (
+        <LazyLoad height={300} >
+          <EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>
+        </LazyLoad>
+      );
     });
   }
 
