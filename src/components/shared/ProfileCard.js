@@ -6,7 +6,7 @@ class ProfileCard extends Component {
     return (
       <div className="ProfileCard">
           <div className="ImageBox">
-            <img className="ProfileCardImg" src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" alt=""/>
+            <img className="ProfileCardImg" src={this.props.image} alt=""/>
           </div>
           <div className="ProfileCardName">{this.props.name}</div>
           <div className="ProfileCardDuty" dangerouslySetInnerHTML={{__html: this.props.duty}}></div>

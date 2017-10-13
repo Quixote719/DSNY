@@ -12,9 +12,11 @@ class Leadership extends Component {
     super(props, context);
     this.componentWillMount = this.componentWillMount.bind(this);
   }
+
   componentWillMount() {
     this.props.Leadership();
   }
+
   render() {
         let cards = null;
         if(this.props.LeadershipData !== undefined){
@@ -27,22 +29,11 @@ class Leadership extends Component {
     )
   }
 
-  // renderCard(cards){
-  //   if(this.props.LeadershipData !== undefined){
-  //     console.log(this.props.LeadershipData.data);
-  //     _.map(this.props.LeadershipData.data.sections.sections[0].cards, item =>{
-  //       console.log('item');
-  //       console.log(item);
-  //       return <ProfileCard name={item.title} duty={item.content}/>
-  //     })
-  //   }
-  // }
-
     renderCards(cards = []) {
       return _.map(cards, item => {
           return (
             <span key={item.id}>
-                <ProfileCard name={item.title} duty={item.content}/>
+                <ProfileCard name={item.title} duty={item.content} image={item.image.file}/>
             </span>
           );
         })
