@@ -9,11 +9,38 @@ import Breadcrumb from './breadcrumb';
 
 class Header extends Component {
 
+  constructor(props) {
+    super(props);
+    this.renderBreadcrumb = this.renderBreadcrumb.bind(this);
+  }
+
+  renderTitle() {
+    return (
+      <div></div>
+    )
+  }
+
+  renderBreadcrumb() {
+
+    let blist = this.props.breadCrumbList;
+    let l = _.dropRight(blist);
+    let title = _.last(blist);
+    let tClassName = this.props.has_children
+      ? 'BreadcrumbHeaderTitleSection'
+      : 'BreadcrumbHeaderTitleSectionNoBg'
+
+    return (
+      <div>
+        <div><Breadcrumb breadcrumbList={l}/>
+          <Title classsName={tClassName} title={title.display_name}/></div>
+      </div>
+    )
+  }
+
   render() {
     return (
       <div className="GBanner">
-        <Breadcrumb breadcrumbList={this.props.breadCrumbList}/>
-        <Title title={this.props.title}/>
+        {this.renderBreadcrumb()}
       </div>
     )
   }
@@ -21,8 +48,10 @@ class Header extends Component {
 
 Header.propTypes = {
   title: PropTypes.string,
+  body: PropTypes.string,
   type: PropTypes.string,
-  breadCrumbList: PropTypes.array
+  breadCrumbList: PropTypes.array,
+  has_children: PropTypes.bool
 };
 
 export default Header;

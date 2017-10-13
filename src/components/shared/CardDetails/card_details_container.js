@@ -35,7 +35,7 @@ class cardDetailContainer extends Component {
       if (cItems.name != '') {
         banner = (
           <div key={cItems.id}>
-            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb}/>
+            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} has_children={cItems.has_children}/>
           </div>
         )
       }
