@@ -27,6 +27,16 @@
   background: url('../images/Darkgreen.png');
 }
 
+.BreadcrumbHeaderTitleSectionNoBg {
+  min-height: 90px;
+  color: #015949;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  background: white;
+  padding-top: 15px;
+}
+
 .GBannerTitle {
   margin: 0 auto;
   width: 750px;
