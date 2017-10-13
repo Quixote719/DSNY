@@ -9,7 +9,7 @@ import '../../content/styles/dsnyCard.css';
 
 class CardBox extends Component {
 
-  renderPosts(cards = []) {
+  renderCards(cards = []) {
     return _.map(cards, item => {
         return (
           <Col xs={12} sm={6} md={4} key={item.id}>
@@ -29,7 +29,7 @@ class CardBox extends Component {
       <div>
         <div>
           <div className="CardList">
-            {this.renderPosts(this.props.info.cards)}
+            {this.renderCards(this.props.info.cards)}
           </div>
           {this.ViewAllButton()}
         </div>
