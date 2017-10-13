@@ -8,8 +8,8 @@ class ProfileCard extends Component {
           <div className="ImageBox">
             <img className="ProfileCardImg" src="https://www.smashingmagazine.com/wp-content/uploads/2015/06/10-dithering-opt.jpg" alt=""/>
           </div>
-          <div className="ProfileCardName">Kathryn Garcia</div>
-          <div className="ProfileCardDuty">Commissioner</div>
+          <div className="ProfileCardName">{this.props.name}</div>
+          <div className="ProfileCardDuty" dangerouslySetInnerHTML={{__html: this.props.duty}}></div>
       </div>
     )
   }

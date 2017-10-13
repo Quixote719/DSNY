@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ColorCard from '../../shared/ColorCard'
 import TitleBanner from '../../shared/TitleBanner'
+import ProfileCard from '../../shared/ProfileCard'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -15,21 +16,37 @@ class Leadership extends Component {
     this.props.Leadership();
   }
   render() {
-        let path = this.props.location.pathname;
-        console.log('this.props.LeadershipData.data');
-        console.log(this.props.LeadershipData);
+        let cards = null;
         if(this.props.LeadershipData !== undefined){
-          _.map(this.props.LeadershipData.data.sections.sections.cards, item =>{
-            console.log('leadership.item.id');
-            console.log(item.id);
-          })
+            cards = this.renderCards(this.props.LeadershipData.data.sections.sections[0].cards);
         }
     return (
-      <div>
-
+      <div className="SContainer">
+        {cards}
       </div>
     )
   }
+
+  // renderCard(cards){
+  //   if(this.props.LeadershipData !== undefined){
+  //     console.log(this.props.LeadershipData.data);
+  //     _.map(this.props.LeadershipData.data.sections.sections[0].cards, item =>{
+  //       console.log('item');
+  //       console.log(item);
+  //       return <ProfileCard name={item.title} duty={item.content}/>
+  //     })
+  //   }
+  // }
+
+    renderCards(cards = []) {
+      return _.map(cards, item => {
+          return (
+            <span key={item.id}>
+                <ProfileCard name={item.title} duty={item.content}/>
+            </span>
+          );
+        })
+    }
 }
 
 function mapStateToProps(state) {
