@@ -1,38 +1,34 @@
 import _ from "lodash";
 import * as types from '../constants/ActionTypes';
-import initStore from './store';
 
-export default function(state = initStore, action) {
+export default function(state = {
+  landing: {},
+  pressRelease: {}
+}, action) {
   switch (action.type) {
-    case types.FETCH_PRESS_RELEASE_SUB_LIST:
+    case types.RESOURCES_LANDING_SECTION:
       return {
         ...state,
-        PresssReleasesSubList: _.mapKeys(action.payload.data, "id")
+        landing: {
+          ...state.landing,
+          [action.payload.data.id]: action.payload.data
+        }
       };
-    case types.FETCH_REPORT_CARD_SUB_LIST:
+    case types.FETCH_PRESS_RELEASE_LIST:
       return {
         ...state,
-        ReportCardSubList: _.mapKeys(action.payload.data, "id")
+        pressRelease: {
+          ...state.pressRelease,
+          list: action.payload.data
+        }
       };
-    case types.FETCH_STATS_CARD_SUB_LIST:
+    case types.FETCH_PRESS_RELEASE_DETAILS:
       return {
         ...state,
-        StatsCardSubList: _.mapKeys(action.payload.data, "id")
-      };
-    case types.FETCH_LAWS_SUB_LIST:
-      return {
-        ...state,
-        LawsSubList: _.mapKeys(action.payload.data, "id")
-      };
-    case types.FETCH_EDUCATIONAL_MATERIALS_PROMOTIONAL_SUB_LIST:
-      return {
-        ...state,
-        EmPromotionalSubList: _.mapKeys(action.payload.data, "id")
-      };
-    case types.FETCH_SUB_SECTION_HEADER:
-      return {
-        ...state,
-        subSectionHeader: action.payload
+        pressRelease: {
+          ...state.pressRelease,
+          details: _.mapKeys(action.payload.data, "id")
+        }
       };
     default:
       return state;

@@ -1,25 +1,21 @@
 import _ from "lodash";
 import React, {Component} from "react";
-import {connect} from "react-redux";
+import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
-import {fetchPrSubList} from "../../../actions";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
 import PressReleaseListItem from './press_release_list_item';
 class PressRelease extends Component {
-  componentDidMount() {
-    this.props.fetchPrSubList();
-  }
 
   constructor(props, context) {
     super(props, context);
     this.firstN = this.firstN.bind(this);
-    this._reroute = this._reroute.bind(this);
+
   }
 
   renderPosts(pr) {
     return _.map(this.firstN(pr, 4), prItem => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.slug} title={prItem.title.rendered} date={prItem.date} key={prItem.id}/>);
+      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.title}/>);
     });
   }
 
@@ -40,14 +36,10 @@ class PressRelease extends Component {
     }
 
   }
-  _reroute() {
-    console.log('re routing this module to a sub module');
-    //this.props.history.push("/" + window.staticUrl + '/PressReleaseList');
-  }
 
   render() {
 
-    const {pr} = this.props;
+    const {pr, n} = this.props;
 
     if (_.isEmpty(pr)) {
       return (
@@ -60,14 +52,16 @@ class PressRelease extends Component {
         <SubSectionHeader title="Press Release" onClick={this._reroute}/>
         <div>{this.renderPosts(pr)}</div>
 
-        {this.ViewAllButton(_.size(pr))}
+        {this.ViewAllButton(n)}
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {pr: state.resources.PresssReleasesSubList};
-}
+PressRelease.propTypes = {
+  pr: PropTypes.array.isRequired,
+  n: PropTypes.string.isRequired,
+  onClick: PropTypes.func
+};
 
-export default connect(mapStateToProps, {fetchPrSubList})(PressRelease);
+export default PressRelease;

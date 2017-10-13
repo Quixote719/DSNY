@@ -1,0 +1,66 @@
+  .file-pdf-o-font-awesome {
+    height: 20px;
+    width: 18px;
+    color: #7CC04B;
+    font-family: FontAwesome;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    float: right;
+  }
+
+  .cardTypeBody {
+    color: #333333;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 30px;
+  }
+
+  .NBsubSectioncardType {
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .BsubSectioncardType {
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    border: 1px solid #7CC04B;
+    padding: 15px;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  .NBsubSectioncardType:hover .cardTitleText, .BsubSectioncardType:hover .cardTitleText {
+    color: #7CC04B;
+  }
+
+  .cardTypeTitle {
+    color: #00764D;
+    font-family: "Helvetica Neue";
+    font-size: 17.5px;
+    font-weight: bold;
+    line-height: 19px;
+  }
+
+  .cardTypeCards {
+    margin-top: 30px;
+  }
+
+  .breadcrumb {
+    background-color: transparent;
+  }
+
+  .breadcrumb>li>a {
+    color: white;
+  }
+
+  .breadcrumb>.active {
+    color: white;
+  }

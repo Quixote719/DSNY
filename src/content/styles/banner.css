@@ -1,65 +1,76 @@
-.GBanner{
-    background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
-}
-
-.TitleBanner{
-    background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
+.GBanner {
+  background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
 }
 
 .GTexture {
-    height: 215px;
-    background: url('../images/Darkgreen.png');
+  height: 215px;
+  background: url('../images/Darkgreen.png');
 }
 
-.SGTexture {
-    height: 126px;
-    background: url('../images/Darkgreen.png');
+.BreadcrumbList {
+  height: 53px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 23px;
+  padding-top: 15px;
+  background: url('../images/Darkgreen.png');
 }
 
-.GBannerTitle{
-    margin:0 auto;
-    width: 750px;
-    padding-top: 60px;
-  	color: #FFFFFF;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 48px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 33px;
-    text-align: center;
+.BreadcrumbHeaderTitleSection {
+  height: 73px;
+  color: #FFFFFF;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 48px;
+  background: url('../images/Darkgreen.png');
 }
 
-.GBannerContent{
-    width: 750px;
-    margin: 0 auto;
-    padding-top: 25px;
-    color: #FFFFFF;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 23px;
-    text-align: center;
+.GBannerTitle {
+  margin: 0 auto;
+  width: 750px;
+  padding-top: 60px;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 33px;
+  text-align: center;
+}
+
+.GBannerContent {
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 25px;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 23px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 940px) {
-    .GBannerTitle{
-      width: auto;
-      padding-top: 6%;
-      font-size: 40px;
-    }
-    .GBannerContent{
-      padding: 25px 3%;
-      width: auto;
-    }
+  .GBannerTitle {
+    width: auto;
+    padding-top: 6%;
+    font-size: 40px;
+  }
+  .GBannerContent {
+    padding: 25px 3%;
+    width: auto;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .GBannerTitle{
-      padding-top: 8%;
-      font-size: 36px;
-    }
-    .GBannerContent{
-      font-size: 16px;
-    }
+  .GBannerTitle {
+    padding-top: 8%;
+    font-size: 36px;
+  }
+  .GBannerContent {
+    font-size: 16px;
+  }
 }

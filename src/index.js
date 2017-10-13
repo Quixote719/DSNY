@@ -19,6 +19,7 @@ import StrategicPlan from './components/about/StrategicPlan';
 import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
+import CardDetailContainer from './components/shared/CardDetails/card_details_container';
 import DSNYEvents from './components/home/Events/event_list_by_borough'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
@@ -39,30 +40,31 @@ ReactDOM.render(
   <Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
     <ScrollToTop>
-    <div>
-      <div id="headerContent" className="headerContent">
-        <Header/>
-        <div>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route path="/home" component={Home}/>
-            <Route exact path="/about" component={About}/>
-            <Route exact path="/about/Leadership" component={Leadership}/>
-            <Route exact path="/about/Bureaus" component={Bureaus}/>
-            <Route exact path="/about/StrategicPlan" component={StrategicPlan}/>
-            <Route path="/pressRelease/:slug" component={PressReleaseDetail}/>
-            <Route path="/PressReleaseList" component={PressReleaseList}/>
-            <Route path="/resources" component={ResourcesContainer}/>
-            <Route path="/howtogetridof/:keyword" component={Howtogetridof}/>
-            <Route path="/DSNYEvents" component={DSNYEvents}/>
-          </Switch>
+      <div>
+        <div id="headerContent" className="headerContent">
+          <Header/>
+          <div>
+            <Switch>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} component={Home}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan"} component={StrategicPlan}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/pressRelease/:slug"} component={PressReleaseDetail}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/PressReleaseList"} component={PressReleaseList}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/reports/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/DSNYEvents"} component={DSNYEvents}/>
+            </Switch>
+          </div>
+        </div>
+        <div id="footer">
+          <Footer/>
+          <NYCFooter/>
         </div>
       </div>
-      <div id="footer">
-        <Footer/>
-        <NYCFooter/>
-      </div>
-    </div>
     </ScrollToTop>
   </BrowserRouter>
 </Provider>, document.getElementById('content'));
