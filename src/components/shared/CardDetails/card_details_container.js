@@ -40,15 +40,18 @@ class cardDetailContainer extends Component {
         )
       }
 
-      var sections = _.map(cItems.sections.sections, sec => {
+      var sections;
+      if (cItems.sections) {
+        sections = _.map(cItems.sections.sections, sec => {
 
-        return (
-          <div key ={sec.id}>
-            <div>
-              <CardSec dataObject={sec}/></div>
-          </div>
-        );
-      })
+          return (
+            <div key ={sec.id}>
+              <div>
+                <CardSec dataObject={sec}/></div>
+            </div>
+          );
+        })
+      }
 
       return (
         <div key ={cItems.id}>

@@ -44,7 +44,7 @@ class EducationalMaterialsList extends Component {
           <Row>
             {this.renderPosts(promotional)}
           </Row>
-          <SubSectionButton title='VIEW ALL'/>
+          <Link to="/resources/educational-materials"><SubSectionButton title='VIEW ALL'/></Link>
         </div>
       </div>
     );
