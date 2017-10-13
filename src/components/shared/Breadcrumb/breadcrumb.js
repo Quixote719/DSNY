@@ -8,10 +8,15 @@ import {Breadcrumb} from 'react-bootstrap';
 class BreadcrumbSec extends Component {
 
   renderBreadcrumbSec(breadcrumbList) {
+
     return _.map(breadcrumbList, Item => {
+
+      let linkUrl = Item.url
+        ? <Link to={Item.url}>{Item.display_name}</Link>
+        : <div>{Item.display_name}</div>
       return (
         <Breadcrumb.Item key={Item.page_slug}>
-          {Item.display_name}
+          {linkUrl}
         </Breadcrumb.Item>
       )
     });

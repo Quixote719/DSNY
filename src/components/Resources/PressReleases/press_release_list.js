@@ -29,7 +29,7 @@ class PressRelease extends Component {
   ViewAllButton(l) {
     if (l > 4) {
       return (
-        <Link to="/PressReleaseList"><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
+        <Link to="/resources/pressReleaseList"><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
       );
     } else {
       return null;

@@ -17,13 +17,16 @@ class Home extends Component {
   componentWillMount(){
     this.props.carouselData();    
     this.props.getRidOffKeywords();
-    this.props.carouselPanelData(); 
+    if(process.env.REACT_APP_MUNCIPAL_SERVICE == "TRUE") //Call this service only on PRODUCTION Enviroment
+        this.props.carouselPanelData(); 
+    else
+        this.props.carouselPanelDataTemporary();     
   }
   render() {
     return (
       <div>
         <div className="GBanner">
-          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems}/>
+          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
         </div>
           <SearchCards ridOffKeywords = {this.props.ridOffKeywords}/>
           <ProgramCards carouselItems={this.props.carouselItems}/>
@@ -44,6 +47,8 @@ function mapStateToProps(state) {
       carouselItems: state.carouselDataReducer.carouselItems,
       ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
       carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
+      carouselPanelItemsTemporary: state.carouselDataReducer.carouselPanelItemsTemporary,
+      
   }
 }
 
@@ -51,6 +56,7 @@ let actionList = {
   carouselData: actions.carouselData,
   getRidOffKeywords: actions.getRidOffKeywords,
   carouselPanelData: actions.carouselPanelData,
+  carouselPanelDataTemporary: actions.carouselPanelDataTemporary,  
 };
 
 Home = connect(mapStateToProps, actionList)(Home);

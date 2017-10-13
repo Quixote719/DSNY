@@ -8,7 +8,7 @@ class Title extends Component {
 
   render() {
     return (
-      <div className="BreadcrumbHeaderTitleSection">
+      <div className='BreadcrumbHeaderTitleSection'>
         <div className='container'>
           {this.props.title}
         </div>
@@ -17,7 +17,8 @@ class Title extends Component {
   }
 }
 Title.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  classsName: PropTypes.string
 };
 
 export default Title;

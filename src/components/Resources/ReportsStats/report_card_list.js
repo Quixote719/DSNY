@@ -25,14 +25,16 @@ class ReportCardList extends Component {
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
       return (
-        <Link key={Item.id} to={`/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
+        <Link key={Item.id} to={`/resources/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
       );
     });
   }
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (<SubSectionButton title='VIEW ALL'/>);
+      return (
+        <Link to="/resources/reports"><SubSectionButton title='VIEW ALL'/></Link>
+      );
     } else {
       return null;
     }

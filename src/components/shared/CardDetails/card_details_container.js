@@ -35,20 +35,23 @@ class cardDetailContainer extends Component {
       if (cItems.name != '') {
         banner = (
           <div key={cItems.id}>
-            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb}/>
+            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
           </div>
         )
       }
 
-      var sections = _.map(cItems.sections.sections, sec => {
+      var sections;
+      if (cItems.sections) {
+        sections = _.map(cItems.sections.sections, sec => {
 
-        return (
-          <div key ={sec.id}>
-            <div>
-              <CardSec dataObject={sec}/></div>
-          </div>
-        );
-      })
+          return (
+            <div key ={sec.id}>
+              <div>
+                <CardSec dataObject={sec}/></div>
+            </div>
+          );
+        })
+      }
 
       return (
         <div key ={cItems.id}>

@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React, {Component} from "react";
+import LazyLoad from 'react-lazyload';
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
@@ -44,7 +45,12 @@ class DSNYEvents extends Component {
 
   renderPosts(eventData) {
     return _.map(eventData, eventItem => {
-      return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>);
+      return (
+        /* Lazyload - The component will be loaded when it's top edge is 100px from viewport. It's useful to make user ignorant about lazy load effect. */
+        <LazyLoad height={150} offset={50} once>
+          <EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>
+        </LazyLoad>
+      );
     });
   }
 

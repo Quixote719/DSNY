@@ -57,7 +57,7 @@
     background-color: transparent;
   }
 
-  .breadcrumb>li>a {
+  .breadcrumb>li>a, .breadcrumb>li>a>a {
     color: white;
   }
 
