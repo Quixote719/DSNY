@@ -59,6 +59,7 @@ class HowToGetRidOf extends Component {
     ridOfSearchResults = () =>{
         return _.map(this.props.getRidOfSearchResultsData, (item,index) => {
             return (
+                <div>
                 <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
                     <div className ="ridOfItemTitle">
                     {item.title}
@@ -66,6 +67,7 @@ class HowToGetRidOf extends Component {
                     <div className = "ridOfItemContent">
                     {item.excerpt}
                     </div>
+                </div>
                 </div>
             );
         });
@@ -100,14 +102,17 @@ class HowToGetRidOf extends Component {
                                     className: "ridOfSearchResults",
                                     placeholder: "How to get rid of ..."
                                 }}/>
+
                                 <i className="fa fa-search collectionSearch" id="ridOfSearchResults"></i>
-                                <div className={this.state.suggestions != ""?"noexampleRidSearchResults":"exampleRidSearchResults"}> Example: battery, mattress, TVs </div>
+                                {/* <div className={this.state.suggestions != ""?"noexampleRidSearchResults":"exampleRidSearchResults"}> Example: battery, mattress, TVs </div> */}
 
                                 {/* <div className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div> */}
                             </div>
                     </Col>
                 </Row>
-                <div className ="testtttttttttttt">
+                <div className ="noOfSearchResults">{this.props.noOfSearchResults} Search Results</div>                
+
+                <div>
                     {this.ridOfSearchResults()}
                 </div>
             </div>
@@ -117,6 +122,7 @@ class HowToGetRidOf extends Component {
 }
 function mapStateToProps(state) {
     return {
+        noOfSearchResults: state.carouselDataReducer.noOfSearchResults,        
         getRidOfSearchResultsData: state.carouselDataReducer.getRidOfSearchResultsData,
         // getRidOfSearchValue: state.carouselDataReducer.getRidOfSearchValue,
         ridOffKeywords: state.carouselDataReducer.ridOffKeywords,        

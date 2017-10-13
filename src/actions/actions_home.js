@@ -34,11 +34,12 @@ export function getRidOfSearchResults(suggestion) {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
+                    length: data.data.length,                    
                 })
-                dispatch({
-                    type: 'SET_RID_OFF_SEARCH_BOX',
-                    payload: suggestion,
-                })
+                // dispatch({
+                //     type: 'SET_RID_OFF_SEARCH_BOX',
+                //     payload: suggestion,
+                // })
             })
     }
 }

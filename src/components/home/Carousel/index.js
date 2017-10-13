@@ -49,8 +49,8 @@ class CarouselData extends Component {
         });
     }
     carouselPanelDataItemList() {
-        return _.map(this.props.carouselPanelItems, (item, index) => {
-            //return items.map(function (item, index) {
+        return _.map(this.props.carouselPanelItemsTemporary, (item, index) => {
+            return item.map(function (item, index) {
                 return (
                     <div className="panelData" key={index}>
                         <div className="border-top"></div>
@@ -59,7 +59,7 @@ class CarouselData extends Component {
                         <div className="statusProgram">{item.panelItemStatus}</div>
                     </div>
                 );
-            //})
+            })
         });
     }
 
