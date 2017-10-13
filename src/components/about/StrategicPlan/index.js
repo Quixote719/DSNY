@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ImageSection from './ImageSection'
+import ImageSection from '../../shared/ImageSection'
 import PlanCardSection from './PlanCardSection'
 import PageText from '../../shared/PageText'
 import * as actions from '../../../actions/actions_about';

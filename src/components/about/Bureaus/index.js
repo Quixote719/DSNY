@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import ImageSection from '../../shared/ImageSection'
 import ColorCard from '../../shared/ColorCard'
 import TitleBanner from '../../shared/TitleBanner'
+import CardBox from '../../shared/card_box'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -15,18 +17,35 @@ class Bureaus extends Component {
     this.props.Bureaus();
   }
   render() {
-        let path = this.props.location.pathname;
-        console.log('this.props.BureausData.data');
-        console.log(this.props.BureausData);
+        let ImageProps = {};
+        let BureausCards = {};
         if(this.props.BureausData !== undefined){
           _.map(this.props.BureausData.data.sections.sections, item =>{
-            console.log('item.id');
-            console.log(item.id);
+                switch (item.name){
+                  case 'top-section':{
+                    ImageProps.image = item.image.file;
+                    ImageProps.content = item.content;
+                    break;
+                  }
+                  case 'bureaus-cards-section':{
+                    BureausCards.cards = item.cards;
+                    console.log(BureausCards);
+                    break;
+                  }
+                  default:{
+                    break;
+                  }
+                }
           })
         }
     return (
       <div>
-
+        <ImageSection ImageProps={ImageProps}/>
+        <div className='greyBcg'>
+          <div className='SContainer topSpace'>
+            <CardBox info={BureausCards}/>
+          </div>
+        </div>
       </div>
     )
   }

@@ -19,8 +19,13 @@ html body {
   background-color: #F2F2F2;
 }
 
+<<<<<<< HEAD
 .topSpace {
   margin-top: 44px;
+=======
+.topSpace{
+  padding-top: 44px;
+>>>>>>> dev
 }
 
 .boxPadding {
