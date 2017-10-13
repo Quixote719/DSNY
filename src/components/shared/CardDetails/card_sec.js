@@ -37,19 +37,15 @@ class CardSec extends Component {
       type = 'iUrl';
       url = Item.linked_page.url
     }
-    let linkurl;
-    if (url) {
-      linkurl = url;
-    }
-    console.log(linkurl);
+
     switch (cardType) {
       case 'square-card':
-        return (linkurl
-          ? <Link to={linkurl}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
+        return (url
+          ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
       default:
-        return (linkurl
-          ? <Link to={linkurl}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
+        return (url
+          ? <Link to={url}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
           : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
     }
   }
