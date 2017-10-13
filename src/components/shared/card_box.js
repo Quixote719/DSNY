@@ -5,6 +5,7 @@ import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
 import TitleContentCard from '../shared/TitleContentCard';
 import ColorCard from '../shared/ColorCard';
+import ProfileCard from '../shared/ProfileCard'
 import { Row, Col } from 'react-bootstrap';
 import '../../content/styles/dsnyCard.css';
 
@@ -12,7 +13,7 @@ class CardBox extends Component {
 
   renderCards(cards = []){
     return _.map(cards, item => {
-        //  CardType: 1.TitleCard  2.ColorCard  3.ContentCard
+        //  CardType: 1.TitleCard  2.ColorCard  3.ProfileCard
         //  CardSize: 1.width:220px, 4 in a row    2.width:303px, 3 in a row
         let card = null;
         if(this.props.info.CardType==1){
@@ -20,6 +21,9 @@ class CardBox extends Component {
         }
         else if(this.props.info.CardType==2){
             card = <ColorCard title={item.title} content={item.content}/>
+        }
+        else if(this.props.info.CardType==3){
+            card = <ProfileCard name={item.title} duty={item.content} image={item.image.file} />
         }
         else{
             card = <TitleContentCard title={item.title} content={item.content}/>
@@ -43,9 +47,9 @@ class CardBox extends Component {
   }
 
   ViewAllButton() {
-      // if(this.props.info.cards.length<6){
-      //
-      // }
+      if(this.props.info.button == true){
+          return (<SubSectionButton title={this.props.info.ButtonTitle}/>);
+      }
   }
 
   render() {

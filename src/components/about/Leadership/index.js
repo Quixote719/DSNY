@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import ColorCard from '../../shared/ColorCard'
 import TitleBanner from '../../shared/TitleBanner'
+import ColorCard from '../../shared/ColorCard'
+import CardBox from '../../shared/card_box'
 import ProfileCard from '../../shared/ProfileCard'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
@@ -19,25 +20,31 @@ class Leadership extends Component {
 
   render() {
         let cards = null;
+        let ProfileCards = {};
         if(this.props.LeadershipData !== undefined){
             cards = this.renderCards(this.props.LeadershipData.data.sections.sections[0].cards);
+            ProfileCards.cards = this.props.LeadershipData.data.sections.sections[0].cards;
+            ProfileCards.CardSize = 1;
+            ProfileCards.CardType = 3;
         }
     return (
-      <div className="SContainer">
-        {cards}
+      <div className="LeadershipPage greyBcg">
+        <div className="SContainer">
+            <CardBox info={ProfileCards}/>
+        </div>
       </div>
     )
   }
 
-    renderCards(cards = []) {
-      return _.map(cards, item => {
-          return (
-            <span key={item.id}>
-                <ProfileCard name={item.title} duty={item.content} image={item.image.file}/>
-            </span>
-          );
-        })
-    }
+  renderCards(cards = []) {
+    return _.map(cards, item => {
+        return (
+          <span key={item.id}>
+              <ProfileCard name={item.title} duty={item.content} image={item.image.file}/>
+          </span>
+        );
+      })
+  }
 }
 
 function mapStateToProps(state) {
