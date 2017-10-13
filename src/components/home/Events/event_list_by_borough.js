@@ -46,7 +46,8 @@ class DSNYEvents extends Component {
   renderPosts(eventData) {
     return _.map(eventData, eventItem => {
       return (
-        <LazyLoad height={300} >
+        /* Lazyload - The component will be loaded when it's top edge is 100px from viewport. It's useful to make user ignorant about lazy load effect. */
+        <LazyLoad height={150} offset={50} once>
           <EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>
         </LazyLoad>
       );
