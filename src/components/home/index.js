@@ -17,8 +17,10 @@ class Home extends Component {
   componentWillMount(){
     this.props.carouselData();    
     this.props.getRidOffKeywords();
-    this.props.carouselPanelData(); 
-    this.props.carouselPanelDataTemporary();     
+    if(process.env.REACT_APP_MUNCIPAL_SERVICE == "TRUE") //Call this service only on PRODUCTION Enviroment
+        this.props.carouselPanelData(); 
+    else
+        this.props.carouselPanelDataTemporary();     
   }
   render() {
     return (

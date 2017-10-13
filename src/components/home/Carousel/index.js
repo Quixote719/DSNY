@@ -49,18 +49,36 @@ class CarouselData extends Component {
         });
     }
     carouselPanelDataItemList() {
-        return _.map(this.props.carouselPanelItemsTemporary, (item, index) => {
-            return item.map(function (item, index) {
-                return (
-                    <div className="panelData" key={index}>
-                        <div className="border-top"></div>
-                        <div className="programImage"><img src={item.panelItemIcon} /></div>
-                        <div className="detailsProgram">{item.panelItemType}</div>
-                        <div className="statusProgram">{item.panelItemStatus}</div>
-                    </div>
-                );
-            })
-        });
+        if(this.props.carouselPanelItems != undefined)
+        {
+            return _.map(this.props.carouselPanelItems, (item, index) => {
+                //return items.map(function (item, index) {
+                    return (
+                        <div className="panelData" key={index}>
+                            <div className="border-top"></div>
+                            <div className="programImage"><img src={item.panelItemIcon} /></div>
+                            <div className="detailsProgram">{item.panelItemType}</div>
+                            <div className="statusProgram">{item.panelItemStatus}</div>
+                        </div>
+                    );
+                //})
+            });
+        }
+        else
+        {
+            return _.map(this.props.carouselPanelItemsTemporary, (item, index) => {
+                return item.map(function (item, index) {
+                    return (
+                        <div className="panelData" key={index}>
+                            <div className="border-top"></div>
+                            <div className="programImage"><img src={item.panelItemIcon} /></div>
+                            <div className="detailsProgram">{item.panelItemType}</div>
+                            <div className="statusProgram">{item.panelItemStatus}</div>
+                        </div>
+                    );
+                })
+            });
+        }
     }
 
     render() {
