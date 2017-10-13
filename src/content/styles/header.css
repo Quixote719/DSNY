@@ -101,10 +101,6 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #FCFCFC 42.13%, #F4F4F4 57.5%, #F5F5F5 100%);
     box-shadow: none;
 }
-/*#slideNav{
-    border-bottom: 0px solid transparent;
-    border-top: 1px solid #E0E0E0;;
-}*/
 #navBar>ul>.homeLogoHeader.selectedParent.active>a{
     box-shadow: none;
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
@@ -113,27 +109,12 @@
     box-shadow: none;
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
 }
-
-#navBar>ul>.aboutHeaderTitle.bottomHeaderTitles.active>a{
-    color: white;
-    /*background-color: #096543!important;*/
-    box-shadow: none;
-    border-right: 1px solid #E0E0E0;
-    background-image: none;
-}
-#navBar>ul>.bottomHeaderTitles.active>a:hover{
-    color: white;
-    /*background-color: #096543!important;*/
-    box-shadow: none;
-    border-right: 1px solid #E0E0E0;
-    background-image: none;
-}
 #navBar>ul li:hover {
+    color: white;
     background-color: #096543;
     cursor: pointer;
 }
 #navBar>ul>li>a:hover {
-    color: #333333;
     color: white;
 }
 #navBar>ul>li>a {
@@ -244,13 +225,10 @@ input.searchMessagesInput:focus {
     transform: translate(-50%, -50%) !important;
 }
 .selectedParent>a{
+    border-right: 1px solid #E0E0E0;
     color: white !important;
     background-color: #096543!important;   
     width: inherit;
-}
-.selectedParent.active>a{
-    color: white !important;
-    background-color: #096543!important;   
 }
 .homeLogoHeader.selectedParent>a {
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
