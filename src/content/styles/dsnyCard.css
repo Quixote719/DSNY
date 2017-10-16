@@ -128,6 +128,9 @@
   .TitleContentCard .CardTitle{
     width: 100%!important;
   }
+  .BureausPage .CardTitle{
+    width: 100%!important;
+  }
   .CardTitle, .CardTitleBox, .TitleContentCard{
     width: 49%!important;
   }

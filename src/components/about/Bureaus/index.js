@@ -40,7 +40,7 @@ class Bureaus extends Component {
           })
         }
     return (
-      <div>
+      <div className='BureausPage'>
         <ImageSection ImageProps={ImageProps}/>
         <div className='greyBcg'>
           <div className='SContainer topSpace'>
