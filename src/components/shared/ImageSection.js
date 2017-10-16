@@ -10,6 +10,8 @@ class ImageSection extends Component {
     const style = {
                     'backgroundImage': `url(${this.props.ImageProps.image})`,
                     'backgroundSize': '100% 900px',
+                    'height': '300px',
+                    'background-position': '50% 50%;'
                   }
     const cardStyle={
                     'float': 'left',
@@ -17,7 +19,7 @@ class ImageSection extends Component {
     }
 
     return (
-      <div className='locations' style={style} >
+      <div className='ImageSection' style={style} >
         <div className = 'SContainer'>
             <div style={cardStyle}>
                 <ContentCard type='2' content={this.props.ImageProps.content}/>

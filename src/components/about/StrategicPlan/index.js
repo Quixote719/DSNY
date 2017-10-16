@@ -3,6 +3,7 @@ import ImageSection from '../../shared/ImageSection'
 import PlanCardSection from './PlanCardSection'
 import CardBox from '../../shared/card_box'
 import PageText from '../../shared/PageText'
+import CardSec from '../../shared/CardDetails/card_sec'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -22,10 +23,10 @@ class StrategicPlan extends Component {
     let ImageProps = {};
     let PageExplanation = {};
     let PlanProps = {};
+    let sections = null;
     console.log('this.props.StrategicPlanData.data');
     console.log(this.props.StrategicPlanData);
     if(this.props.StrategicPlanData !== undefined){
-
       _.map(this.props.StrategicPlanData.data.sections.sections, item =>{
         switch (item.name){
           case 'top-section-2':{
@@ -45,28 +46,30 @@ class StrategicPlan extends Component {
               break;
           }
           case 'strategic-plan-bottom-files-section':{
+              sections = <CardSec dataObject={item}/>
               break;
           }
           default:{
             break;
           }
-      }
-    });
-  }
+        }
+      });
+    }
     return (
       <div className="StrategicPlanPage">
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
               <div className = 'SContainer'>
-              <Row>
-                <Col xs={12} sm={12} md={12}>
-                <PageText PageExplanation = {PageExplanation} />
-                </Col>
-              </Row>
+                <Row>
+                  <Col xs={12} sm={12} md={12}>
+                    <PageText PageExplanation = {PageExplanation} />
+                  </Col>
+                </Row>
               </div>
               <div className = 'greyBcg' >
                 <div className = 'SContainer boxPadding'>
                   <CardBox info={PlanProps}/>
+                  {sections}
                 </div>
               </div>
       </div>
