@@ -65,7 +65,7 @@ class StrategicPlan extends Component {
               </Row>
               </div>
               <div className = 'greyBcg' >
-                <div className = 'SContainer'>
+                <div className = 'SContainer boxPadding'>
                   <CardBox info={PlanProps}/>
                 </div>
               </div>
