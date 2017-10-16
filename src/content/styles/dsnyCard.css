@@ -14,6 +14,21 @@
 .ProfileCard{
   width: 220px;
   height: 317px;
+  background-color: #FFFFFF;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.ProfileCard h3{
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.ProfileCard p{
+  font-size: 14px;
+  font-weight: 300;
+  color: #888888;
 }
 
 .ImageBox{
@@ -101,11 +116,19 @@
   font-size: 17.5px;
 }
 
+.ColorCardContent:hover{
+  color: #7CC04B;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 940px) {
   .CardTitleBox .CardTitle{
     width: 100%!important;
   }
   .TitleContentCard .CardTitle{
+    width: 100%!important;
+  }
+  .BureausPage .CardTitle{
     width: 100%!important;
   }
   .CardTitle, .CardTitleBox, .TitleContentCard{
