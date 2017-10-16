@@ -8,6 +8,7 @@ import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
 import PressReleaseListItem from '../Resources/PressReleases/press_release_list_item';
 import SubSectionDropdown from '../shared/Sub_section_dropdown'
+import Header from '../shared/Breadcrumb/breadcrumb_container'
 
 // Set initial state
 let PressReleaseListstate = {
@@ -56,14 +57,55 @@ class PressReleaseList extends Component {
     const {prl} = this.props;
     return (
       <div>
-        <div className='container'>
-          <SubSectionDropdown category='press-release' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/>
-          <div>{this.renderPosts(prl)}</div>
+        <div >
+
+          <div>{this.renderPage(prl)}</div>
         </div>
       </div>
 
     );
   };
+
+  renderPage(cardDetails) {
+
+    if (cardDetails) {
+
+      return _.map(cardDetails, cItems => {
+
+        let banner;
+        if (cItems.name != '') {
+          banner = (
+            <div key={cItems.id}>
+              <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+            </div>
+          )
+        }
+
+        var sections;
+        if (cItems.sections) {
+          sections = _.map(cItems.sections.sections, sec => {
+            return _.map(sec.cards, prItem => {
+              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.id}/>);
+            });
+
+          })
+        }
+
+        return (
+          <div key ={cItems.id}>
+            <div>{banner}</div>
+            <div className='container'><SubSectionDropdown category='press-release' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/></div>
+            <div className='container'>{sections}</div>
+          </div>
+        )
+      });
+    } else {
+      return (
+        <div>loading.....</div>
+      )
+    }
+  }
+
 };
 
 function mapStateToProps(state) {

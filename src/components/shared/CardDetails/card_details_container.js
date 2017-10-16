@@ -39,7 +39,6 @@ class cardDetailContainer extends Component {
   }
 
   render() {
-
     const {cardDetails} = this.props;
     return (
       <div>
@@ -50,38 +49,45 @@ class cardDetailContainer extends Component {
 
   renderPage(cardDetails) {
 
-    return _.map(cardDetails, cItems => {
+    if (cardDetails) {
 
-      let banner;
-      if (cItems.name != '') {
-        banner = (
-          <div key={cItems.id}>
-            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+      return _.map(cardDetails, cItems => {
+
+        let banner;
+        if (cItems.name != '') {
+          banner = (
+            <div key={cItems.id}>
+              <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+            </div>
+          )
+        }
+
+        var sections;
+        if (cItems.sections) {
+          sections = _.map(cItems.sections.sections, sec => {
+
+            return (
+              <div key ={sec.id}>
+                <div>
+                  <CardSec dataObject={sec}/></div>
+              </div>
+            );
+          })
+        }
+
+        return (
+          <div key ={cItems.id}>
+
+            <div>{banner}</div>
+            <div >{sections}</div>
           </div>
         )
-      }
-
-      var sections;
-      if (cItems.sections) {
-        sections = _.map(cItems.sections.sections, sec => {
-
-          return (
-            <div key ={sec.id}>
-              <div>
-                <CardSec dataObject={sec}/></div>
-            </div>
-          );
-        })
-      }
-
+      });
+    } else {
       return (
-        <div key ={cItems.id}>
-
-          <div>{banner}</div>
-          <div >{sections}</div>
-        </div>
+        <div>loading.....</div>
       )
-    });
+    }
   }
 };
 
