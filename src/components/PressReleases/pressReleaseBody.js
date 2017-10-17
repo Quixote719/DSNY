@@ -22,7 +22,6 @@ class PressReleaseBody extends Component {
             <div className='PressReleaseBodytext' dangerouslySetInnerHTML={{
               __html: data.content
             }}/>
-
           </Col>
           {this.renderCards(data.cards)}
         </Row>

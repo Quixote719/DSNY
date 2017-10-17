@@ -20,18 +20,6 @@ class PressReleaseDetail extends Component {
     this.props.fetchPressReleaseDetails(slug);
   }
 
-  renderHeader(PR) {
-    return _.map(PR, Item => {
-      return (<PressReleaseHeader title={Item.title} date={moment(Item.date).format('dddd, MMMM Do, YYYY')} status={Item.status} key={Item.id}/>);
-    });
-  }
-
-  renderBody(PR) {
-    return _.map(PR, Item => {
-      return (<PressReleaseBody body={Item.content} prid={Item.pr_number} contactinfo={Item.contact} key={Item.id}/>);
-    });
-  }
-
   renderimg(sec) {
     if (sec.featured_image) {
       return (<img alt={sec.featured_image.name} style={{
@@ -95,7 +83,6 @@ class PressReleaseDetail extends Component {
         return (
           <div key ={cItems.id}>
             <div>{banner}</div>
-
             <div className='container'>{sections}</div>
           </div>
         )
