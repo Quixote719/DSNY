@@ -8,6 +8,7 @@ class CardType extends Component {
   constructor() {
     super();
     this.className = this.className.bind(this);
+    this.cardLayout = this.cardLayout.bind(this);
   }
 
   className(type) {
@@ -27,27 +28,55 @@ class CardType extends Component {
     }
   }
 
+  cardLayout(type) {
+    switch (type) {
+      case 'iUrl':
+        return (
+          <Col className='nopadding' xs={12} sm={6} md={4}>
+            <div className={this.props.className}>
+              <Row className='nopadding'>
+                <Col className='nopadding' xs={8}>
+                  <div className='cardTypeTitle'>
+                    <div className='cardTitleText' dangerouslySetInnerHTML={{
+                      __html: this.props.title
+                    }}/>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        );
+      default:
+        return (
+          <Col className='nopadding' xs={12} sm={6} md={4}>
+            <div className={this.props.className}>
+              <Row className='nopadding'>
+                <Col className='nopadding' xs={this.props.type == 'iUrl'
+                  ? 12
+                  : 8}>
+                  <div className='cardTypeTitle'>
+                    <div className='cardTitleText' dangerouslySetInnerHTML={{
+                      __html: this.props.title
+                    }}/>
+                  </div>
+                </Col>
+                <Col className='nopadding' xs={4}>
+                  <div>
+                    <i className={this.className(this.props.type)}></i>
+                  </div>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        );
+    }
+  }
+
   render() {
 
-    return (
-      <Col className='nopadding' xs={12} sm={6} md={4}>
-        <div className={this.props.className}>
-          <Row className='nopadding'>
-            <Col className='nopadding' xs={8}>
-              <div className='cardTypeTitle'>
-                <div className='cardTitleText' dangerouslySetInnerHTML={{
-                  __html: this.props.title
-                }}/>
-              </div>
-            </Col>
-            <Col className='nopadding' xs={4}>
-              <div>
-                <i className={this.className(this.props.type)}></i>
-              </div>
-            </Col>
-          </Row>
-        </div>
-      </Col>
+    return ( < div > {
+      this.cardLayout(this.props.type)
+    } < /div>
     );
   };
 };
