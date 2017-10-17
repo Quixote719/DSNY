@@ -103,7 +103,7 @@ export function carouselPanelDataTemporary() {
     }
 }
 
-export function fetchEventSubList() {
-    const request = axios.get(FETCH_EVENTS_SUB_LIST_URL);
+export function fetchEventSubList(borough) {
+    const request = axios.get(FETCH_EVENTS_SUB_LIST_URL + borough);
     return {type: types.FETCH_EVENT_SUB_LIST, payload: request};
 }

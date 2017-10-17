@@ -8,11 +8,11 @@ import {fetchEventSubList} from "../../../actions/actions_home";
 import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
 import EventListItem from './event_list_item';
-import SubSectionDropdown from '../../shared/Sub_section_dropdown'
+import EventListBoroughDropdown from './event_list_borough_dropdown'
 
 // Set initial state
 let PressReleaseListstate = {
-  year: 'ALL',
+  year: 'All boroughs',
   activePage: 1
 };
 
@@ -23,14 +23,14 @@ class DSNYEvents extends Component {
     const {id} = this.props
     const {year} = this.state
     // this.props.fetchPressReleaseList(year);
-    this.props.fetchEventSubList();
+    this.props.fetchEventSubList('');
   }
   constructor(props) {
     super(props);
     // Retrieve the last state
     this.state = PressReleaseListstate;
 
-    this.fetchPressRelease = this.fetchPressRelease.bind(this);
+    this.fetchEvents = this.fetchEvents.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -54,9 +54,11 @@ class DSNYEvents extends Component {
     });
   }
 
-  fetchPressRelease(year) {
+  fetchEvents(year) {
     this.setState({year: year});
-    // this.props.fetchEventSubList(year);
+    //this.props.fetchEventSubList(year);
+    year = (year === 'All boroughs')? '' : year;
+    this.props.fetchEventSubList(year);
   }
 
   render() {
@@ -65,7 +67,7 @@ class DSNYEvents extends Component {
     return (
       <div>
         <div className='container'>
-          <SubSectionDropdown selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/>
+          <EventListBoroughDropdown selectedOption={this.state.year} ondropDownChange={this.fetchEvents}/>
           <div>{this.renderPosts(eventData)}</div>
         </div>
       </div>
