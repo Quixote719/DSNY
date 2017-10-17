@@ -70,6 +70,7 @@ class SearchPage extends Component {
     searchResultPage(event,{suggestion}){
         this.props.getRidOfSearchResults(suggestion);   
     }
+
     render() {
 
         return (
