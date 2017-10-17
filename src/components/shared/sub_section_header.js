@@ -4,7 +4,7 @@ import '../../content/styles/subSectionHeader.css';
 
 const SubSectionHeader = props => {
   return (
-      <div className="paddingRight">
+      <div>
         <div className='sectionHeader'>
           {props.title}
         </div>

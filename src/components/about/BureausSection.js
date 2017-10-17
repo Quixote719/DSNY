@@ -23,7 +23,6 @@ class BureausSection extends Component {
 
   render() {
     return (
-      <div>
         <div>
           <SubSectionHeader title={this.props.BureausProps.title}/>
           <CardBox info={this.props.BureausProps}/>
@@ -31,7 +30,6 @@ class BureausSection extends Component {
             {this.ViewAllButton()}
           </Link>
         </div>
-      </div>
     );
   }
 }

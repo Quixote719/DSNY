@@ -7,21 +7,6 @@
   box-sizing: border-box;
 }
 
-.locations .SContainer{
-  padding-right: 10px!important;
-}
-
-.OperationCards{
-  padding-right: 10px!important;
-}
-
-    .col-md-4{
-      padding-left: 0;
-    }
-
-    .col-md-12, .col-sm-12, .col-xs-12{
-      padding-left: 0;
-    }
 
 .StrategicPlanPage .row{
     margin-left: 0;
@@ -44,7 +29,7 @@
 
 .rightSec{
   width: 303px;
-  margin-left: 10px;
+  float: right;
   display: inline-block;
 }
 
@@ -88,13 +73,6 @@
   height: 8px;
 }
 
-@media (min-width: 992px){
-  .col-md-12 {
-      padding-left: 0;
-      padding-right: 10px;
-      width: 100%;
-  }
-}
 
 @media only screen and (max-width: 1900px) {
   .locations{
@@ -104,22 +82,14 @@
   }
 }
 @media only screen and (max-width: 991px) {
-  .locations .SContainer{
-    padding-right: 15px!important;
-  }
-  .OperationCards{
-    padding-right: 15px!important;
-  }
   .LeadershipRight{
     width: 60%;
   }
   .leftSec{
-    padding-right: 15px;
     width: 100%;
     display: block;
   }
   .rightSec{
-    padding-right: 15px;
     margin-left: 0;
     display: flex;
     justify-content: space-between;

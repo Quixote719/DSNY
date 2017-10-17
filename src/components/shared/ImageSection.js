@@ -23,9 +23,7 @@ class ImageSection extends Component {
       <div className='ImageSection' style={style} >
         <div className = 'SContainer'>
             <div style={cardStyle}>
-              <Col xs={12} sm={12} md={12}>
                   <ContentCard type='2' content={this.props.ImageProps.content}/>
-              </Col>
             </div>
         </div>
       </div>

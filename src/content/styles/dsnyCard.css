@@ -1,3 +1,13 @@
+.row {
+    margin-right: -7px;
+    margin-left: -7px;
+}
+
+.col-md-4{
+  padding-right: 7px;
+  padding-left: 7px;
+}
+
 .TitleCardBox{
   margin: 10px 5px;
   display: inline-block;
@@ -58,6 +68,7 @@
 }
 
 .CardTitle{
+  width: 100%;
   margin: 6px 0;
   padding: 25px 15px;
 	color: #00764E;
@@ -121,13 +132,6 @@
 .ColorCardContent:hover{
   color: #7CC04B;
   cursor: pointer;
-}
-
-
-@media (min-width: 992px){
-  .col-md-4{
-      padding: 0;
-  }
 }
 
 

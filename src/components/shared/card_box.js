@@ -57,7 +57,9 @@ class CardBox extends Component {
       <div>
         <div>
           <div className="CardList">
-            {this.renderCards(this.props.info.cards)}
+            <Row>
+              {this.renderCards(this.props.info.cards)}
+            </Row>
           </div>
           {this.ViewAllButton()}
         </div>
