@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ImageSection from '../../shared/ImageSection'
 import PlanCardSection from './PlanCardSection'
+import CardBox from '../../shared/card_box'
 import PageText from '../../shared/PageText'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
@@ -37,7 +38,10 @@ class StrategicPlan extends Component {
               break;
           }
           case 'strategic-plan-cards-section':{
+              PlanProps.button = true;
+              PlanProps.ButtonTitle = 'SEE FULL PLAN';
               PlanProps.cards = item.cards;
+              PlanProps.CardType = 2;
               break;
           }
           case 'strategic-plan-bottom-files-section':{
@@ -62,7 +66,7 @@ class StrategicPlan extends Component {
               </div>
               <div className = 'greyBcg' >
                 <div className = 'SContainer'>
-                  <PlanCardSection PlanProps = {PlanProps}/>
+                  <CardBox info={PlanProps}/>
                 </div>
               </div>
       </div>

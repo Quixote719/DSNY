@@ -13,12 +13,33 @@ import CardSec from './card_sec'
 
 class cardDetailContainer extends Component {
 
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      reload: false
+    };
+    const {slug} = this.props.match.params;
+    this.slug = slug;
+
+  }
+
+  componentWillMount() {
     const {slug} = this.props.match.params;
     this.props.fetchCardDetails(slug);
   }
 
+  componentWillReceiveProps(nextProps, nextState) {
+    const {slug} = nextProps.match.params;
+    console.log(slug);
+    if (this.slug != slug) {
+      this.slug = slug;
+      this.setState({reload: true});
+      this.props.fetchCardDetails(slug);
+    }
+  }
+
   render() {
+
     const {cardDetails} = this.props;
     return (
       <div>

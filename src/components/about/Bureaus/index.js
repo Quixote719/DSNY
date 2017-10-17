@@ -29,6 +29,7 @@ class Bureaus extends Component {
                   }
                   case 'bureaus-cards-section':{
                     BureausCards.cards = item.cards;
+                    BureausCards.CardType = 1;
                     console.log(BureausCards);
                     break;
                   }
@@ -39,10 +40,10 @@ class Bureaus extends Component {
           })
         }
     return (
-      <div>
+      <div className='BureausPage'>
         <ImageSection ImageProps={ImageProps}/>
         <div className='greyBcg'>
-          <div className='SContainer topSpace'>
+          <div className='SContainer boxPadding'>
             <CardBox info={BureausCards}/>
           </div>
         </div>

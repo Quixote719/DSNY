@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
+import { Link } from 'react-router-dom';
 import '../../content/styles/dsnyCard.css';
 
 class BureausSection extends Component {
@@ -27,7 +28,9 @@ class BureausSection extends Component {
           <div className="BureausCards">
             {this.renderPosts(this.props.BureausProps.cards)}
           </div>
-          {this.ViewAllButton()}
+          <Link to="/about/bureaus">
+            {this.ViewAllButton()}
+          </Link>
         </div>
       </div>
     );

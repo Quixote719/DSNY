@@ -88,7 +88,7 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={l > 2
                 ? 12
-                : 8} md={l > 2
+                : 6} md={l > 2
                 ? 12
                 : 8}>
                 <div key={dataObject.id} className='cardTypeBody'>
@@ -99,7 +99,7 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={l > 2
                 ? 12
-                : 4} md={l > 2
+                : 6} md={l > 2
                 ? 12
                 : 4}>
                 <div className='cardTypeCards'>
