@@ -19,7 +19,7 @@ export default function(state = {
         ...state,
         pressRelease: {
           ...state.pressRelease,
-          list: action.payload.data
+          list: [action.payload.data]
         }
       };
     case types.FETCH_PRESS_RELEASE_DETAILS:
