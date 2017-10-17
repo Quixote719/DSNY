@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import * as actions from '../../../actions/actions_home';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import styles from '../../../content/styles/home.css';
 import '../../../content/styles/howtogetridof.css';
-import { Grid, Row, Col } from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import Autosuggest from 'react-autosuggest';
@@ -94,8 +94,8 @@ class SearchBoxHome extends Component {
                     </div>
                 </div>
             </div>
-        )
-    }
+    )
+  }
 }
 
 export default SearchBoxHome;

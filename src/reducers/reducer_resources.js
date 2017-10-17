@@ -27,7 +27,7 @@ export default function(state = {
         ...state,
         pressRelease: {
           ...state.pressRelease,
-          details: _.mapKeys(action.payload.data, "id")
+          details: [action.payload.data]
         }
       };
     default:
