@@ -174,7 +174,12 @@
     right: 41px;
     color: #7CC04B!important;
 }
-
+input:focus::-webkit-input-placeholder{ 
+    color: transparent!important; 
+}
+.react-autosuggest__input--focused{
+    background-color: red!important;
+}
 .exampleRidSearch {
     margin-top: 8px;
     margin-left: 14px;
@@ -182,12 +187,13 @@
     font-size: 15px;
     line-height: 17px;
 }
-
+/* input[type=text]:focus{
+    -webkit-text-fill-color: white;    
+} */
 input.ridOfSearch:focus {
     box-shadow: none !important;
     outline: 0 !important;
 }
-
 .searchRidParent {
     z-index: 10;
     padding-right: 8px;

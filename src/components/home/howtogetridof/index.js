@@ -9,6 +9,7 @@ import Banner from '../../shared/banner';
 import Autosuggest from 'react-autosuggest';
 import {Link} from "react-router-dom";
 import SearchPage from "./searchPage";
+import Header from '../../shared/Breadcrumb/breadcrumb_container.js';
 
 class HowToGetRidOf extends Component {
     constructor(props, context) {
@@ -25,8 +26,8 @@ class HowToGetRidOf extends Component {
           }
         return (
             <div className = "howToGetRidOfParent">
-            <Banner text={BannerText} />
-            <SearchPage getRidOfSearchResults={this.props.getRidOfSearchResults} noOfSearchResults ={this.props.noOfSearchResults} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData} ridOffKeywords={this.props.ridOffKeywords} keyword={this.props.match.params.keyword}/>
+            <Header title='How to Get Rid of ...' breadCrumbList= "" />
+            <SearchPage getRidOfSearchResults={this.props.getRidOfSearchResults?this.props.getRidOfSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData?this.props.getRidOfSearchResultsData:""} ridOffKeywords={this.props.ridOffKeywords?this.props.ridOffKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
             {/* <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/> */}
             </div>
         )
