@@ -7,6 +7,27 @@
   box-sizing: border-box;
 }
 
+.locations .SContainer{
+  padding-right: 10px!important;
+}
+
+.OperationCards{
+  padding-right: 10px!important;
+}
+
+    .col-md-4{
+      padding-left: 0;
+    }
+
+    .col-md-12, .col-sm-12, .col-xs-12{
+      padding-left: 0;
+    }
+
+.StrategicPlanPage .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .LeadershipRight a{
   color: #00764E;
   font-size: 16px;
@@ -23,7 +44,7 @@
 
 .rightSec{
   width: 303px;
-  float: right;
+  margin-left: 10px;
   display: inline-block;
 }
 
@@ -60,15 +81,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 100%;
 }
 
 .FoundationSp{
-  height: 6px;
+  height: 8px;
 }
 
 @media (min-width: 992px){
   .col-md-12 {
       padding-left: 0;
+      padding-right: 10px;
       width: 100%;
   }
 }
@@ -80,20 +103,24 @@
     overflow: hidden!important;
   }
 }
-
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 991px) {
+  .locations .SContainer{
+    padding-right: 15px!important;
+  }
+  .OperationCards{
+    padding-right: 15px!important;
+  }
   .LeadershipRight{
     width: 60%;
   }
-  .SmallLeftSec{
-    width: 100%;
-    display: block;
-  }
   .leftSec{
+    padding-right: 15px;
     width: 100%;
     display: block;
   }
   .rightSec{
+    padding-right: 15px;
+    margin-left: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -102,6 +129,17 @@
   .FoundationSp{
     display: none;
   }
+  .SmallLeftSec{
+    width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+
+
+
+
 }
 
 @media only screen and (max-width: 599px) {

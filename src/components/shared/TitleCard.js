@@ -51,11 +51,11 @@ class TitleCard extends Component {
       }
     }
     return (
-      <Link to='/title'>
-        <div style = {CardType} className='CardTitle'>
-                {this.props.title}
-        </div>
-      </Link>
+          <Link to='/title'>
+              <div style = {CardType} className='CardTitle'>
+                      {this.props.title}
+              </div>
+          </Link>
     );
   };
 };

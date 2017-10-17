@@ -73,8 +73,9 @@
   color: #7CC04B;
 }
 
+
 .CardContent{
-  margin: 7px 0;
+  margin: 6px 0;
   padding: 15px;
 	color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -83,7 +84,7 @@
 }
 
 .TitleContentCard{
-  margin: 7px 0;
+  margin: 6px 0;
 }
 
 
@@ -92,7 +93,7 @@
 }
 
 .ColorCard{
-  margin: 7px 0;
+  margin: 5.5px 0;
 	height: 220px;
 	width: 303px;
 }
@@ -122,25 +123,38 @@
   cursor: pointer;
 }
 
+
+@media (min-width: 992px){
+  .col-md-4{
+      padding: 0;
+  }
+}
+
+
+@media (max-width: 991px){
+  .ColorCard{
+    width:100%;
+  }
+  .CardTitleBox{
+    width: 49%;
+  }
+}
+
 @media only screen and (max-width: 991px) {
-  .BureausPage .CardTitle{
+  .CardTitle{
     width: 100%!important;
+  }
+  .CardContent{
+    width: 100% !important;
+  }
+  .TitleContentCard{
+    width: 49%!important;
   }
 }
 
 @media only screen and (max-width: 940px) {
   .CardTitleBox .CardTitle{
     width: 100%!important;
-  }
-  .TitleContentCard .CardTitle{
-    width: 100%!important;
-  }
-
-  .CardTitle, .CardTitleBox, .TitleContentCard{
-    width: 49%!important;
-  }
-  .CardContent{
-    width: 100% !important;
   }
 }
 

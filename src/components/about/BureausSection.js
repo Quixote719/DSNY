@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
-import SubSectionHeader from '../shared/sub_section_header'
+import SubSectionHeader from '../shared/sub_section_header';
+import CardBox from '../shared/card_box';
 import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
 import { Link } from 'react-router-dom';
@@ -25,9 +26,7 @@ class BureausSection extends Component {
       <div>
         <div>
           <SubSectionHeader title={this.props.BureausProps.title}/>
-          <div className="BureausCards">
-            {this.renderPosts(this.props.BureausProps.cards)}
-          </div>
+          <CardBox info={this.props.BureausProps}/>
           <Link to="/about/bureaus">
             {this.ViewAllButton()}
           </Link>

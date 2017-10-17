@@ -9,14 +9,26 @@ html body {
   font-size: 16px;
 }
 
+.row, .col{
+  padding:0;
+  margin:0;
+}
 .SContainer {
   width: 940px;
   margin: 0 auto;
   overflow: hidden;
 }
 
+.paddingRight{
+  padding-right: 10px;
+}
+
 .greyBcg {
   background-color: #F2F2F2;
+}
+
+.PRLIhairline{
+  margin-right: 15px !important;
 }
 
 .topSpace {
@@ -45,6 +57,12 @@ html body {
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 991px) {
+  .paddingRight{
+    padding-right: 15px;
+  }
+}
+
 @media only screen and (max-width: 940px) {
   .SContainer {
     margin: 0 3%;
@@ -59,7 +77,8 @@ html body {
 }
 
 .container {
-  max-width: 980px;
+  max-width: 940px;
+  padding: 0;
 }
 
 a:focus, a:hover {
