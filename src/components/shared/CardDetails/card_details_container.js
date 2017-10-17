@@ -30,7 +30,6 @@ class cardDetailContainer extends Component {
 
   componentWillReceiveProps(nextProps, nextState) {
     const {slug} = nextProps.match.params;
-    console.log(slug);
     if (this.slug != slug) {
       this.slug = slug;
       this.setState({reload: true});

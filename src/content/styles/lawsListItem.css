@@ -19,6 +19,11 @@
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.lawsLink:hover {
+  color: #7CC04B;
 }
 
 .hairline {
