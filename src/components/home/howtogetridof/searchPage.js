@@ -90,7 +90,7 @@ class SearchPage extends Component {
                                     value: this.state.value,
                                     onChange: this.onChange,
                                     className: "ridOfSearchResults",
-                                    placeholder: "How to get rid of ..."
+                                    placeholder: this.state.placeholder,
                                 }}/>
 
                                 <i className="fa fa-search collectionSearch" id="ridOfSearchResults"></i>

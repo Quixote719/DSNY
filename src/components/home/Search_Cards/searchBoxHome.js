@@ -17,6 +17,7 @@ class SearchBoxHome extends Component {
         this.state = {
             value: "",
             suggestions: [],
+            placeholder: "How to get rid of..."
           };
     }
     getSuggestionValue = suggestion => suggestion;
@@ -50,6 +51,23 @@ class SearchBoxHome extends Component {
           value: newValue
         });
       };
+      inputFocused = (value) =>{
+        // flag = 1
+        // if(flag ==  1){
+        //   placeholder = " "
+        // }
+        return value.trim().length > 0;
+    }
+    resetPlaceHolder = () =>{
+      this.setState({
+        placeholder: "How to get rid of..."
+      })
+    }
+    setPlaceHolder = () =>{
+      this.setState({
+        placeholder: " "
+      })
+    }
     render() {
 
         return (
@@ -67,9 +85,10 @@ class SearchBoxHome extends Component {
                                 value: this.state.value,
                                 onChange: this.onChange,
                                 className: "ridOfSearch",
-                                placeholder: "How to get rid of ..."
-                            }}
-                        />
+                                placeholder: this.state.placeholder,
+                                onBlur: this.resetPlaceHolder,
+                                onFocus: this.setPlaceHolder,
+                            }}/>
                         <i className="fa fa-search ridSearch" id="ridSearch"></i>
                         <div className={this.state.suggestions != "" ? "noexampleRidSearch" : "exampleRidSearch"}> Example: battery, mattress, TVs </div>
                     </div>
