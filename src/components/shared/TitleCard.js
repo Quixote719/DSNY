@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Link } from 'react-router-dom';
 import '../../content/styles/dsnyCard.css';
 
 class TitleCard extends Component {
@@ -50,9 +51,11 @@ class TitleCard extends Component {
       }
     }
     return (
+      <Link to='/title'>
         <div style = {CardType} className='CardTitle'>
-               {this.props.title}
+                {this.props.title}
         </div>
+      </Link>
     );
   };
 };

@@ -43,7 +43,7 @@ class Bureaus extends Component {
       <div className='BureausPage'>
         <ImageSection ImageProps={ImageProps}/>
         <div className='greyBcg'>
-          <div className='SContainer topSpace'>
+          <div className='SContainer boxPadding'>
             <CardBox info={BureausCards}/>
           </div>
         </div>
