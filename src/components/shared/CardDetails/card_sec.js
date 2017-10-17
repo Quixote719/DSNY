@@ -6,6 +6,7 @@ import {Row, Col} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import SubSectionHeader from '../sub_section_header';
 import CardType from './card_type'
+import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
 
 class CardSec extends Component {
@@ -37,22 +38,23 @@ class CardSec extends Component {
       type = 'iUrl';
       url = Item.linked_page.url
     }
-    /**The following card types are defined:
-article-search-result-card | Article Search Result
-color-bar-card | Color Bar Card
-contact-card | Contact Card
-header-title-blurb-card | Header/Title/Blurb Card
-icon-category | Icon Category Card
-multi-file-card | Multi-File Card
-news-card | News Card
-reference-details-card | Reference/Details Card
-square-card | Square Card
-square-card-with-image | Square Card (with Image)
-staff-card | Staff Card
-standard-card-no-border | Standard Card (no border)
-standard-card-with-border | Standard Card (with border)
-**/
+    /**
+    article-search-result-card | Article Search Result
+    color-bar-card | Color Bar Card
+    contact-card | Contact Card
+    header-title-blurb-card | Header/Title/Blurb Card
+    icon-category | Icon Category Card
+    multi-file-card | Multi-File Card
+    news-card | News Card
+    reference-details-card | Reference/Details Card
+    square-card | Square Card
+    square-card-with-image | Square Card (with Image)
+    staff-card | Staff Card
+    standard-card-no-border | Standard Card (no border)
+    standard-card-with-border | Standard Card (with border)
+     */
 
+    console.log(cardType);
     switch (cardType) {
       case 'square-card':
         return (url
@@ -66,13 +68,13 @@ standard-card-with-border | Standard Card (with border)
         return (url
           ? <Link to={url}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
           : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
-      case 'square-card':
-        return (url
-          ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
+      case 'full-width-card':
+        console.log('yeshu');
+        return (<CardFullWidth dataObject={Item}/>);
       default:
+        console.log('varma');
         return (url
-          ? <Link to={url}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
+          ? <Link to={url}><CardType className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
           : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
     }
   }

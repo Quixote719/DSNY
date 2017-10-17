@@ -64,3 +64,13 @@
   .breadcrumb>.active {
     color: white;
   }
+
+  .fullwidthcardtitle {
+    color: #00764D;
+    font-family: "Helvetica Neue";
+    font-size: 17.5px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }

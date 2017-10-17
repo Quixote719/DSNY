@@ -26,6 +26,8 @@
   font-size: 48px;
   font-weight: 500;
   letter-spacing: -1px;
+  padding-top: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url('../images/Darkgreen.png');
 }
 

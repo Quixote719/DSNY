@@ -6,6 +6,7 @@ import '../../content/styles/card.css';
 class CardReferenceDetails extends Component {
 
   render() {
+
     return (
       <Col xs={12} sm={4} md={3}>
         <div className='PressReleaseBodySubHeaders'>
