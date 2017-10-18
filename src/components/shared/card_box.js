@@ -22,7 +22,7 @@ class CardBox extends Component {
         else if(this.props.info.CardType=='strategy-card'){
             card = <ColorCard title={item.title} content={item.content}/>
         }
-        else if(this.props.info.CardType==3){
+        else if(this.props.info.CardType=='staff-card'){
             card = <ProfileCard name={item.title} duty={item.content} image={item.image.file} />
         }
         else{
