@@ -6,16 +6,19 @@ import '../../content/styles/card.css';
 class CardReferenceDetails extends Component {
 
   render() {
+
     return (
-      <Col xs={12} sm={4} md={3}>
-        <div className='PressReleaseBodySubHeaders'>
-          {this.props.title}
-        </div>
-        < div className='PressReleaseBodycontact' dangerouslySetInnerHTML={{
-          __html: this.props.body
-        }}/>
-        <div className='patternLineGreen'></div>
-      </Col>
+      <div>
+        <Col className='nopadding' xs={12}>
+          <div className='PressReleaseBodySubHeaders'>
+            {this.props.title}
+          </div>
+          < div className='PressReleaseBodycontact' dangerouslySetInnerHTML={{
+            __html: this.props.body
+          }}/>
+          <div className='patternLineGreen'></div>
+        </Col>
+      </div>
     );
   };
 };

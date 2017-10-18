@@ -53,16 +53,9 @@ class PressReleaseList extends Component {
   }
 
   render() {
-
     const {prl} = this.props;
     return (
-      <div>
-        <div >
-
-          <div>{this.renderPage(prl)}</div>
-        </div>
-      </div>
-
+      <div>{this.renderPage(prl)}</div>
     );
   };
 

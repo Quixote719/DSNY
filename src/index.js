@@ -55,6 +55,8 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/pressRelease/:slug"} component={PressReleaseDetail}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/reports/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/laws/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/proposed-rules/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
