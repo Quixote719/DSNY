@@ -23,7 +23,9 @@ class PressReleaseBody extends Component {
               __html: data.content
             }}/>
           </Col>
-          {this.renderCards(data.cards)}
+          <Col xs={12} sm={6} md={3}>
+            {this.renderCards(data.cards)}
+          </Col>
         </Row>
       </div>
     );

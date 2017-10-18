@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../content/styles/dsnyCard.css';
 
 class ColorCard extends Component {
   render() {

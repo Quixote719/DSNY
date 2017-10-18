@@ -17,7 +17,7 @@ class CardBox extends Component {
         //  CardSize: 1.width:220px, 4 in a row    2.width:303px, 3 in a row
         let card = null;
         if(this.props.info.CardType==1){
-            card = <TitleCard title={item.title} type='2' />
+            card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
         else if(this.props.info.CardType==2){
             card = <ColorCard title={item.title} content={item.content}/>
@@ -57,7 +57,9 @@ class CardBox extends Component {
       <div>
         <div>
           <div className="CardList">
-            {this.renderCards(this.props.info.cards)}
+            <Row>
+              {this.renderCards(this.props.info.cards)}
+            </Row>
           </div>
           {this.ViewAllButton()}
         </div>

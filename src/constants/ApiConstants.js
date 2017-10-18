@@ -19,4 +19,5 @@ export const FETCH_CARD_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?
 export const FETCH_DROPDOWN_LIST = `${ROOT_WORDPRESS_URL}dsny/v1/getDropdownOptions?cat=:category`;
 
 //export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetUpcomingEvents?eventSource=DSNY`;
-export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetAllByBorough?Borough=`;
+export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetAllByBorough?borough=:borough`;
+export const FETCH_EVENT_DETAILS_URL = `${REST_WEBAPI_URL}Events/GetEventByID?eventID=:eventID`;

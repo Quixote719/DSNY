@@ -33,7 +33,9 @@ class LawsListItem extends Component {
                 </Dotdotdot>
               </Col>
               <Col xs={12}>
-                <div className='lawsLink'>SEE ALL RULES</div>
+                <Link to='/resources/laws/proposed-rules'>
+                  <div className='lawsLink'>SEE ALL RULES</div>
+                </Link>
               </Col>
             </Row>
           </Col>
