@@ -16,10 +16,10 @@ class CardBox extends Component {
         //  CardType: 1.TitleCard  2.ColorCard  3.ProfileCard
         //  CardSize: 1.width:220px, 4 in a row    2.width:303px, 3 in a row
         let card = null;
-        if(this.props.info.CardType==1){
+        if(this.props.info.CardType=='standard-card-no-border'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
-        else if(this.props.info.CardType==2){
+        else if(this.props.info.CardType=='strategy-card'){
             card = <ColorCard title={item.title} content={item.content}/>
         }
         else if(this.props.info.CardType==3){

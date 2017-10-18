@@ -49,7 +49,7 @@ class TitleCard extends Component {
     // let link = ''||this.props.link;
     let link = this.props.link||'/about/bureaus';
     return (
-          <Link to={link}>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
               <div style = {CardType} className='CardTitle'>
                       {this.props.title}
               </div>
