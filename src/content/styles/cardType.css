@@ -37,7 +37,7 @@
     margin: 10px;
   }
 
-  .NBsubSectioncardType:hover .cardTitleText, .BsubSectioncardType:hover .cardTitleText {
+  .NBsubSectioncardType:hover .cardTitleText, .BsubSectioncardType:hover .cardTitleText, .fullwidthcardtitle:hover {
     color: #7CC04B;
   }
 
@@ -73,4 +73,5 @@
     line-height: 22px;
     padding-top: 8px;
     padding-bottom: 8px;
+    cursor: pointer;
   }

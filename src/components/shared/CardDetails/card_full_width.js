@@ -16,7 +16,7 @@ class cardFullWidth extends Component {
         title = (
           <div key={cardDetails.id}>
             <Col xs={12}>
-              <div classsName='fullwidthcardtitle'>
+              <div className='fullwidthcardtitle'>
 
                 <div dangerouslySetInnerHTML={{
                   __html: cardDetails.title
