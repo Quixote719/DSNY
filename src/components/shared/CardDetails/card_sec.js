@@ -157,8 +157,8 @@ class CardSec extends Component {
 
     } else {
       body = (
-        <div>{this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
-        </div>
+        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
+        </Row>
       )
     }
 
