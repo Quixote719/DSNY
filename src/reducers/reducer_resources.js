@@ -19,7 +19,7 @@ export default function(state = {
         ...state,
         pressRelease: {
           ...state.pressRelease,
-          list: action.payload.data
+          list: [action.payload.data]
         }
       };
     case types.FETCH_PRESS_RELEASE_DETAILS:
@@ -27,7 +27,7 @@ export default function(state = {
         ...state,
         pressRelease: {
           ...state.pressRelease,
-          details: _.mapKeys(action.payload.data, "id")
+          details: [action.payload.data]
         }
       };
     default:

@@ -6,7 +6,9 @@ import {Row, Col} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import SubSectionHeader from '../sub_section_header';
 import CardType from './card_type'
+import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
+import CardReferenceDetails from '../../PressReleases/reference_details_card'
 
 class CardSec extends Component {
 
@@ -37,15 +39,43 @@ class CardSec extends Component {
       type = 'iUrl';
       url = Item.linked_page.url
     }
+    /**
+    article-search-result-card | Article Search Result
+    color-bar-card | Color Bar Card
+    contact-card | Contact Card
+    header-title-blurb-card | Header/Title/Blurb Card
+    icon-category | Icon Category Card
+    multi-file-card | Multi-File Card
+    news-card | News Card
+    reference-details-card | Reference/Details Card
+    square-card | Square Card
+    square-card-with-image | Square Card (with Image)
+    staff-card | Staff Card
+    standard-card-no-border | Standard Card (no border)
+    standard-card-with-border | Standard Card (with border)
+     */
 
+    console.log(cardType);
     switch (cardType) {
       case 'square-card':
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
-      default:
+      case 'standard-card-no-border':
+        return (url
+          ? <Link to={url}><CardType className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
+      case 'standard-card-with-border':
         return (url
           ? <Link to={url}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
+      case 'full-width-card':
+        return (<CardFullWidth link={url} dataObject={Item}/>);
+      case 'reference-details-card':
+        return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
+      default:
+        return (url
+          ? <Link to={url}><CardType className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
           : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
     }
   }
@@ -81,27 +111,35 @@ class CardSec extends Component {
 
       if (dataObject.cards.length > 0) {
         let l = (dataObject.cards.length);
+        let cType = dataObject.card_data.card_type !== "reference-details-card"
+
+        let layoutTrigger = cType && l > 2
+        console.log(layoutTrigger);
         body = (
           <div>
             <Row className='nopadding'>
-              <Col className='nopadding' xs={l > 2
+              <Col className='nopadding' xs={layoutTrigger
                 ? 12
-                : 12} sm={l > 2
+                : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={l > 2
+                : 6} md={layoutTrigger
                 ? 12
-                : 8}>
-                <div key={dataObject.id} className='cardTypeBody'>
-                  {dataObject.content}
-                </div>
+                : cType
+                  ? 8
+                  : 9}>
+                <div key={dataObject.id} className='cardTypeBody' dangerouslySetInnerHTML={{
+                  __html: dataObject.content
+                }}/>
               </Col>
-              <Col className='nopadding' xs={l > 2
+              <Col className='nopadding' xs={layoutTrigger
                 ? 12
-                : 12} sm={l > 2
+                : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={l > 2
+                : 6} md={layoutTrigger
                 ? 12
-                : 4}>
+                : cType
+                  ? 4
+                  : 3}>
                 <div className='cardTypeCards'>
                   <Row className='nopadding'>
                     {this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
@@ -112,11 +150,9 @@ class CardSec extends Component {
           </div>
         )
       } else {
-        body = (
-          <div key={dataObject.id} className='cardTypeBody'>
-            {dataObject.content}
-          </div>
-        )
+        body = (<div key={dataObject.id} className='cardTypeBody' dangerouslySetInnerHTML={{
+          __html: dataObject.content
+        }}/>)
       }
 
     } else {

@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../content/styles/card.css';
+import Dotdotdot from 'react-dotdotdot'
 
 class CardTitleBody extends Component {
   render() {
@@ -9,14 +10,19 @@ class CardTitleBody extends Component {
       <Col xs={12} sm={6} md={3}>
         <div className={this.props.className}>
           <div className='cardTitle'>
-            <div className='cardTitleText' dangerouslySetInnerHTML={{
-              __html: this.props.title
-            }}/>
+            <Dotdotdot clamp={3}>
+              <div className='cardTitleText' dangerouslySetInnerHTML={{
+                __html: this.props.title
+              }}/>
+            </Dotdotdot>
           </div>
           <div className='cardBody'>
-            <div className='cardBodyText' dangerouslySetInnerHTML={{
-              __html: this.props.body
-            }}/>
+            <Dotdotdot clamp={3}>
+              <div className='cardBodyText' dangerouslySetInnerHTML={{
+                __html: this.props.body
+              }}/>
+            </Dotdotdot>
+
           </div>
         </div>
       </Col>

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
-
+import Dotdotdot from 'react-dotdotdot'
 class LawsListItem extends Component {
 
   rawMarkup() {
@@ -17,19 +17,25 @@ class LawsListItem extends Component {
       <div >
         <Col>
           <Col xs={12} md={3}>
-            <div className='lawsTitle' dangerouslySetInnerHTML={{
-              __html: this.props.title
-            }}/>
+            <Dotdotdot clamp={3}>
+              <div className='lawsTitle' dangerouslySetInnerHTML={{
+                __html: this.props.title
+              }}/>
+            </Dotdotdot>
           </Col>
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                <div className='lawsDesc' dangerouslySetInnerHTML={{
-                  __html: this.props.body
-                }}/>
+                <Dotdotdot clamp={3}>
+                  <div className='lawsDesc' dangerouslySetInnerHTML={{
+                    __html: this.props.body
+                  }}/>
+                </Dotdotdot>
               </Col>
               <Col xs={12}>
-                <div className='lawsLink'>SEE ALL RULES</div>
+                <Link to='/resources/laws/proposed-rules'>
+                  <div className='lawsLink'>SEE ALL RULES</div>
+                </Link>
               </Col>
             </Row>
           </Col>

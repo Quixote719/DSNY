@@ -9,7 +9,7 @@ import EventListItem from './event_list_item';
 
 class Event extends Component {
   componentDidMount() {
-    this.props.fetchEventSubList();
+    this.props.fetchEventSubList('');
   }
 
   constructor() {

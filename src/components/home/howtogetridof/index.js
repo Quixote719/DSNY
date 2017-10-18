@@ -8,114 +8,27 @@ import _ from "lodash";
 import Banner from '../../shared/banner';
 import Autosuggest from 'react-autosuggest';
 import {Link} from "react-router-dom";
+import SearchPage from "./searchPage";
+import Header from '../../shared/Breadcrumb/breadcrumb_container.js';
 
-const getSuggestionValue = suggestion => suggestion;
-const renderSuggestion = suggestion => (
-    <Link to={"/howtogetridof/"+suggestion}>
-        <div className ="ridOfSuggestions" >
-          {suggestion}
-        </div>
-    </Link>
-  );
 class HowToGetRidOf extends Component {
     constructor(props, context) {
         super(props, context);
-        this.searchResultPage = this.searchResultPage.bind(this);        
-        // this.ridOfSearchResults = this.ridOfSearchResults.bind(this);        
-        
-        this.state = {
-            value: this.props.match.params.keyword,
-            suggestions: [],
-          };
     }
     componentWillMount(){
         this.props.getRidOffKeywords();            
         const keyword = this.props.match.params.keyword;
         this.props.getRidOfSearchResults(keyword);
     }
-    getSuggestions = value => {
-        const inputValue = value.trim().toLowerCase();
-        const inputLength = inputValue.length;
-      
-        return inputLength === 0 ? [] : this.props.ridOffKeywords.filter(lang =>
-          lang.toLowerCase().slice(0, inputLength) === inputValue
-        );
-      };
-    onSuggestionsFetchRequested = ({ value }) => {
-        this.setState({
-          suggestions: this.getSuggestions(value)
-        });
-      };
-    onSuggestionsClearRequested = () => {
-        this.setState({
-          suggestions: []
-        });
-      };
-    onChange = (event, { newValue }) => {
-        this.setState({
-          value: newValue
-        });
-      };
-    ridOfSearchResults = () =>{
-        return _.map(this.props.getRidOfSearchResultsData, (item,index) => {
-            return (
-                <div>
-                <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
-                    <div className ="ridOfItemTitle">
-                    {item.title}
-                    </div>
-                    <div className = "ridOfItemContent">
-                    {item.excerpt}
-                    </div>
-                </div>
-                </div>
-            );
-        });
-      };
-    searchResultPage(event,{suggestion}){
-        this.forceUpdate();
-        this.props.getRidOfSearchResults(suggestion);   
-    }
     render() {
-        console.log("Manali")        
-        console.log(this.props.getRidOfSearchValue)
         const BannerText = {
             title: 'How to Get Rid of ...'
           }
         return (
             <div className = "howToGetRidOfParent">
-            <Banner text={BannerText} className ="ridOfBanner"/>
-            <div className="container searchContainerRidOfCollection">
-                <Row className="searchRowRidOf">
-                    <Col xs={12} md={12} className="searchRidOfParent">
-                            <div id="innersquareRidOf">
-                                <Autosuggest
-                                suggestions={this.state.suggestions}
-                                onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-                                onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-                                getSuggestionValue={getSuggestionValue}
-                                renderSuggestion={renderSuggestion}
-                                onSuggestionSelected={this.searchResultPage}
-                                inputProps={{
-                                    value: this.state.value,
-                                    onChange: this.onChange,
-                                    className: "ridOfSearchResults",
-                                    placeholder: "How to get rid of ..."
-                                }}/>
-
-                                <i className="fa fa-search collectionSearch" id="ridOfSearchResults"></i>
-                                {/* <div className={this.state.suggestions != ""?"noexampleRidSearchResults":"exampleRidSearchResults"}> Example: battery, mattress, TVs </div> */}
-
-                                {/* <div className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div> */}
-                            </div>
-                    </Col>
-                </Row>
-                <div className ="noOfSearchResults">{this.props.noOfSearchResults} Search Results</div>                
-
-                <div>
-                    {this.ridOfSearchResults()}
-                </div>
-            </div>
+            <Header title='How to Get Rid of ...' breadCrumbList= "" />
+            <SearchPage getRidOfSearchResults={this.props.getRidOfSearchResults?this.props.getRidOfSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData?this.props.getRidOfSearchResultsData:""} ridOffKeywords={this.props.ridOffKeywords?this.props.ridOffKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
+            {/* <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/> */}
             </div>
         )
     }
@@ -124,7 +37,6 @@ function mapStateToProps(state) {
     return {
         noOfSearchResults: state.carouselDataReducer.noOfSearchResults,        
         getRidOfSearchResultsData: state.carouselDataReducer.getRidOfSearchResultsData,
-        // getRidOfSearchValue: state.carouselDataReducer.getRidOfSearchValue,
         ridOffKeywords: state.carouselDataReducer.ridOffKeywords,        
     }
   }

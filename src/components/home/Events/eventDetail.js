@@ -3,17 +3,17 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import {fetchPressReleaseDetails} from "../../actions";
-import '../../content/styles/subSectionHeaderImage.css';
+import {fetchPressReleaseDetails} from "../../../actions";
+import '../../../content/styles/subSectionHeaderImage.css';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
-import PressReleaseHeader from './pressReleaseHeader';
-import PressReleaseBody from './pressReleaseBody';
-import LazyImage from '../shared/LazyImage';
-import Header from '../shared/Breadcrumb/breadcrumb_container'
+import PressReleaseHeader from '../../PressReleases/pressReleaseHeader';
+import PressReleaseBody from '../../PressReleases/pressReleaseBody';
+import LazyImage from '../../shared/LazyImage';
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 
 import moment from 'moment';
 
-class PressReleaseDetail extends Component {
+class EventDetail extends Component {
 
   componentDidMount() {
     const {slug} = this.props.match.params;
@@ -98,4 +98,4 @@ class PressReleaseDetail extends Component {
 function mapStateToProps(state) {
   return {prd: state.resources.pressRelease.details};
 }
-export default connect(mapStateToProps, {fetchPressReleaseDetails})(PressReleaseDetail);;
+export default connect(mapStateToProps, {fetchPressReleaseDetails})(EventDetail);;

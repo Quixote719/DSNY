@@ -33,7 +33,6 @@ class SubSectionDropdown extends Component {
 
   render() {
     const {List} = this.props;
-    console.log(List);
     return (
       <div>
         <div className='SubSectionDropdown'>

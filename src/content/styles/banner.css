@@ -29,18 +29,22 @@
   color: #FFFFFF;
   font-size: 14px;
   font-weight: bold;
-  line-height: 23px;
-  padding-top: 15px;
+  padding-top: 10px;
   background: url('../images/Darkgreen.png');
 }
 
+.BreadcrumbList>container {
+  padding-left: 0;
+}
+
 .BreadcrumbHeaderTitleSection {
-  height: 73px;
+  height: 95px;
   color: #FFFFFF;
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: -1px;
-  line-height: 48px;
+  padding-top: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: url('../images/Darkgreen.png');
 }
 
