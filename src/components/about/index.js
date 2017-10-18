@@ -93,6 +93,7 @@ class About extends Component {
                 case 'about-bureaus':{
                   BureausProps.title = item.header;
                   BureausProps.cards = item.cards.slice(0, 6);
+                  BureausProps.CardType = 1;
                   break;
                 }
                 case 'about-strategic-plan':{

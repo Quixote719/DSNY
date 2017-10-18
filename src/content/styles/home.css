@@ -174,8 +174,8 @@
     right: 41px;
     color: #7CC04B!important;
 }
-input:focus::-webkit-input-placeholder{ 
-    color: transparent!important; 
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
 }
 .react-autosuggest__input--focused{
     background-color: red!important;
@@ -188,7 +188,7 @@ input:focus::-webkit-input-placeholder{
     line-height: 17px;
 }
 /* input[type=text]:focus{
-    -webkit-text-fill-color: white;    
+    -webkit-text-fill-color: white;
 } */
 input.ridOfSearch:focus {
     box-shadow: none !important;
@@ -363,15 +363,15 @@ input.serviceRequestSearch:focus {
     text-align: center;
 }
 .downloadAppTitle{
-    color: #000000;	
-    font-size: 36px;	
-    font-weight: bold;	
-    letter-spacing: -1px;	
+    color: #000000;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1px;
     line-height: 33px;
 }
 .downloadInfoPart1{
     width: 480px;
-    padding-top: 22px;    
+    padding-top: 22px;
     font-size: 17.5px;
     color: #333333 ;
     line-height: 21px;
@@ -384,8 +384,8 @@ input.serviceRequestSearch:focus {
     line-height: 21px;
 }
 .downloadAppContainer{
-    padding-left: 20px;
-    padding-right: 20px;
+    /*padding-left: 20px;*/
+    padding-right: 0px;
     padding-top: 56px;
 }
 .downloadAppContainerParent{
@@ -459,6 +459,8 @@ input.serviceRequestSearch:focus {
     }
     .searchCollectionParent {
         margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     #ridSearch {
         top: 36px;
@@ -528,11 +530,10 @@ input.serviceRequestSearch:focus {
         margin-right: 14px;
     }
     .searchRidParent {
+        padding-left: 15px;
         padding-right: 15px;
     }
-    .searchCollectionParent {
-        padding-left: 15px;
-    }
+
     .programImageDiv {
         margin-top: 20.6px;
     }
@@ -640,8 +641,8 @@ input.serviceRequestSearch:focus {
         padding-top: 15px;
     }
     .downloadAppTitle{
-        font-size: 18px;	
-        font-weight: bold;	
+        font-size: 18px;
+        font-weight: bold;
         line-height: 33px;
     }
     .downloadAppContainer{
@@ -733,8 +734,8 @@ input.serviceRequestSearch:focus {
         width: 708px;
     }
     .programContainer>.row {
-        margin-left: 0;
-        width:100%;
+        /*margin-left: 0;*/
+        /*width:100%;*/
     }
     .serviceRequestCol {
         display: none !important;
@@ -750,13 +751,13 @@ input.serviceRequestSearch:focus {
         height: 165px;
         width: 25%;
         display: inline-block;
-        padding: 0 5px;
+        padding: 0 8px;
     }
     .searchRidParent {
-        padding-right: 15px;
+        padding-right: 8px;
     }
     .searchCollectionParent {
-        padding-left: 15px;
+        padding-left: 8px;
     }
     .programImageDiv {
         margin-top: 20.6px;
@@ -943,14 +944,14 @@ input.serviceRequestSearch:focus {
         height: 165px;
         width: 25%;
         display: inline-block;
-        padding: 0 5px;
+        padding: 0 8px;
     }
-    .searchRidParent {
+    /*.searchRidParent {
         padding-right: 15px;
-    }
-    .searchCollectionParent {
-        padding-left: 15px;
-    }
+    }*/
+    /*.searchCollectionParent {
+
+    }*/
     .programImageDiv {
         margin-top: 20.6px;
     }
@@ -1034,8 +1035,8 @@ input.serviceRequestSearch:focus {
         padding-top: 15px;
     }
     .downloadAppTitle{
-        font-size: 18px;	
-        font-weight: bold;	
+        font-size: 18px;
+        font-weight: bold;
         line-height: 33px;
     }
     .downloadAppContainer{
@@ -1081,8 +1082,8 @@ input.serviceRequestSearch:focus {
         width: 940px;
     }
     .programContainer>.row {
-        margin-left: 0;
-        width: 100%;
+        /*margin-left: 0;*/
+        /*width: 100%;*/
     }
     .serviceRequestCol {
         display: none !important;
@@ -1098,7 +1099,7 @@ input.serviceRequestSearch:focus {
         height: 210px;
         width: 25%;
         display: inline-block;
-        padding: 0 5px;
+        padding: 0 8px;
     }
     .serviceRequestTitleTablet {
         padding-left: 26px;

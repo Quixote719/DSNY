@@ -6,23 +6,19 @@ class TitleCard extends Component {
   render() {
     const styles={
       narrow:{
-        'width': '220px',
         'height': '90px',
         'display':'inline-block',
       },
       narrow_border:{
-        'width': '220px',
         'height': '90px',
         'display':'inline-block',
         'border': '1px solid #7CC04B'
       },
       wide:{
-        'width': '303px',
         'height': '90px',
         'display': 'inline-block',
       },
       wide_border:{
-        'width': '303px',
         'height': '90px',
         'display': 'inline-block',
         'border': '1px solid #7CC04B'
@@ -50,12 +46,14 @@ class TitleCard extends Component {
         break;
       }
     }
+    // let link = ''||this.props.link;
+    let link = this.props.link||'/about/bureaus';
     return (
-      <Link to='/title'>
-        <div style = {CardType} className='CardTitle'>
-                {this.props.title}
-        </div>
-      </Link>
+          <Link to={link}>
+              <div style = {CardType} className='CardTitle'>
+                      {this.props.title}
+              </div>
+          </Link>
     );
   };
 };

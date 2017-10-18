@@ -16,7 +16,7 @@ class ContentCard extends Component {
         'display':'inline-block'
       },
       large:{
-        'width': '617px',
+        'width': '610px',
         'height': '200px',
         'padding': '20px',
         'display':'inline-block'

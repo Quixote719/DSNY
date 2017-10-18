@@ -60,11 +60,13 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
+  width: 100%;
 }
 
 .FoundationSp{
-  height: 6px;
+  height: 4px;
 }
+
 
 @media only screen and (max-width: 1900px) {
   .locations{
@@ -73,20 +75,16 @@
     overflow: hidden!important;
   }
 }
-
-@media only screen and (max-width: 940px) {
+@media only screen and (max-width: 991px) {
   .LeadershipRight{
     width: 60%;
-  }
-  .SmallLeftSec{
-    width: 100%;
-    display: block;
   }
   .leftSec{
     width: 100%;
     display: block;
   }
   .rightSec{
+    margin-left: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -95,6 +93,17 @@
   .FoundationSp{
     display: none;
   }
+  .SmallLeftSec{
+    width: 100%;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+
+
+
+
 }
 
 @media only screen and (max-width: 599px) {

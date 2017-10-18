@@ -30,7 +30,6 @@ class Bureaus extends Component {
                   case 'bureaus-cards-section':{
                     BureausCards.cards = item.cards;
                     BureausCards.CardType = 1;
-                    console.log(BureausCards);
                     break;
                   }
                   default:{

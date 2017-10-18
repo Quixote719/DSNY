@@ -32,7 +32,7 @@
 }
 .upperHeaderTitle2{
     padding-top: 4px;
-    padding-left: 5px; 
+    padding-left: 5px;
     color: white;
     font-family: "Helvetica";
     font-weight: bold;
@@ -42,17 +42,17 @@
     float:right;
 }
 .middleHeader{
-    padding-left: 20px;
-    padding-right: 5px;
-    width: 958px;
+    padding-left: 5px;
+    /*padding-right: 5px;*/
+    width: 940px;
 }
 .middleHeaderTextLeft{
     display: inline-block;
     padding-top: 32px;
     padding-bottom: 24px;
-    color: #666666;	
-    font-family: "Helvetica Neue";	
-    font-size: 15px;	
+    color: #666666;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
     line-height: 17px;
 }
 .middleHeaderLogo{
@@ -61,7 +61,7 @@
     padding-bottom: 8px;
 }
 .middleHeaderContainerParent{
-    padding-right: 10px;
+    /*padding-right: 10px;*/
     border-bottom: 1px solid transparent;;
 }
 .headerTabs>ul{
@@ -149,7 +149,7 @@
     width: 216px;
     padding-left: 10px;
     font-weight: bold;
-    color: #666666;;	
+    color: #666666;;
     background-repeat: no-repeat;
     background-position: right 13px center;
     border-radius: 3px;
@@ -209,7 +209,7 @@ input.searchMessagesInput:focus {
     font-size: 18px;
     font-weight: bold;
     font-style: italic;
-    color: #096543;    
+    color: #096543;
 }
 .modalTextSizePara{
     margin-bottom: 17px;
@@ -227,14 +227,14 @@ input.searchMessagesInput:focus {
 .selectedParent>a{
     border-right: 1px solid #E0E0E0;
     color: white !important;
-    background-color: #096543!important;   
+    background-color: #096543!important;
     width: inherit;
 }
 .homeLogoHeader.selectedParent>a {
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
 }
 .navbar-default .navbar-nav>.active>a{
-    background-image: none;     
+    background-image: none;
     box-shadow: none !important;
     background-color: inherit;
 }
@@ -286,7 +286,7 @@ input.searchMessagesInput:focus {
     background-color: rgba(0, 0, 0, .1);
     width: 41px;
     height: 41px;
-    margin: -20px -52px 0;    
+    margin: -20px -52px 0;
     display: block;
     border-radius: 100%;
     position: absolute;
@@ -310,11 +310,11 @@ input.searchMessagesInput:focus {
     font-weight: bold;
     line-height: 38px;
     position: absolute;
-    right: 0; 
+    right: 0;
     bottom: 0px;
     left: 18px;
     color: #fff;
-    text-align: start; 
+    text-align: start;
 }
 .carousel-inner>.item:before, .carousel-inner>.item:after {
     z-index:-1;
@@ -326,7 +326,7 @@ input.searchMessagesInput:focus {
     border-radius:100px / 10px;
 }
 .carousel-inner>.item{
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;    
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 .carousel-indicators{
     display: none;
@@ -372,7 +372,7 @@ input.searchMessagesInput:focus {
 .searchMessagesInputIcon{
     position: absolute;
     top: 16px;
-    right: 11px;    
+    right: 11px;
     color: #767676!important;
     font-size: 15px!important
 }
@@ -392,7 +392,7 @@ input.searchMessagesInput:focus {
     display: none;
 }
 .newsEventsCarousel {
-    float: none; 
+    float: none;
     width: auto;
 }
 .carousel-indicators {
@@ -407,20 +407,20 @@ input.searchMessagesInput:focus {
         padding: 0;
     }
     #slideNav>.container>.navbar-brand>img {
-     display: inline; 
+     display: inline;
 }
     .mobileSanitationHeaderText{
     margin-left: 12px;
     margin-top: 24px;
     position: absolute;
     display: inline-block;
-    color: #000000;	
-    font-size: 22px;	
-    font-weight: bold;	
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 27px;
     }
     .middleHeaderLogoMobile {
-    margin-left: 17px;      
+    margin-left: 17px;
     width: 45.96px;
     height: 45.98px;
     margin-top: 14px;
@@ -428,14 +428,14 @@ input.searchMessagesInput:focus {
     .searchMessagesInput {
         margin-bottom: 20px;
         margin-left: 0px;
-        margin-top: 23px;        
+        margin-top: 23px;
         height: 40px;
         border: 1px solid #D5D5D5;
         border-radius: 3px;
         width: 100%;
         padding-left: 14px;
         font-weight: 400;
-        color: #B6B6B6;        
+        color: #B6B6B6;
     }
     .mainLinks {
         position: relative;
@@ -552,13 +552,13 @@ input.searchMessagesInput:focus {
     }
     .bottomHeaderTitles{
         text-align: left;
-        border: none;        
+        border: none;
         width: 100%;
     }
     .bottomHeaderTitles>a{
-        color: #333333!important;	
-        font-size: 16px;	
-        font-weight: 700;	
+        color: #333333!important;
+        font-size: 16px;
+        font-weight: 700;
         line-height: 19px;
     }
     .navbar-default .navbar-toggle .icon-bar {
@@ -577,7 +577,7 @@ input.searchMessagesInput:focus {
     .carousel-caption{
     margin-left: 0px;
     padding-bottom: 0;
-    padding-top: 40px;    
+    padding-top: 40px;
     font-size: 16px!important;
     text-shadow: none;
     padding-left: 11px;
@@ -625,7 +625,7 @@ input.searchMessagesInput:focus {
     width: auto;
 }
 #navBar>ul>.homeLogoHeader.selectedParent.active>a {
-    background: url('../images/nav-sprite.png') no-repeat 11px -28.2px;    
+    background: url('../images/nav-sprite.png') no-repeat 11px -28.2px;
 }
 .homeLogoHeader:hover a{
     background: url('../images/nav-sprite.png') no-repeat 10.5px -28.2px;
@@ -698,7 +698,7 @@ input.searchMessagesInput:focus {
     display: none;
 }
 .newsEventsCarousel {
-    float: none; 
+    float: none;
     width: auto;
 }
 .carousel-indicators {
@@ -713,20 +713,20 @@ input.searchMessagesInput:focus {
         padding: 0;
     }
     #slideNav>.container>.navbar-brand>img {
-     display: inline; 
+     display: inline;
 }
     .mobileSanitationHeaderText{
     margin-left: 12px;
     margin-top: 24px;
     position: absolute;
     display: inline-block;
-    color: #000000;	
-    font-size: 22px;	
-    font-weight: bold;	
+    color: #000000;
+    font-size: 22px;
+    font-weight: bold;
     line-height: 27px;
     }
     .middleHeaderLogoMobile {
-    margin-left: 17px;      
+    margin-left: 17px;
     width: 45.96px;
     height: 45.98px;
     margin-top: 14px;
@@ -734,14 +734,14 @@ input.searchMessagesInput:focus {
     .searchMessagesInput {
         margin-bottom: 20px;
         margin-left: 0px;
-        margin-top: 23px;        
+        margin-top: 23px;
         height: 40px;
         border: 1px solid #D5D5D5;
         border-radius: 3px;
         width: 100%;
         padding-left: 14px;
         font-weight: 200;
-        color: #B6B6B6;        
+        color: #B6B6B6;
     }
     .mainLinks {
         margin-left: 16px;
@@ -854,13 +854,13 @@ input.searchMessagesInput:focus {
     }
     .bottomHeaderTitles{
         text-align: left;
-        border: none;        
+        border: none;
         width: 100%;
     }
     .bottomHeaderTitles>a{
-        color: #333333!important;	
-        font-size: 16px;	
-        font-weight: 700;	
+        color: #333333!important;
+        font-size: 16px;
+        font-weight: 700;
         line-height: 19px;
     }
     .navbar-default .navbar-toggle .icon-bar {
