@@ -28,7 +28,6 @@ class HowToGetRidOf extends Component {
             <div className = "howToGetRidOfParent">
             <Header title='How to Get Rid of ...' breadCrumbList= "" />
             <SearchPage getRidOfSearchResults={this.props.getRidOfSearchResults?this.props.getRidOfSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData?this.props.getRidOfSearchResultsData:""} ridOffKeywords={this.props.ridOffKeywords?this.props.ridOffKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
-            {/* <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/> */}
             </div>
         )
     }

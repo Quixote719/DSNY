@@ -15,15 +15,24 @@
 .react-autosuggest__suggestions-container--open>ul>li{
     border-bottom: 1px solid #F0F0F0;    
 }
+.react-autosuggest__suggestions-container--open>ul>li:last-child{
+    border-bottom: 0px solid transparent;    
+}
 .react-autosuggest__suggestions-container--open>ul>li>a{
     color: black;
 }
 .react-autosuggest__suggestions-container--open>ul>li>a:hover{
     color: white;
 }
+.react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted{
+    background-color: #7CC04B;
+}
+.react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted>a{
+    color: white;
+}
 .react-autosuggest__suggestions-container--open>ul>li:hover{
     background-color: #7CC04B;
-    color: white;
+    color: #ffffff;
 }
 .ridOfSuggestions{
     padding-left: 16px;
@@ -123,3 +132,39 @@
     line-height: 22px;
     padding-top: 32px;
 }
+.searchBoxPaginate{
+    width: 100%;
+}
+.searchBoxPaginate>li{
+    text-align: center;
+}
+.searchBoxPaginate>li:first-child{
+    margin-right: calc(50% - 35px);
+    float: left;
+}
+.searchBoxPaginate>li:last-child{
+    float: right;
+}
+.searchBoxPaginate>li>a{
+    color: #00764E !important;
+}
+.searchBoxPaginate>li>a:focus{
+    outline: none;
+    background-color: inherit;
+}
+.searchBoxPaginate>li.active>a{
+    background-color: #00764E !important;
+    border-color: #00764E;
+    color: white !important;
+}
+.searchBoxPaginate>li>a:hover{
+    background-color: #00764E !important;
+    border-color: #00764E;
+    color: white !important;
+}
+.searchBoxPaginate>li.disabled>a{
+    background-color: #EEEEEE !important;
+}
+input::-ms-clear {
+    display: none;
+  }

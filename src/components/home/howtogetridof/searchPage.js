@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import * as actions from '../../../actions/actions_home';
 import { connect } from 'react-redux';
 import styles from '../../../content/styles/home.css';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Pagination } from 'react-bootstrap';
 import _ from "lodash";
 import Banner from '../../shared/banner';
 import Autosuggest from 'react-autosuggest';
 import {Link} from "react-router-dom";
+import paginationleftArrow from '../../../content/images/arrow_left_pagination.png';
+import paginationrightArrow from '../../../content/images/arrow_right_pagination.png';
 
 const getSuggestionValue = suggestion => suggestion;
 const renderSuggestion = suggestion => (
@@ -17,15 +19,17 @@ const renderSuggestion = suggestion => (
         </div>
     </Link>
   );
+let pageSize = 2;  
 class SearchPage extends Component {
     constructor(props, context) {
         super(props, context);
         this.searchResultPage = this.searchResultPage.bind(this);        
-        // this.ridOfSearchResults = this.ridOfSearchResults.bind(this);        
-        
         this.state = {
+            activePage: 1,            
             value: this.props.keyword,
             suggestions: [],
+            placeholder: "Enter your search term",
+            checkInputresults: "",
           };
     }
     getSuggestions = value => {
@@ -46,13 +50,13 @@ class SearchPage extends Component {
           suggestions: []
         });
       };
-    onChange = (event, { newValue }) => {
+    onChange = (event, { newValue, method }) => {
         this.setState({
-          value: newValue
+          value: newValue,
         });
       };
-    ridOfSearchResults = () =>{
-        return _.map(this.props.getRidOfSearchResultsData, (item,index) => {
+    ridOfSearchResults = (messageList) =>{
+        return _.map(messageList, (item,index) => {
             return (
                 <div key={index}>
                 <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
@@ -68,10 +72,37 @@ class SearchPage extends Component {
         });
       };
     searchResultPage(event,{suggestion}){
+        this.setState({
+            checkInputresults: "clearBoxNotChecked"
+         });
         this.props.getRidOfSearchResults(suggestion);   
     }
-
+    clearSearchBox(){
+        this.setState({
+            value: "",
+            checkInputresults: "clearBoxChecked"
+         });
+    }
+    handleKeyPress = (event) => {
+        if(event.key == 'Enter'){
+            this.props.getRidOfSearchResults(this.state.value);   
+            this.setState({
+                checkInputresults: "clearBoxNotChecked"
+             });           
+        }
+      }
+    handleSelect = (eventKey) => {
+        this.setState({
+            activePage: eventKey
+        });
+    }
     render() {
+        const activePage = this.state.activePage;
+        let length = this.props.getRidOfSearchResultsData.length;
+        length = Math.ceil(length / pageSize);
+        const indexOfLast = activePage * pageSize;
+        const indexOfFirst = indexOfLast - pageSize;
+        const messageList = this.props.getRidOfSearchResultsData.slice(indexOfFirst, indexOfLast);
 
         return (
             <div className = "howToGetRidOfParent">
@@ -91,17 +122,28 @@ class SearchPage extends Component {
                                     onChange: this.onChange,
                                     className: "ridOfSearchResults",
                                     placeholder: this.state.placeholder,
+                                    onKeyPress: this.handleKeyPress
                                 }}/>
-
-                                <i className="fa fa-search collectionSearch" id="ridOfSearchResults"></i>
+                                <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.state.value!==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
+                                <i className="fa fa-search collectionSearch" style={this.state.value ==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
                             </div>
                     </Col>
                 </Row>
-                <div className ="noOfSearchResults">{this.props.noOfSearchResults} Search Results</div>                
+                <div style={this.state.checkInputresults == "clearBoxChecked"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
 
-                <div>
-                    {this.ridOfSearchResults()}
+                <div style={this.state.checkInputresults == "clearBoxChecked"?{display: 'none'}:{display: 'block'}}>
+                    {this.ridOfSearchResults(messageList)}
                 </div>
+                <Pagination className="searchBoxPaginate"
+                        style={this.state.checkInputresults == "clearBoxChecked" || this.props.noOfSearchResults <= 0 ? {display: 'none'}:{display: 'block'}}
+                        prev={<img src={paginationleftArrow} alt="paginationleftArrow" />}
+                        next={<img src={paginationrightArrow} alt="paginationrightArrow" />}
+                        ellipsis
+                        boundaryLinks
+                        items={length}
+                        maxButtons={2}
+                        activePage={this.state.activePage}
+                        onSelect={this.handleSelect} />
             </div>
             </div>
         )
