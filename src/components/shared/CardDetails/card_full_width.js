@@ -11,18 +11,19 @@ class cardFullWidth extends Component {
   cardLayout(cardDetails) {
     if (cardDetails) {
 
+      let {link} = this.props;
       let title;
       if (cardDetails.title != '') {
         title = (
           <div key={cardDetails.id}>
             <Col xs={12}>
-              <div className='fullwidthcardtitle'>
-
-                <div dangerouslySetInnerHTML={{
+              {link
+                ? <Link className='fullwidthcardtitle' to={link}><div dangerouslySetInnerHTML={{
+                    __html: cardDetails.title
+                  }}/></Link>
+                : <div className='fullwidthcardtitle' dangerouslySetInnerHTML={{
                   __html: cardDetails.title
-                }}/>
-
-              </div>
+                }}/>}
             </Col>
           </div>
         )
