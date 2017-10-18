@@ -9,15 +9,22 @@ html body {
   font-size: 16px;
 }
 
+
 .row {
     margin-right: -8px;
     margin-left: -8px;
 }
 
-[class*="col"]{
-  padding-right: 8px!important;
-  padding-left: 8px!important;
+[class*="navbar"]{
+  padding:0;
 }
+
+[class*="col-"]{
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
 
 .SContainer {
   width: 940px;
