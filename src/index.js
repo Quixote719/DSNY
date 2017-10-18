@@ -21,6 +21,7 @@ import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
 import CardDetailContainer from './components/shared/CardDetails/card_details_container';
 import DSNYEvents from './components/home/Events/event_list_by_borough'
+import EventDetail from './components/home/Events/eventDetail'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -57,8 +58,9 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/DSNYEvents"} component={DSNYEvents}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
 
             </Switch>
           </div>

@@ -2,6 +2,7 @@ export const CHANGE_ROUTE = 'CHANGE_ROUTE';
 
 //Home Section
 export const FETCH_EVENT_SUB_LIST = 'FETCH_EVENT_SUB_LIST';
+export const FETCH_EVENT_DETAILS = 'FETCH_EVENT_DETAILS';
 
 //Resources Section
 export const RESOURCES_LANDING_SECTION = 'RESOURCES_LANDING_SECTION';
