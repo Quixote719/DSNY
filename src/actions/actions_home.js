@@ -111,9 +111,9 @@ export function fetchEventSubList(borough) {
     }
 }
 
-export function fetchPressReleaseDetails(slug) {
+export function fetchEventDetails(slug) {
   return function(dispatch) {
-    axios.get(FETCH_EVENT_DETAILS_URL.replace('eventID', slug)).then((data) => {
+    axios.get(FETCH_EVENT_DETAILS_URL.replace(':eventID', slug)).then((data) => {
       dispatch({type: types.FETCH_EVENT_DETAILS, payload: data})
     })
   }

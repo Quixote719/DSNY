@@ -1,7 +1,6 @@
 .serviceRequestParentTablet {
     display: none;
 }
-
 .carouselLeftPanel {
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -13,7 +12,17 @@
     width: 105px;
     background-color: #fff;
 }
-
+.carouselContainer {
+    position: relative;
+}
+.carouselParentBoxShadow {
+    position: absolute;
+    width: 820px;
+    background: url(http://www1.nyc.gov/assets/home/images/modules/homepage-hero/bg-shadow.png) no-repeat center bottom;
+    height: 20px;
+    bottom: 41px;
+    right: 0;
+}
 .statusTitle {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -431,6 +440,9 @@ input.serviceRequestSearch:focus {
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (max-width: 599px) {
+    .carouselParentBoxShadow{
+        display: none;
+    }
     .carouselLeftPanel {
         display: none;
     }
@@ -666,6 +678,15 @@ input.serviceRequestSearch:focus {
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .carouselParentBoxShadow {
+        left: 0px;
+        position: absolute;
+        width: 712px;
+        background: url(http://www1.nyc.gov/assets/home/images/modules/homepage-hero/bg-shadow.png) no-repeat center bottom;
+        height: 20px;
+        bottom: 24px;
+        right: 0px;
+    }
     .carouselLeftPanel {
         display: none;
     }
@@ -838,6 +859,9 @@ input.serviceRequestSearch:focus {
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .carouselParentBoxShadow{
+        display: none;
+    }
     .carouselLeftPanel {
         display: none;
     }
@@ -1068,6 +1092,9 @@ input.serviceRequestSearch:focus {
 /*BETWEEN DESKTOP AND TABLET*/
 
 @media (min-width: 960px) and (max-width: 1284px) {
+    .carouselParentBoxShadow{
+        bottom: 53px;
+    }
     .carouselLeftPanel {
         display: block;
     }

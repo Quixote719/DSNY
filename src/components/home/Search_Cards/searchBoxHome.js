@@ -10,10 +10,15 @@ import _ from "lodash";
 import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
+import { createBrowserHistory } from 'history'
+import {browserHistory} from "react-router";
+
+const history = createBrowserHistory()          
 
 class SearchBoxHome extends Component {
     constructor(props, context) {
         super(props, context);
+        this.handleKeyPress = this.handleKeyPress.bind(this);                
         this.state = {
             value: "",
             suggestions: [],
@@ -51,13 +56,6 @@ class SearchBoxHome extends Component {
           value: newValue
         });
       };
-      inputFocused = (value) =>{
-        // flag = 1
-        // if(flag ==  1){
-        //   placeholder = " "
-        // }
-        return value.trim().length > 0;
-    }
     resetPlaceHolder = () =>{
       this.setState({
         placeholder: "How to get rid of..."
@@ -67,6 +65,12 @@ class SearchBoxHome extends Component {
       this.setState({
         placeholder: " "
       })
+    }
+    handleKeyPress = (event) => {
+      if(event.key == 'Enter'){ 
+        this.props.test.pushHistory.history.push("/howtogetridof/"+this.state.value)
+        console.log('enter press here! ')
+      }
     }
     render() {
 
@@ -88,6 +92,7 @@ class SearchBoxHome extends Component {
                                 placeholder: this.state.placeholder,
                                 onBlur: this.resetPlaceHolder,
                                 onFocus: this.setPlaceHolder,
+                                onKeyPress: this.handleKeyPress,                                
                             }}/>
                         <i className="fa fa-search ridSearch" id="ridSearch"></i>
                         <div className={this.state.suggestions != "" ? "noexampleRidSearch" : "exampleRidSearch"}> Example: battery, mattress, TVs </div>
