@@ -114,7 +114,7 @@ class CardSec extends Component {
         let cType = dataObject.card_data.card_type !== "reference-details-card"
 
         let layoutTrigger = cType && l > 2
-        console.log(layoutTrigger);
+
         body = (
           <div>
             <Row className='nopadding'>
@@ -157,8 +157,8 @@ class CardSec extends Component {
 
     } else {
       body = (
-        <div>{this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
-        </div>
+        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
+        </Row>
       )
     }
 

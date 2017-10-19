@@ -2,6 +2,23 @@
   background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
 }
 
+.ColorBanner{
+  	height: 124px;
+    color: #FFFFFF;
+    background-color: #B3D234;
+}
+
+.ColorBannerTitle{
+    margin-top: 25px;
+  	font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.ColorBannerContent{
+  	font-size: 17.5px;
+}
+
 .GTexture {
   height: 215px;
   background: url('../images/Darkgreen.png');
@@ -21,6 +38,7 @@
 }
 
 .BreadcrumbHeaderTitleSection {
+  padding-top: 13px;
   height: 95px;
   color: #FFFFFF;
   font-size: 48px;
