@@ -33,7 +33,7 @@ class LawsListItem extends Component {
                 </Dotdotdot>
               </Col>
               <Col xs={12}>
-                <Link to='/resources/laws/proposed-rules'>
+                <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/resources/laws/proposed-rules`}>
                   <div className='lawsLink'>SEE ALL RULES</div>
                 </Link>
               </Col>

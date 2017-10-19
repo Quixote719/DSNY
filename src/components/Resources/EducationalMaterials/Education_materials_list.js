@@ -44,7 +44,7 @@ class EducationalMaterialsList extends Component {
           <Row>
             {this.renderPosts(promotional)}
           </Row>
-          <Link to="/resources/educational-materials"><SubSectionButton title='VIEW ALL'/></Link>
+          <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/resources/educational-materials`}><SubSectionButton title='VIEW ALL'/></Link>
         </div>
       </div>
     );

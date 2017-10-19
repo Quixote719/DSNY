@@ -30,7 +30,19 @@ class SearchPage extends Component {
             suggestions: [],
             placeholder: "Enter your search term",
             checkInputresults: "",
+            searchResult: "",
           };
+    }
+    componentWillMount(){
+        this.setState({
+            searchResult: "noSearchResults"
+          });
+        if(this.props.keyword !==""){
+            this.setState({
+                searchResult: ""
+            });
+        }
+        
     }
     getSuggestions = value => {
         const inputValue = value.trim().toLowerCase();
@@ -73,7 +85,8 @@ class SearchPage extends Component {
       };
     searchResultPage(event,{suggestion}){
         this.setState({
-            checkInputresults: "clearBoxNotChecked"
+            checkInputresults: "clearBoxNotChecked",
+            searchResult: ""
          });
         this.props.getRidOfSearchResults(suggestion);   
     }
@@ -87,7 +100,8 @@ class SearchPage extends Component {
         if(event.key == 'Enter'){
             this.props.getRidOfSearchResults(this.state.value);   
             this.setState({
-                checkInputresults: "clearBoxNotChecked"
+                checkInputresults: "clearBoxNotChecked",
+                searchResult: ""
              });           
         }
       }
@@ -129,7 +143,7 @@ class SearchPage extends Component {
                             </div>
                     </Col>
                 </Row>
-                <div style={this.state.checkInputresults == "clearBoxChecked"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
+                <div style={this.state.checkInputresults == "clearBoxChecked" || this.state.searchResult =="noSearchResults"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
 
                 <div style={this.state.checkInputresults == "clearBoxChecked"?{display: 'none'}:{display: 'block'}}>
                     {this.ridOfSearchResults(messageList)}

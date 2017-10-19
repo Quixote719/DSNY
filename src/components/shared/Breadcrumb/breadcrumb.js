@@ -12,7 +12,7 @@ class BreadcrumbSec extends Component {
     return _.map(breadcrumbList, Item => {
 
       let linkUrl = Item.url
-        ? <Link to={Item.url}>{Item.display_name}</Link>
+        ? <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.url}>{Item.display_name}</Link>
         : <div>{Item.display_name}</div>
       return (
         <Breadcrumb.Item key={Item.page_slug}>

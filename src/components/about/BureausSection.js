@@ -9,13 +9,6 @@ import '../../content/styles/dsnyCard.css';
 
 class BureausSection extends Component {
 
-  renderPosts(cards = []) {
-    return _.map(cards, item => {
-        return (
-              <TitleCard title={item.title} type='2' key={item.id} />
-        );
-      })
-  }
 
   ViewAllButton() {
       return (<SubSectionButton title='SEE ALL BUREAUS'/>);
@@ -26,7 +19,7 @@ class BureausSection extends Component {
         <div>
           <SubSectionHeader title={this.props.BureausProps.title}/>
           <CardBox info={this.props.BureausProps}/>
-          <Link to="/about/bureaus">
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus"}>
             {this.ViewAllButton()}
           </Link>
         </div>
