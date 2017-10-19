@@ -29,11 +29,11 @@ class CardType extends Component {
   }
 
   cardLayout(type, style) {
-
+    console.log(style);
     switch (type) {
       case 'iUrl':
         return (
-          <Col className='nopadding' xs={12} sm={style == 'RightAlligned'
+          <Col className='nopadding' xs={12} sm={style == 'FullWidth'
             ? 6
             : 12} md={style == 'FullWidth'
             ? 4
@@ -53,7 +53,7 @@ class CardType extends Component {
         );
       default:
         return (
-          <Col className='nopadding' xs={12} sm={style == 'RightAlligned'
+          <Col className='nopadding' xs={12} sm={style == 'FullWidth'
             ? 6
             : 12} md={style == 'FullWidth'
             ? 4
