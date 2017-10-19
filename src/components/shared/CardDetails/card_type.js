@@ -29,7 +29,7 @@ class CardType extends Component {
   }
 
   cardLayout(type, style) {
-    console.log(style);
+
     switch (type) {
       case 'iUrl':
         return (
