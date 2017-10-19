@@ -87,7 +87,7 @@ class Header extends React.Component {
                     <Navbar.Toggle className="navbarToggle" onClick={this.showNavModal} />
                     <Navbar.Collapse id="navBar">
                         <Nav className="mainLinks">
-                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/' || url === '/home' ? 'homeLogoHeader selectedParent' : 'homeLogoHeader'} onClick={() => this.handleClickHeader()} >
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/' || url === process.env.REACT_APP_SITE_RELATIVE_URL + '/home' ? 'homeLogoHeader selectedParent' : 'homeLogoHeader'} onClick={() => this.handleClickHeader()} >
                                 <NavItem eventKey={1}>Home</NavItem>
                             </LinkContainer>
                             <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/about' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
