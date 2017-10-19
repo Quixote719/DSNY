@@ -42,7 +42,7 @@ class StrategicPlan extends Component {
               PlanProps.button = true;
               PlanProps.ButtonTitle = 'SEE FULL PLAN';
               PlanProps.cards = item.cards;
-              PlanProps.CardType = 2;
+              PlanProps.CardType = item.card_data.card_type;
               break;
           }
           case 'strategic-plan-bottom-files-section':{

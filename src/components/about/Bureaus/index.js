@@ -29,7 +29,7 @@ class Bureaus extends Component {
                   }
                   case 'bureaus-cards-section':{
                     BureausCards.cards = item.cards;
-                    BureausCards.CardType = 1;
+                    BureausCards.CardType = item.card_data.card_type;
                     break;
                   }
                   default:{
