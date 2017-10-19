@@ -13,6 +13,7 @@ import ScrollToTop from './scrollToTop';
 
 import Home from './components/home';
 import About from './components/about';
+import Location from './components/about/Location';
 import Leadership from './components/about/Leadership';
 import Bureaus from './components/about/Bureaus';
 import StrategicPlan from './components/about/StrategicPlan';
@@ -50,6 +51,7 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} component={Home}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan"} component={StrategicPlan}/>
