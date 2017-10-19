@@ -37,7 +37,7 @@ class CardSec extends Component {
 
     if (Item.linked_page) {
       type = 'iUrl';
-      url = Item.linked_page.url
+      url = process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url
     }
     /**
     article-search-result-card | Article Search Result

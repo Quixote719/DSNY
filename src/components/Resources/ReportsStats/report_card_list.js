@@ -25,7 +25,7 @@ class ReportCardList extends Component {
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
       return (
-        <Link key={Item.id} to={`/resources/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
       );
     });
   }
@@ -33,7 +33,7 @@ class ReportCardList extends Component {
   ViewAllButton(l) {
     if (l > 4) {
       return (
-        <Link to="/resources/reports"><SubSectionButton title='VIEW ALL'/></Link>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/resources/reports"}><SubSectionButton title='VIEW ALL'/></Link>
       );
     } else {
       return null;

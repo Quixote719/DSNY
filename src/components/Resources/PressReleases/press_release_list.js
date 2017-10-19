@@ -29,7 +29,7 @@ class PressRelease extends Component {
   ViewAllButton(l) {
     if (l > 4) {
       return (
-        <Link to="/resources/press-releases"><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
       );
     } else {
       return null;

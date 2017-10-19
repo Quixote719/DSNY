@@ -14,7 +14,7 @@ class PressReleaseListItem extends Component {
         <Row>
           <Col xs={12} md={8}>
             <div >
-              <Link className='PressReleaseTitle' to={`/pressRelease/${this.props.slug}`}>
+              <Link className='PressReleaseTitle' to={process.env.REACT_APP_SITE_RELATIVE_URL+ `/pressRelease/${this.props.slug}`}>
                 <div dangerouslySetInnerHTML={{
                   __html: this.props.title
                 }}/>
