@@ -25,7 +25,7 @@ class Leadership extends Component {
             cards = this.renderCards(this.props.LeadershipData.data.sections.sections[0].cards);
             ProfileCards.cards = this.props.LeadershipData.data.sections.sections[0].cards;
             ProfileCards.CardSize = 1;
-            ProfileCards.CardType = 3;
+            ProfileCards.CardType = this.props.LeadershipData.data.sections.sections[0].card_data.card_type;
         }
     return (
       <div className="LeadershipPage greyBcg">
