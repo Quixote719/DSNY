@@ -125,7 +125,9 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={layoutTrigger
+                : cType
+                  ? 6
+                  : 9} md={layoutTrigger
                 ? 12
                 : cType
                   ? 8
@@ -138,7 +140,9 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={layoutTrigger
+                : cType
+                  ? 6
+                  : 3} md={layoutTrigger
                 ? 12
                 : cType
                   ? 4

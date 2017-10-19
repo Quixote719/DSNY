@@ -33,7 +33,7 @@ class CardType extends Component {
     switch (type) {
       case 'iUrl':
         return (
-          <Col className='nopadding' xs={12} sm={style == 'FullWidth'
+          <Col className='nopadding' xs={12} sm={style == 'RightAlligned'
             ? 6
             : 12} md={style == 'FullWidth'
             ? 4
