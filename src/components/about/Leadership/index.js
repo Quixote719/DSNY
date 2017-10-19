@@ -40,7 +40,7 @@ class Leadership extends Component {
     return _.map(cards, item => {
         return (
           <span key={item.id}>
-              <ProfileCard name={item.title} duty={item.content} image={item.image.file}/>
+              <ProfileCard name={item.title} duty={item.content} image={item.featured_image.base_path + item.featured_image.file}/>
           </span>
         );
       })
