@@ -26,7 +26,7 @@ class SearchCards extends Component {
             <div className="container searchContainerRidCollection">
                 <Row className="searchRow">
                     <Col xs={12} md={6} className="searchRidParent">
-                    <SearchBoxHome ridOffKeywords = {this.props.ridOffKeywords}/>
+                    <SearchBoxHome ridOffKeywords = {this.props.ridOffKeywords} test ={this.props}/>
                     </Col>
                     <Col xs={12} md={6} className="searchCollectionParent">
                         <div id="TextureSquare">

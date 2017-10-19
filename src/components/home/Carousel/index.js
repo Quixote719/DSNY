@@ -108,6 +108,8 @@ class CarouselData extends Component {
                             <a href="http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></a>
                         </li>
                     </ul>
+                    <div className="carouselParentBoxShadow">
+                    </div>
                     <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
                         <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
                     </span>} nextIcon={<span className="newsEventsCarouselIcon">
