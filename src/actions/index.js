@@ -9,7 +9,8 @@ import {
   FETCH_EVENTS_SUB_LIST_URL,
   FETCH_LANDING_PAGE_URL,
   FETCH_CARD_DETAILS_URL,
-  FETCH_DROPDOWN_LIST
+  FETCH_DROPDOWN_LIST,
+  FETCH_BUREAUS_DETAILS_URL,
 } from '../constants/ApiConstants';
 
 export function fetchLandinPageDetails(category) {
@@ -49,6 +50,14 @@ export function fetchPressReleaseList(year) {
   return function(dispatch) {
     axios.get(FETCH_PRESS_RELEASE_LIST_URL.replace(/:Year/g, year)).then((data) => {
       dispatch({type: types.FETCH_PRESS_RELEASE_LIST, payload: data})
+    })
+  }
+}
+
+export function fetchBureausDetails(slug) {
+  return function(dispatch) {
+    axios.get(FETCH_BUREAUS_DETAILS_URL.replace('id', slug)).then((data) => {
+      dispatch({type: types.FETCH_BUREAUS_DETAILS, payload: data})
     })
   }
 }
