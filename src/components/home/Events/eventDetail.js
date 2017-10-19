@@ -52,52 +52,54 @@ class EventDetail extends Component {
   renderPage(cardDetails) {
 
     if (cardDetails) {
-
-      //return _.map(cardDetails, cItems => {
-
-        // let banner;
-        // if (cItems.name != '') {
-        //   banner = (
-        //     <div key={_.random(0, 200, true)}>
-        //       <Header breadCrumbList={cItems.breadcrumb}/>
-        //     </div>
-        //   )
-        // }
-
-        // var sections;
-        // if (cItems.sections) {
-        //   sections = _.map(cItems.sections.sections, sec => {
-
-        //     if (sec.card_data) {
-        //       return (
-        //         <div key={sec.name}><PressReleaseBody data={sec}/></div>
-        //       )
-        //     }
-        //     return (
-        //       <div key={sec.name}>{this.rendertop(sec)}</div>
-        //     )
-        //   })
-        // }
-
-        // return (
-        //   <div key ={cItems.id}>
-        //     <div>{banner}</div>
-        //     <div classNameName='container'>{sections}</div>
-        //   </div>
-        // )
+        var mail = "mailTo:" + cardDetails.ContactEmail
+        var website = "" + cardDetails.Website
         return(
         <div>
              <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><a href="/">Home</a></li><li className=""><a href="/resources">Events</a></li></ol></div></div> </div></div>
+
+             <div className='container PressReleaseHeader'>
+              <Row>
+                <Col xs={12}>
+                  <div className='PressReleaseHeadertitle' dangerouslySetInnerHTML={{
+                    __html: cardDetails.EventName
+                  }}/>
+                </Col>
+                <Col xs={12}>
+                  <div className='patternLineGreen'></div>
+                </Col>
+
+              </Row>
+            </div>
         
-             <div>{cardDetails.Description}</div>    
+             <div className='container PressReleaseBody'>
+              <Row>
+                <Col xs={12} sm={8} md={9}>
+                  <div className='PressReleaseBodySubHeaders' dangerouslySetInnerHTML={{
+                    __html: cardDetails.EventDate
+                  }}/>
+                  <div className='PressReleaseBodycontact PressReleaseBodytext' dangerouslySetInnerHTML={{
+                    __html: cardDetails.Description
+                  }}/>
+                  <div className='PressReleaseBodytext' dangerouslySetInnerHTML={{
+                    __html: cardDetails.HouseNo + ' ' + cardDetails.Street + ' ' + cardDetails.Borough
+                  }}/>
+                  <div className="PressReleaseBodycontact">Website: <a href={website}>{cardDetails.Website}</a></div>
+                </Col>
+                <Col xs={12} sm={6} md={3}>
+                  <div className="nopadding col-xs-12">
+                    <div className="PressReleaseBodySubHeaders">Contact</div>
+                    <div className="PressReleaseBodycontact"><a href={mail}>{cardDetails.ContactEmail}</a></div>
+                    <div className="PressReleaseBodycontact">{cardDetails.ContactPhone}</div>
+                    <div className="patternLineGreen"></div>
+                  </div>
+                </Col>
+              </Row>
+            </div>
         </div>
             
         )
 
-      
-
-        //)
-      //});
     } else {
       return (
         <div>loading.....</div>
@@ -105,11 +107,6 @@ class EventDetail extends Component {
     }
   }
 };
-
-// function mapStateToProps(state) {
-//   return {prd: state.resources.pressRelease.details};
-// }
-// export default connect(mapStateToProps, {fetchPressReleaseDetails})(EventDetail);;
 
 function mapStateToProps(state) {
   return {prd: state.carouselDataReducer.EventDetails};
