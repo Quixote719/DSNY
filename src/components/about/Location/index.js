@@ -1,7 +1,7 @@
-import React from "react"
+import React , { Component } from "react"
 import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-
+import { withScriptjs, withGoogleMap, GoogleMap, Marker  } from "react-google-maps"
+import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel";
 const MyMapComponent = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyDhdvaSCBpX16gKXvcdUx29_k1M9WAk8jo&v=3.exp&libraries=geometry,drawing,places",
@@ -16,11 +16,14 @@ const MyMapComponent = compose(
     {  props.isMarkerShown && <Marker position={{ lat: 40.72046126, lng: -73.98974419 }} onClick={props.onMarkerClick} />}
     {  props.isMarkerShown && <Marker position={{ lat: 40.72940126, lng: -73.98070419 }} onClick={props.onMarkerClick} />}
     {  props.isMarkerShown && <Marker position={{ lat: 40.72540126, lng: -73.98570419 }} onClick={props.onMarkerClick} />}
-    {  props.isMarkerShown && <Marker position={{ lat: 40.72240126, lng: -73.98070419 }} onClick={props.onMarkerClick} />}
+    {  props.isMarkerShown && <Marker position={{ lat: 40.72840126, lng: -73.98170419 }} onClick={props.onMarkerClick} />}
+    {  props.isMarkerShown && <Marker position={{ lat: 40.72040126, lng: -73.98370419 }} onClick={props.onMarkerClick} />}
+    {  props.isMarkerShown && <Marker position={{ lat: 40.72340126, lng: -73.98770419 }} onClick={props.onMarkerClick} />}
+
   </GoogleMap>
 )
 
-class MyFancyComponent extends React.PureComponent {
+class MyFancyComponent extends Component {
   state = {
     isMarkerShown: false,
   }
