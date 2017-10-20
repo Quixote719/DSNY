@@ -21,8 +21,10 @@ import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
 import CardDetailContainer from './components/shared/CardDetails/card_details_container';
-import DSNYEvents from './components/home/Events/event_list_by_borough'
-import EventDetail from './components/home/Events/event_detail'
+import DSNYEvents from './components/home/events/event_list_by_borough'
+import EventDetail from './components/home/events/event_detail'
+import DSNYNews from './components/home/news/news_list_by_month'
+import NewsDetail from './components/home/news/news_detail'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -69,13 +71,9 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyevents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventdetail/:slug"} component={EventDetail}/>
-
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"} component={DSNYNews}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/newsdetail/:slug"} component={NewsDetail}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
-
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/> {/* <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/how-to-get-rid-of/:itemName"} component={HowtogetridofDetailsItem}/> */}
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyevents"} component={DSNYEvents}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
             </Switch>
           </div>
         </div>

@@ -87,7 +87,7 @@ class PressReleaseList extends Component {
         return (
           <div key ={cItems.id}>
             <div>{banner}</div>
-            <div className='container'><SubSectionDropdown category='news-updates' ondropDownChange={this.fetchPressRelease}/></div>
+            <div className='container'><SubSectionDropdown category='news-updates' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/></div>
             <div className='container'>{sections}</div>
           </div>
         )
