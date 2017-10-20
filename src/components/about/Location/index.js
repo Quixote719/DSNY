@@ -1,9 +1,11 @@
 import React , { Component } from "react"
 import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker  } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import { connect } from 'react-redux'
+import _ from "lodash"
 import * as actions from '../../../actions/actions_about'
 import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel"
+// import MarkerClusterer from "react-google-maps/lib/components/addons/MarkerClusterer";
 
 const google = window.google;
 const MyMapComponent = compose(
@@ -17,24 +19,23 @@ const MyMapComponent = compose(
   withGoogleMap
 )((props) =>
   <GoogleMap defaultZoom={14} defaultCenter={{ lat: 40.72046126, lng: -73.98974419 }}>
-    <Marker position={{ lat: 40.72046126, lng: -73.98974419 }} onClick={()=>props.onMarkerClick({ lat: 40.72046126, lng: -73.98974419 })} />
-    <Marker icon={{ url: 'https://maxcdn.icons8.com/Share/icon/Maps//marker1600.png',scaledSize: new google.maps.Size(64,64) }} position={{ lat: 40.72940126, lng: -73.98070419 }} onClick={()=>props.onMarkerClick} />
-    <Marker icon={{ url: '../../../content/images/Map_marker_default.png' }} position={{ lat: 40.72540126, lng: -73.98570419 }} onClick={()=>props.onMarkerClick} />
-    <Marker position={{ lat: 40.72840126, lng: -73.98170419 }} onClick={()=>props.onMarkerClick} />
-    <Marker position={{ lat: 40.72040126, lng: -73.98370419 }} onClick={()=>props.onMarkerClick} />
-    <Marker position={{ lat: 40.72340126, lng: -73.98770419 }} onClick={()=>props.onMarkerClick} />
     <MarkerWithLabel
       position = {{ lat: 40.72340126, lng: -73.98770419 }}
       labelAnchor = {new google.maps.Point(0, 0)}
-      labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
-      <div>Info</div>
+      labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
+      <div>Information</div>
     </MarkerWithLabel>
+    {props.locs}
   </GoogleMap>
 )
 
 class Location extends Component {
   state = {
     isMarkerShown: false,
+  }
+
+  componentWillMount() {
+    this.props.Location();
   }
 
   componentDidMount() {
@@ -48,14 +49,36 @@ class Location extends Component {
   }
 
   handleMarkerClick = (obj) => {
-    alert(obj.lat);
+    // alert(obj.lat);
+  }
+
+  locs = (obj)=>{
+    return (<Marker position={{ lat: 40.72390126, lng: -73.98979419 }} />)
+  }
+
+  parseData(locations, google){
+    console.log('locations!!');
+    console.log(locations);
+
+    _.map(locations, item => {
+        return   (
+          <MarkerWithLabel
+            position = {{ lat: item.Latitude, lng: item.Longitude }}
+            labelAnchor = {new google.maps.Point(0, 0)}
+            labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
+            <div>Info</div>
+          </MarkerWithLabel>
+        );
+    });
   }
 
   render() {
+
     return (
       <MyMapComponent
         isMarkerShown={this.state.isMarkerShown}
         onMarkerClick={this.handleMarkerClick}
+        locs={this.locs}
       />
     )
   }
