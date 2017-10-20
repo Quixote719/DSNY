@@ -13,7 +13,7 @@ import paginationrightArrow from '../../../content/images/arrow_right_pagination
 
 const getSuggestionValue = suggestion => suggestion;
 const renderSuggestion = suggestion => (
-    <Link to={"/howtogetridof/"+suggestion}>
+    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+suggestion}>
         <div className ="ridOfSuggestions" >
           {suggestion}
         </div>
@@ -66,7 +66,7 @@ class SearchPage extends Component {
         this.setState({
           value: newValue,
         });
-      };
+      }
     ridOfSearchResults = (messageList) =>{
         return _.map(messageList, (item,index) => {
             return (
