@@ -168,3 +168,70 @@
 input::-ms-clear {
     display: none;
   }
+
+  /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media only screen and (max-width: 599px) {
+    .BreadcrumbHeaderTitleSection>.container{
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    .searchContainerRidOfCollection{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+    }
+    .searchRowRidOf {
+        width: auto;
+    }
+    #innersquareRidOf>.react-autosuggest__container {
+        width: auto;
+    }
+    .ridOfSearchResults {
+        width: 100%;
+    }   
+}
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+.BreadcrumbHeaderTitleSection>.container{
+    font-size: 38px;
+    margin-left: 25px;
+}    
+.searchContainerRidOfCollection{
+    padding-left: 25px;
+    padding-right: 32px;
+    width: auto;
+}
+.searchRowRidOf {
+    width: auto;
+}
+#innersquareRidOf>.react-autosuggest__container {
+    width: auto;
+}
+.ridOfSearchResults {
+    width: 100%;
+}
+}    
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .BreadcrumbHeaderTitleSection>.container{
+        font-size: 24px;
+        margin-left: 15px;
+    }
+    .searchContainerRidOfCollection{
+        padding-left: 15px;
+        padding-right: 15px;
+        width: auto;
+    }
+    .searchRowRidOf {
+        width: auto;
+    }
+    #innersquareRidOf>.react-autosuggest__container {
+        width: auto;
+    }
+    .ridOfSearchResults {
+        width: 100%;
+    }   
+}    
+/*BETWEEN DESKTOP AND TABLET*/
+@media (min-width: 960px) and (max-width: 1284px) {
+}    
