@@ -72,6 +72,10 @@ ReactDOM.render(
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
 
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/> {/* <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/how-to-get-rid-of/:itemName"} component={HowtogetridofDetailsItem}/> */}
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyevents"} component={DSNYEvents}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
             </Switch>
           </div>
         </div>
