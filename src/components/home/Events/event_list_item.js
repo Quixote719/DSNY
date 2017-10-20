@@ -25,7 +25,7 @@ class EventListItem extends Component {
           </Col>
           <Col xs={10} md={10}>
             <div >
-              <Link className='eventTitle' to={`/eventDetail/${this.props.eventid}`}>
+              <Link className='eventTitle' to={process.env.REACT_APP_SITE_RELATIVE_URL + `/eventdetail/${this.props.eventid}`}>
                 {this.props.title}
               </Link>
             </div>
