@@ -27,7 +27,7 @@ class SearchBoxHome extends Component {
     }
     getSuggestionValue = suggestion => suggestion;
     renderSuggestion = suggestion => (
-        <Link to={"/howtogetridof/"+suggestion}>
+      <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/howtogetridof/${suggestion}`}>
         <div className ="ridOfSuggestions">
           {suggestion}
         </div>
