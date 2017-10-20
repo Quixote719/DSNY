@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Row, Col} from 'react-bootstrap';
+import Dotdotdot from 'react-dotdotdot'
 import '../../../content/styles/cardType.css';
 
 class CardType extends Component {
@@ -42,9 +43,11 @@ class CardType extends Component {
               <Row className='nopadding'>
                 <Col className='nopadding' xs={8}>
                   <div className='cardTypeTitle'>
-                    <div className='cardTitleText' dangerouslySetInnerHTML={{
-                      __html: this.props.title
-                    }}/>
+                    <Dotdotdot clamp={3}>
+                      <div className='cardTitleText' dangerouslySetInnerHTML={{
+                        __html: this.props.title
+                      }}/>
+                    </Dotdotdot>
                   </div>
                 </Col>
               </Row>
@@ -64,9 +67,11 @@ class CardType extends Component {
                   ? 12
                   : 8}>
                   <div className='cardTypeTitle'>
-                    <div className='cardTitleText' dangerouslySetInnerHTML={{
-                      __html: this.props.title
-                    }}/>
+                    <Dotdotdot clamp={3}>
+                      <div className='cardTitleText' dangerouslySetInnerHTML={{
+                        __html: this.props.title
+                      }}/>
+                    </Dotdotdot>
                   </div>
                 </Col>
                 <Col className='nopadding' xs={4}>
