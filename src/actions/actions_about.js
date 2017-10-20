@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { WORDPRESS_ROOT_URL } from '../constants/ApiConstants';
+import { WORDPRESS_ROOT_URL, FETCH_LOCATION_LIST_URL } from '../constants/ApiConstants';
+import * as types from '../constants/ActionTypes';
 
 export function About() {
   const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=about`);
@@ -19,4 +20,9 @@ export function Bureaus() {
 export function StrategicPlan() {
   const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=strategic-plan`);
   return {type: 'SET_STRATEGICPLAN', payload: request};
+}
+
+export function fetchLocationList() {
+    const request = axios.get(FETCH_LOCATION_LIST_URL);
+    return {type: types.FETCH_LOCATION_LIST, payload: request};
 }

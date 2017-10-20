@@ -1,4 +1,7 @@
-export default function AboutDataReducer(state = {}, action) {
+import _ from "lodash";
+import * as types from '../constants/ActionTypes';
+
+export default function AboutDataReducer(state = { bureaus: {} }, action) {
   switch (action.type) {
     case 'SET_ABOUT':
       return { ...state, AboutData: action.payload};
@@ -8,6 +11,16 @@ export default function AboutDataReducer(state = {}, action) {
       return { ...state, BureausData: action.payload};
     case 'SET_STRATEGICPLAN':
       return { ...state, StrategicPlanData: action.payload};
+    case types.FETCH_LOCATION_LIST:
+      return {...state, LocationList: action.payload.data};
+    case types.FETCH_BUREAUS_DETAILS:
+      return {
+        ...state,
+        bureaus: {
+          ...state.bureaus,
+        details: _.mapKeys(action.payload.data, "id")
+        }
+      };
     default:
       return state;
   }
