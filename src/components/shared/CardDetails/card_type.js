@@ -28,11 +28,16 @@ class CardType extends Component {
     }
   }
 
-  cardLayout(type) {
+  cardLayout(type, style) {
+
     switch (type) {
       case 'iUrl':
         return (
-          <Col className='nopadding' xs={12} sm={6} md={4}>
+          <Col className='nopadding' xs={12} sm={style == 'RightAlligned'
+            ? 6
+            : 12} md={style == 'FullWidth'
+            ? 4
+            : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
                 <Col className='nopadding' xs={8}>
@@ -48,7 +53,11 @@ class CardType extends Component {
         );
       default:
         return (
-          <Col className='nopadding' xs={12} sm={6} md={4}>
+          <Col className='nopadding' xs={12} sm={style == 'RightAlligned'
+            ? 6
+            : 12} md={style == 'FullWidth'
+            ? 4
+            : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
                 <Col className='nopadding' xs={this.props.type == 'iUrl'
@@ -73,9 +82,8 @@ class CardType extends Component {
   }
 
   render() {
-
     return ( < div > {
-      this.cardLayout(this.props.type)
+      this.cardLayout(this.props.type, this.props.style)
     } < /div>
     );
   };
@@ -84,6 +92,7 @@ class CardType extends Component {
 CardType.propTypes = {
   title: PropTypes.string,
   className: PropTypes.string,
+    style: PropTypes.string,
   type: PropTypes.oneOf(['pdf', 'xlsx', 'zip', 'eUrl', 'iUrl'])
 };
 

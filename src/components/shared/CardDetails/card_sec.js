@@ -12,7 +12,7 @@ import CardReferenceDetails from '../../PressReleases/reference_details_card'
 
 class CardSec extends Component {
 
-  CardType(cardType, Item) {
+  CardType(cardType, Item, style) {
 
     let url;
     let type;
@@ -54,8 +54,6 @@ class CardSec extends Component {
     standard-card-no-border | Standard Card (no border)
     standard-card-with-border | Standard Card (with border)
      */
-
-    console.log(cardType);
     switch (cardType) {
       case 'square-card':
         return (url
@@ -63,28 +61,28 @@ class CardSec extends Component {
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
       case 'standard-card-no-border':
         return (url
-          ? <Link to={url}><CardType className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       case 'standard-card-with-border':
         return (url
-          ? <Link to={url}><CardType className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       case 'full-width-card':
         return (<CardFullWidth link={url} dataObject={Item}/>);
       case 'reference-details-card':
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
       default:
         return (url
-          ? <Link to={url}><CardType className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
     }
   }
 
-  renderCards(cards, type) {
+  renderCards(cards, type, style) {
     return _.map(cards, Item => {
       return (
         <div key={Item.id}>
-          {this.CardType(type, Item)}
+          {this.CardType(type, Item, style)}
         </div>
       );
     });
@@ -92,6 +90,11 @@ class CardSec extends Component {
 
   render() {
     const {dataObject} = this.props;
+
+    let l = (dataObject.cards.length);
+    let style = l > 2
+      ? 'FullWidth'
+      : 'RightAlligned'
 
     let cn = dataObject.background_color === 'gray'
       ? 'NBsubSectioncardType'
@@ -110,7 +113,7 @@ class CardSec extends Component {
     if (dataObject.content !== '') {
 
       if (dataObject.cards.length > 0) {
-        let l = (dataObject.cards.length);
+
         let cType = dataObject.card_data.card_type !== "reference-details-card"
 
         let layoutTrigger = cType && l > 2
@@ -122,7 +125,9 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={layoutTrigger
+                : cType
+                  ? 6
+                  : 9} md={layoutTrigger
                 ? 12
                 : cType
                   ? 8
@@ -135,14 +140,16 @@ class CardSec extends Component {
                 ? 12
                 : 12} sm={layoutTrigger
                 ? 12
-                : 6} md={layoutTrigger
+                : cType
+                  ? 6
+                  : 3} md={layoutTrigger
                 ? 12
                 : cType
                   ? 4
                   : 3}>
                 <div className='cardTypeCards'>
                   <Row className='nopadding'>
-                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
+                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
                   </Row>
                 </div>
               </Col>
@@ -157,7 +164,7 @@ class CardSec extends Component {
 
     } else {
       body = (
-        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type)}
+        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
         </Row>
       )
     }

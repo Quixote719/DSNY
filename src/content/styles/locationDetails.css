@@ -1,0 +1,46 @@
+.boroughList {
+  margin: 5px;
+}
+
+.locationsDetails{
+  margin-top: 30px;
+
+}
+
+.locationDistrict{
+  width: 220px;
+  height: 120px;
+  display: inline-block;
+}
+
+a:hover {
+  color: #7CC04B;
+}
+
+.plannedGarages{
+  color: #7CC04B;
+  font-size: 17.5px;
+  font-weight: bold;
+
+}
+
+.toLocation{
+  color: black;
+}
+
+.toPlanned{
+  margin-top: 30px;
+  margin-bottom: 60px;;
+}
+
+.addressDetails{
+  padding-top: 10px;
+}
+
+.crossStreetDetails{
+  padding-top: 10px;
+}
+
+.patternLineGreen{
+  margin: 0;
+}
