@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import ReactDOM from 'react-dom';
-import EventList from './Events/event_list';
+import EventList from './events/event_list';
 import NewsList from './news/news_list';
 import CarouselData from './Carousel/index';
 import SearchCards from './Search_Cards/index';
