@@ -9,7 +9,7 @@ import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithL
 
 const google = window.google;
 
-let MyMapComponent = compose(
+const MyMapComponent = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
@@ -24,13 +24,13 @@ let MyMapComponent = compose(
         <GoogleMap
           defaultZoom={12}
           defaultCenter={{ lat: 40.72390126, lng: -73.98979419 }}>
+          {alert('!!!')}
            {
               _.map(props.Locations, marker =>  {
                 if( marker.$id==1 ){
-                  alert(marker.$id);
+                  // alert(marker.$id);
                 }
-                console.log(marker.isActive);
-                if(marker.isActive==undefined){
+                if(!marker.isActive){
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
@@ -44,7 +44,17 @@ let MyMapComponent = compose(
                     )
                 }
                   else if(marker.isActive==true){
-                    alert('!')
+                    return(
+                     <MarkerWithLabel
+                           key = { marker.$id }
+                           icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
+                           onClick = { () => {props.onMarkerClick(marker.$id)} }
+                           position = {{ lat: marker.Latitude, lng: marker.Longitude }}
+                           labelAnchor = {new google.maps.Point(0, 0)}
+                           labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
+                           <div>{marker.StreetName}</div>
+                     </MarkerWithLabel>
+                    )
                   }
                 })
             }
@@ -62,6 +72,7 @@ class Location extends Component {
         Locations: this.props.LocationList
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
+      // this.UpdateMarker = this.UpdateMarker.bind(this);
   }
 
   componentWillMount() {
@@ -73,17 +84,36 @@ class Location extends Component {
   componentDidMount() {
   }
 
+  // UpdateMarker(temp){
+  //   this.setState({Locations : temp},()=>{
+  //     alert('why?')
+  //   });
+  //   console.log(this.state.Locations);
+  // }
 
   onMarkerClick(index){
     console.log(index-1);
-    let temp = this.state.Locations;
-    temp.pop();
+    // let temp = this.state.Locations;
+    let temp = Object.assign([],this.state.Locations);
+    // temp = temp.splice(0,40)
+
     // temp[index-1].isActive = true;
-    this.setState({Locations : []});
-    console.log('state');
-    console.log(this.state.Locations)
+
+    console.log(typeof(temp));
+    console.log(temp);
+    temp.forEach((item)=>{
+      item.isActive = false;
+    })
+    temp[index-1].isActive=true;
+    // temp.pop()
+    // temp=[];
+    // temp[index-1].isActive = true;
+    this.setState({Locations : temp});
+    // this.UpdateMarker(temp);
+    // console.log('state');
     // console.log(this.state.Locations);
-    this.forceUpdate();
+    console.log(this.state.Locations);
+    // this.forceUpdate();
   }
 
   render() {
