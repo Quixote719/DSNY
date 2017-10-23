@@ -3,12 +3,12 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import {fetchPressReleaseList} from "../../actions";
+import {fetchPressReleaseList} from "../../../actions";
 import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
-import PressReleaseListItem from '../Resources/PressReleases/press_release_list_item';
-import SubSectionDropdown from '../shared/Sub_section_dropdown'
-import Header from '../shared/Breadcrumb/breadcrumb_container'
+import PressReleaseListItem from '../../Resources/PressReleases/press_release_list_item';
+import SubSectionDropdown from '../../shared/Sub_section_dropdown'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 
 // Set initial state
 let PressReleaseListstate = {
@@ -87,7 +87,7 @@ class PressReleaseList extends Component {
         return (
           <div key ={cItems.id}>
             <div>{banner}</div>
-            <div className='container'><SubSectionDropdown category='press-release' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/></div>
+            <div className='container'><SubSectionDropdown category='news-updates' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/></div>
             <div className='container'>{sections}</div>
           </div>
         )

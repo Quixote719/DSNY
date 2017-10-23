@@ -33,7 +33,7 @@ class LawsListItem extends Component {
                 </Dotdotdot>
               </Col>
               <Col xs={12}>
-                <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/resources/laws/proposed-rules`}>
+                <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}${this.props.url}`}>
                   <div className='lawsLink'>SEE ALL RULES</div>
                 </Link>
               </Col>
@@ -52,7 +52,8 @@ LawsListItem.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.string,
   body: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  url: PropTypes.string
 };
 
 export default LawsListItem;

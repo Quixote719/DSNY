@@ -51,7 +51,7 @@ class News extends Component {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "news-and-updates-section"){
           if (item.cards.length >= 5) {
-            return (<SubSectionButton title='MORE NEWS' onClick={this._reroute} key={item.id}/>);
+            return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}><SubSectionButton title='MORE NEWS'/></Link>);
         } else {
         return null;
         }
