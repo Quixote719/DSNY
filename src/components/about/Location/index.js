@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import _ from "lodash"
 import * as actions from '../../../actions/actions_about'
 import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel"
-// import MarkerClusterer from "react-google-maps/lib/components/addons/MarkerClusterer";
+import '../../../content/styles/About.css'
 
 const google = window.google;
 
@@ -27,9 +27,6 @@ const MyMapComponent = compose(
           defaultCenter={{ lat: 40.72390126, lng: -73.88979419 }}>
            {
               _.map(props.Locations, marker =>  {
-                if( marker.$id==1 ){
-                  // alert(marker.$id);
-                }
                 if(!marker.isActive){
                     return(
                      <MarkerWithLabel
@@ -52,7 +49,16 @@ const MyMapComponent = compose(
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(0, 0)}
                            labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
-                           <div>{marker.StreetName}</div>
+                           <div className='locLabel'>
+                               <div className='locLabelImage'>
+                                 <img src={require('../../../content/images/icon_gargage.svg')} alt=""/>
+                               </div>
+                               <div className='locLabelInfo'>
+                                 <div className='DistrictName'>{marker.District}</div>
+                                 <div>{marker.StreetName}</div>
+                                 <div>{marker.CrossStreet1} & {marker.CrossStreet1}</div>
+                               </div>
+                           </div>
                      </MarkerWithLabel>
                     )
                   }
@@ -84,12 +90,6 @@ class Location extends Component {
   componentDidMount() {
   }
 
-  // UpdateMarker(temp){
-  //   this.setState({Locations : temp},()=>{
-  //     alert('why?')
-  //   });
-  //   console.log(this.state.Locations);
-  // }
   onMapClick(){
     let temp = Object.assign([],this.state.Locations);
     temp.forEach((item)=>{
@@ -100,11 +100,8 @@ class Location extends Component {
 
   onMarkerClick(index){
     console.log(index-1);
-    // let temp = this.state.Locations;
-    let temp = Object.assign([],this.state.Locations);
-    // temp = temp.splice(0,40)
 
-    // temp[index-1].isActive = true;
+    let temp = Object.assign([],this.state.Locations);
 
     console.log(typeof(temp));
     console.log(temp);
@@ -112,15 +109,8 @@ class Location extends Component {
       item.isActive = false;
     })
     temp[index-1].isActive=true;
-    // temp.pop()
-    // temp=[];
-    // temp[index-1].isActive = true;
     this.setState({Locations : temp});
-    // this.UpdateMarker(temp);
-    // console.log('state');
-    // console.log(this.state.Locations);
     console.log(this.state.Locations);
-    // this.forceUpdate();
   }
 
   render() {
