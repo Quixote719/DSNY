@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Form from "react-jsonschema-form";
+//import Form from "react-jsonschema-form";
 
 const schema = {
   "title": "SECTION 1: APPLICANT AND ORGANIZATION LOCATION",
@@ -163,7 +163,7 @@ class TestForm extends Component {
 
   render() {
 
-    return (<Form schema={schema} uiSchema={UISchema} onChange={log("changed")} onSubmit={log("submitted")} onError={log("errors")}/>);
+    return (<div></div>);
   };
 };
 

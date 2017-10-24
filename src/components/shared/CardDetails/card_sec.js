@@ -6,6 +6,7 @@ import {Row, Col} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import SubSectionHeader from '../sub_section_header';
 import CardType from './card_type'
+import TableDictionary from './card_table_dictionary'
 import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
 import CardReferenceDetails from '../../PressReleases/reference_details_card'
@@ -55,10 +56,12 @@ class CardSec extends Component {
     standard-card-with-border | Standard Card (with border)
      */
     switch (cardType) {
+      case 'table-dictionary-card':
+        return (<TableDictionary title={Item.title} body={Item.content} url = {Item.linked_page.url}  header ={Item.header}/> );
       case 'square-card':
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
+          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
