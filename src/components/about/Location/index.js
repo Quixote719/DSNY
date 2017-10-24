@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import _ from "lodash"
 import * as actions from '../../../actions/actions_about'
 import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel"
+import LocationDetails from './LocationDetails'
 import '../../../content/styles/About.css'
 
 const google = window.google;
@@ -35,7 +36,7 @@ const MyMapComponent = compose(
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(0, 0)}
-                           labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "0", display:"none!important"}}>
+                           labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "0"}}>
                            <div></div>
                      </MarkerWithLabel>
                     )
@@ -47,7 +48,7 @@ const MyMapComponent = compose(
                            icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(0, 0)}
+                           labelAnchor = {new google.maps.Point(-14, 70)}
                            labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
                            <div className='locLabel'>
                                <div className='locLabelImage'>
@@ -66,7 +67,6 @@ const MyMapComponent = compose(
             }
         </GoogleMap>
       )
-
 })
 
 class Location extends Component {
@@ -115,15 +115,18 @@ class Location extends Component {
 
   render() {
     return (
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        Locations={this.state.Locations}
-        onMarkerClick={this.onMarkerClick}
-        onMapClick={this.onMapClick}
-      />
+      <div>
+        <MyMapComponent
+          isMarkerShown={this.state.isMarkerShown}
+          Locations={this.state.Locations}
+          onMarkerClick={this.onMarkerClick}
+          onMapClick={this.onMapClick}
+        />
+        <LocationDetails/>
+      </div>
+
     )
   }
-
 }
 
 function mapStateToProps(state) {

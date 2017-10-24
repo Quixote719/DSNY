@@ -141,7 +141,7 @@ class LocationDetails extends Component {
 
     return(
       <div>
-        <div className='container'>
+        <div className='SContainer'>
             <SubSectionHeader title='Bronx'/>
             <Row>
               <div className='locationsDetails'>
@@ -176,6 +176,9 @@ class LocationDetails extends Component {
                 {this.renderStatenIsland(pr)}
               </div>
             </Row>
+            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about'}>
+              <div className='plannedGarages'>Planned Gararges</div>
+            </Link>
         </div>
       </div>
     );
