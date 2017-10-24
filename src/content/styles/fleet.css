@@ -23,9 +23,14 @@
 }
 
 .carouselImg img{
-  width: 940;
+  width: auto;
   height: 528px;
   max-height: 528px;
+}
+
+.fleetExplaination {
+  background-color: white;
+  text-align: left;
 }
 
 /*Mobile View*/

@@ -21,7 +21,12 @@ class CarouselData extends Component {
             return _.map(item.cards, (item,index) =>{
                 return (
                     <Carousel.Item key={index}>
-                      <img className="carouselImg" src={item.image.file} />
+                      <img src={item.image.file} />
+                      <div className="fleetExplaination">
+                        <div>
+                        hello world
+                        </div>
+                      </div>
                     </Carousel.Item>
                 );
             })
