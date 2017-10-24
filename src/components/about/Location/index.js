@@ -35,8 +35,7 @@ const MyMapComponent = compose(
                            icon={{ url: require('../../../content/images/Map_marker_default.svg') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(0, 0)}
-                           labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "0"}}>
+                           labelAnchor = {new google.maps.Point(0, 0)}>
                            <div></div>
                      </MarkerWithLabel>
                     )
@@ -49,7 +48,7 @@ const MyMapComponent = compose(
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(-14, 70)}
-                           labelStyle = {{backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px", display:"none!important"}}>
+                           labelStyle = {{ zIndex:"3", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
                            <div className='locLabel'>
                                <div className='locLabelImage'>
                                  <img src={require('../../../content/images/icon_gargage.svg')} alt=""/>
