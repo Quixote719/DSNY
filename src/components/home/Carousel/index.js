@@ -26,7 +26,7 @@ class CarouselData extends Component {
     // }
     //If depolying uncomment the below and comment the above
 
-    
+
     // componentWillMount() {
     //     this.props.carouselPanelDataTemporary();
     // }
@@ -82,7 +82,7 @@ class CarouselData extends Component {
     }
 
     render() {
-        
+
         return (
             <div className="carouselContainerParent ">
                 <div className="container carouselContainer">
@@ -130,7 +130,7 @@ class CarouselData extends Component {
 // }
 
 // let actionList = {
-//     carouselPanelData: actions.carouselPanelData,    
+//     carouselPanelData: actions.carouselPanelData,
 //     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
 // };
 

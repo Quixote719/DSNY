@@ -33,6 +33,7 @@ import Howtogetridof from './components/home/howtogetridof';
 import HowtogetridofDetailsItem from './components/home/howtogetridof/howToGetRidOf_detailsItem';
 // import BureausDetails from './components/about/Bureaus/BureausDetails';
 import LocationDetails from './components/about/Location/LocationDetails';
+import ViewOurFleet from './components/about/Operations/ViewOurFleet'
 
 /*import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
@@ -75,6 +76,7 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"} component={DSNYNews}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/newsdetail/:slug"} component={NewsDetail}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Operations/ViewOurFleet"} component={ViewOurFleet}/>
             </Switch>
           </div>
         </div>
