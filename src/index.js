@@ -7,6 +7,9 @@ import promise from 'redux-promise';
 // import routes from './routes';
 import reducers from './reducers';
 import thunk from "redux-thunk";
+import { IntlProvider } from 'react-intl';
+import {addLocaleData} from 'react-intl';
+import fr  from 'react-intl/locale-data/de';
 //import logger from "redux-logger";
 import appstyles from './content/styles/application.css';
 import ScrollToTop from './scrollToTop';
@@ -42,11 +45,12 @@ import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show';
 */
-
+addLocaleData(fr);
 const middleware = applyMiddleware(promise, thunk);
 
 ReactDOM.render(
   <Provider store={createStore(reducers, middleware)}>
+  <IntlProvider locale="de"> 
   <BrowserRouter>
     <ScrollToTop>
       <div>
@@ -89,4 +93,5 @@ ReactDOM.render(
       </div>
     </ScrollToTop>
   </BrowserRouter>
+  </IntlProvider>
 </Provider>, document.getElementById('content'));
