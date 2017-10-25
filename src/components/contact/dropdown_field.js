@@ -31,8 +31,8 @@ class FormDropdown extends Component {
 
   render() {
     return (
-      <div>
-        <Col xs={12} sm={6} md={6}>
+      <div >
+        <Col className='FormField' xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
 

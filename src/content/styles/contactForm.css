@@ -19,7 +19,7 @@
 }
 
 .FormField {
-  padding-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .formDropDownButtonText {
@@ -34,6 +34,18 @@
   text-align: left;
 }
 
+.formTextarea {
+  min-height: 100px;
+  max-height: 240px;
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+}
+
+textarea {
+  resize: none;
+}
+
 input, input.form-control {
   height: 36px;
   border: 1px solid #DFDFDF;
@@ -42,9 +54,9 @@ input, input.form-control {
   background-color: #FFFFFF;
 }
 
-input:focus {
+input:focus, textarea:focus, input.form-control:focus {
   outline: none !important;
-  border: 2px solid #7CC04B;
+  border: 1px solid #7CC04B;
 }
 
 input[type=checkbox], input[type=radio] {

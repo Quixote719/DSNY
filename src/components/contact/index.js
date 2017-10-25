@@ -8,6 +8,8 @@ import FormField from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
+import FormTextarea from './textarea_field';
+
 import '../../content/styles/contactForm.css';
 
 var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
@@ -69,7 +71,8 @@ class TestForm extends Component {
         }
       ]}/></div>
           <div><FormDateTimePicker title='WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?'/></div>
-
+          <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+          <div><FormTextarea title='DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)'/></div>
         </Row>
       </div>
     );
