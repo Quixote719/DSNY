@@ -106,10 +106,10 @@ class LocationDetails extends Component {
   forQueens(obj) {
     return _.filter(obj, function(o) {
       if(o.GarageBoroughId === 5) {
-          return _(obj).sortBy().value();
+          return o;
       }
       if(o.GarageBoroughId === 6) {
-          return _(obj).sortBy().value();
+          return o;
       }
     })
   }
@@ -130,7 +130,7 @@ class LocationDetails extends Component {
   forStatenIsland(obj) {
     return _.filter(obj, function(o) {
       if(o.GarageBoroughId === 7) {
-          return _(obj).sortBy().value();
+          return o;
       }
     })
   }
