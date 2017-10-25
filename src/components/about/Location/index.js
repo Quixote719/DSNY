@@ -48,10 +48,10 @@ const MyMapComponent = compose(
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(-14, 70)}
-                           labelStyle = {{ zIndex:"3", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
+                           labelStyle = {{ zIndex:"1", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
                            <div className='locLabel'>
                                <div className='locLabelImage'>
-                                 <img src={require('../../../content/images/icon_gargage.svg')} alt=""/>
+                                 <img src={require('../../../content/images/icon_gargage.svg')} alt="garage"/>
                                </div>
                                <div className='locLabelInfo'>
                                  <div className='DistrictName'>{marker.District}</div>

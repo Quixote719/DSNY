@@ -14,15 +14,24 @@
   line-height: 19px;
 }
 
+.locLabel{
+  min-width: 240px;
+}
+
 .locLabelImage{
   padding: 10px;
+  height: 100%;
   vertical-align: top;
   display: inline-block;
 }
 
 .locLabelInfo{
   padding: 10px;
+  width: 75%;
+  float: right;
+  height:100%;
   color: #9B9B9B;
+  word-break: break-all;
   display: inline-block;
 }
 
