@@ -5,10 +5,12 @@ import '../../content/styles/subSectionHeader.css';
 const FormSectionHeader = props => {
   return (
     <div>
-      <div className='formSectionHeader'>
-        {props.title}
-      </div>
-      <div className='formSectionHeaderHairline'></div>
+      <Col xs={12}>
+        <div className='formSectionHeader'>
+          {props.title}
+        </div>
+        <div className='formSectionHeaderHairline'></div>
+      </Col>
     </div>
   );
 };
