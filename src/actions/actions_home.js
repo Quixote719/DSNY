@@ -34,7 +34,7 @@ export function getRidOfSearchResults(suggestion) {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
-                    length: data.data.length,                    
+                    length: data.data.length,
                 })
                 // dispatch({
                 //     type: 'SET_RID_OFF_SEARCH_BOX',
@@ -51,7 +51,7 @@ export function getRidOfSearchResults(suggestion) {
 //                 dispatch({
 //                     type: 'SET_RID_OFF_SEARCH_RESULTS',
 //                     payload: data.data,
-//                     length: data.data.length,                    
+//                     length: data.data.length,
 //                 })
 //                 // dispatch({
 //                 //     type: 'SET_RID_OFF_SEARCH_BOX',
@@ -68,7 +68,7 @@ export function carouselPanelData() {
         var day = ("0" + date.getUTCDate()).slice(-2);
         var year = date.getUTCFullYear().toString();
         var currentDate = parseInt(month + day + year);
-        
+
         axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate,  { crossdomain: true } )
             .then((data) => {
                 let carouselPanelItems = [];
@@ -87,7 +87,7 @@ export function carouselPanelData() {
                     type: 'SET_PANEL_ITEMS',
                     payload: carouselPanelItems,
                 })
-                
+
 
             })
 
@@ -136,4 +136,3 @@ export function fetchEventDetails(slug) {
     })
   }
 }
-

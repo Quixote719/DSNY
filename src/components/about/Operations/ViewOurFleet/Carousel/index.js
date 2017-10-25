@@ -16,28 +16,29 @@ class CarouselData extends Component {
   }
 
   carouselDataItemList() {
-    return _.map(this.props.carouselItems, item => {
-        if(item.name == "home-hero-section"){
-            return _.map(item.cards, (item,index) =>{
-                return (
-                    <Carousel.Item key={index}>
-                      <img src={item.image.file} />
-                      <div className="fleetExplaination">
-                        <div>
-                        hello world
-                        </div>
-                      </div>
-                    </Carousel.Item>
-                );
-            })
-        }
+    return _.map(this.props.carouselItems, (item, index) => {
+        return (
+            <Carousel.Item key={index}>
+                <img src={item.image.file} />
+              <div className="fleetExplaination">
+                <h1 className="fleetContentTitle">
+                  {item.title}
+                </h1>
+                <div className="fleetContent">
+                  {item.content}
+                </div>
+              </div>
+            </Carousel.Item>
+
+        );
     });
   }
 
   render() {
     return(
+      <div className="fleetCarouselContainerParent ">
       <div className="container fleetCarouselContainer">
-        <Carousel prevIcon={<span className="newsEventsCarouselIcon">
+        <Carousel className="fleetCarousel" prevIcon={<span className="newsEventsCarouselIcon">
             <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
         </span>} nextIcon={<span className="newsEventsCarouselIcon">
             <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
@@ -45,6 +46,7 @@ class CarouselData extends Component {
             {this.carouselDataItemList()}
         </Carousel>
       </div>
+    </div>
     );
   }
 

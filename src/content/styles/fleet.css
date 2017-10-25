@@ -14,6 +14,35 @@
     right: 0;
 }*/
 
+.fleet{
+  background-color: #F2F2F2;
+}
+
+.fleetContentTitle{
+  margin-left: 20px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 24px;
+  line-height: 33px;
+  font-family: "Helvetica Neue";
+  height: 33px;
+  width: 200px;
+  text-align: left;
+}
+
+.fleetContent{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: #333333;
+  height: 144px;
+  width: 900px;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
 .fleetCarouselContainer{
     padding-left: 0;
     padding-right: 0;
@@ -22,16 +51,43 @@
     width: 940px;;
 }
 
-.carouselImg img{
-  width: auto;
-  height: 528px;
-  max-height: 528px;
+.carouselContainer {
+    position: relative;
+}
+
+.fleetImg img{
+  width: 939px;
+  height: 704px;
 }
 
 .fleetExplaination {
   background-color: white;
   text-align: left;
 }
+
+.fleetCarouselContainerParent{
+  background-color: white;
+}
+
+/* Fleet Carousel*/
+
+.fleetCarousel{
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.56) 100%);
+    float: right;
+    width: auto;
+}
+
+.fleetCarousel>.carousel-inner>.item>img{
+    height: 500px;
+    width: 940px;;
+}
+
+.fleetCarousel>.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after{
+    display: none;
+}
+
+/* End Fleet Carousel*/
+
 
 /*Mobile View*/
 @media only screen and (max-width: 599px) {
@@ -42,6 +98,16 @@
       padding-top: 20px;
       width: auto;
   }
+
+  .fleetCarousel {
+      float: none;
+      width: auto;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img {
+      height: 280px;
+      width: 380px;
+  }
 }
 
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
@@ -50,6 +116,10 @@
   .fleetCarouselContainer{
       padding-bottom: 41px;
       padding-top: 28px;;
+      width: 712px;
+  }
+
+  .fleetCarousel{
       width: 712px;
   }
 }
@@ -63,12 +133,31 @@
       padding-top: 20px;
       width: auto;
   }
+
+  .fleetCarousel {
+      float: none;
+      width: auto;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img {
+      height: 380px;
+      width: 100%;;
+  }
 }
 
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px) {
   .fleetCarouselContainer{
       width: 939px;
+  }
+
+  .fleetCarousel{
+      float: right;
+      width: 816px;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img{
+      width: 942px;
   }
 
   .fleetCarouselContainer{

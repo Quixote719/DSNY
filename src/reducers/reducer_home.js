@@ -23,7 +23,7 @@ export default function carouselDataReducer(state = {}, action) {
     case types.FETCH_EVENT_SUB_LIST:
       return {...state, EventsSubList: _.mapKeys(action.payload.data, "$id")};
     case types.FETCH_EVENT_DETAILS:
-      return {...state, EventDetails: action.payload.data};  
+      return {...state, EventDetails: action.payload.data};
     default:
       return state;
   }
