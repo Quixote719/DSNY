@@ -6,6 +6,8 @@ import FormMultiSelect from './multiselect_field'
 import FormBoolean from './form_boolean';
 import FormField from './form_field';
 import FormDropdown from './dropdown_field'
+import FormDateTimePicker from './dateTimepicker_field'
+import Datetime from 'react-datetime';
 import '../../content/styles/contactForm.css';
 
 var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
@@ -66,6 +68,8 @@ class TestForm extends Component {
           "Selected": false
         }
       ]}/></div>
+          <div><FormDateTimePicker title='datepicker'/></div>
+
         </Row>
       </div>
     );

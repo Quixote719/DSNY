@@ -38,10 +38,9 @@ class FormDropdown extends Component {
 
             <DropdownButton className='formDropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               yeshu
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-chevron-down chevron-down-font-awesome"></i> < /div> < /div >} noCaret id="dropdown-no-caret">
+            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
               {this.renderList(this.props.options)}
             </DropdownButton>
-
           </fieldset>
         </Col>
       </div>
