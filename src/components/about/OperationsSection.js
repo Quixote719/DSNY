@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import SubSectionHeader from '../shared/sub_section_header'
 import ContentCard from '../shared/ContentCard'
 import TitleContentCard from '../shared/TitleContentCard'
-import _ from "lodash";
-import '../../content/styles/card.css';
+import _ from "lodash"
+import '../../content/styles/card.css'
 
 
 class OperationsSection extends Component {
