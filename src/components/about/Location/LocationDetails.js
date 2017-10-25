@@ -106,10 +106,10 @@ class LocationDetails extends Component {
   forQueens(obj) {
     return _.filter(obj, function(o) {
       if(o.GarageBoroughId === 5) {
-          return _(obj).sortBy().value();
+          return o;
       }
       if(o.GarageBoroughId === 6) {
-          return _(obj).sortBy().value();
+          return o;
       }
     })
   }
@@ -130,7 +130,7 @@ class LocationDetails extends Component {
   forStatenIsland(obj) {
     return _.filter(obj, function(o) {
       if(o.GarageBoroughId === 7) {
-          return _(obj).sortBy().value();
+          return o;
       }
     })
   }
@@ -141,7 +141,7 @@ class LocationDetails extends Component {
 
     return(
       <div>
-        <div className='container'>
+        <div className='SContainer'>
             <SubSectionHeader title='Bronx'/>
             <Row>
               <div className='locationsDetails'>
@@ -176,6 +176,9 @@ class LocationDetails extends Component {
                 {this.renderStatenIsland(pr)}
               </div>
             </Row>
+            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about'}>
+              <div className='plannedGarages'>Planned Gararges</div>
+            </Link>
         </div>
       </div>
     );
