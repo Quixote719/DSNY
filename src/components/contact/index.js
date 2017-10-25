@@ -68,7 +68,7 @@ class TestForm extends Component {
           "Selected": false
         }
       ]}/></div>
-          <div><FormDateTimePicker title='datepicker'/></div>
+          <div><FormDateTimePicker title='WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?'/></div>
 
         </Row>
       </div>

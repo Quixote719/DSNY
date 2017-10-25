@@ -37,7 +37,7 @@ class FormDropdown extends Component {
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
 
             <DropdownButton className='formDropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-              yeshu
+              Work
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
               {this.renderList(this.props.options)}
             </DropdownButton>
