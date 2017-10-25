@@ -4,6 +4,7 @@ import PlanCardSection from './PlanCardSection'
 import CardBox from '../../shared/card_box'
 import PageText from '../../shared/PageText'
 import CardSec from '../../shared/CardDetails/card_sec'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -19,6 +20,7 @@ class StrategicPlan extends Component {
     this.props.StrategicPlan();
   }
   render() {
+    let banner;
     let STdata = {};
     let ImageProps = {};
     let PageExplanation = {};

@@ -91,6 +91,9 @@
   margin: 6px 0;
 }
 
+.TitleContentCard:hover>.CardTitle{
+  color: #7CC04B;
+}
 
 .TitleContentCard .CardTitle,.TitleContentCard .CardContent{
     margin: 0;
