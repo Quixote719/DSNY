@@ -115,7 +115,6 @@ class About extends Component {
                 case 'about-going-green':{
                   OperationProps.title = item.header;
                   OperationProps.content = item.content;
-                  OperationProps.link = item.linked_url;
                   OperationProps.cards = item.cards;
                   break;
                 }
