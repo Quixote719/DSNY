@@ -17,9 +17,7 @@ class FormTextarea extends Component {
         <Col xs={12}>
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <textarea className='formTextarea'>
-              At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
-            </textarea>
+            <textarea className='formTextarea'></textarea>
           </fieldset>
         </Col>
       </div>
