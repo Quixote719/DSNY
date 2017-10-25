@@ -1,10 +1,14 @@
-import React from "react";
-import { Row, Col } from 'react-bootstrap';
+import _ from "lodash";
+import React, {Component} from "react";
+import Truncate from 'react-truncate';
+import {connect} from "react-redux";
+import Dotdotdot from 'react-dotdotdot'
+import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 import '../../content/styles/subSectionHeader.css';
 
-class GreenSubSectionHeader extends SubSectionHeader {
 
-  render() {
+const SubSectionHeaderGreen = props => {
       return (
          <div>
             <div className='greenSectionHeader'>
@@ -13,9 +17,6 @@ class GreenSubSectionHeader extends SubSectionHeader {
             <div className='patternLineGreen'></div>
          </div>
          );
-  }     
+};    
 
-
-}
-
-export default GreenSubSectionHeader;
+export default SubSectionHeaderGreen;
