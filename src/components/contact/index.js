@@ -1,169 +1,74 @@
 import React, {Component} from "react";
-import Form from "react-jsonschema-form";
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import FormSectionHeader from './form_section_header';
+import FormHeader from './form_header';
+import FormMultiSelect from './multiselect_field'
+import FormBoolean from './form_boolean';
+import FormField from './form_field';
+import FormDropdown from './dropdown_field'
+import '../../content/styles/contactForm.css';
 
-const schema = {
-  "title": "SECTION 1: APPLICANT AND ORGANIZATION LOCATION",
-  "type": "object",
-  "required": [
-    "firstName", "lastName"
-  ],
-  "properties": {
-    "firstName": {
-      "type": "string",
-      "title": "First name"
-    },
-    "lastName": {
-      "type": "string",
-      "title": "Last name"
-    },
-    "secondtitle": {
-      "title": "SECTION 2: APPLICANT AND ORGANIZATION LOCATION",
-      "type": "object",
-      "properties": {
-        "test": {
-          "type": "string",
-          "title": "full name"
-        }
-      }
-    },
-    "multipleChoicesList": {
-      "type": "array",
-      "title": "A multiple choices list",
-      "items": {
-        "type": "string",
-        "enum": ["foo", "bar", "fuzz", "qux"]
-      },
-      "uniqueItems": true
-    },
-    "GREENTHUMB": {
-      "type": "boolean",
-      "title": "IS THIS A GREENTHUMB GARDEN?"
-    },
-    "COMPOST": {
-      "type": "boolean",
-      "title": "HAVE YOU RECEIVED DSNY COMPOST IN THE PAST?"
-    },
-    "age": {
-      "type": "integer",
-      "title": "Age"
-    },
-    "bio": {
-      "type": "string",
-      "title": "Bio"
-    },
-    "password": {
-      "type": "string",
-      "title": "Password",
-      "minLength": 3
-    },
-    "telephone": {
-      "type": "string",
-      "title": "Telephone",
-      "minLength": 10
-    }
-  }
-}
-
-const usc = {
-  "type": "object",
-  "properties": {
-    "listOfbools": {
-      "type": "object",
-      "title": "SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )",
-      "items": {
-        // "COMPOST": {
-        //   "type": "boolean",
-        //   "title": "I WILL POST A DSNY COMPOST RECIPIENT SIGN NEAR WHERE DSNY COMPOST WILL BE USED."
-        // },
-        // "INSTALLED": {
-        //   "type": "boolean",
-        //   "title": "THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL."
-        // },
-        // "PHOTOS": {
-        //   "type": "boolean",
-        //   "title": "I WILL SUBMIT THREE (3) PHOTOS OF THE COMPOST IN USE TO NYCCOMPOST@DSNY.NYC.GOV."
-        // },
-        // "PROMOTION": {
-        //   "type": "boolean",
-        //   "title": "PHOTOS SUBMITTED MAY BE USED FOR DSNY PROGRAM PROMOTION."
-        // }
-      },
-      "uniqueItems": true
-    },
-    "organiztion": {
-      "type": "object",
-      "title": "SECTION 3: ORGANIZATION INFORMATION",
-      "items": {
-        // "age": {
-        //   "type": "integer",
-        //   "title": "Age"
-        // },
-        // "bio": {
-        //   "type": "string",
-        //   "title": "Bio"
-        // },
-        // "password": {
-        //   "type": "string",
-        //   "title": "Password",
-        //   "minLength": 3
-        // },
-        // "telephone": {
-        //   "type": "string",
-        //   "title": "Telephone",
-        //   "minLength": 10
-        // }
-      },
-      "uniqueItems": true
-    }
-  }
-}
-
-const UISchema = {
-  "firstName": {
-    "ui:autofocus": true,
-    "ui:emptyValue": ""
-  },
-  "GREENTHUMB": {
-    "ui:widget": "radio"
-  },
-  "COMPOST": {
-    "ui:widget": "radio"
-  },
-  "multipleChoicesList": {
-    "ui:widget": "checkboxes"
-  },
-
-  "age": {
-    "ui:widget": "updown",
-    "ui:title": "Age of person",
-    "ui:description": "(earthian year)"
-  },
-  "bio": {
-
-    "ui:widget": "textarea"
-  },
-  "password": {
-
-    "ui:widget": "password",
-    "ui:help": "Hint: Make it strong!"
-  },
-  "date": {
-    "ui:widget": "alt-datetime"
-  },
-  "telephone": {
-    "ui:options": {
-      "inputType": "tel"
-    }
-  }
-}
-
-const log = (type) => console.log.bind(console, type);
+var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
 
 class TestForm extends Component {
 
   render() {
 
-    return (<Form schema={schema} uiSchema={UISchema} onChange={log("changed")} onSubmit={log("submitted")} onError={log("errors")}/>);
+    return (
+      <div>
+        <Row>
+          <div><FormHeader title='Online Application'/></div>
+          <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
+          <div>'search box validation of address comes up'<br/></div>
+          <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+          <div><FormMultiSelect title='THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.' options={[
+        {
+          "Id": 1,
+          "Name": "Work",
+          "DisplayName": "Work",
+          "Selected": false
+        }, {
+          "Id": 2,
+          "Name": "Mobile",
+          "DisplayName": "Mobile",
+          "Selected": false
+        }, {
+          "Id": 3,
+          "Name": "Home",
+          "DisplayName": "Home",
+          "Selected": false
+        }
+      ]}/></div>
+          <div><FormBoolean title='PHOTOS SUBMITTED MAY BE USED FOR DSNY PROGRAM PROMOTION.'/></div>
+          <div><FormBoolean onlyYes title='PHOTOS SUBMITTED MAY BE USED FOR DSNY PROGRAM PROMOTION.'/></div>
+          <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
+          <div><FormField title='ORGANIZATION NAME' type='input'/></div>
+          <div><FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER' type='input'/></div>
+          <div><FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type='password'/></div>
+          <div><FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type='date'/></div>
+          <div><FormField title='ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)' type='email'/></div>
+          <div><FormField title='ORGANIZATION OR PROJECT instagram ID (optional)' type='phone'/></div>
+          <div><FormDropdown title='WHAT TYPE OF SITE IS THIS?' options={[
+        {
+          "Id": 1,
+          "Name": "Work",
+          "DisplayName": "Work",
+          "Selected": false
+        }, {
+          "Id": 2,
+          "Name": "Mobile",
+          "DisplayName": "Mobile",
+          "Selected": false
+        }, {
+          "Id": 3,
+          "Name": "Home",
+          "DisplayName": "Home",
+          "Selected": false
+        }
+      ]}/></div>
+        </Row>
+      </div>
+    );
   };
 };
 

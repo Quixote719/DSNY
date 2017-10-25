@@ -15,6 +15,7 @@ import StatsCardList from './ReportsStats/stats_card_list'
 import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import TestForm from '../contact'
+
 class ResourcesContainer extends Component {
 
   constructor(props) {
@@ -112,7 +113,7 @@ class ResourcesContainer extends Component {
       return (
         <div key ={prItem.id}>
           <div>{banner}</div>
-
+          <div className='container'><TestForm/></div>
           <div>{sections}</div>
         </div>
       )

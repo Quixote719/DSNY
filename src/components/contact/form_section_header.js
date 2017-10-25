@@ -5,7 +5,7 @@ import '../../content/styles/subSectionHeader.css';
 const FormSectionHeader = props => {
   return (
     <div>
-      <div className='sectionHeader'>
+      <div className='formSectionHeader'>
         {props.title}
       </div>
       <div className='formSectionHeaderHairline'></div>
