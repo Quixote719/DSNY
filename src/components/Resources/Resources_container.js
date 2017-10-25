@@ -15,6 +15,7 @@ import StatsCardList from './ReportsStats/stats_card_list'
 import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import TestForm from '../contact'
+
 class ResourcesContainer extends Component {
 
   constructor(props) {

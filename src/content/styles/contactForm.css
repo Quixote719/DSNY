@@ -1,0 +1,90 @@
+.formSectionHeader {
+  color: #333333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 19px;
+  margin-top: 10px;
+}
+
+.formSectionHeaderHairline {
+  height: 2px;
+  background-color: #7CC04B;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.red {
+  color: red;
+}
+
+.FormField {
+  padding-bottom: 8px;
+}
+
+.formDropDownButtonText {
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  height: 36px;
+  background: transparent;
+  box-shadow: none;
+  width: 100%;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+  text-align: left;
+}
+
+input, input.form-control {
+  height: 36px;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+  box-shadow: none;
+  background-color: #FFFFFF;
+}
+
+input:focus {
+  outline: none !important;
+  border: 2px solid #7CC04B;
+}
+
+input[type=checkbox], input[type=radio] {
+  height: 20px;
+  width: 20px;
+  border: 1.2px solid #C4C9CD;
+  border-radius: 3px;
+  color: clear;
+}
+
+fieldset label {
+  color: grey;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Helvetica Neue";
+  margin-left: 8px;
+}
+
+fieldset input {
+  width: 100%;
+}
+
+@supports (zoom:2) {
+  input[type="radio"], input[type=checkbox] {
+    zoom: 1.1;
+  }
+}
+
+@supports not (zoom:2) {
+  input[type="radio"], input[type=checkbox] {
+    transform: scale(1.1);
+  }
+}
+
+.FormMultiSelectTitle {
+  color: #000000;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

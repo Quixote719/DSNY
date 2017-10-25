@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-
+import Dotdotdot from 'react-dotdotdot';
 
 class ProfileCard extends Component {
   render() {
     return (
       <div className="ProfileCard">
           <div className="ImageBox">
-            <img className="ProfileCardImg" src={this.props.image} alt=""/>
+            {
+              this.props.image!==undefined?
+              <img className="ProfileCardImg" src={this.props.image} alt=""/>
+              :<img className="ProfileCardImg" src={require('../../content/images/Leader_avatar.png')} alt=""/>
+            }
           </div>
           <div className="ProfileCardName">{this.props.name}</div>
-          <div className="ProfileCardDuty" dangerouslySetInnerHTML={{__html: this.props.duty}}></div>
+          <Dotdotdot clamp={3}>
+            <div className="ProfileCardDuty" dangerouslySetInnerHTML={{__html: this.props.duty}}></div>
+          </Dotdotdot>
       </div>
     )
   }
