@@ -40,7 +40,7 @@ class CardMultifile extends Component {
   };
 
   renderDownload(dataObject) {
-    console.log(this.state.url);
+
     let url = this.state.url;
     if (dataObject.multi_file) {
       return (url
