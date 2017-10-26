@@ -209,6 +209,7 @@ input.ridOfSearch:focus {
 }
 
 .searchCollectionParent {
+    z-index: 10;    
     padding-left: 8px;
 }
 

@@ -14,6 +14,34 @@
   line-height: 19px;
 }
 
+.locLabel{
+  min-width: 240px;
+}
+
+.locLabelImage{
+  padding: 10px;
+  height: 100%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.locLabelInfo{
+  padding: 10px;
+  width: 75%;
+  float: right;
+  height:100%;
+  color: #9B9B9B;
+  word-break: break-all;
+  display: inline-block;
+}
+
+.locLabelInfo .DistrictName{
+  padding-bottom: 7px;
+  color:#231F20;
+  font-size: 17.5px;
+  font-weight: bold;
+  line-height: 20px;
+}
 
 .leftSec{
   width: 617px;
@@ -102,8 +130,12 @@
 @media only screen and (max-width: 940px) {
 
 
+}
 
-
+@media only screen and (max-width: 767px) {
+  .ReactGoogleMap{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 599px) {

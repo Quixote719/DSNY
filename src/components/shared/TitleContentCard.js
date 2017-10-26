@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Link } from 'react-router-dom';
 import Dotdotdot from 'react-dotdotdot';
 import '../../content/styles/dsnyCard.css';
 
@@ -19,15 +20,22 @@ class TitleContentCard extends Component {
       }
     }
     let CardType = styles.narrow;
+    let link = this.props.link||'/about/bureaus';
     return (
+      // <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
         <div className="TitleContentCard" style={CardType}>
-           <div className="CardTitle">{this.props.title}</div>
-           <div className="CardContent" >
-              <Dotdotdot clamp={3}>
-                  <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
-              </Dotdotdot>
-           </div>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
+            <div className="TitleContentLink">
+             <div className="CardTitle">{this.props.title}</div>
+             <div className="CardContent" >
+                <Dotdotdot clamp={3}>
+                    <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+                </Dotdotdot>
+             </div>
+            </div>
+          </Link>
         </div>
+      // </Link>
     );
   };
 };

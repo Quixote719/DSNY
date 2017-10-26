@@ -68,7 +68,7 @@ class SearchBoxHome extends Component {
     }
     handleKeyPress = (event) => {
       if(event.key == 'Enter'){ 
-        this.props.test.pushHistory.history.push("/howtogetridof/"+this.state.value)
+        this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
         console.log('enter press here! ')
       }
     }

@@ -14,6 +14,7 @@
 }
 
 .ProfileCard{
+  margin: 10px 0;
   width: 220px;
   height: 317px;
   background-color: #FFFFFF;
@@ -88,8 +89,17 @@
 
 .TitleContentCard{
   margin: 6px 0;
+  cursor: pointer;
 }
 
+.TitleContentLink{
+  width: 100%;
+  height: 100%;
+}
+
+.TitleContentCard:hover .CardTitle{
+  color: #7CC04B;
+}
 
 .TitleContentCard .CardTitle,.TitleContentCard .CardContent{
     margin: 0;

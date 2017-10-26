@@ -78,7 +78,7 @@ class PressReleaseList extends Component {
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
             return _.map(sec.cards, prItem => {
-              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.id}/>);
+              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date} key={prItem.id}/>);
             });
 
           })

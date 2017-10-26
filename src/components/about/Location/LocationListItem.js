@@ -37,7 +37,7 @@ class LocationListItem extends Component {
       <Col xs={12} sm={6} md={3}>
         <div>
             <div className='locationDistrict'>
-              <strong><a href="#" className='toLocation'>{this.props.district}</a></strong>
+              <strong>{this.props.district}</strong>
               <div className='addressDetails'>
                 {this.props.houseNumber} {this.props.streetName}.
               </div>

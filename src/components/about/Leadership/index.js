@@ -3,6 +3,7 @@ import TitleBanner from '../../shared/TitleBanner'
 import ColorCard from '../../shared/ColorCard'
 import CardBox from '../../shared/card_box'
 import ProfileCard from '../../shared/ProfileCard'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -21,14 +22,22 @@ class Leadership extends Component {
   render() {
         let cards = null;
         let ProfileCards = {};
+        let banner;
         if(this.props.LeadershipData !== undefined){
-            cards = this.renderCards(this.props.LeadershipData.data.sections.sections[0].cards);
-            ProfileCards.cards = this.props.LeadershipData.data.sections.sections[0].cards;
+            let data = this.props.LeadershipData.data;
+            banner = (
+                      <div key={data.id}>
+                        <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
+                      </div>
+                   )
+            cards = this.renderCards(this.props.LeadershipData.data.sections.sections);
+            ProfileCards.cards = this.props.LeadershipData.data.sections.sections;
             ProfileCards.CardSize = 1;
-            ProfileCards.CardType = this.props.LeadershipData.data.sections.sections[0].card_data.card_type;
+            ProfileCards.CardType = 'staff-card';
         }
     return (
       <div className="LeadershipPage greyBcg">
+        {banner}
         <div className="SContainer">
             <CardBox info={ProfileCards}/>
         </div>
