@@ -217,7 +217,7 @@ class TestForm extends Component {
         </Row>
         <ReCAPTCHA
           ref="recaptcha"
-          sitekey="6Lcp6zUUAAAAAAh0pIkZenjgpMZD8RMRG8RGf_Jv"
+          sitekey="6Lej8jUUAAAAAPSVFK5_I1VPTsNlJ7Q0hTafQKCm"
         />
       </div>
     );

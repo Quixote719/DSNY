@@ -14,7 +14,7 @@ class ColorCard extends Component {
     const cardColor = cardStyle[this.props.color]||cardStyle.chartreuse;
     return (
       <div className = "ColorCard">
-        <div style={cardColor} className = "ColorCardHeader">{this.props.title}</div>
+        <div style={cardColor} className = "ColorCardHeader">{this.props.title.toUpperCase()}</div>
         <div className = "ColorCardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
       </div>
     )
