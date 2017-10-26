@@ -20,7 +20,7 @@ class CardBox extends Component {
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
         else if(this.props.info.CardType=='strategy-card'){
-            card = <ColorCard title={item.title} content={item.content}/>
+            card = <ColorCard color={item.key_color} title={item.title} content={item.content}/>
         }
         else if(this.props.info.CardType=='staff-card'){
             let profileImage;
