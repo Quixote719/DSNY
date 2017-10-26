@@ -19,7 +19,7 @@ class CarouselData extends Component {
     return _.map(this.props.carouselItems, (item, index) => {
         return (
             <Carousel.Item key={index}>
-                <img src={item.image.file} />
+                <img src={item.feature_image.file} />
               <div className="fleetExplaination">
                 <h1 className="fleetContentTitle">
                   {item.title}
