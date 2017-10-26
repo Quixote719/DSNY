@@ -36,16 +36,16 @@ class CarouselData extends Component {
 
   render() {
     return(
-      <div className="fleetCarouselContainerParent ">
-      <div className="container fleetCarouselContainer">
-        <Carousel className="fleetCarousel" prevIcon={<span className="newsEventsCarouselIcon">
-            <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
-        </span>} nextIcon={<span className="newsEventsCarouselIcon">
-            <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
-        </span>}>
-            {this.carouselDataItemList()}
-        </Carousel>
-      </div>
+      <div className="fleetCarouselContainerParent">
+        <div className="container fleetCarouselContainer">
+          <Carousel className="fleetCarousel" prevIcon={<span className="newsEventsCarouselIcon">
+              <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+          </span>} nextIcon={<span className="newsEventsCarouselIcon">
+              <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+          </span>}>
+              {this.carouselDataItemList()}
+          </Carousel>
+        </div>
     </div>
     );
   }
