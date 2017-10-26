@@ -3,6 +3,7 @@ import ImageSection from '../../shared/ImageSection'
 import ColorCard from '../../shared/ColorCard'
 import TitleBanner from '../../shared/TitleBanner'
 import CardBox from '../../shared/card_box'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -19,7 +20,14 @@ class Bureaus extends Component {
   render() {
         let ImageProps = {};
         let BureausCards = {};
+        let banner;
         if(this.props.BureausData !== undefined){
+          let data = this.props.BureausData.data;
+          banner = (
+                      <div key={data.id}>
+                        <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
+                      </div>
+                   )
           _.map(this.props.BureausData.data.sections.sections, item =>{
                 switch (item.name){
                   case 'top-section':{
@@ -40,6 +48,7 @@ class Bureaus extends Component {
         }
     return (
       <div className='BureausPage'>
+        {banner}
         <ImageSection ImageProps={ImageProps}/>
         <div className='greyBcg'>
           <div className='SContainer boxPadding'>

@@ -27,7 +27,7 @@ class CardBox extends Component {
             card = <ProfileCard name={item.header} duty={item.content} image={item.image.file} />
         }
         else{
-            card = <TitleContentCard title={item.title} content={item.content}/>
+            card = <TitleContentCard title={item.title} link={item.link} content={item.content}/>
         }
 
         if(this.props.info.CardSize == 1){
