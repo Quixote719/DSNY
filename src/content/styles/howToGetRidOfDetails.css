@@ -1,0 +1,97 @@
+.howToGetRidOfItemDetails{
+    background: linear-gradient(131deg, #064932 0%, #06583D 67%, #29725B 100%);
+}
+.howToGetRidOfItemDetails>.BreadcrumbList>.container>.breadcrumb{
+    padding-left: 0!important;
+}
+.ridOfItemHeader{
+    padding-bottom: 21px;
+    padding-top: 20px;
+    color: #015949;	
+    font-size: 48px;	
+    font-weight: bold;	
+    letter-spacing: -1px;	
+    line-height: 48px;
+}
+.ridOfItemDetailsContainer{
+    padding-bottom: 100px;
+}
+.ridOfContent>h1,h2{
+    color: #333333;	
+    font-size: 24px;	
+    font-weight: bold;	
+    line-height: 29px;
+}
+.ridOfContent>a, .ridOfContent>p>a{
+    color: #00764D;	
+}
+.ridOfContent>a:hover,.ridOfContent>p>a:hover{
+    color: #7CC04B;	
+}
+
+/*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media only screen and (max-width: 499px) {
+    .howToGetRidOfItemDetails>.BreadcrumbList>.container>.breadcrumb{
+        padding-left: 15px!important;
+    }
+    .ridOfItemHeader{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+    .ridOfContent>h1, h2 {
+        font-size: 17.5px;
+    }
+    .ridOfItemDetailsContainer{
+        padding-left: 15px;
+        padding-right: 15px;        
+    }
+}    
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px){
+    .howToGetRidOfItemDetails>.BreadcrumbList>.container>.breadcrumb{
+        padding-left: 25px!important;
+    }
+    .ridOfItemDetailsContainer{
+        padding-left: 25px;
+        padding-right: 25px;        
+    }
+    .ridOfItemHeader{
+        padding-bottom: 13px;
+        padding-top: 13px;
+        font-size: 38px;
+    }
+    .ridOfContent>h1, h2 {
+        font-size: 17.5px;
+    }
+    
+}    
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
+    .howToGetRidOfItemDetails>.BreadcrumbList>.container>.breadcrumb{
+        padding-left: 15px!important;
+    }
+    .ridOfItemHeader{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 24px;
+    }
+    .ridOfContent>h1, h2 {
+        font-size: 17.5px;
+    }
+    .ridOfItemDetailsContainer{
+        padding-left: 15px;
+        padding-right: 15px;        
+    }
+}    
+/*BETWEEN DESKTOP AND TABLET*/
+@media (min-width: 960px) and (max-width: 1284px){
+    .ridOfItemHeader{
+        padding-bottom: 13px;
+        padding-top: 13px;
+        font-size: 38px;
+    }
+    .ridOfContent>h1, h2 {
+        font-size: 17.5px;
+    }
+}    

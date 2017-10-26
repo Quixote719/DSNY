@@ -36,7 +36,7 @@ class CarouselData extends Component {
                 return _.map(item.cards, (item,index) =>{
                     return (
                         <Carousel.Item key={index}>
-                            <img src={item.image.file} />
+                            <img src={item.featured_image.base_path + item.featured_image.file } />
                             <div>
                             <Carousel.Caption>
                                 {item.title}
