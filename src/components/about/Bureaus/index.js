@@ -31,7 +31,7 @@ class Bureaus extends Component {
           _.map(this.props.BureausData.data.sections.sections, item =>{
                 switch (item.name){
                   case 'top-section':{
-                    ImageProps.image = item.image.file;
+                    ImageProps.image = item.featured_image.base_path + item.featured_image.file;
                     ImageProps.content = item.content;
                     break;
                   }

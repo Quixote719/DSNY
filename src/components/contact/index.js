@@ -10,6 +10,8 @@ import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
 import FormTextarea from './textarea_field';
 
+import ReCAPTCHA from "react-google-recaptcha"
+
 import '../../content/styles/contactForm.css';
 
 var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
@@ -213,6 +215,10 @@ class TestForm extends Component {
           <div><FormField title='HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE (Optional)' type='input'/></div>
           <div><FormBoolean title='ALTERNATE SIDE PARKING AT SITE?'/></div>
         </Row>
+        <ReCAPTCHA
+          ref="recaptcha"
+          sitekey="Your client site key"
+        />
       </div>
     );
   };

@@ -32,7 +32,7 @@ class StrategicPlan extends Component {
       _.map(this.props.StrategicPlanData.data.sections.sections, item =>{
         switch (item.name){
           case 'top-section-2':{
-              ImageProps.image = item.image.file;
+              ImageProps.image = item.featured_image.base_path + item.featured_image.file;
               ImageProps.content = item.content;
               break;
           }
@@ -71,8 +71,8 @@ class StrategicPlan extends Component {
               <div className = 'greyBcg' >
                 <div className = 'SContainer boxPadding'>
                   <CardBox info={PlanProps}/>
-                  {sections}
                 </div>
+                {sections}
               </div>
       </div>
     )
