@@ -41,8 +41,6 @@ class StrategicPlan extends Component {
               break;
           }
           case 'strategic-plan-cards-section':{
-              PlanProps.button = true;
-              PlanProps.ButtonTitle = 'SEE FULL PLAN';
               PlanProps.cards = item.cards;
               PlanProps.CardType = item.card_data.card_type;
               break;
