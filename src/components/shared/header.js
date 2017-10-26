@@ -75,7 +75,7 @@ class Header extends React.Component {
 
                         <span className="textSizeTranslate">&#8203;</span>
                         <span aria-hidden="true" className="translateIcon">▼</span>
-                        <span className="translateHeader">Translate</span>
+                        <span id="google_translate_element" className="translateHeader">Translate</span>
                         <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" />
                     </div>
                 </div>
