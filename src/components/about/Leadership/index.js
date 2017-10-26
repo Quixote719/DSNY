@@ -22,10 +22,10 @@ class Leadership extends Component {
         let cards = null;
         let ProfileCards = {};
         if(this.props.LeadershipData !== undefined){
-            cards = this.renderCards(this.props.LeadershipData.data.sections.sections[0].cards);
-            ProfileCards.cards = this.props.LeadershipData.data.sections.sections[0].cards;
+            cards = this.renderCards(this.props.LeadershipData.data.sections.sections);
+            ProfileCards.cards = this.props.LeadershipData.data.sections.sections;
             ProfileCards.CardSize = 1;
-            ProfileCards.CardType = this.props.LeadershipData.data.sections.sections[0].card_data.card_type;
+            ProfileCards.CardType = 'staff-card';
         }
     return (
       <div className="LeadershipPage greyBcg">

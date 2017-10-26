@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch Beta 47.1 (45415) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Collection-icon/organics" transform="translate(-35.000000, -1.000000)">
+            <g id="Group" transform="translate(13.000000, 1.000000)">
+                <g id="Group-2" transform="translate(22.000000, 0.000000)">
+                    <circle id="Oval-2" stroke="#ED7530" cx="16" cy="16" r="15.5"></circle>
+                    <path d="M14.7973545,22.2497721 C18.1955595,22.2497721 20.5125176,21.232258 22.9839394,14.6184165 C24.0651865,11.7354599 27,9.70043167 27,9.70043167 C27,9.70043167 24.2196504,8.17416054 19.5857343,8.00457485 C12.1714687,7.83498917 8.00094427,12.4138026 8.00094427,16.1446876 C8.00094427,17.1622017 8.30987201,18.5188871 8.30987201,18.5188871 C8.30987201,18.5188871 12.6348603,11.9050455 21.2848369,11.9050455 C18.1955595,13.4313167 11.3991494,15.6359305 7.07416106,24.454386 C6.61076946,25.4719001 8.46433587,25.8110715 8.61879974,25.4719001 C9.23665521,24.1152146 10.9357578,21.0626724 11.0902216,21.0626724 C11.7080771,21.7410151 14.179499,22.2497721 14.7973545,22.2497721 Z" id="Oval" fill="#ED7530" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

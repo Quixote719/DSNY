@@ -41,7 +41,8 @@ class Header extends Component {
         </div>
 
       )
-    } else {
+    }
+    else {
       if (body) {
         let BannerText = {};
         BannerText.title = title;

@@ -23,7 +23,8 @@ class CardBox extends Component {
             card = <ColorCard title={item.title} content={item.content}/>
         }
         else if(this.props.info.CardType=='staff-card'){
-            card = <ProfileCard name={item.title} duty={item.content} image={item.image.file} />
+            let profileImage;
+            card = <ProfileCard name={item.header} duty={item.content} image={item.image.file} />
         }
         else{
             card = <TitleContentCard title={item.title} content={item.content}/>
@@ -55,14 +56,12 @@ class CardBox extends Component {
   render() {
     return (
       <div>
-        <div>
           <div className="CardList">
             <Row>
               {this.renderCards(this.props.info.cards)}
             </Row>
           </div>
           {this.ViewAllButton()}
-        </div>
       </div>
     );
   }

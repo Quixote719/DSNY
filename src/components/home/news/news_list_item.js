@@ -7,10 +7,6 @@ import Dotdotdot from 'react-dotdotdot'
 
 class NewsListItem extends Component {
 
-    constructor(props, context) {
-        super(props, context);
-    }
-
     render() {
         return (
             <div>
@@ -25,7 +21,7 @@ class NewsListItem extends Component {
     NewsList()
     {
         //To display Top News Image on Desktop and IPAD Landscape .  alignright class is aligning this card to the right
-        if (this.props.itemCounter == 0) {
+        if (this.props.itemCounter === 0) {
             return (
             <Col xs={12} sm={6} md={6} className='alignright newsDesktopSection'>
                 <div className='newsSectiondDefaultcardTI'>
@@ -37,7 +33,7 @@ class NewsListItem extends Component {
             );
         }
         //To display Top News Details with Title & Description on Desktop and IPAD Landscape
-        else if (this.props.itemCounter == 99) {
+        else if (this.props.itemCounter === 99) {
             return (
             <Col xs={12} sm={6} md={6} className='alignright newsDesktopSection'>
                 <div className='newsSectioncardTI'>
@@ -102,7 +98,7 @@ class NewsListItem extends Component {
 
     getDescription(descriptionText)
     {
-        if(descriptionText.length > 0)
+        if(descriptionText !== undefined && descriptionText.length > 0)
         {
             return(
                 <div className='newscardDescription'>

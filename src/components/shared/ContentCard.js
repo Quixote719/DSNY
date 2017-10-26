@@ -5,19 +5,19 @@ class ContentCard extends Component {
     const styles={
       small:{
         'width': '303px',
-        'height': '200px',
+        'minHeight': '200px',
         'padding': '15px 20px',
         'display':'inline-block'
       },
       normal:{
         'width': '460px',
-        'height': '200px',
+        'minHeight': '200px',
         'padding': '15px 20px',
         'display':'inline-block'
       },
       large:{
         'width': '610px',
-        'height': '200px',
+        'minHeight': '200px',
         'padding': '20px',
         'display':'inline-block'
       }

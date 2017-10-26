@@ -19,7 +19,7 @@ let PressReleaseListstate = {
 class DSNYEvents extends Component {
 
   componentDidMount() {
-    // window.scrollTo(0, 0); 
+    // window.scrollTo(0, 0);
     const {id} = this.props
     const {year} = this.state
     // this.props.fetchPressReleaseList(year);
@@ -47,7 +47,7 @@ class DSNYEvents extends Component {
     return _.map(eventData, eventItem => {
       return (
         /* Lazyload - The component will be loaded when it's top edge is 150px from viewport. It's useful to make user ignorant about lazy load effect. */
-        <LazyLoad height={140} once={true} offset={0} debounce={100} key={eventItem.EventID}> 
+        <LazyLoad height={140} once={true} offset={0} debounce={100} key={eventItem.EventID}>
           <EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID} />
         </LazyLoad>
       );
@@ -75,7 +75,7 @@ class DSNYEvents extends Component {
                     <li className=""></li>
                   </ol>
               </div>
-            </div> 
+            </div>
             <div><div className="BreadcrumbHeaderTitleSection"><div className="container">DSNY Events</div></div></div>
         </div>
       </div>

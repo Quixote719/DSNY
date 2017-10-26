@@ -26,7 +26,7 @@ class CarouselData extends Component {
     // }
     //If depolying uncomment the below and comment the above
 
-    
+
     // componentWillMount() {
     //     this.props.carouselPanelDataTemporary();
     // }
@@ -36,7 +36,7 @@ class CarouselData extends Component {
                 return _.map(item.cards, (item,index) =>{
                     return (
                         <Carousel.Item key={index}>
-                            <img src={item.image.file} />
+                            <img src={item.featured_image.base_path + item.featured_image.file } />
                             <div>
                             <Carousel.Caption>
                                 {item.title}
@@ -82,7 +82,7 @@ class CarouselData extends Component {
     }
 
     render() {
-        
+
         return (
             <div className="carouselContainerParent ">
                 <div className="container carouselContainer">
@@ -130,7 +130,7 @@ class CarouselData extends Component {
 // }
 
 // let actionList = {
-//     carouselPanelData: actions.carouselPanelData,    
+//     carouselPanelData: actions.carouselPanelData,
 //     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
 // };
 
