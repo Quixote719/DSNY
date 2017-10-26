@@ -10,6 +10,7 @@ import CardType from './card_type'
 import TableDictionary from './card_table_dictionary'
 import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
+import CardMultifile from './card_multifile'
 import CardReferenceDetails from '../../PressReleases/reference_details_card'
 import $ from 'jquery';
 
@@ -74,6 +75,9 @@ class CardSec extends Component {
           : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       case 'full-width-card':
         return (<CardFullWidth link={url} dataObject={Item}/>);
+      case 'multi-file-card':
+        return (<CardMultifile dataObject={Item}/>);
+
       case 'reference-details-card':
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
       default:

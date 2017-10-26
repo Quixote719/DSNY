@@ -63,14 +63,15 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan"} component={StrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan/FullStrategicPlan"} component={FullStrategicPlan}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
-
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>              
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/reports/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/statistics/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/laws/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/proposed-rules/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/educational-materials/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
