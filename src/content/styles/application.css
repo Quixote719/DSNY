@@ -94,6 +94,11 @@ html body {
   padding: 0;
 }
 
+a{
+  color: #00764E;
+}
+
 a:focus, a:hover {
+  color: #7CC04B;
   text-decoration: none;
 }
