@@ -89,6 +89,7 @@ class ResourcesContainer extends Component {
             </div>
           )
         }
+        
 
         let EducationalMaterialsSubList;
         if (sec.name == 'resources-educational-materials' && sec.cards.length > 0) {

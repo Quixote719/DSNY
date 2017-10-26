@@ -1,24 +1,22 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
+import Link from './link'
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
-import '../../../content/styles/lawsListItem.css';
+import '../../../content/styles/dictionaryTableCard.css';
 import Dotdotdot from 'react-dotdotdot'
-class LawsListItem extends Component {
+import '../../../content/styles/cardType.css';
+import moment from 'moment';
 
-  rawMarkup() {
-    var rawMarkup = this.props.body;
-    return {__html: rawMarkup};
-  }
+class TableDictionary extends Component{
 
-  render() {
-    return (
-      <div >
+ render() {
+    return(
+    <div >
         <Col>
           <Col xs={12} md={3}>
             <Dotdotdot clamp={3}>
-              <div className='lawsTitle' dangerouslySetInnerHTML={{
+              <div className='dictionaryCardTitle' dangerouslySetInnerHTML={{
                 __html: this.props.title
               }}/>
             </Dotdotdot>
@@ -27,14 +25,14 @@ class LawsListItem extends Component {
             <Row>
               <Col xs={12}>
                 <Dotdotdot clamp={3}>
-                  <div className='lawsDesc' dangerouslySetInnerHTML={{
+                  <div className='dictionaryCardDesc' dangerouslySetInnerHTML={{
                     __html: this.props.body
                   }}/>
                 </Dotdotdot>
               </Col>
               <Col xs={12}>
                 <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}${this.props.url}`}>
-                  <div className='lawsLink'>SEE ALL RULES</div>
+                  <div className='dictionaryBottomLink'>  {this.props.header} </div>
                 </Link>
               </Col>
             </Row>
@@ -43,18 +41,20 @@ class LawsListItem extends Component {
             <div className='hairline'></div>
           </Col>
         </Col>
-
-      </div>
+    </div>    
     );
-  };
-};
-LawsListItem.propTypes = {
-  onClick: PropTypes.func,
+
+
+    }
+
+}
+
+TableDictionary.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
-  className: PropTypes.string,
-  url: PropTypes.string
+  url: PropTypes.string,
+  header:PropTypes.string
 };
 
 
-export default LawsListItem;
+export default TableDictionary;
