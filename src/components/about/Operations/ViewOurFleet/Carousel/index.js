@@ -16,20 +16,19 @@ class CarouselData extends Component {
   }
 
   carouselDataItemList() {
+
     return _.map(this.props.carouselItems, (item, index) => {
+      let image = item.featured_image.base_path + item.featured_image.file
         return (
             <Carousel.Item key={index}>
-                <img src={item.feature_image.file} />
+                <img src={image} />
               <div className="fleetExplaination">
                 <h1 className="fleetContentTitle">
                   {item.title}
                 </h1>
-                <div className="fleetContent">
-                  {item.content}
-                </div>
+                <div className="fleetContent" dangerouslySetInnerHTML={{__html: item.content}}></div>
               </div>
             </Carousel.Item>
-
         );
     });
   }
