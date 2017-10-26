@@ -14,7 +14,7 @@ class ProgramInitiatives extends Component {
     initiativesList() {
         return _.map(this.props.carouselItems, item => {
             if(item.name == "home-initiatives-section"){
-                return _.map(item.cards, (item,index) =>{
+                return _.map(item.cards.slice(0,4), (item,index) =>{
                     return (
                         <Col xs={12} lg={3} id={item.rank == "4" ? 'initiativesColLast' : 'initiativesCol'} key={index}>
                             <div className="initiativesParentDiv">

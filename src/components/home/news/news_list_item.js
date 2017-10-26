@@ -102,7 +102,7 @@ class NewsListItem extends Component {
 
     getDescription(descriptionText)
     {
-        if(descriptionText.length > 0)
+        if(descriptionText && descriptionText.length > 0)
         {
             return(
                 <div className='newscardDescription'>
