@@ -3,6 +3,7 @@ import TitleBanner from '../../shared/TitleBanner'
 import ColorCard from '../../shared/ColorCard'
 import CardBox from '../../shared/card_box'
 import ProfileCard from '../../shared/ProfileCard'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { Row, Col } from 'react-bootstrap';
@@ -21,6 +22,7 @@ class Leadership extends Component {
   render() {
         let cards = null;
         let ProfileCards = {};
+        let banner;
         if(this.props.LeadershipData !== undefined){
             cards = this.renderCards(this.props.LeadershipData.data.sections.sections);
             ProfileCards.cards = this.props.LeadershipData.data.sections.sections;
@@ -29,6 +31,7 @@ class Leadership extends Component {
         }
     return (
       <div className="LeadershipPage greyBcg">
+        {banner}
         <div className="SContainer">
             <CardBox info={ProfileCards}/>
         </div>

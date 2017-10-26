@@ -8,6 +8,7 @@ import styles from '../../../../../content/styles/fleet.css';
 import '../../../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import {Link} from "react-router-dom";
+// import fleetLeftArrow from '../../../../../content/image/Arrow_left.svg';
 
 class CarouselData extends Component {
 
@@ -21,7 +22,7 @@ class CarouselData extends Component {
       let image = item.featured_image.base_path + item.featured_image.file
         return (
             <Carousel.Item key={index}>
-                <img src={image} />
+                <img src={image} alt="fleetCarouselImage"/>
               <div className="fleetExplaination">
                 <h1 className="fleetContentTitle">
                   {item.title}

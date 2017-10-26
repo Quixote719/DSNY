@@ -11,6 +11,7 @@ import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
 import SearchBoxHome from "./searchBoxHome";
+import PlacesAutocomplete from 'react-places-autocomplete'
 
 class SearchCards extends Component {
     constructor(props, context) {
@@ -18,10 +19,52 @@ class SearchCards extends Component {
         this.state = {
             value: "",
             suggestions: [],
+            address: '',
+            placeholder: "When is Collection at ..."            
           };
     }
+    handleChange = (address) =>{
+        this.setState({
+            address,
+        })
+    }
+    resetPlaceHolder = () =>{
+        this.setState({
+          placeholder: "When is Collection at ..."
+        })
+      }
+    setPlaceHolder = () =>{
+        this.setState({
+          placeholder: " "
+        })
+    }
+    handleSelect = (address) =>{
+        this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
+    }
     render() {
-
+        const inputProps = {
+            value: this.state.address,
+            onChange: this.handleChange,
+            placeholder: this.state.placeholder,
+            onBlur: this.resetPlaceHolder,
+            onFocus: this.setPlaceHolder,
+        }
+        const cssClasses = {
+            googleLogoContainer: 'googleLogoContainer',
+            googleLogoImage: 'googleLogoImage',
+            autocompleteItem: 'collectionScheduleItem',
+            autocompleteItemActive: 'collectionScheduleActiveItem',
+            input: 'ridOfSearch',
+            autocompleteContainer: 'collectionSchedule-autocomplete-container'
+          }
+          const cssClassesSelected = {
+            googleLogoContainer: 'googleLogoContainer',
+            googleLogoImage: 'googleLogoImage',
+            autocompleteItem: 'collectionScheduleItem',
+            autocompleteItemActive: 'collectionScheduleActiveItem',
+            input: 'collectionSearchAutoComplete',
+            autocompleteContainer: 'collectionSchedule-autocomplete-container'
+          }
         return (
             <div className="container searchContainerRidCollection">
                 <Row className="searchRow">
@@ -31,10 +74,13 @@ class SearchCards extends Component {
                     <Col xs={12} md={6} className="searchCollectionParent">
                         <div id="TextureSquare">
                             <div id="innersquare">
-                                <input className="ridOfSearch" type="text" placeholder="When is Collection at ..." >
-                                </input>
+                                <PlacesAutocomplete inputProps={inputProps}
+                                    onSelect={this.handleSelect}
+                                    onEnterKeyDown={this.handleSelect}
+                                    classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
+                                />
                                 <i className="fa fa-search collectionSearch" id="collectionSearch"></i>
-                                <div className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
+                                <div style={this.state.address ==""?{display: 'block'}:{display:'none'}} className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
                             </div>
                         </div>
                     </Col>

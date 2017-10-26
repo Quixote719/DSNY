@@ -18,8 +18,10 @@ export default function carouselDataReducer(state = {}, action) {
       return { ...state, ridOffKeywords: action.payload };
     case 'SET_RID_OFF_SEARCH_RESULTS':
       return { ...state, getRidOfSearchResultsData: action.payload, noOfSearchResults: action.length };
-    // case 'SET_RID_OFF_SEARCH_BOX':
-    //   return { ...state, getRidOfSearchValue: action.payload };
+    case 'SET_RID_OFF_ITEM_DETAILS':
+      return { ...state, getRidOfItemDetailsData: action.payload};
+    case 'SET_COLLECTION_SCHEDULE_DATA':
+      return { ...state, collectionScheduleData: action.payload, arrayLength: action.arrayLength};
     case types.FETCH_EVENT_SUB_LIST:
       return {...state, EventsSubList: _.mapKeys(action.payload.data, "$id")};
     case types.FETCH_EVENT_DETAILS:
