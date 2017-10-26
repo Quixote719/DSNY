@@ -94,7 +94,7 @@ class ResourcesContainer extends Component {
         if (sec.name == 'resources-educational-materials' && sec.cards.length > 0) {
           EducationalMaterialsSubList = (
             <div>
-              <EducationalMaterialsList promotional={sec.cards} title={sec.header} body={sec.content} src={sec.image.file}/>
+              <EducationalMaterialsList promotional={sec.cards} title={sec.header} body={sec.content} src={`${sec.featured_image.base_path}${sec.featured_image.file}`}/>
             </div>
           )
         }
