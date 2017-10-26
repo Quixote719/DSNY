@@ -94,7 +94,9 @@ class CardSec extends Component {
     let l = (dataObject.cards.length);
     let style = l > 2
       ? 'FullWidth'
-      : 'RightAlligned'
+      : dataObject.content !== ''
+        ? 'RightAlligned'
+        : 'FullWidth'
 
     let cn = dataObject.background_color === 'gray'
       ? 'NBsubSectioncardType'

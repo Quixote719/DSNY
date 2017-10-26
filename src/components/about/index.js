@@ -87,7 +87,7 @@ class About extends Component {
                 case 'about-leadership':{
                   LeadershipProps.title = item.header;
                   LeadershipProps.content = item.content;
-                  LeadershipProps.ProfileUrl = item.image.file;
+                  LeadershipProps.ProfileUrl = item.featured_image.base_path + item.featured_image.file;
                   break;
                 }
                 case 'about-bureaus':{
@@ -108,7 +108,7 @@ class About extends Component {
                   break;
                 }
                 case 'about-locations':{
-                  LocationProps.image = item.image.file;
+                  LocationProps.image = item.featured_image.base_path + item.featured_image.file;
                   LocationProps.content = item.content;
                   break;
                 }

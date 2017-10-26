@@ -24,7 +24,9 @@ class StatsCardList extends Component {
 
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
-      return (<CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} key={Item.id}/>);
+      return (
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} key={Item.id}/></Link>
+      );
     });
   }
 

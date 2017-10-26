@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="17px" height="24px" viewBox="0 0 17 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Map_marker_default</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="1.0-About-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Map_marker_default">
+            <path d="M8.47058824,0 C3.79988066,0 0,3.899161 0,8.69185434 C0,14.6397366 7.58034667,23.3715754 7.90308664,23.7403883 C8.20622925,24.0868419 8.7354954,24.0862325 9.03808983,23.7403883 C9.3608298,23.3715754 16.9411765,14.6397366 16.9411765,8.69185434 C16.9410851,3.899161 13.1412501,0 8.47058824,0 Z" id="Path" fill="#00764E"></path>
+            <path d="M8.47058824,13.064969 C6.1206392,13.064969 4.20886736,11.103201 4.20886736,8.69185434 C4.20886736,6.28050765 6.12068488,4.31878651 8.47058824,4.31878651 C10.8204916,4.31878651 12.7322634,6.28055453 12.7322634,8.69190122 C12.7322634,11.1032479 10.8204916,13.064969 8.47058824,13.064969 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>
