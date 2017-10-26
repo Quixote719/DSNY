@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 import EducationSectionHeader from './education_material_header';
 import SubSectionButton from '../../shared/sub_section_button';
-import CardTitleBody from '../../shared/Card_title_body';
+import CardTitle from '../../shared/Card_title';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class EducationalMaterialsList extends Component {
@@ -23,7 +23,9 @@ class EducationalMaterialsList extends Component {
 
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
-      return (<CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} key={Item.id}/>);
+      return (
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/educational-materials/business-recycling-materials`}><CardTitle title={Item.title} key={Item.id}/></Link>
+      );
     });
   }
 
