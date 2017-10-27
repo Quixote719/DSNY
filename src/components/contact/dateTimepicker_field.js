@@ -24,23 +24,13 @@ class FormDateTimePicker extends Component {
     });
   }
 
-  renderInput(inputProps) {
-    debugger;
-    return (
-      <div class="inner-addon right-addon">
-        <i class="glyphicon glyphicon-search"></i>
-        <input { ...inputProps }/>
-      </div>
-    )
-  }
-
   render() {
     return (
       <div>
-        <Col className='FormField' xs={12} sm={6} md={6}>
+        <Col xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <Datetime closeOnSelect timeFormat={false} renderInput={this.renderInput}/>
+            <Datetime/>
           </fieldset>
 
         </Col>

@@ -19,19 +19,19 @@ export function getCollectionSchedule(address) {
         axios.get(COLLECTION_SCHEDULE_URL+address+"/Formatted")
             .then((data) => {
                 if(data.data.Goat !== null && data.data.Goat.sanitationRegularCollectionSchedule !== null){
-                    var sanitationRegularCollectionSchedule = data.data.Goat.sanitationRegularCollectionSchedule.replace(/TH/i, 'H');                    
+                    var sanitationRegularCollectionSchedule = data.data.Goat.sanitationRegularCollectionSchedule.replace(/TH/i, 'H');
                 }
                 else{
                     var sanitationRegularCollectionSchedule =""
                 }
                 if(data.data.Goat !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null){
-                    var sanitationRecyclingCollectionSchedule = data.data.Goat.sanitationRecyclingCollectionSchedule.replace(/TH/i, 'H');                    
+                    var sanitationRecyclingCollectionSchedule = data.data.Goat.sanitationRecyclingCollectionSchedule.replace(/TH/i, 'H');
                 }
                 else{
                     var sanitationRecyclingCollectionSchedule =""
                 }
                 if(data.data.Goat !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                    var sanitationOrganicsCollectionSchedule = data.data.Goat.sanitationOrganicsCollectionSchedule.replace(/TH/i, 'H');                    
+                    var sanitationOrganicsCollectionSchedule = data.data.Goat.sanitationOrganicsCollectionSchedule.replace(/TH/i, 'H');
                 }
                 else{
                     var sanitationOrganicsCollectionSchedule =""
@@ -41,7 +41,7 @@ export function getCollectionSchedule(address) {
                     var collectionScheduleLength = 0;
                 }
                 else{
-                    var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
+                    var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]
                     var arrayLength = collectionScheduleData.filter(Boolean).length
                 }
                 dispatch({
@@ -71,7 +71,7 @@ export function getRidOfSearchResults(suggestion) {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
-                    length: data.data.length,                    
+                    length: data.data.length,
                 })
             })
     }
@@ -79,12 +79,17 @@ export function getRidOfSearchResults(suggestion) {
 
 export function getRidOffItemDetails(itemName) {
     return function (dispatch) {
-        axios.get(RID_OF_ITEM_DETAILS_URL+itemName)
+        axios.get(RID_OF_ITEM_DETAILS_URL+"="+itemName)
             .then((data) => {
                 dispatch({
-                    type: 'SET_RID_OFF_ITEM_DETAILS',
+                    type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
+                    length: data.data.length,
                 })
+                // dispatch({
+                //     type: 'SET_RID_OFF_SEARCH_BOX',
+                //     payload: suggestion,
+                // })
             })
     }
 }
@@ -96,7 +101,7 @@ export function carouselPanelData() {
         var day = ("0" + date.getUTCDate()).slice(-2);
         var year = date.getUTCFullYear().toString();
         var currentDate = parseInt(month + day + year);
-        
+
         axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate,  { crossdomain: true } )
             .then((data) => {
                 let carouselPanelItems = [];
@@ -115,7 +120,7 @@ export function carouselPanelData() {
                     type: 'SET_PANEL_ITEMS',
                     payload: carouselPanelItems,
                 })
-                
+
 
             })
 
@@ -164,4 +169,3 @@ export function fetchEventDetails(slug) {
     })
   }
 }
-

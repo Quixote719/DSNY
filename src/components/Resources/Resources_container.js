@@ -89,7 +89,6 @@ class ResourcesContainer extends Component {
             </div>
           )
         }
-        
 
         let EducationalMaterialsSubList;
         if (sec.name == 'resources-educational-materials' && sec.cards.length > 0) {
@@ -114,6 +113,7 @@ class ResourcesContainer extends Component {
       return (
         <div key ={prItem.id}>
           <div>{banner}</div>
+
           <div>{sections}</div>
         </div>
       )
