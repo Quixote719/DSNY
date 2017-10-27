@@ -14,28 +14,27 @@
   line-height: 19px;
 }
 
-[title^="Toggle fullscreen view"]{
+[title="Toggle fullscreen view"], [title="Show street map"], [title="Show satellite imagery"]{
   display: none;
 }
 
 .locLabel{
-  min-width: 240px;
+  width: 240px;
 }
 
 .locLabelImage{
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   height: 100%;
   vertical-align: top;
   display: inline-block;
 }
 
 .locLabelInfo{
-  padding: 10px;
+  padding: 10px 7px;
   width: 75%;
   float: right;
   height:100%;
   color: #9B9B9B;
-  word-break: break-all;
   display: inline-block;
 }
 

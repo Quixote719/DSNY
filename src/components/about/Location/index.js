@@ -24,7 +24,7 @@ const MyMapComponent = compose(
       return(
         <GoogleMap
           onClick = { () => {props.onMapClick()} }
-          defaultZoom={12}
+          zoom={12}
           center={props.Center}>
            {
               _.map(props.Locations, marker =>  {
@@ -48,7 +48,10 @@ const MyMapComponent = compose(
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(125, 150)}
-                           labelStyle = {{ zIndex:"3", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
+                           labelStyle = {{ backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}
+                           zIndex = {3}
+                           >
+
                            <div className='locLabel'>
                                <div className='locLabelImage'>
                                  <img src={require('../../../content/images/icon_gargage.svg')} alt="garage"/>
