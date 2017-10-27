@@ -3,13 +3,19 @@ import '../../content/styles/dsnyCard.css';
 
 class ColorCard extends Component {
   render() {
-    const Cardstyle = {
-      'background-color': '#B3D234'
+    const cardStyle = {
+      'chartreuse': {'background-color': '#B3D234'},
+      'blue': {'background-color':'#005495'},
+      'purple': {'background-color':'#5B2E91'},
+      'mauve': {'background-color':'#90268F'},
+      'magenta': {'background-color':'#C5168C'},
+      'cyan': {'background-color':'#009FB4'},
     }
+    const cardColor = cardStyle[this.props.color]||cardStyle.chartreuse;
     return (
       <div className = "ColorCard">
-        <div style={Cardstyle} className = "ColorCardHeader">{this.props.title}</div>
-        <div className = "ColorCardContent">{this.props.content}</div>
+        <div style={cardColor} className = "ColorCardHeader">{this.props.title.toUpperCase()}</div>
+        <div className = "ColorCardContent" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
       </div>
     )
   }

@@ -115,13 +115,12 @@ class Location extends Component {
   render() {
     return (
       <div>
-        <div className='ReactGoogleMap'>
-            <MyMapComponent
-              isMarkerShown={this.state.isMarkerShown}
-              Locations={this.state.Locations}
-              onMarkerClick={this.onMarkerClick}
-              onMapClick={this.onMapClick}/>
-        </div>
+        <MyMapComponent
+          isMarkerShown={this.state.isMarkerShown}
+          Locations={this.state.Locations}
+          onMarkerClick={this.onMarkerClick}
+          onMapClick={this.onMapClick}
+        />
         <LocationDetails/>
       </div>
 

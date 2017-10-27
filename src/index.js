@@ -36,6 +36,8 @@ import LocationDetails from './components/about/Location/LocationDetails';
 import CollectionSchedule from './components/home/CollectionSchedule';
 import ViewOurFleet from './components/about/Operations/ViewOurFleet'
 
+import TestForm from './components/contact/index';
+
 /*import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
@@ -63,7 +65,6 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan"} component={StrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan/FullStrategicPlan"} component={FullStrategicPlan}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>
@@ -84,7 +85,7 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule"} component={CollectionSchedule}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/:address"} component={CollectionSchedule}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Operations/ViewOurFleet"} component={ViewOurFleet}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
             </Switch>
           </div>
         </div>

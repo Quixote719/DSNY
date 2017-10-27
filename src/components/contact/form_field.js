@@ -56,13 +56,14 @@ class FormField extends Component {
   }
   render() {
     return (
-      <div >
-        <Col className='FormField' xs={12} sm={6} md={6}>
+      <div className='FormField'>
+        <Col xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
             <div>{this.renderField(this.props.type)}</div>
           </fieldset>
         </Col>
+
       </div>
     );
   };

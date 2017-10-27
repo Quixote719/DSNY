@@ -24,12 +24,6 @@ class Leadership extends Component {
         let ProfileCards = {};
         let banner;
         if(this.props.LeadershipData !== undefined){
-            let data = this.props.LeadershipData.data;
-            banner = (
-                      <div key={data.id}>
-                        <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
-                      </div>
-                   )
             cards = this.renderCards(this.props.LeadershipData.data.sections.sections);
             ProfileCards.cards = this.props.LeadershipData.data.sections.sections;
             ProfileCards.CardSize = 1;
