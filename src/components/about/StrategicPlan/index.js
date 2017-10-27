@@ -29,7 +29,13 @@ class StrategicPlan extends Component {
     console.log('this.props.StrategicPlanData.data');
     console.log(this.props.StrategicPlanData);
     if(this.props.StrategicPlanData !== undefined){
-      _.map(this.props.StrategicPlanData.data.sections.sections, item =>{
+      let data = this.props.StrategicPlanData.data;
+      banner = (
+                  <div key={data.id}>
+                    <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
+                  </div>
+               )
+      _.map(data.sections.sections, item =>{
         switch (item.name){
           case 'top-section-2':{
               ImageProps.image = item.featured_image.base_path + item.featured_image.file;
@@ -57,6 +63,7 @@ class StrategicPlan extends Component {
     }
     return (
       <div className="StrategicPlanPage">
+          {banner}
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
               <div className = 'SContainer'>

@@ -13,7 +13,6 @@ class BureausSection extends Component {
   ViewAllButton() {
       return (<SubSectionButton title='SEE ALL BUREAUS'/>);
   }
-
   render() {
     return (
         <div>

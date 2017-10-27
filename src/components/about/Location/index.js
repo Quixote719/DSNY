@@ -24,8 +24,8 @@ const MyMapComponent = compose(
       return(
         <GoogleMap
           onClick = { () => {props.onMapClick()} }
-          defaultZoom={12}
-          defaultCenter={{ lat: 40.72390126, lng: -73.88979419 }}>
+          zoom={12}
+          center={props.Center}>
            {
               _.map(props.Locations, marker =>  {
                 if(!marker.isActive){
@@ -47,8 +47,11 @@ const MyMapComponent = compose(
                            icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(-14, 70)}
-                           labelStyle = {{ zIndex:"1", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
+                           labelAnchor = {new google.maps.Point(125, 150)}
+                           labelStyle = {{ backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}
+                           zIndex = {3}
+                           >
+
                            <div className='locLabel'>
                                <div className='locLabelImage'>
                                  <img src={require('../../../content/images/icon_gargage.svg')} alt="garage"/>
@@ -74,6 +77,7 @@ class Location extends Component {
       super(props, context);
       this.state = {
         isMarkerShown: true,
+        Center: { lat: 40.72390126, lng: -73.88979419 },
         Locations: this.props.LocationList
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
@@ -98,29 +102,28 @@ class Location extends Component {
   }
 
   onMarkerClick(index){
-    console.log(index-1);
-
-    let temp = Object.assign([],this.state.Locations);
-
-    console.log(typeof(temp));
-    console.log(temp);
-    temp.forEach((item)=>{
+    let tempLoc = Object.assign([],this.state.Locations);
+    let tempCenter = Object.assign({},this.state.Locations);
+    tempLoc.forEach((item)=>{
       item.isActive = false;
     })
-    temp[index-1].isActive=true;
-    this.setState({Locations : temp});
-    console.log(this.state.Locations);
+    tempLoc[index-1].isActive=true;
+    tempCenter = { lat : tempLoc[index-1].Latitude, lng : tempLoc[index-1].Longitude}
+    this.setState({Center : tempCenter});
+    this.setState({Locations : tempLoc});
   }
 
   render() {
     return (
       <div>
-        <MyMapComponent
-          isMarkerShown={this.state.isMarkerShown}
-          Locations={this.state.Locations}
-          onMarkerClick={this.onMarkerClick}
-          onMapClick={this.onMapClick}
-        />
+        <div className='ReactGoogleMap'>
+            <MyMapComponent
+              isMarkerShown = {this.state.isMarkerShown}
+              Center = {this.state.Center}
+              Locations = {this.state.Locations}
+              onMarkerClick = {this.onMarkerClick}
+              onMapClick = {this.onMapClick}/>
+        </div>
         <LocationDetails/>
       </div>
 

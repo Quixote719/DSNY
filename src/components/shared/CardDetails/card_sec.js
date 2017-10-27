@@ -68,7 +68,7 @@ class CardSec extends Component {
       case 'square-card-no-border':
         return (url
           ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
+          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
