@@ -77,7 +77,10 @@ class TestForm extends Component {
           <div><FormDateTimePicker title='datepicker'/></div>
 
         </Row>
-
+        {/*<ReCAPTCHA
+          ref="recaptcha"
+          sitekey="6Lej8jUUAAAAAPSVFK5_I1VPTsNlJ7Q0hTafQKCm"
+        />*/}
       </div>
     );
   };
