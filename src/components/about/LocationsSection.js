@@ -10,10 +10,10 @@ class LocationsSection extends Component {
                     'backgroundImage': `url(${this.props.LocationProps.image})`,
                     'backgroundSize': '100% 900px',
                   }
-    const cardStyle={
-                    'float': 'right',
-                    'marginTop': '25px'
-    }
+    const cardStyle = {
+                        'float': 'right',
+                        'marginTop': '25px'
+                      }
 
     return (
       <div className='locations' style={style} >

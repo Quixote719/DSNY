@@ -8,6 +8,12 @@ import FormField from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
+
+import FormTextarea from './textarea_field';
+
+import ReCAPTCHA from "react-google-recaptcha"
+
+
 import '../../content/styles/contactForm.css';
 
 var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
@@ -71,6 +77,10 @@ class TestForm extends Component {
           <div><FormDateTimePicker title='datepicker'/></div>
 
         </Row>
+        <ReCAPTCHA
+          ref="recaptcha"
+          sitekey="6Lej8jUUAAAAAPSVFK5_I1VPTsNlJ7Q0hTafQKCm"
+        />
       </div>
     );
   };
