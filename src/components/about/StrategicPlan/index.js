@@ -29,10 +29,16 @@ class StrategicPlan extends Component {
     console.log('this.props.StrategicPlanData.data');
     console.log(this.props.StrategicPlanData);
     if(this.props.StrategicPlanData !== undefined){
-      _.map(this.props.StrategicPlanData.data.sections.sections, item =>{
+      let data = this.props.StrategicPlanData.data;
+      banner = (
+                  <div key={data.id}>
+                    <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
+                  </div>
+               )
+      _.map(data.sections.sections, item =>{
         switch (item.name){
           case 'top-section-2':{
-              ImageProps.image = item.image.file;
+              ImageProps.image = item.featured_image.base_path + item.featured_image.file;
               ImageProps.content = item.content;
               break;
           }
@@ -41,8 +47,6 @@ class StrategicPlan extends Component {
               break;
           }
           case 'strategic-plan-cards-section':{
-              PlanProps.button = true;
-              PlanProps.ButtonTitle = 'SEE FULL PLAN';
               PlanProps.cards = item.cards;
               PlanProps.CardType = item.card_data.card_type;
               break;
@@ -59,6 +63,7 @@ class StrategicPlan extends Component {
     }
     return (
       <div className="StrategicPlanPage">
+          {banner}
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
               <div className = 'SContainer'>
@@ -71,8 +76,8 @@ class StrategicPlan extends Component {
               <div className = 'greyBcg' >
                 <div className = 'SContainer boxPadding'>
                   <CardBox info={PlanProps}/>
-                  {sections}
                 </div>
+                {sections}
               </div>
       </div>
     )

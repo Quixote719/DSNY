@@ -26,3 +26,8 @@ export function fetchLocationList() {
     const request = axios.get(FETCH_LOCATION_LIST_URL);
     return {type: types.FETCH_LOCATION_LIST, payload: request};
 }
+
+export function FetchFleet() {
+    const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=fleet`);
+    return {type: 'SET_FLEET', payload: request}
+}

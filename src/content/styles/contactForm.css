@@ -4,14 +4,14 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .formSectionHeaderHairline {
   height: 2px;
   background-color: #7CC04B;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 8px;
 }
 
 .red {
@@ -19,7 +19,7 @@
 }
 
 .FormField {
-  margin-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .formDropDownButtonText {
@@ -34,18 +34,6 @@
   text-align: left;
 }
 
-.formTextarea {
-  min-height: 100px;
-  max-height: 240px;
-  width: 100%;
-  border: 1px solid #DFDFDF;
-  border-radius: 3px;
-}
-
-textarea {
-  resize: none;
-}
-
 input, input.form-control {
   height: 36px;
   border: 1px solid #DFDFDF;
@@ -54,9 +42,9 @@ input, input.form-control {
   background-color: #FFFFFF;
 }
 
-input:focus, textarea:focus, input.form-control:focus {
+input:focus {
   outline: none !important;
-  border: 1px solid #7CC04B;
+  border: 2px solid #7CC04B;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -79,8 +67,7 @@ fieldset input {
   width: 100%;
 }
 
-
-/*@supports (zoom:2) {
+@supports (zoom:2) {
   input[type="radio"], input[type=checkbox] {
     zoom: 1.1;
   }
@@ -90,7 +77,7 @@ fieldset input {
   input[type="radio"], input[type=checkbox] {
     transform: scale(1.1);
   }
-}*/
+}
 
 .FormMultiSelectTitle {
   color: #000000;
