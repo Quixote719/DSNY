@@ -65,6 +65,10 @@ class CardSec extends Component {
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
+      case 'square-card-no-border':
+        return (url
+          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
+          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
@@ -105,16 +109,16 @@ class CardSec extends Component {
                   <SubSectionHeaderGreen title={headerContent}/>
                 </div>
               );
-    } 
+    }
 
-  /* Normal Black Header is returned, provided there are no tags in the dataObject header */  
+  /* Normal Black Header is returned, provided there are no tags in the dataObject header */
   getHeader(dataObject){
       return(
                 <div key={dataObject.id}>
                   <SubSectionHeader title={dataObject.header}/>
                 </div>
                )
-  }  
+  }
 
 
 
@@ -137,7 +141,8 @@ class CardSec extends Component {
     let headerColor;
     let headerContent;
     if (dataObject.header !== '') {
-         headerColor= $(dataObject.header).css("color"); 
+         headerColor= $(dataObject.header).css("color");
+         console.log(dataObject.header);
          if(headerColor == 'green'){
             headerContent = dataObject.header.replace(/<[^>]+>/g, '');
             header = this.getGreenHeader(dataObject,headerContent);
