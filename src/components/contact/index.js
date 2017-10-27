@@ -11,7 +11,7 @@ import Datetime from 'react-datetime';
 
 import FormTextarea from './textarea_field';
 
-import ReCAPTCHA from "react-google-recaptcha"
+// import ReCAPTCHA from "react-google-recaptcha"
 
 
 import '../../content/styles/contactForm.css';
@@ -77,10 +77,10 @@ class TestForm extends Component {
           <div><FormDateTimePicker title='datepicker'/></div>
 
         </Row>
-        <ReCAPTCHA
+        {/*<ReCAPTCHA
           ref="recaptcha"
           sitekey="6Lej8jUUAAAAAPSVFK5_I1VPTsNlJ7Q0hTafQKCm"
-        />
+        />*/}
       </div>
     );
   };
