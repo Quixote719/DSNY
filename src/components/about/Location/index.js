@@ -32,7 +32,7 @@ const MyMapComponent = compose(
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_default.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_default.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(0, 0)}
@@ -45,7 +45,7 @@ const MyMapComponent = compose(
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_selected.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
                            labelAnchor = {new google.maps.Point(-17, 75)}
