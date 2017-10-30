@@ -1,0 +1,79 @@
+.ridOfSearch,
+.actual-edit-overlay {
+    height: 33px;
+    font-weight: 700;
+    color: #000;
+    font-size: 24px;
+    border-top: none;
+    margin-right: 8px;
+    width: 97%;
+    margin-top: 30px;
+    margin-left: 13px;
+    border-bottom: 2px solid #7CC04B;
+    border-left: none;
+    border-right: none;
+    -webkit-text-fill-color: #231F20 !important;
+}
+
+.collectionSearchAutoComplete:focus{
+    outline: none;
+}
+
+.collectionSearchAutoComplete{
+    padding-right: 24px;
+    height: 33px;
+    font-weight: 700;
+    color: #000;
+    font-size: 18px;
+    border-top: none;
+    margin-right: 8px;
+    width: 97%;
+    margin-top: 29px;
+    margin-left: 13px;
+    border-bottom: 2px solid #7CC04B;
+    border-left: none;
+    border-right: none;
+    -webkit-text-fill-color: #231F20 !important;
+}
+
+#TextureSquare {
+    width: 100%;
+    height: 142px;
+    padding: 10px;
+    background: url('../images/Lightgreen.png')
+}
+
+#innersquare {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+}
+
+#collectionSearch{
+  font-size: 24px;
+  position: absolute;
+  top: 44px;
+  right: 41px;
+  color: #7CC04B!important;
+}
+
+@media only screen and (max-width: 599px) {
+    #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    #TextureSquare {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+}

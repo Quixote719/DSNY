@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Banner from '../shared/banner';
+import SearchBoxCollection from '../shared/searchBoxCollection';
 
 
 class Services extends Component {
@@ -10,7 +11,9 @@ class Services extends Component {
 
   render() {
     return (
-      <div>Services</div>
+      <div>
+        <SearchBoxCollection />
+      </div>
     )
   }
 }
