@@ -12,7 +12,7 @@ const google = window.google;
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places",
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCxMkcYQWRESMbq11G6keP1l9w3z5Jef04&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `500px` }} />,
     mapElement: <div style={{ height: `100%` }} />,
@@ -32,10 +32,11 @@ const MyMapComponent = compose(
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_default.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_default.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(0, 0)}>
+                           labelAnchor = {new google.maps.Point(0, 0)}
+                           zIndex = {4}>
                            <div></div>
                      </MarkerWithLabel>
                     )
@@ -44,12 +45,12 @@ const MyMapComponent = compose(
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_selected.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(125, 150)}
+                           labelAnchor = {new google.maps.Point(-17, 75)}
                            labelStyle = {{ backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}
-                           zIndex = {3}
+                           zIndex = {5}
                            >
 
                            <div className='locLabel'>

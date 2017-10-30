@@ -32,7 +32,7 @@ class CardBox extends Component {
 
         if(this.props.info.CardSize == 1){
           return (
-            <Col xs={12} sm={6} md={3} key={item.id}>
+            <Col xs={12} sm={4} md={3} key={item.id}>
               {card}
             </Col>
           );
