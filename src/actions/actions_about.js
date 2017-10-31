@@ -31,3 +31,8 @@ export function FetchFleet() {
     const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=fleet`);
     return {type: 'SET_FLEET', payload: request}
 }
+
+export function FetchContactData() {
+  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=contact-page`);
+  return {type: 'SET_CONTACT_PAGE', payload: request}
+}

@@ -58,7 +58,6 @@ class ViewOurFleet extends Component {
     if(this.props.FleetData !== undefined) {
       Fleet = this.props.FleetData.data;
     }
-    console.log(Fleet);
 
     if(this.props.FleetData != undefined) {
       _.map(this.props.FleetData.data.sections.sections, item => {

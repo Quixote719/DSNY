@@ -13,6 +13,7 @@ import ScrollToTop from './scrollToTop';
 import Home from './components/home';
 import About from './components/about';
 import Services from './components/services'
+import Contact from './components/ContactPage';
 import Location from './components/about/Location';
 import Leadership from './components/about/Leadership';
 import Bureaus from './components/about/Bureaus';
@@ -64,23 +65,17 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/pressRelease/:slug"} component={PressReleaseDetail}/>
-=======
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>
->>>>>>> 892e0f99a2b59539dc23bcd36c476c40d4eee8e2
-=======
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan"} component={StrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/foundation/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} component={Services}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} component={Contact}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>
->>>>>>> dc629d357d1df913d3d0828e154ef68e7a497748
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/reports/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/statistics/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/laws/recycling-and-garbage-laws/:slug"} component={CardDetailContainer}/>
@@ -98,20 +93,16 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule"} component={CollectionSchedule}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/:address"} component={CollectionSchedule}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
-=======
+
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Operations/ViewOurFleet"} component={ViewOurFleet}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/TestForm"} component={TestForm}/>
->>>>>>> 892e0f99a2b59539dc23bcd36c476c40d4eee8e2
-=======
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>
 
->>>>>>> dc629d357d1df913d3d0828e154ef68e7a497748
             </Switch>
           </div>
         </div>
