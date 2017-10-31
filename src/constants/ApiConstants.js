@@ -13,6 +13,7 @@ export const RID_OF_ITEM_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposal
 export const COLLECTION_SCHEDULE_URL = "https://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/geocoder/DSNYaddresses/"
 export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=contact-page`
 export const HOLIDAY_DATA_URL= `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
+export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=contact-page`
 
 // zzzzexport const MEDIAS_ALL_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/`;
 export const MEDIA_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/id`;
