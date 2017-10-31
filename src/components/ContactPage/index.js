@@ -38,8 +38,8 @@ class Contact extends Component {
 
   parseContactData(Contact, BannerText, MyRequestStatus) {
     if(this.props.ContactPageData !== undefined){
-        Contact = this.props.ContactPageData.data; 
-        // MyRequestStatus = this.props.ContactPageData.data.sections.sections.header;     
+        Contact = this.props.ContactPageData.data;
+        // MyRequestStatus = this.props.ContactPageData.data.sections.sections.header;
     }
     BannerText.title = Contact.title;
     BannerText.content = Contact.header_content;
