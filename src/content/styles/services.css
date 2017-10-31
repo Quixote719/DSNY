@@ -41,13 +41,14 @@
 }
 
 .contentLeft{
-  width: 25%;
+  width: 24%;
   vertical-align: top;
   display: inline-block;
 }
 
 .contentRight{
-  width: 75%;
+  width: 74%;
+  float: right;
   display: inline-block;
 }
 
@@ -79,6 +80,22 @@
   }
 }
 
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    #TextureSquare {
+        width: 100%;
+    }
+    .searchContainerRidCollection {
+        width: auto;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 599px) {
     .ridOfSearch,
     .actual-edit-overlay{
@@ -95,19 +112,13 @@
 }
 
 
-
-@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
-    #TextureSquare {
-        width: 100%;
-    }
-    .searchContainerRidCollection {
-        width: auto;
-    }
-}
-
-@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
-    #TextureSquare {
-        height: 130px;
-        width: 100%;
-    }
+@media only screen and (max-width: 767px) {
+  .contentLeft{
+    width: auto;
+    display: block;
+  }
+  .contentRight{
+    width: auto;
+    display: block;
+  }
 }
