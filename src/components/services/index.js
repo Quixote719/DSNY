@@ -44,10 +44,10 @@ class Services extends Component {
             if(sec.name == 'collection-under-widget'){
               return(
                 <div key={sec.id}>
+                  <div className='sectionHeader SContainer'>{sec.header}</div>
                   <SearchBoxCollection ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
                   <div className='SContainer'>
                     <ContentCardRow dataObject = {sec}/>
-                    <div></div>
                   </div>
                 </div>
 
@@ -57,13 +57,14 @@ class Services extends Component {
               return(
                 <div className='SContainer' key={sec.id}>
                   <SubSectionHeader title={sec.header}/>
+                  <ContentCardRow dataObject = {sec}/>
                 </div>
               )
             }
           })
         }
         return (
-          <div>
+          <div className='ServicePage'>
             <div>{banner}</div>
             <div>{sections}</div>
           </div>

@@ -10,16 +10,16 @@ class ContentCardRow extends Component {
     return (
       <div>
         <div className='contentLeft' dangerouslySetInnerHTML={{__html: dataObject.content}}></div>
-        <div className='contentRight'>{this.renderCards(dataObject.cards)}</div>
+        <div className='contentRight'>{this.renderCards(dataObject.cards, dataObject.background_color)}</div>
       </div>
     )
   }
 
-  renderCards(cards = []){
+  renderCards(cards = [], bcgColor){
     return _.map(cards, item => {
       return(
         <Col xs={12} sm={6} md={4} key={item.id}>
-            <TitleContentCard title={item.title} link={item.linked_page.url} content={item.content}/>
+            <TitleContentCard dataObject = {item} type={(bcgColor==''||bcgColor=='white')?'narrow_border':'narrow'}/>
         </Col>
       )
     })
