@@ -36,6 +36,8 @@ import LocationDetails from './components/about/Location/LocationDetails';
 import CollectionSchedule from './components/home/CollectionSchedule';
 import ViewOurFleet from './components/about/Operations/ViewOurFleet'
 
+import TestForm from './components/contact/index';
+
 /*import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
@@ -64,12 +66,19 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan"} component={StrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/StrategicPlan/FullStrategicPlan"} component={FullStrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
+<<<<<<< HEAD
 
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/pressRelease/:slug"} component={PressReleaseDetail}/>
+=======
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"} component={PressReleaseList}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases/:slug"} component={PressReleaseDetail}/>
+>>>>>>> 892e0f99a2b59539dc23bcd36c476c40d4eee8e2
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/reports/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/statistics/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/laws/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/proposed-rules/:slug"} component={CardDetailContainer}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/educational-materials/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
@@ -80,7 +89,13 @@ ReactDOM.render(
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule"} component={CollectionSchedule}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/:address"} component={CollectionSchedule}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
+<<<<<<< HEAD
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
+=======
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Operations/ViewOurFleet"} component={ViewOurFleet}/>
+
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/TestForm"} component={TestForm}/>
+>>>>>>> 892e0f99a2b59539dc23bcd36c476c40d4eee8e2
             </Switch>
           </div>
         </div>

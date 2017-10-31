@@ -9,6 +9,7 @@ import {Grid, Row, fluid, Col, Clearfix} from 'react-bootstrap';
 
 class StatsCardList extends Component {
 
+
   constructor() {
     super();
     this.firstN = this.firstN.bind(this);
@@ -21,18 +22,20 @@ class StatsCardList extends Component {
       return memo;
     }, {}).value();
   }
-
+  
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
       return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} key={Item.id}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/statistics/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} key={Item.id}/></Link>
       );
     });
   }
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (<SubSectionButton title='VIEW ALL'/>);
+      return (
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/resources/statistics"}><SubSectionButton title='VIEW ALL'/></Link>
+      );
     } else {
       return null;
     }
@@ -42,7 +45,6 @@ class StatsCardList extends Component {
   render() {
 
     const {sc, n} = this.props;
-
     if (_.isEmpty(sc)) {
       return (
         <div></div>
