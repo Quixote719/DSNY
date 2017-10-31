@@ -13,68 +13,97 @@ import {withFormik, Formik, Field, Form} from 'formik'
 
 import '../../content/styles/contactForm.css';
 
+const DisplayFormikState = props => (<div style={{
+    margin: '4rem 0'
+  }}>
+  <h3 style={{
+      fontFamily: 'monospace'
+    }}/>
+  <pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '1.5rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>props</strong> ={' '}
+      {JSON.stringify(props, null, 2)}
+    </pre>
+  </div>);
+
 // Our inner form component which receives our form's state and updater methods as props
-const InnerForm = ({
-  values,
-  errors,
-  touched,
-  handleChange,
-  handleBlur,
-  handleSubmit,
-  isSubmitting,
-  handledropDown,
-  setFieldValue,
-  setFieldTouched
-}) => (<form onSubmit={handleSubmit}>
-  <div><FormHeader title='Online Application'/></div>
-  <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
-  <div>
-    'search box validation of address comes up'
-  </div>
-  <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
-  <div><FormBoolean title='Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.' name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage}/></div>
-  <div><FormBoolean title='Yes, the sign will be installed within two weeks of receiving the material.' name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/></div>
-  <div><FormBoolean title='Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.' name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/></div>
-  <div><FormBoolean title='Yes, photos submitted may be used for DSNY program promotion.' name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/></div>
-  <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
-  <div><FormDropdown title='APPLYING AS' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
-    {
-      "Id": 1,
-      "Name": "ApplyingAsStreetTreeSteward",
-      "DisplayName": "StreetTreeSteward",
-      "Selected": false
-    }, {
-      "Id": 2,
-      "Name": "ApplyingAsOrganization",
-      "DisplayName": "Organization",
-      "Selected": false
-    }
-  ]}/></div>
-  <div>
-    <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
-  </div>
-  <div>
-    <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField>
-  </div>
-  <div>
-    <FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.email && errors.email && <div>{errors.OrganizationWebsite}</div>}</FormField>
-  </div>
-  <div>
-    <FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  </div>
-  <div>
-    <FormField title='ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)' type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  </div>
-  <div>
-    <FormField title='ORGANIZATION OR PROJECT instagram ID (optional)' type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  </div>
-  <div><FormSectionHeader title='SECTION 4: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
-  <div>
-    <Col xs={12}>
-      <button type="submit" disabled={isSubmitting}>Submit</button>
-    </Col>
-  </div>
-</form>)
+const InnerForm = (props) => {
+  const {
+    values,
+    touched,
+    errors,
+    dirty,
+    isSubmitting,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+    handleReset,
+    handledropDown,
+    setFieldValue,
+    setFieldTouched
+  } = props;
+  return (<form onSubmit={handleSubmit}>
+    <div><FormHeader title='Online Application'/></div>
+    <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
+    <div>
+      'search box validation of address comes up'
+    </div>
+    <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+    <div><FormBoolean title='Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.' name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage}/></div>
+    <div><FormBoolean title='Yes, the sign will be installed within two weeks of receiving the material.' name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/></div>
+    <div><FormBoolean title='Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.' name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/></div>
+    <div><FormBoolean title='Yes, photos submitted may be used for DSNY program promotion.' name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/></div>
+    <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
+    <div><FormDropdown title='APPLYING AS' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
+      {
+        "Id": 1,
+        "Name": "ApplyingAsStreetTreeSteward",
+        "DisplayName": "StreetTreeSteward",
+        "Selected": false
+      }, {
+        "Id": 2,
+        "Name": "ApplyingAsOrganization",
+        "DisplayName": "Organization",
+        "Selected": false
+      }
+    ]}/></div>
+    <div>
+      <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
+    </div>
+    <div>
+      <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField>
+    </div>
+    <div>
+      <FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.email && errors.email && <div>{errors.OrganizationWebsite}</div>}</FormField>
+    </div>
+    <div>
+      <FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    </div>
+    <div>
+      <FormField title='ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)' type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    </div>
+    <div>
+      <FormField title='ORGANIZATION OR PROJECT instagram ID (optional)' type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    </div>
+    <div><FormSectionHeader title='SECTION 4: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+    <div>
+      <Col xs={12}>
+        <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
+      </Col>
+    </div>
+    <div>
+      <br/>
+      <br/>
+      <DisplayFormikState {...props}/>
+    </div>
+
+  </form>)
+};
 
 // Wrap our form with the using withFormik HoC
 const MyForm = withFormik({
@@ -84,12 +113,12 @@ const MyForm = withFormik({
     WillPostSignageWithinTwoWeeks: false,
     WillSubmitThreePhotos: false,
     ConsentToDsnyUseOfPhotos: false,
-    OrganizationName: '',
-    OrganizationTaxIdNumber: '',
-    OrganizationWebsite: '',
-    OrganizationFacebookPage: '',
-    OrganizationTwitterHandle: '',
-    OrganizationInstagramHandle: ''
+    OrganizationName: props.customFormData.OrganizationName,
+    OrganizationTaxIdNumber: props.customFormData.OrganizationTaxIdNumber,
+    OrganizationWebsite: props.customFormData.OrganizationWebsite,
+    OrganizationFacebookPage: props.customFormData.OrganizationFacebookPage,
+    OrganizationTwitterHandle: 'www.twitter.com/dsny-nyc',
+    OrganizationInstagramHandle: 'www.instagram.com/dsny-nyc'
   }),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
@@ -102,20 +131,38 @@ const MyForm = withFormik({
     return errors
   },
 
+  handleChange: (values, props) => {
+    console.log(values);
+  },
+
   handleSubmit: (values, {
     props, setSubmitting, setErrors,
     /* setValues, setStatus, and other goodies */
   }) => {
+    console.log(props);
     console.log(values);
   }
 })(InnerForm)
+
+const imaginaryformData = {
+  WillPostCompostRecipientSignage: false,
+  WillPostSignageWithinTwoWeeks: false,
+  WillSubmitThreePhotos: false,
+  ConsentToDsnyUseOfPhotos: false,
+  OrganizationName: 'DSNY New York CIty',
+  OrganizationTaxIdNumber: '212-291-1259',
+  OrganizationWebsite: 'www.dsny.nyc.gov',
+  OrganizationFacebookPage: 'www.facebook.com/dsny-nyc',
+  OrganizationTwitterHandle: '',
+  OrganizationInstagramHandle: ''
+}
 
 class TestForm extends Component {
 
   render() {
 
     return (<div>
-      <div><MyForm/></div>
+      <div><MyForm customFormData={imaginaryformData}/></div>
       <Row>
         <div><FormHeader title='Online Application'/></div>
         <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
