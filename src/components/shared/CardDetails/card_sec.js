@@ -203,7 +203,7 @@ class CardSec extends Component {
           </div>
         )
       } else {
-        body = (<div key={dataObject.id} className='cardTypeBody' dangerouslySetInnerHTML={{
+        body = (<div key={dataObject.id} className='cardTypeBodyNoHeader' dangerouslySetInnerHTML={{
           __html: dataObject.content
         }}/>)
       }
