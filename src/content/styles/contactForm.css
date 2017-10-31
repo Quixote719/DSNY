@@ -57,11 +57,11 @@
   border-radius: 3px;
 }
 
-textarea {
+.contactForm textarea {
   resize: none;
 }
 
-input, input.form-control {
+.contactForm input, .contactForm input.form-control {
   height: 36px;
   border: 1px solid #DFDFDF;
   border-radius: 3px;
@@ -69,18 +69,18 @@ input, input.form-control {
   background-color: #FFFFFF;
 }
 
-input:focus, textarea:focus, input.form-control:focus {
+.contactForm input:focus, .contactForm textarea:focus, .contactForm input.form-control:focus {
   outline: none !important;
   border: 1px solid #7CC04B;
 }
 
-input:disabled {
+.contactForm input:disabled {
   border: 1px solid #D8D8D8;
   border-radius: 3px;
   background-color: #F8F8F8;
 }
 
-input[type=checkbox], input[type=radio] {
+.contactForm input[type=checkbox], .contactForm input[type=radio] {
   height: 20px;
   width: 20px;
   border: 1.2px solid #C4C9CD;
@@ -88,7 +88,7 @@ input[type=checkbox], input[type=radio] {
   color: clear;
 }
 
-fieldset label {
+.contactForm fieldset label {
   color: grey;
   font-weight: 400;
   font-size: 16px;
@@ -96,7 +96,7 @@ fieldset label {
   margin-left: 8px;
 }
 
-fieldset input {
+.contactForm fieldset input {
   width: 100%;
 }
 
