@@ -59,7 +59,7 @@ const InnerForm = (props) => {
     <div><FormBoolean title='Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.' name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/></div>
     <div><FormBoolean title='Yes, photos submitted may be used for DSNY program promotion.' name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/></div>
     <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
-    <div><FormDropdown title='APPLYING AS' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
+    <div><FormDropdown title='APPLYING AS' name="ApplyingAs" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
       {
         "Id": 1,
         "Name": "ApplyingAsStreetTreeSteward",
@@ -113,6 +113,7 @@ const MyForm = withFormik({
     WillPostSignageWithinTwoWeeks: false,
     WillSubmitThreePhotos: false,
     ConsentToDsnyUseOfPhotos: false,
+    ApplyingAs: '',
     OrganizationName: props.customFormData.OrganizationName,
     OrganizationTaxIdNumber: props.customFormData.OrganizationTaxIdNumber,
     OrganizationWebsite: props.customFormData.OrganizationWebsite,
@@ -139,6 +140,10 @@ const MyForm = withFormik({
     props, setSubmitting, setErrors,
     /* setValues, setStatus, and other goodies */
   }) => {
+    setTimeout(() => {
+      alert(JSON.stringify(values, null, 2));
+      setSubmitting(false);
+    }, 1000);
     console.log(props);
     console.log(values);
   }
@@ -149,8 +154,9 @@ const imaginaryformData = {
   WillPostSignageWithinTwoWeeks: false,
   WillSubmitThreePhotos: false,
   ConsentToDsnyUseOfPhotos: false,
+  ApplyingAs: '',
   OrganizationName: 'DSNY New York CIty',
-  OrganizationTaxIdNumber: '212-291-1259',
+  OrganizationTaxIdNumber: '2122911259',
   OrganizationWebsite: 'www.dsny.nyc.gov',
   OrganizationFacebookPage: 'www.facebook.com/dsny-nyc',
   OrganizationTwitterHandle: '',
