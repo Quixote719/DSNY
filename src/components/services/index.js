@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
-
+import * as actions from '../../actions/actions_services';
+import { connect } from 'react-redux';
 
 class Services extends Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentWillMount() {
+    this.props.Services();
   }
 
   render() {
@@ -18,5 +23,18 @@ class Services extends Component {
   }
 }
 
+
+
+function mapStateToProps(state) {
+  return {
+    ServicesData: state.ServicesDataReducer.ServicesData,
+  }
+}
+
+let actionList = {
+  Services: actions.Services,
+};
+
+Services = connect(mapStateToProps, actionList)(Services);
 
 export default Services;
