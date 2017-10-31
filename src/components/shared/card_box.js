@@ -19,12 +19,12 @@ class CardBox extends Component {
         if(this.props.info.CardType=='standard-card-no-border'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
-        else if(this.props.info.CardType=='strategy-card'){
-            card = <ColorCard color={item.key_color} title={item.title} content={item.content}/>
+        else if(this.props.info.CardType=='color-bar-card'){
+            card = <ColorCard dataObject={item}/>
         }
         else if(this.props.info.CardType=='staff-card'){
             let profileImage;
-            card = <ProfileCard name={item.header} duty={item.content} image={item.image.file} />
+            card = <ProfileCard name={item.header} duty={item.content} image={item.featured_image} />
         }
         else{
             card = <TitleContentCard title={item.title} link={item.link} content={item.content}/>
@@ -32,7 +32,7 @@ class CardBox extends Component {
 
         if(this.props.info.CardSize == 1){
           return (
-            <Col xs={12} sm={6} md={3} key={item.id}>
+            <Col xs={12} sm={4} md={3} key={item.id}>
               {card}
             </Col>
           );

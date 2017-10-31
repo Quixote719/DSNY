@@ -134,4 +134,16 @@ body{top:0px !important;}
     margin-right: 20px;
 }
 
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
 /* Language Translation CSS Styles  -- End*/

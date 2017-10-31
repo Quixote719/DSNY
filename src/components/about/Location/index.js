@@ -12,7 +12,7 @@ const google = window.google;
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places",
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCxMkcYQWRESMbq11G6keP1l9w3z5Jef04&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `500px` }} />,
     mapElement: <div style={{ height: `100%` }} />,
@@ -24,18 +24,19 @@ const MyMapComponent = compose(
       return(
         <GoogleMap
           onClick = { () => {props.onMapClick()} }
-          defaultZoom={12}
-          defaultCenter={{ lat: 40.72390126, lng: -73.88979419 }}>
+          zoom={12}
+          center={props.Center}>
            {
               _.map(props.Locations, marker =>  {
                 if(!marker.isActive){
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_default.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_default.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(0, 0)}>
+                           labelAnchor = {new google.maps.Point(0, 0)}
+                           zIndex = {4}>
                            <div></div>
                      </MarkerWithLabel>
                     )
@@ -44,11 +45,14 @@ const MyMapComponent = compose(
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
-                           icon={{ url: require('../../../content/images/Map_marker_selected.svg') }}
+                           icon={{ url: require('../../../content/images/Map_marker_selected.png') }}
                            onClick = { () => {props.onMarkerClick(marker.$id)} }
                            position = {{ lat: marker.Latitude, lng: marker.Longitude }}
-                           labelAnchor = {new google.maps.Point(-14, 70)}
-                           labelStyle = {{ zIndex:"1", backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}>
+                           labelAnchor = {new google.maps.Point(-17, 75)}
+                           labelStyle = {{ backgroundColor: "#FFFFFF", fontSize: "17px", padding: "7px"}}
+                           zIndex = {5}
+                           >
+
                            <div className='locLabel'>
                                <div className='locLabelImage'>
                                  <img src={require('../../../content/images/icon_gargage.svg')} alt="garage"/>
@@ -74,6 +78,7 @@ class Location extends Component {
       super(props, context);
       this.state = {
         isMarkerShown: true,
+        Center: { lat: 40.72390126, lng: -73.88979419 },
         Locations: this.props.LocationList
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
@@ -98,29 +103,28 @@ class Location extends Component {
   }
 
   onMarkerClick(index){
-    console.log(index-1);
-
-    let temp = Object.assign([],this.state.Locations);
-
-    console.log(typeof(temp));
-    console.log(temp);
-    temp.forEach((item)=>{
+    let tempLoc = Object.assign([],this.state.Locations);
+    let tempCenter = Object.assign({},this.state.Locations);
+    tempLoc.forEach((item)=>{
       item.isActive = false;
     })
-    temp[index-1].isActive=true;
-    this.setState({Locations : temp});
-    console.log(this.state.Locations);
+    tempLoc[index-1].isActive=true;
+    tempCenter = { lat : tempLoc[index-1].Latitude, lng : tempLoc[index-1].Longitude}
+    this.setState({Center : tempCenter});
+    this.setState({Locations : tempLoc});
   }
 
   render() {
     return (
       <div>
-        <MyMapComponent
-          isMarkerShown={this.state.isMarkerShown}
-          Locations={this.state.Locations}
-          onMarkerClick={this.onMarkerClick}
-          onMapClick={this.onMapClick}
-        />
+        <div className='ReactGoogleMap'>
+            <MyMapComponent
+              isMarkerShown = {this.state.isMarkerShown}
+              Center = {this.state.Center}
+              Locations = {this.state.Locations}
+              onMarkerClick = {this.onMarkerClick}
+              onMapClick = {this.onMapClick}/>
+        </div>
         <LocationDetails/>
       </div>
 
