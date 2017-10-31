@@ -209,7 +209,7 @@ input.ridOfSearch:focus {
 }
 
 .searchCollectionParent {
-    z-index: 10;    
+    z-index: 9;    
     padding-left: 8px;
 }
 
@@ -878,7 +878,7 @@ input.serviceRequestSearch:focus {
         height: 29px;
         margin-top: 25px;
         font-size: 18px;
-        width: 95%;
+        width: calc(100% - 18px);        
         margin-left: 9px;
     }
     .exampleRidSearch {

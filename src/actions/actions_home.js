@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
+import {HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -16,38 +16,43 @@ export function carouselData() {
 }
 export function getCollectionSchedule(address) {
     return function (dispatch) {
-        axios.get(COLLECTION_SCHEDULE_URL+address+"/Formatted")
+        axios.get(COLLECTION_SCHEDULE_URL+address+"/CollectionSchedule")
             .then((data) => {
-                if(data.data.Goat !== null && data.data.Goat.sanitationRegularCollectionSchedule !== null){
-                    var sanitationRegularCollectionSchedule = data.data.Goat.sanitationRegularCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationRegularCollectionSchedule =""
-                }
-                if(data.data.Goat !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null){
-                    var sanitationRecyclingCollectionSchedule = data.data.Goat.sanitationRecyclingCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationRecyclingCollectionSchedule =""
-                }
-                if(data.data.Goat !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                    var sanitationOrganicsCollectionSchedule = data.data.Goat.sanitationOrganicsCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationOrganicsCollectionSchedule =""
-                }
-                if(sanitationRegularCollectionSchedule ==""&& sanitationRecyclingCollectionSchedule=="" && sanitationOrganicsCollectionSchedule==""){
-                    var collectionScheduleData="noValue";
-                    var collectionScheduleLength = 0;
-                }
-                else{
-                    var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
-                    var arrayLength = collectionScheduleData.filter(Boolean).length
-                }
-                dispatch({
-                    type: 'SET_COLLECTION_SCHEDULE_DATA',
-                    payload: collectionScheduleData,
-                    arrayLength: arrayLength - 1,
+                axios.get(HOLIDAY_DATA_URL).then((holidayData)=>{
+                    if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
+                        var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationRegularCollectionSchedule =""
+                    }
+                    if(data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null){
+                        var sanitationRecyclingCollectionSchedule = data.data.RecyclingCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationRecyclingCollectionSchedule =""
+                    }
+                    if(data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null){
+                        var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationOrganicsCollectionSchedule =""
+                    }
+                    if(sanitationRegularCollectionSchedule ==""&& sanitationRecyclingCollectionSchedule=="" && sanitationOrganicsCollectionSchedule==""){
+                        var collectionScheduleData="noValue";
+                        var collectionScheduleLength = 0;
+                    }
+                    else{
+                        var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
+                        var arrayLength = collectionScheduleData.filter(Boolean).length
+                    }
+                    dispatch({
+                        type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        collectionScheduleInfo: data.data.Goat,
+                        payload: collectionScheduleData,
+                        routingData: data.data.RoutingTime,
+                        arrayLength: arrayLength - 1,
+                        holidayData: holidayData.data,
+                    })
                 })
             })
     }
