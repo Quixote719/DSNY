@@ -5,22 +5,12 @@
   font-size: 24px;
   line-height: 33px;
   height: 33px;
-  width: 900px;
+  width: 500px;
   text-align: left;
   background-color: #FFFFFF;
   margin-top: 0;
   padding-top: 20px;
-}
 
-.fleetContentTitle>.pageNumber{
-  width: 26px;
-  height: 33px;
-  font-size: 17.5px;
-  font-weight: bold;
-  line-height: 33px;
-  text-align: left;
-  display: inline-block;
-  float: right;
 }
 
 .fleetContent{
@@ -33,6 +23,7 @@
   line-height: 24px;
   text-align: left;
   padding-top: 20px;
+
 }
 
 .fleetCarouselContainer{
@@ -82,8 +73,6 @@
     display: none;
 }
 
-
-
 /*Mobile View*/
 @media only screen and (max-width: 499px) {
   .fleetCarouselContainer {
@@ -92,42 +81,23 @@
       padding-bottom: 31px;
       padding-top: 20px;
       width: auto;
-      height: auto;
-  }
-
-  .fleetContentTitle>.pageNumber{
-    padding-right: 40px!important;;
-  }
-
-  .fleetCarousel>.carousel-indicators>li {
-      background-color: white;
-      border-color: rgba(0, 46, 30, 0.2);
-  }
-
-  .fleetCarousel>.carousel-indicators>.active {
-      background-color: #00764D;
-      border-color: #00764D;
   }
 
   .fleetExplaination {
-    width: auto!important;
-
+    max-width: auto!important;
   }
 
   .fleetContent{
     width: auto!important;
-    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
-    font-size: auto!important;
   }
 
   .fleetCarousel {
       float: none;
       width: auto;
-      height: auto;
   }
 
   .fleetCarousel>.carousel-inner>.item>img {
@@ -147,49 +117,29 @@
 
   .fleetCarouselContainer{
       padding-left: 16px!important;
-      padding-right: 30px!important;
+      padding-right: 16px!important;
       padding-bottom: 41px;
       padding-top: 28px;;
-      width: auto;
-      height: auto;
-  }
-
-  .fleetContentTitle>.pageNumber{
-    padding-right: 40px!important;;
-  }
-
-  .fleetCarousel>.carousel-indicators>li {
-      background-color: white;
-      border-color: rgba(0, 46, 30, 0.2);
-  }
-
-  .fleetCarousel>.carousel-indicators>.active {
-      background-color: #00764D;
-      border-color: #00764D;
+      width: 712px;
   }
 
   .fleetCarousel{
       width: 712px;
-      height: auto;
   }
   .fleetCarousel>.carousel-inner{
       width: 712px;
-      height: auto;
   }
 
   .fleetExplaination {
-    width: auto!important;
-    font-size: auto;
+    max-width: auto!important;
   }
 
   .fleetContent{
     width: auto!important;
-    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
-    font-size: auto!important;
   }
 }
 
@@ -201,32 +151,15 @@
       padding-bottom: 31px;
       padding-top: 20px;
       width: auto;
-      height: auto;
-  }
-
-  .fleetContentTitle>.pageNumber{
-    padding-right: 40px!important;;
-  }
-
-  .fleetCarousel>.carousel-indicators>li {
-      background-color: white;
-      border-color: rgba(0, 46, 30, 0.2);
-  }
-
-  .fleetCarousel>.carousel-indicators>.active {
-      background-color: #00764D;
-      border-color: #00764D;
   }
 
   .fleetCarousel {
       float: none;
       width: auto;
-      height: auto;
   }
   .fleetCarousel>.carousel-inner{
       float: none;
       width: auto;
-      height: auto;
   }
 
   .fleetCarousel>.carousel-inner>.item>img {
@@ -235,17 +168,15 @@
   }
 
   .fleetExplaination {
-    width: auto!important;
+    max-width: auto!important;
   }
 
   .fleetContent{
     width: auto!important;
-    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
-    font-size: auto!important;
   }
 }
 
@@ -253,38 +184,15 @@
 @media (min-width: 960px) and (max-width: 1284px) {
   .fleetCarouselContainer{
       width: 939px;
-      height: auto;
-  }
-
-  .fleetContentTitle>.pageNumber{
-    padding-right: 40px!important;;
-  }
-
-  .fleetCarousel>.carousel-indicators>li {
-      background-color: white;
-      border-color: rgba(0, 46, 30, 0.2);
-
-  }
-
-  .fleetCarousel>.carousel-indicators{
-    margin-left: 0;
-    padding-right: 380px;
-  }
-
-  .fleetCarousel>.carousel-indicators>.active {
-      background-color: #00764D;
-      border-color: #00764D;
   }
 
   .fleetCarousel{
       float: none;
       width: 816px;
-      height: auto;
   }
   .fleetCarousel>.carousel-inner{
       float: none;
       width: 939px;;
-      height: auto;
   }
 
   .fleetCarousel>.carousel-inner>.item>img{
@@ -304,11 +212,9 @@
 
   .fleetContent{
     width: auto!important;
-    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
-    font-size: auto!important;
   }
 }
