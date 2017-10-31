@@ -10,7 +10,7 @@ class StrategicPlanSection extends Component {
       <div className="StrategicPlan">
         <SubSectionHeader title = {this.props.StrategicPlanProps.title}/>
         <div dangerouslySetInnerHTML={{__html: this.props.StrategicPlanProps.content}}></div>
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategicplan"}>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan"}>
           <SubSectionButton title='SEE STRATEGIC PLAN'/>
         </Link>
       </div>

@@ -28,10 +28,10 @@ class Bureaus extends Component {
                         <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
                       </div>
                    )
-          _.map(this.props.BureausData.data.sections.sections, item =>{
+          _.map(data.sections.sections, item =>{
                 switch (item.name){
                   case 'top-section':{
-                    ImageProps.image = item.image.file;
+                    ImageProps.image = item.featured_image.base_path + item.featured_image.file;
                     ImageProps.content = item.content;
                     break;
                   }

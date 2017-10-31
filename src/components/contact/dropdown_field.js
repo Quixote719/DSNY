@@ -31,13 +31,13 @@ class FormDropdown extends Component {
 
   render() {
     return (
-      <div >
-        <Col className='FormField' xs={12} sm={6} md={6}>
+      <div>
+        <Col xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
 
             <DropdownButton className='formDropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-              Work
+              yeshu
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
               {this.renderList(this.props.options)}
             </DropdownButton>

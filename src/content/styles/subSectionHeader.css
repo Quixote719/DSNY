@@ -7,6 +7,16 @@
   margin-top: 20px;
 }
 
+.greenSectionHeader{
+  min-height: 33px;
+  color: #00764D;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+
+
 .patternLineGreen {
   height: 10px;
   margin-bottom: 30px;

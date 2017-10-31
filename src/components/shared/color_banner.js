@@ -8,6 +8,7 @@ class ColorBanner extends Component {
         <div className='SContainer'>
           <div className='ColorBannerTitle'>Zero Waste</div>
           <div className='ColorBannerContent'>Launch New Services to Reach Zero Waste to Landfills</div>
+          <div></div>
         </div>
       </div>
     );

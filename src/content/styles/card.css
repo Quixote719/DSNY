@@ -28,9 +28,49 @@
   cursor: pointer;
 }
 
+.subSectioncardMFTB {
+  min-height: 295px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  padding: 15px;
+  margin: 10px 0;
+}
+
 .cardTitle {
   min-height: 88px;
   min-width: 190px;
+}
+
+.cardTitleMF, .cardBodyMF, .cardDropdownMF, .cardDownloadMF {
+  min-height: 38px;
+  min-width: 190px;
+}
+
+.cardDropdownMF {
+  margin-top: 25px;
+}
+
+.cardDownloadMF {
+  color: #00764D;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 25px;
+  line-height: 20px;
+}
+
+.cardTitleTextMF {
+  color: #333;
+  font-family: "Helvetica Neue";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cardBodyTextMF {
+  color: #333;
+  font-family: "Helvetica Neue";
+  font-size: 14px;
 }
 
 .cardTitleText {
@@ -38,8 +78,6 @@
   font-family: "Helvetica Neue";
   font-size: 17.5px;
   font-weight: bold;
-  line-height: 19px;
-  overflow: hidden;
 }
 
 .cardBody {

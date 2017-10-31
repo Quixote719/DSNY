@@ -94,6 +94,57 @@ html body {
   /* padding: 0; */
 }
 
+a{
+  color: #00764E;
+}
+
 a:focus, a:hover {
+  color: #7CC04B;
   text-decoration: none;
 }
+
+/* Language Translation CSS Styles  -- Start*/
+.goog-te-banner-frame{visibility:hidden !important;}
+
+body{top:0px !important;}
+
+.goog-te-gadget-simple {
+    color: #666;
+    border: none !important;
+}
+
+.goog-te-gadget-icon {
+    display: none;
+}
+
+.goog-te-menu-value{
+    text-decoration: none;
+    color: #666;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.goog-te-gadget-simple span {
+    color: #666 !important;
+    border: none;
+}
+
+#google_translate_element{
+    position: relative;
+    top: -2px;
+    margin-right: 20px;
+}
+
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+/* Language Translation CSS Styles  -- End*/

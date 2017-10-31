@@ -5,10 +5,14 @@ import PropTypes from 'prop-types';
 import {Row, Col} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import SubSectionHeader from '../sub_section_header';
+import SubSectionHeaderGreen from '../sub_section_header_green';
 import CardType from './card_type'
+import TableDictionary from './card_table_dictionary'
 import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
+import CardMultifile from './card_multifile'
 import CardReferenceDetails from '../../PressReleases/reference_details_card'
+import $ from 'jquery';
 
 class CardSec extends Component {
 
@@ -50,15 +54,21 @@ class CardSec extends Component {
     reference-details-card | Reference/Details Card
     square-card | Square Card
     square-card-with-image | Square Card (with Image)
-    staff-card | Staff Card
+    staff-card | Staff Card | Square Card (No Border)
     standard-card-no-border | Standard Card (no border)
     standard-card-with-border | Standard Card (with border)
      */
     switch (cardType) {
+      case 'table-dictionary-card':
+        return (<TableDictionary title={Item.title} body={Item.content} url = {Item.linked_page.url}  header ={Item.header}/> );
+      case 'square-card-no-border':
+            return (url
+          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
+          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
       case 'square-card':
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/>);
+          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
@@ -69,6 +79,9 @@ class CardSec extends Component {
           : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       case 'full-width-card':
         return (<CardFullWidth link={url} dataObject={Item}/>);
+      case 'multi-file-card':
+        return (<CardMultifile dataObject={Item}/>);
+
       case 'reference-details-card':
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
       default:
@@ -88,6 +101,31 @@ class CardSec extends Component {
     });
   }
 
+
+  /*The Header is made green to be displayed as title */
+  getGreenHeader(dataObject,headerContent){
+        return(
+               <div key={dataObject.id}>
+                  <SubSectionHeaderGreen title={headerContent}/>
+                </div>
+              );
+    } 
+
+  /* Normal Black Header is returned, provided there are no tags in the dataObject header */  
+  getHeader(dataObject){
+      return(
+                <div key={dataObject.id}>
+                  <SubSectionHeader title={dataObject.header}/>
+                </div>
+               )
+  }  
+  
+  /* Check if the Header of the Page is Valid HTML, if it is then only css is colour is obtained from the Header */
+  checkifValidHTML(dataObject){
+    return /<[a-z][\s\S]*>/i.test(dataObject.header);
+  }
+
+
   render() {
     const {dataObject} = this.props;
 
@@ -102,13 +140,18 @@ class CardSec extends Component {
       ? 'NBsubSectioncardType'
       : 'BsubSectioncardType'
 
+
     let header;
-    if (dataObject.header !== '') {
-      header = (
-        <div key={dataObject.id}>
-          <SubSectionHeader title={dataObject.header}/>
-        </div>
-      )
+    let headerColor;
+    let headerContent;
+    if (dataObject.header !== '') {   
+          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;   
+         if(headerColor == 'green'){
+            headerContent = dataObject.header.replace(/<[^>]+>/g, '');
+            header = this.getGreenHeader(dataObject,headerContent);
+         }else{
+            header = this.getHeader(dataObject);
+         }
     }
 
     let body;
