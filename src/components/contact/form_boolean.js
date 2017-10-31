@@ -30,33 +30,25 @@ class FormBoolean extends Component {
   }
 
   renderOptions() {
-      return (
-        <div>
-          <input type="checkbox" name={this.props.name}
-          onChange={this.props.onChange}
-          onBlur={this.props.onBlur}
-          value={this.props.value} checked={this.state.value} onClick={event => this.onInputChange(event)} />
-        <label for="coding">{this.props.title}</label>
-        </div>
-      )
+    return (<div>
+      <input type="checkbox" name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} checked={this.state.value} onClick={event => this.onInputChange(event)}/>
+      <label for="coding">{this.props.title}</label>
+    </div>)
   }
   render() {
-    return (
-      <div>
-        <Col xs={12}>
-          <fieldset>
-            <div>{this.renderOptions()}</div>
-          </fieldset>
-        </Col>
+    return (<div>
+      <Col xs={12}>
+        <fieldset>
+          <div>{this.renderOptions()}</div>
+        </fieldset>
+      </Col>
 
-      </div>
-    );
+    </div>);
   };
 };
 
 FormBoolean.propTypes = {
-  title: PropTypes.string,
-  onlyYes: PropTypes.bool
+  title: PropTypes.string
 };
 
 export default FormBoolean;
