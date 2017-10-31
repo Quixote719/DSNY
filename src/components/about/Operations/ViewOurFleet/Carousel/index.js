@@ -20,12 +20,15 @@ class CarouselData extends Component {
 
     return _.map(this.props.carouselItems, (item, index) => {
       let image = item.featured_image.base_path + item.featured_image.file
+      let numberOfImages = this.props.carouselItems.length;
+
         return (
             <Carousel.Item key={index}>
                 <img src={image} alt="fleetCarouselImage"/>
               <div className="fleetExplaination">
                 <h1 className="fleetContentTitle">
                   {item.title}
+                  <span className="pageNumber">{index + 1}/{numberOfImages}</span>
                 </h1>
                 <div className="fleetContent" dangerouslySetInnerHTML={{__html: item.content}}></div>
               </div>
