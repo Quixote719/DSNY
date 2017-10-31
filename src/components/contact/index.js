@@ -9,17 +9,153 @@ import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
 import FormTextarea from './textarea_field';
+import { withFormik,Formik, Field, Form  } from 'formik'
 
 import '../../content/styles/contactForm.css';
 
-var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
+
+// Our inner form component which receives our form's state and updater methods as props
+const InnerForm = ({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting, handledropDown,setFieldValue,
+    setFieldTouched }) =>
+
+  <form onSubmit={handleSubmit}>
+      <div><FormHeader title='Online Application'/></div>
+      <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
+        <div>'search box validation of address comes up'<br/></div>
+        <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+          <div><FormBoolean title='Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.' name="WillPostCompostRecipientSignage"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.testbool}/></div>
+          <div><FormBoolean title='Yes, the sign will be installed within two weeks of receiving the material.' name="WillPostSignageWithinTwoWeeks"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.testbool}/></div>
+          <div><FormBoolean title='Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.' name="WillSubmitThreePhotos"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.testbool}/></div>
+          <div><FormBoolean title='Yes, photos submitted may be used for DSNY program promotion.' name="ConsentToDsnyUseOfPhotos"
+          onChange={handleChange}
+          onBlur={handleBlur}
+          value={values.testbool}/></div>
+          <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
+            <div><FormDropdown title='APPLYING AS' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue}
+            onBlur={handleBlur} options={[
+            {
+            "Id": 1,
+            "Name": "ApplyingAsStreetTreeSteward",
+            "DisplayName": "StreetTreeSteward",
+            "Selected": false
+            }, {
+            "Id": 2,
+            "Name": "ApplyingAsOrganization",
+            "DisplayName": "Organization",
+            "Selected": false
+            }
+            ]}/></div>
+      <div><FormField title='ORGANIZATION NAME' type="email"
+      name="OrganizationName"
+      onChange={handleChange}
+      onBlur={handleBlur}
+      value={values.email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField></div>
+    <div><FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number"
+    name="OrganizationTaxIdNumber"
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.password}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField></div>
+    <div><FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="email"
+    name="OrganizationWebsite"
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField></div>
+    <div><FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type="email"
+    name="OrganizationFacebookPage"
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField></div>
+    <div><FormField title='ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)' type="email"
+    name="OrganizationTwitterHandle"
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField></div>
+    <div><FormField title='ORGANIZATION OR PROJECT instagram ID (optional)' type="email"
+    name="OrganizationInstagramHandle"
+    onChange={handleChange}
+    onBlur={handleBlur}
+    value={values.email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField></div>
+  <div><FormSectionHeader title='SECTION 4: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
+<div><FormMultiSelect title='THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.' name="multioption" onChange={handleChange}
+onBlur={handleBlur} options={[
+{
+"Id": 1,
+"Name": "Work",
+"DisplayName": "Street Tree Steward",
+"Selected": false
+}, {
+"Id": 2,
+"Name": "Mobile",
+"DisplayName": "Organization",
+"Selected": false
+}
+]}/></div>
+<div><FormDropdown title='WHAT TYPE OF SITE IS THIS?' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue}
+onBlur={handleBlur} options={[
+{
+"Id": 1,
+"Name": "Work",
+"DisplayName": "Work",
+"Selected": false
+}, {
+"Id": 2,
+"Name": "Mobile",
+"DisplayName": "Mobile",
+"Selected": false
+}, {
+"Id": 3,
+"Name": "Home",
+"DisplayName": "Home",
+"Selected": false
+}
+]}/></div>
+<div><Col xs={12}><button type="submit" disabled={isSubmitting}>Submit</button></Col>  </div>
+  </form>
+
+
+// Wrap our form with the using withFormik HoC
+const MyForm = withFormik({
+  // Transform outer props into form values
+  mapPropsToValues: props => ({ email: '', password: '' ,testbool:true, dropdownt:''}),
+  // Add a custom validation function (this can be async too!)
+  validate: (values, props) => {
+    let errors = {}
+    if (!values.email) {
+     errors.email = 'Required'
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+     errors.email = 'Invalid email address'
+    }
+    return errors
+  },
+
+  // Submission handler
+  handleSubmit: (values, { props, setSubmitting, setErrors, /* setValues, setStatus, and other goodies */ }) => {
+console.log(values);
+  },
+  // Submission handler
+  handleChange: (values, { props, setSubmitting, setErrors, /* setValues, setStatus, and other goodies */ }) => {
+console.log(values);
+  }
+})(InnerForm)
 
 class TestForm extends Component {
+
+
 
   render() {
 
     return (
       <div>
+        <div><MyForm /></div>
         <Row>
           <div><FormHeader title='Online Application'/></div>
           <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>

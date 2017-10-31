@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import MaskedInput from 'react-text-mask';
 import {Row, Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
-
+import { Formik, Field } from 'formik';
 class FormField extends Component {
 
   constructor(props) {
@@ -41,14 +41,21 @@ class FormField extends Component {
                 /\d/,
                 /\d/,
                 /\d/
-              ]} onClick={event => this.onInputChange(event)}/>
+              ]} name={this.props.name}
+              onChange={this.props.onChange}
+              onBlur={this.props.onBlur}
+              value={this.props.value}/>
             </div>
           );
           break;
         default:
           return (
             <div>
-              <input type={type} name={name} onClick={event => this.onInputChange(event)} placeholder=''/>
+              <input type={type} name={this.props.name}
+              onChange={this.props.onChange}
+              onBlur={this.props.onBlur}
+              value={this.props.value} />
+            <div>{this.props.children}</div>
             </div>
           )
       }

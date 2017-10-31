@@ -29,36 +29,23 @@ class FormBoolean extends Component {
     }
   }
 
-  renderOptions(options) {
-
-    if (options) {
+  renderOptions() {
       return (
         <div>
-          <input type="checkbox" onClick={event => this.onInputChange(event)} id='1' name='Yes' checked={this.state.accepted} value={this.state.accepted}/>
-          <label for="coding">Yes</label>
+          <input type="checkbox" name={this.props.name}
+          onChange={this.props.onChange}
+          onBlur={this.props.onBlur}
+          value={this.props.value} checked={this.state.value} onClick={event => this.onInputChange(event)} />
+        <label for="coding">{this.props.title}</label>
         </div>
       )
-    }
-    return (
-      <div>
-        <div>
-          <input type="checkbox" onClick={event => this.onInputChange(event)} id='1' name='Yes' checked={this.state.accepted} value={this.state.accepted}/>
-          <label for="coding">Yes</label>
-        </div>
-        <div>
-          <input type="checkbox" onClick={event => this.onInputChange(event)} id='1' name='No' checked={this.state.declined} value={this.state.declined}/>
-          <label for="coding">No</label>
-        </div>
-      </div>
-    )
   }
   render() {
     return (
       <div>
         <Col xs={12}>
           <fieldset>
-            <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <div>{this.renderOptions(this.props.onlyYes)}</div>
+            <div>{this.renderOptions()}</div>
           </fieldset>
         </Col>
 

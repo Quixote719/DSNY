@@ -8,23 +8,25 @@ import {Dropdown, MenuItem, Button, DropdownButton} from 'react-bootstrap';
 class FormDropdown extends Component {
   constructor(props) {
     super(props);
+    this.onInputChange = this.onInputChange.bind(this);
+    const defaultOption = props.options
+      ? props.options[0].DisplayName
+      : ''
+    this.state = {
+      option: defaultOption,
+
+    }
   }
-  onInputChange(term) {}
-  renderOptions(options) {
-    return _.map(options, Item => {
-      return (
-        <div>
-          <input type="checkbox" id={Item.id} name={Item.name} value={Item.name}/>
-          <label for="coding">{Item.DisplayName}</label>
-        </div>
-      )
-    });
+  onInputChange(item) {
+    this.setState({option: item});
+this.props.onChange(this.props.name , item)
   }
+
 
   renderList(List) {
     return _.map(List, Item => {
       return (
-        <MenuItem key={Item.Id} className='SubSectionDropdownMenuItem' onSelect={event => this.onInputChange(event)} eventKey={Item.Name}>{Item.DisplayName}</MenuItem>
+        <MenuItem key={Item.Id} className='SubSectionDropdownMenuItem'     onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item.Name}>{Item.DisplayName}</MenuItem>
       );
     });
   }
@@ -36,8 +38,9 @@ class FormDropdown extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle'>{this.props.title}</div>
 
-            <DropdownButton className='formDropDownButtonText' bsStyle="default" title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-              Work
+            <DropdownButton className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange}
+            title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+            {this.state.option}
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
               {this.renderList(this.props.options)}
             </DropdownButton>
