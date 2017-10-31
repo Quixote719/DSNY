@@ -8,8 +8,8 @@ import _ from "lodash";
 import { Link } from "react-router-dom";
 
 let result = ["MTW", "MTTHW", "FSAT"];
-let days = [{ id: "M", alias: "MON" }, { id: "T", alias: "TUE" }, { id: "W", alias: "WED" }, { id: "H", alias: "THU" },
-{ id: "F", alias: "FRI" }, { id: "S", alias: "SAT" }];
+let days = [{ id: "Monday", alias: "MON" }, { id: "Tuesday", alias: "TUE" }, { id: "Wednesday", alias: "WED" }, { id: "Thursday", alias: "THU" },
+{ id: "Friday", alias: "FRI" }, { id: "Saturday", alias: "SAT" }];
 let d=new Date();
 let today = d.getDay() - 1;
 class CollectionScheduleTable extends Component {
@@ -56,7 +56,7 @@ class CollectionScheduleTable extends Component {
         if(value !== ""){
             return _.map(days, (day,indexRows) => {
                 return(
-                    <td id ={this.props.arrayLength == index ?"lastTableRow":""} className={evenRows.includes(indexRows)?"evenRowsSchedule":oddRows.includes(indexRows)?"oddRowsSchedule":""}>
+                    <td  key ={indexRows} id ={this.props.arrayLength == index ?"lastTableRow":""} className={evenRows.includes(indexRows)?"evenRowsSchedule":oddRows.includes(indexRows)?"oddRowsSchedule":""}>
                     {value.includes(day.id)?this.garbageCollection(index):<div></div>}
                     </td>
                 );
@@ -66,38 +66,79 @@ class CollectionScheduleTable extends Component {
     daysTable = () => {
         return _.map(this.props.collectionScheduleData, (value,index)=> {
             if(value !==""){
-                return(<tr>
+                return(<tr key ={index}>
                     {this.tableCell(value,index)}
                 </tr>);
             }
         } );
     }
     tableHeader = () => {
-        return _.map(days, day => {
+        return _.map(days, (day,index) => {
             return(            
-            <th className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
+            <th key ={index} className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
                 {day.alias}
             </th>
             );
 
         })
     }
+    tableHeaderMobile = () => {
+        var evenRows = [0, 2, 4];
+        var oddRows = [1, 3, 5];  
+        return _.map(days, (day,index) => {
+            return(    
+            <tr className={evenRows.includes(index)?"evenRowsSchedule":oddRows.includes(index)?"oddRowsSchedule":""}>      
+            <th className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
+                {day.alias}
+            </th>
+            {this.tableCellMobile(day)}
+            </tr>                
+            );
+
+       })
+    }
+    tableCellMobile = (day) => {
+
+        return _.map(this.props.collectionScheduleData, (value,indexRows) => {
+            if(value !==""){
+                return(
+                    <td className={this.props.arrayLength == 2?"mobileCollectionTableData":this.props.arrayLength == 1?"mobileCollectionTableDataTwo":"mobileCollectionTableDataOne"}>
+                    {value.includes(day.id)?this.garbageCollection(indexRows):""}
+                    </td>
+                );
+            }
+        })
+    }
+    desktopTable = () =>{
+        return(
+            <table id ={this.props.collectionScheduleData == "noValue"?"noDesktopTable":"desktopTable"} className={!this.props.holidayData? "holidayCollectionScheduleTable desktopCollectionSchedule":"collectionScheduleTable desktopCollectionSchedule"}>
+                    <thead>
+                        <tr>
+                        {this.tableHeader()}
+                        </tr>
+                    </thead>
+                <tbody>
+                    {this.daysTable()}
+                </tbody>
+            </table>
+        );
+
+    }
+    mobileTable = () =>{
+        return(
+            <table id = {this.props.collectionScheduleData == "noValue"?"noMobileTable":"mobileTable"} className={!this.props.holidayData? "holidayCollectionScheduleTable mobileCollectionSchedule":"collectionScheduleTable mobileCollectionSchedule"}>
+                <tbody>
+                    {this.tableHeaderMobile()}
+                </tbody>
+            </table>
+        );
+
+    }
     render() {
         return (
             <div className="collectionScheduleTableParent">
-                <div className="nonServiceDay">
-                    Today is holiday. There is no service today!
-                </div>
-                <table style={this.props.collectionScheduleData == "noValue"?{display:'none'}:{display:'block'}}className="collectionScheduleTable">
-                    <thead>
-                    <tr>
-                    {this.tableHeader()}
-                    </tr>
-                    </thead>
-                  <tbody>
-                  {this.daysTable()}
-                  </tbody>
-                </table>
+                {this.desktopTable()}
+                {this.mobileTable()}
             </div>
         )
     }

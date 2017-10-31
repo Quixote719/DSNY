@@ -11,6 +11,7 @@ import Header from '../../shared/Breadcrumb/breadcrumb_container.js';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import DownloadInfoApp from '../download_dsny_app';
 import CollectionScheduleTable from './collectionScheduleTable';
+import RoutingTimes from './routingTimes';
 
 let errorFlag = 0;
 class CollectionSchedule extends Component {
@@ -55,7 +56,7 @@ class CollectionSchedule extends Component {
         }        
     }
     collectionScheduleTable(){
-        return (<CollectionScheduleTable arrayLength ={this.props.arrayLength} collectionScheduleData = {this.props.collectionScheduleData}/>)
+        return (<CollectionScheduleTable holidayData = {this.props.holidayData} arrayLength ={this.props.arrayLength} collectionScheduleData = {this.props.collectionScheduleData}/>)
     }
     render() {
         const inputProps = {
@@ -104,12 +105,19 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
-                <Row>
-                    <Col xs={12} md={8}>
+                <Row className="collectionScheduleRow">
+                    <Col xs={12}>
+                        <div style={this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
+                            Today is holiday. There is no service today!
+                        </div>
+                    </Col>
+                    <Col xs={12} md={8} className="collectionScheduleColumn">
                         {this.collectionScheduleTable()}
                     </Col>
-                    <Col xs={12} md={4}>
-                    Hi
+                    <Col xs={12} md={4} className="ridOfCol">
+                        <div className={!this.props.holidayData? "enforcementTitleHoliday":"enforcementTitleNoHoliday"}>
+                            <RoutingTimes collectionScheduleData = {this.props.collectionScheduleData} collectionScheduleInfo ={this.props.collectionScheduleInfo} routingData ={this.props.routingData?this.props.routingData:""} />
+                        </div>
                     </Col>
                 </Row>
             </div>
@@ -120,6 +128,9 @@ class CollectionSchedule extends Component {
 }
 function mapStateToProps(state) {
     return {
+        collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,
+        routingData: state.carouselDataReducer.routingData,                        
+        holidayData: state.carouselDataReducer.holidayData,                        
         arrayLength: state.carouselDataReducer.arrayLength,                
         collectionScheduleData: state.carouselDataReducer.collectionScheduleData,        
     }
