@@ -12,7 +12,7 @@ class Services extends Component {
   render() {
     return (
       <div>
-        <SearchBoxCollection />
+        <SearchBoxCollection ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
       </div>
     )
   }
