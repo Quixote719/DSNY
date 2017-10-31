@@ -21,22 +21,25 @@ class Contact extends Component {
 
     let Contact = {};
     let BannerText = {};
+    let MyRequestStatus = {};
 
     this.parseContactData(Contact, BannerText);
 
     return (
       <div>
         {<Banner text = {BannerText} />}
-        <div>
+        <div className = 'SContainer'>
+          {/* <div className="myRequestStatus">{MyRequestStatus}</div> */}
           <SearchBoxCollection />
         </div>
       </div>
     )
   }
 
-  parseContactData(Contact, BannerText) {
+  parseContactData(Contact, BannerText, MyRequestStatus) {
     if(this.props.ContactPageData !== undefined){
-        Contact = this.props.ContactPageData.data;       
+        Contact = this.props.ContactPageData.data; 
+        // MyRequestStatus = this.props.ContactPageData.data.sections.sections.header;     
     }
     BannerText.title = Contact.title;
     BannerText.content = Contact.header_content;
