@@ -63,7 +63,7 @@ const InnerForm = (props) => {
       {
         "Id": 1,
         "Name": "ApplyingAsStreetTreeSteward",
-        "DisplayName": "StreetTreeSteward",
+        "DisplayName": "Street Tree Steward",
         "Selected": false
       }, {
         "Id": 2,
@@ -73,10 +73,10 @@ const InnerForm = (props) => {
       }
     ]}/></div>
     <div>
-      <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
+      <FormField title='ORGANIZATION NAME' type="text" disabledf={values.ApplyingAs != 'Organization'} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     </div>
     <div>
-      <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField>
+      <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="text" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber && <div>{errors.OrganizationTaxIdNumber}</div>}</FormField>
     </div>
     <div>
       <FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.email && errors.email && <div>{errors.OrganizationWebsite}</div>}</FormField>
@@ -124,10 +124,8 @@ const MyForm = withFormik({
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
     let errors = {}
-    if (!values.OrganizationName) {
-      errors.OrganizationName = 'Please enter a valid OrganizationName'
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.OrganizationWebsite)) {
-      errors.OrganizationWebsite = 'Invalid website'
+    if (!values.OrganizationTaxIdNumber) {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
     if (!values.WillPostCompostRecipientSignage) {
 
@@ -135,22 +133,14 @@ const MyForm = withFormik({
     }
     return errors
   },
-
-  handleChange: (values, props) => {
-    console.log(values);
-  },
-
-  handleSubmit: (values, {
-    props, setSubmitting, setErrors,
-    /* setValues, setStatus, and other goodies */
-  }) => {
+  handleSubmit: (values, {setSubmitting}) => {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
+      console.log(values);
     }, 1000);
-    console.log(props);
-    console.log(values);
-  }
+  },
+  displayName: 'BasicForm'
 })(InnerForm)
 
 const imaginaryformData = {
@@ -159,8 +149,8 @@ const imaginaryformData = {
   WillSubmitThreePhotos: false,
   ConsentToDsnyUseOfPhotos: false,
   ApplyingAs: '',
-  OrganizationName: 'DSNY New York CIty',
-  OrganizationTaxIdNumber: '2122911259',
+  OrganizationName: '',
+  OrganizationTaxIdNumber: '',
   OrganizationWebsite: 'www.dsny.nyc.gov',
   OrganizationFacebookPage: 'www.facebook.com/dsny-nyc',
   OrganizationTwitterHandle: '',
@@ -171,38 +161,9 @@ class TestForm extends Component {
 
   render() {
 
-    return (<div>
+    return (<div className='contactForm'>
       <div><MyForm customFormData={imaginaryformData}/></div>
       <Row>
-        <div><FormHeader title='Online Application'/></div>
-        <div><FormSectionHeader title='SECTION 1: APPLICANT AND ORGANIZATION LOCATION'/></div>
-
-        <div><FormSectionHeader title='SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
-        <div><FormBoolean onlyYes="onlyYes" title='I WILL POST A DSNY COMPOST RECIPIENT SIGN NEAR WHERE DSNY COMPOST WILL BE USED.'/></div>
-        <div><FormBoolean onlyYes="onlyYes" title='THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.'/></div>
-        <div><FormBoolean onlyYes="onlyYes" title='I WILL SUBMIT THREE (3) PHOTOS OF THE COMPOST IN USE TO NYCCOMPOST@DSNY.NYC.GOV.'/></div>
-        <div><FormBoolean onlyYes="onlyYes" title='PHOTOS SUBMITTED MAY BE USED FOR DSNY PROGRAM PROMOTION.'/></div>
-        <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
-        <div><FormMultiSelect title='THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.' options={[
-        {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Street Tree Steward",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Organization",
-          "Selected": false
-        }
-      ]}/></div>
-        <div><FormField title='ORGANIZATION NAME' type='input'/></div>
-        <div><FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER' type='input'/></div>
-        <div><FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type='password'/></div>
-        <div><FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type='date'/></div>
-        <div><FormField title='ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)' type='email'/></div>
-        <div><FormField title='ORGANIZATION OR PROJECT instagram ID (optional)' type='phone'/></div>
-        <div><FormSectionHeader title='SECTION 4: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )'/></div>
         <div><FormField title='FIRST NAME' type='input'/></div>
         <div><FormField title='LAST NAME' type='input'/></div>
         <div><FormField title='YOUR TITLE OR AFFILIATION WITH ORGANIZATION (optional)' type='input'/></div>

@@ -11,7 +11,7 @@ class FormDropdown extends Component {
     this.onInputChange = this.onInputChange.bind(this);
 
     this.state = {
-      option: 'Select one'
+      option: "Select one"
     }
   }
   onInputChange(item) {
