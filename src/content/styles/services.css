@@ -51,6 +51,7 @@
   display: inline-block;
 }
 
+
 #TextureSquare {
     width: 100%;
     height: 142px;
@@ -72,7 +73,21 @@
   color: #7CC04B!important;
 }
 
+@media only screen and (max-width: 991px) {
+.col-md-4  .TitleContentCard{
+    width: 100%!important;
+  }
+}
+
 @media only screen and (max-width: 599px) {
+    .ridOfSearch,
+    .actual-edit-overlay{
+      width: 94%!important;
+    }
+    .searchCollectionParent{
+      margin: 0;
+      padding: 0
+    }
     #TextureSquare {
         height: 130px;
         width: 100%;
@@ -80,9 +95,13 @@
 }
 
 
+
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
     #TextureSquare {
         width: 100%;
+    }
+    .searchContainerRidCollection {
+        width: auto;
     }
 }
 
