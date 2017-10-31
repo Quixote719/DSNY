@@ -1,3 +1,18 @@
+.contactformButton {
+  height: 36px;
+  width: 126px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 118, 77);
+  border-radius: 0.188em;
+  border: 0px;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
 .formSectionHeader {
   color: #333333;
   font-family: "Helvetica Neue";
@@ -59,6 +74,12 @@ input:focus, textarea:focus, input.form-control:focus {
   border: 1px solid #7CC04B;
 }
 
+input:disabled {
+  border: 1px solid #D8D8D8;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+}
+
 input[type=checkbox], input[type=radio] {
   height: 20px;
   width: 20px;
@@ -78,7 +99,6 @@ fieldset label {
 fieldset input {
   width: 100%;
 }
-
 
 /*@supports (zoom:2) {
   input[type="radio"], input[type=checkbox] {

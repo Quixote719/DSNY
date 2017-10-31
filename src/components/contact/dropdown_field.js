@@ -9,45 +9,36 @@ class FormDropdown extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    const defaultOption = props.options
-      ? props.options[0].DisplayName
-      : ''
-    this.state = {
-      option: defaultOption,
 
+    this.state = {
+      option: "Select one"
     }
   }
   onInputChange(item) {
     this.setState({option: item});
-this.props.onChange(this.props.name , item)
+    this.props.onChange(this.props.name, item)
   }
-
 
   renderList(List) {
     return _.map(List, Item => {
-      return (
-        <MenuItem key={Item.Id} className='SubSectionDropdownMenuItem'     onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item.Name}>{Item.DisplayName}</MenuItem>
-      );
+      return (<MenuItem key={Item.Id} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item.DisplayName}>{Item.DisplayName}</MenuItem>);
     });
   }
 
   render() {
-    return (
-      <div >
-        <Col className='FormField' xs={12} sm={6} md={6}>
-          <fieldset>
-            <div className='FormMultiSelectTitle'>{this.props.title}</div>
+    return (<div >
+      <Col className='FormField' xs={12} sm={6} md={6}>
+        <fieldset>
+          <div className='FormMultiSelectTitle'>{this.props.title}</div>
 
-            <DropdownButton className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange}
-            title={< div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-            {this.state.option}
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
-              {this.renderList(this.props.options)}
-            </DropdownButton>
-          </fieldset>
-        </Col>
-      </div>
-    );
+          <DropdownButton className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+              {this.state.option}
+            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret="noCaret" id="dropdown-no-caret">
+            {this.renderList(this.props.options)}
+          </DropdownButton>
+        </fieldset>
+      </Col>
+    </div>);
   };
 };
 

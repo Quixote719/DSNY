@@ -59,7 +59,7 @@ const InnerForm = (props) => {
     <div><FormBoolean title='Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.' name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/></div>
     <div><FormBoolean title='Yes, photos submitted may be used for DSNY program promotion.' name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/></div>
     <div><FormSectionHeader title='SECTION 3: ORGANIZATION INFORMATION'/></div>
-    <div><FormDropdown title='APPLYING AS' name="dropdownt" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
+    <div><FormDropdown title='APPLYING AS' name="ApplyingAs" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
       {
         "Id": 1,
         "Name": "ApplyingAsStreetTreeSteward",
@@ -73,7 +73,7 @@ const InnerForm = (props) => {
       }
     ]}/></div>
     <div>
-      <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
+      <FormField title='ORGANIZATION NAME' type="text" disabledf={values.ApplyingAs != 'Organization'} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     </div>
     <div>
       <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField>
@@ -113,6 +113,7 @@ const MyForm = withFormik({
     WillPostSignageWithinTwoWeeks: false,
     WillSubmitThreePhotos: false,
     ConsentToDsnyUseOfPhotos: false,
+    ApplyingAs: '',
     OrganizationName: props.customFormData.OrganizationName,
     OrganizationTaxIdNumber: props.customFormData.OrganizationTaxIdNumber,
     OrganizationWebsite: props.customFormData.OrganizationWebsite,
@@ -125,8 +126,6 @@ const MyForm = withFormik({
     let errors = {}
     if (!values.OrganizationName) {
       errors.OrganizationName = 'Please enter a valid OrganizationName'
-    } else if (/^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(values.OrganizationWebsite)) {
-      errors.OrganizationWebsite = 'Invalid website'
     }
     return errors
   },
@@ -139,6 +138,8 @@ const MyForm = withFormik({
     props, setSubmitting, setErrors,
     /* setValues, setStatus, and other goodies */
   }) => {
+
+    setSubmitting(false);
     console.log(props);
     console.log(values);
   }
@@ -149,8 +150,9 @@ const imaginaryformData = {
   WillPostSignageWithinTwoWeeks: false,
   WillSubmitThreePhotos: false,
   ConsentToDsnyUseOfPhotos: false,
-  OrganizationName: 'DSNY New York CIty',
-  OrganizationTaxIdNumber: '212-291-1259',
+  ApplyingAs: '',
+  OrganizationName: '',
+  OrganizationTaxIdNumber: '2122911259',
   OrganizationWebsite: 'www.dsny.nyc.gov',
   OrganizationFacebookPage: 'www.facebook.com/dsny-nyc',
   OrganizationTwitterHandle: '',
