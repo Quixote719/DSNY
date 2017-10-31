@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
+import ServiceRequestsSection from './ServiceRequestsSection';
 import * as actions from '../../actions/actions_about';
 import PageText from '../shared/PageText';
 import _ from "lodash";
@@ -21,28 +22,57 @@ class Contact extends Component {
 
     let Contact = {};
     let BannerText = {};
-    let MyRequestStatus = {};
+    let MyRequestStatus = "";
+    let ServiceRequestsProps = {};
 
-    this.parseContactData(Contact, BannerText);
+    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps);
 
     return (
       <div>
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>
-          {/* <div className="myRequestStatus">{MyRequestStatus}</div> */}
+            <div className="myRequestStatus">{MyRequestStatus}</div>
           <SearchBoxCollection />
+        </div>
+        <div className = 'SContainer'>
+          <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>
+        </div>
+        <div className = 'greyBcg'>
+          <div className = 'SContainer'>
+            <div>1111</div>
+          </div>
         </div>
       </div>
     )
   }
 
-  parseContactData(Contact, BannerText, MyRequestStatus) {
+
+
+  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
-        // MyRequestStatus = this.props.ContactPageData.data.sections.sections.header;
     }
     BannerText.title = Contact.title;
     BannerText.content = Contact.header_content;
+
+    if(this.props.ContactPageData !== undefined) {
+      _.map(this.props.ContactPageData.data.sections.sections, item =>{
+        switch (item.name){
+          case 'my-request-status': {
+            MyRequestStatus = item.header;
+            break;
+          }
+          case 'service-request':{
+            ServiceRequestsProps.title = item.header;
+            ServiceRequestsProps.cards = item.cards;
+            break;
+          }
+          default:{
+            break;
+          }
+        }
+      });
+    }
   }
 }
 
