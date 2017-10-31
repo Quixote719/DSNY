@@ -316,7 +316,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 18px;
     color: #fff;
-    text-align: start;
+    text-align: left;
 }
 .carousel-inner>.item:before, .carousel-inner>.item:after {
     z-index:-1;
