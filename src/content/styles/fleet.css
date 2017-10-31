@@ -111,14 +111,17 @@
 
   .fleetExplaination {
     width: auto!important;
+
   }
 
   .fleetContent{
     width: auto!important;
+    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
+    font-size: auto!important;
   }
 
   .fleetCarousel {
@@ -144,10 +147,10 @@
 
   .fleetCarouselContainer{
       padding-left: 16px!important;
-      padding-right: 16px!important;
+      padding-right: 30px!important;
       padding-bottom: 41px;
       padding-top: 28px;;
-      width: 712px;
+      width: auto;
       height: auto;
   }
 
@@ -171,18 +174,22 @@
   }
   .fleetCarousel>.carousel-inner{
       width: 712px;
+      height: auto;
   }
 
   .fleetExplaination {
     width: auto!important;
+    font-size: auto;
   }
 
   .fleetContent{
     width: auto!important;
+    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
+    font-size: auto!important;
   }
 }
 
@@ -219,6 +226,7 @@
   .fleetCarousel>.carousel-inner{
       float: none;
       width: auto;
+      height: auto;
   }
 
   .fleetCarousel>.carousel-inner>.item>img {
@@ -232,10 +240,12 @@
 
   .fleetContent{
     width: auto!important;
+    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
+    font-size: auto!important;
   }
 }
 
@@ -253,6 +263,12 @@
   .fleetCarousel>.carousel-indicators>li {
       background-color: white;
       border-color: rgba(0, 46, 30, 0.2);
+
+  }
+
+  .fleetCarousel>.carousel-indicators{
+    margin-left: 0;
+    padding-right: 380px;
   }
 
   .fleetCarousel>.carousel-indicators>.active {
@@ -268,6 +284,7 @@
   .fleetCarousel>.carousel-inner{
       float: none;
       width: 939px;;
+      height: auto;
   }
 
   .fleetCarousel>.carousel-inner>.item>img{
@@ -287,9 +304,11 @@
 
   .fleetContent{
     width: auto!important;
+    font-size: auto!important;
   }
 
   .fleetContentTitle{
     width: auto!important;
+    font-size: auto!important;
   }
 }
