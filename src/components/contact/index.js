@@ -51,13 +51,13 @@ const InnerForm = ({
     }
   ]}/></div>
   <div>
-    <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField title='ORGANIZATION NAME' type="text" name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
   </div>
   <div>
     <FormField title='ORGANIZATION TAX IDENTIFICATION NUMBER NAME' type="number" name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.password && errors.password && <div>{errors.password}</div>}</FormField>
   </div>
   <div>
-    <FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField title='ORGANIZATION OR PROJECT WEBSITE (optional)' type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.email && errors.email && <div>{errors.OrganizationWebsite}</div>}</FormField>
   </div>
   <div>
     <FormField title='ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)' type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -94,21 +94,19 @@ const MyForm = withFormik({
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
     let errors = {}
-    if (!values.email) {
-      errors.email = 'Required'
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-      errors.email = 'Invalid email address'
+    if (!values.OrganizationName) {
+      errors.OrganizationName = 'Please enter a valid OrganizationName'
+    } else if (/^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,}))\.?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(values.OrganizationWebsite)) {
+      errors.OrganizationWebsite = 'Invalid website'
     }
     return errors
   },
 
-  // Submission handler
   handleSubmit: (values, {
     props, setSubmitting, setErrors,
     /* setValues, setStatus, and other goodies */
   }) => {
-    debugger;
-    console.log(values, props);
+    console.log(values);
   }
 })(InnerForm)
 
