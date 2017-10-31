@@ -42,9 +42,9 @@ class CarouselData extends Component {
       <div className="fleetCarouselContainerParent">
         <div className="container fleetCarouselContainer">
           <Carousel className="fleetCarousel" prevIcon={<span className="newsEventsCarouselIcon">
-              <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+              <img src={require('../../../../../content/images/Arrow_left.svg')} alt="carouselleftArrow" />
           </span>} nextIcon={<span className="newsEventsCarouselIcon">
-              <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+              <img src={require('../../../../../content/images/Arrow_right.svg')} alt="carouselRightArrow" />
           </span>}>
               {this.carouselDataItemList()}
           </Carousel>
