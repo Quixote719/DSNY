@@ -9,6 +9,7 @@ import ContactUs from './ContactUsSection';
 import * as actions from '../../actions/actions_about';
 import _ from "lodash";
 import { connect } from 'react-redux';
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 
 
@@ -55,9 +56,11 @@ class Contact extends Component {
         <div className = 'SContainer'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
-        <div className = 'greyBcg'>
-          <GetInvolvedSection GetInvolvedProps = {GetInvolvedProps}/>
-        </div>
+        <Row className='greyBcg'>
+          <div className = 'getInvolvedContainer'>
+            <GetInvolvedSection GetInvolvedProps = {GetInvolvedProps}/>
+          </div>
+        </Row>
         <div className = 'SContainer'>
           <ContactUs ContactUsProps = {ContactUsProps}/>
         </div>

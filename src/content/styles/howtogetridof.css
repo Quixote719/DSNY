@@ -216,7 +216,7 @@ input::-ms-clear {
     outline: none;
 }
 .collectionSearchAutoComplete{
-    padding-right: 24px;
+    padding-right: 35px;
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -235,6 +235,7 @@ input::-ms-clear {
     outline: none;
 }
 .collectionSearchInput{
+    padding-right: 33px;
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -249,9 +250,12 @@ input::-ms-clear {
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
 }
+.collectionAutocompleteParent{
+    border-bottom: 2px solid #7CC04B;
+}
 #collectionSearchResults{
     position: absolute;
-    top: 28px;
+    top: 33px;
     right: 8px;
     color: #7CC04B!important;
     font-size: 24px;
@@ -259,6 +263,7 @@ input::-ms-clear {
   /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
     .collectionSearchAutoComplete{
+        margin-top: 25px;
         width: 95%;
     }
     .BreadcrumbHeaderTitleSection>.container{

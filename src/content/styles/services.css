@@ -1,5 +1,5 @@
-.ridOfSearch,
-.actual-edit-overlay {
+.largeSearchBox .ridOfSearch,
+.largeSearchBox .actual-edit-overlay {
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -8,18 +8,20 @@
     margin-right: 8px;
     width: 97%;
     margin-top: 30px;
-    margin-left: 13px;
-    border-bottom: 2px solid #7CC04B;
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
 }
 
-.collectionSearchAutoComplete:focus{
+.largeSearchBox .searchContainerRidCollection{
+    padding-top: 0;
+}
+
+.largeSearchBox .collectionSearchAutoComplete:focus{
     outline: none;
 }
 
-.collectionSearchAutoComplete{
+.largeSearchBox .collectionSearchAutoComplete{
     padding-right: 24px;
     height: 33px;
     font-weight: 700;
@@ -36,44 +38,85 @@
     -webkit-text-fill-color: #231F20 !important;
 }
 
-#TextureSquare {
+.contentLeft{
+  width: 24%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.contentRight{
+  width: 74%;
+  float: right;
+  display: inline-block;
+}
+
+
+.largeSearchBox #TextureSquare {
     width: 100%;
     height: 142px;
     padding: 10px;
     background: url('../images/Lightgreen.png')
 }
 
-#innersquare {
+.largeSearchBox #innersquare {
     width: 100%;
     height: 100%;
     background-color: #FFFFFF;
 }
 
-#collectionSearch{
+/* #collectionSearch{
   font-size: 24px;
   position: absolute;
   top: 44px;
   right: 41px;
   color: #7CC04B!important;
-}
+} */
 
-@media only screen and (max-width: 599px) {
-    #TextureSquare {
-        height: 130px;
-        width: 100%;
-    }
+@media only screen and (max-width: 991px) {
+.col-md-4 .TitleContentCard{
+    width: 100%!important;
+  }
 }
-
 
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
-    #TextureSquare {
+    .largeSearchBox #TextureSquare {
         width: 100%;
+    }
+    .largeSearchBox .searchContainerRidCollection {
+        width: auto;
     }
 }
 
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
-    #TextureSquare {
+    .largeSearchBox #TextureSquare {
         height: 130px;
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 599px) {
+    .largeSearchBox .ridOfSearch,
+    .largeSearchBox .actual-edit-overlay{
+      width: 94%!important;
+    }
+    .largeSearchBox .searchCollectionParent{
+      margin: 0;
+      padding: 0
+    }
+    .largeSearchBox #TextureSquare {
+        height: 130px;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+  .contentLeft{
+    width: auto;
+    display: block;
+  }
+  .contentRight{
+    width: auto;
+    display: block;
+  }
 }

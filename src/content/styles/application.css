@@ -70,17 +70,22 @@ html body {
   margin-top: 20px;
 }
 
+.bottomSection{
+  padding-bottom: 50px;
+}
+
 @media only screen and (max-width: 991px) {
   .paddingRight{
     padding-right: 15px;
   }
+  .SContainer {
+    margin: 0 15px;
+    width: auto;
+  }
 }
 
 @media only screen and (max-width: 940px) {
-  .SContainer {
-    margin: 0 3%;
-    width: auto;
-  }
+
 }
 
 @media (min-width:0)and (max-width: 767px) {
@@ -143,7 +148,7 @@ body{top:0px !important;}
 }
 .goog-text-highlight {
     background-color: transparent !important;
-    border: none !important; 
+    border: none !important;
     box-shadow: none !important;
 }
 

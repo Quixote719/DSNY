@@ -4,14 +4,14 @@ import {Link} from "react-router-dom";
 import _ from "lodash";
 import CardTitle from '../shared/Card_title';
 import {Row} from 'react-bootstrap';
-
+import '../../content/styles/ContactPage.css';
 
 class GetInvolvedSection extends Component {
 
   renderCards() {
     return _.map(this.props.GetInvolvedProps.cards, Item => {
       return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/adopt-a-basket`}><CardTitle title={Item.title} key={Item.id}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/adopt-a-basket`} className='getInvolvedCards'><CardTitle title={Item.title} key={Item.id}/></Link>
       );
     });
   }
@@ -38,12 +38,13 @@ class GetInvolvedSection extends Component {
             <div style={cardStyle}>
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
             </div>
-            <div className='container'>
-              <Row>
-                {this.renderCards()}
-              </Row>
-            </div>
-
+        </div>
+        <div className='renderInvolvedCards'>
+          <div className='SContainer'>
+            <Row>
+              {this.renderCards()}
+            </Row>
+          </div>
         </div>
       </div>
     )

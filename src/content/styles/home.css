@@ -153,34 +153,39 @@
 
 .ridOfSearch,
 .actual-edit-overlay {
+    padding-right: 35px;
     height: 33px;
     font-weight: 700;
     color: #000;
-    font-size: 24px;
+    font-size: 18px;
     border-top: none;
     margin-right: 8px;
     width: 420px;
-    margin-top: 29px;
+    margin-top: 30px;
     margin-left: 13px;
     border-bottom: 2px solid #7CC04B;
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
 }
-
+/* .ridOfAutoCompleteParent{
+    margin-left: 13px;
+    margin-right: 8px;
+    border-bottom: 2px solid #7CC04B;
+} */
 #ridSearch {
     font-size: 24px;
     position: absolute;
-    top: 40px;
-    right: 35px;
+    top: 42px;
+    right: 34px;
     color: #7CC04B!important;
 }
 
 #collectionSearch {
     font-size: 24px;
     position: absolute;
-    top: 40px;
-    right: 41px;
+    top: 42px;
+    right: 34px;
     color: #7CC04B!important;
 }
 input:focus::-webkit-input-placeholder{
@@ -394,7 +399,7 @@ input.serviceRequestSearch:focus {
     line-height: 21px;
 }
 .downloadAppContainer{
-    /*padding-left: 20px;*/
+    padding-left: 0px;
     padding-right: 0px;
     padding-top: 56px;
 }
@@ -458,8 +463,9 @@ input.serviceRequestSearch:focus {
     }
     .ridOfSearch,
     .actual-edit-overlay {
+        padding-right: 25px;
         height: 29px;
-        margin-top: 25px;
+        margin-top: 25px!important;
         font-size: 18px;
         width: 95%;
         margin-left: 9px;
@@ -476,10 +482,12 @@ input.serviceRequestSearch:focus {
         padding-right: 15px;
     }
     #ridSearch {
-        top: 36px;
-    }
+        right: 42px;
+        top: 32px;
+    }    
     #collectionSearch {
-        top: 36px;
+        right: 42px;
+        top: 32px;
     }
     .serviceRequestTitleTablet {
         padding-left: 26px;
@@ -705,10 +713,10 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
     }
     #ridSearch {
-        right: 36px;
+        right: 41px;
     }
     #collectionSearch {
-        right: 36px;
+        right: 41px;
     }
     .serviceRequestTitleTablet {
         padding-left: 26px;
@@ -892,12 +900,12 @@ input.serviceRequestSearch:focus {
         margin-top: 15px;
     }
     #ridSearch {
-        right: 42px;
-        top: 36px;
+        right: 36px;
+        top: 32px;
     }
     #collectionSearch {
-        right: 42px;
-        top: 36px;
+        right: 36px;
+        top: 32px;
     }
     .serviceRequestTitleTablet {
         padding-left: 26px;

@@ -8,7 +8,7 @@ import _ from "lodash";
 import Banner from '../../shared/banner';
 import {Link} from "react-router-dom";
 import Header from '../../shared/Breadcrumb/breadcrumb_container.js';
-import PlacesAutocomplete from 'react-places-autocomplete';
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import DownloadInfoApp from '../download_dsny_app';
 import CollectionScheduleTable from './collectionScheduleTable';
 import RoutingTimes from './routingTimes';
@@ -58,7 +58,21 @@ class CollectionSchedule extends Component {
     collectionScheduleTable(){
         return (<CollectionScheduleTable holidayData = {this.props.holidayData} arrayLength ={this.props.arrayLength} collectionScheduleData = {this.props.collectionScheduleData}/>)
     }
+    // correctAddressList = () => {
+    //     return _.map(this.props.collectionScheduleData, (value,index)=> {
+    //         if(value !==""){
+    //             return(
+    //             <div key ={index}>
+                    
+    //             </div>);
+    //         }
+    //     } );
+    // }
     render() {
+        const defaultBounds = new window.google.maps.LatLngBounds(
+            new window.google.maps.LatLng(40.915568,-73.699215),
+            new window.google.maps.LatLng(40.495992,-74.257159));
+
         const inputProps = {
             value: this.state.address,
             onChange: this.handleChange,
@@ -85,8 +99,14 @@ class CollectionSchedule extends Component {
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
+            strictBounds: true,
+            bounds: defaultBounds,
             componentRestrictions: {country: 'us'}
           }
+        // var input1 = document.getElementsByClassName('collectionSearchInput');
+        // var autocomplete = new window.google.maps.places.Autocomplete(input1);
+        // autocomplete.setOptions({strictBounds: true});
+        
         return (
             <div className = "howToGetRidOfParent">
             <Header title='Collection Schedule' breadCrumbList= "" />
@@ -105,6 +125,15 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
+                {/* <div className = "errorUserAddressParent">
+                <div className = "addressNotFound">
+                The address entered can not be found. 
+                </div>
+                <div className = "selectFromAddressBelow">
+                Please select from the possible addresses below                
+                </div>
+                    {this.correctAddressList()}
+                </div> */}
                 <Row className="collectionScheduleRow">
                     <Col xs={12}>
                         <div style={this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
