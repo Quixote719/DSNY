@@ -1,4 +1,4 @@
-.ridOfSearch,
+/* .ridOfSearch,
 .actual-edit-overlay {
     height: 33px;
     font-weight: 700;
@@ -8,12 +8,10 @@
     margin-right: 8px;
     width: 97%;
     margin-top: 30px;
-    margin-left: 13px;
-    border-bottom: 2px solid #7CC04B;
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
-}
+} */
 
 .ServicePage .searchContainerRidCollection{
     padding-top: 0;
@@ -23,7 +21,7 @@
     outline: none;
 }
 
-.collectionSearchAutoComplete{
+/* .collectionSearchAutoComplete{
     padding-right: 24px;
     height: 33px;
     font-weight: 700;
@@ -38,7 +36,7 @@
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
-}
+} */
 
 .contentLeft{
   width: 24%;
@@ -66,13 +64,13 @@
     background-color: #FFFFFF;
 }
 
-#collectionSearch{
+/* #collectionSearch{
   font-size: 24px;
   position: absolute;
   top: 44px;
   right: 41px;
   color: #7CC04B!important;
-}
+} */
 
 @media only screen and (max-width: 991px) {
 .col-md-4  .TitleContentCard{

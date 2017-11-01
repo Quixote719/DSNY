@@ -315,7 +315,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 18px;
     color: #fff;
-    text-align: left;
+    text-align: left!important;
 }
 .carousel-inner>.item:before, .carousel-inner>.item:after {
     z-index:-1;
@@ -376,6 +376,11 @@ input.searchMessagesInput:focus {
     right: 11px;
     color: #767676!important;
     font-size: 15px!important
+}
+.sanitationMobileLogo{
+    margin-top: 8px;
+    padding-left: 13px;
+    padding-top: 3px;
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
@@ -542,6 +547,9 @@ input.searchMessagesInput:focus {
         display: none;
     }
     .mobileSanitationLogo{
+        margin-top: 8px;
+        padding-left: 16px;
+        padding-top: 3px;
         display: inline;
     }
     .homeLogoHeader {
@@ -591,7 +599,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 0;
     color: white;
-    text-align: start;
+    text-align: left;
     height: 93px;
     padding-right: 11px;
     background: linear-gradient(rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.80) 100%);
@@ -677,7 +685,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 1px;
     color: white;
-    text-align: start;
+    text-align: left;
     padding-bottom: 21px;
     height: 160px;
     padding-top: 80px;
@@ -893,7 +901,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 0;
     color: white;
-    text-align: start;
+    text-align: left;
     height: 106px;
     padding-right: 11px;
     }
@@ -966,7 +974,7 @@ input.searchMessagesInput:focus {
     bottom: 0px;
     left: 1px;
     color: white;
-    text-align: start;
+    text-align: left;
     padding-bottom: 21px;
 }
 .searchMessagesInput{
