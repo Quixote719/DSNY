@@ -1,10 +1,23 @@
 import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import {Row, Col} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
-import {Dropdown, MenuItem, Button, DropdownButton} from 'react-bootstrap';
+import {MenuItem, DropdownButton} from 'react-bootstrap';
+
+const booleanOptions = [
+  {
+    "Id": 1,
+    "Name": "Yes",
+    "DisplayName": "Yes",
+    "Selected": false
+  }, {
+    "Id": 2,
+    "Name": "No",
+    "DisplayName": "No",
+    "Selected": false
+  }
+]
 class FormDropdown extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +27,7 @@ class FormDropdown extends Component {
       option: "Select one"
     }
   }
+
   onInputChange(item) {
     this.setState({option: item});
     this.props.onChange(this.props.name, item)
@@ -33,7 +47,12 @@ class FormDropdown extends Component {
           <DropdownButton className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option}
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret="noCaret" id="dropdown-no-caret">
-            {this.renderList(this.props.options)}
+            {
+              this.renderList(
+                this.props.options
+                ? this.props.options
+                : booleanOptions)
+            }
           </DropdownButton>
         </fieldset>
       </Col>

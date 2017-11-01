@@ -1,5 +1,17 @@
+export const compostFormTitles = {
+  sectionOne: 'SECTION 1: APPLICANT AND ORGANIZATION LOCATION',
+  sectionTwo: 'SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )',
+  sectionThree: 'SECTION 3: ORGANIZATION INFORMATION',
+  sectionFour: 'SECTION 4: APPLICANT CONTACT INFORMATION',
+  sectionFive: 'SECTION 5: SITE INFORMATION',
+  sectionSix: 'SECTION 6: DELIVERY INFORMATION',
+  WillPostCompostRecipientSignage: 'Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.',
+  WillPostSignageWithinTwoWeeks: 'Yes, the sign will be installed within two weeks of receiving the material.',
+  WillSubmitThreePhotos: 'Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.',
+  ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.'
+}
 
-{
+export const compostFormObject = {
   "Id": 0,
   "SRNumberId": 0,
   "SRNo": null,
@@ -36,18 +48,16 @@
   "PrimaryPhone": null,
   "PrimaryPhoneTypes": [
     {
-     "Id": 1,
+      "Id": 1,
       "Name": "Work",
       "DisplayName": "Work",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "Mobile",
       "DisplayName": "Mobile",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "Home",
       "DisplayName": "Home",
@@ -63,14 +73,12 @@
       "Name": "Work",
       "DisplayName": "Work",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "Mobile",
       "DisplayName": "Mobile",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "Home",
       "DisplayName": "Home",
@@ -85,50 +93,42 @@
       "Name": "CommunityCompostSite",
       "DisplayName": "Community Compost Site",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "CommunityGarden",
       "DisplayName": "Community Garden",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "NYCHAProperty",
       "DisplayName": "New York Housing Authority (NYCHA) Property",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 4,
       "Name": "Nonprofit",
       "DisplayName": "Nonprofit Organization or Institution",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 5,
       "Name": "Park",
       "DisplayName": "NYC Park",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 6,
       "Name": "School",
       "DisplayName": "NYC School (K-12)",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 7,
       "Name": "UrbanFarm",
       "DisplayName": "Urban Farm",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 8,
       "Name": "StreetTrees",
       "DisplayName": "Street Trees",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 9,
       "Name": "Other",
       "DisplayName": "Other",
@@ -144,32 +144,27 @@
       "Name": "GreenThumb",
       "DisplayName": "GreenThumb",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "NYCParksAndRec",
       "DisplayName": "NYC Department of Parks & Recreation",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "NYCDOE",
       "DisplayName": "NYC Department of Education",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 4,
       "Name": "NYCHA",
       "DisplayName": "NYC Housing Authority",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 5,
       "Name": "TreesNewYork",
       "DisplayName": "TreesNewYork (Certified Citizen Pruner)",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 6,
       "Name": "Other",
       "DisplayName": "Other",
@@ -197,140 +192,117 @@
       "Name": "TwelveAm",
       "DisplayName": "12:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 1,
       "Name": "OneAm",
       "DisplayName": "01:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "TwoAm",
       "DisplayName": "02:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "ThreeAm",
       "DisplayName": "03:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 4,
       "Name": "FourAm",
       "DisplayName": "04:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 5,
       "Name": "FiveAm",
       "DisplayName": "05:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 6,
       "Name": "SixAm",
       "DisplayName": "06:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 8,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 9,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 10,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 11,
       "Name": "ElevenAm",
       "DisplayName": "11:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 12,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
       "Selected": false
-    },
-    {
-     "Id": 13,
+    }, {
+      "Id": 13,
       "Name": "OnePm",
       "DisplayName": "01:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 14,
       "Name": "TwoPm",
       "DisplayName": "02:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 15,
       "Name": "ThreePm",
       "DisplayName": "03:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 16,
       "Name": "FourPm",
       "DisplayName": "04:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 17,
       "Name": "FivePm",
       "DisplayName": "05:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 18,
       "Name": "SixPm",
       "DisplayName": "06:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 19,
       "Name": "SevenPm",
       "DisplayName": "07:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 20,
       "Name": "EightPm",
       "DisplayName": "08:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 21,
       "Name": "NinePm",
       "DisplayName": "09:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 22,
       "Name": "TenPm",
       "DisplayName": "10:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 23,
       "Name": "ElevenPm",
       "DisplayName": "11:00 PM",
@@ -345,140 +317,117 @@
       "Name": "TwelveAm",
       "DisplayName": "12:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 1,
       "Name": "OneAm",
       "DisplayName": "01:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 2,
       "Name": "TwoAm",
       "DisplayName": "02:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 3,
       "Name": "ThreeAm",
       "DisplayName": "03:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 4,
       "Name": "FourAm",
       "DisplayName": "04:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 5,
       "Name": "FiveAm",
       "DisplayName": "05:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 6,
       "Name": "SixAm",
       "DisplayName": "06:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 8,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 9,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 10,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 11,
       "Name": "ElevenAm",
-     "DisplayName": "11:00 AM",
+      "DisplayName": "11:00 AM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 12,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 13,
       "Name": "OnePm",
       "DisplayName": "01:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 14,
       "Name": "TwoPm",
       "DisplayName": "02:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 15,
       "Name": "ThreePm",
       "DisplayName": "03:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 16,
       "Name": "FourPm",
       "DisplayName": "04:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 17,
       "Name": "FivePm",
       "DisplayName": "05:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 18,
       "Name": "SixPm",
       "DisplayName": "06:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 19,
       "Name": "SevenPm",
       "DisplayName": "07:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 20,
       "Name": "EightPm",
       "DisplayName": "08:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 21,
       "Name": "NinePm",
       "DisplayName": "09:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 22,
       "Name": "TenPm",
       "DisplayName": "10:00 PM",
       "Selected": false
-    },
-    {
+    }, {
       "Id": 23,
       "Name": "ElevenPm",
       "DisplayName": "11:00 PM",
@@ -490,7 +439,7 @@
   "DeliveryNotes": null,
   "EntranceHeightWidth": null,
   "HasAlternateSideParking": false,
- "AlternateSideParkingMonday": false,
+  "AlternateSideParkingMonday": false,
   "AlternateSideParkingTuesday": false,
   "AlternateSideParkingWednesday": false,
   "AlternateSideParkingThursday": false,
