@@ -8,7 +8,32 @@ export const compostFormTitles = {
   WillPostCompostRecipientSignage: 'Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.',
   WillPostSignageWithinTwoWeeks: 'Yes, the sign will be installed within two weeks of receiving the material.',
   WillSubmitThreePhotos: 'Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.',
-  ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.'
+  ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.',
+  ApplyingAs: 'APPLYING AS',
+  OrganizationName: 'ORGANIZATION NAME',
+  OrganizationTaxIdNumber: 'ORGANIZATION TAX IDENTIFICATION NUMBER NAME',
+  OrganizationWebsite: 'ORGANIZATION OR PROJECT WEBSITE (optional)',
+  OrganizationFacebookPage: 'ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)',
+  OrganizationTwitterHandle: 'ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)',
+  OrganizationInstagramHandle: 'ORGANIZATION OR PROJECT instagram ID (optional)',
+  FirstName: 'FIRST NAME',
+  LastName: 'LAST NAME',
+  Title: 'YOUR TITLE OR AFFILIATION WITH ORGANIZATION (optional)',
+  IsCertifiedNycMasterComposter: 'ARE YOU A CERTIFIED NYC MASTER COMPOSTER?',
+  PrimaryPhone: 'PRIMARY PHONE NUMBER',
+  PrimaryPhoneTypeId: 'Phone Type (optional)',
+  SecondaryPhone: 'SECONDARY PHONE NUMBER (Optional)',
+  SecondaryPhoneTypeId: 'Phone Type (optional)',
+  Email: 'E-MAIL',
+  ConfirmEmail: 'CONFIRM E-MAIL',
+  CompostSiteTypeId: 'WHAT TYPE OF SITE IS THIS?',
+  OtherCompostSiteType: 'OTHER SITE TYPE',
+  CompostSitePermittingOrganizationId: 'PERMISSION TO TEND THIS SITE WAS GRANTED BY',
+  OtherCompostSitePermittingOrganization: 'OTHER PERMITTING ORGANIZATION',
+  SiteSize: 'SITE SIZE (SQUARE FEET)',
+  IsGreenThumbGarden: 'IS THIS A GREENTHUMB GARDEN?',
+  HasReceivedDsnyCompostBefore: 'HAVE YOU RECEIVED DSNY COMPOST IN THE PAST?',
+  CompostUseDescription: 'DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)'
 }
 
 export const compostFormObject = {
