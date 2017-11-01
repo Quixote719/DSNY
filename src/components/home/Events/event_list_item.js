@@ -1,7 +1,6 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import styles from '../../../content/styles/eventListItem.css';
 import moment from 'moment';
 import Dotdotdot from 'react-dotdotdot'

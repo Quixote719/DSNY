@@ -233,10 +233,11 @@ input.searchMessagesInput:focus {
 .homeLogoHeader.selectedParent>a {
     background: url('../images/nav-sprite.png') no-repeat 20px -28.2px;
 }
-.navbar-default .navbar-nav>.active>a{
+.navbar-default .navbar-nav>.active>a, a:focus{
     background-image: none;
     box-shadow: none !important;
     background-color: inherit;
+    outline: none;
 }
 .navbar-nav{
     position: relative;

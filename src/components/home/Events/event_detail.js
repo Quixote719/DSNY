@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {fetchEventDetails} from "../../../actions/actions_home";
 import '../../../content/styles/subSectionHeaderImage.css';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 import PressReleaseHeader from '../../PressReleases/pressReleaseHeader';
 import PressReleaseBody from '../../PressReleases/pressReleaseBody';
 import LazyImage from '../../shared/LazyImage';
@@ -44,7 +44,7 @@ class EventDetail extends Component {
     return (
       <div >
         {this.renderPage(prd)}
-      </div>
+      </div> 
 
     );
   };

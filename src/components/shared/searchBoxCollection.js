@@ -66,7 +66,7 @@ class SearchBoxCollection extends Component {
             autocompleteContainer: 'collectionSchedule-autocomplete-container'
           }
         return (
-            <div className="container searchContainerRidCollection">
+            <div className="SContainer searchContainerRidCollection">
                 <Row className="searchRow">
                     <Col xs={12} md={12} className="searchCollectionParent">
                         <div id="TextureSquare">
