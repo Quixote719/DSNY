@@ -74,6 +74,10 @@
   border: 1px solid #7CC04B;
 }
 
+.contactForm input:invalid {
+  border: 1px solid #D80035;
+}
+
 .contactForm input:disabled {
   border: 1px solid #D8D8D8;
   border-radius: 3px;
