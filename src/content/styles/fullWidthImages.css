@@ -1,0 +1,39 @@
+.ContentLeft{
+    float: 'left';
+    margin-top: '25px';
+}
+
+.BlackTitle {
+  color: #333333;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+
+.positionElement{
+  height: 400px;
+  background-position: 50% 50%;
+}
+
+.SectionContainer {
+  width: 940px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 1900px) {
+  .positionElement{
+    background-size: 1900px 900px!important;
+    background-position: 50% 50%!important;
+    overflow: hidden!important;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .SectionContainer {
+    margin: 0 3%;
+    width: auto;
+  }
+}

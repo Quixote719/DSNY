@@ -4,7 +4,7 @@ import ContentCard from '../shared/ContentCard'
 
 class LocationsSection extends Component {
 
-
+  
   render() {
     const style = {
                     'backgroundImage': `url(${this.props.LocationProps.image})`,
@@ -28,5 +28,7 @@ class LocationsSection extends Component {
     )
   }
 }
+
+
 
 export default LocationsSection;

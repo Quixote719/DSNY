@@ -99,7 +99,7 @@ class Header extends React.Component {
                             <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/resources' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={4}>Resources</NavItem>
                             </LinkContainer>
-                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/ourWork"} className={url ===  process.env.REACT_APP_SITE_RELATIVE_URL + '/ourWork' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
+                            <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/our-work"} className={url ===  process.env.REACT_APP_SITE_RELATIVE_URL + '/our-work' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={5}>Our Work</NavItem>
                             </LinkContainer>
                             <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/contact' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>

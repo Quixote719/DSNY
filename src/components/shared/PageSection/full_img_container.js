@@ -8,12 +8,12 @@ import Header from '../Breadcrumb/breadcrumb_container'
 import {fetchCardDetails} from "../../../actions";
 
 //Sub Components
-import Banner from '../banner'
-import CardSec from './card_sec'
+import Banner from '../banner';
+import CardSec from '../CardDetails/card_sec';
+import FullImageSec from './full_img_sec';
 
-class cardDetailContainer extends Component {
-
-  constructor(props) {
+class  fullImageContainer extends Component{
+ constructor(props) {
     super(props);
     this.state = {
       reload: false
@@ -46,6 +46,28 @@ class cardDetailContainer extends Component {
     );
   };
 
+
+   /* Return card details, corresponding to an Empty Card Section */ 
+   getCard(sec){
+         return (
+             <div key ={sec.id}>
+                 <div><CardSec dataObject={sec}/></div>
+             </div>
+        );
+   } 
+
+
+   /* Return content with Background image */ 
+   getBackGroundImageContent(sec){
+        return(
+           <div key ={sec.id}>
+            <div>      
+                <FullImageSec dataObject={sec}/></div>
+            </div>
+        );
+   }
+
+
   renderPage(cardDetails) {
 
     if (cardDetails) {
@@ -61,15 +83,18 @@ class cardDetailContainer extends Component {
           )
         }
 
+
+
         var sections;
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
-            return (
-              <div key ={sec.id}>
-                <div>
-                  <CardSec dataObject={sec}/></div>
-              </div>
-            );
+           console.log(sec);   
+           if(sec.featured_image != ''){
+                return this.getBackGroundImageContent(sec);
+           }else{
+                return this.getCard(sec);
+           }   
+ 
           })
         }
 
@@ -92,4 +117,4 @@ function mapStateToProps(state) {
   return {cardDetails: state.card};
 }
 
-export default connect(mapStateToProps, {fetchCardDetails})(cardDetailContainer);
+export default connect(mapStateToProps, {fetchCardDetails})(fullImageContainer);

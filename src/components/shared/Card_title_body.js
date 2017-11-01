@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../content/styles/card.css';
-import Dotdotdot from 'react-dotdotdot'
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 
 class CardTitleBody extends Component {
   render() {
@@ -10,19 +11,18 @@ class CardTitleBody extends Component {
       <Col xs={12} sm={6} md={3}>
         <div className={this.props.className}>
           <div className='cardTitle'>
-            <Dotdotdot clamp={3}>
-              <div className='cardTitleText' dangerouslySetInnerHTML={{
-                __html: this.props.title
-              }}/>
-            </Dotdotdot>
+            <TruncateMarkup lines={2}> 
+              <div className='cardTitleText' >
+                  {Parser(this.props.title)}
+              </div>
+            </TruncateMarkup>  
           </div>
           <div className='cardBody'>
-            <Dotdotdot clamp={3}>
-              <div className='cardBodyText' dangerouslySetInnerHTML={{
-                __html: this.props.body
-              }}/>
-            </Dotdotdot>
-
+           <TruncateMarkup lines={2}> 
+              <div className='cardBodyText' >
+                  {Parser(this.props.body)}
+              </div>
+            </TruncateMarkup>  
           </div>
         </div>
       </Col>

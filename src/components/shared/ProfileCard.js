@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Dotdotdot from 'react-dotdotdot';
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 
 class ProfileCard extends Component {
   render() {
@@ -13,9 +15,11 @@ class ProfileCard extends Component {
             }
           </div>
           <div className="ProfileCardName">{this.props.name}</div>
-          <Dotdotdot clamp={3}>
-            <div className="ProfileCardDuty" dangerouslySetInnerHTML={{__html: this.props.duty}}></div>
-          </Dotdotdot>
+          <TruncateMarkup lines={3}> 
+            <div className="ProfileCardDuty">
+               {Parser(this.props.duty)}
+            </div>
+         </TruncateMarkup>  
       </div>
     )
   }
