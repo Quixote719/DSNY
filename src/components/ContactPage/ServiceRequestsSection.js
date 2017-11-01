@@ -17,7 +17,7 @@ class ServiceRequestsSection extends Component {
   renderCards() {
     return _.map(this.props.ServiceRequestsProps.cards, Item => {
       return (
-        <div className='serviceRequestsCards'>
+        <div className='serviceRequestsCards' key={Item.id}>
           <CardTitle title={Item.title} key={Item.id} />
         </div>
       );

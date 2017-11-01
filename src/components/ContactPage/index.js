@@ -5,8 +5,8 @@ import ServiceRequestsSection from './ServiceRequestsSection';
 import RegistrationsSection from './RegistrationsSection';
 import GetInvolvedSection from './GetInvolvedSection';
 import Complaints from './ComplaintsSection';
+import ContactUs from './ContactUsSection';
 import * as actions from '../../actions/actions_about';
-import PageText from '../shared/PageText';
 import _ from "lodash";
 import { connect } from 'react-redux';
 
@@ -31,17 +31,18 @@ class Contact extends Component {
     let ComplaintsProps = {};
     let RegistrationsProps = {};
     let GetInvolvedProps = {};
+    let ContactUsProps = {};
 
 
 
-    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps);
+    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps);
 
     return (
       <div>
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>
             <div className="myRequestStatus">{MyRequestStatus}</div>
-          <SearchBoxCollection />
+          <div className='largeSearchBox'><SearchBoxCollection /></div>
         </div>
         <div className = 'SContainer'>
           <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>
@@ -54,15 +55,19 @@ class Contact extends Component {
         <div className = 'SContainer'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
+        <div className = 'greyBcg'>
           <GetInvolvedSection GetInvolvedProps = {GetInvolvedProps}/>
-
+        </div>
+        <div className = 'SContainer'>
+          <ContactUs ContactUsProps = {ContactUsProps}/>
+        </div>
       </div>
     )
   }
 
 
 
-  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps) {
+  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
@@ -94,6 +99,13 @@ class Contact extends Component {
           case 'get-involved-section': {
             GetInvolvedProps.image = item.featured_image.base_path + item.featured_image.file;
             GetInvolvedProps.content = item.content;
+            GetInvolvedProps.cards = item.cards;
+            break;
+          }
+          case 'contact-us': {
+            ContactUsProps.title = item.header;
+            ContactUsProps.cards = item.cards;
+            break;
           }
           default:{
             break;

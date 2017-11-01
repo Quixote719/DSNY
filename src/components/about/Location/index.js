@@ -41,7 +41,7 @@ const MyMapComponent = compose(
                      </MarkerWithLabel>
                     )
                 }
-                  else if(marker.isActive==true){
+                  else if(marker.isActive===true){
                     return(
                      <MarkerWithLabel
                            key = { marker.$id }
