@@ -53,6 +53,7 @@ class cardDetailContainer extends Component {
       return _.map(cardDetails, cItems => {
 
         let banner;
+        if(cItems!==undefined){
         if (cItems.name != '') {
           banner = (
             <div key={cItems.id}>
@@ -81,6 +82,7 @@ class cardDetailContainer extends Component {
             <div >{sections}</div>
           </div>
         )
+      }
       });
     } else {
       return (
