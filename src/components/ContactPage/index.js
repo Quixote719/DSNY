@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
 import ServiceRequestsSection from './ServiceRequestsSection';
+import RegistrationsSection from './RegistrationsSection';
+import Complaints from './ComplaintsSection';
 import * as actions from '../../actions/actions_about';
 import PageText from '../shared/PageText';
 import _ from "lodash";
@@ -24,8 +26,12 @@ class Contact extends Component {
     let BannerText = {};
     let MyRequestStatus = "";
     let ServiceRequestsProps = {};
+    let ComplaintsProps = {};
+    let RegistrationsProps = {};
 
-    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps);
+    
+
+    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps);
 
     return (
       <div>
@@ -39,16 +45,20 @@ class Contact extends Component {
         </div>
         <div className = 'greyBcg'>
           <div className = 'SContainer'>
-            <div>1111</div>
+            <Complaints ComplaintsProps = {ComplaintsProps} />
           </div>
         </div>
+        <div className = 'SContainer'>
+          <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
+        </div>
+
       </div>
     )
   }
 
 
 
-  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps) {
+  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
@@ -65,6 +75,16 @@ class Contact extends Component {
           case 'service-request':{
             ServiceRequestsProps.title = item.header;
             ServiceRequestsProps.cards = item.cards;
+            break;
+          }
+          case 'complaints': {
+            ComplaintsProps.title = item.header;
+            ComplaintsProps.content = item.content;
+            break;
+          }
+          case 'applications-and-registrations': {
+            RegistrationsProps.title = item.header;
+            RegistrationsProps.cards = item.cards;
             break;
           }
           default:{

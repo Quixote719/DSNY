@@ -4,4 +4,9 @@
 
 .serviceRequestsContainer{
   padding: 0;
+  margin-bottom: 50px;
+}
+
+.viewAllComplaints> .subSectionButton{
+  width: 192px;
 }
