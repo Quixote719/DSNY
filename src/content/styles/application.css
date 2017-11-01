@@ -70,6 +70,10 @@ html body {
   margin-top: 20px;
 }
 
+.bottomSection{
+  padding-bottom: 50px;
+}
+
 @media only screen and (max-width: 991px) {
   .paddingRight{
     padding-right: 15px;

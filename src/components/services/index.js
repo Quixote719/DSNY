@@ -6,6 +6,7 @@ import * as actions from '../../actions/actions_services';
 import ContentCardRow from '../shared/content_card_row'
 import Header from '../shared/Breadcrumb/breadcrumb_container'
 import SubSectionHeader from '../shared/sub_section_header';
+import SubSectionButton from '../shared/sub_section_button';
 import styles from '../../content/styles/services.css';
 import { connect } from 'react-redux';
 
@@ -53,9 +54,18 @@ class Services extends Component {
 
               )
             }
-            else{
+            else if(sec.name == 'cleaning'){
               return(
                 <div className='SContainer' key={sec.id}>
+                  <SubSectionHeader title={sec.header}/>
+                  <ContentCardRow dataObject = {sec}/>
+                  <SubSectionButton title='VIEW ALL'/>
+                </div>
+              )
+            }
+            else if(sec.name == 'snow-response'){
+              return(
+                <div className='SContainer bottomSection' key={sec.id}>
                   <SubSectionHeader title={sec.header}/>
                   <ContentCardRow dataObject = {sec}/>
                 </div>
