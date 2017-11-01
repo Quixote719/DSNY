@@ -146,8 +146,7 @@ class CardSec extends Component {
     let headerContent;
     if (dataObject.header !== '') {   
           headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;  
-          console.log("Header Color :"+headerColor);      
-         if(headerColor == 'green'){
+         if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
             headerContent = dataObject.header.replace(/<[^>]+>/g, '');
             header = this.getGreenHeader(dataObject,headerContent);
          }else{
