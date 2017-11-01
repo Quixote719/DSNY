@@ -27,12 +27,12 @@ class CardBox extends Component {
             card = <ProfileCard name={item.header} duty={item.content} image={item.featured_image} />
         }
         else{
-            card = <TitleContentCard title={item.title} link={item.link} content={item.content}/>
+            card = <TitleContentCard dataObject={item}/>
         }
 
         if(this.props.info.CardSize == 1){
           return (
-            <Col xs={12} sm={6} md={3} key={item.id}>
+            <Col xs={12} sm={4} md={3} key={item.id}>
               {card}
             </Col>
           );

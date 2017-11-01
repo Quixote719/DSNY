@@ -3,6 +3,7 @@ import {combineReducers} from 'redux';
 import carouselDataReducer from './reducer_home';
 import ResourcesReducer from './reducer_resources';
 import AboutDataReducer from './reducer_about';
+import ServicesDataReducer from './reducer_services';
 import mediaReducer from './Reducer_media';
 import cardReducer from './reducer_card_details';
 import dropdownListReducer from './reduce_dropdown_list';
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   dropdownList: dropdownListReducer,
   media: mediaReducer,
   resources: ResourcesReducer,
-  AboutDataReducer: AboutDataReducer
+  AboutDataReducer: AboutDataReducer,
+  ServicesDataReducer: ServicesDataReducer
 });
 
 export default rootReducer;

@@ -103,6 +103,7 @@
 
 .TitleContentCard .CardTitle,.TitleContentCard .CardContent{
     margin: 0;
+    height: 90px;
 }
 
 .ColorCard{

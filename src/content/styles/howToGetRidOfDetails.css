@@ -4,6 +4,9 @@
 .howToGetRidOfItemDetails>.BreadcrumbList>.container>.breadcrumb{
     padding-left: 0!important;
 }
+.howToGetRidOfItemDetails>.BreadcrumbList>.container{
+    padding-left: 0!important;
+}
 .ridOfItemHeader{
     padding-bottom: 21px;
     padding-top: 20px;

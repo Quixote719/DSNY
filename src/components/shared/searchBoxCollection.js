@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import * as actions from '../../../actions/actions_home';
+import * as actions from '../../actions/actions_home';
 import { connect } from 'react-redux';
-import styles from '../../../content/styles/home.css';
-import '../../../content/styles/howtogetridof.css';
+import styles from '../../content/styles/services.css';
+import '../../content/styles/howtogetridof.css';
 import { Grid, Row, Col } from 'react-bootstrap';
-import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
+import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import Autosuggest from 'react-autosuggest';
-import About from '../../about/index';
+import About from '../about/index';
 import {Link} from "react-router-dom";
-import SearchBoxHome from "./searchBoxHome";
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
+import SearchBoxHome from "../home/Search_Cards/searchBoxHome";
+import PlacesAutocomplete from 'react-places-autocomplete'
 
-class SearchCards extends Component {
+class SearchBoxCollection extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
             value: "",
             suggestions: [],
             address: '',
-            placeholder: "When is Collection at ..."            
+            placeholder: "When is Collection at ..."
           };
     }
     handleChange = (address) =>{
@@ -42,12 +42,6 @@ class SearchCards extends Component {
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
     }
     render() {
-        // const options = {
-        //     // bounds: {lat: (40.915568,-73.699215), lng : (40.495992,-74.257159)},
-            
-        //     bounds: {lat:(40.915568,-73.699215), lng:(40.495992,-74.257159)},
-        //     componentRestrictions: {country: 'us'}
-        //   }
         const inputProps = {
             value: this.state.address,
             onChange: this.handleChange,
@@ -72,21 +66,16 @@ class SearchCards extends Component {
             autocompleteContainer: 'collectionSchedule-autocomplete-container'
           }
         return (
-            <div className="container searchContainerRidCollection">
+            <div className="SContainer searchContainerRidCollection">
                 <Row className="searchRow">
-                    <Col xs={12} md={6} className="searchRidParent">
-                    <SearchBoxHome ridOffKeywords = {this.props.ridOffKeywords} test ={this.props}/>
-                    </Col>
-                    <Col xs={12} md={6} className="searchCollectionParent">
+                    <Col xs={12} md={12} className="searchCollectionParent">
                         <div id="TextureSquare">
                             <div id="innersquare">
-                                <div className = "ridOfAutoCompleteParent">
                                 <PlacesAutocomplete inputProps={inputProps}
                                     onSelect={this.handleSelect}
                                     onEnterKeyDown={this.handleSelect}
                                     classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
                                 />
-                                </div>
                                 <i className="fa fa-search collectionSearch" id="collectionSearch"></i>
                                 <div style={this.state.address ==""?{display: 'block'}:{display:'none'}} className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
                             </div>
@@ -103,11 +92,11 @@ function mapStateToProps(state) {
     return {
         ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
     }
-  }
-  
+}
+
 let actionList = {
     getRidOfSearchResults: actions.getRidOfSearchResults,
-  };
+};
 
-SearchCards = connect(mapStateToProps, actionList)(SearchCards);
-export default SearchCards;
+SearchBoxCollection = connect(mapStateToProps, actionList)(SearchBoxCollection);
+export default SearchBoxCollection;

@@ -18,7 +18,14 @@ import '../../content/styles/contactForm.css';
 
 var INPUT_TYPES = 'color|date|datetime|datetime-local|file|month|number|password|range|search|tel|text|time|url|week'.split('|')
 
+
+function onChange(value) {
+  alert("Captcha value:"+ value);
+  console.log("Captcha value:", value);
+}
+
 class TestForm extends Component {
+
 
   render() {
 
@@ -77,13 +84,15 @@ class TestForm extends Component {
           <div><FormDateTimePicker title='datepicker'/></div>
 
         </Row>
-        <ReCAPTCHA
+        {<ReCAPTCHA
           ref="recaptcha"
           sitekey="6Lej8jUUAAAAAPSVFK5_I1VPTsNlJ7Q0hTafQKCm"
-        />
+          onChange={onChange}
+        />}
       </div>
     );
   };
+
 };
 
 export default TestForm;

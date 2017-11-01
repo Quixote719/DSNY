@@ -10,10 +10,7 @@ import _ from "lodash";
 import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
-import { createBrowserHistory } from 'history'
-import {browserHistory} from "react-router";
 
-const history = createBrowserHistory()          
 
 class SearchBoxHome extends Component {
     constructor(props, context) {

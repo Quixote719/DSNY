@@ -20,12 +20,15 @@ class CarouselData extends Component {
 
     return _.map(this.props.carouselItems, (item, index) => {
       let image = item.featured_image.base_path + item.featured_image.file
+      let numberOfImages = this.props.carouselItems.length;
+
         return (
             <Carousel.Item key={index}>
                 <img src={image} alt="fleetCarouselImage"/>
               <div className="fleetExplaination">
                 <h1 className="fleetContentTitle">
                   {item.title}
+                  <span className="pageNumber">{index + 1}/{numberOfImages}</span>
                 </h1>
                 <div className="fleetContent" dangerouslySetInnerHTML={{__html: item.content}}></div>
               </div>
@@ -39,9 +42,9 @@ class CarouselData extends Component {
       <div className="fleetCarouselContainerParent">
         <div className="container fleetCarouselContainer">
           <Carousel className="fleetCarousel" prevIcon={<span className="newsEventsCarouselIcon">
-              <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+              <img src={require('../../../../../content/images/Arrow_left.svg')} alt="carouselleftArrow" />
           </span>} nextIcon={<span className="newsEventsCarouselIcon">
-              <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+              <img src={require('../../../../../content/images/Arrow_right.svg')} alt="carouselRightArrow" />
           </span>}>
               {this.carouselDataItemList()}
           </Carousel>
