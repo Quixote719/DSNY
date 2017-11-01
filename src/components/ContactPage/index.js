@@ -3,11 +3,13 @@ import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
 import ServiceRequestsSection from './ServiceRequestsSection';
 import RegistrationsSection from './RegistrationsSection';
+import GetInvolvedSection from './GetInvolvedSection';
 import Complaints from './ComplaintsSection';
 import * as actions from '../../actions/actions_about';
 import PageText from '../shared/PageText';
 import _ from "lodash";
 import { connect } from 'react-redux';
+
 
 
 class Contact extends Component {
@@ -28,10 +30,11 @@ class Contact extends Component {
     let ServiceRequestsProps = {};
     let ComplaintsProps = {};
     let RegistrationsProps = {};
+    let GetInvolvedProps = {};
 
-    
 
-    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps);
+
+    this.parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps);
 
     return (
       <div>
@@ -51,6 +54,7 @@ class Contact extends Component {
         <div className = 'SContainer'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
+          <GetInvolvedSection GetInvolvedProps = {GetInvolvedProps}/>
 
       </div>
     )
@@ -58,7 +62,7 @@ class Contact extends Component {
 
 
 
-  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps) {
+  parseContactData(Contact, BannerText, MyRequestStatus, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
@@ -86,6 +90,10 @@ class Contact extends Component {
             RegistrationsProps.title = item.header;
             RegistrationsProps.cards = item.cards;
             break;
+          }
+          case 'get-involved-section': {
+            GetInvolvedProps.image = item.featured_image.base_path + item.featured_image.file;
+            GetInvolvedProps.content = item.content;
           }
           default:{
             break;
