@@ -1,3 +1,6 @@
+.searchContainerCollection{
+    padding: 0;
+}
 .nonServiceDay{
     padding-top: 32px;
     padding-bottom: 20px;
@@ -112,6 +115,18 @@
 }
 #noDesktopTable, #noMobileTable{
     display: none;
+}
+.addressNotFound{
+    padding-top: 17px;
+    color: #D80035;
+    font-size: 16px;	
+    line-height: 18px;
+}
+.selectFromAddressBelow{
+    padding-top: 20px;
+    color: #333333;	
+    font-size: 16px;	
+    line-height: 18px;
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {

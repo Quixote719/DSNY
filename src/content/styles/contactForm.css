@@ -42,10 +42,10 @@ input, input.form-control {
   background-color: #FFFFFF;
 }
 
-input:focus {
+/* input:focus {
   outline: none !important;
   border: 2px solid #7CC04B;
-}
+} */
 
 input[type=checkbox], input[type=radio] {
   height: 20px;
