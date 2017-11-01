@@ -1,5 +1,5 @@
-/* .ridOfSearch,
-.actual-edit-overlay {
+.largeSearchBox .ridOfSearch,
+.largeSearchBox .actual-edit-overlay {
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -11,17 +11,17 @@
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
-} */
+}
 
-.ServicePage .searchContainerRidCollection{
+.largeSearchBox .searchContainerRidCollection{
     padding-top: 0;
 }
 
-.collectionSearchAutoComplete:focus{
+.largeSearchBox .collectionSearchAutoComplete:focus{
     outline: none;
 }
 
-/* .collectionSearchAutoComplete{
+.largeSearchBox .collectionSearchAutoComplete{
     padding-right: 24px;
     height: 33px;
     font-weight: 700;
@@ -36,7 +36,7 @@
     border-left: none;
     border-right: none;
     -webkit-text-fill-color: #231F20 !important;
-} */
+}
 
 .contentLeft{
   width: 24%;
@@ -51,14 +51,14 @@
 }
 
 
-#TextureSquare {
+.largeSearchBox #TextureSquare {
     width: 100%;
     height: 142px;
     padding: 10px;
     background: url('../images/Lightgreen.png')
 }
 
-#innersquare {
+.largeSearchBox #innersquare {
     width: 100%;
     height: 100%;
     background-color: #FFFFFF;
@@ -73,37 +73,37 @@
 } */
 
 @media only screen and (max-width: 991px) {
-.col-md-4  .TitleContentCard{
+.col-md-4 .TitleContentCard{
     width: 100%!important;
   }
 }
 
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
-    #TextureSquare {
+    .largeSearchBox #TextureSquare {
         width: 100%;
     }
-    .searchContainerRidCollection {
+    .largeSearchBox .searchContainerRidCollection {
         width: auto;
     }
 }
 
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
-    #TextureSquare {
+    .largeSearchBox #TextureSquare {
         height: 130px;
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 599px) {
-    .ridOfSearch,
-    .actual-edit-overlay{
+    .largeSearchBox .ridOfSearch,
+    .largeSearchBox .actual-edit-overlay{
       width: 94%!important;
     }
-    .searchCollectionParent{
+    .largeSearchBox .searchCollectionParent{
       margin: 0;
       padding: 0
     }
-    #TextureSquare {
+    .largeSearchBox #TextureSquare {
         height: 130px;
         width: 100%;
     }

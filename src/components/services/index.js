@@ -76,7 +76,7 @@ class Services extends Component {
         return (
           <div className='ServicePage'>
             <div>{banner}</div>
-            <div>{sections}</div>
+            <div className='largeSearchBox'>{sections}</div>
           </div>
         )
   }
