@@ -234,7 +234,7 @@ export const compostFormObject = {
       "Id": 2,
       "Name": "TwoAm",
       "DisplayName": "02:00 AM",
-      "Selected": false
+      "Selected": true
     }, {
       "Id": 3,
       "Name": "ThreeAm",

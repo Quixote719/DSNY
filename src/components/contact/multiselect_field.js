@@ -1,21 +1,23 @@
 import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
-import {Row, Col} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
+import FormBoolean from './form_boolean'
 
 class FormMultiSelect extends Component {
 
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-
+   this.updateObject = this.updateObject.bind(this);
     this.state = {
-      name: props.name
-        ? props.name
-        : '',
-      value: []
+      "DeliverOnMonday": false,
+      "DeliverOnTuesday": false,
+      "DeliverOnWednesday": false,
+      "DeliverOnThursday": false,
+      "DeliverOnFriday": false,
+      "DeliverOnSaturday": false
     }
   }
 
@@ -26,18 +28,26 @@ class FormMultiSelect extends Component {
 
 
   renderOptions(options) {
+
     return _.map(options, Item => {
       return (<div key={_.random(0, 200, true)}>
-        <input  type="checkbox" id={Item.id} name={Item.name} value={Item.name} onChange={this.handleChange}/>
+        <input  type="checkbox"  id={Item.id}  name={Item.Name} onClick={event => this.handleChange(event)}/>
         <span>{Item.DisplayName}</span>
       </div>)
     });
   }
 
-  handleChange() {
-    this.setState({
-      value: !this.state.checked
-    })
+  handleChange(Item) {
+
+console.log(Item.target.name, Item.target.checked);
+
+  }
+
+  updateObject(Item){
+    this.props.onMultiSelect(Item.target.name , Item.target.checked)
+    var day = Item.target.name
+    this.setState({day : Item.target.checked})
+    console.log(this.state);
   }
 
   render() {

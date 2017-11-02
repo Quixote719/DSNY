@@ -103,35 +103,35 @@ const InnerForm = (props) => {
     <FormSectionHeader title={Titles.sectionSix}/>
     <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.Pallets}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
-    <FormMultiSelect title={Titles.DeliveryOn} name="DeliveryOn" options={[
+    <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryOn" options={[
         {
           "Id": 1,
-          "Name": "Work",
+          "Name": "DeliverOnMonday",
           "DisplayName": "Monday",
           "Selected": false
         }, {
           "Id": 2,
-          "Name": "Mobile",
+          "Name": "DeliverOnTuesday",
           "DisplayName": "Tuesday",
           "Selected": false
         }, {
           "Id": 1,
-          "Name": "Work",
+          "Name": "DeliverOnWednesday",
           "DisplayName": "Wednesday",
           "Selected": false
         }, {
           "Id": 2,
-          "Name": "Mobile",
+          "Name": "DeliverOnThursday",
           "DisplayName": "Thursday",
           "Selected": false
         }, {
           "Id": 1,
-          "Name": "Work",
+          "Name": "DeliverOnFriday",
           "DisplayName": "Friday",
           "Selected": false
         }, {
           "Id": 2,
-          "Name": "Mobile",
+          "Name": "DeliverOnSaturday",
           "DisplayName": "Saturday",
           "Selected": false
         }
