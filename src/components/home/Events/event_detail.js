@@ -9,10 +9,23 @@ import {Row, Col} from 'react-bootstrap';
 import PressReleaseHeader from '../../PressReleases/pressReleaseHeader';
 import PressReleaseBody from '../../PressReleases/pressReleaseBody';
 import LazyImage from '../../shared/LazyImage';
+import MapWindow from '../../shared/map_window';
 import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import moment from 'moment';
 
+const google = window.google;
+
 class EventDetail extends Component {
+
+  constructor(props, context) {
+      super(props, context);
+      this.state = {
+        lat: 0,
+        lng: 0
+      }
+      // this.onMarkerClick = this.onMarkerClick.bind(this);
+      // this.onMapClick = this.onMapClick.bind(this);
+  }
 
   componentDidMount() {
     const {slug} = this.props.match.params;
@@ -44,12 +57,24 @@ class EventDetail extends Component {
     return (
       <div >
         {this.renderPage(prd)}
-      </div> 
+      </div>
 
     );
   };
 
   renderPage(cardDetails) {
+
+    let geocoder = new google.maps.Geocoder();
+      geocoder.geocode({
+      'address': '250 Bowery, New York, NY 10012'
+      },((results, status) => {
+      if (status == 'OK') {
+        // const lat = results[0].geometry.location.lat();
+        // const lng = results[0].geometry.location.lng();
+        this.setState({lat : results[0].geometry.location.lat()});
+        this.setState({lng : results[0].geometry.location.lng()});
+      }
+    }));
 
     if (cardDetails) {
         var mail = "mailTo:" + cardDetails.ContactEmail
@@ -58,12 +83,13 @@ class EventDetail extends Component {
         <div>
              <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><a href="/">Home</a></li><li className=""><a href="/resources">Events</a></li></ol></div></div> </div></div>
 
+
              <div className='container PressReleaseHeader'>
               <Row>
                 <Col xs={12}>
                   <div className='PressReleaseHeadertitle' dangerouslySetInnerHTML={{
                     __html: cardDetails.EventName
-                  }}/>
+                  }}></div>
                 </Col>
                 <Col xs={12}>
                   <div className='patternLineGreen'></div>
@@ -71,7 +97,12 @@ class EventDetail extends Component {
 
               </Row>
             </div>
-        
+            <div className='container'>
+              <MapWindow
+                isMarkerShown = {true}
+                Center = {{ lat: 40.72390127, lng: -73.88979419 }}
+                Locations = {{ lat:this.state.lat, lng:this.state.lng }}/>
+            </div>
              <div className='container PressReleaseBody'>
               <Row>
                 <Col xs={12} sm={8} md={9}>
@@ -97,7 +128,7 @@ class EventDetail extends Component {
               </Row>
             </div>
         </div>
-            
+
         )
 
     } else {
@@ -113,4 +144,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {fetchEventDetails})(EventDetail);
-
