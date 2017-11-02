@@ -54,20 +54,20 @@ class CardSec extends Component {
     reference-details-card | Reference/Details Card
     square-card | Square Card
     square-card-with-image | Square Card (with Image)
-    staff-card | Staff Card
+    staff-card | Staff Card | Square Card (No Border)
     standard-card-no-border | Standard Card (no border)
     standard-card-with-border | Standard Card (with border)
      */
     switch (cardType) {
       case 'table-dictionary-card':
         return (<TableDictionary title={Item.title} body={Item.content} url = {Item.linked_page.url}  header ={Item.header}/> );
+      case 'square-card-no-border':
+            return (url
+          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
+          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
       case 'square-card':
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
-      case 'square-card-no-border':
-        return (url
-          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
         return (url
@@ -109,17 +109,21 @@ class CardSec extends Component {
                   <SubSectionHeaderGreen title={headerContent}/>
                 </div>
               );
-    }
+    } 
 
-  /* Normal Black Header is returned, provided there are no tags in the dataObject header */
+  /* Normal Black Header is returned, provided there are no tags in the dataObject header */  
   getHeader(dataObject){
       return(
                 <div key={dataObject.id}>
                   <SubSectionHeader title={dataObject.header}/>
                 </div>
                )
+  }  
+  
+  /* Check if the Header of the Page is Valid HTML, if it is then only css is colour is obtained from the Header */
+  checkifValidHTML(dataObject){
+    return /<[a-z][\s\S]*>/i.test(dataObject.header);
   }
-
 
 
   render() {
@@ -140,15 +144,14 @@ class CardSec extends Component {
     let header;
     let headerColor;
     let headerContent;
-    if (dataObject.header !== '') {
-          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
+    if (dataObject.header !== '') {   
+          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;   
          if(headerColor == 'green'){
             headerContent = dataObject.header.replace(/<[^>]+>/g, '');
             header = this.getGreenHeader(dataObject,headerContent);
          }else{
             header = this.getHeader(dataObject);
          }
-
     }
 
     let body;

@@ -96,7 +96,7 @@ class Contact extends Component {
           }
           case 'applications-and-registrations': {
             RegistrationsProps.title = item.header;
-            RegistrationsProps = item;
+            RegistrationsProps.cards = item.cards;
             break;
           }
           case 'get-involved-section': {

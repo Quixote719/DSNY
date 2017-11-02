@@ -1,6 +1,6 @@
 import React from 'react';
 import { withFormik } from 'formik';
-import Yup from 'yup';
+// import Yup from 'yup';
 import { compose, withState, withHandlers } from 'recompose';
 import FormField from './form_field';
 

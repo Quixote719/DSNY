@@ -28,9 +28,7 @@ class PressRelease extends Component {
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>
-      );
+      return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>);
     } else {
       return null;
     }
@@ -42,25 +40,21 @@ class PressRelease extends Component {
     const {pr, n} = this.props;
 
     if (_.isEmpty(pr)) {
-      return (
-        <div></div>
-      );
+      return (<div></div>);
     }
 
-    return (
-      <div>
-        <SubSectionHeader title="Press Release" onClick={this._reroute}/>
-        <div>{this.renderPosts(pr)}</div>
+    return (<div>
+      <SubSectionHeader title="Press Release" onClick={this._reroute}/>
+      <div>{this.renderPosts(pr)}</div>
 
-        {this.ViewAllButton(n)}
-      </div>
-    );
+      {this.ViewAllButton(n)}
+    </div>);
   }
 }
 
 PressRelease.propTypes = {
   pr: PropTypes.array.isRequired,
-  n: PropTypes.string.isRequired,
+  n: PropTypes.any.isRequired,
   onClick: PropTypes.func
 };
 

@@ -72,7 +72,6 @@ class About extends Component {
      FoundationProps, LocationProps, OperationProps){
       if(this.props.AboutData !== undefined){
               About = this.props.AboutData.data;
-              console.log(this.props.AboutData);
       }
 
         BannerText.title = About.header;

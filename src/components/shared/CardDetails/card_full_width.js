@@ -14,54 +14,48 @@ class cardFullWidth extends Component {
       let {link} = this.props;
       let title;
       if (cardDetails.title != '') {
-        title = (
-          <div key={cardDetails.id}>
-            <Col xs={12}>
-              {link
+        title = (<div key={cardDetails.id}>
+          <Col xs={12}>
+            {
+              link
                 ? <Link className='fullwidthcardtitle' to={link}><div dangerouslySetInnerHTML={{
-                    __html: cardDetails.title
-                  }}/></Link>
+                      __html: cardDetails.title
+                    }}/></Link>
                 : <div className='fullwidthcardtitle' dangerouslySetInnerHTML={{
-                  __html: cardDetails.title
-                }}/>}
-            </Col>
-          </div>
-        )
+                      __html: cardDetails.title
+                    }}/>
+            }
+          </Col>
+        </div>)
       }
 
       let body;
       if (cardDetails.content != '') {
-        body = (
-          <div key={cardDetails.id}>
-            <Col xs={12}>
-              <div >
-                <div dangerouslySetInnerHTML={{
+        body = (<div key={cardDetails.id}>
+          <Col xs={12}>
+            <div >
+              <div dangerouslySetInnerHTML={{
                   __html: cardDetails.content
                 }}/>
-              </div>
-            </Col>
-          </div>
-        )
+            </div>
+          </Col>
+        </div>)
       }
 
-      return (
-        <div>
-          <Row>
-            <div>{title}</div>
-            <div>{body}</div>
-          </Row>
-          <div className='PRLIhairline'></div>
-        </div>
-      );
+      return (<div>
+        <Row>
+          <div>{title}</div>
+          <div>{body}</div>
+        </Row>
+        <div className='PRLIhairline'></div>
+      </div>);
 
     }
   }
 
   render() {
     const {dataObject} = this.props;
-    return (
-      <div>{this.cardLayout(dataObject)}</div>
-    );
+    return (<Col xs={12}>{this.cardLayout(dataObject)}</Col>);
   };
 };
 

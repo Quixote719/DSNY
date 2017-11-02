@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import MaskedInput from 'react-text-mask';
 import {Row, Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
-
+import {Formik, Field} from 'formik';
 class FormField extends Component {
 
   constructor(props) {
@@ -24,9 +24,8 @@ class FormField extends Component {
       var name = 'input[' + type + ']';
       switch (type) {
         case "phone":
-          return (
-            <div>
-              <MaskedInput mask={[
+          return (<div>
+            <MaskedInput mask={[
                 '(',
                 /[1-9]/,
                 /\d/,
@@ -41,37 +40,34 @@ class FormField extends Component {
                 /\d/,
                 /\d/,
                 /\d/
-              ]} onClick={event => this.onInputChange(event)}/>
-            </div>
-          );
-          break;
+              ]} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value}/>
+          </div>);
+
         default:
-          return (
-            <div>
-              <input type={type} name={name} onClick={event => this.onInputChange(event)} placeholder=''/>
-            </div>
-          )
+
+          return (<div>
+            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value ? this.props.value : ''} disabled={this.props.disabledf}/>
+            <div>{this.props.children}</div>
+          </div>)
       }
     }
   }
   render() {
-    return (
-      <div className='FormField'>
-        <Col xs={12} sm={6} md={6}>
-          <fieldset>
-            <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <div>{this.renderField(this.props.type)}</div>
-          </fieldset>
-        </Col>
-
-      </div>
-    );
+    return (<div >
+      <Col className='FormField' xs={12} sm={6} md={6}>
+        <fieldset>
+          <div className='FormMultiSelectTitle'>{this.props.title}</div>
+          <div>{this.renderField(this.props.type)}</div>
+        </fieldset>
+      </Col>
+    </div>);
   };
 };
 
 FormField.propTypes = {
   title: PropTypes.string,
-  type: PropTypes.string
+  type: PropTypes.string,
+  disabledf: PropTypes.bool
 };
 
 export default FormField;

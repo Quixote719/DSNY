@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
+import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -16,7 +16,7 @@ export function carouselData() {
 }
 export function getCollectionSchedule(address) {
     return function (dispatch) {
-        axios.get(COLLECTION_SCHEDULE_URL+address+"/CollectionSchedule")
+        axios.get(COLLECTION_SCHEDULE_URL+address)
             .then((data) => {
                 axios.get(HOLIDAY_DATA_URL).then((holidayData)=>{
                     if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
@@ -52,6 +52,7 @@ export function getCollectionSchedule(address) {
                         routingData: data.data.RoutingTime,
                         arrayLength: arrayLength - 1,
                         holidayData: holidayData.data,
+                        suggestionAddress: data.data.Suggestions,
                     })
                 })
             })}}
@@ -80,20 +81,41 @@ export function getRidOfSearchResults(suggestion) {
             })
     }
 }
+// SITE SEARCH
+export function getSiteSearchKeywords() {
+    return function (dispatch) {
+        axios.get(SITE_SEARCH_KEYWORDS_URL)
+            .then((data) => {
+                dispatch({
+                    type: 'SET_SITE_SEARCH_KEYWORDS',
+                    payload: data.data.key_words,
+                })
+            })
+    }
+}
+
+export function getSiteSearchResults(suggestion) {
+    return function (dispatch) {
+        axios.get(SITE_SEARCH_RESULTS_URL+"="+suggestion)
+            .then((data) => {
+                dispatch({
+                    type: 'SET_SITE_SEARCH_RESULTS',
+                    payload: data.data,
+                    length: data.data.length,
+                })
+            })
+    }
+}
 
 export function getRidOffItemDetails(itemName) {
     return function (dispatch) {
         axios.get(RID_OF_ITEM_DETAILS_URL+"="+itemName)
             .then((data) => {
                 dispatch({
-                    type: 'SET_RID_OFF_SEARCH_RESULTS',
+                    type: 'SET_RID_OFF_ITEM_DETAILS',
                     payload: data.data,
                     length: data.data.length,
                 })
-                // dispatch({
-                //     type: 'SET_RID_OFF_SEARCH_BOX',
-                //     payload: suggestion,
-                // })
             })
     }
 }
