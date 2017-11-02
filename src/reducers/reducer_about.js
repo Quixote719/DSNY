@@ -21,6 +21,10 @@ export default function AboutDataReducer(state = { bureaus: {} }, action) {
         details: _.mapKeys(action.payload.data, "id")
         }
       };
+    case 'SET_FLEET':
+      return {...state, FleetData: action.payload};
+    case 'SET_CONTACT_PAGE':
+      return {...state, ContactPageData: action.payload};
     default:
       return state;
   }

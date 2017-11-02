@@ -70,19 +70,18 @@ class Header extends React.Component {
                 </div>
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
-                        <img src={require('../../content/images/Web_logo.svg')} className="middleHeaderLogo" />
+                        <img src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" />
                         <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
 
                         <span className="textSizeTranslate">&#8203;</span>
-                        <span aria-hidden="true" className="translateIcon">▼</span>
-                        <span id="google_translate_element" className="translateHeader">Translate</span>
+                        {/*<span aria-hidden="true" className="translateIcon">▼</span>*/}
+                        <span id="google_translate_element" className="translateHeader"></span>
                         <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" />
                     </div>
                 </div>
                 <Navbar collapseOnSelect id="slideNav">
                     <Navbar.Brand className="mobileSanitationLogo" >
-                        <img src={require('../../content/images/DSNY-Web_logo.png')} className="middleHeaderLogoMobile" />
-                        <span className="mobileSanitationHeaderText">Sanitation</span>
+                    <img src={require('../../content/images/sanitation_logo.svg')} id="sanitationMobileLogo" />
                     </Navbar.Brand>
                     <Navbar.Toggle className="navbarToggle" onClick={this.showNavModal} />
                     <Navbar.Collapse id="navBar">
@@ -125,8 +124,8 @@ class Header extends React.Component {
 
                     <Modal.Header closeButton onClick={this.close}>
 
-                        <img src={require('../../content/images/DSNY-Web_logo.png')} className="middleHeaderLogoMobile" />
-                        <span className="mobileSanitationHeaderText">Sanitation</span>                    </Modal.Header>
+                    <img src={require('../../content/images/sanitation_logo.svg')} className="sanitationMobileLogo" />
+                    </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">
                         <input className="searchMessagesInput" type="text" placeholder="Search" >

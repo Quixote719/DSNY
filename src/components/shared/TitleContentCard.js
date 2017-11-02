@@ -5,6 +5,9 @@ import '../../content/styles/dsnyCard.css';
 
 class TitleContentCard extends Component {
   render() {
+
+    const {dataObject} = this.props;
+
     const styles={
       narrow:{
         'width': '220px',
@@ -12,30 +15,42 @@ class TitleContentCard extends Component {
         'display':'inline-block',
         'height': '200px'
       },
+      narrow_border:{
+        'width': '220px',
+        'backgroundColor':'#FFFFFF',
+        'display':'inline-block',
+        'height': '200px',
+        'border': '1px solid #7CC04B'
+      },
       wide:{
         'width': '303px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
         'height': '200px'
+      },
+      wide_border:{
+        'width': '303px',
+        'backgroundColor':'#FFFFFF',
+        'display':'inline-block',
+        'height': '200px',
+        'border': '1px solid #7CC04B'
       }
     }
-    let CardType = styles.narrow;
-    let link = this.props.link||'/about/bureaus';
+    let CardType = this.props.type!==undefined?styles[this.props.type]:styles.narrow
+    let link = dataObject.linked_page.url||'/about/bureaus';
     return (
-      // <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
         <div className="TitleContentCard" style={CardType}>
           <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
             <div className="TitleContentLink">
-             <div className="CardTitle">{this.props.title}</div>
+             <div className="CardTitle">{dataObject.title}</div>
              <div className="CardContent" >
                 <Dotdotdot clamp={3}>
-                    <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+                    <div dangerouslySetInnerHTML={{__html: dataObject.content}}></div>
                 </Dotdotdot>
              </div>
             </div>
           </Link>
         </div>
-      // </Link>
     );
   };
 };

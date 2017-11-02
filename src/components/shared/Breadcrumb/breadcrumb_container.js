@@ -29,7 +29,7 @@ class Header extends Component {
   renderBreadcrumb() {
     let blist = this.props.breadCrumbList;
     const {title, body} = this.props;
-    if (blist.length > 2) {
+    if (blist != undefined && blist.length > 2) {
       let l = _.dropRight(blist);
       let title = _.last(blist);
       let tClassName = this.props.has_children

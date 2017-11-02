@@ -7,46 +7,42 @@ import '../../content/styles/subSectionHeader.css';
 
 class FormMultiSelect extends Component {
 
-
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      name: props.name ? props.name : '',
-      value:[]
+      name: props.name
+        ? props.name
+        : '',
+      value: []
     }
   }
 
   renderOptions(options) {
     return _.map(options, Item => {
-      return (
-        <div>
-          <input type="checkbox" id={Item.id} name={Item.name} value={Item.name} onChange={this.handleChange } />
-          <label for="coding">{Item.DisplayName}</label>
-        </div>
-      )
+      return (<div>
+        <input type="checkbox" id={Item.id} name={Item.name} value={Item.name} onChange={this.handleChange}/>
+        <label for="coding">{Item.DisplayName}</label>
+      </div>)
     });
   }
 
   handleChange() {
-     this.setState({
-       checked: !this.state.checked
-     })
-   }
-
+    this.setState({
+      value: !this.state.checked
+    })
+  }
 
   render() {
-    return (
-      <div>
-        <Col xs={12}>
-          <fieldset>
-            <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <div>{this.renderOptions(this.props.options)}</div>
-          </fieldset>
-        </Col>
-      </div>
-    );
+    return (<div>
+      <Col xs={12}>
+        <fieldset>
+          <div className='FormMultiSelectTitle'>{this.props.title}</div>
+          <div>{this.renderOptions(this.props.options)}</div>
+        </fieldset>
+      </Col>
+    </div>);
   };
 };
 

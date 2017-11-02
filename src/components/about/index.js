@@ -59,7 +59,7 @@ class About extends Component {
             </div>
           </div>
             <LocationsSection LocationProps = {LocationProps}/>
-          <div className = 'greyBcg boxPaddingBtm'>
+          <div className = 'greyBcg boxPaddingBtm bottomSection'>
             <div className = 'SContainer'>
               <OperationsSection OperationProps = {OperationProps}/>
             </div>

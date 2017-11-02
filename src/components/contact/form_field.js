@@ -42,7 +42,7 @@ class FormField extends Component {
                 /\d/
               ]} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value}/>
           </div>);
-          break;
+
         default:
 
           return (<div>

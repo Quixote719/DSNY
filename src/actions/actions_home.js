@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
+import {HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -16,42 +16,46 @@ export function carouselData() {
 }
 export function getCollectionSchedule(address) {
     return function (dispatch) {
-        axios.get(COLLECTION_SCHEDULE_URL+address+"/Formatted")
+        axios.get(COLLECTION_SCHEDULE_URL+address+"/CollectionSchedule")
             .then((data) => {
-                if(data.data.Goat !== null && data.data.Goat.sanitationRegularCollectionSchedule !== null){
-                    var sanitationRegularCollectionSchedule = data.data.Goat.sanitationRegularCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationRegularCollectionSchedule =""
-                }
-                if(data.data.Goat !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null){
-                    var sanitationRecyclingCollectionSchedule = data.data.Goat.sanitationRecyclingCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationRecyclingCollectionSchedule =""
-                }
-                if(data.data.Goat !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                    var sanitationOrganicsCollectionSchedule = data.data.Goat.sanitationOrganicsCollectionSchedule.replace(/TH/i, 'H');                    
-                }
-                else{
-                    var sanitationOrganicsCollectionSchedule =""
-                }
-                if(sanitationRegularCollectionSchedule ==""&& sanitationRecyclingCollectionSchedule=="" && sanitationOrganicsCollectionSchedule==""){
-                    var collectionScheduleData="noValue";
-                    var collectionScheduleLength = 0;
-                }
-                else{
-                    var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
-                    var arrayLength = collectionScheduleData.filter(Boolean).length
-                }
-                dispatch({
-                    type: 'SET_COLLECTION_SCHEDULE_DATA',
-                    payload: collectionScheduleData,
-                    arrayLength: arrayLength - 1,
+                axios.get(HOLIDAY_DATA_URL).then((holidayData)=>{
+                    if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
+                        var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationRegularCollectionSchedule =""
+                    }
+                    if(data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null){
+                        var sanitationRecyclingCollectionSchedule = data.data.RecyclingCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationRecyclingCollectionSchedule =""
+                    }
+                    if(data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null){
+                        var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;                    
+                    }
+                    else{
+                        var sanitationOrganicsCollectionSchedule =""
+                    }
+                    if(sanitationRegularCollectionSchedule ==""&& sanitationRecyclingCollectionSchedule=="" && sanitationOrganicsCollectionSchedule==""){
+                        var collectionScheduleData="noValue";
+                        var collectionScheduleLength = 0;
+                    }
+                    else{
+                        var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
+                        var arrayLength = collectionScheduleData.filter(Boolean).length
+                    }
+                    dispatch({
+                        type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        collectionScheduleInfo: data.data.Goat,
+                        payload: collectionScheduleData,
+                        routingData: data.data.RoutingTime,
+                        arrayLength: arrayLength - 1,
+                        holidayData: holidayData.data,
+                    })
                 })
-            })
-    }
-}
+            })}}
+
 export function getRidOffKeywords() {
     return function (dispatch) {
         axios.get(RID_OF_KEYWORDS_URL)
@@ -71,7 +75,7 @@ export function getRidOfSearchResults(suggestion) {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
-                    length: data.data.length,                    
+                    length: data.data.length,
                 })
             })
     }
@@ -79,12 +83,17 @@ export function getRidOfSearchResults(suggestion) {
 
 export function getRidOffItemDetails(itemName) {
     return function (dispatch) {
-        axios.get(RID_OF_ITEM_DETAILS_URL+itemName)
+        axios.get(RID_OF_ITEM_DETAILS_URL+"="+itemName)
             .then((data) => {
                 dispatch({
-                    type: 'SET_RID_OFF_ITEM_DETAILS',
+                    type: 'SET_RID_OFF_SEARCH_RESULTS',
                     payload: data.data,
+                    length: data.data.length,
                 })
+                // dispatch({
+                //     type: 'SET_RID_OFF_SEARCH_BOX',
+                //     payload: suggestion,
+                // })
             })
     }
 }
@@ -96,7 +105,7 @@ export function carouselPanelData() {
         var day = ("0" + date.getUTCDate()).slice(-2);
         var year = date.getUTCFullYear().toString();
         var currentDate = parseInt(month + day + year);
-        
+
         axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate,  { crossdomain: true } )
             .then((data) => {
                 let carouselPanelItems = [];
@@ -115,7 +124,7 @@ export function carouselPanelData() {
                     type: 'SET_PANEL_ITEMS',
                     payload: carouselPanelItems,
                 })
-                
+
 
             })
 
@@ -164,4 +173,3 @@ export function fetchEventDetails(slug) {
     })
   }
 }
-

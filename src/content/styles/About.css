@@ -1,10 +1,10 @@
 .LeadershipRight{
   margin-left: 30px;
-  width: 650px;
-  height: 240px;
+  width: 70%;
   padding: 20px;
   display:inline-block;
   box-sizing: border-box;
+  float: right;
 }
 
 .LeadershipRight a{
@@ -14,24 +14,35 @@
   line-height: 19px;
 }
 
+.biographyPage .greenSectionHeader{
+  margin-top: 0;
+}
+
+.biographyPage .LeadershipRight{
+  padding-top: 0;
+}
+
+[title="Toggle fullscreen view"], [title="Show street map"], [title="Show satellite imagery"]{
+  display: none;
+}
+
 .locLabel{
-  min-width: 240px;
+  width: 240px;
 }
 
 .locLabelImage{
-  padding: 10px;
+  padding: 10px 10px 10px 10px;
   height: 100%;
   vertical-align: top;
   display: inline-block;
 }
 
 .locLabelInfo{
-  padding: 10px;
+  padding: 10px 7px;
   width: 75%;
   float: right;
   height:100%;
   color: #9B9B9B;
-  word-break: break-all;
   display: inline-block;
 }
 
@@ -136,11 +147,12 @@
   .ReactGoogleMap{
     display: none;
   }
-}
-
-@media only screen and (max-width: 599px) {
   .LeadershipRight{
     margin: 0;
     width: 100%;
+    display: block;
   }
+}
+
+@media only screen and (max-width: 599px) {
 }

@@ -1,46 +1,144 @@
-/*.carouselBoxShadow {
-    position: absolute;
-    width: 940px;
-    height: 0px;
-    right: 0;
+.fleetContentTitle{
+  margin-left: 20px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 24px;
+  line-height: 33px;
+  height: 33px;
+  width: 900px;
+  text-align: left;
+  background-color: #FFFFFF;
+  margin-top: 0;
+  padding-top: 20px;
 }
 
-.carouselParentBoxShadow {
-    position: absolute;
-    width: 940px;
-    background: url(http://www1.nyc.gov/assets/home/images/modules/homepage-hero/bg-shadow.png) no-repeat center bottom;
-    height: 40px;
-    bottom: 60px;
-    right: 0;
-}*/
+.fleetContentTitle>.pageNumber{
+  width: 26px;
+  height: 33px;
+  font-size: 17.5px;
+  font-weight: bold;
+  line-height: 33px;
+  text-align: left;
+  display: inline-block;
+  float: right;
+}
+
+.fleetContent{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #333333;
+  width: 900px;
+  height: 211px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  padding-top: 20px;
+}
 
 .fleetCarouselContainer{
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 48px;
-    padding-top: 48px;
-    width: 940px;;
-}
-
-.carouselImg img{
-  width: auto;
-  height: 528px;
-  max-height: 528px;
+    padding-bottom: 100px;
+    padding-top: 30px;
+    width: 940px;
 }
 
 .fleetExplaination {
-  background-color: white;
-  text-align: left;
+  background-color: #FFFFFF;
+  height: 210px;
+  width: 940px;
 }
 
+.fleetCarouselContainerParent{
+  background-color: #F2F2F2;
+}
+
+.fleetCarousel{
+    float: right;
+    width: auto;
+    height: 772px;
+
+}
+
+.fleetCarousel>.carousel-inner>.item>img{
+    height: 567px;
+    width: 940px;
+}
+
+.fleetCarousel>.carousel-inner{
+    height: 772px;
+    width: 940px;
+    background-color: #FFFFFF;
+}
+.fleetCarousel>.carousel-control.left{
+    margin-left: -51px;
+    margin-top: -130px
+}
+.fleetCarousel>.carousel-control.right{
+    margin-top: -130px
+}
+
+.fleetCarousel>.__web-inspector-hide-shortcut__, .__web-inspector-hide-shortcut__ *, .__web-inspector-hidebefore-shortcut__::before, .__web-inspector-hideafter-shortcut__::after{
+    display: none;
+}
+
+
+
 /*Mobile View*/
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 499px) {
   .fleetCarouselContainer {
       padding-left: 16px!important;
       padding-right: 16px!important;
       padding-bottom: 31px;
       padding-top: 20px;
       width: auto;
+      height: auto;
+  }
+
+  .fleetContentTitle>.pageNumber{
+    padding-right: 40px!important;;
+  }
+
+  .fleetCarousel>.carousel-indicators>li {
+      background-color: white;
+      border-color: rgba(0, 46, 30, 0.2);
+  }
+
+  .fleetCarousel>.carousel-indicators>.active {
+      background-color: #00764D;
+      border-color: #00764D;
+  }
+
+  .fleetExplaination {
+    width: auto!important;
+
+  }
+
+  .fleetContent{
+    width: auto!important;
+    font-size: auto!important;
+  }
+
+  .fleetContentTitle{
+    width: auto!important;
+    font-size: auto!important;
+  }
+
+  .fleetCarousel {
+      float: none;
+      width: auto;
+      height: auto;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img {
+      height: 280px;
+      width: 380px;
+  }
+
+  .fleetCarousel>.carousel-inner{
+      float: none;
+      width: auto;
+      height: auto;
   }
 }
 
@@ -48,26 +146,148 @@
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
 
   .fleetCarouselContainer{
+      padding-left: 16px!important;
+      padding-right: 30px!important;
       padding-bottom: 41px;
       padding-top: 28px;;
+      width: auto;
+      height: auto;
+  }
+
+  .fleetContentTitle>.pageNumber{
+    padding-right: 40px!important;;
+  }
+
+  .fleetCarousel>.carousel-indicators>li {
+      background-color: white;
+      border-color: rgba(0, 46, 30, 0.2);
+  }
+
+  .fleetCarousel>.carousel-indicators>.active {
+      background-color: #00764D;
+      border-color: #00764D;
+  }
+
+  .fleetCarousel{
       width: 712px;
+      height: auto;
+  }
+  .fleetCarousel>.carousel-inner{
+      width: 712px;
+      height: auto;
+  }
+
+  .fleetExplaination {
+    width: auto!important;
+    font-size: auto;
+  }
+
+  .fleetContent{
+    width: auto!important;
+    font-size: auto!important;
+  }
+
+  .fleetContentTitle{
+    width: auto!important;
+    font-size: auto!important;
   }
 }
 
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
   .fleetCarouselContainer {
       padding-left: 16px!important;
       padding-right: 16px!important;
       padding-bottom: 31px;
       padding-top: 20px;
       width: auto;
+      height: auto;
+  }
+
+  .fleetContentTitle>.pageNumber{
+    padding-right: 40px!important;;
+  }
+
+  .fleetCarousel>.carousel-indicators>li {
+      background-color: white;
+      border-color: rgba(0, 46, 30, 0.2);
+  }
+
+  .fleetCarousel>.carousel-indicators>.active {
+      background-color: #00764D;
+      border-color: #00764D;
+  }
+
+  .fleetCarousel {
+      float: none;
+      width: auto;
+      height: auto;
+  }
+  .fleetCarousel>.carousel-inner{
+      float: none;
+      width: auto;
+      height: auto;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img {
+      height: 380px;
+      width: 100%;;
+  }
+
+  .fleetExplaination {
+    width: auto!important;
+  }
+
+  .fleetContent{
+    width: auto!important;
+    font-size: auto!important;
+  }
+
+  .fleetContentTitle{
+    width: auto!important;
+    font-size: auto!important;
   }
 }
 
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px) {
   .fleetCarouselContainer{
+      width: 939px;
+      height: auto;
+  }
+
+  .fleetContentTitle>.pageNumber{
+    padding-right: 40px!important;;
+  }
+
+  .fleetCarousel>.carousel-indicators>li {
+      background-color: white;
+      border-color: rgba(0, 46, 30, 0.2);
+
+  }
+
+  .fleetCarousel>.carousel-indicators{
+    margin-left: 0;
+    padding-right: 380px;
+  }
+
+  .fleetCarousel>.carousel-indicators>.active {
+      background-color: #00764D;
+      border-color: #00764D;
+  }
+
+  .fleetCarousel{
+      float: none;
+      width: 816px;
+      height: auto;
+  }
+  .fleetCarousel>.carousel-inner{
+      float: none;
+      width: 939px;;
+      height: auto;
+  }
+
+  .fleetCarousel>.carousel-inner>.item>img{
       width: 939px;
   }
 
@@ -76,5 +296,19 @@
       padding-top: 41px;
       margin-left: auto;
       margin-right: auto;
+  }
+
+  .fleetExplaination {
+    width: auto!important;
+  }
+
+  .fleetContent{
+    width: auto!important;
+    font-size: auto!important;
+  }
+
+  .fleetContentTitle{
+    width: auto!important;
+    font-size: auto!important;
   }
 }

@@ -11,7 +11,7 @@ import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
 import SearchBoxHome from "./searchBoxHome";
-import PlacesAutocomplete from 'react-places-autocomplete'
+import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 
 class SearchCards extends Component {
     constructor(props, context) {
@@ -42,6 +42,12 @@ class SearchCards extends Component {
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
     }
     render() {
+        // const options = {
+        //     // bounds: {lat: (40.915568,-73.699215), lng : (40.495992,-74.257159)},
+            
+        //     bounds: {lat:(40.915568,-73.699215), lng:(40.495992,-74.257159)},
+        //     componentRestrictions: {country: 'us'}
+        //   }
         const inputProps = {
             value: this.state.address,
             onChange: this.handleChange,
@@ -74,11 +80,13 @@ class SearchCards extends Component {
                     <Col xs={12} md={6} className="searchCollectionParent">
                         <div id="TextureSquare">
                             <div id="innersquare">
+                                <div className = "ridOfAutoCompleteParent">
                                 <PlacesAutocomplete inputProps={inputProps}
                                     onSelect={this.handleSelect}
                                     onEnterKeyDown={this.handleSelect}
                                     classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
                                 />
+                                </div>
                                 <i className="fa fa-search collectionSearch" id="collectionSearch"></i>
                                 <div style={this.state.address ==""?{display: 'block'}:{display:'none'}} className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
                             </div>

@@ -7,7 +7,7 @@ class ProfileCard extends Component {
       <div className="ProfileCard">
           <div className="ImageBox">
             {
-              this.props.image!==undefined?
+              ((this.props.image!==undefined)&&(this.props.image!==false))?
               <img className="ProfileCardImg" src={this.props.image} alt=""/>
               :<img className="ProfileCardImg" src={require('../../content/images/Leader_avatar.png')} alt=""/>
             }
