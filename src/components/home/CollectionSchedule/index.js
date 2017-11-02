@@ -58,16 +58,20 @@ class CollectionSchedule extends Component {
     collectionScheduleTable(){
         return (<CollectionScheduleTable holidayData = {this.props.holidayData} arrayLength ={this.props.arrayLength} collectionScheduleData = {this.props.collectionScheduleData}/>)
     }
-    // correctAddressList = () => {
-    //     return _.map(this.props.collectionScheduleData, (value,index)=> {
-    //         if(value !==""){
-    //             return(
-    //             <div key ={index}>
-                    
-    //             </div>);
-    //         }
-    //     } );
-    // }
+    suggestedAddressSelected = (value) =>{
+        this.setState({
+            address: value,
+         });
+         this.props.getCollectionSchedule(value);                        
+    }
+    correctAddressList = () => {
+        return _.map(this.props.suggestionAddress, (value,index)=> {
+                return(
+                <div className = "suggestedAddressListItem" key ={index} onClick = {()=>{this.suggestedAddressSelected(value)}}>
+                    {value}
+                </div>);
+        } );
+    }
     render() {
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
@@ -103,10 +107,7 @@ class CollectionSchedule extends Component {
             bounds: defaultBounds,
             componentRestrictions: {country: 'us'}
           }
-        // var input1 = document.getElementsByClassName('collectionSearchInput');
-        // var autocomplete = new window.google.maps.places.Autocomplete(input1);
-        // autocomplete.setOptions({strictBounds: true});
-        
+     
         return (
             <div className = "howToGetRidOfParent">
             <Header title='Collection Schedule' breadCrumbList= "" />
@@ -125,7 +126,7 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
-                {/* <div className = "errorUserAddressParent">
+                <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                 <div className = "addressNotFound">
                 The address entered can not be found. 
                 </div>
@@ -133,7 +134,7 @@ class CollectionSchedule extends Component {
                 Please select from the possible addresses below                
                 </div>
                     {this.correctAddressList()}
-                </div> */}
+                </div>
                 <Row className="collectionScheduleRow">
                     <Col xs={12}>
                         <div style={this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
@@ -157,6 +158,7 @@ class CollectionSchedule extends Component {
 }
 function mapStateToProps(state) {
     return {
+        suggestionAddress: state.carouselDataReducer.suggestionAddress,        
         collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,
         routingData: state.carouselDataReducer.routingData,                        
         holidayData: state.carouselDataReducer.holidayData,                        
