@@ -19,14 +19,14 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .formSectionHeaderHairline {
   height: 2px;
   background-color: #7CC04B;
   margin-top: 5px;
-  margin-bottom: 8px;
+  margin-bottom: 30px;
 }
 
 .red {
@@ -34,7 +34,7 @@
 }
 
 .FormField {
-  padding-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .open>.dropdown-menu {
@@ -76,9 +76,13 @@
   background-color: #FFFFFF;
 }
 
+.contactForm .sectionHeader {
+  margin-bottom: 40px;
+}
+
 .contactForm input:focus, .contactForm textarea:focus, .contactForm input.form-control:focus {
   outline: none !important;
-  border: 2px solid #7CC04B;
+  border: 1px solid #7CC04B;
 }
 
 .contactForm input:invalid {
