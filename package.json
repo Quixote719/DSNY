@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "font-awesome": "^4.7.0",
+    "formik": "^0.9.4",
     "google-map-react": "^0.24.0",
     "jquery": "^3.2.1",
     "moment": "^2.19.1",
@@ -46,7 +47,8 @@
     "redux-form": "^6.6.3",
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "yup": "^0.23.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"

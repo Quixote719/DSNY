@@ -37,7 +37,7 @@ class TitleContentCard extends Component {
       }
     }
     let CardType = this.props.type!==undefined?styles[this.props.type]:styles.narrow
-    let link = dataObject.link||'/about/bureaus';
+    let link = dataObject.linked_page.url||'/about/bureaus';
     return (
         <div className="TitleContentCard" style={CardType}>
           <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>

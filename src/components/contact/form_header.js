@@ -5,9 +5,12 @@ import '../../content/styles/subSectionHeader.css';
 const FormHeader = props => {
   return (
     <div>
-      <div className='sectionHeader'>
-        {props.title}
-      </div>
+      <Col xs={12}>
+        <div className='sectionHeader'>
+          {props.title}
+        </div>
+
+      </Col>
     </div>
   );
 };

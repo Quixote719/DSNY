@@ -10,7 +10,9 @@ class ContentCardRow extends Component {
     return (
       <div>
         <div className='contentLeft' dangerouslySetInnerHTML={{__html: dataObject.content}}></div>
-        <div className='contentRight'>{this.renderCards(dataObject.cards, dataObject.background_color)}</div>
+        <div className='contentRight'>
+          <Row>{this.renderCards(dataObject.cards, dataObject.background_color)}</Row>
+        </div>
       </div>
     )
   }
