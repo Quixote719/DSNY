@@ -31,7 +31,7 @@ class FormMultiSelect extends Component {
 
     return _.map(options, Item => {
       return (<div key={_.random(0, 200, true)}>
-        <input  type="checkbox"  id={Item.id}  name={Item.Name} onClick={event => this.handleChange(event)}/>
+        <input  type="checkbox"  id={Item.id}  name={Item.Name} value={Item.Name} checked={this.state.value} onClick={event => this.handleChange(event)}/>
         <span>{Item.DisplayName}</span>
       </div>)
     });
