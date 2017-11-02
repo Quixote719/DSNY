@@ -10,10 +10,6 @@ import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class ServiceRequestsSection extends Component {
 
-  constructor() {
-    super();
-  }
-
   renderCards() {
     return _.map(this.props.ServiceRequestsProps.cards, Item => {
       return (
