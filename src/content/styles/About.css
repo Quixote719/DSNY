@@ -1,10 +1,10 @@
 .LeadershipRight{
   margin-left: 30px;
-  width: 650px;
-  height: 240px;
+  width: 70%;
   padding: 20px;
   display:inline-block;
   box-sizing: border-box;
+  float: right;
 }
 
 .LeadershipRight a{
@@ -12,6 +12,14 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
+}
+
+.biographyPage .greenSectionHeader{
+  margin-top: 0;
+}
+
+.biographyPage .LeadershipRight{
+  padding-top: 0;
 }
 
 [title="Toggle fullscreen view"], [title="Show street map"], [title="Show satellite imagery"]{
@@ -139,11 +147,12 @@
   .ReactGoogleMap{
     display: none;
   }
-}
-
-@media only screen and (max-width: 599px) {
   .LeadershipRight{
     margin: 0;
     width: 100%;
+    display: block;
   }
+}
+
+@media only screen and (max-width: 599px) {
 }

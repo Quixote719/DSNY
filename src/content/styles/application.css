@@ -48,6 +48,10 @@ html body {
   padding-top: 44px;
 }
 
+.smallTopSpace {
+  padding-top: 25px;
+}
+
 .boxPadding {
   padding: 30px 0;
 }
