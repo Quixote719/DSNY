@@ -100,7 +100,7 @@ const InnerForm = (props) => {
     <FormDropdown title={Titles.HasReceivedDsnyCompostBefore} name="HasReceivedDsnyCompostBefore" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormTextarea title={Titles.CompostUseDescription} name="CompostUseDescription" onChange={handleChange} onBlur={handleBlur} value={values.CompostUseDescription}/>
     <FormSectionHeader title={Titles.sectionSix}/>
-    <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.OtherCompostSiteType}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.Pallets}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
     <FormMultiSelect title={Titles.DeliveryOn} name="DeliveryOn" options={[
         {
