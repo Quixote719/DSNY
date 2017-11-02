@@ -27,27 +27,18 @@
 }
 
 .locLabel{
-  width: 240px;
-}
-
-.locLabelImage{
-  padding: 10px 10px 10px 10px;
-  height: 100%;
-  vertical-align: top;
-  display: inline-block;
+  width: 210px;
 }
 
 .locLabelInfo{
-  padding: 10px 7px;
-  width: 75%;
-  float: right;
-  height:100%;
+  padding: 15px;
+  height: 100%;
   color: #9B9B9B;
   display: inline-block;
 }
 
 .locLabelInfo .DistrictName{
-  padding-bottom: 7px;
+  padding-bottom: 10px;
   color:#231F20;
   font-size: 17.5px;
   font-weight: bold;

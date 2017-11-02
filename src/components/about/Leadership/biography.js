@@ -37,35 +37,38 @@ class Biography extends Component {
     return _.map(cardDetails, cItems => {
 
       let banner;
-      if (cItems.name != '') {
-        banner = (
-          <div key={cItems.id}>
-            <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+      if(cItems!==undefined){
+
+        if (cItems.name != '') {
+          banner = (
+            <div key={cItems.id}>
+              <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+            </div>
+          )
+        }
+        let sections = null;
+        if (cItems.sections) {
+          sections = _.map(cItems.sections.sections, sec => {
+
+            return (
+              <div className='SContainer' key ={sec.id}>
+                    <RoundProfile ProfileUrl = {sec.featured_image.base_path + sec.featured_image.file}/>
+                  <div className='LeadershipRight'>
+                    <SubSectionHeaderGreen title = {sec.header}/>
+                    <div dangerouslySetInnerHTML={{__html: sec.content}}></div>
+                  </div>
+              </div>
+            );
+          })
+        }
+
+        return (
+          <div key ={cItems.id}>
+            <div>{banner}</div>
+            <div className='smallTopSpace'>{sections}</div>
           </div>
         )
       }
-      let sections = null;
-      if (cItems.sections) {
-        sections = _.map(cItems.sections.sections, sec => {
-
-          return (
-            <div className='SContainer' key ={sec.id}>
-                  <RoundProfile ProfileUrl = {sec.featured_image.base_path + sec.featured_image.file}/>
-                <div className='LeadershipRight'>
-                  <SubSectionHeaderGreen title = {sec.header}/>
-                  <div dangerouslySetInnerHTML={{__html: sec.content}}></div>
-                </div>
-            </div>
-          );
-        })
-      }
-
-      return (
-        <div key ={cItems.id}>
-          <div>{banner}</div>
-          <div className='smallTopSpace'>{sections}</div>
-        </div>
-      )
     });
   }
 

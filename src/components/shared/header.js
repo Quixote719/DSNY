@@ -137,8 +137,9 @@ class Header extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">
-                        <input className="searchMessagesInput" type="text" placeholder="Search" >
-                        </input>
+                        <SearchBoxHome ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props} />
+                        {/* <input className="searchMessagesInput" type="text" placeholder="Search" >
+                        </input> */}
                         <i className="fa fa-search searchMessagesInputIcon"></i>
                         </div>
                         <Nav className="mainLinks" onClick={this.close}>
@@ -146,18 +147,19 @@ class Header extends React.Component {
                             <LinkContainer to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
                             </LinkContainer>
-                            {/*<LinkContainer to = "/about" className = "servicesHeaderTitle">*/}
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} className = "servicesHeaderTitle">
                             <NavItem eventKey={3} className="bottomHeaderTitles servicesHeaderTitle">Services</NavItem>
-                            {/*</LinkContainer>*/}
-                            {/*<LinkContainer className = "resourcesHeaderTitle" >*/}
+                            </LinkContainer>
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} className = "resourcesHeaderTitle" >
                             <NavItem eventKey={4} className="bottomHeaderTitles resourcesHeaderTitle">Resources</NavItem>
-                            {/*</LinkContainer>*/}
+                            </LinkContainer>
                             {/*<LinkContainer className = "ourWorkHeaderTitle">*/}
                             <NavItem eventKey={5} className="bottomHeaderTitles workHeaderTitle">Our Work</NavItem>
                             {/*</LinkContainer>*/}
-                            {/*<LinkContainer className = "contactHeaderTitle">*/}
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className = "contactHeaderTitle">
                             <NavItem eventKey={6} className="bottomHeaderTitles contactHeaderTitle">Contact</NavItem>
-                            {/*</LinkContainer>*/}
+                            </LinkContainer>
+
                         </Nav>
                     </Modal.Body>
                 </Modal>
