@@ -41,26 +41,22 @@ class LawsList extends Component {
     const {laws, n} = this.props;
 
     if (_.isEmpty(laws)) {
-      return (
-        <div></div>
-      );
+      return (<div></div>);
     }
 
-    return (
-      <div>
-        <SubSectionHeader title='Laws'/>
-        <Row>
-          {this.renderPosts(laws)}
-        </Row>
-      </div>
-    );
+    return (<div>
+      <SubSectionHeader title='Laws'/>
+      <Row>
+        {this.renderPosts(laws)}
+      </Row>
+    </div>);
 
   }
 }
 
 LawsList.propTypes = {
   laws: PropTypes.array.isRequired,
-  n: PropTypes.string.isRequired
+  n: PropTypes.any.isRequired
 };
 
 export default LawsList;

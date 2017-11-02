@@ -179,7 +179,7 @@ const MyForm = withFormik({
 class TestForm extends Component {
   constructor(props, context) {
     super(props, context);
-    console.log(compostFormObject);
+
   }
   render() {
 

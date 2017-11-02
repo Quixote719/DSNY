@@ -19,11 +19,17 @@ class FormMultiSelect extends Component {
     }
   }
 
+  onInputChange(item) {
+    this.setState({option: item.DisplayName});
+    this.props.onChange(this.props.name, item.Id)
+  }
+
+
   renderOptions(options) {
     return _.map(options, Item => {
-      return (<div>
-        <input type="checkbox" id={Item.id} name={Item.name} value={Item.name} onChange={this.handleChange}/>
-        <label for="coding">{Item.DisplayName}</label>
+      return (<div key={_.random(0, 200, true)}>
+        <input  type="checkbox" id={Item.id} name={Item.name} value={Item.name} onChange={this.handleChange}/>
+        <span>{Item.DisplayName}</span>
       </div>)
     });
   }

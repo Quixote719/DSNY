@@ -46,7 +46,7 @@ class FormField extends Component {
         default:
 
           return (<div>
-            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} disabled={this.props.disabledf}/>
+            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value ? this.props.value : ''} disabled={this.props.disabledf}/>
             <div>{this.props.children}</div>
           </div>)
       }

@@ -15,24 +15,16 @@ class FormBoolean extends Component {
     }
   }
   onInputChange(e) {
-
-    if (e.target.name == 'Yes') {
-      this.setState({
-        accepted: e.target.checked,
-        declined: !e.target.checked
-      });
-    } else {
-      this.setState({
-        accepted: !e.target.checked,
-        declined: e.target.checked
-      });
-    }
+    this.setState({
+      accepted: !e.target.checked,
+      declined: e.target.checked
+    });
   }
 
   renderOptions() {
     return (<div>
       <input type="checkbox" name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} checked={this.state.value} onClick={event => this.onInputChange(event)}/>
-      <label for="coding">{this.props.title}</label>
+      <label >{this.props.title}</label>
     </div>)
   }
   render() {
