@@ -31,13 +31,17 @@ class FormMultiSelect extends Component {
   }
 
   render() {
-    return (<div>
-      <Col xs={12}>
-        <fieldset>
-          <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <div>{this.renderOptions(this.state.options)}</div>
-        </fieldset>
-      </Col>
+    return (<div>{
+        !this.props.isHidden
+          ? <Col xs={12}>
+              <fieldset>
+                <div className='FormMultiSelectTitle'>{this.props.title}</div>
+                <div>{this.renderOptions(this.state.options)}</div>
+              </fieldset>
+            </Col>
+          : null
+      }
+
     </div>);
   };
 };

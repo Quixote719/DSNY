@@ -41,7 +41,9 @@ export const compostFormTitles = {
   HasAlternateSideParking: 'ALTERNATE SIDE PARKING AT SITE?',
   Pallets: 'NUMBER OF PALLETS OF COMPOST',
   DeliveryDeadline: 'WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?',
-  DeliveryOn: 'THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.'
+  DeliveryOn: 'THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.',
+  AlternateSideParking: 'ALTERNATE SIDE PARKING DAYS? (Select ALL that apply)',
+  AlternateSideParkingTimes: 'PREFERRED DELIVERY TIMES From'
 }
 
 export const compostFormObject = {

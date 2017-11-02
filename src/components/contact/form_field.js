@@ -46,20 +46,26 @@ class FormField extends Component {
         default:
 
           return (<div>
-            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value ? this.props.value : ''} disabled={this.props.disabledf}/>
+            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value
+                ? this.props.value
+                : ''} disabled={this.props.disabledf}/>
             <div>{this.props.children}</div>
           </div>)
       }
     }
   }
   render() {
-    return (<div >
-      <Col className='FormField' xs={12} sm={6} md={6}>
-        <fieldset>
-          <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <div>{this.renderField(this.props.type)}</div>
-        </fieldset>
-      </Col>
+    return (<div >{
+        !this.props.isHidden
+          ? <Col className='FormField' xs={12} sm={6} md={6}>
+              <fieldset>
+                <div className='FormMultiSelectTitle'>{this.props.title}</div>
+                <div>{this.renderField(this.props.type)}</div>
+              </fieldset>
+            </Col>
+          : null
+      }
+
     </div>);
   };
 };
