@@ -8,22 +8,19 @@ import '../../content/styles/ContactPage.css';
 
 class GetInvolvedSection extends Component {
 
-  renderCards() {
-    return _.map(this.props.GetInvolvedProps.cards, Item => {
-      return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/adopt-a-basket`} className='getInvolvedCards'><CardTitle title={Item.title} key={Item.id}/></Link>
-      );
-    });
-  }
-
-
+  // renderCards() {
+  //   return _.map(this.props.GetInvolvedProps.cards, Item => {
+  //     return (
+  //       <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/adopt-a-basket`} className='getInvolvedCards'><CardTitle title={Item.title} key={Item.id}/></Link>
+  //     );
+  //   });
+  // }
   render() {
     const style = {
                     'backgroundImage': `url(${this.props.GetInvolvedProps.image})`,
                     'backgroundSize': '100% 900px',
                     'height': '500px',
                     'backgroundPosition': '50% 50%',
-                    'marginTop': '25px'
                   }
 
     const cardStyle = {
@@ -39,13 +36,13 @@ class GetInvolvedSection extends Component {
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
             </div>
         </div>
-        <div className='renderInvolvedCards'>
+        {/* <div className='renderInvolvedCards'>
           <div className='SContainer'>
             <Row>
               {this.renderCards()}
             </Row>
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }

@@ -15,14 +15,14 @@
   width: 192px;
 }
 
+.RegistrationsContainer{
+  padding: 0;
+}
+
 .getInvolvedCards> .col-md-3> .subSectioncardT{
   border: none;
   margin-left: 0;
   margin-right: 0;
-}
-
-.getInvolvedContainer{
-  height: 700px;
 }
 
 .renderInvolvedCards> .SContainer{
@@ -36,7 +36,7 @@
 .contactUsDetails> .contactUsRight{
   display: inline-block;
   float: right;
-  padding-right: 200px;
+  /* padding-right: 200px; */
 }
 
 .emailCommissioner{
