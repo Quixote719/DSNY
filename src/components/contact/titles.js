@@ -33,7 +33,15 @@ export const compostFormTitles = {
   SiteSize: 'SITE SIZE (SQUARE FEET)',
   IsGreenThumbGarden: 'IS THIS A GREENTHUMB GARDEN?',
   HasReceivedDsnyCompostBefore: 'HAVE YOU RECEIVED DSNY COMPOST IN THE PAST?',
-  CompostUseDescription: 'DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)'
+  CompostUseDescription: 'DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)',
+  FromHourOfDayId: 'PREFERRED DELIVERY TIMES From',
+  ToHourOfDayId: 'To',
+  DeliveryNotes: 'DELIVERY NOTES AND INSTRUCTIONS (Optional)',
+  EntranceHeightWidth: 'HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE (Optional)',
+  HasAlternateSideParking: 'ALTERNATE SIDE PARKING AT SITE?',
+  Pallets: 'NUMBER OF PALLETS OF COMPOST',
+  DeliveryDeadline: 'WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?',
+  DeliveryOn: 'THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.'
 }
 
 export const compostFormObject = {

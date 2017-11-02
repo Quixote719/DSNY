@@ -10,7 +10,7 @@ import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
-import {compostFormObject, compostFormTitles as Titles} from './sample'
+import {compostFormObject, compostFormTitles as Titles} from './titles'
 
 import '../../content/styles/contactForm.css';
 
@@ -99,6 +99,47 @@ const InnerForm = (props) => {
     <FormDropdown title={Titles.IsGreenThumbGarden} name="IsGreenThumbGarden" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormDropdown title={Titles.HasReceivedDsnyCompostBefore} name="HasReceivedDsnyCompostBefore" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormTextarea title={Titles.CompostUseDescription} name="CompostUseDescription" onChange={handleChange} onBlur={handleBlur} value={values.CompostUseDescription}/>
+    <FormSectionHeader title={Titles.sectionSix}/>
+    <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.OtherCompostSiteType}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
+    <FormMultiSelect title={Titles.DeliveryOn} name="DeliveryOn" options={[
+        {
+          "Id": 1,
+          "Name": "Work",
+          "DisplayName": "Monday",
+          "Selected": false
+        }, {
+          "Id": 2,
+          "Name": "Mobile",
+          "DisplayName": "Tuesday",
+          "Selected": false
+        }, {
+          "Id": 1,
+          "Name": "Work",
+          "DisplayName": "Wednesday",
+          "Selected": false
+        }, {
+          "Id": 2,
+          "Name": "Mobile",
+          "DisplayName": "Thursday",
+          "Selected": false
+        }, {
+          "Id": 1,
+          "Name": "Work",
+          "DisplayName": "Friday",
+          "Selected": false
+        }, {
+          "Id": 2,
+          "Name": "Mobile",
+          "DisplayName": "Saturday",
+          "Selected": false
+        }
+      ]}/>
+    <FormDropdown title={Titles.FromHourOfDayId} name="FromHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.FromHoursOfDay}/>
+    <FormDropdown title={Titles.ToHourOfDayId} name="ToHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.ToHoursOfDay}/>
+    <FormField title={Titles.DeliveryNotes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.DeliveryNotes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField title={Titles.EntranceHeightWidth} type="text" onChange={handleChange} onBlur={handleBlur} value={values.EntranceHeightWidth}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormDropdown title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <Col xs={12}>
       <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
     </Col>
@@ -141,87 +182,7 @@ class TestForm extends Component {
   }
   render() {
 
-    return (<div className='contactForm'>
-      <div><MyForm customFormData={compostFormObject}/></div>
-      <Row>
-        <div><FormSectionHeader title='SECTION 6: DELIVERY INFORMATION'/></div>
-        <div><FormField title='NUMBER OF PALLETS OF COMPOST (EACH PALLET CONTAINS 60 FORTY-POUND BAGS)' type='input'/></div>
-        <div><FormDateTimePicker title='WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?'/></div>
-        <div><FormMultiSelect title='THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.' options={[
-        {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Monday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Tuesday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Wednesday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Thursday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Friday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Saturday",
-          "Selected": false
-        }
-      ]}/></div>
-        <div><FormDropdown title='WHAT TYPE OF SITE IS THIS?' options={[
-        {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Work",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Mobile",
-          "Selected": false
-        }, {
-          "Id": 3,
-          "Name": "Home",
-          "DisplayName": "Home",
-          "Selected": false
-        }
-      ]}/></div>
-
-        <div><FormDropdown title='WHAT TYPE OF SITE IS THIS?' options={[
-        {
-          "Id": 1,
-          "Name": "Work",
-          "DisplayName": "Work",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "Mobile",
-          "DisplayName": "Mobile",
-          "Selected": false
-        }, {
-          "Id": 3,
-          "Name": "Home",
-          "DisplayName": "Home",
-          "Selected": false
-        }
-      ]}/></div>
-        <div><FormField title='DELIVERY NOTES AND INSTRUCTIONS (Optional)' type='input'/></div>
-        <div><FormField title='HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE (Optional)' type='input'/></div>
-        <div><FormBoolean title='ALTERNATE SIDE PARKING AT SITE?'/></div>
-      </Row>
-    </div>);
+    return (<div className='contactForm'><MyForm customFormData={compostFormObject}/></div>);
   };
 };
 
