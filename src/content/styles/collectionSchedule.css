@@ -124,12 +124,25 @@
 }
 .selectFromAddressBelow{
     padding-top: 20px;
+    padding-bottom: 20px;
     color: #333333;	
     font-size: 16px;	
     line-height: 18px;
 }
+.suggestedAddressListItem{
+    padding-bottom: 10px;
+    color: #00764E;
+    font-size: 16px;	
+    font-weight: bold;	
+    line-height: 19px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
+    .searchContainerCollection {
+        padding: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     .collectionSearchInput{
         font-size: 15px;
     }
@@ -173,6 +186,12 @@
 }    
   /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .downloadAppContainer{
+        width: 720px;
+    }
+    .searchContainerCollection{
+        width: 720px;
+    }
     .collectionScheduleTableParent{
         padding-bottom: 0px;
     }
@@ -189,6 +208,11 @@
 }    
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .searchContainerCollection {
+        padding: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
     .collectionScheduleColumn{
         padding: 0;
     }

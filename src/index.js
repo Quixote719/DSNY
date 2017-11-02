@@ -31,6 +31,9 @@ import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
 import Howtogetridof from './components/home/howtogetridof';
+
+import SiteSearch from './components/home/Site_Search';
+
 import HowtogetridofDetailsItem from './components/home/howtogetridof/howToGetRidOf_detailsItem';
 // import BureausDetails from './components/about/Bureaus/BureausDetails';
 import LocationDetails from './components/about/Location/LocationDetails';
@@ -85,6 +88,9 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
+
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
+
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/how-to-get-rid-of/:itemName"} component={HowtogetridofDetailsItem}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>

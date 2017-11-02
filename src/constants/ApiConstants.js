@@ -7,10 +7,15 @@ const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') ===
   : ''}`;
 export const WORDPRESS_ROOT_URL = `${ROOT_WORDPRESS_URL}`;
 export const HOME_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=home`
+
 export const RID_OF_KEYWORDS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalKeywordList`
 export const RID_OF_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchDisposalItems?s`
-export const RID_OF_ITEM_DETAILS_URL= `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name=`
-export const COLLECTION_SCHEDULE_URL= "https://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYGeoCoder/DSNYaddresses/"
+
+export const SITE_SEARCH_KEYWORDS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getSiteSearchKeywordList`
+export const SITE_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchSite?s`
+
+export const RID_OF_ITEM_DETAILS_URL= `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name`
+export const COLLECTION_SCHEDULE_URL= "https://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYCollection/CollectionSchedule/"
 export const HOLIDAY_DATA_URL= `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
 export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=contact-page`
 
