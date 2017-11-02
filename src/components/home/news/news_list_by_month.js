@@ -16,7 +16,7 @@ let PressReleaseListstate = {
   activePage: 1
 };
 
-class PressReleaseList extends Component {
+class DSNYNews extends Component {
 
   componentDidMount() {
     const {id} = this.props
@@ -105,4 +105,4 @@ function mapStateToProps(state) {
   return {prl: state.resources.pressRelease.list};
 }
 
-export default connect(mapStateToProps, {fetchPressReleaseList})(PressReleaseList);
+export default connect(mapStateToProps, {fetchPressReleaseList})(DSNYNews);
