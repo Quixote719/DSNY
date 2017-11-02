@@ -74,7 +74,7 @@ class SearchPage extends Component {
                 <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
                     <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+"/how-to-get-rid-of/"+item.name}>
                     <div className ="ridOfItemTitle">
-                    {item.title}
+                    {item.header?item.header:item.page_header}
                     </div>
                     </Link>
                     <div className = "ridOfItemContent">
