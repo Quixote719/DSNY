@@ -4,22 +4,19 @@ import SubSectionHeader from '../shared/sub_section_header';
 import '../../content/styles/ContactPage.css';
 import CardTitle from '../shared/Card_title';
 import {Row} from 'react-bootstrap';
+import CardSec from '../shared/CardDetails/card_sec'
 
 class RegistrationsSection extends Component {
 
-  constructor() {
-    super();
-  }
-
   renderCards() {
-    return _.map(this.props.RegistrationsProps.cards, Item => {
+    let registrationData = this.props.RegistrationsProps;
       return (
-        <div className='RegistrationsCards' key={Item.id}>
-          <CardTitle title={Item.title} key={Item.id} />
+        <div className='RegistrationsCards' key={registrationData.cards}>
+          <CardSec dataObject={registrationData} />>
 
         </div>
       );
-    });
+
   }
 
   render() {

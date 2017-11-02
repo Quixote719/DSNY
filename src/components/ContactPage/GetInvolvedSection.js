@@ -11,7 +11,7 @@ class GetInvolvedSection extends Component {
   renderCards() {
     return _.map(this.props.GetInvolvedProps.cards, Item => {
       return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/adopt-a-basket`} className='getInvolvedCards'><CardTitle title={Item.title} key={Item.id}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url} className='getInvolvedCards'><CardTitle title={Item.title} key={Item.id}/></Link>
       );
     });
   }
