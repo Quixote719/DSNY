@@ -9,6 +9,8 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import {Link} from "react-router-dom";
+import { Swipeable, defineSwipe } from 'react-touch';
+const swipe = defineSwipe({ swipeDistance: 50 });
 
 class CarouselData extends Component {
     constructor(props, context) {
@@ -178,3 +180,4 @@ class CarouselData extends Component {
 }
 
 export default CarouselData;
+ 

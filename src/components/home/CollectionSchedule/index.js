@@ -25,8 +25,19 @@ class CollectionSchedule extends Component {
     }
     componentWillMount(){
         var address = this.props.match.params.address;
-        this.props.getCollectionSchedule(address);
-    }
+        this.props.getCollectionSchedule(address);                
+        if(this.props.keyword == undefined){
+            this.setState({
+                checkInputresults: "clearBoxChecked"                
+             });
+        }
+        else{
+            this.setState({
+                checkInputresults: "clearBoxNotChecked"
+            });
+        }
+
+}
     handleChange = (address) =>{
         this.setState({
             address,
