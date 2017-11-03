@@ -135,9 +135,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .ReactGoogleMap{
-    display: none;
-  }
   .LeadershipRight{
     margin: 0;
     width: 100%;

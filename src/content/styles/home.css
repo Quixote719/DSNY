@@ -153,7 +153,10 @@
 
 .ridOfSearch,
 .actual-edit-overlay {
+    padding-bottom: 0px;
     padding-right: 35px;
+    line-height: 24px;
+    padding-top: 5px;
     height: 33px;
     font-weight: 700;
     color: #000;
