@@ -65,7 +65,8 @@ class SearchBoxHome extends Component {
     }
     handleKeyPress = (event) => {
       if(event.key == 'Enter'){ 
-        this.props.test.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
+        window.staticUrl.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value);
+        // this.props.test.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
         console.log('enter press here! ')
       }
     }
@@ -89,10 +90,12 @@ class SearchBoxHome extends Component {
                                 onFocus: this.setPlaceHolder,
                                 onKeyPress: this.handleKeyPress,                                
                             }}/>
+                        <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value}>
                         <i className="fa fa-search searchMessagesInputIcon"></i>
+                        </Link>
             </div>
     )
-  }
+  } 
 }
 
 export default SearchBoxHome;

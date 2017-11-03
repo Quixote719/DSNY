@@ -17,29 +17,28 @@ class Home extends Component {
   componentWillMount() {
     this.props.carouselData();
     this.props.getRidOffKeywords();
+    window.staticUrl = this.props    
     if (process.env.REACT_APP_MUNCIPAL_SERVICE == "TRUE") //Call this service only on PRODUCTION Enviroment
       this.props.carouselPanelData();
     else
       this.props.carouselPanelDataTemporary();
     }
   render() {
-    return (
-      <div>
-        <div className="GBanner">
-          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
-        </div>
-        <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
-        <ProgramCards carouselItems={this.props.carouselItems}/>
-        <div className="container">
-          <NewsList carouselItems={this.props.carouselItems}/>
-        </div>
-        <ProgramInitiatives carouselItems={this.props.carouselItems}/>
-        <div className="container eventSection">
-          <EventList/>
-        </div>
-        <DownloadApp/>
+    return (<div>
+      <div className="GBanner">
+        <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
       </div>
-    )
+      <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory={this.props}/>
+      <ProgramCards carouselItems={this.props.carouselItems}/>
+      <div className="container">
+        <NewsList carouselItems={this.props.carouselItems}/>
+      </div>
+      <ProgramInitiatives carouselItems={this.props.carouselItems}/>
+      <div className="container eventSection">
+        <EventList/>
+      </div>
+      <DownloadApp/>
+    </div>)
   }
 }
 function mapStateToProps(state) {

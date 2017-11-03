@@ -16,7 +16,7 @@ import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import TestForm from '../contact'
 import StepForm from '../contact/stepform'
-
+import {compostFormObject, compostFormTitles as Titles} from '../contact/titles'
 class ResourcesContainer extends Component {
 
   constructor(props) {
@@ -97,7 +97,7 @@ class ResourcesContainer extends Component {
 
       return (<div key={prItem.id}>
         <div>{banner}</div>
-
+        
         <div>{sections}</div>
       </div>)
     });
