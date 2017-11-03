@@ -20,6 +20,12 @@ class ContentCard extends Component {
         'minHeight': '200px',
         'padding': '20px',
         'display':'inline-block'
+      },
+      ourWorkCard:{
+        'width':'450px',
+        'minHeight': '280px',
+        'padding': '15px 20px',
+        'display':'inline-block'
       }
     }
     let cardType = styles.small;
@@ -31,6 +37,9 @@ class ContentCard extends Component {
     }
     else if(this.props.type === '3'){
       cardType = styles.large;
+    }
+    else if(this.props.type ==='4'){
+      cardType = styles.ourWorkCard;
     }
 
     return (

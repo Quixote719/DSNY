@@ -75,7 +75,6 @@
 
 .cardTitleText {
   color: #00764D;
-  font-family: "Helvetica Neue";
   font-size: 17.5px;
   font-weight: bold;
 }
@@ -87,7 +86,6 @@
 
 .cardBodyText {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
   overflow: hidden;
@@ -117,8 +115,8 @@
   min-height: 338px;
   min-width: 250px;
   background-color: #FFFFFF;
-  margin-top:10px;
-  margin-bottom:60px;
+  margin-top:5px;
+  margin-bottom:15px;
   cursor: pointer;
 }
 
@@ -138,12 +136,11 @@
   padding-left:19px;
   padding-right:23px;
   padding-bottom:18px;
-  padding-top:15px;
+  padding-top:8px;
 }
 
 .cardImageBodyText{
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
   overflow: hidden;
@@ -156,7 +153,6 @@
 }
 
 .cardImageTitle{
-  padding-bottom:20px;
   padding-left:20px;
   padding-right:20px;
   padding-top:20px;
@@ -194,8 +190,8 @@
     min-height: 250px;
     min-width: 250px;
     background-color: #FFFFFF;
-    margin-top:10px;
-    margin-bottom:60px;
+    margin-top:5px;
+    margin-bottom:15px;
     cursor: pointer;
   }
 

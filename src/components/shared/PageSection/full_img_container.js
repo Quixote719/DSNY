@@ -74,6 +74,7 @@ class  fullImageContainer extends Component{
       return _.map(cardDetails, cItems => {
 
         let banner;
+        if (cItems !== undefined) {
         if (cItems.name != '') {
           banner = (
             <div key={cItems.id}>
@@ -87,21 +88,23 @@ class  fullImageContainer extends Component{
         var sections;
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
-           if(sec.featured_image != ''){
-                return this.getBackGroundImageContent(sec);
-           }else{
+              if(sec.featured_image != ''){
+                  return this.getBackGroundImageContent(sec);
+               }else{
                 return this.getCard(sec);
-           }   
+              }   
  
-          })
-        }
+            })
+          }
 
         return (
             <div key ={cItems.id}>
               <div>{banner}</div>
-              <div >{sections}</div>
+              <div>{sections}</div>
+              <div className="footerSection"></div>
             </div>
-        )
+              )
+          }
       });
     } else {
       return (

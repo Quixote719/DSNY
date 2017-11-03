@@ -15,15 +15,15 @@ class FullImageSec extends Component{
             case 'content-left':
                return(
                    <Col className = 'ContentLeft' xs={12}>
-                        <ContentCard type='1' content={this.props.dataObject.content}/>   
+                        <ContentCard type='4' content={this.props.dataObject.content}/>   
                     </Col>
                 );
 
             case 'content-right':
                 return(
                    <div>
-                   <Col xs={0} sm={0} md={8}></Col>
-                   <Col xs={12} sm={12} md={4}><ContentCard type='1' content={this.props.dataObject.content}/>
+                   <Col xs={0} sm={0} md={6}></Col>
+                   <Col xs={12} sm={12} md={6}><ContentCard type='4' content={this.props.dataObject.content}/>
                    </Col>
                    </div>
                 ); 
