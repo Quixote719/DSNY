@@ -24,23 +24,21 @@ class Home extends Component {
       this.props.carouselPanelDataTemporary();
     }
   render() {
-    return (
-      <div>
-        <div className="GBanner">
-          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
-        </div>
-        <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
-        <ProgramCards carouselItems={this.props.carouselItems}/>
-        <div className="container">
-          <NewsList carouselItems={this.props.carouselItems}/>
-        </div>
-        <ProgramInitiatives carouselItems={this.props.carouselItems}/>
-        <div className="container eventSection">
-          <EventList/>
-        </div>
-        <DownloadApp/>
+    return (<div>
+      <div className="GBanner">
+        <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
       </div>
-    )
+      <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory={this.props}/>
+      <ProgramCards carouselItems={this.props.carouselItems}/>
+      <div className="container">
+        <NewsList carouselItems={this.props.carouselItems}/>
+      </div>
+      <ProgramInitiatives carouselItems={this.props.carouselItems}/>
+      <div className="container eventSection">
+        <EventList/>
+      </div>
+      <DownloadApp/>
+    </div>)
   }
 }
 function mapStateToProps(state) {

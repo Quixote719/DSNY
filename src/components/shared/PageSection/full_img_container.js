@@ -12,8 +12,8 @@ import Banner from '../banner';
 import CardSec from '../CardDetails/card_sec';
 import FullImageSec from './full_img_sec';
 
-class  fullImageContainer extends Component{
- constructor(props) {
+class fullImageContainer extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       reload: false
@@ -39,33 +39,24 @@ class  fullImageContainer extends Component{
 
   render() {
     const {cardDetails} = this.props;
-    return (
-      <div>
-        {this.renderPage(cardDetails)}
-      </div>
-    );
+    return (<div>
+      {this.renderPage(cardDetails)}
+    </div>);
   };
 
+  /* Return card details, corresponding to an Empty Card Section */
+  getCard(sec) {
+    return (<div key={sec.id}>
+      <div><CardSec dataObject={sec}/></div>
+    </div>);
+  }
 
-   /* Return card details, corresponding to an Empty Card Section */ 
-   getCard(sec){
-         return (
-             <div key ={sec.id}>
-                 <div><CardSec dataObject={sec}/></div>
-             </div>
-        );
-   } 
-
-
-   /* Return content with Background image */ 
-   getBackGroundImageContent(sec){
-        return(
-           <div key ={sec.id}>
-              <div><FullImageSec dataObject={sec}/></div>
-            </div>
-        );
-   }
-
+  /* Return content with Background image */
+  getBackGroundImageContent(sec) {
+    return (<div key={sec.id}>
+      <div><FullImageSec dataObject={sec}/></div>
+    </div>);
+  }
 
   renderPage(cardDetails) {
 
@@ -107,9 +98,7 @@ class  fullImageContainer extends Component{
 
       });
     } else {
-      return (
-        <div>loading.....</div>
-      )
+      return (<div>loading.....</div>)
     }
   }
 };

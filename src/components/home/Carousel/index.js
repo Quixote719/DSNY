@@ -8,10 +8,7 @@ import styles from '../../../content/styles/home.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
-import { Link } from "react-router-dom";
-import $ from 'jquery';
-import { Swipeable, defineSwipe } from 'react-touch';
-const swipe = defineSwipe({ swipeDistance: 50 });
+import {Link} from "react-router-dom";
 
 class CarouselData extends Component {
     constructor(props, context) {
@@ -27,15 +24,15 @@ class CarouselData extends Component {
 
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
-            if (item.name == "home-hero-section") {
-                return _.map(item.cards, (item, index) => {
+            if(item.name == "home-hero-section"){
+                return _.map(item.cards, (item,index) =>{
                     return (
                         <Carousel.Item key={index}>
-                            <img src={item.featured_image.base_path + item.featured_image.file} />
+                            <img src={item.featured_image.base_path + item.featured_image.file } />
                             <div>
-                                <Carousel.Caption>
-                                    {item.title}
-                                </Carousel.Caption>
+                            <Carousel.Caption>
+                                {item.title}
+                            </Carousel.Caption>
                             </div>
                         </Carousel.Item>
                     );
@@ -44,7 +41,8 @@ class CarouselData extends Component {
         });
     }
     carouselPanelDataItemList() {
-        if (this.props.carouselPanelItems != undefined) {
+        if(this.props.carouselPanelItems != undefined)
+        {
             return _.map(this.props.carouselPanelItems, (item, index) => {
                 return (
                     <div className="panelData" key={index}>
@@ -56,7 +54,8 @@ class CarouselData extends Component {
                 );
             });
         }
-        else {
+        else
+        {
             return _.map(this.props.carouselPanelItemsTemporary, (item, index) => {
                 return item.map(function (item, index) {
                     return (
