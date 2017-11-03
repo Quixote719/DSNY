@@ -87,7 +87,7 @@ class CollectionScheduleTable extends Component {
         var oddRows = [1, 3, 5];  
         return _.map(days, (day,index) => {
             return(    
-            <tr className={evenRows.includes(index)?"evenRowsSchedule":oddRows.includes(index)?"oddRowsSchedule":""}>      
+            <tr className={evenRows.includes(index)?"evenRowsSchedule":oddRows.includes(index)?"oddRowsSchedule":""} key = {index}>      
             <th className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
                 {day.alias}
             </th>

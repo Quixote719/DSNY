@@ -8,7 +8,10 @@ import styles from '../../../content/styles/home.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import $ from 'jquery';
+import { Swipeable, defineSwipe } from 'react-touch';
+const swipe = defineSwipe({ swipeDistance: 50 });
 
 class CarouselData extends Component {
     constructor(props, context) {
@@ -32,15 +35,15 @@ class CarouselData extends Component {
     // }
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
-            if(item.name == "home-hero-section"){
-                return _.map(item.cards, (item,index) =>{
+            if (item.name == "home-hero-section") {
+                return _.map(item.cards, (item, index) => {
                     return (
                         <Carousel.Item key={index}>
-                            <img src={item.featured_image.base_path + item.featured_image.file } />
+                            <img src={item.featured_image.base_path + item.featured_image.file} />
                             <div>
-                            <Carousel.Caption>
-                                {item.title}
-                            </Carousel.Caption>
+                                <Carousel.Caption>
+                                    {item.title}
+                                </Carousel.Caption>
                             </div>
                         </Carousel.Item>
                     );
@@ -49,23 +52,21 @@ class CarouselData extends Component {
         });
     }
     carouselPanelDataItemList() {
-        if(this.props.carouselPanelItems != undefined)
-        {
+        if (this.props.carouselPanelItems != undefined) {
             return _.map(this.props.carouselPanelItems, (item, index) => {
                 //return items.map(function (item, index) {
-                    return (
-                        <div className="panelData" key={index}>
-                            <div className="border-top"></div>
-                            <div className="programImage"><img src={item.panelItemIcon} /></div>
-                            <div className="detailsProgram">{item.panelItemType}</div>
-                            <div className="statusProgram">{item.panelItemStatus}</div>
-                        </div>
-                    );
+                return (
+                    <div className="panelData" key={index}>
+                        <div className="border-top"></div>
+                        <div className="programImage"><img src={item.panelItemIcon} /></div>
+                        <div className="detailsProgram">{item.panelItemType}</div>
+                        <div className="statusProgram">{item.panelItemStatus}</div>
+                    </div>
+                );
                 //})
             });
         }
-        else
-        {
+        else {
             return _.map(this.props.carouselPanelItemsTemporary, (item, index) => {
                 return item.map(function (item, index) {
                     return (
@@ -80,9 +81,31 @@ class CarouselData extends Component {
             });
         }
     }
-
+    goRight() {
+        console.log("goRight()");
+        // let anchorObj = document.getElementsByClassName("carousel-control right")[0];
+        // if (anchorObj.click) {
+        //     anchorObj.click()
+        //   } else {
+        //       var evt = document.createEvent("MouseEvents"); 
+        //       evt.initMouseEvent("click", true, true, window, 
+        //           0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+        //       var allowDefault = anchorObj.dispatchEvent(evt);
+        // }
+    }
+    goLeft() {
+        console.log("goLeft()");
+        // let anchorObj = document.getElementsByClassName("carousel-control left")[0];
+        // if (anchorObj.click) {
+        //     anchorObj.click()
+        //   } else {
+        //       var evt = document.createEvent("MouseEvents"); 
+        //       evt.initMouseEvent("click", true, true, window, 
+        //           0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+        //       var allowDefault = anchorObj.dispatchEvent(evt);
+        // }
+    }
     render() {
-
         return (
             <div className="carouselContainerParent ">
                 <div className="container carouselContainer">
@@ -110,43 +133,19 @@ class CarouselData extends Component {
                     </ul>
                     <div className="carouselParentBoxShadow">
                     </div>
-                    <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
-                        <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
-                    </span>} nextIcon={<span className="newsEventsCarouselIcon">
-                        <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
-                    </span>}>
-                        {this.carouselDataItemList()}
-                    </Carousel>
+                    <Swipeable config={swipe} onSwipeLeft={this.goRight} onSwipeRight={this.goLeft}>
+                        <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
+                            <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+                        </span>} nextIcon={<span className="newsEventsCarouselIcon">
+                            <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+                        </span>}>
+                            {this.carouselDataItemList()}
+                        </Carousel>
+                    </Swipeable>
                 </div>
             </div>
         )
     }
 }
-
-// function mapStateToProps(state) {
-//     return {
-//         carouselPanelItems: state.carouselDataReducer.carouselPanelData,
-//     }
-// }
-
-// let actionList = {
-//     carouselPanelData: actions.carouselPanelData,
-//     carouselPanelDataTemporary: actions.carouselPanelDataTemporary,
-// };
-
-// //If depolying uncomment the below and comment the above
-
-
-// // function mapStateToProps(state) {
-// //     return {
-// //         carouselPanelItems: state.carouselDataReducer.carouselPanelItems,
-// //     }
-// // }
-
-// // let actionList = {
-// //     carouselPanelDataTemporary: actions.carouselPanelData,
-// // };
-
-// CarouselData = connect(mapStateToProps, actionList)(CarouselData);
 
 export default CarouselData;
