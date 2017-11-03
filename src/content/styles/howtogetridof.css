@@ -78,6 +78,7 @@
     line-height: 17px;
 }
 .ridOfSearchResults{
+    line-height: 24px;
     outline: none;
     height: 33px;
     font-weight: 700;
@@ -238,6 +239,7 @@ input::-ms-clear {
     outline: none;
 }
 .collectionSearchInput{
+    line-height: 24px;
     padding-right: 33px;
     height: 33px;
     font-weight: 700;
