@@ -24,8 +24,8 @@ import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
 import CardDetailContainer from './components/shared/CardDetails/card_details_container';
-import DSNYEvents from './components/home/events/event_list_by_borough'
-import EventDetail from './components/home/events/event_detail'
+import DSNYEvents from './components/home/Events/event_list_by_borough'
+import EventDetail from './components/home/Events/event_detail'
 import DSNYNews from './components/home/news/news_list_by_month'
 import NewsDetail from './components/home/news/news_detail'
 import Header from './components/shared/header';
@@ -40,6 +40,7 @@ import HowtogetridofDetailsItem from './components/home/howtogetridof/howToGetRi
 import LocationDetails from './components/about/Location/LocationDetails';
 import CollectionSchedule from './components/home/CollectionSchedule';
 import ViewOurFleet from './components/about/Operations/ViewOurFleet'
+import fullImageContainer from './components/shared/PageSection/full_img_container';
 
 import TestForm from './components/contact/index';
 
@@ -90,9 +91,8 @@ ReactDOM.render(
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
-
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
-
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/how-to-get-rid-of/:itemName"} component={HowtogetridofDetailsItem}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>

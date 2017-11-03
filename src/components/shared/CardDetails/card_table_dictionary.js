@@ -7,6 +7,8 @@ import '../../../content/styles/dictionaryTableCard.css';
 import Dotdotdot from 'react-dotdotdot'
 import '../../../content/styles/cardType.css';
 import moment from 'moment';
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 
 class TableDictionary extends Component{
 
@@ -15,20 +17,20 @@ class TableDictionary extends Component{
     <div >
         <Col>
           <Col xs={12} md={3}>
-            <Dotdotdot clamp={3}>
-              <div className='dictionaryCardTitle' dangerouslySetInnerHTML={{
-                __html: this.props.title
-              }}/>
-            </Dotdotdot>
+             <TruncateMarkup lines={3}> 
+              <div className='dictionaryCardTitle' >
+                  {Parser(this.props.title)}
+              </div>
+              </TruncateMarkup>    
           </Col>
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                <Dotdotdot clamp={3}>
-                  <div className='dictionaryCardDesc' dangerouslySetInnerHTML={{
-                    __html: this.props.body
-                  }}/>
-                </Dotdotdot>
+                <TruncateMarkup lines={3}> 
+                  <div className='dictionaryCardDesc'>
+                    {Parser(this.props.body)}
+                  </div>
+                  </TruncateMarkup>
               </Col>
               <Col xs={12}>
                 <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}${this.props.url}`}>
