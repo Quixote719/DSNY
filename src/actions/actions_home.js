@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL } from "../constants/ApiConstants";
+import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -10,6 +10,17 @@ export function carouselData() {
                 dispatch({
                     type: 'SET_CAROUSEL_TITLE',
                     payload: data.data.sections.sections,
+                })
+            })
+    }
+}
+export function newsData() {
+    return function (dispatch) {
+        axios.get(NEWS_PAGE_DATA_URL)
+            .then((data) => {
+                dispatch({
+                    type: 'SET_NEWS_PAGE',
+                    payload: data,
                 })
             })
     }
