@@ -26,7 +26,7 @@ class CollectionSchedule extends Component {
     componentWillMount(){
         var address = this.props.match.params.address;
         this.props.getCollectionSchedule(address);                
-        if(this.props.match.params.address !== undefined){
+        if(this.props.match.path !== "/assets/donate/development/react/collectionSchedule"){
             this.setState({
                 checkInputresults: ""                
              });
