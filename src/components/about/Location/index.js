@@ -54,9 +54,6 @@ const MyMapComponent = compose(
                            >
 
                            <div className='locLabel'>
-                               <div className='locLabelImage'>
-                                 <img src={require('../../../content/images/icon_gargage.svg')} alt="garage"/>
-                               </div>
                                <div className='locLabelInfo'>
                                  <div className='DistrictName'>{marker.District}</div>
                                  <div>{marker.StreetName}</div>
@@ -78,7 +75,7 @@ class Location extends Component {
       super(props, context);
       this.state = {
         isMarkerShown: true,
-        Center: { lat: 40.72390126, lng: -73.88979419 },
+        Center: { lat: 40.72390127, lng: -73.88979419 },
         Locations: this.props.LocationList
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
@@ -86,7 +83,7 @@ class Location extends Component {
   }
 
   componentWillMount() {
-    this.props.Location().then(response=>{
+    this.props.Location().then((response)=>{
       this.setState({Locations : this.props.LocationList});
     });
   }
@@ -104,13 +101,10 @@ class Location extends Component {
 
   onMarkerClick(index){
     let tempLoc = Object.assign([],this.state.Locations);
-    let tempCenter = Object.assign({},this.state.Locations);
     tempLoc.forEach((item)=>{
       item.isActive = false;
     })
     tempLoc[index-1].isActive=true;
-    tempCenter = { lat : tempLoc[index-1].Latitude, lng : tempLoc[index-1].Longitude}
-    this.setState({Center : tempCenter});
     this.setState({Locations : tempLoc});
   }
 
@@ -125,7 +119,7 @@ class Location extends Component {
               onMarkerClick = {this.onMarkerClick}
               onMapClick = {this.onMapClick}/>
         </div>
-        <LocationDetails/>
+        <LocationDetails pr={this.state.Locations}/>
       </div>
 
     )

@@ -1,3 +1,35 @@
+.search-box-header {
+    max-height: 50px;
+}
+.siteSearch:focus{
+    outline: none;
+}
+.search-box-header>a>div>div>.react-autosuggest__suggestions-container{
+    margin: 0!important;
+}
+.siteSearch{
+    border-radius: 3px;
+    border: 1px solid #D5D5D5;
+    padding-top: 6px;
+    font-weight: 500;
+    padding-left: 10px;
+    width: 215px;
+    padding-bottom: 6px;
+}
+.search-box-header:hover {
+background-color: inherit !important;
+color: #000 !important;
+cursor: text !important;
+}
+.search-box-header:hover>a {
+    color: #000 !important;
+    }
+.search-box-header>a {
+    padding-left: 8px !important;
+    padding-right: 0px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    }
 .upperHeader{
     font-size: 12px;
     background: #000;
@@ -42,6 +74,7 @@
     float:right;
 }
 .middleHeader{
+    padding-right: 0;
     padding-left: 5px;
     /*padding-right: 5px;*/
     width: 940px;
@@ -94,6 +127,7 @@
     width: 61px;
 }
 #slideNav{
+    max-height: 50px;
     margin-bottom: 0;
     border-top: 1px solid #E0E0E0;;
     border-bottom: 0px solid transparent;
@@ -372,7 +406,7 @@ input.searchMessagesInput:focus {
 }
 .searchMessagesInputIcon{
     position: absolute;
-    top: 16px;
+    top: 18px;
     right: 11px;
     color: #767676!important;
     font-size: 15px!important
@@ -382,8 +416,36 @@ input.searchMessagesInput:focus {
     padding-left: 13px;
     padding-top: 3px;
 }
+#navBar>div>.react-autosuggest__container>.react-autosuggest__suggestions-container{
+    width: 80px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
+    .searchMessagesMobileDiv>div>.react-autosuggest__container{
+        padding-bottom: 20px;
+    }
+    .searchMessagesMobileDiv>div>.react-autosuggest__container>.react-autosuggest__suggestions-container{
+        margin: 0;
+    }
+    .siteSearch{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 23px;
+    height: 40px;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    width: 100%;
+    color: #B6B6B6;
+    border-radius: 3px;
+    border: 1px solid #D5D5D5;
+    padding-top: 6px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    }
+    #slideNav{
+        max-height: 73px;
+    }
 .carouselContainer {
     padding-left: 16px!important;
     padding-right: 16px!important;
@@ -484,7 +546,7 @@ input.searchMessagesInput:focus {
     }
 
     .modal-header .close {
-        padding-right: 14px;
+        padding-right: 16px;
         margin-top: -2px;
         padding-top: 20px;
     }
@@ -619,6 +681,9 @@ input.searchMessagesInput:focus {
 
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px){
+    .siteSearch{
+        width: 178px;
+    }
 .upperHeaderContainer {
     padding-right: 12px;
     width: 730px;
@@ -694,6 +759,31 @@ input.searchMessagesInput:focus {
 }
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
+    .searchMessagesMobileDiv>div>.react-autosuggest__container{
+        padding-bottom: 20px;
+    }
+    .searchMessagesMobileDiv>div>.react-autosuggest__container>.react-autosuggest__suggestions-container{
+        margin: 0;
+    }
+    .siteSearch{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 23px;
+    height: 40px;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+    width: 100%;
+    color: #B6B6B6;
+    border-radius: 3px;
+    border: 1px solid #D5D5D5;
+    padding-top: 6px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 6px;
+    }
+    #slideNav{
+        max-height: 73px;
+    }
 .carouselContainer {
     padding-left: 16px!important;
     padding-right: 16px!important;
@@ -790,7 +880,7 @@ input.searchMessagesInput:focus {
         padding:0;
     }
     .modal-header .close {
-        padding-right: 14px;
+        padding-right: 16px;
         margin-top: -2px;
         padding-top: 20px;
     }
@@ -852,7 +942,10 @@ input.searchMessagesInput:focus {
     .middleHeader{
         display: none;
     }
-    .mobileSanitationLogo{
+    .mobileSanitationLogo{ 
+        margin-top: 8px;
+        padding-left: 16px;
+        padding-top: 3px;
         display: inline;
     }
     .homeLogoHeader {
@@ -913,7 +1006,7 @@ input.searchMessagesInput:focus {
     .searchMessagesInputIcon {
     position: absolute;
     top: 35px;
-    right: 2px;
+    right: 10px;
 }
 }
 /*BETWEEN DESKTOP AND TABLET*/

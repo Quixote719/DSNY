@@ -13,14 +13,14 @@ import paginationrightArrow from '../../../content/images/arrow_right_pagination
 
 const getSuggestionValue = suggestion => suggestion;
 const renderSuggestion = suggestion => (
-    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+suggestion}>
+    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/site-search/"+suggestion}>
         <div className ="ridOfSuggestions" >
           {suggestion}
         </div>
     </Link>
   );
 let pageSize = 2;  
-class SearchPage extends Component {
+class SearchSitePage extends Component {
     constructor(props, context) {
         super(props, context);
         this.searchResultPage = this.searchResultPage.bind(this);        
@@ -72,7 +72,7 @@ class SearchPage extends Component {
             return (
                 <div key={index}>
                 <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
-                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+"/how-to-get-rid-of/"+item.name}>
+                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+(item.url?item.url:item.linked_page.url)}>
                     <div className ="ridOfItemTitle">
                     {item.header?item.header:item.page_header}
                     </div>
@@ -165,4 +165,4 @@ class SearchPage extends Component {
         )
     }
 }
-export default SearchPage;
+export default SearchSitePage;

@@ -24,6 +24,7 @@ export function fetchLandinPageDetails(category) {
 
 export function fetchCardDetails(category) {
   return function(dispatch) {
+    dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_CARD_DETAILS_URL.replace(':category', category)).then((data) => {
       dispatch({type: types.CARD_DETAILS, payload: data})
     })

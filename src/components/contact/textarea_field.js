@@ -12,16 +12,14 @@ class FormTextarea extends Component {
   onInputChange(term) {}
 
   render() {
-    return (
-      <div>
-        <Col xs={12}>
-          <fieldset>
-            <div className='FormMultiSelectTitle'>{this.props.title}</div>
-            <textarea className='formTextarea'></textarea>
-          </fieldset>
-        </Col>
-      </div>
-    );
+    return (<div>
+      <Col xs={12}>
+        <fieldset>
+          <div className='FormMultiSelectTitle'>{this.props.title}</div>
+          <textarea name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value ? this.props.value : ''} disabled={this.props.disabledf} className='formTextarea'></textarea>
+        </fieldset>
+      </Col>
+    </div>);
   };
 };
 

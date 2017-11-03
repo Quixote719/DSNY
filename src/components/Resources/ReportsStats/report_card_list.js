@@ -24,17 +24,13 @@ class ReportCardList extends Component {
 
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
-      return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
-      );
+      return (<Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/reports/${Item.name}`}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>);
     });
   }
 
   ViewAllButton(l) {
     if (l > 4) {
-      return (
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+"/resources/reports"}><SubSectionButton title='VIEW ALL'/></Link>
-      );
+      return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/reports"}><SubSectionButton title='VIEW ALL'/></Link>);
     } else {
       return null;
     }
@@ -46,28 +42,24 @@ class ReportCardList extends Component {
     const {rc, n} = this.props;
 
     if (_.isEmpty(rc)) {
-      return (
-        <div></div>
-      );
+      return (<div></div>);
     }
 
-    return (
-      <div >
-        <div>
-          <SubSectionHeader title='Reports'/>
-          <Row className='nopadding'>
-            {this.renderPosts(rc)}
-          </Row>
-          {this.ViewAllButton(n)}
-        </div>
+    return (<div >
+      <div>
+        <SubSectionHeader title='Reports'/>
+        <Row className='nopadding'>
+          {this.renderPosts(rc)}
+        </Row>
+        {this.ViewAllButton(n)}
       </div>
-    );
+    </div>);
   }
 }
 
 ReportCardList.propTypes = {
   rc: PropTypes.array.isRequired,
-  n: PropTypes.string.isRequired
+  n: PropTypes.any.isRequired
 };
 
 export default ReportCardList;

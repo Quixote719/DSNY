@@ -12,7 +12,6 @@ import PropTypes from 'prop-types';
 class LocationDetails extends Component {
 
   componentDidMount() {
-    this.props.fetchLocationList();
   }
 
   constructor() {
@@ -138,10 +137,19 @@ class LocationDetails extends Component {
   render() {
 
     const {pr} = this.props;
+    console.log('pr');
+    console.log(this.props);
+    console.log(pr)
 
     return(
       <div>
         <div className='SContainer'>
+            <SubSectionHeader title='Planned Garages'/>
+            <span>Learn more about the
+                <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about'}>
+                    <span className='plannedGarages'> proposed Garage for Manhattan Districts 6 & 8</span>
+                </Link>
+            </span>
             <SubSectionHeader title='Bronx'/>
             <Row>
               <div className='locationsDetails'>
@@ -176,18 +184,10 @@ class LocationDetails extends Component {
                 {this.renderStatenIsland(pr)}
               </div>
             </Row>
-            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about'}>
-              <div className='plannedGarages'>Planned Gararges</div>
-            </Link>
         </div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {pr: state.AboutDataReducer.LocationList};
-}
-
-
-export default connect(mapStateToProps, {fetchLocationList})(LocationDetails);
+export default LocationDetails;

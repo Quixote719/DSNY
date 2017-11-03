@@ -1,6 +1,9 @@
 .howToGetRidOfParent>.GBanner>div>.BreadcrumbHeaderTitleSection>.container{
     padding-left: 0px;
 }
+.react-autosuggest__suggestions-container {
+    position: relative;
+}
 .react-autosuggest__suggestions-container--open{
     z-index:100;
     margin-left: 13px;
@@ -34,8 +37,8 @@
     color: white;
 }
 .react-autosuggest__suggestions-container--open>ul>li:hover{
-    background-color: #7CC04B;
-    color: #ffffff;
+    background-color: #7CC04B !important;
+    color: #ffffff !important;
 }
 .ridOfSuggestions{
     padding-left: 16px;
@@ -144,7 +147,7 @@
     text-align: center;
 }
 .searchBoxPaginate>li:first-child{
-    margin-right: calc(50% - 35px);
+    margin-right: calc(50% - 80px);
     float: left;
 }
 .searchBoxPaginate>li:last-child{
@@ -255,7 +258,7 @@ input::-ms-clear {
 }
 #collectionSearchResults{
     position: absolute;
-    top: 33px;
+    top: 30px;
     right: 8px;
     color: #7CC04B!important;
     font-size: 24px;

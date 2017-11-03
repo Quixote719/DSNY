@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 import $ from 'jquery';
 import TextSizeModal from './TextSizeModal';
+import SearchBoxHome from "../home/Site_Search/siteSearchBoxHome";
+import * as actions from '../../actions/actions_home';
 
 class Header extends React.Component {
     constructor(props, context) {
@@ -36,6 +38,9 @@ class Header extends React.Component {
     }
     textSizeModal() {
         this.setState({textSizePopUp: !this.state.textSizePopUp});
+    }
+    componentWillMount() {
+        this.props.getSiteSearchKeywords();
     }
     render() {
         var url = window.location.pathname;
@@ -104,10 +109,14 @@ class Header extends React.Component {
                             <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className={url === process.env.REACT_APP_SITE_RELATIVE_URL + '/contact' ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={6}>Contact</NavItem>
                             </LinkContainer>
+                            <NavItem eventKey = {7} className="search-box-header">
+                            <SearchBoxHome ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props}/>
+                            </NavItem>
                         </Nav>
-                        <input className="searchMessagesInput" type="text" placeholder="Search" >
-                        </input>
-                        <i className="fa fa-search searchMessagesInputIcon"></i>
+
+                        {/* <input className="searchMessagesInput" type="text" placeholder="Search" >
+                        </input> */}
+                        {/* <i className="fa fa-search searchMessagesInputIcon"></i> */}
                     </Navbar.Collapse>
                 </Navbar>
                 <Modal show={this.state.showModal} onHide={this.close} id="menu" backdrop={false}>
@@ -128,8 +137,9 @@ class Header extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">
-                        <input className="searchMessagesInput" type="text" placeholder="Search" >
-                        </input>
+                        <SearchBoxHome ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props} />
+                        {/* <input className="searchMessagesInput" type="text" placeholder="Search" >
+                        </input> */}
                         <i className="fa fa-search searchMessagesInputIcon"></i>
                         </div>
                         <Nav className="mainLinks" onClick={this.close}>
@@ -137,18 +147,19 @@ class Header extends React.Component {
                             <LinkContainer to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
                             </LinkContainer>
-                            {/*<LinkContainer to = "/about" className = "servicesHeaderTitle">*/}
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} className = "servicesHeaderTitle">
                             <NavItem eventKey={3} className="bottomHeaderTitles servicesHeaderTitle">Services</NavItem>
-                            {/*</LinkContainer>*/}
-                            {/*<LinkContainer className = "resourcesHeaderTitle" >*/}
+                            </LinkContainer>
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} className = "resourcesHeaderTitle" >
                             <NavItem eventKey={4} className="bottomHeaderTitles resourcesHeaderTitle">Resources</NavItem>
-                            {/*</LinkContainer>*/}
+                            </LinkContainer>
                             {/*<LinkContainer className = "ourWorkHeaderTitle">*/}
                             <NavItem eventKey={5} className="bottomHeaderTitles workHeaderTitle">Our Work</NavItem>
                             {/*</LinkContainer>*/}
-                            {/*<LinkContainer className = "contactHeaderTitle">*/}
+                            <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className = "contactHeaderTitle">
                             <NavItem eventKey={6} className="bottomHeaderTitles contactHeaderTitle">Contact</NavItem>
-                            {/*</LinkContainer>*/}
+                            </LinkContainer>
+
                         </Nav>
                     </Modal.Body>
                 </Modal>
@@ -157,4 +168,14 @@ class Header extends React.Component {
     }
 };
 
+function mapStateToProps(state) {
+    return {
+        siteSearchKeywords: state.carouselDataReducer.siteSearchKeywords,
+    }
+  }
+  let actionList = {
+    getSiteSearchKeywords: actions.getSiteSearchKeywords,
+  };
+Header = connect(mapStateToProps,actionList)(Header);
 export default Header;
+

@@ -12,45 +12,56 @@ import Datetime from 'react-datetime';
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
+import { compose, withState, withHandlers } from 'recompose';
 
-import '../../content/styles/contactForm.css';
 
-const DisplayFormikState = props => (<div style={{
-    margin: '4rem 0'
-  }}>
-  <h3 style={{
-      fontFamily: 'monospace'
-    }}/>
-  <pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '1.5rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>Values</strong> ={' '}
-      {JSON.stringify(props.values, null, 2)}
-    </pre>
-  </div>);
 
-// Our inner form component which receives our form's state and updater methods as props
-const InnerForm = (props) => {
-  const {
-    values,
+const enhance = compose(
+  withState('step', 'setStep', 1),
+  withHandlers({
+    nextStep: ({ setStep, step }) => 
+      () => setStep(step + 1),
+    previousStep: ({ setStep, step }) => 
+      () => setStep(step - 1)
+  }),
+  withFormik({
+   mapPropsToValues: props => (props.customFormData),
+  // Add a custom validation function (this can be async too!)
+  validate: (values, props) => {
+    let errors = {}
+    if (!values.OrganizationTaxIdNumber) {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    } else if (!values.OrganizationWebsite) {
+      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    }
+    if (!values.WillPostCompostRecipientSignage) {
+
+      errors.WillPostCompostRecipientSignage = 'please check this'
+    }
+    return errors
+  },
+    handleSubmit(
+      values, 
+      { props, setErrors, setSubmitting }
+    ) {
+      alert(JSON.stringify(values));
+    }
+  })
+);
+
+ const Step1 = ({ nextStep, handleChange, values,
     touched,
     errors,
     dirty,
     isSubmitting,
-    handleChange,
     handleBlur,
     handleSubmit,
     handleReset,
     handledropDown,
     setFieldValue,
-    setFieldTouched
-  } = props;
-  return (<form onSubmit={handleSubmit}>
-    <FormHeader title='Online Application'/>
+    setFieldTouched }) => (
+  <div>
+      <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       'search box validation of address comes up'
@@ -175,51 +186,42 @@ const InnerForm = (props) => {
         }
       ]}/>
     <FormField isHidden={values.HasAlternateSideParking !== 1} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <Col xs={12}>
-      <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
+     <Col xs={12}>
+      <button onClick={nextStep}>Next</button>
     </Col>
-    <DisplayFormikState {...props}/>
-  </form>)
-};
+  </div>
+);
 
-// Wrap our form with the using withFormik HoC
-const MyForm = withFormik({
-  // Transform outer props into form values
-  mapPropsToValues: props => (props.customFormData),
-  // Add a custom validation function (this can be async too!)
-  validate: (values, props) => {
-    let errors = {}
-    if (!values.OrganizationTaxIdNumber) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } else if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    }
-    if (!values.WillPostCompostRecipientSignage) {
+const Step2 = ({ previousStep,handleChange, values }) => (
+  <div>
+    <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
+    
+    <input 
+      type="text"
+      name="authCode"
+      value={values.authCode}
+      maxLength={5}
+      onChange={handleChange} />
+    <button onClick={previousStep}>Previous</button>
+    <button type="submit">Submit</button>
+  </div>
+)
 
-      errors.WillPostCompostRecipientSignage = 'please check this'
-    }
-    return errors
-  },
-  handleSubmit: (values, {setSubmitting}) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-      console.log(values);
-    }, 1000);
-  },
-  displayName: 'BasicForm'
-})(InnerForm)
+const StepForm = ({
+  handleSubmit,
+  step,
+  nextStep,
+  previousStep,
+  ...props
+}) => (
+  <form onSubmit={handleSubmit}>
+    {{
+      1: <Step1 nextStep={handleSubmit} {...props} />,
+      2: <Step1 nextStep={nextStep} {...props} />,
+      3: <Step2 previousStep={previousStep} {...props} />,
+      4: <Step2 {...props} />
+    }[step] || <div />}
+  </form>
+)
 
-class TestForm extends Component {
-  constructor(props, context) {
-    super(props, context);
-
-  }
-  render() {
-
-    return (<div className='contactForm'><MyForm customFormData={compostFormObject}/></div>);
-  };
-
-};
-
-export default TestForm;
+export default enhance(StepForm);

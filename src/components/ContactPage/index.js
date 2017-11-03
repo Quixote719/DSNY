@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
+import ServiceRequestsSection from './ServiceRequestsSection';
+import RegistrationsSection from './RegistrationsSection';
+import GetInvolvedSection from './GetInvolvedSection';
+import Complaints from './ComplaintsSection';
+import ContactUs from './ContactUsSection';
 import * as actions from '../../actions/actions_about';
-import PageText from '../shared/PageText';
 import _ from "lodash";
 import { connect } from 'react-redux';
+import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+
 
 
 class Contact extends Component {
@@ -17,32 +23,104 @@ class Contact extends Component {
       this.props.FetchContactData();
   }
 
+  renderRequest(){
+    if(this.props.ContactPageData !== undefined){
+      return _.map(this.props.ContactPageData.data.sections.sections, item => {
+        if(item.name === 'my-request-status') {
+          return item.header;
+        }
+      });
+    }
+  }
+
   render() {
 
     let Contact = {};
     let BannerText = {};
-    let MyRequestStatus = {};
+    let ServiceRequestsProps = {};
+    let ComplaintsProps = {};
+    let RegistrationsProps = {};
+    let GetInvolvedProps = {};
+    let ContactUsProps = {};
 
-    this.parseContactData(Contact, BannerText);
+    this.parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps);
 
     return (
       <div>
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>
-          {/* <div className="myRequestStatus">{MyRequestStatus}</div> */}
-          <SearchBoxCollection />
+          <div className='sectionHeader SContainer'>{this.renderRequest()}</div>
+          <div className='largeSearchBox'><SearchBoxCollection /></div>
+        </div>
+        <div className = 'SContainer'>
+          <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>
+        </div>
+        <Row className='greyBcg'>
+          <div className = 'getInvolvedContainer'>
+            <GetInvolvedSection GetInvolvedProps = {GetInvolvedProps}/>
+          </div>
+        </Row>
+        <div className = 'greyBcg'>
+          <div className = 'SContainer'>
+            <Complaints ComplaintsProps = {ComplaintsProps} />
+          </div>
+        </div>
+        <div className = 'SContainer'>
+          <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
+        </div>
+
+        <div className = 'SContainer'>
+          <ContactUs ContactUsProps = {ContactUsProps}/>
         </div>
       </div>
     )
   }
 
-  parseContactData(Contact, BannerText, MyRequestStatus) {
+
+
+
+  parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
-        // MyRequestStatus = this.props.ContactPageData.data.sections.sections.header;
     }
     BannerText.title = Contact.title;
     BannerText.content = Contact.header_content;
+
+    if(this.props.ContactPageData !== undefined) {
+      _.map(this.props.ContactPageData.data.sections.sections, item =>{
+        switch (item.name){
+          case 'service-request':{
+            ServiceRequestsProps.title = item.header;
+            ServiceRequestsProps.cards = item.cards;
+            break;
+          }
+          case 'complaints': {
+            ComplaintsProps.title = item.header;
+            ComplaintsProps.content = item.content;
+            break;
+          }
+          case 'applications-and-registrations': {
+            RegistrationsProps.title = item.header;
+            RegistrationsProps.cards = item.cards;
+            break;
+          }
+          case 'get-involved-section': {
+            GetInvolvedProps.image = item.featured_image.base_path + item.featured_image.file;
+            GetInvolvedProps.content = item.content;
+            GetInvolvedProps.cards = item.cards;
+            break;
+          }
+          case 'contact-us': {
+            ContactUsProps.title = item.header;
+            ContactUsProps.cards = item.cards;
+            break;
+          }
+          default:{
+            break;
+          }
+        }
+      });
+    }
   }
 }
 
