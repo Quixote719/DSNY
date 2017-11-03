@@ -11,7 +11,9 @@ import TableDictionary from './card_table_dictionary'
 import CardFullWidth from './card_full_width'
 import CardTitleBody from '../Card_title_body'
 import CardMultifile from './card_multifile'
-import CardReferenceDetails from '../../PressReleases/reference_details_card'
+import SubSectionButton from '../../shared/sub_section_button';
+import CardReferenceDetails from '../../PressReleases/reference_details_card';
+import CardTitleImage from '../Card_title_image';
 import $ from 'jquery';
 
 class CardSec extends Component {
@@ -20,6 +22,14 @@ class CardSec extends Component {
 
     let url;
     let type;
+    let ImageUrl;
+
+    /* A condition check to ensure featured Image exists, to fetch the url of the Image */
+    if(Item.featured_image){
+      ImageUrl  = this.getImageUrl(Item);
+    }
+    
+
     if (Item.linked_url !== " ") {
       type = 'eUrl';
       url = Item.linked_url
@@ -65,6 +75,10 @@ class CardSec extends Component {
             return (url
           ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
+      case 'square-card-with-image':
+            return (url
+          ? <Link to={url}><CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl}/></Link>
+          : <CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl}/>);
       case 'square-card':
         return (url
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
@@ -101,6 +115,15 @@ class CardSec extends Component {
     });
   }
 
+  /* Get Url of the Image File, using base path && File name */
+  getImageUrl(Item){
+      let basepath = Item.featured_image.base_path;
+      let filename = Item.featured_image.file;
+      return `${basepath}${filename}`;
+  }
+
+
+
 
   /*The Header is made green to be displayed as title */
   getGreenHeader(dataObject,headerContent){
@@ -125,6 +148,23 @@ class CardSec extends Component {
     return /<[a-z][\s\S]*>/i.test(dataObject.header);
   }
 
+
+  viewAll(maxCards,cardCount,child_url){
+    
+    /* If max cards are zero, then the page can have any number of cards */
+    if(maxCards == 0){
+      return false;
+    }
+
+    /* Logic to return view All Button */
+    if (maxCards < cardCount) {
+      return (
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+ child_url}><SubSectionButton title='VIEW ALL'/></Link>
+      );
+    }
+
+    return false; 
+  }  
 
   render() {
     const {dataObject} = this.props;
@@ -214,15 +254,24 @@ class CardSec extends Component {
       )
     }
 
+
     let bg = dataObject.background_color === 'gray'
       ? 'greyBcg'
       : ''
+    let maxCards = dataObject.card_data.max_cards;
+    let cardCount = dataObject.card_data.card_count;
+    
+    /* Code to see the View All Button, when there are more cards than max number of cards */
+    let viewAllButton = this.viewAll(maxCards,cardCount,dataObject.button_linked_page.url);
+  
+
 
     return (
       <div className={bg}>
         <div className='container'>
           <div>{header}</div>
           <div>{body}</div>
+          <div> {viewAllButton} </div>
         </div>
       </div>
     );

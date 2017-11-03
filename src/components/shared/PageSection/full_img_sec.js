@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Row, Col} from 'react-bootstrap';
-import ContentCard from '../../shared/ContentCard'
+import ContentCard from '../../shared/ContentCard';
 import styles from '../../../content/styles/fullWidthImages.css';
 
 class FullImageSec extends Component{
@@ -13,7 +13,20 @@ class FullImageSec extends Component{
        let cardStyle; 
        switch(cardType){
             case 'content-left':
-               return 'ContentLeft';
+               return(
+                   <Col className = 'ContentLeft' xs={12}>
+                        <ContentCard type='1' content={this.props.dataObject.content}/>   
+                    </Col>
+                );
+
+            case 'content-right':
+                return(
+                   <div>
+                   <Col xs={0} sm={0} md={8}></Col>
+                   <Col xs={12} sm={12} md={4}><ContentCard type='1' content={this.props.dataObject.content}/>
+                   </Col>
+                   </div>
+                ); 
        } 
 
 
@@ -28,18 +41,19 @@ class FullImageSec extends Component{
                     'backgroundSize': '100% 900px',
                   }
 
-        const cardStyle = this.getCardStyle(dataObject.section_style);         
-
+           
+        // SectionContainer
         return (
-                    <div className='positionElement' style={style} >
-                    <div className = 'SectionContainer'>
-                    <div className = 'BlackTitle'> {this.props.dataObject.header}</div>
-                    <Row>
-                    <div className = {cardStyle}>
-                        <ContentCard type='1' content={this.props.dataObject.content}/>   
-                    </div>
+                    <div>
+                    <div className='positionElement' style={style}>
+                    <div className = 'container' > 
+                    <Row> 
+                    <Col className = 'BlackTitle' xs={12}> {this.props.dataObject.header}</Col>
+                                {this.getCardStyle(dataObject.section_style)};     
                     </Row>
                     </div>
+                    </div>
+                    <div className="greyBcgHeight"></div>
                     </div>
     )
 

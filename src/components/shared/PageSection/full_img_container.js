@@ -61,8 +61,7 @@ class  fullImageContainer extends Component{
    getBackGroundImageContent(sec){
         return(
            <div key ={sec.id}>
-            <div>      
-                <FullImageSec dataObject={sec}/></div>
+              <div><FullImageSec dataObject={sec}/></div>
             </div>
         );
    }
@@ -88,7 +87,6 @@ class  fullImageContainer extends Component{
         var sections;
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
-           console.log(sec);   
            if(sec.featured_image != ''){
                 return this.getBackGroundImageContent(sec);
            }else{
@@ -99,10 +97,10 @@ class  fullImageContainer extends Component{
         }
 
         return (
-          <div key ={cItems.id}>
-            <div>{banner}</div>
-            <div >{sections}</div>
-          </div>
+            <div key ={cItems.id}>
+              <div>{banner}</div>
+              <div >{sections}</div>
+            </div>
         )
       });
     } else {
