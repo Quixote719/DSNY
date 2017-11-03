@@ -35,7 +35,7 @@ const MapWindow = compose(
       return(
         <GoogleMap
           onClick = { () => {props.onMapClick()} }
-          zoom={12}
+          zoom={14}
           center={props.Center}>
                <MarkerWithLabel
                      key = { 1 }

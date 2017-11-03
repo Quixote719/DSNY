@@ -69,8 +69,6 @@ class EventDetail extends Component {
       'address': '250 Bowery, New York, NY 10012'
       },((results, status) => {
       if (status == 'OK') {
-        // const lat = results[0].geometry.location.lat();
-        // const lng = results[0].geometry.location.lng();
         this.setState({lat : results[0].geometry.location.lat()});
         this.setState({lng : results[0].geometry.location.lng()});
       }
@@ -100,7 +98,7 @@ class EventDetail extends Component {
             <div className='container'>
               <MapWindow
                 isMarkerShown = {true}
-                Center = {{ lat: 40.72390127, lng: -73.88979419 }}
+                Center = {{ lat: this.state.lat, lng: this.state.lng }}
                 Locations = {{ lat:this.state.lat, lng:this.state.lng }}/>
             </div>
              <div className='container PressReleaseBody'>
