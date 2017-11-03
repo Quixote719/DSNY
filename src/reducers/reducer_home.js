@@ -26,6 +26,8 @@ export default function carouselDataReducer(state = {}, action) {
 
       case 'SET_RID_OFF_ITEM_DETAILS':
       return { ...state, getRidOfItemDetailsData: action.payload};
+    case 'SET_NEWS_PAGE':
+      return {...state, newsData: action.payload}
     case 'SET_COLLECTION_SCHEDULE_DATA':
       return { ...state, suggestionAddress: action.suggestionAddress, collectionScheduleInfo: action.collectionScheduleInfo,routingData: action.routingData, collectionScheduleData: action.payload, arrayLength: action.arrayLength, holidayData: action.holidayData};
     case types.FETCH_EVENT_SUB_LIST:
