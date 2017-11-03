@@ -24,8 +24,8 @@ import ResourcesContainer from './components/Resources/Resources_container';
 import PressReleaseDetail from './components/PressReleases/PressReleasedetail';
 import PressReleaseList from './components/PressReleases/PressReleaseList'
 import CardDetailContainer from './components/shared/CardDetails/card_details_container';
-import DSNYEvents from './components/home/events/event_list_by_borough'
-import EventDetail from './components/home/events/event_detail'
+import DSNYEvents from './components/home/Events/event_list_by_borough'
+import EventDetail from './components/home/Events/event_detail'
 import DSNYNews from './components/home/news/news_list_by_month'
 import NewsDetail from './components/home/news/news_detail'
 import Header from './components/shared/header';

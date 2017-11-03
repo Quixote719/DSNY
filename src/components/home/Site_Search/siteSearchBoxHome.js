@@ -69,7 +69,6 @@ class SearchBoxHome extends Component {
         console.log('enter press here! ')
       }
     }
-
     render() {
 
         return (
