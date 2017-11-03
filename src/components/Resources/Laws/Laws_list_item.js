@@ -4,7 +4,10 @@ import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
-import Dotdotdot from 'react-dotdotdot'
+import moment from 'moment';
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
+
 class LawsListItem extends Component {
 
   rawMarkup() {
@@ -17,20 +20,20 @@ class LawsListItem extends Component {
       <div >
         <Col>
           <Col xs={12} md={3}>
-            <Dotdotdot clamp={3}>
-              <div className='lawsTitle' dangerouslySetInnerHTML={{
-                __html: this.props.title
-              }}/>
-            </Dotdotdot>
+           <TruncateMarkup lines={3}> 
+              <div className='lawsTitle' >
+                  {Parser(this.props.title)}
+              </div>
+            </TruncateMarkup>  
           </Col>
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                <Dotdotdot clamp={3}>
-                  <div className='lawsDesc' dangerouslySetInnerHTML={{
-                    __html: this.props.body
-                  }}/>
-                </Dotdotdot>
+                <TruncateMarkup lines={3}> 
+                  <div className='lawsDesc' >
+                    {Parser(this.props.body)}
+                  </div>
+                </TruncateMarkup> 
               </Col>
               <Col xs={12}>
                 <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}${this.props.url}`}>

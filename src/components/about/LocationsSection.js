@@ -4,7 +4,7 @@ import ContentCard from '../shared/ContentCard'
 
 class LocationsSection extends Component {
 
-
+  
   render() {
     
     const cardStyle = {
@@ -25,5 +25,7 @@ class LocationsSection extends Component {
     )
   }
 }
+
+
 
 export default LocationsSection;
