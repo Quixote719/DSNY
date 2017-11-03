@@ -16,38 +16,6 @@ import { compose, withState, withHandlers } from 'recompose';
 
 
 
-const enhance = compose(
-  withState('step', 'setStep', 1),
-  withHandlers({
-    nextStep: ({ setStep, step }) => 
-      () => setStep(step + 1),
-    previousStep: ({ setStep, step }) => 
-      () => setStep(step - 1)
-  }),
-  withFormik({
-   mapPropsToValues: props => (props.customFormData),
-  // Add a custom validation function (this can be async too!)
-  validate: (values, props) => {
-    let errors = {}
-    if (!values.OrganizationTaxIdNumber) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } else if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    }
-    if (!values.WillPostCompostRecipientSignage) {
-
-      errors.WillPostCompostRecipientSignage = 'please check this'
-    }
-    return errors
-  },
-    handleSubmit(
-      values, 
-      { props, setErrors, setSubmitting }
-    ) {
-      alert(JSON.stringify(values));
-    }
-  })
-);
 
  const Step1 = ({ nextStep, handleChange, values,
     touched,
@@ -207,21 +175,95 @@ const Step2 = ({ previousStep,handleChange, values }) => (
   </div>
 )
 
-const StepForm = ({
+const Steps = ({
   handleSubmit,
+  validate,
   step,
+  validateStep,
   nextStep,
   previousStep,
+  stepValidated,
   ...props
 }) => (
+  
   <form onSubmit={handleSubmit}>
     {{
-      1: <Step1 nextStep={handleSubmit} {...props} />,
-      2: <Step1 nextStep={nextStep} {...props} />,
-      3: <Step2 previousStep={previousStep} {...props} />,
-      4: <Step2 {...props} />
+      1: <Step1 nextStep={validateStep} {...props} />,
+      2: <Step2 previousStep={previousStep} {...props} />,
+      3: <Step2 {...props} />
     }[step] || <div />}
   </form>
 )
 
-export default enhance(StepForm);
+const MyForm = compose(
+  withState('step', 'setStep', 1),
+  withHandlers({
+    validateStep: ({ stepValidated,validate,setStep, step }) => 
+      () => !stepValidated?validate:setStep(step + 1), 
+    nextStep: ({ setStep, step }) => 
+      () => setStep(step + 1),
+    previousStep: ({ setStep, step }) => 
+      () => setStep(step - 1)
+  }),
+  withFormik({
+   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, stepValidated:props.stepValidated}),
+   
+  // Add a custom validation function (this can be async too!)
+  validate: (values, props, stepValidated) => {
+    let errors = {}
+    if (!values.OrganizationTaxIdNumber) {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+      stepValidated = false;
+    }
+    else
+    {
+      stepValidated = true;
+    }
+    // } else if (!values.OrganizationWebsite) {
+    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.WillPostCompostRecipientSignage) {
+
+    //   errors.WillPostCompostRecipientSignage = 'please check this'
+    // }
+    
+    console.log("DINESH" + stepValidated);
+    return errors
+  },
+    handleSubmit(
+      values, 
+      { props, setErrors, setSubmitting, step, nextStep,setStep }
+    ) {
+      if (step > 1)
+        alert(JSON.stringify(values));
+      // else
+      // {
+      //    setStep(step + 1)
+      // }
+    }
+  })
+)(Steps);
+
+class StepForm extends Component {
+
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      FormObject: props.FormObject,
+      editMode:true,
+      stepValidated:false
+    }
+  }
+  render() {
+
+    return (<div className='contactForm'>
+      <MyForm customFormData={this.state.FormObject} stepValidated={this.state.stepValidated} disabled={!this.state.editMode}/>
+    </div>);
+  };
+
+};
+
+
+
+export default StepForm;
