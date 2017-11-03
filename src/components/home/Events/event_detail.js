@@ -97,7 +97,6 @@ class EventDetail extends Component {
             </div>
             <div className='container'>
               <MapWindow
-                isMarkerShown = {true}
                 Center = {{ lat: this.state.lat, lng: this.state.lng }}
                 Locations = {{ lat:this.state.lat, lng:this.state.lng }}/>
             </div>

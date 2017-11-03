@@ -7,20 +7,6 @@ import '../../content/styles/About.css'
 
 const google = window.google;
 
-
-// const lat; const lng;
-// let geocoder = new google.maps.Geocoder();
-//   geocoder.geocode({
-//   'address': '250 Bowery, New York, NY 10012'
-//   },((results, status) => {
-//   if (status == 'OK') {
-//     const lat = results[0].geometry.location.lat();
-//     const lng = results[0].geometry.location.lng();
-//     console.log(results);
-//     console.log('lat' + lat + 'lng' + lng)
-//   }
-// }));
-
 const MapWindow = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCxMkcYQWRESMbq11G6keP1l9w3z5Jef04&libraries=geometry,drawing,places",
@@ -34,7 +20,6 @@ const MapWindow = compose(
 
       return(
         <GoogleMap
-          onClick = { () => {props.onMapClick()} }
           zoom={14}
           center={props.Center}>
                <MarkerWithLabel
