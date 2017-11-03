@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 //import ReactDOM from 'react-dom';
-import EventList from './Events/event_list';
+import EventList from './events/event_list';
 import NewsList from './news/news_list';
 import CarouselData from './Carousel/index';
 import SearchCards from './Search_Cards/index';
@@ -23,23 +23,21 @@ class Home extends Component {
       this.props.carouselPanelDataTemporary();
     }
   render() {
-    return (
-      <div>
-        <div className="GBanner">
-          <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
-        </div>
-        <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
-        <ProgramCards carouselItems={this.props.carouselItems}/>
-        <div className="container">
-          <NewsList carouselItems={this.props.carouselItems}/>
-        </div>
-        <ProgramInitiatives carouselItems={this.props.carouselItems}/>
-        <div className="container eventSection">
-          <EventList/>
-        </div>
-        <DownloadApp/>
+    return (<div>
+      <div className="GBanner">
+        <CarouselData carouselItems={this.props.carouselItems} carouselPanelItems={this.props.carouselPanelItems} carouselPanelItemsTemporary={this.props.carouselPanelItemsTemporary}/>
       </div>
-    )
+      <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory={this.props}/>
+      <ProgramCards carouselItems={this.props.carouselItems}/>
+      <div className="container">
+        <NewsList carouselItems={this.props.carouselItems}/>
+      </div>
+      <ProgramInitiatives carouselItems={this.props.carouselItems}/>
+      <div className="container eventSection">
+        <EventList/>
+      </div>
+      <DownloadApp/>
+    </div>)
   }
 }
 function mapStateToProps(state) {
