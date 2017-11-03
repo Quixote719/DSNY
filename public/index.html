@@ -34,6 +34,19 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
   <!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js">
+    $(document).ready(function(){
+    // Previous/next slide on swipe
+    $(".carousel").on("swipeleft", function(e){
+    alert("swipe left");
+    });
+    $(".carousel").on("swiperight",function(e){
+    alert("swipe right");
+    });
+    });
+  </script>
+
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzH8rFCHrmQz4ds6S72q0eJkl7VumstBk&libraries=places">
   function initMap(){
     var input1 = document.getElementsByClassName('collectionSearchInput');
