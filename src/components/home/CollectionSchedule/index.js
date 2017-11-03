@@ -20,6 +20,7 @@ class CollectionSchedule extends Component {
         this.state = {
             address: this.props.match.params.address,            
             placeholder: "Enter your search term",
+            checkInputresults: "",            
           };
     }
     componentWillMount(){
@@ -44,15 +45,17 @@ class CollectionSchedule extends Component {
     clearSearchBox(){
         this.setState({
             address: "",
+            checkInputresults: "clearBoxChecked"            
          });
     }
     handleSelect =(address)=>{
         if(errorFlag == 0){
             this.setState({
                 address: address,
+                checkInputresults: "clearBoxNotChecked"                
              });
+            this.props.getCollectionSchedule(address);                            
             this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
-            this.props.getCollectionSchedule(address);               
         }        
     }
     collectionScheduleTable(){
@@ -126,6 +129,10 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
+                <div style = {this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
+                    No search results found
+                </div>
+
                 <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                 <div className = "addressNotFound">
                 The address entered can not be found. 
@@ -135,6 +142,7 @@ class CollectionSchedule extends Component {
                 </div>
                     {this.correctAddressList()}
                 </div>
+
                 <Row className="collectionScheduleRow">
                     <Col xs={12}>
                         <div style={this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
@@ -158,6 +166,7 @@ class CollectionSchedule extends Component {
 }
 function mapStateToProps(state) {
     return {
+        noResultsError: state.carouselDataReducer.noResultsError,                
         suggestionAddress: state.carouselDataReducer.suggestionAddress,        
         collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,
         routingData: state.carouselDataReducer.routingData,                        

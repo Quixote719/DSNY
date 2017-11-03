@@ -63,11 +63,19 @@ class SearchBoxHome extends Component {
         placeholder: " "
       })
     }
+    setPlaceHolder = () =>{
+      this.setState({
+        placeholder: " "
+      })
+    }
     handleKeyPress = (event) => {
       if(event.key == 'Enter'){ 
         this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
         console.log('enter press here! ')
       }
+    }
+    searchIconClicked = () => {
+        this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
     }
     render() {
 
@@ -91,7 +99,7 @@ class SearchBoxHome extends Component {
                                 onFocus: this.setPlaceHolder,
                                 onKeyPress: this.handleKeyPress,                                
                             }}/>
-                        <i className="fa fa-search ridSearch" id="ridSearch"></i>
+                        <i className="fa fa-search ridSearch" id="ridSearch" onClick = {()=>{this.searchIconClicked()}}></i>
                         <div className={this.state.suggestions != "" ? "noexampleRidSearch" : "exampleRidSearch"}> Example: battery, mattress, TVs </div>
                     </div>
                 </div>

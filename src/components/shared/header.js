@@ -113,10 +113,6 @@ class Header extends React.Component {
                             <SearchBoxHome ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props}/>
                             </NavItem>
                         </Nav>
-
-                        {/* <input className="searchMessagesInput" type="text" placeholder="Search" >
-                        </input> */}
-                        {/* <i className="fa fa-search searchMessagesInputIcon"></i> */}
                     </Navbar.Collapse>
                 </Navbar>
                 <Modal show={this.state.showModal} onHide={this.close} id="menu" backdrop={false}>

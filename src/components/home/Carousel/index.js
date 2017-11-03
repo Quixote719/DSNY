@@ -24,15 +24,7 @@ class CarouselData extends Component {
             monthCarouselPanel: monthCarouselPanel,
         };
     }
-    // componentWillMount() {
-    //     //this.props.carouselPanelData();
-    // }
-    //If depolying uncomment the below and comment the above
 
-
-    // componentWillMount() {
-    //     this.props.carouselPanelDataTemporary();
-    // }
     carouselDataItemList() {
         return _.map(this.props.carouselItems, item => {
             if (item.name == "home-hero-section") {
@@ -54,7 +46,6 @@ class CarouselData extends Component {
     carouselPanelDataItemList() {
         if (this.props.carouselPanelItems != undefined) {
             return _.map(this.props.carouselPanelItems, (item, index) => {
-                //return items.map(function (item, index) {
                 return (
                     <div className="panelData" key={index}>
                         <div className="border-top"></div>
@@ -63,7 +54,6 @@ class CarouselData extends Component {
                         <div className="statusProgram">{item.panelItemStatus}</div>
                     </div>
                 );
-                //})
             });
         }
         else {
@@ -83,68 +73,108 @@ class CarouselData extends Component {
     }
     goRight() {
         console.log("goRight()");
-        // let anchorObj = document.getElementsByClassName("carousel-control right")[0];
-        // if (anchorObj.click) {
-        //     anchorObj.click()
-        //   } else {
-        //       var evt = document.createEvent("MouseEvents"); 
-        //       evt.initMouseEvent("click", true, true, window, 
-        //           0, 0, 0, 0, 0, false, false, false, false, 0, null); 
-        //       var allowDefault = anchorObj.dispatchEvent(evt);
-        // }
+        let anchorObj = document.getElementsByClassName("carousel-control right")[0];
+        if (anchorObj.click) {
+            anchorObj.click()
+          } else {
+              var evt = document.createEvent("MouseEvents"); 
+              evt.initMouseEvent("click", true, true, window, 
+                  0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+              var allowDefault = anchorObj.dispatchEvent(evt);
+        }
     }
     goLeft() {
         console.log("goLeft()");
-        // let anchorObj = document.getElementsByClassName("carousel-control left")[0];
-        // if (anchorObj.click) {
-        //     anchorObj.click()
-        //   } else {
-        //       var evt = document.createEvent("MouseEvents"); 
-        //       evt.initMouseEvent("click", true, true, window, 
-        //           0, 0, 0, 0, 0, false, false, false, false, 0, null); 
-        //       var allowDefault = anchorObj.dispatchEvent(evt);
-        // }
+        let anchorObj = document.getElementsByClassName("carousel-control left")[0];
+        if (anchorObj.click) {
+            anchorObj.click()
+          } else {
+              var evt = document.createEvent("MouseEvents"); 
+              evt.initMouseEvent("click", true, true, window, 
+                  0, 0, 0, 0, 0, false, false, false, false, 0, null); 
+              var allowDefault = anchorObj.dispatchEvent(evt);
+        }
     }
     render() {
-        return (
-            <div className="carouselContainerParent ">
-                <div className="container carouselContainer">
-                    <ul className="carouselLeftPanel">
-                        <li className="statusTitle">
-                            TODAY
-                        </li>
-                        <li className="dateMonthCarousel">
-                            <div className="dateMonthCarousel">
-                                <div className="dateCarouselPanel">
-                                    {this.state.monthCarouselPanel}
+        if (window.innerWidth >= 1367){
+            return (
+                <div className="carouselContainerParent ">
+                    <div className="container carouselContainer">
+                        <ul className="carouselLeftPanel">
+                            <li className="statusTitle">
+                                TODAY
+                            </li>
+                            <li className="dateMonthCarousel">
+                                <div className="dateMonthCarousel">
+                                    <div className="dateCarouselPanel">
+                                        {this.state.monthCarouselPanel}
+                                    </div>
+                                    <div className="monthCarouselPanel">
+                                        {this.state.dateCarouselPanel}
+                                    </div>
                                 </div>
-                                <div className="monthCarouselPanel">
-                                    {this.state.dateCarouselPanel}
-                                </div>
-                            </div>
-                        </li>
-                        <li className="programsList">
-                            {this.carouselPanelDataItemList()}
-                        </li>
-                        <li>
-                            {/*<Link to = "http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></Link>*/}
-                            <a href="http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></a>
-                        </li>
-                    </ul>
-                    <div className="carouselParentBoxShadow">
+                            </li>
+                            <li className="programsList">
+                                {this.carouselPanelDataItemList()}
+                            </li>
+                            <li>
+                                <a href="http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></a>
+                            </li>
+                        </ul>
+                        <div className="carouselParentBoxShadow">
+                        </div>
+                            <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
+                                <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+                            </span>} nextIcon={<span className="newsEventsCarouselIcon">
+                                <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+                            </span>}>
+                                {this.carouselDataItemList()}
+                            </Carousel>
                     </div>
-                    <Swipeable config={swipe} onSwipeLeft={this.goRight} onSwipeRight={this.goLeft}>
-                        <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
-                            <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
-                        </span>} nextIcon={<span className="newsEventsCarouselIcon">
-                            <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
-                        </span>}>
-                            {this.carouselDataItemList()}
-                        </Carousel>
-                    </Swipeable>
                 </div>
-            </div>
-        )
+            )
+        }
+        else{
+            return (
+                <div className="carouselContainerParent ">
+                    <div className="container carouselContainer">
+                        <ul className="carouselLeftPanel">
+                            <li className="statusTitle">
+                                TODAY
+                            </li>
+                            <li className="dateMonthCarousel">
+                                <div className="dateMonthCarousel">
+                                    <div className="dateCarouselPanel">
+                                        {this.state.monthCarouselPanel}
+                                    </div>
+                                    <div className="monthCarouselPanel">
+                                        {this.state.dateCarouselPanel}
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="programsList">
+                                {this.carouselPanelDataItemList()}
+                            </li>
+                            <li>
+                                <a href="http://www1.nyc.gov/311/index.page#status"><button className="panelButton">More</button></a>
+                            </li>
+                        </ul>
+                        <div className="carouselParentBoxShadow">
+                        </div>
+                        <Swipeable config={swipe} onSwipeLeft={this.goRight} onSwipeRight={this.goLeft}>
+                            <Carousel className="newsEventsCarousel" prevIcon={<span className="newsEventsCarouselIcon">
+                                <img src='http://www1.nyc.gov/assets/home/images/global/heroleft5.svg' alt="carouselleftArrow" />
+                            </span>} nextIcon={<span className="newsEventsCarouselIcon">
+                                <img src='http://www1.nyc.gov/assets/home/images/global/heroright5.svg' alt="carouselRightArrow" />
+                            </span>}>
+                                {this.carouselDataItemList()}
+                            </Carousel>
+                        </Swipeable>
+                    </div>
+                </div>
+            )
+        }
+
     }
 }
 
