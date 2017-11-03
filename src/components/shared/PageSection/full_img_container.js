@@ -66,29 +66,35 @@ class fullImageContainer extends Component {
 
         let banner;
         if (cItems !== undefined) {
-          if (cItems.name != '') {
-            banner = (<div key={cItems.id}>
+        if (cItems.name != '') {
+          banner = (
+            <div key={cItems.id}>
               <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
             </div>)
           }
 
-          var sections;
-          if (cItems.sections) {
-            sections = _.map(cItems.sections.sections, sec => {
-              if (sec.featured_image != '') {
-                return this.getBackGroundImageContent(sec);
-              } else {
+
+
+        var sections;
+        if (cItems.sections) {
+          sections = _.map(cItems.sections.sections, sec => {
+              if(sec.featured_image != ''){
+                  return this.getBackGroundImageContent(sec);
+               }else{
                 return this.getCard(sec);
               }
 
             })
           }
 
-          return (<div key={cItems.id}>
-            <div>{banner}</div>
-            <div >{sections}</div>
-          </div>)
-        }
+        return (
+            <div key ={cItems.id}>
+              <div>{banner}</div>
+              <div>{sections}</div>
+              <div className="footerSection"></div>
+            </div>
+              )
+          }
       });
     } else {
       return (<div>loading.....</div>)
