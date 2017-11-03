@@ -16,7 +16,7 @@ import LawsList from './Laws/Laws_list'
 import EducationalMaterialsList from './EducationalMaterials/Education_materials_list'
 import TestForm from '../contact'
 import StepForm from '../contact/stepform'
-
+import {compostFormObject, compostFormTitles as Titles} from '../contact/titles'
 class ResourcesContainer extends Component {
 
   constructor(props) {
@@ -102,7 +102,7 @@ class ResourcesContainer extends Component {
           authCode: '',
           OrganizationName: ''
         }}/></div>
-        <div className='container'><TestForm/></div>
+      <div className='container'><TestForm FormObject={compostFormObject}/></div>
         <div>{sections}</div>
       </div>)
     });

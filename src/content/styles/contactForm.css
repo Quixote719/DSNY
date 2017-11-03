@@ -29,10 +29,6 @@
   margin-bottom: 30px;
 }
 
-.red {
-  color: red;
-}
-
 .FormField {
   margin-bottom: 12px;
 }
@@ -93,6 +89,15 @@
   border: 1px solid #D8D8D8;
   border-radius: 3px;
   background-color: #F8F8F8;
+}
+
+.disabledContactForm input:disabled, .disabledContactForm fieldset:disabled .btn-default {
+  border: 0px solid #D8D8D8;
+  border-bottom: 1px solid #DFDFDF;
+  border-radius: 0px;
+  color: #333333;
+  font-size: 16px;
+  background-color: transparent;
 }
 
 .contactForm input[type=checkbox], .contactForm input[type=radio] {
