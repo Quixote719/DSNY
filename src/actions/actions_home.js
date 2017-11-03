@@ -14,17 +14,26 @@ export function carouselData() {
             })
     }
 }
-export function newsData() {
-    return function (dispatch) {
-        axios.get(NEWS_PAGE_DATA_URL)
-            .then((data) => {
-                dispatch({
-                    type: 'SET_NEWS_PAGE',
-                    payload: data,
-                })
-            })
+// export function newsData() {
+//     return function (dispatch) {
+//         axios.get(NEWS_PAGE_DATA_URL)
+//             .then((data) => {
+//                 dispatch({
+//                     type: 'SET_NEWS_PAGE',
+//                     payload: data,
+//                 })
+//             })
+//     }
+// }
+
+export function getNewsDataList(year) {
+    return function(dispatch) {
+      axios.get(NEWS_PAGE_DATA_URL.replace(/:MonthYear/g, year)).then((data) => {
+        dispatch({type: 'SET_NEWS_PAGE', payload: data})
+      })
     }
-}
+  }
+
 export function getCollectionSchedule(address) {
     return function (dispatch) {
         axios.get(COLLECTION_SCHEDULE_URL+address)

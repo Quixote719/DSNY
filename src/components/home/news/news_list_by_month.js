@@ -3,32 +3,36 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import {fetchPressReleaseList} from "../../../actions";
+import {getNewsDataList} from "../../../actions/actions_home";
 import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import moment from 'moment';
-import PressReleaseListItem from '../../Resources/PressReleases/press_release_list_item';
+import NewsPageList from './news_detail';
 import SubSectionDropdown from '../../shared/Sub_section_dropdown'
+import NewsMonthList from './news_month_list';
+
 import Header from '../../shared/Breadcrumb/breadcrumb_container'
 
-// Set initial state
-let PressReleaseListstate = {
-  year: 2017,
+let NewsListData = {
+  year: 'October 2017',
   activePage: 1
-};
+}
 
 class DSNYNews extends Component {
 
   componentDidMount() {
     const {id} = this.props
     const {year} = this.state
-    this.props.fetchPressReleaseList(year);
+    // this.props.fetchPressReleaseList(year);
+    this.props.getNewsDataList(year);
   }
   constructor(props) {
     super(props);
     // Retrieve the last state
-    this.state = PressReleaseListstate;
+    // this.state = PressReleaseListstate;
+    this.state = NewsListData;
 
-    this.fetchPressRelease = this.fetchPressRelease.bind(this);
+    // this.fetchPressRelease = this.fetchPressRelease.bind(this);
+    this.getNewsData = this.getNewsData.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -38,18 +42,18 @@ class DSNYNews extends Component {
 
   componentWillUnmount() {
     // Remember state for the next mount
-    PressReleaseListstate = this.state;
+    // PressReleaseListstate = this.state;
+    NewsListData = this.state;
   }
 
-  renderPosts(prl) {
-    return _.map(prl, prItem => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.id}/>);
-    });
-  }
+  // fetchPressRelease(year) {
+  //   this.setState({year: year});
+  //   this.props.fetchPressReleaseList(year);
+  // }
 
-  fetchPressRelease(year) {
+  getNewsData(year) {
     this.setState({year: year});
-    this.props.fetchPressReleaseList(year);
+    this.props.getNewsDataList(year);
   }
 
   render() {
@@ -63,32 +67,42 @@ class DSNYNews extends Component {
 
     if (cardDetails) {
 
-      return _.map(cardDetails, cItems => {
+      return _.map(cardDetails, Items => {
+        // let banner;
+        // if (Items.name !== '') {
 
-        let banner;
-        if (cItems.name != '') {
-          banner = (
-            <div key={cItems.id}>
-              <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
-            </div>
-          )
-        }
+        //   banner = (
+        //     <div key={Items.id}>
+        //       <Header title={Items.title} breadCrumbList={Items.breadcrumb} />
+        //     </div>
+        //   )
+        // }
+        var newsSections;
+        var cardsSections;
+        var image;
+        
 
-        var sections;
-        if (cItems.sections) {
-          sections = _.map(cItems.sections.sections, sec => {
-            return _.map(sec.cards, prItem => {
-              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.name} title={prItem.title} date={prItem.date} key={prItem.id}/>);
-            });
-
-          })
-        }
-
+        cardsSections = _.map(Items.slice(1, Items.length), sec => {
+          let itemCounter = 0;
+          // image = sec.image.base_path + sec.image.sizes.thumbnail.file;
+          image = sec.image.base_path + sec.image.file;
+          return (<NewsPageList slug={sec.name} title={sec.title} cardImage={sec.image != null ? image : ''} key={sec.id} NewsExplaination={sec.excerpt} itemCounter = {itemCounter++}/>);           
+        })
+        
+        newsSections = _.map(Items.slice(0, 1), sec => {
+          let itemCounter = 99;
+          // image = sec.image.base_path + sec.image.sizes.thumbnail.file;
+          image = sec.image.base_path + sec.image.file;
+          console.log(image);
+          return (<NewsPageList slug={sec.name} title={sec.title} cardImage={image} NewsExplaination={sec.excerpt} key={sec.id} itemCounter = {itemCounter}/>);           
+        })
+      
         return (
-          <div key ={cItems.id}>
-            <div>{banner}</div>
-            <div className='container'><SubSectionDropdown category='news-updates' selectedOption={this.state.year} ondropDownChange={this.fetchPressRelease}/></div>
-            <div className='container'>{sections}</div>
+          <div key ={Items.id}>
+            {/* <div>{banner}</div> */}
+            <div className='container'><NewsMonthList category='news-updates' selectedOption={this.state.year} ondropDownChange={this.getNewsData}/></div>
+            <div className='container latestNews'>{newsSections}</div>
+            <div className='container restNews'>{cardsSections}</div>
           </div>
         )
       });
@@ -98,11 +112,16 @@ class DSNYNews extends Component {
       )
     }
   }
-
 };
 
+// function mapStateToProps(state) {
+//   return {prl: state.resources.pressRelease.list};
+// }
+
 function mapStateToProps(state) {
-  return {prl: state.resources.pressRelease.list};
+  return {prl: state.carouselDataReducer.newsData.list};
 }
 
-export default connect(mapStateToProps, {fetchPressReleaseList})(DSNYNews);
+// export default connect(mapStateToProps, {fetchPressReleaseList})(DSNYNews);
+export default connect(mapStateToProps, {getNewsDataList})(DSNYNews);
+
