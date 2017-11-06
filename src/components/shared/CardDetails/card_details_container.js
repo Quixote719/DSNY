@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 
 //Actions
 import {fetchCardDetails} from "../../../actions";
+import ImageSection from '../../shared/ImageSection'
 
 //Sub Components
 import Header from '../Breadcrumb/breadcrumb_container'
@@ -56,14 +57,30 @@ class cardDetailContainer extends Component {
             </div>)
           }
 
-          var sections;
+          let sections;
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, sec => {
-
-              return (<div key={sec.id}>
-                <div>
-                  <CardSec dataObject={sec}/></div>
-              </div>);
+              if(sec.featured_image){
+                let ImageProps = {};
+                ImageProps.image = sec.featured_image.base_path + sec.featured_image.file;
+                ImageProps.content = sec.content;
+                return (
+                  <div key={sec.id}>
+                    <div>
+                      <ImageSection ImageProps = {ImageProps}/>
+                    </div>
+                  </div>
+                );
+              }
+              else{
+                return (
+                  <div key={sec.id}>
+                    <div>
+                      <CardSec dataObject={sec}/>
+                    </div>
+                  </div>
+                );
+              }
             })
           }
 
