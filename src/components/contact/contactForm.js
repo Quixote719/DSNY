@@ -105,7 +105,7 @@ const Step1 = (props) => {
     <FormTextarea title={Titles.CompostUseDescription} name="CompostUseDescription" onChange={handleChange} onBlur={handleBlur} value={values.CompostUseDescription}/>
     <FormSectionHeader title={Titles.sectionSix}/>
     <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.Pallets}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
+    <FormDateTimePicker value={values.DeliveryDeadline} title={Titles.DeliveryDeadline} onChange={setFieldValue} name="DeliveryDeadline"/>
     <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryDays" options={values.DeliveryDays}/>
     <FormDropdown disabled={values.editMode} value={values.FromHourOfDayId} title={Titles.FromHourOfDayId} name="FromHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.FromHoursOfDay}/>
     <FormDropdown disabled={values.editMode} value={values.ToHourOfDayId} title={Titles.ToHourOfDayId} name="ToHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.ToHoursOfDay}/>
