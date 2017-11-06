@@ -26,9 +26,9 @@ FormObject:{},
 
       const {FormObject} = this.props;
     if (FormObject && FormObject !== undefined) {
-    return (<div className='contactForm'>
+    return (<div className='container'><div className='contactForm'>
       <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={FormObject}/></fieldset>
-    </div>);
+    </div></div>);
   };
   return(<div>loading.....</div>)
 };
