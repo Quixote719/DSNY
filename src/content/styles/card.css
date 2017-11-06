@@ -79,6 +79,14 @@
   font-weight: bold;
 }
 
+.CardTitleTextEmptyBody{
+  color: #00764D;
+  font-size: 17.5px;
+  font-weight: bold;
+  padding-right:10px;
+  padding-top:3px;
+}
+
 .cardBody {
   min-height: 72px;
   min-width: 186px;
@@ -177,7 +185,8 @@
   background-color: #FFFFFF;
   border: 1px solid #7CC04B;
   padding: 15px;
-  margin: 10px;
+  margin-top: 30px;
+  margin-bottom:15px;
   cursor: pointer;
 }
 

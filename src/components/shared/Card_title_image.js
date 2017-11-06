@@ -4,7 +4,7 @@ import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../content/styles/card.css';
 import LazyImage from './LazyImage';
 import Parser from 'html-react-parser';
-import TruncateMarkup from 'react-truncate-markup';
+import Truncate from 'react-truncate';
 
 
 class CardTitleImage extends Component {
@@ -20,11 +20,10 @@ class CardTitleImage extends Component {
             <div className='cardTitleText'>{this.props.title}</div>
           </div>
           <div className ='cardImageBody'>
-             <TruncateMarkup lines={3}> 
               <div className ='cardImageBodyText' >
-                  {Parser(this.props.body)}
+                 <Truncate lines={3}>   {Parser(this.props.body)}</Truncate>
               </div>
-              </TruncateMarkup>
+              
           </div>
           </div>
       </Col>

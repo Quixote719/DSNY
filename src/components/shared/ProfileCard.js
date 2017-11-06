@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dotdotdot from 'react-dotdotdot';
-import TruncateMarkup from 'react-truncate-markup';
+import Truncate from 'react-truncate';
 import Parser from 'html-react-parser';
 
 class ProfileCard extends Component {
@@ -14,12 +14,11 @@ class ProfileCard extends Component {
               :<img className="ProfileCardImg" src={require('../../content/images/Leader_avatar.png')} alt=""/>
             }
           </div>
-          <div className="ProfileCardName">{this.props.name}</div>
-          <TruncateMarkup lines={3}> 
+          <div className="ProfileCardName">{this.props.name}</div> 
             <div className="ProfileCardDuty">
-               {Parser(this.props.duty)}
+               <Truncate lines={3}> {Parser(this.props.duty)} </Truncate>  
             </div>
-         </TruncateMarkup>  
+         
       </div>
     )
   }

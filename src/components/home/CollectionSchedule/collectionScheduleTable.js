@@ -22,7 +22,7 @@ class CollectionScheduleTable extends Component {
         if(index == 0 ){
         return(
             <div>
-                <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" />
+                <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon"/>
                 <div className ="garbageTitle">
                     GARBAGE
                 </div>
@@ -32,7 +32,7 @@ class CollectionScheduleTable extends Component {
         else if(index == 1){
             return(
                 <div>
-                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" />                <div className ="recyclingTypeTitle">
+                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
                     <div className ="recycleTitle">
                         RECYCLING
                     </div>
@@ -42,7 +42,7 @@ class CollectionScheduleTable extends Component {
         else{
             return(
                 <div>
-                    <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" />
+                    <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon"/>
                     <div className ="organicsTitle">
                         ORGANICS
                     </div>

@@ -12,12 +12,11 @@ class CardTitle extends Component {
   render() {
     return (
       <Col xs={12} sm={6} md={3}>
+      <div className={this.props.className}>
         <div className='subSectioncardT' onClick={this.login}>
-
-          <div className='cardTitle'>
-            <div className='cardTitleText'>{this.props.title}</div>
-          </div>
+            <div className='CardTitleTextEmptyBody'>{this.props.title}</div>
         </div>
+      </div>  
       </Col>
     );
   };
