@@ -117,6 +117,10 @@ a{
   color: #00764E;
 }
 
+p>a{
+  font-weight: bold;
+}
+
 a:focus, a:hover {
   color: #7CC04B;
   text-decoration: none;
