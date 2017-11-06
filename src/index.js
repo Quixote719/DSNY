@@ -57,11 +57,13 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
     <ScrollToTop>
       <div>
+
         <div id="headerContent" className="headerContent">
-          <Header/>
+        <Header />
           <div>
             <Switch>
-              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home} />
+              {/* <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home}/> */}
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} component={Home}/>
               <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
               <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
@@ -88,16 +90,17 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/educational-materials/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"} component={ResourcesContainer}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof/:keyword"} component={Howtogetridof}/>
-              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug"} component={fullImageContainer}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/how-to-get-rid-of/:itemName"} component={HowtogetridofDetailsItem}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/howtogetridof"} component={Howtogetridof}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
-              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule"} component={CollectionSchedule}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule"} component={CollectionSchedule}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/:address"} component={CollectionSchedule}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search"} component={SiteSearch}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>
         </div>

@@ -1,6 +1,5 @@
 .PressReleaseHeadertitle {
   color: #015949;
-  font-family: "Helvetica Neue";
   font-size: 48px;
   font-weight: bold;
   letter-spacing: -1px;
@@ -11,7 +10,6 @@
 
 .PressReleasedetailDate {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 17.5px;
   font-weight: bold;
   line-height: 22px;
@@ -19,7 +17,6 @@
 
 .PressReleasedetailStatus {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
   text-align: right;

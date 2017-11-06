@@ -1,3 +1,7 @@
+.PressReleaseBody{
+  margin-top: 30px;
+}
+
 .patternLineGreen {
   height: 10px;
   margin-bottom: 25px;
@@ -5,16 +9,22 @@
 }
 
 .PressReleaseBodytext {
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   margin-right: 25px;
+}
+
+.PressReleaseBodyAddress{
+  font-weight: bold;
+}
+
+.PressReleasePaddingTop{
+  margin-top: 15px;
 }
 
 .PressReleaseBodySubHeaders {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 24px;
   font-weight: bold;
   line-height: 29px;
@@ -31,13 +41,21 @@
 }
 
 .PressReleaseBodycontact {
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 10px;
 }
 
 .PressReleaseBodycontact a {
   color: #00764D;
-  font-family: "Helvetica Neue";
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px){
+  .PressReleaseContactBlock .patternLineGreen{
+    display: none;
+  }
+  .PressReleaseContactBlock{
+    margin: 30px 0;
+  }
 }
