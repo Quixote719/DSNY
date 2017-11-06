@@ -50,7 +50,7 @@ class FormMultiSelect extends Component {
 };
 
 FormMultiSelect.propTypes = {
-  options: PropTypes.array,
+  options: PropTypes.object,
   title: PropTypes.string
 };
 
