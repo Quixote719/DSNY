@@ -14,7 +14,7 @@ class ServiceRequestsSection extends Component {
     return _.map(this.props.ServiceRequestsProps.cards, Item => {
       return (
         <div className='serviceRequestsCards' key={Item.id}>
-          <CardTitle title={Item.title} key={Item.id} />
+          <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/Compostrequestform`}><CardTitle title={Item.title} key={Item.id} /></Link>
         </div>
       );
     });

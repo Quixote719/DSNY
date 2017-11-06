@@ -178,7 +178,7 @@ const InnerForm = (props) => {
     <Col xs={12}>
       <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
     </Col>
-    <DisplayFormikState {...props}/>
+
   </form>)
 };
 
