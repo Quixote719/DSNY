@@ -1,35 +1,37 @@
 import React, {Component} from "react";
-import {Row, Col, Tooltip} from 'react-bootstrap';
-import FormSectionHeader from './form_section_header';
-import FormHeader from './form_header';
-import FormMultiSelect from './multiselect_field'
-import FormBoolean from './form_boolean';
-import FormField from './form_field';
-import FormDropdown from './dropdown_field'
-import FormDateTimePicker from './dateTimepicker_field'
-import Datetime from 'react-datetime';
+import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
-import FormTextarea from './textarea_field';
-import {withFormik, Formik, Field, Form} from 'formik'
-import {compostFormObject, compostFormTitles as Titles} from './titles'
-import ContactForm from './contactForm'
+//Actions
+import {fetchFormObject} from "../../actions/contact_forms";
+import Form from './contactForm'
 
 import '../../content/styles/contactForm.css';
 
 
-class TestForm extends Component {
+class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      FormObject: props.FormObject,
+FormObject:{},
       editMode:true
     }
   }
+
+  componentDidMount() {
+    this.props.fetchFormObject();
+  }
+
   render() {
     return (<div className='contactForm'>
-      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><ContactForm disabled={!this.state.editMode} customFormData={this.state.FormObject}/></fieldset>
+      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={this.state.FormObject}/></fieldset>
     </div>);
   };
 };
 
-export default TestForm;
+
+function mapStateToProps(state) {
+  return {FormObject: state.forms.formObject};
+}
+
+export default connect(mapStateToProps, {fetchFormObject})(ContactForm);

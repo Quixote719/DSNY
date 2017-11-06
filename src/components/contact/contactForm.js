@@ -178,13 +178,13 @@ const InnerForm = (props) => {
     <Col xs={12}>
       <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
     </Col>
-
+    <DisplayFormikState {...props} />
   </form>)
 };
 
 
 // Wrap our form with the using withFormik HoC
-export default  withFormik({
+export default withFormik({
   // Transform outer props into form values
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)

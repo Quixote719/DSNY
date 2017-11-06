@@ -97,7 +97,7 @@ class ResourcesContainer extends Component {
 
       return (<div key={prItem.id}>
         <div>{banner}</div>
-        <div className='container'><TestForm FormObject={compostFormObject}/></div>
+        <div className='container'><TestForm/></div>
         <div>{sections}</div>
       </div>)
     });
