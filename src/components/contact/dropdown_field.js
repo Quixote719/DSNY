@@ -7,12 +7,12 @@ import {MenuItem, DropdownButton} from 'react-bootstrap';
 
 const booleanOptions = [
   {
-    "Id": 1,
+    "Id": true,
     "Name": "Yes",
     "DisplayName": "Yes",
     "Selected": false
   }, {
-    "Id": 2,
+    "Id": false,
     "Name": "No",
     "DisplayName": "No",
     "Selected": false
@@ -24,10 +24,19 @@ class FormDropdown extends Component {
     this.onInputChange = this.onInputChange.bind(this);
 
     this.state = {
-      option: "Select one"
+      option:props.value  ? this.searchKey(props.value, props.options?props.options : booleanOptions) :"Select one",
+      selected:false
     }
   }
 
+   searchKey(Key, myArray){
+      for (var i=0; i < myArray.length; i++) {
+          if (myArray[i].Id === Key) {
+            console.log(myArray[i].DisplayName, Key);
+              return myArray[i].DisplayName;
+          }
+      }
+  }
   onInputChange(item) {
     this.setState({option: item.DisplayName});
     this.props.onChange(this.props.name, item.Id)
@@ -45,7 +54,7 @@ class FormDropdown extends Component {
         <fieldset>
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
           <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
-              {this.state.option}
+              {this.state.option }
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret="noCaret" id="dropdown-no-caret">
             {
               this.renderList(

@@ -64,22 +64,22 @@ const Step1 = (props) => {
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="ApplyingAs" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={[
-        {
-          "Id": 1,
-          "Name": "ApplyingAsStreetTreeSteward",
-          "DisplayName": "Street Tree Steward",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "ApplyingAsOrganization",
-          "DisplayName": "Organization",
-          "Selected": false
-        }
-      ]}/>
-    <FormField title={Titles.OrganizationName} isHidden={values.ApplyingAs !== 2} type="text" disabledf={values.ApplyingAs !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
-    <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber && <Tooltip placement="bottom" className="in" id="tooltip-bottom">{errors.OrganizationTaxIdNumber}</Tooltip>}</FormField>
-    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <Tooltip placement="bottom" className="in" id="tooltip-bottom">{errors.OrganizationWebsite}</Tooltip>}</FormField>
+    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
+    <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
+    <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} className={
+          errors.OrganizationTaxIdNumber && touched.OrganizationTaxIdNumber ? (
+            'input error'
+          ) : (
+            'input'
+          )
+        } error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
+    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} className={
+          errors.OrganizationWebsite && touched.OrganizationWebsite ? (
+            'input error'
+          ) : (
+            'input'
+          )
+        } error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
     <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -87,97 +87,33 @@ const Step1 = (props) => {
     <FormField title={Titles.FirstName} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.LastName} type="text" name="LastName" onChange={handleChange} onBlur={handleBlur} value={values.LastName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.Title} type="text" name="Title" onChange={handleChange} onBlur={handleBlur} value={values.Title}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.IsCertifiedNycMasterComposter} name="IsCertifiedNycMasterComposter" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} noOptions="true"/>
+    <FormDropdown disabled={values.editMode} title={Titles.IsCertifiedNycMasterComposter} value={values.IsCertifiedNycMasterComposter} name="IsCertifiedNycMasterComposter" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} noOptions="true"/>
     <FormField title={Titles.PrimaryPhone} type="text" name="PrimaryPhone" onChange={handleChange} onBlur={handleBlur} value={values.PrimaryPhone}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.PrimaryPhoneTypeId} name="PrimaryPhoneTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.PrimaryPhoneTypes}/>
+    <FormDropdown disabled={values.editMode} title={Titles.PrimaryPhoneTypeId} value={values.PrimaryPhoneTypeId} name="PrimaryPhoneTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.PrimaryPhoneTypes}/>
     <FormField title={Titles.SecondaryPhone} type="text" name="SecondaryPhone" onChange={handleChange} onBlur={handleBlur} value={values.SecondaryPhone}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.SecondaryPhoneTypeId} name="SecondaryPhoneTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.SecondaryPhoneTypes}/>
+    <FormDropdown disabled={values.editMode} title={Titles.SecondaryPhoneTypeId} value={values.SecondaryPhoneTypeId} name="SecondaryPhoneTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.SecondaryPhoneTypes}/>
     <FormField title={Titles.Email} type="text" name="Email" onChange={handleChange} onBlur={handleBlur} value={values.Email}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.ConfirmEmail} type="text" name="ConfirmEmail" onChange={handleChange} onBlur={handleBlur} value={values.ConfirmEmail}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormSectionHeader title={Titles.sectionFive}/>
-    <FormDropdown disabled={values.editMode} title={Titles.CompostSiteTypeId} name="CompostSiteTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteTypes}/>
+    <FormDropdown disabled={values.editMode}  value={values.CompostSiteTypeId}  title={Titles.CompostSiteTypeId} name="CompostSiteTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteTypes}/>
     <FormField title={Titles.OtherCompostSiteType} isHidden={values.CompostSiteTypeId !== 9} type="text" disabledf={values.CompostSiteTypeId !== 9} name="OtherCompostSiteType" onChange={handleChange} onBlur={handleBlur} value={values.OtherCompostSiteType}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.CompostSitePermittingOrganizationId} name="CompostSitePermittingOrganizationId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSitePermittingOrganizations}/>
+    <FormDropdown disabled={values.editMode} value={values.CompostSitePermittingOrganizationId}  title={Titles.CompostSitePermittingOrganizationId} name="CompostSitePermittingOrganizationId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSitePermittingOrganizations}/>
     <FormField title={Titles.OtherCompostSitePermittingOrganization} isHidden={values.CompostSitePermittingOrganizationId !== 6} type="text" disabledf={values.CompostSitePermittingOrganizationId !== 6} name="OtherCompostSitePermittingOrganization" onChange={handleChange} onBlur={handleBlur} value={values.OtherCompostSitePermittingOrganization}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.SiteSize} type="text" name="SiteSize" onChange={handleChange} onBlur={handleBlur} value={values.SiteSize}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.IsGreenThumbGarden} name="IsGreenThumbGarden" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
-    <FormDropdown disabled={values.editMode} title={Titles.HasReceivedDsnyCompostBefore} name="HasReceivedDsnyCompostBefore" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
+    <FormDropdown disabled={values.editMode} value={values.IsGreenThumbGarden}  title={Titles.IsGreenThumbGarden} name="IsGreenThumbGarden" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
+    <FormDropdown disabled={values.editMode} value={values.HasReceivedDsnyCompostBefore}  title={Titles.HasReceivedDsnyCompostBefore} name="HasReceivedDsnyCompostBefore" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormTextarea title={Titles.CompostUseDescription} name="CompostUseDescription" onChange={handleChange} onBlur={handleBlur} value={values.CompostUseDescription}/>
     <FormSectionHeader title={Titles.sectionSix}/>
     <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.Pallets}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
-    <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryOn" options={[
-        {
-          "Id": 1,
-          "Name": "DeliverOnMonday",
-          "DisplayName": "Monday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnTuesday",
-          "DisplayName": "Tuesday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "DeliverOnWednesday",
-          "DisplayName": "Wednesday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnThursday",
-          "DisplayName": "Thursday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "DeliverOnFriday",
-          "DisplayName": "Friday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnSaturday",
-          "DisplayName": "Saturday",
-          "Selected": false
-        }
-      ]}/>
-    <FormDropdown disabled={values.editMode} title={Titles.FromHourOfDayId} name="FromHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.FromHoursOfDay}/>
-    <FormDropdown disabled={values.editMode} title={Titles.ToHourOfDayId} name="ToHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.ToHoursOfDay}/>
+    <FormDateTimePicker value={values.DeliveryDeadline} title={Titles.DeliveryDeadline} onChange={setFieldValue} name="DeliveryDeadline"/>
+    <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryDays" options={values.DeliveryDays}/>
+    <FormDropdown disabled={values.editMode} value={values.FromHourOfDayId} title={Titles.FromHourOfDayId} name="FromHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.FromHoursOfDay}/>
+    <FormDropdown disabled={values.editMode} value={values.ToHourOfDayId} title={Titles.ToHourOfDayId} name="ToHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.ToHoursOfDay}/>
     <FormField title={Titles.DeliveryNotes} type="text" name="DeliveryNotes" onChange={handleChange} onBlur={handleBlur} value={values.DeliveryNotes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.EntranceHeightWidth} type="text" name="EntranceHeightWidth" onChange={handleChange} onBlur={handleBlur} value={values.EntranceHeightWidth}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormDropdown disabled={values.editMode} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
-    <FormMultiSelect isHidden={values.HasAlternateSideParking !== 1} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParking" options={[
-        {
-          "Id": 1,
-          "Name": "AlternateSideParkingMonday",
-          "DisplayName": "Monday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingTuesday",
-          "DisplayName": "Tuesday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "AlternateSideParkingWednesday",
-          "DisplayName": "Wednesday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingThursday",
-          "DisplayName": "Thursday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "AlternateSideParkingFriday",
-          "DisplayName": "Friday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingSaturday",
-          "DisplayName": "Saturday",
-          "Selected": false
-        }
-      ]}/>
-    <FormField isHidden={values.HasAlternateSideParking !== 1} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormDropdown disabled={values.editMode} value={values.HasAlternateSideParking} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
+    <FormMultiSelect isHidden={values.HasAlternateSideParking !== true} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
+    <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <Col xs={12}>
       <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
@@ -188,8 +124,8 @@ const Step1 = (props) => {
 const Step2 = ({ previousStep,handleChange, values }) => (
   <div>
     <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
-    
-    <input 
+
+    <input
       type="text"
       name="authCode"
       value={values.authCode}
@@ -210,7 +146,7 @@ const Steps = ({
   setSubmitting,
   ...props
 }) => (
-  
+
   <form onSubmit={handleSubmit}>
     {{
       1: <Step1 nextStep={nextStep} {...props} />,
@@ -225,11 +161,11 @@ const Steps = ({
 const TestForm = compose(
   withState('step', 'setStep', 1),
   withHandlers({
-    validateStep: ({ stepValidated,validate,setStep, step }) => 
-      () =>validate, 
-    nextStep: ({ setStep, step }) => 
+    validateStep: ({ stepValidated,validate,setStep, step }) =>
+      () =>validate,
+    nextStep: ({ setStep, step }) =>
       () => setStep(step + 1),
-    previousStep: ({ setStep, step }) => 
+    previousStep: ({ setStep, step }) =>
       () => setStep(step - 1)
   }),
   withFormik({
@@ -240,7 +176,8 @@ const TestForm = compose(
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } else if (!values.OrganizationWebsite) {
+    } 
+    if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }
     // if (!values.WillPostCompostRecipientSignage) {
@@ -256,6 +193,9 @@ const TestForm = compose(
       console.log(values);
     }, 1000);
   },
+  validateOnFocus: true,
+  validateOnChange: true,
+  validateOnBlur: false,
   displayName: 'BasicForm'
 })
 )(Steps);
