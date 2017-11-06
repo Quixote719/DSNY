@@ -28,7 +28,8 @@ html body {
   display: none;
 }
 
-.SContainer {
+.SContainer, .container{
+  padding: 0;
   width: 940px;
   margin: 0 auto;
   overflow: hidden;
@@ -92,7 +93,7 @@ html body {
   .paddingRight{
     padding-right: 15px;
   }
-  .SContainer {
+  .SContainer .container{
     margin: 0 15px;
     width: auto;
   }
