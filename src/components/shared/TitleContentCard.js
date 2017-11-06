@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
 import Dotdotdot from 'react-dotdotdot';
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 import '../../content/styles/dsnyCard.css';
 
 class TitleContentCard extends Component {
@@ -38,15 +40,18 @@ class TitleContentCard extends Component {
     }
     let CardType = this.props.type!==undefined?styles[this.props.type]:styles.narrow
     let link = dataObject.linked_page.url||'/about/bureaus';
+    let content = dataObject.content||'';
     return (
         <div className="TitleContentCard" style={CardType}>
           <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + link}>
             <div className="TitleContentLink">
              <div className="CardTitle">{dataObject.title}</div>
              <div className="CardContent" >
-                <Dotdotdot clamp={3}>
-                    <div dangerouslySetInnerHTML={{__html: dataObject.content}}></div>
-                </Dotdotdot>
+             <TruncateMarkup lines={3}>
+               <div>
+                 {Parser(content)}
+               </div>
+             </TruncateMarkup>
              </div>
             </div>
           </Link>

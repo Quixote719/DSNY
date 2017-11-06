@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 
 class ContentCard extends Component {
   render() {
@@ -41,10 +43,14 @@ class ContentCard extends Component {
     else if(this.props.type ==='4'){
       cardType = styles.ourWorkCard;
     }
-
+    let content = this.props.content||'';
     return (
         <div style = {cardType} className='CardContent'>
-            <div dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+            <TruncateMarkup lines={9}>
+              <div>
+                {Parser(content)}
+              </div>
+            </TruncateMarkup>
         </div>
     );
   };

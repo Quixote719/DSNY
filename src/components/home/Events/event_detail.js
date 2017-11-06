@@ -12,6 +12,7 @@ import LazyImage from '../../shared/LazyImage';
 import MapWindow from '../../shared/map_window';
 import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import moment from 'moment';
+import dateFormat from 'dateformat';
 
 const google = window.google;
 
@@ -32,33 +33,12 @@ class EventDetail extends Component {
     this.props.fetchEventDetails(slug);
   }
 
-  renderimg(sec) {
-    if (sec.featured_image) {
-      return (<img alt={sec.featured_image.name} style={{
-        width: '100%',
-        margin: '5px 0px'
-      }} src={`${sec.featured_image.base_path}${sec.featured_image.file} `} key={sec.featured_image.image_id}/>);
-    }
-
-  }
-  rendertop(sec) {
-    return (
-      <div key={_.random(0, 200, true)}>
-        <div><PressReleaseHeader title={sec.header} date={moment(sec.date).format('dddd, MMMM Do, YYYY')} status={sec.status_text}/></div>
-        <div>{this.renderimg(sec)}</div>
-      </div>
-
-    )
-  }
-
   render() {
-
     const {prd} = this.props;
     return (
       <div >
         {this.renderPage(prd)}
       </div>
-
     );
   };
 
@@ -77,11 +57,21 @@ class EventDetail extends Component {
     if (cardDetails) {
         var mail = "mailTo:" + cardDetails.ContactEmail
         var website = "" + cardDetails.Website
+        let date = dateFormat(cardDetails.FromDateTime, "mmmm d yyyy, dddd, h TT") + ' - '+
+        dateFormat(cardDetails.ToDateTime, "mmmm d yyyy, dddd, h TT").split(',').pop();
+
         return(
         <div>
-             <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><a href="/">Home</a></li><li className=""><a href="/resources">Events</a></li></ol></div></div> </div></div>
-
-
+             <div className="GBanner">
+               <div className="BreadcrumbList">
+                 <div className="container">
+                   <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
+                     <li className=""><a href = {process.env.REACT_APP_SITE_RELATIVE_URL}>Home</a></li>
+                     <li className=""><a href= {process.env.REACT_APP_SITE_RELATIVE_URL + '/dsnyevents'}>Events</a></li>
+                    </ol>
+                 </div>
+               </div>
+              </div>
              <div className='container PressReleaseHeader'>
               <Row>
                 <Col xs={12}>
@@ -92,7 +82,6 @@ class EventDetail extends Component {
                 <Col xs={12}>
                   <div className='patternLineGreen'></div>
                 </Col>
-
               </Row>
             </div>
             <div className='container'>
@@ -104,30 +93,26 @@ class EventDetail extends Component {
               <Row>
                 <Col xs={12} sm={8} md={9}>
                   <div className='PressReleaseBodySubHeaders' dangerouslySetInnerHTML={{
-                    __html: cardDetails.EventDate
+                    __html:  date
+                  }}/>
+                  <div className='PressReleaseBodytext PressReleaseBodyAddress' dangerouslySetInnerHTML={{
+                    __html: cardDetails.HouseNo + ' ' + cardDetails.Street + ' ' + cardDetails.Borough
                   }}/>
                   <div className='PressReleaseBodycontact PressReleaseBodytext' dangerouslySetInnerHTML={{
                     __html: cardDetails.Description
                   }}/>
-                  <div className='PressReleaseBodytext' dangerouslySetInnerHTML={{
-                    __html: cardDetails.HouseNo + ' ' + cardDetails.Street + ' ' + cardDetails.Borough
-                  }}/>
                   <div className="PressReleaseBodycontact">Website: <a href={website}>{cardDetails.Website}</a></div>
                 </Col>
-                <Col xs={12} sm={6} md={3}>
-                  <div className="nopadding col-xs-12">
+                <Col xs={12} sm={4} md={3} className="PressReleaseContactBlock">
                     <div className="PressReleaseBodySubHeaders">Contact</div>
                     <div className="PressReleaseBodycontact"><a href={mail}>{cardDetails.ContactEmail}</a></div>
                     <div className="PressReleaseBodycontact">{cardDetails.ContactPhone}</div>
-                    <div className="patternLineGreen"></div>
-                  </div>
+                    <div className="patternLineGreen PressReleasePaddingTop"></div>
                 </Col>
               </Row>
             </div>
         </div>
-
         )
-
     } else {
       return (
         <div>loading.....</div>

@@ -10,15 +10,18 @@ class FormMultiSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      options: props.options
+      object:props.options,
+      options: props.options.Values
     }
   }
 
   toggleCheckbox(index) {
-    const {options} = this.state;
+    const {options, object} = this.state;
     options[index].Selected = !options[index].Selected;
-    this.props.onMultiSelect(options[index].Name, options[index].Selected)
+
     this.setState({options});
+    object.Values = options;
+      this.props.onMultiSelect(this.props.name, object)
   }
 
   renderOptions(options) {
@@ -47,7 +50,7 @@ class FormMultiSelect extends Component {
 };
 
 FormMultiSelect.propTypes = {
-  options: PropTypes.array,
+  options: PropTypes.object,
   title: PropTypes.string
 };
 

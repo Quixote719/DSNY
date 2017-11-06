@@ -1,7 +1,6 @@
 const ROOT_WORDPRESS_URL = 'http://dsnydev.wpengine.com/wp-json/';
 
 const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
-
 const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') === -1
   ? '?'
   : ''}`;
@@ -14,9 +13,9 @@ export const RID_OF_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchDis
 export const SITE_SEARCH_KEYWORDS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getSiteSearchKeywordList`
 export const SITE_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchSite?s`
 
-export const RID_OF_ITEM_DETAILS_URL= `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name`
-export const COLLECTION_SCHEDULE_URL= "https://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYCollection/CollectionSchedule/"
-export const HOLIDAY_DATA_URL= `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
+export const RID_OF_ITEM_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name`
+export const COLLECTION_SCHEDULE_URL = "https://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYCollection/CollectionSchedule/"
+export const HOLIDAY_DATA_URL = `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
 export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=contact-page`
 
 // zzzzexport const MEDIAS_ALL_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/`;
@@ -34,3 +33,7 @@ export const FETCH_BUREAUS_DETAILS_URL = constructWpUrl('dsny/v1/getPressRelease
 export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL}Events/GetAllByBorough?borough=:borough`;
 export const FETCH_EVENT_DETAILS_URL = `${REST_WEBAPI_URL}Events/GetEventByID?eventID=:eventID`;
 export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL}garages`;
+
+
+//Forms
+export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests/new`;

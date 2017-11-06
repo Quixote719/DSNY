@@ -10,7 +10,7 @@ import {
   FETCH_LANDING_PAGE_URL,
   FETCH_CARD_DETAILS_URL,
   FETCH_DROPDOWN_LIST,
-  FETCH_BUREAUS_DETAILS_URL,
+  FETCH_BUREAUS_DETAILS_URL
 } from '../constants/ApiConstants';
 
 export function fetchLandinPageDetails(category) {
@@ -23,9 +23,11 @@ export function fetchLandinPageDetails(category) {
 }
 
 export function fetchCardDetails(category) {
+  console.log(category);
   return function(dispatch) {
     dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_CARD_DETAILS_URL.replace(':category', category)).then((data) => {
+      debugger;
       dispatch({type: types.CARD_DETAILS, payload: data})
     })
   }

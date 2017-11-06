@@ -259,6 +259,7 @@ input::-ms-clear {
     border-bottom: 2px solid #7CC04B;
 }
 #collectionSearchResults{
+    cursor: pointer;
     position: absolute;
     top: 30px;
     right: 8px;

@@ -74,6 +74,7 @@ class Location extends Component {
   constructor(props, context) {
       super(props, context);
       this.state = {
+        isMarkerShown: true,
         Center: { lat: 40.72390127, lng: -73.88979419 },
         Locations: this.props.LocationList
       }
@@ -112,6 +113,7 @@ class Location extends Component {
       <div>
         <div className='ReactGoogleMap'>
             <MyMapComponent
+              isMarkerShown = {this.state.isMarkerShown}
               Center = {this.state.Center}
               Locations = {this.state.Locations}
               onMarkerClick = {this.onMarkerClick}
