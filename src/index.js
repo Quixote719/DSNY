@@ -65,6 +65,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home} />
               {/* <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home}/> */}
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} component={Home}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"} component={DSNYNews}/>
               <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
               <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
               <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>

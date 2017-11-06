@@ -45,7 +45,7 @@ class NewsPageList extends Component {
             return (
                 <Row>
                   <div className="newsBottomSection">
-                    <Col xs={12} sm={6} md={3} className='newsDesktopSection'>
+                    <Col xs={12} sm={6} md={3} className='newsImageSection'>
                         <div>
                             <div className='newscardImage' style={{
                                 backgroundImage: `url(${this.props.cardImage})`
