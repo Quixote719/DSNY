@@ -24,7 +24,7 @@ class About extends Component {
 
   render() {
 
-      let About = {};
+      let About;
       let BannerText = {};
       let PageExplanation = {};
       let LeadershipProps = {};
@@ -74,57 +74,57 @@ class About extends Component {
               About = this.props.AboutData.data;
       }
 
+      if(About !== undefined){
         BannerText.title = About.header;
         BannerText.content = About.header_content;
 
-      if(this.props.AboutData !== undefined){
-          _.map(this.props.AboutData.data.sections.sections, item =>{
-              switch (item.name){
-                case 'about-top':{
-                  PageExplanation.content = item.content;
-                  break;
-                }
-                case 'about-leadership':{
-                  LeadershipProps.title = item.header;
-                  LeadershipProps.content = item.content;
-                  LeadershipProps.ProfileUrl = item.featured_image.base_path + item.featured_image.file;
-                  break;
-                }
-                case 'about-bureaus':{
-                  BureausProps.title = item.header;
-                  BureausProps.cards = item.cards.slice(0, 6);
-                  BureausProps.CardType = item.card_data.card_type;
-                  break;
-                }
-                case 'about-strategic-plan':{
-                  StrategicPlanProps.title = item.header;
-                  StrategicPlanProps.content = item.content;
-                  break;
-                }
-                case 'about-foundation':{
-                  FoundationProps.title = item.header;
-                  FoundationProps.content = item.content;
-                  FoundationProps.cards = item.cards;
-                  break;
-                }
-                case 'about-locations':{
-                  LocationProps.image = item.featured_image.base_path + item.featured_image.file;
-                  LocationProps.content = item.content;
-                  break;
-                }
-                case 'about-going-green':{
-                  OperationProps.title = item.header;
-                  OperationProps.content = item.content;
-                  OperationProps.cards = item.cards;
-                  break;
-                }
-                default:{
-                  break;
-                }
-              }
-          });
+              _.map(About.sections.sections, item =>{
+                    switch (item.name){
+                      case 'about-top':{
+                        PageExplanation.content = item.content;
+                        break;
+                      }
+                      case 'about-leadership':{
+                        LeadershipProps.title = item.header;
+                        LeadershipProps.content = item.content;
+                        LeadershipProps.ProfileUrl = item.featured_image.base_path + item.featured_image.file;
+                        break;
+                      }
+                      case 'about-bureaus':{
+                        BureausProps.title = item.header;
+                        BureausProps.cards = item.cards.slice(0, 6);
+                        BureausProps.CardType = item.card_data.card_type;
+                        break;
+                      }
+                      case 'about-strategic-plan':{
+                        StrategicPlanProps.title = item.header;
+                        StrategicPlanProps.content = item.content;
+                        break;
+                      }
+                      case 'about-foundation':{
+                        FoundationProps.title = item.header;
+                        FoundationProps.content = item.content;
+                        FoundationProps.cards = item.cards;
+                        break;
+                      }
+                      case 'about-locations':{
+                        LocationProps.image = item.featured_image.base_path + item.featured_image.file;
+                        LocationProps.content = item.content;
+                        break;
+                      }
+                      case 'about-going-green':{
+                        OperationProps.title = item.header;
+                        OperationProps.content = item.content;
+                        OperationProps.cards = item.cards;
+                        break;
+                      }
+                      default:{
+                        break;
+                      }
+                    }
+                });
+          }
       }
-    }
 }
 
 function mapStateToProps(state) {
