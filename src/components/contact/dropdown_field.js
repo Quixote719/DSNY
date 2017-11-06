@@ -24,10 +24,17 @@ class FormDropdown extends Component {
     this.onInputChange = this.onInputChange.bind(this);
 
     this.state = {
-      option: "Select one"
+      option:props.value !== '' && props.options ? this.searchKey(props.value, props.options) :"Select one"
     }
   }
 
+   searchKey(Key, myArray){
+      for (var i=0; i < myArray.length; i++) {
+          if (myArray[i].name === Key) {
+              return myArray[i].DisplayName;
+          }
+      }
+  }
   onInputChange(item) {
     this.setState({option: item.DisplayName});
     this.props.onChange(this.props.name, item.Id)
