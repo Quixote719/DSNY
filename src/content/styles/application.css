@@ -24,7 +24,9 @@ html body {
   padding-left: 8px;
 }
 
-
+.gm-svpc{
+  display: none;
+}
 
 .SContainer {
   width: 940px;
