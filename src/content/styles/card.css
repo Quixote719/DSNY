@@ -75,7 +75,6 @@
 
 .cardTitleText {
   color: #00764D;
-  font-family: "Helvetica Neue";
   font-size: 17.5px;
   font-weight: bold;
 }
@@ -87,7 +86,6 @@
 
 .cardBodyText {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
   overflow: hidden;
@@ -112,20 +110,63 @@
   cursor: pointer;
 }
 
+
+.NsubSectioncardTI{
+  min-height: 338px;
+  min-width: 250px;
+  background-color: #FFFFFF;
+  margin-top:5px;
+  margin-bottom:15px;
+  cursor: pointer;
+}
+
+
+.cardImage{
+  min-height: 169px;
+  min-width: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.cardImageBody{
+  padding-left:19px;
+  padding-right:23px;
+  padding-bottom:18px;
+  padding-top:8px;
+}
+
+.cardImageBodyText{
+  color: #333333;
+  font-size: 16px;
+  line-height: 24px;
+  overflow: hidden;
+}
+
 .subSectioncardTI .cardTitleText {
   padding: 15px;
   max-height: 70px;
   margin-top: 35px;
 }
 
-.cardImage {
+.cardImageTitle{
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+}
+
+
+/*.cardImage {
   min-height: 65px;
   min-width: 190px;
   overflow: hidden;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
+}*/
 
 
 /*card with title and image*/
@@ -142,4 +183,26 @@
 
 .subSectioncardT .cardTitleText {
   max-height: 80px;
+}
+
+@media only screen and (max-width: 500px) {
+  .NsubSectioncardTI{
+    min-height: 250px;
+    min-width: 250px;
+    background-color: #FFFFFF;
+    margin-top:5px;
+    margin-bottom:15px;
+    cursor: pointer;
+  }
+
+  .cardImage{
+  min-height: 169px;
+  min-width: 250px;
+  overflow: hidden;
+  object-fit: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+
+
 }
