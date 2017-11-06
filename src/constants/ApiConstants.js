@@ -6,8 +6,8 @@ const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') ===
   : ''}`;
 export const WORDPRESS_ROOT_URL = `${ROOT_WORDPRESS_URL}`;
 export const HOME_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=home`
-// export const NEWS_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=news`
 export const NEWS_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getNewsByDateRange?month_year=:MonthYear`
+export const FETCH_NEWS_DETAILS_URL = constructWpUrl('dsny/v1/getNewsArticlePage?name=id');
 
 export const RID_OF_KEYWORDS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalKeywordList`
 export const RID_OF_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchDisposalItems?s`

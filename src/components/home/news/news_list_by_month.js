@@ -1,7 +1,10 @@
 import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
+import PropTypes from 'prop-types';
 import {getNewsDataList} from "../../../actions/actions_home";
+import {Grid, Row, Col, Pagination, Clearfix} from 'react-bootstrap';
 import NewsPageList from './news_detail';
 import NewsMonthList from './news_month_list';
 
@@ -65,7 +68,6 @@ class DSNYNews extends Component {
         newsSections = _.map(Items.slice(0, 1), sec => {
           let itemCounter = 99;
           image = sec.image.base_path + sec.image.file;
-          console.log(image);
           return (<NewsPageList slug={sec.name} title={sec.title} cardImage={image} NewsExplaination={sec.excerpt} key={sec.id} itemCounter = {itemCounter}/>);           
         })
       

@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL } from "../constants/ApiConstants";
+import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -33,6 +33,14 @@ export function getNewsDataList(year) {
       })
     }
   }
+
+export function fetchNewsDetails(slug) {
+return function(dispatch) {
+    axios.get(FETCH_NEWS_DETAILS_URL.replace('id', slug)).then((data) => {
+    dispatch({type: 'SET_NEWS_DATA', payload: data})
+    })
+}
+}
 
 export function getCollectionSchedule(address) {
     return function (dispatch) {

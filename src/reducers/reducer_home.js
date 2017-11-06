@@ -34,6 +34,14 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
         list: [action.payload.data]
       }
     };
+    case 'SET_NEWS_DATA':
+    return {
+      ...state,
+      newsData: {
+        ...state.newsData,
+        details: [action.payload.data]
+      }
+    };
     case 'SET_COLLECTION_SCHEDULE_DATA':
       return { ...state, noResultsError: action.noResultsError, suggestionAddress: action.suggestionAddress, collectionScheduleInfo: action.collectionScheduleInfo,routingData: action.routingData, collectionScheduleData: action.payload, arrayLength: action.arrayLength, holidayData: action.holidayData};
     case types.FETCH_EVENT_SUB_LIST:

@@ -13,7 +13,6 @@
 
 .topNewsExplaination{
     height: 48px;
-    width: 940px;
     color: #333333;
     font-size: 16px;
     line-height: 24px;
@@ -50,8 +49,103 @@
 .bottomNewsExplaination{
     margin-top: 15px;
     height: 44px;
-    width: 680px;
     color: #333333;
     font-size: 16px;
     line-height: 22px;
 }
+
+/*Mobile View*/
+@media only screen and (max-width: 499px) {
+    .bottomNewsExplain{
+        margin-top: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0px;
+    }
+
+    .topNewsTitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .restNews{
+        padding-bottom: 20px!important;
+    }
+
+    .newscardImage{
+        width: auto!important;
+    }
+}
+
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .bottomNewsExplain{
+        margin-top: 11px;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto!important;
+    }
+
+    .topNewsTitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .restNews{
+        padding-bottom: 20px!important;
+    }
+
+    .newscardImage{
+        width: auto!important;
+    }
+
+}
+
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
+    .bottomNewsExplain{
+        margin-top: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0px;
+    }
+
+    .topNewsTitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .restNews{
+        padding-bottom: 20px!important;
+    }
+
+    .newscardImage{
+        width: auto!important;
+    }
+
+}
+
+/*BETWEEN DESKTOP AND TABLET*/
+@media (min-width: 960px) and (max-width: 1284px) {
+    .bottomNewsExplain{
+        margin-top: 15px;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto!important;    
+    }
+
+    .topNewsTitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .restNews{
+        padding-bottom: 20px!important;
+    }
+
+    .newscardImage{
+        width: auto!important;
+    }
+
+}
+    
