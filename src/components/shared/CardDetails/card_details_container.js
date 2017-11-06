@@ -62,8 +62,7 @@ class cardDetailContainer extends Component {
             sections = _.map(cItems.sections.sections, sec => {
               if(sec.featured_image){
                 let ImageProps = {};
-                ImageProps.image = sec.featured_image.base_path + sec.featured_image.file;
-                ImageProps.content = sec.content;
+                ImageProps = sec;
                 return (
                   <div key={sec.id}>
                     <div>

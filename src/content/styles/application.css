@@ -78,6 +78,14 @@ html body {
   padding-bottom: 50px;
 }
 
+.WhiteTitle{
+    line-height: 300px;
+  	color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
 @media only screen and (max-width: 991px) {
   .paddingRight{
     padding-right: 15px;

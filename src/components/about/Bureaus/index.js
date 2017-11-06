@@ -31,8 +31,7 @@ class Bureaus extends Component {
           _.map(data.sections.sections, item =>{
                 switch (item.name){
                   case 'top-section':{
-                    ImageProps.image = item.featured_image.base_path + item.featured_image.file;
-                    ImageProps.content = item.content;
+                    ImageProps = item;
                     break;
                   }
                   case 'bureaus-cards-section':{
