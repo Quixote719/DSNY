@@ -8,6 +8,7 @@ import FormField from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
+import isEmpty from 'lodash/isEmpty'
 
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
@@ -19,6 +20,7 @@ import { compose, withState, withHandlers } from 'recompose';
 
  const Step1 = ({ nextStep, handleChange, values,
     touched,
+    error,
     errors,
     dirty,
     isSubmitting,
@@ -27,7 +29,8 @@ import { compose, withState, withHandlers } from 'recompose';
     handleReset,
     handledropDown,
     setFieldValue,
-    setFieldTouched }) => (
+    setFieldTouched,
+  validateStep  }) => (
   <div>
       <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
@@ -56,7 +59,7 @@ import { compose, withState, withHandlers } from 'recompose';
     <FormField title={Titles.OrganizationName} isHidden={values.ApplyingAs !== 2} type="text" disabledf={values.ApplyingAs !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber}>{touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber && <Tooltip placement="bottom" className="in" id="tooltip-bottom">{errors.OrganizationTaxIdNumber}</Tooltip>}</FormField>
     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <Tooltip placement="bottom" className="in" id="tooltip-bottom">{errors.OrganizationWebsite}</Tooltip>}</FormField>
-    <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
+    <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationFacebookPage && errors.OrganizationFacebookPage && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormSectionHeader title={Titles.sectionFour}/>
@@ -155,7 +158,7 @@ import { compose, withState, withHandlers } from 'recompose';
       ]}/>
     <FormField isHidden={values.HasAlternateSideParking !== 1} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
      <Col xs={12}>
-      <button onClick={nextStep}>Next</button>
+      <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
   </div>
 );
@@ -182,13 +185,13 @@ const Steps = ({
   validateStep,
   nextStep,
   previousStep,
-  stepValidated,
+  setSubmitting,
   ...props
 }) => (
   
   <form onSubmit={handleSubmit}>
     {{
-      1: <Step1 nextStep={validateStep} {...props} />,
+      1: <Step1 nextStep={nextStep} {...props} />,
       2: <Step2 previousStep={previousStep} {...props} />,
       3: <Step2 {...props} />
     }[step] || <div />}
@@ -199,26 +202,30 @@ const MyForm = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     validateStep: ({ stepValidated,validate,setStep, step }) => 
-      () => !stepValidated?validate:setStep(step + 1), 
+      () =>validate, 
     nextStep: ({ setStep, step }) => 
       () => setStep(step + 1),
     previousStep: ({ setStep, step }) => 
       () => setStep(step - 1)
   }),
   withFormik({
-   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, stepValidated:props.stepValidated}),
+   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
    
   // Add a custom validation function (this can be async too!)
-  validate: (values, props, stepValidated) => {
+  validate: (values, props) => {
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-      stepValidated = false;
+      
     }
-    else
-    {
-      stepValidated = true;
-    }
+    else if (!values.OrganizationWebsite) {
+
+     errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+     }
+    // else
+    // {
+      
+    // }
     // } else if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     // }
@@ -227,19 +234,14 @@ const MyForm = compose(
     //   errors.WillPostCompostRecipientSignage = 'please check this'
     // }
     
-    console.log("DINESH" + stepValidated);
+    
     return errors
   },
     handleSubmit(
       values, 
       { props, setErrors, setSubmitting, step, nextStep,setStep }
     ) {
-      if (step > 1)
-        alert(JSON.stringify(values));
-      // else
-      // {
-      //    setStep(step + 1)
-      // }
+      
     }
   })
 )(Steps);
@@ -251,14 +253,13 @@ class StepForm extends Component {
     super(props);
     this.state = {
       FormObject: props.FormObject,
-      editMode:true,
-      stepValidated:false
+      editMode:true
     }
   }
   render() {
 
     return (<div className='contactForm'>
-      <MyForm customFormData={this.state.FormObject} stepValidated={this.state.stepValidated} disabled={!this.state.editMode}/>
+      <MyForm customFormData={this.state.FormObject} disabled={!this.state.editMode}/>
     </div>);
   };
 
