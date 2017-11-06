@@ -106,77 +106,13 @@ const Step1 = (props) => {
     <FormSectionHeader title={Titles.sectionSix}/>
     <FormField title={Titles.Pallets} type="text" name="Pallets" onChange={handleChange} onBlur={handleBlur} value={values.Pallets}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormDateTimePicker title={Titles.DeliveryDeadline} name="DeliveryDeadline"/>
-    <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryOn" options={[
-        {
-          "Id": 1,
-          "Name": "DeliverOnMonday",
-          "DisplayName": "Monday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnTuesday",
-          "DisplayName": "Tuesday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "DeliverOnWednesday",
-          "DisplayName": "Wednesday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnThursday",
-          "DisplayName": "Thursday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "DeliverOnFriday",
-          "DisplayName": "Friday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "DeliverOnSaturday",
-          "DisplayName": "Saturday",
-          "Selected": false
-        }
-      ]}/>
+    <FormMultiSelect onMultiSelect={setFieldValue} title={Titles.DeliveryOn} name="DeliveryDays" options={values.DeliveryDays}/>
     <FormDropdown disabled={values.editMode} title={Titles.FromHourOfDayId} name="FromHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.FromHoursOfDay}/>
     <FormDropdown disabled={values.editMode} title={Titles.ToHourOfDayId} name="ToHourOfDayId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.ToHoursOfDay}/>
     <FormField title={Titles.DeliveryNotes} type="text" name="DeliveryNotes" onChange={handleChange} onBlur={handleBlur} value={values.DeliveryNotes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.EntranceHeightWidth} type="text" name="EntranceHeightWidth" onChange={handleChange} onBlur={handleBlur} value={values.EntranceHeightWidth}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormDropdown disabled={values.editMode} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
-    <FormMultiSelect isHidden={values.HasAlternateSideParking !== 1} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParking" options={[
-        {
-          "Id": 1,
-          "Name": "AlternateSideParkingMonday",
-          "DisplayName": "Monday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingTuesday",
-          "DisplayName": "Tuesday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "AlternateSideParkingWednesday",
-          "DisplayName": "Wednesday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingThursday",
-          "DisplayName": "Thursday",
-          "Selected": false
-        }, {
-          "Id": 1,
-          "Name": "AlternateSideParkingFriday",
-          "DisplayName": "Friday",
-          "Selected": false
-        }, {
-          "Id": 2,
-          "Name": "AlternateSideParkingSaturday",
-          "DisplayName": "Saturday",
-          "Selected": false
-        }
-      ]}/>
+    <FormMultiSelect isHidden={values.HasAlternateSideParking !== 1} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
     <FormField isHidden={values.HasAlternateSideParking !== 1} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <Col xs={12}>
       <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
@@ -188,8 +124,8 @@ const Step1 = (props) => {
 const Step2 = ({ previousStep,handleChange, values }) => (
   <div>
     <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
-    
-    <input 
+
+    <input
       type="text"
       name="authCode"
       value={values.authCode}
@@ -210,7 +146,7 @@ const Steps = ({
   setSubmitting,
   ...props
 }) => (
-  
+
   <form onSubmit={handleSubmit}>
     {{
       1: <Step1 nextStep={nextStep} {...props} />,
@@ -225,11 +161,11 @@ const Steps = ({
 const TestForm = compose(
   withState('step', 'setStep', 1),
   withHandlers({
-    validateStep: ({ stepValidated,validate,setStep, step }) => 
-      () =>validate, 
-    nextStep: ({ setStep, step }) => 
+    validateStep: ({ stepValidated,validate,setStep, step }) =>
+      () =>validate,
+    nextStep: ({ setStep, step }) =>
       () => setStep(step + 1),
-    previousStep: ({ setStep, step }) => 
+    previousStep: ({ setStep, step }) =>
       () => setStep(step - 1)
   }),
   withFormik({
