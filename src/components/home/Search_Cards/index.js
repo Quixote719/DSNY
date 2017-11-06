@@ -38,16 +38,16 @@ class SearchCards extends Component {
           placeholder: " "
         })
     }
+    changeDetected = (e) =>{
+    console.log(e)
+    }
     handleSelect = (address) =>{
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
     }
+    searchIconSelected = () =>{
+        this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)
+    }
     render() {
-        // const options = {
-        //     // bounds: {lat: (40.915568,-73.699215), lng : (40.495992,-74.257159)},
-            
-        //     bounds: {lat:(40.915568,-73.699215), lng:(40.495992,-74.257159)},
-        //     componentRestrictions: {country: 'us'}
-        //   }
         const inputProps = {
             value: this.state.address,
             onChange: this.handleChange,
@@ -82,12 +82,13 @@ class SearchCards extends Component {
                             <div id="innersquare">
                                 <div className = "ridOfAutoCompleteParent">
                                 <PlacesAutocomplete inputProps={inputProps}
+                                    onChange = {this.changeDetected}
                                     onSelect={this.handleSelect}
                                     onEnterKeyDown={this.handleSelect}
                                     classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
                                 />
                                 </div>
-                                <i className="fa fa-search collectionSearch" id="collectionSearch"></i>
+                                <i className="fa fa-search collectionSearch" id="collectionSearch" onClick = {()=>{this.searchIconSelected()}}></i>
                                 <div style={this.state.address ==""?{display: 'block'}:{display:'none'}} className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
                             </div>
                         </div>

@@ -72,6 +72,7 @@ export function getCollectionSchedule(address) {
                         routingData: data.data.RoutingTime,
                         arrayLength: arrayLength - 1,
                         holidayData: holidayData.data,
+                        noResultsError: data.data,
                         suggestionAddress: data.data.Suggestions,
                     })
                 })

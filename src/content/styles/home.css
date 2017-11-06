@@ -153,7 +153,10 @@
 
 .ridOfSearch,
 .actual-edit-overlay {
+    padding-bottom: 0px;
     padding-right: 35px;
+    line-height: 24px;
+    padding-top: 5px;
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -174,6 +177,7 @@
     border-bottom: 2px solid #7CC04B;
 } */
 #ridSearch {
+    cursor: pointer;
     font-size: 24px;
     position: absolute;
     top: 42px;
@@ -182,6 +186,7 @@
 }
 
 #collectionSearch {
+    cursor: pointer;
     font-size: 24px;
     position: absolute;
     top: 42px;

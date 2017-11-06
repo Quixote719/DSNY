@@ -44,9 +44,9 @@ class FormDropdown extends Component {
       <Col className='FormField' xs={12} sm={6} md={6}>
         <fieldset>
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <DropdownButton className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+          <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option}
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
+            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret="noCaret" id="dropdown-no-caret">
             {
               this.renderList(
                 this.props.options
