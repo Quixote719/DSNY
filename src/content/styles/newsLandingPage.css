@@ -54,6 +54,13 @@
     line-height: 22px;
 }
 
+.topNewsImageContainer {
+    background-size: 100%;
+    height: 528px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
 /*Mobile View*/
 @media only screen and (max-width: 499px) {
     .bottomNewsExplain{
@@ -74,6 +81,10 @@
 
     .newscardImage{
         width: auto!important;
+    }
+
+    .topNewsImageContainer{
+        height: 162px;
     }
 }
 
@@ -99,12 +110,16 @@
         width: auto!important;
     }
 
+    .topNewsImageContainer{
+        height: 420px;
+    }
+
 }
 
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
     .bottomNewsExplain{
-        margin-top: 15px;
+      
         margin-left: 0;
         margin-right: 0;
         padding: 0px;
@@ -123,6 +138,10 @@
         width: auto!important;
     }
 
+    .topNewsImageContainer{
+        height: 300px;
+    }
+
 }
 
 /*BETWEEN DESKTOP AND TABLET*/
@@ -134,10 +153,10 @@
         width: auto!important;    
     }
 
-    .topNewsTitle{
+    /* .topNewsTitle{
         padding-left: 15px;
         padding-right: 15px;
-    }
+    } */
 
     .restNews{
         padding-bottom: 20px!important;

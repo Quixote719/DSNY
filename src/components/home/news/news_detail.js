@@ -19,10 +19,8 @@ class NewsPageList extends Component {
 
         const style = {
             'backgroundImage': `url(${this.props.cardImage})`,
-            'backgroundSize': '100% 528px',
-            'height': '528px',
-            'backgroundPosition': '50% 50%',
           }
+
         if (this.props.itemCounter === 99) {
             return (
                 <Row>
