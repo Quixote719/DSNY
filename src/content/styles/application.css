@@ -163,5 +163,9 @@ body{top:0px !important;}
     border: none !important;
     box-shadow: none !important;
 }
+.error{
+  border-color: red !important;
+}
+
 
 /* Language Translation CSS Styles  -- End*/
