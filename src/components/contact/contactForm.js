@@ -12,6 +12,8 @@ import Datetime from 'react-datetime';
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
+import { compose, withState, withHandlers } from 'recompose';
+import isEmpty from 'lodash/isEmpty'
 
 import '../../content/styles/contactForm.css';
 
@@ -34,7 +36,7 @@ const DisplayFormikState = props => (<div style={{
   </div>);
 
 // Our inner form component which receives our form's state and updater methods as props
-const InnerForm = (props) => {
+const Step1 = (props) => {
   const {
     values,
     touched,
@@ -47,7 +49,8 @@ const InnerForm = (props) => {
     handleReset,
     handledropDown,
     setFieldValue,
-    setFieldTouched
+    setFieldTouched,
+    nextStep
   } = props;
   return (<form onSubmit={handleSubmit}>
     <FormHeader title='Online Application'/>
@@ -176,15 +179,60 @@ const InnerForm = (props) => {
       ]}/>
     <FormField isHidden={values.HasAlternateSideParking !== 1} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <Col xs={12}>
-      <button className="contactformButton" type="submit" disabled={isSubmitting}>NEXT</button>
+      <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
     <DisplayFormikState {...props} />
   </form>)
 };
 
+const Step2 = ({ previousStep,handleChange, values }) => (
+  <div>
+    <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
+    
+    <input 
+      type="text"
+      name="authCode"
+      value={values.authCode}
+      maxLength={5}
+      onChange={handleChange} />
+    <button onClick={previousStep}>Previous</button>
+    <button type="submit">Submit</button>
+  </div>
+)
+
+const Steps = ({
+  handleSubmit,
+  validate,
+  step,
+  validateStep,
+  nextStep,
+  previousStep,
+  setSubmitting,
+  ...props
+}) => (
+  
+  <form onSubmit={handleSubmit}>
+    {{
+      1: <Step1 nextStep={nextStep} {...props} />,
+      2: <Step2 previousStep={previousStep} {...props} />,
+      3: <Step2 {...props} />
+    }[step] || <div />}
+  </form>
+)
+
 
 // Wrap our form with the using withFormik HoC
-export default withFormik({
+const TestForm = compose(
+  withState('step', 'setStep', 1),
+  withHandlers({
+    validateStep: ({ stepValidated,validate,setStep, step }) => 
+      () =>validate, 
+    nextStep: ({ setStep, step }) => 
+      () => setStep(step + 1),
+    previousStep: ({ setStep, step }) => 
+      () => setStep(step - 1)
+  }),
+  withFormik({
   // Transform outer props into form values
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)
@@ -195,10 +243,10 @@ export default withFormik({
     } else if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }
-    if (!values.WillPostCompostRecipientSignage) {
+    // if (!values.WillPostCompostRecipientSignage) {
 
-      errors.WillPostCompostRecipientSignage = 'please check this'
-    }
+    //   errors.WillPostCompostRecipientSignage = 'please check this'
+    // }
     return errors
   },
   handleSubmit: (values, {setSubmitting}) => {
@@ -209,4 +257,7 @@ export default withFormik({
     }, 1000);
   },
   displayName: 'BasicForm'
-})(InnerForm);
+})
+)(Steps);
+
+export default TestForm;
