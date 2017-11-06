@@ -6,10 +6,7 @@ export default function cardReducer(state = {}, action) {
     case types.FETCH_FORM_GET_COMPOST_REQUEST:
       return {
         ...state,
-        formObject: {
-          ...state.formObject,
-          [action.payload.data.id]: action.payload.data
-        }
+        formObject:action.payload.data
       };
     default:
       return state;

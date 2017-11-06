@@ -23,10 +23,15 @@ FormObject:{},
   }
 
   render() {
+
+      const {FormObject} = this.props;
+    if (FormObject && FormObject !== undefined) {
     return (<div className='contactForm'>
-      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={this.state.FormObject}/></fieldset>
+      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={FormObject}/></fieldset>
     </div>);
   };
+  return(<div>loading.....</div>)
+};
 };
 
 
