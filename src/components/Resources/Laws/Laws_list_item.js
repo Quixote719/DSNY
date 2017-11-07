@@ -16,20 +16,36 @@ class LawsListItem extends Component {
   }
 
   
+  renderLawsTitle(index){
+    
+    if(index == 0){
+      return 'lawsFirstTitle';
+    }
+      return 'lawsTitle';
+  }
+
+  renderLawsDesc(index){
+
+    if(index == 0){
+      return 'lawsFirstDesc';
+    }
+    return 'lawsDesc';
+  }
+
 
   render() {
     return (
       <div >
         <Col>
           <Col xs={12} md={3}>
-              <div className='lawsTitle' >
+              <div className = {this.renderLawsTitle(this.props.lawsIndex)}>
                  <Truncate lines={2}> {Parser(this.props.title)} </Truncate>
               </div>
           </Col>
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                  <div className='lawsDesc' >
+                  <div className = {this.renderLawsDesc(this.props.lawsIndex)}>
                    <Truncate lines={2}> {Parser(this.props.body)} </Truncate>
                   </div>
               </Col>
@@ -53,6 +69,7 @@ LawsListItem.propTypes = {
   onClick: PropTypes.func,
   title: PropTypes.string,
   body: PropTypes.string,
+  index:PropTypes.string,
   className: PropTypes.string,
   url: PropTypes.string,
   header:PropTypes.string

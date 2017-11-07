@@ -47,7 +47,7 @@ class ResourcesContainer extends Component {
         let pressReleaseSubList;
         if (sec.name == 'resources-press-releases' && sec.cards.length > 0) {
           pressReleaseSubList = (<div className='container'>
-            <PressRelease pr={sec.cards} n={sec.card_data.card_count}/>
+            <PressRelease pr={sec.cards} n={sec.card_data.card_count} maxCards={sec.card_data.max_cards}/>
           </div>)
         }
 

@@ -23,7 +23,7 @@ class FormBoolean extends Component {
 
   renderOptions() {
     return (<div>
-      <input type="checkbox" name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value} checked={this.props.value} onClick={event => this.onInputChange(event)}/>
+      <input type="checkbox" name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)}/>
       <label >{this.props.title}</label>
     </div>)
   }

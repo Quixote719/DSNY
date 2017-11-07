@@ -13,9 +13,14 @@ class PressRelease extends Component {
 
   }
 
-  renderPosts(pr) {
-    return _.map(this.firstN(pr, 4), prItem => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date} key={prItem.title}/>);
+  renderPosts(pr,max_cards) {
+    
+    const shortenedPressReleaseList = this.firstN(pr,4);
+    const length = Object.keys(this.firstN(pr,4)).length;
+
+    return _.map(this.firstN(pr, 4), (prItem,index) => {
+      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date} 
+      key={prItem.title} arrayIndex={index} arraylength={length} maxCards={max_cards}/>);
     });
   }
 
@@ -26,8 +31,12 @@ class PressRelease extends Component {
     }, {}).value();
   }
 
-  ViewAllButton(l) {
-    if (l > 4) {
+  ViewAllButton(l,max_cards) {
+    if(max_cards == 0){
+       return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>);
+    }
+    
+    if (l > max_cards) {
       return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>);
     } else {
       return null;
@@ -36,8 +45,7 @@ class PressRelease extends Component {
   }
 
   render() {
-
-    const {pr, n} = this.props;
+    const {pr, n, maxCards} = this.props;
 
     if (_.isEmpty(pr)) {
       return (<div></div>);
@@ -45,9 +53,9 @@ class PressRelease extends Component {
 
     return (<div>
       <SubSectionHeader title="Press Release" onClick={this._reroute}/>
-      <div>{this.renderPosts(pr)}</div>
+      <div>{this.renderPosts(pr,maxCards)}</div>
 
-      {this.ViewAllButton(n)}
+      {this.ViewAllButton(n,maxCards)}
     </div>);
   }
 }
@@ -55,6 +63,7 @@ class PressRelease extends Component {
 PressRelease.propTypes = {
   pr: PropTypes.array.isRequired,
   n: PropTypes.any.isRequired,
+  maxcards:PropTypes.any,
   onClick: PropTypes.func
 };
 

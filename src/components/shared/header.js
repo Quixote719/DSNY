@@ -43,6 +43,7 @@ class Header extends React.Component {
         this.props.getSiteSearchKeywords();
     }
     render() {
+        window.showModalStatic = this.state.showModal;
         var url = window.location.pathname;
         return (
             <div className="HeaderParent">
@@ -137,13 +138,13 @@ class Header extends React.Component {
                     </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">
-                        <SearchBoxHome ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props} />
-                        {/* <input className="searchMessagesInput" type="text" placeholder="Search" >
-                        </input> */}
+                        <SearchBoxHome showModal = {this.ReverseAnimate} ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props} />
                         <i className="fa fa-search searchMessagesInputIcon"></i>
                         </div>
                         <Nav className="mainLinks" onClick={this.close}>
+                            <LinkContainer to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
                             <NavItem eventKey={2} className="bottomHeaderTitles homeHeaderTitles ">Home</NavItem>
+                            </LinkContainer>
                             <LinkContainer to={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} className="aboutHeaderTitle bottomHeaderTitles aboutBottomHeaderTitle">
                                 <NavItem eventKey={2} className="bottomHeaderTitles ">About</NavItem>
                             </LinkContainer>
@@ -159,7 +160,6 @@ class Header extends React.Component {
                             <LinkContainer to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className = "contactHeaderTitle">
                             <NavItem eventKey={6} className="bottomHeaderTitles contactHeaderTitle">Contact</NavItem>
                             </LinkContainer>
-
                         </Nav>
                     </Modal.Body>
                 </Modal>

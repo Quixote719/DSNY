@@ -47,6 +47,10 @@ html body {
   margin-right: 15px !important;
 }
 
+.PRLIhairlineLast{
+  margin-right: 15px !important;
+}
+
 .topSpace {
   padding-top: 44px;
 }
@@ -111,7 +115,6 @@ html body {
 
 .container {
   max-width: 940px;
-   padding: 0; 
 }
 
 a{
