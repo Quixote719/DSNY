@@ -224,6 +224,7 @@ input.ridOfSearch:focus {
 }
 
 .programContainerParent {
+    /* z-index: 3; */
     background-color: #F2F2F2;
     height: 288px;
 }

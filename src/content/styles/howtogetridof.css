@@ -5,7 +5,7 @@
     position: relative;
 }
 .react-autosuggest__suggestions-container--open{
-    z-index:100;
+    z-index:100!important;
     margin-left: 13px;
     margin-right: 8px;
 }
