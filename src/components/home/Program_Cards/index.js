@@ -23,7 +23,7 @@ class ProgramCards extends Component {
                   {item.title}
                 </span>
                 <span className="programMobileImageSpan">
-                  <img src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} className="programMobileImage" />
+                  <img alt = {item.title}  src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} className="programMobileImage" />
                 </span>
               </div>
             </div>
@@ -41,7 +41,7 @@ class ProgramCards extends Component {
               <Col xs={12} lg={2} id="programCol">
                 <div>
                   <div className="programImageDiv">
-                    <img src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
+                    <img alt = {item.title} src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
                   </div>
                   <div className="programTitleDiv">
                     {item.title}

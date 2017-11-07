@@ -22,7 +22,7 @@ class NYCFooter extends Component{
                     <a href="http://www1.nyc.gov/nyc-resources/resident-toolkit.page">Resident Toolkit </a>
                   </div>
                     <div className="SearchBlock">
-                      <img src={require('../../../content/images/nyc_white.png')} id="NYCFooterLogo" />
+                      <img src={require('../../../content/images/nyc_white.png')} id="NYCFooterLogo" alt="NYC Footer Logo"/>
                       <div className="copyright">
                         <p>City of New York. 2016 All Rights Reserved,</p>
                         <p>NYC is a trademark and service mark of the City of New York</p>

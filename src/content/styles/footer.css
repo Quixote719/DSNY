@@ -37,6 +37,11 @@
     cursor: pointer;
 }
 
+.footer-resources{
+  height:70px;
+}
+
+
 .FooterBoldRow{
     margin: 22px 0;
     color: #FFFFFF;

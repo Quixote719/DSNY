@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../content/styles/card.css';
-import TruncateMarkup from 'react-truncate-markup';
+import Truncate from 'react-truncate';
 import Parser from 'html-react-parser';
 
 class CardTitleBody extends Component {
@@ -11,18 +11,14 @@ class CardTitleBody extends Component {
       <Col xs={12} sm={6} md={3}>
         <div className={this.props.className}>
           <div className='cardTitle'>
-            <TruncateMarkup lines={2}> 
               <div className='cardTitleText' >
-                  {Parser(this.props.title)}
+                  <Truncate lines={2}> {Parser(this.props.title)} </Truncate>
               </div>
-            </TruncateMarkup>  
           </div>
           <div className='cardBody'>
-           <TruncateMarkup lines={2}> 
               <div className='cardBodyText' >
-                  {Parser(this.props.body)}
+                  <Truncate lines={2}> {Parser(this.props.body)} </Truncate>
               </div>
-            </TruncateMarkup>  
           </div>
         </div>
       </Col>

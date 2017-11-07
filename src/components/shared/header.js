@@ -65,28 +65,30 @@ class Header extends React.Component {
                 </Modal>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
-                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
-                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" />
+                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/>
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" 
+                        alt="Page Upper Header Divider"/>
                         <span className="upperHeaderTitle">Keeping NYC healthy, safe and clean since 1881</span>
                         <span className="upperHeaderTitle2">Search all NYC.gov websites</span>
-                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" />
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" 
+                        alt="Page Second Upper Header Divider"/>
                         <span className="upperHeaderTitle1">311</span>
                     </div>
                 </div>
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
-                        <img src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" />
+                        <img src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" alt="Sanitation Logo"/>
                         <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
 
                         <span className="textSizeTranslate">&#8203;</span>
                         {/*<span aria-hidden="true" className="translateIcon">▼</span>*/}
                         <span id="google_translate_element" className="translateHeader"></span>
-                        <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" />
+                        <img src='http://www1.nyc.gov/assets/home/images/global/language.gif' className="gifHeader" alt="Language"/>
                     </div>
                 </div>
                 <Navbar collapseOnSelect id="slideNav">
                     <Navbar.Brand className="mobileSanitationLogo" >
-                    <img src={require('../../content/images/sanitation_logo.svg')} id="sanitationMobileLogo" />
+                    <img src={require('../../content/images/sanitation_logo.svg')} id="sanitationMobileLogo" alt="Sanitation Logo"/>
                     </Navbar.Brand>
                     <Navbar.Toggle className="navbarToggle" onClick={this.showNavModal} />
                     <Navbar.Collapse id="navBar">
@@ -118,18 +120,20 @@ class Header extends React.Component {
                 <Modal show={this.state.showModal} onHide={this.close} id="menu" backdrop={false}>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
-                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" />
-                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" />
+                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/>
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" 
+                         alt="Page Upper Header Divider"/>
                         <span className="upperHeaderTitle">Keeping NYC healthy, safe and clean since 1881</span>
                         <span className="upperHeaderTitle2">Search all NYC.gov websites</span>
-                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" />
+                        <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" 
+                        alt="Page Second Upper Header Divider"/>
                         <span className="upperHeaderTitle1">311</span>
                     </div>
                 </div>
 
                     <Modal.Header closeButton onClick={this.close}>
 
-                    <img src={require('../../content/images/sanitation_logo.svg')} className="sanitationMobileLogo" />
+                    <img src={require('../../content/images/sanitation_logo.svg')} className="sanitationMobileLogo" alt="Sanitation Logo"/>
                     </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">

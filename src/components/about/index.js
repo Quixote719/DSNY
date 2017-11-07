@@ -39,7 +39,7 @@ class About extends Component {
      FoundationProps, LocationProps, OperationProps);
 
       return (
-        <div>
+        <div className = 'aboutPage'>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>
             <PageText PageExplanation = {PageExplanation} />
