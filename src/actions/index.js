@@ -48,7 +48,6 @@ export function fetchPressReleaseDetails(slug) {
     })
   }
 }
-
 export function fetchPressReleaseList(year) {
   return function(dispatch) {
     axios.get(FETCH_PRESS_RELEASE_LIST_URL.replace(/:Year/g, year)).then((data) => {
