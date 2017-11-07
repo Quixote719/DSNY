@@ -13,6 +13,15 @@ export function fetchFormObject(category) {
     axios.get(FETCH_FORM_GET_COMPOST_REQUEST_URL).then((data) => {
 
       dispatch({type: types.FETCH_FORM_GET_COMPOST_REQUEST, payload: data})
-    })
+    }).catch(function (error) {
+      console.log('yesh');
+      console.log(JSON.stringify(error))
+      dispatch({type: types.ERROR_LOADING_REQUEST, payload: 'yeswanth varma'})
+    if (error.response) {
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    }
+  });
   }
 }
