@@ -46,7 +46,7 @@ const CommonStep = (props) => {
     handledropDown,
     setFieldValue,
   } = props;
-  return (<span>
+  return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
@@ -96,7 +96,7 @@ const CommonStep = (props) => {
     <FormDropdown disabled={values.editMode} value={values.HasAlternateSideParking} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormMultiSelect isHidden={values.HasAlternateSideParking !== true} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
     <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  </span>)
+  </fieldset>)
 };
 
 
