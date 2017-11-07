@@ -10,11 +10,13 @@ import _ from "lodash";
 import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
+import $ from 'jquery';
 
 
 class SearchBoxHome extends Component {
     constructor(props, context) {
         super(props, context);
+        this.state = { showModal: false};
         this.handleKeyPress = this.handleKeyPress.bind(this);                
         this.state = {
             value: "",
@@ -22,15 +24,19 @@ class SearchBoxHome extends Component {
             placeholder: "Search"
           };
     }
+
     getSuggestionValue = suggestion => suggestion;
     renderSuggestion = suggestion => (
+
       <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/site-search/${suggestion}`}>
-        <div className ="ridOfSuggestions">
+        <div className ="ridOfSuggestions" onClick = {this.props.showModal}>
           {suggestion}
         </div>
         </Link>
       );
     getSuggestions = value => {
+      console.log("Props are")
+      console.log(this.props);
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
       
@@ -44,6 +50,7 @@ class SearchBoxHome extends Component {
         });
       };
       onSuggestionsClearRequested = () => {
+        
         this.setState({
           suggestions: []
         });
