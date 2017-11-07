@@ -6,6 +6,8 @@ import MaskedInput from 'react-text-mask';
 import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
+import isEmpty from 'lodash/isEmpty'
+
 class FormField extends Component {
 
   constructor(props) {
@@ -25,13 +27,7 @@ class FormField extends Component {
   }
 
   handleChange(event){
-    if(this.refs.myinput.value !== "") {
-      this.setState({hideToolTip: true});
-    }
-    else
-    {
-      this.setState({hideToolTip: false});
-    }
+    !isEmpty(this.refs.myinput.value) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
   }
 
   handleFocusOut(event){
