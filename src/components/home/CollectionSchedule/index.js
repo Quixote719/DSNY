@@ -160,10 +160,10 @@ class CollectionSchedule extends Component {
                             Today is holiday. There is no service today!
                         </div>
                     </Col>
-                    <Col xs={12} md={8} className="collectionScheduleColumn">
+                    <Col xs={12} md={8} style={this.props.holidayData?{display: 'none'}:{display: 'block'}} className="collectionScheduleColumn">
                         {this.collectionScheduleTable()}
                     </Col>
-                    <Col xs={12} md={4} className="ridOfCol">
+                    <Col xs={12} md={4}  style={this.props.holidayData?{display: 'none'}:{display: 'block'}} className="ridOfCol">
                         <div className={!this.props.holidayData? "enforcementTitleHoliday":"enforcementTitleNoHoliday"}>
                             <RoutingTimes collectionScheduleData = {this.props.collectionScheduleData} collectionScheduleInfo ={this.props.collectionScheduleInfo} routingData ={this.props.routingData?this.props.routingData:""} />
                         </div>

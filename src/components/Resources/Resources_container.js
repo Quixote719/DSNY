@@ -19,9 +19,6 @@ import StepForm from '../contact/stepform'
 import {compostFormObject, compostFormTitles as Titles} from '../contact/titles'
 class ResourcesContainer extends Component {
 
-  constructor(props) {
-    super(props);
-  }
 
   componentDidMount() {
     this.props.fetchLandinPageDetails('resources');

@@ -24,11 +24,17 @@ html body {
   padding-left: 8px;
 }
 
+.gm-svpc{
+  display: none;
+}
 
-
-.SContainer {
+.SContainer, .container{
+  padding: 0;
   width: 940px;
   margin: 0 auto;
+}
+
+.SContainer{
   overflow: hidden;
 }
 
@@ -78,11 +84,19 @@ html body {
   padding-bottom: 50px;
 }
 
+.WhiteTitle{
+    line-height: 300px;
+  	color: #FFFFFF;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
 @media only screen and (max-width: 991px) {
   .paddingRight{
     padding-right: 15px;
   }
-  .SContainer {
+  .SContainer, .container{
     margin: 0 15px;
     width: auto;
   }
@@ -105,6 +119,10 @@ html body {
 
 a{
   color: #00764E;
+}
+
+p>a{
+  font-weight: bold;
 }
 
 a:focus, a:hover {
@@ -155,5 +173,9 @@ body{top:0px !important;}
     border: none !important;
     box-shadow: none !important;
 }
+.error{
+  border-color: red !important;
+}
+
 
 /* Language Translation CSS Styles  -- End*/

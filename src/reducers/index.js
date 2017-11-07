@@ -7,6 +7,8 @@ import ServicesDataReducer from './reducer_services';
 import mediaReducer from './Reducer_media';
 import cardReducer from './reducer_card_details';
 import dropdownListReducer from './reduce_dropdown_list';
+import contactFormReducer from './reducer_contact_forms';
+import errorReducer from './reducer_error'
 
 const rootReducer = combineReducers({
   carouselDataReducer: carouselDataReducer,
@@ -15,7 +17,9 @@ const rootReducer = combineReducers({
   media: mediaReducer,
   resources: ResourcesReducer,
   AboutDataReducer: AboutDataReducer,
-  ServicesDataReducer: ServicesDataReducer
+  ServicesDataReducer: ServicesDataReducer,
+  forms:contactFormReducer,
+  error:errorReducer
 });
 
 export default rootReducer;
