@@ -17,6 +17,7 @@ class EducationSectionHeader extends Component {
         <div className='subSectionHeaderImageContainer'>
           <div className='subSectionHeaderImage' style={{
             backgroundImage: `url(${src})`
+            
           }}>
             <div className='container'>
               <Row>
@@ -24,7 +25,7 @@ class EducationSectionHeader extends Component {
                   <div className='subSectionHeaderImageTitle'>
                     <div className='subSectionHeaderImageTitleText'>{title}</div>
                   </div>
-                  <div className='subSectionHeaderImagetitleBody subSectionHeaderImagetitleBodyText'>
+                  <div className='subSectionHeaderImagetitleBody_EduMaterials subSectionHeaderImagetitleBodyText'>
                     <Dotdotdot clamp={6}>
                       <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
                         __html: body

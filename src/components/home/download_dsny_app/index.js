@@ -26,17 +26,17 @@ class DownloadApp extends Component {
                                 </div>
                                 <div className = "appStoreIconDiv">
                                     <span className = "iosAppStoreSpan">
-                                        <img src={require('../../../content/images/Appstore.png')} className="AppstoreIcon" />
+                                        <img src={require('../../../content/images/Appstore.png')} className="AppstoreIcon" alt="Apple Store Icon"/>
                                     </span>
                                     <span>
-                                        <img src={require('../../../content/images/Playstore.png')} className="PlaystoreIcon" />
+                                        <img src={require('../../../content/images/Playstore.png')} className="PlaystoreIcon" alt="Play Store Icon"/>
                                     </span>
                                 </div>
                             </div>
                         </Col>
                         <Col xs={12} sm={6} className="downloadAppCol1">
                             <div>
-                                <img src={require('../../../content/images/App_preview.png')} className="downloadAppIcon" />
+                                <img src={require('../../../content/images/App_preview.png')} className="downloadAppIcon" alt="Download App Icon"/>
                             </div>
                         </Col>
                     </Row>
