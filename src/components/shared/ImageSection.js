@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ContentCard from './ContentCard';
 import { Row, Col } from 'react-bootstrap';
-
+import '../../content/styles/imageSection.css'
 
 
 class ImageSection extends Component {
@@ -33,8 +33,6 @@ class ImageSection extends Component {
     const style = {
                     'backgroundImage': `url(${imageUrl})`,
                     'backgroundSize': '100% 900px',
-                    'height': '300px',
-                    'background-position': '50% 50%;'
                   }
     return (
       <div className='ImageSection' style={style} >

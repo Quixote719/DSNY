@@ -1,0 +1,12 @@
+.ImageSection{
+  height: 300px;
+  background-position: 50% 50%;
+}
+
+@media only screen and (max-width: 1900px) {
+  .ImageSection{
+    background-size: 1900px 900px!important;
+    background-position: 50% 50%!important;
+    overflow: hidden!important;
+  }
+}
