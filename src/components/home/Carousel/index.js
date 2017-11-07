@@ -97,7 +97,7 @@ class CarouselData extends Component {
         }
     }
     render() {
-        if (window.innerWidth >= 1367){
+        if (window.innerWidth >= 1366){
             return (
                 <div className="carouselContainerParent ">
                     <div className="container carouselContainer">

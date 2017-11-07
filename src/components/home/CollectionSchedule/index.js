@@ -140,7 +140,7 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
-                <div style = {this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
+                <div style = {this.props.suggestionAddress !== null || this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
                     No search results found
                 </div>
 
@@ -156,7 +156,7 @@ class CollectionSchedule extends Component {
 
                 <Row className="collectionScheduleRow">
                     <Col xs={12}>
-                        <div style={this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
+                        <div style={this.props.collectionScheduleInfo !== null && this.props.suggestionAddress == null && this.props.holidayData?{display: 'block'}:{display: 'none'}}className="nonServiceDay">
                             Today is holiday. There is no service today!
                         </div>
                     </Col>
