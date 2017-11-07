@@ -19,7 +19,7 @@ const rootReducer = combineReducers({
   AboutDataReducer: AboutDataReducer,
   ServicesDataReducer: ServicesDataReducer,
   forms:contactFormReducer,
-  
+  error:errorReducer
 });
 
 export default rootReducer;

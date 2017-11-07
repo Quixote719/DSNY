@@ -16,7 +16,7 @@ export function fetchFormObject(category) {
     }).catch(function (error) {
       console.log('yesh');
       console.log(JSON.stringify(error))
-      dispatch({type: types.ERROR_LOADING_REQUEST, payload: 'yeswanth varma'})
+      dispatch({type: types.ERROR_LOADING_REQUEST, payload:error})
     if (error.response) {
       console.log(error.response.data);
       console.log(error.response.status);
