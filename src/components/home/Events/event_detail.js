@@ -62,7 +62,7 @@ class EventDetail extends Component {
 
         return(
         <div>
-             <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><a href="/">Home</a></li><li className=""><a href="/resources">Events</a></li></ol></div></div> </div></div>
+             <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources"}>Events</Link></li></ol></div></div> </div></div>
              <div className='container PressReleaseHeader'>
               <Row>
                 <Col xs={12}>

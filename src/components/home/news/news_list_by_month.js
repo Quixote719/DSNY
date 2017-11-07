@@ -58,7 +58,7 @@ class DSNYNews extends Component {
         var newsSections;
         var cardsSections;
         var image;
-
+        
         cardsSections = _.map(Items.slice(1, Items.length), sec => {
           let itemCounter = 0;
           image = sec.image.base_path + sec.image.file;
@@ -72,13 +72,13 @@ class DSNYNews extends Component {
         })
       
         return (
-          <div key ={Items.id}>
+          <div key ={Items}>
             <div className="GBanner">
               <div>
                 <div className="BreadcrumbList">
                   <div className="container">
                       <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
-                        <li className=""><a href="/">Home</a></li>
+                        <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
                         <li className=""></li>
                       </ol>
                   </div>

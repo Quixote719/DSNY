@@ -116,6 +116,34 @@
 
 }
 
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px) and (orientation: landscape){
+    .bottomNewsExplain{
+        margin-top: 11px;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto!important;
+    }
+
+    .topNewsTitle{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .restNews{
+        padding-bottom: 20px!important;
+    }
+
+    .newscardImage{
+        width: auto!important;
+    }
+
+    .topNewsImageContainer{
+        height: 420px;
+    }
+
+}
+
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
     .bottomNewsExplain{

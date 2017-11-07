@@ -2,15 +2,10 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import PropTypes from 'prop-types';
 import {fetchNewsDetails} from "../../../actions/actions_home";
 import '../../../content/styles/subSectionHeaderImage.css';
-import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import PressReleaseHeader from '../../PressReleases/pressReleaseHeader';
 import PressReleaseBody from '../../PressReleases/pressReleaseBody';
-import LazyImage from '../../shared/LazyImage';
-import Header from '../../shared/Breadcrumb/breadcrumb_container'
-
 import moment from 'moment';
 
 class NewsDetails extends Component {
@@ -59,9 +54,6 @@ class NewsDetails extends Component {
         var sections;
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
-
-            console.log(sec);
-                       
             return (
                 <div>
                     <div key={sec.name}>{this.rendertop(sec)}</div>
@@ -73,7 +65,7 @@ class NewsDetails extends Component {
 
         return (
           <div key ={cItems.id}>
-            <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><a href="/">Home</a></li><li className=""><a href="/news">News</a></li></ol></div></div> </div></div>
+            <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>News</Link></li></ol></div></div> </div></div>
             <div className='container'>{sections}</div>
           </div>
         )
