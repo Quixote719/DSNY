@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import MaskedInput from 'react-text-mask';
-import {Row, Col, Tooltip, Overlay} from 'react-bootstrap';
+import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 class FormField extends Component {
@@ -11,19 +11,31 @@ class FormField extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: ''
+      input: '',
+      hideToolTip: true
     }
+    
+    this.handleChange = this.handleChange.bind(this);
+    this.handleFocusOut = this.handleFocusOut.bind(this);
+    
   }
+
   onInputChange(e) {
     console.log(e);
   }
 
-  onFocus(e) {
-  
+  handleChange(event){
+    if(this.refs.myinput.value !== "") {
+      this.setState({hideToolTip: true});
+    }
+    else
+    {
+      this.setState({hideToolTip: false});
+    }
   }
-  
-  onBlur() {
 
+  handleFocusOut(event){
+    this.setState({hideToolTip: true});
   }
 
   renderField(type) {
@@ -52,20 +64,21 @@ class FormField extends Component {
           </div>);
 
         default:
-
+          
            return (<div>
-            <input ref="myinput" type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value
+            <input ref="myinput" onFocus={this.handleChange} onKeyUp={this.handleChange} type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
                 : ''} disabled={this.props.disabledf} className={this.props.error?"input error":'input'} error={this.props.error}/>
-                {/*<Overlay {...{ show: (this.props.error === 0), target: () => ReactDOM.findDOMNode(this.refs.myinput) }} placement="top">*/}
-                  <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error?"in":''}>{this.props.error}</Tooltip>
-                {/*</Overlay>*/}
+                  <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
           </div>)
       }
     }
   }
   render() {
+
+    
+
     return (<div >{
         !this.props.isHidden
           ? <Col className='FormField' xs={12} sm={6} md={6}>
