@@ -28,7 +28,7 @@ class CardSec extends Component {
     if(Item.featured_image){
       ImageUrl  = this.getImageUrl(Item);
     }
-    
+
 
     if (Item.linked_url !== " ") {
       type = 'eUrl';
@@ -132,17 +132,17 @@ class CardSec extends Component {
                   <SubSectionHeaderGreen title={headerContent}/>
                 </div>
               );
-    } 
+    }
 
-  /* Normal Black Header is returned, provided there are no tags in the dataObject header */  
+  /* Normal Black Header is returned, provided there are no tags in the dataObject header */
   getHeader(dataObject){
       return(
                 <div key={dataObject.id}>
                   <SubSectionHeader title={dataObject.header}/>
                 </div>
                )
-  }  
-  
+  }
+
   /* Check if the Header of the Page is Valid HTML, if it is then only css is colour is obtained from the Header */
   checkifValidHTML(dataObject){
     return /<[a-z][\s\S]*>/i.test(dataObject.header);
@@ -150,7 +150,7 @@ class CardSec extends Component {
 
 
   viewAll(maxCards,cardCount,child_url){
-    
+
     /* If max cards are zero, then the page can have any number of cards */
     if(maxCards == 0){
       return false;
@@ -163,8 +163,8 @@ class CardSec extends Component {
       );
     }
 
-    return false; 
-  }  
+    return false;
+  }
 
   render() {
     const {dataObject} = this.props;
@@ -184,8 +184,8 @@ class CardSec extends Component {
     let header;
     let headerColor;
     let headerContent;
-    if (dataObject.header !== '') {   
-          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;  
+    if (dataObject.header !== '') {
+          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
          if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
             headerContent = dataObject.header.replace(/<[^>]+>/g, '');
             header = this.getGreenHeader(dataObject,headerContent);
@@ -260,15 +260,15 @@ class CardSec extends Component {
       : ''
     let maxCards = dataObject.card_data.max_cards;
     let cardCount = dataObject.card_data.card_count;
-    
+
     /* Code to see the View All Button, when there are more cards than max number of cards */
     let viewAllButton = this.viewAll(maxCards,cardCount,dataObject.button_linked_page.url);
-  
+
 
 
     return (
       <div className={bg}>
-        <div className='container'>
+        <div className='SContainer'>
           <div>{header}</div>
           <div>{body}</div>
           <div> {viewAllButton} </div>

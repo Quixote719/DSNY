@@ -39,7 +39,7 @@ class NewsListItem extends Component {
                 <div className='newsSectioncardTI'>
                 <div className='defaultcardImage newscardTitle'>
                     <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
-                    <div className='newsDefaultcardTitleText'>{this.props.title}</div>
+                   <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + `${this.props.linkTo}`}> <div className='newsDefaultcardTitleText'>{this.props.title}</div></Link>
                     <Dotdotdot clamp={3}>
                         <div className='newscardDescription'>{this.props.description}</div>
                      </Dotdotdot>
@@ -59,7 +59,7 @@ class NewsListItem extends Component {
                 }}></div>
                 <div className='newscardTitle'>
                     <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
-                    <div className='newscardTitleText'>{this.props.title}</div>
+                    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + `${this.props.linkTo}`}> <div className='newscardTitleText'>{this.props.title}</div></Link>
                 </div>
                 </div>
             </Col>

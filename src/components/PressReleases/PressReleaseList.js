@@ -64,9 +64,11 @@ class PressReleaseList extends Component {
     if (cardDetails) {
 
       return _.map(cardDetails, cItems => {
+        console.log(cItems.breadcrumb);
 
         let banner;
         if (cItems.name != '') {
+         
           banner = (
             <div key={cItems.id}>
               <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>

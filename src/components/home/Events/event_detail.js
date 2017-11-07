@@ -62,6 +62,7 @@ class EventDetail extends Component {
 
         return(
         <div>
+
              <div className="GBanner">
                <div className="BreadcrumbList">
                  <div className="container">

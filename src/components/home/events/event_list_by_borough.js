@@ -71,7 +71,7 @@ class DSNYEvents extends Component {
             <div className="BreadcrumbList">
               <div className="container">
                   <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
-                    <li className=""><a href="/">Home</a></li>
+                    <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
                     <li className=""></li>
                   </ol>
               </div>
