@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import MaskedInput from 'react-text-mask';
-import {Row, Col, Tooltip} from 'react-bootstrap';
+import {Row, Col, Tooltip, Overlay} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 class FormField extends Component {
@@ -54,10 +54,12 @@ class FormField extends Component {
         default:
 
            return (<div>
-            <input type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value
+            <input ref="myinput" type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabledf} className={this.props.className} error={this.props.error}/>
-                <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error?"in":''}>{this.props.error}</Tooltip>
+                : ''} disabled={this.props.disabledf} className={this.props.error?"input error":'input'} error={this.props.error}/>
+                {/*<Overlay {...{ show: (this.props.error === 0), target: () => ReactDOM.findDOMNode(this.refs.myinput) }} placement="top">*/}
+                  <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error?"in":''}>{this.props.error}</Tooltip>
+                {/*</Overlay>*/}
             <div>{this.props.children}</div>
           </div>)
       }
