@@ -5,18 +5,16 @@ import '../../content/styles/card.css';
 import {Route, Redirect} from "react-router-dom";
 class CardTitle extends Component {
 
-  login() {
-    window.location.href = "/dashboard";
-  }
+
 
   render() {
     return (
       <Col xs={12} sm={6} md={3}>
       <div className={this.props.className}>
-        <div className='subSectioncardT' onClick={this.login}>
+        <div className='subSectioncardT'>
             <div className='CardTitleTextEmptyBody'>{this.props.title}</div>
         </div>
-      </div>  
+      </div>
       </Col>
     );
   };

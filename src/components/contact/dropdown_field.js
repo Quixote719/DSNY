@@ -22,16 +22,14 @@ class FormDropdown extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-  console.log(props.value);
     this.state = {
-      option:props.value  ? this.searchKey(props.value, props.options?props.options : booleanOptions) :"Select one",
+      option: typeof props.value === "boolean" ? this.searchKey(props.value,booleanOptions) : props.value ? this.searchKey(props.value,props.options) : props.disabled ? "":"Select one",
     }
   }
 
    searchKey(Key, myArray){
       for (var i=0; i < myArray.length; i++) {
           if (myArray[i].Id === Key) {
-            console.log(myArray[i].DisplayName, Key);
               return myArray[i].DisplayName;
           }
       }
@@ -54,7 +52,7 @@ class FormDropdown extends Component {
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
           <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className='formDropDownButtonText' bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret="noCaret" id="dropdown-no-caret">
+            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
             {
               this.renderList(
                 this.props.options

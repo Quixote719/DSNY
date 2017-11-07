@@ -17,23 +17,23 @@ import isEmpty from 'lodash/isEmpty'
 
 import '../../content/styles/contactForm.css';
 
-// const DisplayFormikState = props => (<div style={{
-//     margin: '4rem 0'
-//   }}>
-//   <h3 style={{
-//       fontFamily: 'monospace'
-//     }}/>
-//   <pre
-//       style={{
-//         background: '#f6f8fa',
-//         fontSize: '1.5rem',
-//         padding: '.5rem',
-//       }}
-//     >
-//       <strong>Values</strong> ={' '}
-//       {JSON.stringify(props.values, null, 2)}
-//     </pre>
-//   </div>);
+const DisplayFormikState = props => (<div style={{
+    margin: '4rem 0'
+  }}>
+  <h3 style={{
+      fontFamily: 'monospace'
+    }}/>
+  <pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '1.5rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>Values</strong> ={' '}
+      {JSON.stringify(props.values, null, 2)}
+    </pre>
+  </div>);
 
 // Our inner form component which receives our form's state and updater methods as props
 const CommonStep = (props) => {
@@ -111,9 +111,9 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
-    {/*<DisplayFormikState {...props} />*/}
+    
   </span>)
 };
 
@@ -168,7 +168,7 @@ const TestForm = compose(
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } 
+    }
     if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }
