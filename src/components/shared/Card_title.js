@@ -5,10 +5,6 @@ import '../../content/styles/card.css';
 import {Route, Redirect} from "react-router-dom";
 class CardTitle extends Component {
 
-  login() {
-    window.location.href = "/dashboard";
-  }
-
   render() {
     return (
       <Col xs={12} sm={6} md={3}>

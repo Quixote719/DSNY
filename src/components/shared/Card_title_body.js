@@ -12,7 +12,7 @@ class CardTitleBody extends Component {
         <div className={this.props.className}>
           <div className='cardTitle'>
               <div className='cardTitleText' >
-                  <Truncate lines={2}> {Parser(this.props.title)} </Truncate>
+                  <Truncate lines={3}> {Parser(this.props.title)} </Truncate>
               </div>
           </div>
           <div className='cardBody'>
