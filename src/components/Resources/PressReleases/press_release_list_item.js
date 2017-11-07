@@ -7,6 +7,24 @@ import moment from 'moment';
 
 class PressReleaseListItem extends Component {
 
+
+  /* Render a different CSS class if the last of the Press Releases are reached & when there is a View All button,
+     involved in the bottom of the Press Releases Section */
+  renderPRLIHairLine(index,length,maxCards){
+    let style="";
+    let lastElement = length - 1;
+
+    if(maxCards == 0){
+       return style ='PRLIhairline';
+    }
+
+    if(index < lastElement){
+        return style ='PRLIhairline';
+    } 
+      return style ='PRLIhairlineLast';
+  }
+
+
   render() {
 
     return (
@@ -27,7 +45,7 @@ class PressReleaseListItem extends Component {
             <div className='listItemTag'>Press Release #{this.props.prid}</div>
           </Col>
         </Row>
-        <div className='PRLIhairline'></div>
+        <div className={this.renderPRLIHairLine(this.props.arrayIndex,this.props.arraylength,this.props.maxCards)}></div>
       </div>
     );
   };

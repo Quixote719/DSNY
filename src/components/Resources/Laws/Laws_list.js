@@ -22,8 +22,10 @@ class LawsList extends Component {
   }
 
   renderPosts(laws) {
-    return _.map(this.firstN(laws, 8), Item => {
-      return (<LawsListItem title={Item.title} body={Item.content} key={Item.id} url={Item.linked_page.url} header={Item.header}/>);
+    console.log(laws);
+    return _.map(this.firstN(laws, 8), (Item,index) => {
+        return (<LawsListItem title={Item.title} body={Item.content} key={Item.id} url={Item.linked_page.url} header={Item.header}
+               lawsIndex = {index}/>);
     });
   }
 

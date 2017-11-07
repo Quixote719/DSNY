@@ -64,7 +64,6 @@ class PressReleaseList extends Component {
     if (cardDetails) {
 
       return _.map(cardDetails, cItems => {
-        console.log(cItems.breadcrumb);
 
         let banner;
         if (cItems.name != '') {
@@ -79,8 +78,10 @@ class PressReleaseList extends Component {
         var sections;
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
+            const maxCards = sec.card_data.max_cards;
             return _.map(sec.cards, prItem => {
-              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date} key={prItem.id}/>);
+              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} 
+              date={prItem.date} key={prItem.id} maxCards={maxCards}/>);
             });
 
           })

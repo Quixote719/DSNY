@@ -3,13 +3,27 @@
   font-size: 24px;
   font-weight: bold;
   letter-spacing: -1px;
+  margin-top:25px;
+}
+
+.lawsFirstTitle{
+  color: #000000;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
 .lawsDesc {
   color: #333333;
   font-size: 16px;
+  margin-top:25px;
 }
 
+
+.lawsFirstDesc{
+  color: #333333;
+  font-size: 16px;
+}
 .lawsLink {
   color: #00764D;
   font-size: 16px;

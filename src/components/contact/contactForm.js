@@ -17,23 +17,23 @@ import isEmpty from 'lodash/isEmpty'
 
 import '../../content/styles/contactForm.css';
 
-// const DisplayFormikState = props => (<div style={{
-//     margin: '4rem 0'
-//   }}>
-//   <h3 style={{
-//       fontFamily: 'monospace'
-//     }}/>
-//   <pre
-//       style={{
-//         background: '#f6f8fa',
-//         fontSize: '1.5rem',
-//         padding: '.5rem',
-//       }}
-//     >
-//       <strong>Values</strong> ={' '}
-//       {JSON.stringify(props.values, null, 2)}
-//     </pre>
-//   </div>);
+const DisplayFormikState = props => (<div style={{
+    margin: '4rem 0'
+  }}>
+  <h3 style={{
+      fontFamily: 'monospace'
+    }}/>
+  <pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '1.5rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>Values</strong> ={' '}
+      {JSON.stringify(props.values, null, 2)}
+    </pre>
+  </div>);
 
 // Our inner form component which receives our form's state and updater methods as props
 const CommonStep = (props) => {
@@ -58,7 +58,7 @@ const CommonStep = (props) => {
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
+    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
     <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
@@ -111,9 +111,9 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
-    {/*<DisplayFormikState {...props} />*/}
+
   </span>)
 };
 
@@ -168,7 +168,7 @@ const TestForm = compose(
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } 
+    }
     if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }
