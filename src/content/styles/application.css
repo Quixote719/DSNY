@@ -28,13 +28,10 @@ html body {
   display: none;
 }
 
-.SContainer, .container{
+.SContainer{
   padding: 0;
   width: 940px;
   margin: 0 auto;
-}
-
-.SContainer{
   overflow: hidden;
 }
 
@@ -100,7 +97,7 @@ html body {
   .paddingRight{
     padding-right: 15px;
   }
-  .SContainer, .container{
+  .SContainer{
     margin: 0 15px;
     width: auto;
   }
@@ -118,7 +115,7 @@ html body {
 
 .container {
   max-width: 940px;
-  /* padding: 0; */
+   padding: 0; 
 }
 
 a{

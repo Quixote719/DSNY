@@ -36,23 +36,17 @@ const DisplayFormikState = props => (<div style={{
   </div>);
 
 // Our inner form component which receives our form's state and updater methods as props
-const Step1 = (props) => {
+const CommonStep = (props) => {
   const {
     values,
     touched,
     errors,
-    dirty,
-    isSubmitting,
     handleChange,
     handleBlur,
-    handleSubmit,
-    handleReset,
     handledropDown,
     setFieldValue,
-    setFieldTouched,
-    nextStep
   } = props;
-  return (<form onSubmit={handleSubmit}>
+  return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
@@ -64,7 +58,7 @@ const Step1 = (props) => {
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
+    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
     <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
@@ -102,36 +96,46 @@ const Step1 = (props) => {
     <FormDropdown disabled={values.editMode} value={values.HasAlternateSideParking} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormMultiSelect isHidden={values.HasAlternateSideParking !== true} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
     <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <Col xs={12}>
-      <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
-    </Col>
-    <DisplayFormikState {...props} />
-  </form>)
+  </fieldset>)
 };
 
-const Step2 = ({ previousStep,handleChange, values }) => (
-  <div>
-    <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
 
-    <input
-      type="text"
-      name="authCode"
-      value={values.authCode}
-      maxLength={5}
-      onChange={handleChange} />
+const Step1 = (props) => {
+  const {
+    errors,
+    dirty,
+    isSubmitting,
+    nextStep
+  } = props;
+  return (<span>
+    {props.values.editMode = false}
+    <CommonStep {...props} />
+    <Col xs={12}>
+      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+    </Col>
+
+  </span>)
+};
+
+const Step2 = (props) => {
+  const {
+    previousStep
+  } = props;
+  return (<span>
+    {props.values.editMode = true}
+    <CommonStep {...props} />
+    <Col xs={12}>
     <button onClick={previousStep}>Previous</button>
     <button type="submit">Submit</button>
-  </div>
-)
+    </Col>
+  </span>)
+};
 
 const Steps = ({
   handleSubmit,
-  validate,
   step,
-  validateStep,
   nextStep,
   previousStep,
-  setSubmitting,
   ...props
 }) => (
 
@@ -164,7 +168,7 @@ const TestForm = compose(
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    } 
+    }
     if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }

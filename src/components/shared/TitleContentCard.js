@@ -39,7 +39,7 @@ class TitleContentCard extends Component {
       }
     }
     let CardType = this.props.type!==undefined?styles[this.props.type]:styles.narrow
-    let link = dataObject.linked_page.url||'/about/bureaus';
+    let link = dataObject.linked_page.url||'';
     let content = dataObject.content||'';
     return (
         <div className="TitleContentCard" style={CardType}>
