@@ -79,8 +79,9 @@ class ResourcesContainer extends Component {
         let EducationalMaterialsSubList;
         if (sec.name == 'resources-educational-materials' && sec.cards.length > 0) {
           EducationalMaterialsSubList = (<div>
-            <EducationalMaterialsList promotional={sec.cards} title={sec.header} body={sec.content} src={`${sec.featured_image.base_path}${sec.featured_image.file}`}/>
-          </div>)
+            <EducationalMaterialsList promotional={sec.cards} title={sec.header} 
+            body={sec.content} src={`${sec.featured_image.base_path}${sec.featured_image.file}`}/>
+            </div>)
         }
 
         return (<div key={sec.id}>
@@ -96,6 +97,7 @@ class ResourcesContainer extends Component {
         <div>{banner}</div>
         
         <div>{sections}</div>
+        <div className="footer-resources"></div>
       </div>)
     });
   }

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import moment from 'moment';
-import TruncateMarkup from 'react-truncate-markup';
+import Truncate from 'react-truncate';
 import Parser from 'html-react-parser';
 
 class LawsListItem extends Component {
@@ -15,29 +15,27 @@ class LawsListItem extends Component {
     return {__html: rawMarkup};
   }
 
+  
+
   render() {
     return (
       <div >
         <Col>
           <Col xs={12} md={3}>
-           <TruncateMarkup lines={3}> 
               <div className='lawsTitle' >
-                  {Parser(this.props.title)}
+                 <Truncate lines={2}> {Parser(this.props.title)} </Truncate>
               </div>
-            </TruncateMarkup>  
           </Col>
           <Col xs={12} md={9}>
             <Row>
               <Col xs={12}>
-                <TruncateMarkup lines={3}> 
                   <div className='lawsDesc' >
-                    {Parser(this.props.body)}
+                   <Truncate lines={2}> {Parser(this.props.body)} </Truncate>
                   </div>
-                </TruncateMarkup> 
               </Col>
               <Col xs={12}>
                 <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}${this.props.url}`}>
-                  <div className='lawsLink'>SEE ALL RULES</div>
+                  <div className='lawsLink'> {this.props.header}</div>
                 </Link>
               </Col>
             </Row>
@@ -56,7 +54,8 @@ LawsListItem.propTypes = {
   title: PropTypes.string,
   body: PropTypes.string,
   className: PropTypes.string,
-  url: PropTypes.string
+  url: PropTypes.string,
+  header:PropTypes.string
 };
 
 

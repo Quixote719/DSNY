@@ -30,7 +30,7 @@ class CarouselData extends Component {
                 return _.map(item.cards, (item,index) =>{
                     return (
                         <Carousel.Item key={index}>
-                            <img src={item.featured_image.base_path + item.featured_image.file } />
+                            <img src={item.featured_image.base_path + item.featured_image.file} alt={item.featured_image.title}/>
                             <div>
                             <Carousel.Caption>
                                 {item.title}
@@ -49,7 +49,7 @@ class CarouselData extends Component {
                 return (
                     <div className="panelData" key={index}>
                         <div className="border-top"></div>
-                        <div className="programImage"><img src={item.panelItemIcon} /></div>
+                        <div className="programImage"><img src={item.panelItemIcon} alt={item.panelItemType}/></div>
                         <div className="detailsProgram">{item.panelItemType}</div>
                         <div className="statusProgram">{item.panelItemStatus}</div>
                     </div>
@@ -63,7 +63,7 @@ class CarouselData extends Component {
                     return (
                         <div className="panelData" key={index}>
                             <div className="border-top"></div>
-                            <div className="programImage"><img src={item.panelItemIcon} /></div>
+                            <div className="programImage"><img src={item.panelItemIcon} alt={item.panelItemType}/></div>
                             <div className="detailsProgram">{item.panelItemType}</div>
                             <div className="statusProgram">{item.panelItemStatus}</div>
                         </div>
@@ -97,7 +97,7 @@ class CarouselData extends Component {
         }
     }
     render() {
-        if (window.innerWidth >= 1367){
+        if (window.innerWidth >= 1366){
             return (
                 <div className="carouselContainerParent ">
                     <div className="container carouselContainer">

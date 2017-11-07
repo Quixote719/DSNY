@@ -3,10 +3,10 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
-import styles from '../../content/styles/SubSectionDropdown.css';
+import styles from '../../../content/styles/SubSectionDropdown.css';
 import {Dropdown, MenuItem, Button, DropdownButton} from 'react-bootstrap';
-import {dropDownList} from "../../actions";
-import '../../../node_modules/font-awesome/css/font-awesome.min.css';
+import {dropDownList} from "../../../actions";
+import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 class NewsMonthList extends Component {
 
@@ -48,7 +48,7 @@ class NewsMonthList extends Component {
   };
 };
 
-SubSectionDropdown.propTypes = {
+NewsMonthList.propTypes = {
   onClick: PropTypes.func,
   selectedOption: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   category: PropTypes.string.isRequired

@@ -2,7 +2,7 @@ import initStore from './store';
 import _ from "lodash";
 import * as types from '../constants/ActionTypes';
 
-export default function carouselDataReducer(state = {}, action) {
+export default function carouselDataReducer(state = {newsData: {}}, action) {
   switch (action.type) {
     case 'SET_CAROUSEL_TITLE':
       return { ...state, carouselItems: action.payload };
@@ -26,6 +26,22 @@ export default function carouselDataReducer(state = {}, action) {
 
       case 'SET_RID_OFF_ITEM_DETAILS':
       return { ...state, getRidOfItemDetailsData: action.payload};
+    case 'SET_NEWS_PAGE':
+    return {
+      ...state,
+      newsData: {
+        ...state.newsData,
+        list: [action.payload.data]
+      }
+    };
+    case 'SET_NEWS_DATA':
+    return {
+      ...state,
+      newsData: {
+        ...state.newsData,
+        details: [action.payload.data]
+      }
+    };
     case 'SET_COLLECTION_SCHEDULE_DATA':
       return { ...state, noResultsError: action.noResultsError, suggestionAddress: action.suggestionAddress, collectionScheduleInfo: action.collectionScheduleInfo,routingData: action.routingData, collectionScheduleData: action.payload, arrayLength: action.arrayLength, holidayData: action.holidayData};
     case types.FETCH_EVENT_SUB_LIST:

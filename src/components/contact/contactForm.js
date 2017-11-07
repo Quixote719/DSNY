@@ -17,42 +17,36 @@ import isEmpty from 'lodash/isEmpty'
 
 import '../../content/styles/contactForm.css';
 
-const DisplayFormikState = props => (<div style={{
-    margin: '4rem 0'
-  }}>
-  <h3 style={{
-      fontFamily: 'monospace'
-    }}/>
-  <pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '1.5rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>Values</strong> ={' '}
-      {JSON.stringify(props.values, null, 2)}
-    </pre>
-  </div>);
+// const DisplayFormikState = props => (<div style={{
+//     margin: '4rem 0'
+//   }}>
+//   <h3 style={{
+//       fontFamily: 'monospace'
+//     }}/>
+//   <pre
+//       style={{
+//         background: '#f6f8fa',
+//         fontSize: '1.5rem',
+//         padding: '.5rem',
+//       }}
+//     >
+//       <strong>Values</strong> ={' '}
+//       {JSON.stringify(props.values, null, 2)}
+//     </pre>
+//   </div>);
 
 // Our inner form component which receives our form's state and updater methods as props
-const Step1 = (props) => {
+const CommonStep = (props) => {
   const {
     values,
     touched,
     errors,
-    dirty,
-    isSubmitting,
     handleChange,
     handleBlur,
-    handleSubmit,
-    handleReset,
     handledropDown,
     setFieldValue,
-    setFieldTouched,
-    nextStep
   } = props;
-  return (<form onSubmit={handleSubmit}>
+  return (<span>
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
@@ -67,7 +61,7 @@ const Step1 = (props) => {
     <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
     <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
     <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
-    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite}  error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
+    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
     <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -102,36 +96,46 @@ const Step1 = (props) => {
     <FormDropdown disabled={values.editMode} value={values.HasAlternateSideParking} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormMultiSelect isHidden={values.HasAlternateSideParking !== true} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
     <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  </span>)
+};
+
+
+const Step1 = (props) => {
+  const {
+    errors,
+    dirty,
+    isSubmitting,
+    nextStep
+  } = props;
+  return (<span>
+    {props.values.editMode = false}
+    <CommonStep {...props} />
     <Col xs={12}>
       <button onClick={isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
     </Col>
-    <DisplayFormikState {...props} />
-  </form>)
+    {/*<DisplayFormikState {...props} />*/}
+  </span>)
 };
 
-const Step2 = ({ previousStep,handleChange, values }) => (
-  <div>
-    <FormField title='ORGANIZATION NAME' type="text"  name="OrganizationName" onChange={handleChange} value={values.OrganizationName}></FormField>
-
-    <input
-      type="text"
-      name="authCode"
-      value={values.authCode}
-      maxLength={5}
-      onChange={handleChange} />
+const Step2 = (props) => {
+  const {
+    previousStep
+  } = props;
+  return (<span>
+    {props.values.editMode = true}
+    <CommonStep {...props} />
+    <Col xs={12}>
     <button onClick={previousStep}>Previous</button>
     <button type="submit">Submit</button>
-  </div>
-)
+    </Col>
+  </span>)
+};
 
 const Steps = ({
   handleSubmit,
-  validate,
   step,
-  validateStep,
   nextStep,
   previousStep,
-  setSubmitting,
   ...props
 }) => (
 
@@ -172,6 +176,7 @@ const TestForm = compose(
 
     //   errors.WillPostCompostRecipientSignage = 'please check this'
     // }
+
     return errors
   },
   handleSubmit: (values, {setSubmitting}) => {
@@ -181,9 +186,8 @@ const TestForm = compose(
       console.log(values);
     }, 1000);
   },
-  validateOnFocus: true,
   validateOnChange: true,
-  validateOnBlur: false,
+  validateOnBlur: true,
   displayName: 'BasicForm'
 })
 )(Steps);
