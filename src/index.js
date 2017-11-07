@@ -27,7 +27,7 @@ import CardDetailContainer from './components/shared/CardDetails/card_details_co
 import DSNYEvents from './components/home/events/event_list_by_borough'
 import EventDetail from './components/home/events/event_detail'
 import DSNYNews from './components/home/news/news_list_by_month'
-import NewsDetail from './components/home/news/news_detail'
+import NewsDetails from './components/home/news/news_details_page'
 import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
@@ -64,6 +64,17 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
             <Switch>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/"} component={Home} />
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"} component={Home}/>
+
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"} component={DSNYNews}/>
+              {<Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/news/:slug"} component={NewsDetails}/>}
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan"} component={StrategicPlan}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
+              <Route exact="exact" path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
+
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
@@ -71,6 +82,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan"} component={StrategicPlan}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
+
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/leadership/:slug"} component={Biography}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan/:slug"} component={CardDetailContainer}/>
