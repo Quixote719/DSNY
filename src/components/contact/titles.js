@@ -482,3 +482,11 @@ export const compostFormObject = {
   "AlternateSideParkingSaturday": false,
   "AlternateSideParkingTimes": null
 }
+
+//Dnaiel's module
+
+export const commercialOrganicsFormTitles = {
+  "residentInfo": "Registrant Information",
+  "FirstName": "FIRST NAME",
+  "LastName": "LAST NAME"
+}

@@ -22,6 +22,12 @@ export default function cardReducer(state = {}, action) {
         ...state,
         formObject:searchObj(action.payload.data, false, null)
       };
+    case types.FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST:
+
+      return {
+        ...state,
+        formObject:searchObj(action.payload.data, false, null)
+      };
     default:
       return state;
   }
