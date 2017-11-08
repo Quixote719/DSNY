@@ -20,7 +20,7 @@ class ImageSection extends Component {
     }
     else{
       return(
-        <div className = 'WhiteTitle'>{this.props.ImageProps.header}</div>
+        <div className = 'whiteHeader'>{this.props.ImageProps.header}</div>
       )
     }
   }
