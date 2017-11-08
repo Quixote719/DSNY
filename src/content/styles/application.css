@@ -174,8 +174,10 @@ body{top:0px !important;}
     box-shadow: none !important;
 }
 .error{
-  border-color: red !important;
+  border-color: #e9322d  !important;
 }
+input[type=checkbox].error
+{outline: 2px solid #e9322d !important;}
 
 
 /* Language Translation CSS Styles  -- End*/
