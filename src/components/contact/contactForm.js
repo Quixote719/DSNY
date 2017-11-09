@@ -14,6 +14,7 @@ import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
 import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
+import {postFormObject} from "../../actions/contact_forms";
 
 import '../../content/styles/contactForm.css';
 
@@ -111,7 +112,7 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty ? '':nextStep}>Next</button>
     </Col>
 
   </span>)
@@ -165,6 +166,7 @@ const TestForm = compose(
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
+
     let errors = {}
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
@@ -179,9 +181,12 @@ const TestForm = compose(
 
     return errors
   },
-  handleSubmit: (values, {setSubmitting}) => {
+  handleSubmit: (values, {props,setSubmitting}) => {
+      console.log(this.props);
     setTimeout(() => {
+      console.log(this.props);
       alert(JSON.stringify(values, null, 2));
+      props.onSubmit(values);
       setSubmitting(false);
       console.log(values);
     }, 1000);
