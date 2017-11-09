@@ -114,7 +114,7 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty ? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>Next</button>
     </Col>
 <DisplayFormikState {...props}/>
   </span>)
@@ -178,28 +178,28 @@ const TestForm = compose(
 
     let errors = {}
 
-    for (var value in values) {
-        if (!values[value])
-        {
-          console.log(value + values[value]);
-          errors[value] = Titles.RequiredFieldMessage
-        }
+    // for (var value in values) {
+    //     if (!values[value])
+    //     {
+    //       console.log(value + values[value]);
+    //       errors[value] = Titles.RequiredFieldMessage
+    //     }
+    // }
+
+
+    if (!values.OrganizationTaxIdNumber) {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
+    if (!values.OrganizationWebsite) {
+      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    }
+    if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+      errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    }
+    if (!values.WillPostCompostRecipientSignage) {
 
-
-    // if (!values.OrganizationTaxIdNumber) {
-    //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    // }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.WillPostCompostRecipientSignage) {
-
-    //   errors.WillPostCompostRecipientSignage = 'please check this'
-    // }
+      errors.WillPostCompostRecipientSignage = 'please check this'
+    }
 
     return errors
   },
