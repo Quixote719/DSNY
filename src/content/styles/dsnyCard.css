@@ -166,6 +166,12 @@
   }
 }
 
+@media only screen and (max-width: 940px) {
+  .ProfileCard{
+    width: 100%;  
+  }
+}
+
 @media only screen and (max-width: 599px) {
   .CardTitle, .CardTitleBox, .TitleContentCard{
     width: 100%!important;
