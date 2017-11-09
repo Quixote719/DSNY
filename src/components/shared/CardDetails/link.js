@@ -34,11 +34,11 @@ export default class Link extends React.Component {
 
     if (isInternal) {
       return (
-        <ReactLink to={to} {...rest}>{children}</ReactLink>
+        <ReactLink onclick={console.log('tapped')}  to={to} {...rest}>{children}</ReactLink>
       );
     } else {
       return (
-        <a href={to} target="_blank" {...rest}>{children}</a>
+        <a onclick={console.log('tapped')}  href={to} target="_blank" {...rest}>{children}</a>
       );
     }
 

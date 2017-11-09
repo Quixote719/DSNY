@@ -38,5 +38,7 @@ export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL}garages`;
 
 
 //Forms
-export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests/new`;
+export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests/1`;
+export const PSOT_FORM_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests`;
+
 export const FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration/new`;
