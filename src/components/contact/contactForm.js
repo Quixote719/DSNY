@@ -10,7 +10,7 @@ import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
 import Yup from 'yup';
-
+import FormStepper from './form_stepper'
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
@@ -56,6 +56,7 @@ const CommonStep = (props) => {
       'search box validation of address comes up'
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
+    <FormStepper  title={Titles.WillPostCompostRecipientSignage}/>
     <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
     <FormBoolean title={Titles.WillPostSignageWithinTwoWeeks} name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/>
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
@@ -205,7 +206,7 @@ const TestForm = compose(
   },
 
   handleSubmit: (values, {props,setSubmitting}) => {
-    
+
     setTimeout(() => {
       console.log(this.props);
       alert(JSON.stringify(values, null, 2));

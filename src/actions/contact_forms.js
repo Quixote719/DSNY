@@ -42,7 +42,7 @@ export function postFormObject(formObject) {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
         },
-    }).then((data) => {
+    }).then((data , headers) => {
 
      dispatch({type: types.POST_FORM_COMPOST_REQUEST, payload: data})
     }).catch(function (error) {

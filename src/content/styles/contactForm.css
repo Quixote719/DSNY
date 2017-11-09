@@ -19,6 +19,38 @@
   }
 }
 
+.increment{
+    background-image:  url('../images/plus-default.png');
+  height: 24px;	width: 24px;
+  margin-right: 8px;
+  margin-top: 5px;
+  float: left;
+}
+.decrement{
+  background-image:  url('../images/minus-default.png');
+  height: 24px;	width: 24px;
+  float: left;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+.incDecField{
+	height: 36px;
+	width: 40px !important;
+	border: 1px solid #D8D8D8;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+  float: left;
+  text-align: center;
+}
+.incDecFieldtext{
+color: #262626;
+font-size: 16px;
+font-weight: bold;
+padding-top: 5px;
+
+}
+
 
 .contactformButton {
   height: 36px;
