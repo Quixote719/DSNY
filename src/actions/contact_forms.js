@@ -35,15 +35,8 @@ export function postFormObject(formObject) {
   return function(dispatch) {
     dispatch({type: types.POST_FORM_COMPOST_REQUEST, payload: {}})
 
-   axios({
-        method: 'post',
-        url: PSOT_FORM_COMPOST_REQUEST_URL,
-        data: formObject,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-    }).then((data , headers) => {
-
+   axios.post(PSOT_FORM_COMPOST_REQUEST_URL ,formObject).then((data , headers) => {
+   debugger;
      dispatch({type: types.POST_FORM_COMPOST_REQUEST, payload: data})
     }).catch(function (error) {
       console.log('yesh');
