@@ -54,16 +54,17 @@ const CommonStep = (props) => {
     'search box validation of address comes up'
   </div>
   <FormSectionHeader title={Titles.ResidentInfo}/>
-  <FormFieldFull title={Titles.BusinessName} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
-  <FormField type="text" title={Titles.FirstName} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
-  <FormField title={Titles.LastName} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
-  <FormField title={Titles.Role} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Email} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Phone} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormDropdown disabled={values.editMode} title={Titles.PhoneType} value={values.IsCertifiedNycMasterComposter} name="IsCertifiedNycMasterComposter" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} noOptions="true"/>
+  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
+  <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
+  <FormField title={Titles.LastName} type="text" name="RegistrantLastName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantLastName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
+  <FormField title={Titles.Role} type="text" name="RegistrantTitle" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantTitle}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Email} type="text" name="RegistrantEmail" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantEmail}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Phone} type="text" name="RegistrantPhone" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantPhone}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormDropdown disabled={values.editMode} title={Titles.PhoneType} value={values.RegistrantPhoneTypeId} name="RegistrantPhoneTypeId" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.RegistrantPhoneTypes}/>
+
   <FormSectionHeader title={Titles.MailingAddress}/>
-  <FormFieldFull title={Titles.AddressOpt} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
-  <FormField title={Titles.FLoorSuiteApt} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
+  <FormFieldFull title={Titles.AddressOpt} type="text" name="MailingStreet" onChange={handleChange} onBlur={handleBlur} value={values.MailingStreet} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
+  <FormField title={Titles.FLoorSuiteApt} type="text" name="MailingApartment" onChange={handleChange} onBlur={handleBlur} value={values.MailingApartment} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormSectionHeader title={Titles.BusinessType}/>
 
   <FormSectionHeader title={Titles.OnsiteMethod}/>
@@ -72,19 +73,19 @@ const CommonStep = (props) => {
 
 
   <FormSectionHeader title={Titles.EquipmentandCapacityInfo}/>
-  <FormField title={Titles.Manufacturer} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Model} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.MinimumCapacity} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.MaximumCapacity} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.InstallationDate} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-
+  <FormField title={Titles.Manufacturer} type="text" name="EquipmentManufacturer" onChange={handleChange} onBlur={handleBlur} value={values.EquipmentManufacturer}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Model} type="text" name="EquipmentModelNo" onChange={handleChange} onBlur={handleBlur} value={values.EquipmentModelNo}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.DescribeSystem} type="text" name="EquipmentDescribeSystem" onChange={handleChange} onBlur={handleBlur} value={values.EquipmentDescribeSystem}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.MinimumCapacity} type="text" name="EquipmentMinimumCapacity" onChange={handleChange} onBlur={handleBlur} value={values.EquipmentMinimumCapacity}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.MaximumCapacity} type="text" name="EquipmentMaximumCapacity" onChange={handleChange} onBlur={handleBlur} value={values.EquipmentMaximumCapacity}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormDateTimePicker value={values.InstallationDate} title={Titles.InstallationDate} onChange={setFieldValue} name="InstallationDate"/>
 
   <FormSectionHeader title={Titles.GiInstall}/>
-  <FormDropdown disabled={values.editMode} title={Titles.GiInstallOptional} value={values.IsCertifiedNycMasterComposter} name="IsCertifiedNycMasterComposter" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} noOptions="true"/>
-  <FormField title={Titles.Manufacturer} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Model} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.CapOptional} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Flow} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormDropdown disabled={values.editMode} title={Titles.GiInstallOptional} value={values.IsCertifiedNycMasterComposter} name="IsCertifiedNycMasterComposter" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.RegistrantPhoneTypes}/>
+  <FormField title={Titles.Manufacturer} type="text" name="GreaseInspectorManufacturer" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorManufacturer}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Model} type="text" name="GreaseInspectorModelNo" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorModelNo}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.CapOptional} type="text" name="GreaseInspectorCapacity" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorCapacity}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Flow} type="text" name="GreaseInspectorFlow" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorFlow}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
   </fieldset>)
 };
 
@@ -169,6 +170,7 @@ const OrganicsForm = compose(
     return errors
   },
   handleSubmit: (values, {setSubmitting}) => {
+    alert(0)
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);

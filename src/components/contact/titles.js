@@ -70,7 +70,7 @@ export const sharedFormTitles = {
   "EquipmentandCapacityInfo": "EQUIPMENT AND CAPACITY INFORMATION",
   "Manufacturer": "MANUFACTURER (OTPIONAL)",
   "Model": "MODEL # (OTPIONAL)",
-  "DescribeSysteml": "DESCRIBE YOUR SYSTEM (OTPIONAL)",
+  "DescribeSystem": "DESCRIBE YOUR SYSTEM (OTPIONAL)",
   "MinimumCapacity": "MINIMUM CAPACITY(LBS/DAY)",
   "MaximumCapacity": "MAXIMUM CAPACITY(LBS/DAY)",
   "InstallationDate": "INSTALLATION DATE (MM/DD/YYYY)",
