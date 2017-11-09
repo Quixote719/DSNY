@@ -101,9 +101,9 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>Next</button>
     </Col>
-  <DisplayFormikState {...props} />
+<DisplayFormikState {...props}/>
   </span>)
 };
 
@@ -139,6 +139,7 @@ const Steps = ({
 )
 
 
+
 // Wrap our form with the using withFormik HoC
 const OrganicsForm = compose(
   withState('step', 'setStep', 1),
@@ -154,25 +155,48 @@ const OrganicsForm = compose(
   // Transform outer props into form values
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)
+  // validationSchema: Yup.object().shape({
+  //   OrganizationTaxIdNumber: Yup.mixed().required(Titles.RequiredFieldMessage),
+  //   OrganizationWebsite: Yup.mixed().required(Titles.RequiredFieldMessage),
+  //   WillPostCompostRecipientSignage: Yup.bool().required(Titles.RequiredFieldMessage),
+  //   CompostSiteApplicantTypeId: Yup.string().notOneOf(['Select one']),
+  // }),
   validate: (values, props) => {
+
     let errors = {}
+
+    // for (var value in values) {
+    //     if (!values[value])
+    //     {
+    //       console.log(value + values[value]);
+    //       errors[value] = Titles.RequiredFieldMessage
+    //     }
+    // }
+
+
     if (!values.OrganizationTaxIdNumber) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
     if (!values.OrganizationWebsite) {
       errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     }
-    // if (!values.WillPostCompostRecipientSignage) {
+    if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+      errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    }
+    if (!values.WillPostCompostRecipientSignage) {
 
-    //   errors.WillPostCompostRecipientSignage = 'please check this'
-    // }
+      errors.WillPostCompostRecipientSignage = 'please check this'
+    }
 
     return errors
   },
-  handleSubmit: (values, {setSubmitting}) => {
-    alert(0)
+
+  handleSubmit: (values, {props,setSubmitting}) => {
+
     setTimeout(() => {
+      console.log(this.props);
       alert(JSON.stringify(values, null, 2));
+      props.onSubmit(values);
       setSubmitting(false);
       console.log(values);
     }, 1000);
