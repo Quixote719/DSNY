@@ -55,7 +55,7 @@ const CommonStep = (props) => {
   </div>
   <FormSectionHeader title={Titles.ResidentInfo}/>
   <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
-  <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
+  <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.RegistrantFirstName && errors.RegistrantFirstName}></FormField>
   <FormField title={Titles.LastName} type="text" name="RegistrantLastName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantLastName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormField title={Titles.Role} type="text" name="RegistrantTitle" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantTitle}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
   <FormField title={Titles.Email} type="text" name="RegistrantEmail" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantEmail}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -173,20 +173,19 @@ const OrganicsForm = compose(
     //     }
     // }
 
-
-    if (!values.OrganizationTaxIdNumber) {
+    if (!values.RegistrantBusinessName) {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    if (!values.RegistrantFirstName) {
+      errors.RegistrantFirstName = 'Please enter a valid Organization Website'
     }
-    if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-      errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    }
-    if (!values.WillPostCompostRecipientSignage) {
-
-      errors.WillPostCompostRecipientSignage = 'please check this'
-    }
+    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.WillPostCompostRecipientSignage) {
+    //
+    //   errors.WillPostCompostRecipientSignage = 'please check this'
+    // }
 
     return errors
   },

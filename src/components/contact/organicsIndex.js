@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
 //Actions
-import {fetchOrganicsForm} from "../../actions/contact_forms";
+import {fetchOrganicsForm, postOrganicsForm} from "../../actions/contact_forms";
 import Form from './organicsForm'
 import FetchError from './fetchError'
 
@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   return {FormObject: state.forms.formObject, error:state.error.type};
 }
 
-export default connect(mapStateToProps, {fetchOrganicsForm})(ContactForm);
+export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(ContactForm);

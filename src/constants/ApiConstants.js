@@ -42,3 +42,4 @@ export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequ
 export const PSOT_FORM_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests`;
 
 export const FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration/new`;
+export const POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration`;
