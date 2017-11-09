@@ -69,7 +69,6 @@ padding-top: 5px;
 
 .formSectionHeader {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
@@ -100,7 +99,6 @@ padding-top: 5px;
 }
 
 .formDropDownButtonText {
-  font-family: "Helvetica Neue";
   font-size: 16px;
   height: 36px;
   background: transparent;
@@ -173,7 +171,6 @@ padding-top: 5px;
   color: grey;
   font-weight: 400;
   font-size: 16px;
-  font-family: "Helvetica Neue";
   margin-left: 8px;
 }
 
