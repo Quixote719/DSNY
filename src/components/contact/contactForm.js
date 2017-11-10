@@ -5,7 +5,7 @@ import FormSectionHeader from './form_section_header';
 import FormHeader from './form_header';
 import FormMultiSelect from './multiselect_field'
 import FormBoolean from './form_boolean';
-import FormField from './form_field';
+import TextInput from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
@@ -55,20 +55,27 @@ const CommonStep = (props) => {
     <div>
       'search box validation of address comes up'
     </div>
-    <FormSectionHeader title={Titles.sectionTwo}/>
+    {/*<FormSectionHeader title={Titles.sectionTwo}/>
     <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" get alonChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
     <FormBoolean title={Titles.WillPostSignageWithinTwoWeeks} name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/>
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}  error={touched.CompostSiteApplicantTypeId && errors.CompostSiteApplicantTypeId}/>
-    <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName} error={touched.OrganizationName && errors.OrganizationName}></FormField>
-    <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
-    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
-    <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage} error={touched.OrganizationFacebookPage && errors.OrganizationFacebookPage}></FormField>
+    <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName} error={touched.OrganizationName && errors.OrganizationName}></FormField>*/}
+    <Field name="OrganizationTaxIdNumber" component={TextInput}/>
+    <Field name="OrganizationWebsite" component={TextInput}/>
+    <Field name="FirstName" component={TextInput}/>
+    <Field name="LastName" component={TextInput}/>
+    <Field name="SecondaryPhoneTypeId" component={FormDropdown}/>
+    
+    {/*<FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
+    <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>*/}
+    {/*<FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage} error={touched.OrganizationFacebookPage && errors.OrganizationFacebookPage}></FormField>
     <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
     <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
     <FormSectionHeader title={Titles.sectionFour}/>
+    
     <FormField title={Titles.FirstName} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.LastName} type="text" name="LastName" onChange={handleChange} onBlur={handleBlur} value={values.LastName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.Title} type="text" name="Title" onChange={handleChange} onBlur={handleBlur} value={values.Title}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -98,7 +105,7 @@ const CommonStep = (props) => {
     <FormField title={Titles.EntranceHeightWidth} type="text" name="EntranceHeightWidth" onChange={handleChange} onBlur={handleBlur} value={values.EntranceHeightWidth}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormDropdown disabled={values.editMode} value={values.HasAlternateSideParking} title={Titles.HasAlternateSideParking} name="HasAlternateSideParking" ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur}/>
     <FormMultiSelect isHidden={values.HasAlternateSideParking !== true} onMultiSelect={setFieldValue} title={Titles.AlternateSideParking} name="AlternateSideParkingDays" options={values.AlternateSideParkingDays}/>
-    <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>*/}
   </fieldset>)
 };
 
@@ -152,7 +159,7 @@ const Steps = ({
 
 const schema = {
   "requiredFields": [
-    "OrganizationTaxIdNumber", "OrganizationWebsite"
+    "OrganizationTaxIdNumber", "OrganizationWebsite", "SecondaryPhoneTypeId"
   ]
 }
 
@@ -183,7 +190,7 @@ const TestForm = compose(
     
     //Get the required fields from the const schema defined above
     for (var value in schema.requiredFields) {
-        if (!values[schema.requiredFields[value]])
+        if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
         {
           errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
         }
