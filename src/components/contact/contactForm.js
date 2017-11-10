@@ -37,6 +37,8 @@ const DisplayFormikState = props => (<div style={{
 
 // Our inner form component which receives our form's state and updater methods as props
 const CommonStep = (props) => {
+  console.log(props);
+  console.log(JSON.stringify(props.values.FromHoursOfDay));
   const {
     values,
     touched,

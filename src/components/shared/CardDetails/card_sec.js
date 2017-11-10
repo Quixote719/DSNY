@@ -200,7 +200,7 @@ class CardSec extends Component {
       if (dataObject.cards.length > 0) {
 
         let cType = dataObject.card_data.card_type !== "reference-details-card"
-
+        
         let layoutTrigger = cType && l > 2
 
         body = (

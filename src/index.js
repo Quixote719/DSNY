@@ -43,6 +43,7 @@ import ViewOurFleet from './components/about/Operations/ViewOurFleet'
 import fullImageContainer from './components/shared/PageSection/full_img_container';
 
 import TestForm from './components/contact/index';
+import EventForm from './components/contact/eventparticipationrequest';
 
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
@@ -114,6 +115,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eventparticipationrequests"} component={EventForm} />
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>

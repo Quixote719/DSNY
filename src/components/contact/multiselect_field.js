@@ -21,7 +21,7 @@ class FormMultiSelect extends Component {
 
     this.setState({options});
     object.Values = options;
-      this.props.onMultiSelect(this.props.name, object)
+    this.props.onMultiSelect(this.props.name, object)
   }
 
   renderOptions(options) {
