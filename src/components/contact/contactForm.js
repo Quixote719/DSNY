@@ -56,7 +56,7 @@ const CommonStep = (props) => {
       'search box validation of address comes up'
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
+    <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" get alonChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
     <FormBoolean title={Titles.WillPostSignageWithinTwoWeeks} name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/>
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
@@ -101,7 +101,6 @@ const CommonStep = (props) => {
     <FormField isHidden={values.HasAlternateSideParking !== true} name="AlternateSideParkingTimes" title={Titles.AlternateSideParkingTimes} type="text" onChange={handleChange} onBlur={handleBlur} value={values.AlternateSideParkingTimes}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
   </fieldset>)
 };
-
 
 const Step1 = (props) => {
   const {
@@ -151,7 +150,11 @@ const Steps = ({
   </form>
 )
 
-
+const schema = {
+  "requiredFields": [
+    "OrganizationTaxIdNumber", "OrganizationWebsite"
+  ]
+}
 
 // Wrap our form with the using withFormik HoC
 const TestForm = compose(
@@ -177,29 +180,29 @@ const TestForm = compose(
   validate: (values, props) => {
 
     let errors = {}
+    
+    //Get the required fields from the const schema defined above
+    for (var value in schema.requiredFields) {
+        if (!values[schema.requiredFields[value]])
+        {
+          errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
+        }
+    }
 
-    // for (var value in values) {
-    //     if (!values[value])
-    //     {
-    //       console.log(value + values[value]);
-    //       errors[value] = Titles.RequiredFieldMessage
-    //     }
+
+    // if (!values.OrganizationTaxIdNumber) {
+    //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     // }
+    // if (!values.OrganizationWebsite) {
+    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.WillPostCompostRecipientSignage) {
 
-
-    if (!values.OrganizationTaxIdNumber) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    }
-    if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    }
-    if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-      errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    }
-    if (!values.WillPostCompostRecipientSignage) {
-
-      errors.WillPostCompostRecipientSignage = 'please check this'
-    }
+    //   errors.WillPostCompostRecipientSignage = 'please check this'
+    // }
 
     return errors
   },
