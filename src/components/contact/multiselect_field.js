@@ -25,12 +25,14 @@ class FormMultiSelect extends Component {
   }
 
   renderOptions(options) {
-    return options.map((Item, index) => {
-      return (<div key={_.random(0, 200, true)}>
-        <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
-        <span>{Item.DisplayName}</span>
-      </div>)
-    });
+    if(options!=undefined){
+      return options.map((Item, index) => {
+        return (<div key={_.random(0, 200, true)}>
+          <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
+          <span>{Item.DisplayName}</span>
+        </div>)
+      });
+    }
   }
 
   render() {

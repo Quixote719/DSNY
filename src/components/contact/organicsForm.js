@@ -66,8 +66,9 @@ const CommonStep = (props) => {
   <FormFieldFull title={Titles.AddressOpt} type="text" name="MailingStreet" onChange={handleChange} onBlur={handleBlur} value={values.MailingStreet} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
   <FormField title={Titles.FLoorSuiteApt} type="text" name="MailingApartment" onChange={handleChange} onBlur={handleBlur} value={values.MailingApartment} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormSectionHeader title={Titles.BusinessType}/>
-
+  <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.BusinessSelectList} name="BusinessActivityTypes" options={values.BusinessActivityTypes}/>
   <FormSectionHeader title={Titles.OnsiteMethod}/>
+  <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.OnsitePMOptions} name="GreaseInterceptorTypes" options={values.OnSiteProcessingTypes}/>
 
 
 
