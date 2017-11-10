@@ -10,11 +10,12 @@ import FetchError from './fetchError'
 import '../../content/styles/contactForm.css';
 
 
-class ContactForm extends Component {
+class OrganicsForm extends Component {
   constructor(props) {
     super(props);
+    this.postForm = this.postForm.bind(this);
     this.state = {
-FormObject:{},
+    FormObject:{},
       editMode:true
     }
   }
@@ -23,13 +24,18 @@ FormObject:{},
     this.props.fetchOrganicsForm();
   }
 
+  postForm(formObject){
+      alert('postForm');
+      this.props.postOrganicsForm(formObject);
+  }
+
   render() {
 
       const {FormObject, error} = this.props;
 
     if (FormObject && FormObject !== undefined) {
     return (<div className='container'><div className='contactForm'>
-      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={FormObject}/></fieldset>
+      <fieldset className='disabledContactForm' disabled={!this.state.editMode}><Form disabled={!this.state.editMode} customFormData={FormObject} onSubmit={this.postForm}/></fieldset>
     </div></div>);
   };
 if (error){
@@ -44,4 +50,4 @@ function mapStateToProps(state) {
   return {FormObject: state.forms.formObject, error:state.error.type};
 }
 
-export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(ContactForm);
+export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(OrganicsForm);

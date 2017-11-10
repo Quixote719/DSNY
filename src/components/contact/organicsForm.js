@@ -54,7 +54,7 @@ const CommonStep = (props) => {
     'search box validation of address comes up'
   </div>
   <FormSectionHeader title={Titles.ResidentInfo}/>
-  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
+  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.RegistrantBusinessName && errors.RegistrantBusinessName}></FormFieldFull>
   <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.RegistrantFirstName && errors.RegistrantFirstName}></FormField>
   <FormField title={Titles.LastName} type="text" name="RegistrantLastName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantLastName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormField title={Titles.Role} type="text" name="RegistrantTitle" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantTitle}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
@@ -142,7 +142,7 @@ const Steps = ({
 
 
 // Wrap our form with the using withFormik HoC
-const OrganicsForm = compose(
+const OrganicsFormModule = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     validateStep: ({ stepValidated,validate,setStep, step }) =>
@@ -166,33 +166,18 @@ const OrganicsForm = compose(
 
     let errors = {}
 
-    // for (var value in values) {
-    //     if (!values[value])
-    //     {
-    //       console.log(value + values[value]);
-    //       errors[value] = Titles.RequiredFieldMessage
-    //     }
-    // }
 
     if (!values.RegistrantBusinessName) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+      errors.RegistrantBusinessName = 'Please enter a valid Organization TaxId Number'
     }
     if (!values.RegistrantFirstName) {
       errors.RegistrantFirstName = 'Please enter a valid Organization Website'
     }
-    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.WillPostCompostRecipientSignage) {
-    //
-    //   errors.WillPostCompostRecipientSignage = 'please check this'
-    // }
-
+    console.log(errors);
     return errors
   },
 
   handleSubmit: (values, {props,setSubmitting}) => {
-
     setTimeout(() => {
       console.log(this.props);
       alert(JSON.stringify(values, null, 2));
@@ -207,4 +192,4 @@ const OrganicsForm = compose(
 })
 )(Steps);
 
-export default OrganicsForm;
+export default OrganicsFormModule;
