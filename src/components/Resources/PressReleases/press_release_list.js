@@ -14,12 +14,12 @@ class PressRelease extends Component {
   }
 
   renderPosts(pr,max_cards) {
-    
+
     const shortenedPressReleaseList = this.firstN(pr,4);
     const length = Object.keys(this.firstN(pr,4)).length;
 
     return _.map(this.firstN(pr, 4), (prItem,index) => {
-      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date} 
+      return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} date={prItem.date}
       key={prItem.title} arrayIndex={index} arraylength={length} maxCards={max_cards}/>);
     });
   }
@@ -33,11 +33,11 @@ class PressRelease extends Component {
 
   ViewAllButton(l,max_cards) {
     if(max_cards == 0){
-       return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>);
+       return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL'/></Link>);
     }
-    
+
     if (l > max_cards) {
-      return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' onClick={this._reroute}/></Link>);
+      return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/press-releases"}><SubSectionButton title='VIEW ALL' /></Link>);
     } else {
       return null;
     }
@@ -52,7 +52,7 @@ class PressRelease extends Component {
     }
 
     return (<div>
-      <SubSectionHeader title="Press Release" onClick={this._reroute}/>
+      <SubSectionHeader title="Press Release" />
       <div>{this.renderPosts(pr,maxCards)}</div>
 
       {this.ViewAllButton(n,maxCards)}

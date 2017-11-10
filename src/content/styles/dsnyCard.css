@@ -15,8 +15,9 @@
 
 .ProfileCard{
   margin: 10px 0;
+  padding: 10px 0;
   width: 220px;
-  height: 317px;
+  min-height: 317px;
   background-color: #FFFFFF;
   vertical-align: top;
   display: inline-block;
@@ -162,6 +163,12 @@
 @media only screen and (max-width: 940px) {
   .CardTitleBox .CardTitle{
     width: 100%!important;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .ProfileCard{
+    width: 100%;  
   }
 }
 

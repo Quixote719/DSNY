@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ReactDOM from "react-dom";
 import {Row, Col, Tooltip} from 'react-bootstrap';
 import FormSectionHeader from './form_section_header';
 import FormHeader from './form_header';
@@ -8,12 +9,14 @@ import FormField from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
+import Yup from 'yup';
 
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
 import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
+import {postFormObject} from "../../actions/contact_forms";
 
 import '../../content/styles/contactForm.css';
 
@@ -53,18 +56,18 @@ const CommonStep = (props) => {
       'search box validation of address comes up'
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage}/>
+    <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" get alonChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
     <FormBoolean title={Titles.WillPostSignageWithinTwoWeeks} name="WillPostSignageWithinTwoWeeks" onChange={handleChange} onBlur={handleBlur} value={values.WillPostSignageWithinTwoWeeks}/>
     <FormBoolean title={Titles.WillSubmitThreePhotos} name="WillSubmitThreePhotos" onChange={handleChange} onBlur={handleBlur} value={values.WillSubmitThreePhotos}/>
     <FormBoolean title={Titles.ConsentToDsnyUseOfPhotos} name="ConsentToDsnyUseOfPhotos" onChange={handleChange} onBlur={handleBlur} value={values.ConsentToDsnyUseOfPhotos}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}/>
-    <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName}>{touched.OrganizationName && errors.OrganizationName && <div>{errors.OrganizationName}</div>}</FormField>
+    <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}  error={touched.CompostSiteApplicantTypeId && errors.CompostSiteApplicantTypeId}/>
+    <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName} error={touched.OrganizationName && errors.OrganizationName}></FormField>
     <FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
-    <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
-    <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-    <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+    <FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage} error={touched.OrganizationFacebookPage && errors.OrganizationFacebookPage}></FormField>
+    <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
+    <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
     <FormSectionHeader title={Titles.sectionFour}/>
     <FormField title={Titles.FirstName} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
     <FormField title={Titles.LastName} type="text" name="LastName" onChange={handleChange} onBlur={handleBlur} value={values.LastName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -99,7 +102,6 @@ const CommonStep = (props) => {
   </fieldset>)
 };
 
-
 const Step1 = (props) => {
   const {
     errors,
@@ -111,9 +113,9 @@ const Step1 = (props) => {
     {props.values.editMode = false}
     <CommonStep {...props} />
     <Col xs={12}>
-      <button onClick={ isSubmitting || !isEmpty(errors) || !dirty? '':nextStep}>Next</button>
+      <button onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>Next</button>
     </Col>
-
+<DisplayFormikState {...props}/>
   </span>)
 };
 
@@ -148,6 +150,11 @@ const Steps = ({
   </form>
 )
 
+const schema = {
+  "requiredFields": [
+    "OrganizationTaxIdNumber", "OrganizationWebsite"
+  ]
+}
 
 // Wrap our form with the using withFormik HoC
 const TestForm = compose(
@@ -164,14 +171,34 @@ const TestForm = compose(
   // Transform outer props into form values
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)
+  // validationSchema: Yup.object().shape({
+  //   OrganizationTaxIdNumber: Yup.mixed().required(Titles.RequiredFieldMessage),
+  //   OrganizationWebsite: Yup.mixed().required(Titles.RequiredFieldMessage),
+  //   WillPostCompostRecipientSignage: Yup.bool().required(Titles.RequiredFieldMessage),
+  //   CompostSiteApplicantTypeId: Yup.string().notOneOf(['Select one']),
+  // }),
   validate: (values, props) => {
+
     let errors = {}
-    if (!values.OrganizationTaxIdNumber) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    
+    //Get the required fields from the const schema defined above
+    for (var value in schema.requiredFields) {
+        if (!values[schema.requiredFields[value]])
+        {
+          errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
+        }
     }
-    if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    }
+
+
+    // if (!values.OrganizationTaxIdNumber) {
+    //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    // }
+    // if (!values.OrganizationWebsite) {
+    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    // }
     // if (!values.WillPostCompostRecipientSignage) {
 
     //   errors.WillPostCompostRecipientSignage = 'please check this'
@@ -179,9 +206,13 @@ const TestForm = compose(
 
     return errors
   },
-  handleSubmit: (values, {setSubmitting}) => {
+
+  handleSubmit: (values, {props,setSubmitting}) => {
+    
     setTimeout(() => {
+      console.log(this.props);
       alert(JSON.stringify(values, null, 2));
+      props.onSubmit(values);
       setSubmitting(false);
       console.log(values);
     }, 1000);
