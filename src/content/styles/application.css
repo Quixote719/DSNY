@@ -73,20 +73,22 @@ html body {
   font-size: 16px;
 }
 
-.whiteTitle {
-  color: #FFFFFF;
-  font-size: 36px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  margin-top: 20px;
-}
-
 .bottomSection{
   padding-bottom: 50px;
 }
 
-.WhiteTitle{
-    line-height: 300px;
+.whiteTitle{
+    margin-top: 20px;
+    font-size: 36px;
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.whiteHeader{
+    margin-top: 100px;
+    font-size: 36px;
   	color: #FFFFFF;
     font-size: 48px;
     font-weight: bold;
@@ -115,7 +117,6 @@ html body {
 
 .container {
   max-width: 940px;
-   padding: 0; 
 }
 
 a{
@@ -175,8 +176,10 @@ body{top:0px !important;}
     box-shadow: none !important;
 }
 .error{
-  border-color: red !important;
+  border-color: #e9322d  !important;
 }
+input[type=checkbox].error
+{outline: 2px solid #e9322d !important;}
 
 
 /* Language Translation CSS Styles  -- End*/

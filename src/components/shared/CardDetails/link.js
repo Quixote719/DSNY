@@ -1,7 +1,9 @@
 import React from "react";
 import {Link as ReactLink} from "react-router-dom";
+import { connect } from 'react-redux';
+import * as actions from '../../../actions/actions_home';
 
-export default class Link extends React.Component {
+class Link extends React.Component {
 
   parseTo(to) {
 
@@ -22,9 +24,27 @@ export default class Link extends React.Component {
     return window.location.hostname === toLocation.hostname;
 
   }
-
+  checkBreadCrumbInput(url){
+    if(url===process.env.REACT_APP_SITE_RELATIVE_URL+'/') {
+      this.props.setActiveNavTab("home")
+    }
+    else if(url.includes("resources")){
+      this.props.setActiveNavTab("resources")
+    }
+    else if(url.includes("services")){      
+      this.props.setActiveNavTab("services")
+    }    
+    else if(url.includes("about")){
+      this.props.setActiveNavTab("about")
+    }   
+    else if(url.includes("our-work")){
+      this.props.setActiveNavTab("our-work")
+    }    
+    else if(url.includes("contact")){
+      this.props.setActiveNavTab("contact")
+    }
+  }
   render() {
-
     const {
       to,
       children,
@@ -32,15 +52,21 @@ export default class Link extends React.Component {
     } = this.props;
     const isInternal = this.isInternal(to);
 
+
     if (isInternal) {
       return (
-        <ReactLink to={to} {...rest}>{children}</ReactLink>
+        <ReactLink onClick={()=>{this.checkBreadCrumbInput(to)}}  to={to} {...rest}>{children}</ReactLink>
       );
     } else {
       return (
-        <a href={to} target="_blank" {...rest}>{children}</a>
+        <a href={to} onClick={()=>{this.checkBreadCrumbInput(to)}} target="_blank" {...rest}>{children}</a>
       );
     }
 
   }
 }
+let actionList = {
+  setActiveNavTab: actions.setActiveNavTab
+};
+Link = connect(null,actionList)(Link);
+export default Link;

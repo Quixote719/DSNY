@@ -4,16 +4,20 @@ import ContentCard from '../shared/ContentCard'
 
 class LocationsSection extends Component {
 
-  
+
   render() {
-    
+    const bcgImage = this.props.LocationProps.image||''
+    const style = {
+      backgroundImage: `url(${bcgImage})`,
+      backgroundSize: '100% 900px'
+    }
     const cardStyle = {
                         'float': 'right',
                         'marginTop': '25px'
                       }
 
     return (
-      <div className='locations' style={{backgroundImage: `url(${this.props.LocationProps.image})`,backgroundSize: '100% 900px'}} >
+      <div className='locations' style={style} >
         <div className = 'SContainer'>
             <div className = 'whiteTitle'>Locations</div>
             <div style={cardStyle}>
