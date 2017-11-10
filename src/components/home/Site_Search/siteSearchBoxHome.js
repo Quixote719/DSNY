@@ -13,12 +13,13 @@ import {Link} from "react-router-dom";
 import $ from 'jquery';
 
 
-class SearchBoxHome extends Component {
+class SiteSearchBox extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state = { showModal: false};
+        this.searchResultPage = this.searchResultPage.bind(this);                
         this.handleKeyPress = this.handleKeyPress.bind(this);                
         this.state = {
+            showModal: false,
             value: "",
             suggestions: [],
             placeholder: "Search"
@@ -27,20 +28,20 @@ class SearchBoxHome extends Component {
 
     getSuggestionValue = suggestion => suggestion;
     renderSuggestion = suggestion => (
-
       <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/site-search/${suggestion}`}>
         <div className ="ridOfSuggestions" onClick = {this.props.showModal}>
           {suggestion}
         </div>
         </Link>
       );
+
     getSuggestions = value => {
       console.log("Props are")
       console.log(this.props);
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
       
-        return inputLength === 0 ? [] : this.props.ridOffKeywords.filter(lang =>
+        return inputLength === 0 ? [] : (this.props.ridOffKeywords?this.props.ridOffKeywords:"").filter(lang =>
           lang.toLowerCase().slice(0, inputLength) === inputValue
         );
       };
@@ -70,17 +71,34 @@ class SearchBoxHome extends Component {
         placeholder: " "
       })
     }
+    searchResultPage(event,{suggestion}){
+      // this.setState({
+      //     checkInputresults: "clearBoxNotChecked",
+      //     searchResult: ""
+      //  });
+      this.props.setSearchClearBoxValue("clearBoxNotChecked")      
+      this.props.setSiteSearchValue(suggestion);
+      this.props.getSiteSearchResults(suggestion);                 
+    }
+    siteSearchIcon = () =>{
+      // this.props.showModal;
+      this.props.setSearchClearBoxValue("clearBoxNotChecked")      
+      this.props.setSiteSearchValue(this.state.value);
+      this.props.getSiteSearchResults(this.state.value);  
+      
+    }
     handleKeyPress = (event) => {
       if(event.key == 'Enter'){ 
-        window.staticUrl.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value);
-        // this.props.test.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
-        console.log('enter press here! ')
+        this.props.setSearchClearBoxValue("clearBoxNotChecked")        
+        this.props.setSiteSearchValue(this.state.value);        
+        this.props.getSiteSearchResults(this.state.value);           
+        document.getElementById("siteSearchLink").click();
       }
     }
     render() {
 
         return (
-            <div>
+            <div className = "siteSearchBoxParent">
                         <Autosuggest
                             suggestions={this.state.suggestions}
                             onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
@@ -97,12 +115,25 @@ class SearchBoxHome extends Component {
                                 onFocus: this.setPlaceHolder,
                                 onKeyPress: this.handleKeyPress,                                
                             }}/>
-                        <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value}>
-                        <i className="fa fa-search searchMessagesInputIcon"></i>
+                        <Link onClick = {this.props.showModal} to = {process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value} id = "siteSearchLink">
+                        <i className="fa fa-search searchMessagesInputIcon" onClick = {this.siteSearchIcon} ></i>
                         </Link>
             </div>
     )
   } 
 }
+function mapStateToProps(state) {
+  return {
+      siteClearBoxValue: state.carouselDataReducer.siteClearBoxValue,    
+      siteSearchValue: state.carouselDataReducer.siteSearchValue,                
+  }
+}
 
-export default SearchBoxHome;
+let actionList = {
+  setSearchClearBoxValue: actions.setSearchClearBoxValue,      
+  getSiteSearchResults: actions.getSiteSearchResults,  
+  setSiteSearchValue: actions.setSiteSearchValue,
+};
+
+SiteSearchBox = connect(mapStateToProps, actionList)(SiteSearchBox);
+export default SiteSearchBox;

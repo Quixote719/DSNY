@@ -1,3 +1,15 @@
+.siteSearchBoxParent>div>.react-autosuggest__suggestions-container{
+    margin: 0;
+}
+.siteSearchBoxParent{
+    padding-top: 7px;
+    display: inline-block;
+    position: absolute;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: transparent;
+}
 .search-box-header {
     max-height: 50px;
 }
@@ -8,12 +20,13 @@
     margin: 0!important;
 }
 .siteSearch{
+    padding-right: 30px;    
     border-radius: 3px;
     border: 1px solid #D5D5D5;
     padding-top: 6px;
     font-weight: 500;
     padding-left: 10px;
-    width: 215px;
+    width: 217px;
     padding-bottom: 6px;
 }
 .search-box-header:hover {
@@ -421,6 +434,11 @@ input.searchMessagesInput:focus {
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
+    .siteSearchBoxParent {
+        padding: 0; 
+        display: block;
+        position: static;
+    }
     .searchMessagesMobileDiv>div>.react-autosuggest__container{
         padding-bottom: 20px;
     }
@@ -682,7 +700,7 @@ input.searchMessagesInput:focus {
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px){
     .siteSearch{
-        width: 178px;
+        width: 177px;
     }
 .upperHeaderContainer {
     padding-right: 12px;
@@ -759,6 +777,11 @@ input.searchMessagesInput:focus {
 }
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape){
+    .siteSearchBoxParent {
+        padding: 0; 
+        display: block;
+        position: static;
+    }
     .searchMessagesMobileDiv>div>.react-autosuggest__container{
         padding-bottom: 20px;
     }
