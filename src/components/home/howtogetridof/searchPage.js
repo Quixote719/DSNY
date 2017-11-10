@@ -19,7 +19,7 @@ const renderSuggestion = suggestion => (
         </div>
     </Link>
   );
-let pageSize = 2;  
+let pageSize = 5;  
 class SearchPage extends Component {
     constructor(props, context) {
         super(props, context);
@@ -157,7 +157,7 @@ class SearchPage extends Component {
                         ellipsis
                         boundaryLinks
                         items={length}
-                        maxButtons={2}
+                        maxButtons={3}
                         activePage={this.state.activePage}
                         onSelect={this.handleSelect} />
             </div>

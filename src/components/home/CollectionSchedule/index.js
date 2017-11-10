@@ -12,6 +12,7 @@ import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-au
 import DownloadInfoApp from '../download_dsny_app';
 import CollectionScheduleTable from './collectionScheduleTable';
 import RoutingTimes from './routingTimes';
+import AddressAutocomplete from './addressAutocomplete'
 
 let errorFlag = 0;
 class CollectionSchedule extends Component {
@@ -129,18 +130,13 @@ class CollectionSchedule extends Component {
                 <Row className="searchRowRidOf">
                     <Col xs={12} md={12} className="searchRidOfParent">
                             <div id="innersquareRidOf">
-                            <PlacesAutocomplete inputProps={inputProps}
-                                    options={options}
-                                    onSelect={this.handleSelect}
-                                    onEnterKeyDown={this.handleSelect}
-                                    classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
-                                />
+                            <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}/>
                             <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.state.address!==""?{display: 'block'}:{display: 'none'}} id="collectionSearchResults"></i>
                             <i className="fa fa-search collectionSearch" style={this.state.address ==""?{display: 'block'}:{display: 'none'}} id="collectionSearchResults"></i> 
                             </div>
                     </Col>
                 </Row>
-                <div style = {this.props.suggestionAddress !== null || this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
+                <div style = {(this.props.suggestionAddress?this.props.suggestionAddress.length !=0:"") ||this.props.suggestionAddress !== null || this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
                     No search results found
                 </div>
 
