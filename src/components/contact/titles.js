@@ -80,7 +80,8 @@ export const sharedFormTitles = {
   "CapOptional": "CAPACITY (LBS)(OPTIONAL)",
   "Flow": "FLOW(UNITS PER MANUFATURER SPECS)(OPTIONAL)",
   "BusinessSelectList": "WHAT IS THE NATURE OF BUSINESS ACTIVITY AT THIS PREMISES? (SELECT ALL THAT APPLY)",
-  "OnsitePMOptions": "ON-SITE PROCESSING METHOD (SELECT ALL THAT APPLY)"
+  "OnsitePMOptions": "ON-SITE PROCESSING METHOD (SELECT ALL THAT APPLY)",
+  "Describe": "PLEASE DESCRIBE"
 }
 export const commercialOrganicsFormTitles = {
   "residentInfo": "Registrant Information",

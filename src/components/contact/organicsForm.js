@@ -67,6 +67,7 @@ const CommonStep = (props) => {
   <FormField title={Titles.FLoorSuiteApt} type="text" name="MailingApartment" onChange={handleChange} onBlur={handleBlur} value={values.MailingApartment} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormSectionHeader title={Titles.BusinessType}/>
   <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.BusinessSelectList} name="BusinessActivityTypes" options={values.BusinessActivityTypes}/>
+  <FormFieldFull isHidden={!values.BusinessActivityTypes.Values[5].Selected} title={Titles.Describe} type="text" name="OtherDescribe" onChange={handleChange} onBlur={handleBlur} value={values.OtherDescribe} error={touched.OtherDescribe && errors.OtherDescribe}></FormFieldFull>
   <FormSectionHeader title={Titles.OnsiteMethod}/>
   <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.OnsitePMOptions} name="GreaseInterceptorTypes" options={values.OnSiteProcessingTypes}/>
 
@@ -163,7 +164,6 @@ const OrganicsFormModule = compose(
   //   CompostSiteApplicantTypeId: Yup.string().notOneOf(['Select one']),
   // }),
   validate: (values, props) => {
-
     let errors = {}
 
 
@@ -173,7 +173,7 @@ const OrganicsFormModule = compose(
     if (!values.RegistrantFirstName) {
       errors.RegistrantFirstName = 'Please enter a valid Organization Website'
     }
-    console.log(errors);
+
     return errors
   },
 
