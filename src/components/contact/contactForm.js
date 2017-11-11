@@ -4,9 +4,9 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import FormSectionHeader from './form_section_header';
 import FormHeader from './form_header';
 import FormMultiSelect from './multiselect_field'
-import FormBoolean from './form_boolean';
+import CheckBoxInput from './form_boolean';
 import TextInput from './form_field';
-import FormDropdown from './dropdown_field'
+import DropdownInput from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';
 import Yup from 'yup';
@@ -63,11 +63,15 @@ const CommonStep = (props) => {
     <FormSectionHeader title={Titles.sectionThree}/>
     <FormDropdown disabled={values.editMode} title='APPLYING AS' name="CompostSiteApplicantTypeId" value={values.CompostSiteApplicantTypeId} ondropDownChange={handledropDown} onChange={setFieldValue} onBlur={handleBlur} options={values.CompostSiteApplicantTypes}  error={touched.CompostSiteApplicantTypeId && errors.CompostSiteApplicantTypeId}/>
     <FormField title={Titles.OrganizationName} isHidden={values.CompostSiteApplicantTypeId !== 2} type="text" disabledf={values.CompostSiteApplicantTypeId !== 2} name="OrganizationName" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationName} error={touched.OrganizationName && errors.OrganizationName}></FormField>*/}
-    <Field name="OrganizationTaxIdNumber" component={TextInput}/>
-    <Field name="OrganizationWebsite" component={TextInput}/>
-    <Field name="FirstName" component={TextInput}/>
-    <Field name="LastName" component={TextInput}/>
-    <Field name="SecondaryPhoneTypeId" component={FormDropdown}/>
+    {/*<Field name="WillPostCompostRecipientSignage" component={CheckBoxInput}/>
+    <Field name="WillPostSignageWithinTwoWeeks" component={CheckBoxInput}/>
+    <Field name="WillSubmitThreePhotos" component={CheckBoxInput}/>
+    <Field name="ConsentToDsnyUseOfPhotos" component={CheckBoxInput}/>*/}
+    <Field name="OrganizationTaxIdNumber" required component={TextInput}/>
+    <Field name="OrganizationWebsite" required component={TextInput}/>
+    <Field name="FirstName"  component={TextInput}/>
+    <Field name="LastName" required component={TextInput}/>
+    {/*<Field name="SecondaryPhoneTypeId" component={DropdownInput} onChange={setFieldValue} disabled={values.editMode}/>*/}
     
     {/*<FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>*/}
@@ -148,7 +152,7 @@ const Steps = ({
   ...props
 }) => (
 
-  <form onSubmit={handleSubmit}>
+  <form id="form" novalidate onSubmit={handleSubmit}>
     {{
       1: <Step1 nextStep={nextStep} {...props} />,
       2: <Step2 previousStep={previousStep} {...props} />,
@@ -157,11 +161,6 @@ const Steps = ({
   </form>
 )
 
-const schema = {
-  "requiredFields": [
-    "OrganizationTaxIdNumber", "OrganizationWebsite", "SecondaryPhoneTypeId"
-  ]
-}
 
 // Wrap our form with the using withFormik HoC
 const TestForm = compose(
@@ -178,23 +177,46 @@ const TestForm = compose(
   // Transform outer props into form values
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled}),
   // Add a custom validation function (this can be async too!)
-  // validationSchema: Yup.object().shape({
-  //   OrganizationTaxIdNumber: Yup.mixed().required(Titles.RequiredFieldMessage),
-  //   OrganizationWebsite: Yup.mixed().required(Titles.RequiredFieldMessage),
-  //   WillPostCompostRecipientSignage: Yup.bool().required(Titles.RequiredFieldMessage),
-  //   CompostSiteApplicantTypeId: Yup.string().notOneOf(['Select one']),
-  // }),
   validate: (values, props) => {
 
     let errors = {}
+    let firsterror = true;
+
+    document.getElementById("form").noValidate = true;
+    // var forms = document.querySelectorAll('.contactForm form');
+    // for (var i = 0; i < forms.length; i++) {
+    //     forms[i].setAttribute('novalidate', true);
+    // }
+    
+
+    const inputs = document.querySelectorAll('.contactForm input');
+    
+    inputs.forEach(input => {
+      //input.classList.add('active');
+      
+      console.log(input.name);
+      console.log(input.required);
+      
+      if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
+         {
+           errors[input.name] = Titles.RequiredFieldMessage
+           if(firsterror)
+           {
+             input.focus();
+             firsterror = false;
+           }
+         }
+    
+    });
+
     
     //Get the required fields from the const schema defined above
-    for (var value in schema.requiredFields) {
-        if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
-        {
-          errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
-        }
-    }
+    // for (var value in schema.requiredFields) {
+    //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
+    //     {
+    //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
+    //     }
+    // }
 
 
     // if (!values.OrganizationTaxIdNumber) {
@@ -214,6 +236,7 @@ const TestForm = compose(
     return errors
   },
 
+  
   handleSubmit: (values, {props,setSubmitting}) => {
     
     setTimeout(() => {

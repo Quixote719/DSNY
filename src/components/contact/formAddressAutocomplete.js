@@ -98,9 +98,9 @@ class FormAddressAutocomplete extends Component {
                     No search results found
                 </div>
                 {this.correctAddressList()}
-                <div style = {((this.props.noResultsError?this.props.noResultsError.RegularCollectionSchedule == null:"") && (this.props.noResultsError?this.props.noResultsError.RecyclingCollectionSchedule:"") == null &&(this.props.noResultsError?this.props.noResultsError.OrganicsCollectionSchedule == null:"")) && ?{display: 'block'}:{display: 'none'} } className="errorMessageAddressForm">
+                {/*<div style = {((this.props.noResultsError?this.props.noResultsError.RegularCollectionSchedule == null:"") && (this.props.noResultsError?this.props.noResultsError.RecyclingCollectionSchedule:"") == null &&(this.props.noResultsError?this.props.noResultsError.OrganicsCollectionSchedule == null:"")) && ?{display: 'block'}:{display: 'none'} } className="errorMessageAddressForm">
                 The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-                </div>
+                </div>*/}
                 
                 <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.

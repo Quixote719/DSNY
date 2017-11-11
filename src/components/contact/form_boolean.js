@@ -5,6 +5,8 @@ import ReactDOM from 'react-dom';
 import {Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import isEmpty from 'lodash/isEmpty'
+import {compostFormObject, compostFormTitles as Titles} from './titles'
+
 
 class FormBoolean extends Component {
 
@@ -59,4 +61,22 @@ FormBoolean.propTypes = {
   title: PropTypes.string
 };
 
-export default FormBoolean;
+const CheckboxInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormBoolean title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+
+export default CheckboxInput;

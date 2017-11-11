@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {MenuItem, DropdownButton} from 'react-bootstrap';
+import {compostFormObject, compostFormTitles as Titles} from './titles'
 
 const booleanOptions = [
   {
@@ -53,7 +54,7 @@ class FormDropdown extends Component {
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
           <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> < /div> < /div >} noCaret id="dropdown-no-caret">
+            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> </div> </div >} noCaret id="dropdown-no-caret">
             {
               this.renderList(
                 this.props.options
@@ -72,4 +73,23 @@ FormDropdown.propTypes = {
   title: PropTypes.string
 };
 
-export default FormDropdown;
+
+const InputDropdown = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormDropdown   ondropDownChange={props.ondropDownChange} title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+export default InputDropdown;
+
