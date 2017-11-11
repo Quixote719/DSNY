@@ -8,6 +8,7 @@ import FormBoolean from './form_boolean';
 import FormField from './form_field';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
+import SubmitThankYou from './thank_you'
 import Datetime from 'react-datetime';
 import Yup from 'yup';
 import RequestStepper from './request_stepper'
@@ -51,10 +52,14 @@ const CommonStep = (props) => {
   } = props;
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeader title='Online Application'/>
+
+
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       'search box validation of address comes up'
     </div>
+
+    <SubmitThankYou >{'<h2>Your compost req Complaint form has been submitted succefully.</h2><p>testing a paragraph </p><p>testing a multiple paragarah lines with breaks</p>'}</SubmitThankYou>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <RequestStepper header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category'/>
     <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>

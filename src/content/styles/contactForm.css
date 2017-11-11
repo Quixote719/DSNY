@@ -19,6 +19,35 @@
   }
 }
 
+.thankYoupatternLine {
+  height: 10px;
+  margin: 40px 0px 70px 0px;
+  background: url('../images/Lightgreen.png');
+}
+
+.thankyoulable{
+  color: #00764E;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.alignCenter{
+  text-align: center;
+}
+
+.thankyoubody{
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}
+
+
+
 .increment{
     background-image:  url('../images/plus-default.png');
   height: 24px;	width: 24px;
@@ -34,6 +63,7 @@
 
   margin-top: 5px;
 }
+
 
 .incDecField{
 	height: 36px;
