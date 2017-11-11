@@ -52,7 +52,7 @@ class FormDropdown extends Component {
       <Col className='FormField' xs={12} sm={6} md={6}>
         <fieldset>
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+          <DropdownButton required={this.props.required} disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
             </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> </div> </div >} noCaret id="dropdown-no-caret">
             {
@@ -85,7 +85,7 @@ const InputDropdown = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormDropdown   ondropDownChange={props.ondropDownChange} title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormDropdown title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
