@@ -39,13 +39,7 @@ class CompostRequestForm extends Component {
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     // }
-    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.WillPostCompostRecipientSignage) {
 
-    //   errors.WillPostCompostRecipientSignage = 'please check this'
-    // }
     return errors;
   }
 
