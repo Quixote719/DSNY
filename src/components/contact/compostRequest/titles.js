@@ -9,7 +9,7 @@ export const compostFormTitles = {
   WillPostSignageWithinTwoWeeks: 'Yes, the sign will be installed within two weeks of receiving the material.',
   WillSubmitThreePhotos: 'Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.',
   ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.',
-  ApplyingAs: 'APPLYING AS',
+  CompostSiteApplicantTypeId: 'APPLYING AS',
   OrganizationName: 'ORGANIZATION NAME',
   OrganizationTaxIdNumber: 'ORGANIZATION TAX IDENTIFICATION NUMBER NAME',
   OrganizationWebsite: 'ORGANIZATION OR PROJECT WEBSITE (optional)',
