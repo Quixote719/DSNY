@@ -22,24 +22,22 @@ class FormFileDropZone extends Component {
     return (
       <div>
         <Col xs={12}>
-          <div className='fileDropZoneHeader'>#File1</div>
-            <div className='fileDropZoneBody'>you can upload up to 3 files,but the total size of all files uploaded cannot exceed 10 MB.</div>
-          <Dropzone
-  accept="image/jpeg, image/png,  .doc,.pdf"
->
+          <div className='fileDropZoneHeader'>{this.props.name}</div>
+          <div className='fileDropZoneNote'>{this.props.note}</div>
+          <Dropzone className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' accept="image/jpeg, image/png,.pdf">
   {({ isDragActive, isDragReject, acceptedFiles, rejectedFiles }) => {
     if (isDragActive) {
+
       return "This file is authorized";
     }
     if (isDragReject) {
       return "This file is not authorized";
     }
-    return acceptedFiles.length || rejectedFiles.length
-      ? `Accepted ${acceptedFiles.length}, rejected ${rejectedFiles.length} files`
-      : "Try dropping some files.";
+    return acceptedFiles.length
+      ? `Accepted ${acceptedFiles.length}, rejected ${rejectedFiles.length}`
+      : <div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/collectionschedule-recycling.svg')} alt='upload File' width={40} className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>;
   }}
-</Dropzone>
-
+       </Dropzone>
         </Col>
       </div>
     );
