@@ -31,7 +31,7 @@ class FormField extends Component {
 
   handleChange(event){
     //console.log("DINESH" + this.refs.myinput.value )
-    !isEmpty(this.refs[this.props.name].value) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
+    (isEmpty(this.props.error)) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
   }
 
   handleFocusOut(event){

@@ -24,7 +24,7 @@ import { compostFormTitles as Titles} from './titles'
 //       {JSON.stringify(props.values, null, 2)}
 //     </pre>
 //   </div>);
-
+let firsterror = true;
 
 const Step1 = (props) => {
   const {
@@ -96,8 +96,7 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    let firsterror = true;
-
+    
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
     
     
@@ -156,19 +155,22 @@ const FormSteps = compose(
 
     //   errors.WillPostCompostRecipientSignage = 'please check this'
     // }
+    if(isEmpty(errors))
+      props.validateForm(values,errors);
 
     return errors
   },
 
   
   handleSubmit: (values, {props,setSubmitting}) => {
-    
+   
     setTimeout(() => {
       console.log(this.props);
       alert(JSON.stringify(values, null, 2));
       props.onSubmit(values);
       setSubmitting(false);
       console.log(values);
+      
     }, 1000);
   },
   validateOnChange: true,

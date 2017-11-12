@@ -16,6 +16,7 @@ class CompostRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
+    this.validateForm = this.validateForm.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
@@ -30,13 +31,31 @@ class CompostRequestForm extends Component {
       this.props.postFormObject(formObject);
   }
 
+   validateForm(formObject, errors){
+    //formObject & Values are same
+     if (formObject.OrganizationTaxIdNumber === "TEST") {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    }
+    // if (!values.OrganizationWebsite) {
+    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+    // }
+    // if (!values.WillPostCompostRecipientSignage) {
+
+    //   errors.WillPostCompostRecipientSignage = 'please check this'
+    // }
+    return errors;
+  }
+
   render() {
 
       const {FormObject, error} = this.props;
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} customFormData={FormObject} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
