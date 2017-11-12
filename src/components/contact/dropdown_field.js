@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {Col} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {MenuItem, DropdownButton} from 'react-bootstrap';
-import {compostFormObject, compostFormTitles as Titles} from './titles'
 
 const booleanOptions = [
   {
@@ -85,7 +84,7 @@ const InputDropdown = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormDropdown title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormDropdown name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

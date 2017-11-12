@@ -5,8 +5,6 @@ import ReactDOM from 'react-dom';
 import {Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import isEmpty from 'lodash/isEmpty'
-import {compostFormObject, compostFormTitles as Titles} from './titles'
-
 
 class FormBoolean extends Component {
 
@@ -72,7 +70,7 @@ const CheckboxInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormBoolean title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormBoolean name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

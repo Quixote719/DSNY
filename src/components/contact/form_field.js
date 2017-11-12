@@ -7,8 +7,6 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 import isEmpty from 'lodash/isEmpty'
-import classnames from 'classnames'
-import {compostFormObject, compostFormTitles as Titles} from './titles'
 
 class FormField extends Component {
 
@@ -107,7 +105,7 @@ const TextInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
