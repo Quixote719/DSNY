@@ -13,6 +13,7 @@ class FormFileDropZone extends Component {
    }
 
    onDrop(files) {
+     console.log(files);
       this.setState({
         files
       });
@@ -24,18 +25,18 @@ class FormFileDropZone extends Component {
         <Col xs={12}>
           <div className='fileDropZoneHeader'>{this.props.name}</div>
           <div className='fileDropZoneNote'>{this.props.note}</div>
-          <Dropzone className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' accept="image/jpeg, image/png,.pdf">
+          <Dropzone onDrop={this.onDrop.bind(this)} className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' accept="image/jpeg, image/png,.pdf">
   {({ isDragActive, isDragReject, acceptedFiles, rejectedFiles }) => {
     if (isDragActive) {
 
-      return "This file is authorized";
+      return (<div className='alignCenter'>this file is accepted</div>);
     }
     if (isDragReject) {
       return "This file is not authorized";
     }
     return acceptedFiles.length
-      ? `Accepted ${acceptedFiles.length}, rejected ${rejectedFiles.length}`
-      : <div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/collectionschedule-recycling.svg')} alt='upload File' width={40} className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>;
+      ?  this.state.files.map(f => <div className='alignCenter filedropZoneinfo' key={f.name}> Name: {f.name}, Type: {f.type} Size:{f.size} bytes</div>)
+      : rejectedFiles.length ? <div className='alignCenter filedropZoneinfo'>this file is not authorized type</div> : <div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/collectionschedule-recycling.svg')} alt='upload File' width={40} className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>;
   }}
        </Dropzone>
         </Col>
