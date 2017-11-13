@@ -191,6 +191,12 @@ input[type=checkbox].error
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.formCheckboxText{
+  display:inline-block;
+  vertical-align: text-bottom;
+  margin: 7px 0 0 10px;
+}
+
 .loader:empty {
   width: 4em;
   height: 4em;
