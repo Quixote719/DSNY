@@ -22,7 +22,6 @@ class FormDropdown extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    console.log(props.value);
     this.state = {
       option: typeof props.value === "boolean" ? this.searchKey(props.value,booleanOptions) : props.value ? this.searchKey(props.value,props.options) : props.disabled ? "":"Select one",
     }
@@ -61,7 +60,7 @@ class FormDropdown extends Component {
       <Col className='FormField' xs={12} sm={6} md={6}>
         <fieldset>
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <DropdownButton disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+          <DropdownButton required={this.props.required} disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
             </div> < div className = "col-xs-2 downArrow" > <i className={this.checkIfTimeField()} ></i> < /div> </div>} noCaret id="dropdown-no-caret">
             {
@@ -83,4 +82,23 @@ FormDropdown.propTypes = {
   timeField:PropTypes.any,
 };
 
-export default FormDropdown;
+
+const InputDropdown = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormDropdown title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+export default InputDropdown;
+

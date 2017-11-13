@@ -1,18 +1,54 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {Link} from "react-router-dom";
+export const Titles = {
+  sectionOne: 'SECTION 1: APPLICANT AND ORGANIZATION LOCATION',
+  sectionTwo: 'SECTION 2: TERMS OF SERVICE (MUST AGREE TO ALL TERMS )',
+  sectionThree: 'SECTION 3: ORGANIZATION INFORMATION',
+  sectionFour: 'SECTION 4: APPLICANT CONTACT INFORMATION',
+  sectionFive: 'SECTION 5: SITE INFORMATION',
+  sectionSix: 'SECTION 6: DELIVERY INFORMATION',
+  WillPostCompostRecipientSignage: 'Yes, I will post a DSNY compost recIpient sign near where DSNY Compost will be used.',
+  WillPostSignageWithinTwoWeeks: 'Yes, the sign will be installed within two weeks of receiving the material.',
+  WillSubmitThreePhotos: 'Yes, I will subming three (3) photos of the compost in use to NYCCOMPOST@DSNY.NYC.GOV.',
+  ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.',
+  CompostSiteApplicantTypeId: 'APPLYING AS',
+  OrganizationName: 'ORGANIZATION NAME',
+  OrganizationTaxIdNumber: 'ORGANIZATION TAX IDENTIFICATION NUMBER NAME',
+  OrganizationWebsite: 'ORGANIZATION OR PROJECT WEBSITE (optional)',
+  OrganizationFacebookPage: 'ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)',
+  OrganizationTwitterHandle: 'ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)',
+  OrganizationInstagramHandle: 'ORGANIZATION OR PROJECT instagram ID (optional)',
+  FirstName: 'FIRST NAME',
+  LastName: 'LAST NAME',
+  Title: 'YOUR TITLE OR AFFILIATION WITH ORGANIZATION (optional)',
+  IsCertifiedNycMasterComposter: 'ARE YOU A CERTIFIED NYC MASTER COMPOSTER?',
+  PrimaryPhone: 'PRIMARY PHONE NUMBER',
+  PrimaryPhoneTypeId: 'Phone Type (optional)',
+  SecondaryPhone: 'SECONDARY PHONE NUMBER (Optional)',
+  SecondaryPhoneTypeId: 'Phone Type (optional)',
+  Email: 'E-MAIL',
+  ConfirmEmail: 'CONFIRM E-MAIL',
+  CompostSiteTypeId: 'WHAT TYPE OF SITE IS THIS?',
+  OtherCompostSiteType: 'OTHER SITE TYPE',
+  CompostSitePermittingOrganizationId: 'PERMISSION TO TEND THIS SITE WAS GRANTED BY',
+  OtherCompostSitePermittingOrganization: 'OTHER PERMITTING ORGANIZATION',
+  SiteSize: 'SITE SIZE (SQUARE FEET)',
+  IsGreenThumbGarden: 'IS THIS A GREENTHUMB GARDEN?',
+  HasReceivedDsnyCompostBefore: 'HAVE YOU RECEIVED DSNY COMPOST IN THE PAST?',
+  CompostUseDescription: 'DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)',
+  FromHourOfDayId: 'PREFERRED DELIVERY TIMES From',
+  ToHourOfDayId: 'To',
+  DeliveryNotes: 'DELIVERY NOTES AND INSTRUCTIONS (Optional)',
+  EntranceHeightWidth: 'HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE (Optional)',
+  HasAlternateSideParking: 'ALTERNATE SIDE PARKING AT SITE?',
+  Pallets: 'NUMBER OF PALLETS OF COMPOST',
+  DeliveryDeadline: 'WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?',
+  DeliveryOn: 'THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.',
+  AlternateSideParking: 'ALTERNATE SIDE PARKING DAYS? (Select ALL that apply)',
+  AlternateSideParkingTimes: 'PREFERRED DELIVERY TIMES From',
+  RequiredFieldMessage: 'This field is required',
+}
 
-//Actions
-import {fetchFormObject, postFormObject} from "../../actions/contact_forms";
-import Steps from './contactForm'
-import FetchError from './fetchError'
 
-import '../../content/styles/contactForm.css';
-import CommonStep from './steps'
-
-
-
-const p = {
+export const formObject = {
   "Id": 0,
   "SRNumberId": 0,
   "SRNo": null,
@@ -619,52 +655,3 @@ const p = {
   "CompostSiteApplicantTypeId": 0,
   "SelectedCompostSiteApplicantType": null
 }
-
-
-class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.postForm = this.postForm.bind(this);
-    this.state = {
-FormObject:{},
-      editMode:true
-    }
-  }
-
-  componentDidMount() {
-    this.props.fetchFormObject();
-  }
-
-  postForm(formObject){
-      this.props.postFormObject(formObject);
-  }
-
-
-  render() {
-
-      const {FormObject, error} = this.props;
-
-    //if (FormObject && FormObject !== undefined) {
-    return (<div className='container'><div className='contactForm'>
-
-      <Steps formFields={CommonStep} customFormData={FormObject} onSubmit={this.postForm}/>
-
-    </div></div>);
-  //};
-if (error){
-  return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-}
-  return(<div className='loader container'></div>)
-};
-};
-
-
-function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject, error:state.error.type};
-}
-
-
-
-
-
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(ContactForm);
