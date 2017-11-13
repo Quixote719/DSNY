@@ -122,7 +122,7 @@ const FormSteps = compose(
   }),
   withFormik({
   // Transform outer props into form values
-  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields}),
+  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
 

@@ -105,7 +105,7 @@ const TextInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

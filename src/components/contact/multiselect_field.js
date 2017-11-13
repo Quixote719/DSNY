@@ -65,7 +65,7 @@ const MultiSelectInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormMultiSelect name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormMultiSelect title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

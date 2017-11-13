@@ -70,7 +70,7 @@ const CheckboxInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormBoolean name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormBoolean title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
