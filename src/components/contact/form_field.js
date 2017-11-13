@@ -66,7 +66,7 @@ class FormField extends Component {
            return (<div>
             <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabledf} required={this.props.required} className={this.props.error?"input error":'input'} error={this.props.error}
+                : ''} disabled={this.props.disabledf} required={this.props.required} maxlength={this.props.maxlength} className={this.props.error?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
