@@ -4,10 +4,13 @@ import {Link} from "react-router-dom";
 
 //Actions
 import {fetchFormObject, postFormObject} from "../../actions/contact_forms";
-import Form from './contactForm'
+import Steps from './contactForm'
 import FetchError from './fetchError'
 
 import '../../content/styles/contactForm.css';
+import CommonStep from './steps'
+
+
 
 const p = {
   "Id": 0,
@@ -644,7 +647,8 @@ FormObject:{},
     //if (FormObject && FormObject !== undefined) {
     return (<div className='container'><div className='contactForm'>
 
-      <Form disabled={!this.state.editMode} customFormData={p} onSubmit={this.postForm}/>
+      <Steps formFields={CommonStep} customFormData={FormObject} onSubmit={this.postForm}/>
+
     </div></div>);
   //};
 if (error){
@@ -658,5 +662,9 @@ if (error){
 function mapStateToProps(state) {
   return {FormObject: state.forms.formObject, error:state.error.type};
 }
+
+
+
+
 
 export default connect(mapStateToProps, {fetchFormObject, postFormObject})(ContactForm);

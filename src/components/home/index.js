@@ -11,13 +11,15 @@ import * as actions from '../../actions/actions_home';
 import {connect} from 'react-redux';
 
 class Home extends Component {
-  // constructor(props, context) {
-  //   super(props, context);
-  // }
+  constructor(props, context) {
+    super(props, context);
+  }
   componentWillMount() {
+    window.staticUrl = this.props;
+    this.forceUpdate();
     this.props.carouselData();
     this.props.getRidOffKeywords();
-    window.staticUrl = this.props    
+    // window.staticUrl = this.props    
     if (process.env.REACT_APP_MUNCIPAL_SERVICE == "TRUE") //Call this service only on PRODUCTION Enviroment
       this.props.carouselPanelData();
     else
