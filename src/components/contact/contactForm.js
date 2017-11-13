@@ -59,14 +59,6 @@ const CommonStep = (props) => {
     <div>
       'search box validation of address comes up'
     </div>
-
-    <SubmitThankYou >{'<h2>Your compost req Complaint form has been submitted succefully.</h2><p>testing a paragraph </p><p>testing a multiple paragarah lines with breaks</p>'}</SubmitThankYou>
-
-
-    <FormFileDropZone name='#File 1' note='you can upload up to 3 files,but the total size of all files uploaded cannot exceed 10 MB.'></FormFileDropZone>
-
-      <FormFileDropZone name='#File 2' ></FormFileDropZone>
-
     <FormSectionHeader title={Titles.sectionTwo}/>
     <RequestStepper header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category'/>
     <FormBoolean title={Titles.WillPostCompostRecipientSignage} name="WillPostCompostRecipientSignage" onChange={handleChange} onBlur={handleBlur} value={values.WillPostCompostRecipientSignage} error={touched.WillPostCompostRecipientSignage && errors.WillPostCompostRecipientSignage}/>
