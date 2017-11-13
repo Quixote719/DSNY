@@ -38,7 +38,7 @@ const CompostRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} {...props} />
     <Field component={TextInput} name="OrganizationName" {...props} isHidden={values.CompostSiteApplicantTypeId !== 2}/>
-    <Field component={TextInput} name="OrganizationTaxIdNumber" {...props} required/>
+    <Field component={TextInput} name="OrganizationTaxIdNumber" maxlength="10" {...props} required/>
     <Field component={TextInput} name="OrganizationWebsite" {...props} required/>
     <Field component={TextInput} name="OrganizationFacebookPage" {...props}/>
     <Field component={TextInput} name="OrganizationTwitterHandle" {...props}/>
