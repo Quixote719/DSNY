@@ -4,6 +4,7 @@ import {withFormik, Formik, Field, Form} from 'formik'
 import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
 import { compostFormTitles as Titles} from './titles'
+import Recaptcha from 'react-recaptcha';
 
 // import '../../content/styles/contactForm.css';
 
@@ -25,6 +26,24 @@ import { compostFormTitles as Titles} from './titles'
 //     </pre>
 //   </div>);
 let firsterror = true;
+
+
+// Captcha - site key
+const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
+
+// Captcha - onload callback function
+const callback = () => {
+  console.log('Done!!!!');
+};
+
+const verifyCallback = (response) => {
+  console.log(response);
+};
+
+const expiredCallback = () => {
+  console.log(`Recaptcha expired`);
+};
+
 
 const Step1 = (props) => {
   const {
@@ -53,6 +72,18 @@ const Step2 = (props) => {
   return (<span>
     {props.values.editMode = true}
     <props.formFields {...props} />
+
+    
+    <div className="FormField col-md-12 col-sm-12 col-xs-12">
+    <Recaptcha
+          sitekey={sitekey}
+          render="explicit"
+          verifyCallback={verifyCallback}
+          onloadCallback={callback}
+          expiredCallback={expiredCallback}
+        />
+    
+    </div>
     <Col xs={12}>
     <button onClick={previousStep}>Previous</button>
     <button type="submit">Submit</button>
