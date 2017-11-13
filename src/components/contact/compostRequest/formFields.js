@@ -8,7 +8,7 @@ import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
 import {Field} from 'formik'
-import {compostFormTitles as Titles} from './titles'
+import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 
 // Our inner form component which receives our form's state and updater methods as props
