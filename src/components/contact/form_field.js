@@ -80,7 +80,7 @@ class FormField extends Component {
 
     return (<div >{
         !this.props.isHidden
-          ? <Col className='FormField' xs={12} sm={6} md={6}>
+          ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
                 <div className='FormMultiSelectTitle'>{this.props.title}</div>
                 <div>{this.renderField()}</div>
