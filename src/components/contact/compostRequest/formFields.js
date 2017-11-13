@@ -10,6 +10,8 @@ import TextAreaInput from '../textarea_field';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
+import FormAddressAutocomplete from '../formAddressAutocomplete'
+ 
 
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
@@ -20,10 +22,11 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
+    
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      'search box validation of address comes up'
+      <FormAddressAutocomplete/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={CheckBoxInput} name={"WillPostCompostRecipientSignage"} {...props}/>
