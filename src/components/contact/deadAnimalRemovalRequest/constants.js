@@ -75,7 +75,7 @@ export const formObject = {
     {
       "Id": 7,
       "Name": "Rat",
-      "DisplayName": "Bird",
+      "DisplayName": "Rat",
       "Selected": false
     },
     {
