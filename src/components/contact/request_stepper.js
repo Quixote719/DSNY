@@ -10,7 +10,7 @@ class RequestStepper extends Component {
     constructor(props) {
       super(props);
       const {ItemCatg} = props ;
-      console.log('yesh varma', ItemCatg);
+
       this.state =  {
         header:'',
         tableHeader:'',
@@ -18,50 +18,53 @@ class RequestStepper extends Component {
       }
 
       this.renderCatg = this.renderCatg.bind(this);
-      this.fetchSubCatg = this.fetchSubCatg.bind(this);
+
     };
 
 
     componentDidMount() {
-      this.props.PickupReqGetItemCategories();
-
+      console.log(this.props);
+      if (this.props.subCat) {
+        debugger;
+              this.props.PickupReqGetItemSubCategories(this.props.subCat);
+      }else {
+            this.props.PickupReqGetItemCategories();
+      }
     }
 
-    fetchSubCatg(id) {
-
-
-    }
 
     renderCatg(ItemCatg) {
       if (ItemCatg)
       return _.map(ItemCatg, Item => {
         const subCatg = Item.hasSubCategory === 1
-      console.log(this.props);
+
             const {ItemSubCatg} = this.props;
+            if (subCatg){
             console.log(Item.CategoryId);
+              <RequestStepper subCat={Item.CategoryId}/>
+            }
+
             //this.props.PickupReqGetItemSubCategories(Item.CategoryId);
         return (<div><FormStepper title={Item.Category} header={subCatg}/>{}</div>);
-
-          return (<div><FormStepper title={Item.Category}/></div>);
       });
     }
 
     renderSubCatg(SubItemCatg) {
       if (SubItemCatg)
-      debugger;
+
       return _.map(SubItemCatg, (Item,index) => {
       return (<div><FormStepper title={Item.Category} /></div>);
       });
     }
 
     render(){
-      //const {ItemCatg} = this.props;
-      debugger;
+      const {ItemCatg} = this.props;
+
       return (
         <div>
           <div><Col>{this.props.header}</Col></div>
           <div><Col xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col xs={2} sm={2} md={2}>Quantity</Col></div>
-            {this.renderCatg(this.state.category)}
+            {this.renderCatg(ItemCatg)}
         </div>
       );
     }

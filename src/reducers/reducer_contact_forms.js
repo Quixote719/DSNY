@@ -15,8 +15,7 @@ return obj
 }
 
 export default function cardReducer(state = {}, action) {
-  console.log('yesh');
-  console.log(state);
+
   switch (action.type) {
     case types.FETCH_FORM_GET_COMPOST_REQUEST:
 
@@ -31,15 +30,13 @@ export default function cardReducer(state = {}, action) {
         formObject:searchObj(action.payload.data, false, null)
       };
       case types.FETCH_PICKUP_ITEM_CATEGORIES:
-      debugger;
-console.log(action.payload);
-console.log(action.payload.data);
+
         return {
           ...state,
           eWastePickupreqCatgItems:action.payload.data
         };
         case types.FETCH_PICKUP_ITEM_SUB_CATEGORIES:
-debugger;
+
           return {
             ...state,
             eWastePickupreqSubCatgItems:action.payload.data
