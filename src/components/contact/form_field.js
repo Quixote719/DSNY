@@ -16,6 +16,7 @@ class FormField extends Component {
       input: '',
       hideToolTip: true
     }
+
     
     this.handleChange = this.handleChange.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
@@ -27,50 +28,52 @@ class FormField extends Component {
   }
 
   handleChange(event){
-    !isEmpty(this.refs.myinput.value) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
+    //console.log("DINESH" + this.refs.myinput.value )
+    (isEmpty(this.props.error)) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
   }
 
   handleFocusOut(event){
     this.setState({hideToolTip: true});
   }
 
-  renderField(type) {
+  renderField() {
 
-    if (type) {
-      var name = 'input[' + type + ']';
-      switch (type) {
-        case "phone":
-          return (<div>
-            <MaskedInput mask={[
-                '(',
-                /[1-9]/,
-                /\d/,
-                /\d/,
-                ')',
-                ' ',
-                /\d/,
-                /\d/,
-                /\d/,
-                '-',
-                /\d/,
-                /\d/,
-                /\d/,
-                /\d/
-              ]} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value}/>
-          </div>);
+    // if (type) {
+    //   var name = 'input[' + type + ']';
+    //   switch (type) {
+    //     case "phone":
+    //       return (<div>
+    //         <MaskedInput mask={[
+    //             '(',
+    //             /[1-9]/,
+    //             /\d/,
+    //             /\d/,
+    //             ')',
+    //             ' ',
+    //             /\d/,
+    //             /\d/,
+    //             /\d/,
+    //             '-',
+    //             /\d/,
+    //             /\d/,
+    //             /\d/,
+    //             /\d/
+    //           ]} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value}/>
+    //       </div>);
 
-        default:
+    //     default:
           
            return (<div>
-            <input ref="myinput" onFocus={this.handleChange} onKeyUp={this.handleChange} type={type} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <input ref={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabledf} className={this.props.error?"input error":'input'} error={this.props.error}/>
+                : ''} disabled={this.props.disabledf} required={this.props.required} className={this.props.error?"input error":'input'} error={this.props.error}
+                />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
           </div>)
       }
-    }
-  }
+  //  }
+  //}
   render() {
 
     
@@ -80,7 +83,7 @@ class FormField extends Component {
           ? <Col className='FormField' xs={12} sm={6} md={6}>
               <fieldset>
                 <div className='FormMultiSelectTitle'>{this.props.title}</div>
-                <div>{this.renderField(this.props.type)}</div>
+                <div>{this.renderField()}</div>
               </fieldset>
             </Col>
           : null
@@ -90,10 +93,23 @@ class FormField extends Component {
   };
 };
 
-FormField.propTypes = {
-  title: PropTypes.string,
-  type: PropTypes.string,
-  disabledf: PropTypes.bool
-};
 
-export default FormField;
+const TextInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormField title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+
+export default TextInput;

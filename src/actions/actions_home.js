@@ -3,6 +3,7 @@ import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
 import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
+
 export function carouselData() {
     return function (dispatch) {
         axios.get(HOME_PAGE_DATA_URL)
@@ -14,18 +15,6 @@ export function carouselData() {
             })
     }
 }
-// export function newsData() {
-//     return function (dispatch) {
-//         axios.get(NEWS_PAGE_DATA_URL)
-//             .then((data) => {
-//                 dispatch({
-//                     type: 'SET_NEWS_PAGE',
-//                     payload: data,
-//                 })
-//             })
-//     }
-// }
-
 export function getNewsDataList(year) {
     return function(dispatch) {
       axios.get(NEWS_PAGE_DATA_URL.replace(/:MonthYear/g, year)).then((data) => {
@@ -223,4 +212,28 @@ export function fetchEventDetails(slug) {
       dispatch({type: types.FETCH_EVENT_DETAILS, payload: data})
     })
   }
+}
+export function setActiveNavTab(key) {
+    return function (dispatch) {
+        dispatch({
+            type: 'SET_ACTIVE_NAV_TAB',
+            payload: key
+        });
+    }
+}
+export function setSiteSearchValue(value) {
+        return function (dispatch) {
+            dispatch({
+                type: 'SET_SITE_SEARCH_VALUE',
+                payload: value
+            });
+        }
+}
+export function setSearchClearBoxValue(value) {
+    return function (dispatch) {
+        dispatch({
+            type: 'SET_CLEAR_BOX_SEARCH_VALUE',
+            payload: value
+        });
+    }
 }

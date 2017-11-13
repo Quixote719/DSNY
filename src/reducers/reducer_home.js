@@ -18,12 +18,16 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
       return { ...state, ridOffKeywords: action.payload };
     case 'SET_RID_OFF_SEARCH_RESULTS':
       return { ...state, getRidOfSearchResultsData: action.payload, noOfSearchResults: action.length };
-
-    case 'SET_SITE_SEARCH_KEYWORDS':
+      case 'SET_SITE_SEARCH_VALUE':
+      return { ...state, siteSearchValue: action.payload};
+      case 'SET_CLEAR_BOX_SEARCH_VALUE':
+      return { ...state, siteClearBoxValue: action.payload};
+      case 'SET_SITE_SEARCH_KEYWORDS':
       return { ...state, siteSearchKeywords: action.payload };
     case 'SET_SITE_SEARCH_RESULTS':
       return { ...state, siteSearchResultsData: action.payload, noOfSearchResults: action.length };
-
+    case 'SET_ACTIVE_NAV_TAB':
+    return { ...state, activeNavTab: action.payload };    
       case 'SET_RID_OFF_ITEM_DETAILS':
       return { ...state, getRidOfItemDetailsData: action.payload};
     case 'SET_NEWS_PAGE':

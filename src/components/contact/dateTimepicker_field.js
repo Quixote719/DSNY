@@ -34,4 +34,21 @@ FormDateTimePicker.propTypes = {
   type: PropTypes.string
 };
 
-export default FormDateTimePicker;
+const DateTimePickerInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormDateTimePicker name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+export default DateTimePickerInput;

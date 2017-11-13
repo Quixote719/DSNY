@@ -56,4 +56,22 @@ FormMultiSelect.propTypes = {
   title: PropTypes.string
 };
 
-export default FormMultiSelect;
+const MultiSelectInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormMultiSelect title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+
+export default MultiSelectInput;
