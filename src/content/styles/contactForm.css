@@ -19,6 +19,149 @@
   }
 }
 
+.thankYoupatternLine {
+  height: 10px;
+  margin: 40px 0px 70px 0px;
+  background: url('../images/Lightgreen.png');
+}
+
+.thankyoulable{
+  color: #00764E;
+  font-size: 64px;
+  line-height: 78px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.alignCenter{
+  text-align: center;
+}
+
+.thankyoubody{
+  color: #333333;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 70px;
+  margin-top: 10px;
+}
+
+.filedropZoneinfo{
+  padding-top: 70px;
+}
+
+.fileDropZoneHeader {
+	color: #000000;
+	font-size: 14px;
+	font-weight: bold;
+  margin-top: 5px;
+}
+
+.fileDropZoneNote {
+	color: #000000;
+	font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+
+}
+
+.fileDropzone{
+	box-sizing: border-box;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #979797;
+	height: 226px;
+	width: 100%;
+	outline: 1px solid #d8d8d8;
+	border-radius: 3px;
+  outline-offset: 5px;
+  outline-color: #f8f8f8;
+	background-color: #FFFFFF;
+}
+
+.fileDropzone:hover{
+	background-color: #F8FCF6;
+  border-color: #7CC04B;
+}
+.fileDropzoneRej{
+  box-sizing: border-box;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #979797;
+	height: 226px;
+	width: 100%;
+	outline: 1px solid #D80035;
+	border-radius: 3px;
+  outline-offset: 5px;
+  outline-color: #f8f8f8;
+	background-color: #FFFFFF;
+}
+
+.fileDropzoneAcpt{
+  box-sizing: border-box;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #7CC04B;
+	height: 226px;
+	width: 100%;
+	outline: 1px solid #d8d8d8;
+
+	border-radius: 3px;
+  outline-offset: 5px;
+  outline-color: #f8f8f8;
+background-color: #F8FCF6;
+}
+.click-on-the-icon {
+	color: #333333;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 17px;
+	text-align: center;
+  margin-top: 5px;
+}
+
+.file-types {
+	color: #898989;
+	font-size: 14px;
+	text-align: center;
+  margin-top: 5px;
+}
+
+
+.increment{
+    background-image:  url('../images/plus-default.png');
+  height: 24px;	width: 24px;
+  margin-left: 8px;
+  margin-top: 5px;
+  float: left;
+}
+.decrement{
+  background-image:  url('../images/minus-default.png');
+  height: 24px;	width: 24px;
+  float: left;
+    margin-right: 8px;
+
+  margin-top: 5px;
+}
+
+
+.incDecField{
+	height: 36px;
+	width: 40px !important;
+	border: 1px solid #D8D8D8;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+  float: left;
+  text-align: center;
+}
+.incDecFieldtext{
+color: #262626;
+font-size: 16px;
+font-weight: bold;
+padding-top: 5px;
+
+}
+
 
 .contactformButton {
   height: 36px;

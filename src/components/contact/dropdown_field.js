@@ -22,7 +22,6 @@ class FormDropdown extends Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    console.log(props.value);
     this.state = {
       option: typeof props.value === "boolean" ? this.searchKey(props.value,booleanOptions) : props.value ? this.searchKey(props.value,props.options) : props.disabled ? "":"Select one",
     }

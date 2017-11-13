@@ -15,6 +15,7 @@ return obj
 }
 
 export default function cardReducer(state = {}, action) {
+
   switch (action.type) {
     case types.FETCH_FORM_GET_COMPOST_REQUEST:
 
@@ -22,12 +23,30 @@ export default function cardReducer(state = {}, action) {
         ...state,
         formObject:searchObj(action.payload.data, false, null)
       };
+      case types.POST_FORM_COMPOST_REQUEST:
+
+        return {
+          ...state,
+          success:action.payload.data
+        };
     case types.FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST:
 
       return {
         ...state,
         formObject:searchObj(action.payload.data, false, null)
       };
+      case types.FETCH_PICKUP_ITEM_CATEGORIES:
+
+        return {
+          ...state,
+          eWastePickupreqCatgItems:action.payload.data
+        };
+        case types.FETCH_PICKUP_ITEM_SUB_CATEGORIES:
+
+          return {
+            ...state,
+            eWastePickupreqSubCatgItems:action.payload.data
+          };
     default:
       return state;
   }

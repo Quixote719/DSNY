@@ -7,6 +7,7 @@ import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
+import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
@@ -33,11 +34,11 @@ const CompostRequestFormElements = (props) => {
     <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props}/>
     <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props}/>
     <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props}/>
-    
+      <Field component={FileDropZone} header='#file1' note='testing the note feild' name="FileDropZone"{...props}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} {...props} />
     <Field component={TextInput} name="OrganizationName" {...props} isHidden={values.CompostSiteApplicantTypeId !== 2}/>
-    <Field component={TextInput} name="OrganizationTaxIdNumber" {...props} required/>
+    <Field component={TextInput} name="OrganizationTaxIdNumber" fullRow={true} maxlength="10" {...props} required/>
     <Field component={TextInput} name="OrganizationWebsite" {...props} required/>
     <Field component={TextInput} name="OrganizationFacebookPage" {...props}/>
     <Field component={TextInput} name="OrganizationTwitterHandle" {...props}/>
