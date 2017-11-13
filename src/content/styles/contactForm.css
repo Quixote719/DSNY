@@ -78,6 +78,11 @@
   outline-color: #f8f8f8;
 	background-color: #FFFFFF;
 }
+
+.fileDropzone:hover{
+	background-color: #F8FCF6;
+  border-color: #7CC04B;
+}
 .fileDropzoneRej{
   box-sizing: border-box;
   border-style: dashed;
@@ -85,20 +90,18 @@
   border-color: #979797;
 	height: 226px;
 	width: 100%;
-	outline: 1px solid #d8d8d8;
-
+	outline: 1px solid #D80035;
 	border-radius: 3px;
   outline-offset: 5px;
   outline-color: #f8f8f8;
 	background-color: #FFFFFF;
-box-shadow: 0 0 3pt 2pt red;
 }
 
 .fileDropzoneAcpt{
   box-sizing: border-box;
   border-style: dashed;
   border-width: 1px;
-  border-color: #979797;
+  border-color: #7CC04B;
 	height: 226px;
 	width: 100%;
 	outline: 1px solid #d8d8d8;
@@ -106,8 +109,7 @@ box-shadow: 0 0 3pt 2pt red;
 	border-radius: 3px;
   outline-offset: 5px;
   outline-color: #f8f8f8;
-	background-color: #FFFFFF;
-box-shadow: 0 0 3pt 2pt Lightgreen;
+background-color: #F8FCF6;
 }
 .click-on-the-icon {
 	color: #333333;

@@ -18,6 +18,45 @@ class FormFileDropZone extends Component {
         files
       });
     }
+    
+    
+    body(type,name){
+      switch (type) {
+        case 'placeHolder':
+      
+      return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_default.png')} alt='upload File'  className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+      break;
+      case 'error':
+      return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_error.png')} alt='upload File'  className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+    
+          break;
+      
+        case 'Success':
+        console.log(name);
+        if (_.includes(name, '.pdf')) {
+          return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_pdf.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+          
+        }
+        if (_.includes(name, '.png')) {
+          return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_image.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+          
+        }
+        if (_.includes(name, '.jpeg')) {
+          return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_image.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+          
+        }
+        if (_.includes(name, '.jpg')) {
+          return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_image.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+          
+        }
+        return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_default.png')} alt='upload File'  className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+      
+            break;
+          default:
+          return(<div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/file_upload_default.png')} alt='upload File'  className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
+        
+      }
+    }
 
   render() {
     return (
@@ -35,8 +74,8 @@ class FormFileDropZone extends Component {
       return "This file is not authorized";
     }
     return acceptedFiles.length
-      ?  this.state.files.map(f => <div className='alignCenter filedropZoneinfo' key={f.name}> Name: {f.name}, Type: {f.type} Size:{f.size} bytes</div>)
-      : rejectedFiles.length ? <div className='alignCenter filedropZoneinfo'>this file is not authorized type</div> : <div className='alignCenter filedropZoneinfo'><img src={require('../../content/images/collectionschedule-recycling.svg')} alt='upload File' width={40} className="recyclingIcon" /><div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>;
+      ?  this.state.files.map(f => this.body('Success', f.name))
+      : rejectedFiles.length ? this.body('error'): this.body('placeHolder');
   }}
        </Dropzone>
         </Col>
