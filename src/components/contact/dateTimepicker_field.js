@@ -55,7 +55,7 @@ const DateTimePickerInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormDateTimePicker name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormDateTimePicker name={name} title={props.formTitles[name]} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
