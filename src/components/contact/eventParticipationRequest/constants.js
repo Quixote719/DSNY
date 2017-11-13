@@ -5,6 +5,7 @@ export const Titles = {
   sectionFour: 'SECONDARY CONTACT INFORMATION (OPTIONAL)',
   sectionFive: 'SECTION 5: SITE INFORMATION',
   sectionSix: 'SECTION 6: DELIVERY INFORMATION',
+  AdditionalLocationInfo:'ADDITIONAL LOCATION INFORMATION (OPTION)',
   EventName: 'EVENT NAME',
   AlternateName: 'ALTERNATE NAME/SITE NAME',
   StartDate: 'START DATE',
@@ -212,7 +213,7 @@ export const formObject = {
     ],
     "SelectedValues": []
   },
-
+  "AdditionalLocationInfo":null,
 
 
   "FirstName": null,

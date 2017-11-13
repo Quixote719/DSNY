@@ -14,7 +14,7 @@ import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
  
 
-// Our inner form component which receives our form's state and updater methods as props
+// Our inner form component which receives our form's state and updater methods as props FullRow= {true
 const eventParticipationRequestFormElements = (props) => {
   const {
     values,
@@ -29,6 +29,7 @@ const eventParticipationRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete />
     </div>
+    <Field component={TextInput} name="AdditionalLocationInfo"  {...props} maxlength="4"/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="EventName" {...props} maxlength="4"/>
     <Field component={TextInput} name="AlternateName" {...props} maxlength="4"/>

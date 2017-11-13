@@ -5,6 +5,7 @@ import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
 import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
+import FormButton from './form_button';
 
 // import '../../content/styles/contactForm.css';
 
@@ -59,7 +60,7 @@ const Step1 = (props) => {
     <Col xs={12}>
       {console.log("DDD" + isSubmitting)}
       {console.log("DDD" + !isEmpty(errors))}
-      <button onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>Next</button>
+      <FormButton title={'NEXT'} onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}></FormButton>
     </Col>
 {/*<DisplayFormikState {...props}/>*/}
   </span>)
