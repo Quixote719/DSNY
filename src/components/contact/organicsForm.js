@@ -54,8 +54,8 @@ const CommonStep = (props) => {
     'search box validation of address comes up'
   </div>
   <FormSectionHeader title={Titles.ResidentInfo}/>
-  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
-  <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
+  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.RegistrantBusinessName && errors.RegistrantBusinessName}></FormFieldFull>
+  <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.RegistrantFirstName && errors.RegistrantFirstName}></FormField>
   <FormField title={Titles.LastName} type="text" name="RegistrantLastName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantLastName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormField title={Titles.Role} type="text" name="RegistrantTitle" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantTitle}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
   <FormField title={Titles.Email} type="text" name="RegistrantEmail" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantEmail}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -66,8 +66,10 @@ const CommonStep = (props) => {
   <FormFieldFull title={Titles.AddressOpt} type="text" name="MailingStreet" onChange={handleChange} onBlur={handleBlur} value={values.MailingStreet} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
   <FormField title={Titles.FLoorSuiteApt} type="text" name="MailingApartment" onChange={handleChange} onBlur={handleBlur} value={values.MailingApartment} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormSectionHeader title={Titles.BusinessType}/>
-
+  <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.BusinessSelectList} name="BusinessActivityTypes" options={values.BusinessActivityTypes}/>
+  <FormFieldFull isHidden={!values.BusinessActivityTypes.Values[5].Selected} title={Titles.Describe} type="text" name="OtherDescribe" onChange={handleChange} onBlur={handleBlur} value={values.OtherDescribe} error={touched.OtherDescribe && errors.OtherDescribe}></FormFieldFull>
   <FormSectionHeader title={Titles.OnsiteMethod}/>
+  <FormMultiSelect isHidden={false} onMultiSelect={setFieldValue} title={Titles.OnsitePMOptions} name="GreaseInterceptorTypes" options={values.OnSiteProcessingTypes}/>
 
 
 
@@ -141,7 +143,7 @@ const Steps = ({
 
 
 // Wrap our form with the using withFormik HoC
-const OrganicsForm = compose(
+const OrganicsFormModule = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     validateStep: ({ stepValidated,validate,setStep, step }) =>
@@ -162,37 +164,20 @@ const OrganicsForm = compose(
   //   CompostSiteApplicantTypeId: Yup.string().notOneOf(['Select one']),
   // }),
   validate: (values, props) => {
-
     let errors = {}
 
-    // for (var value in values) {
-    //     if (!values[value])
-    //     {
-    //       console.log(value + values[value]);
-    //       errors[value] = Titles.RequiredFieldMessage
-    //     }
-    // }
 
-
-    if (!values.OrganizationTaxIdNumber) {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    if (!values.RegistrantBusinessName) {
+      errors.RegistrantBusinessName = 'Please enter a valid Organization TaxId Number'
     }
-    if (!values.OrganizationWebsite) {
-      errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    }
-    if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-      errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    }
-    if (!values.WillPostCompostRecipientSignage) {
-
-      errors.WillPostCompostRecipientSignage = 'please check this'
+    if (!values.RegistrantFirstName) {
+      errors.RegistrantFirstName = 'Please enter a valid Organization Website'
     }
 
     return errors
   },
 
   handleSubmit: (values, {props,setSubmitting}) => {
-
     setTimeout(() => {
       console.log(this.props);
       alert(JSON.stringify(values, null, 2));
@@ -207,4 +192,4 @@ const OrganicsForm = compose(
 })
 )(Steps);
 
-export default OrganicsForm;
+export default OrganicsFormModule;

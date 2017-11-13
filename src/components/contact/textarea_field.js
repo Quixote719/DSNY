@@ -39,7 +39,7 @@ const TextAreaInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormTextarea name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormTextarea title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

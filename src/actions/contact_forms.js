@@ -5,7 +5,8 @@ FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL,
  FETCH_FORM_GET_COMPOST_REQUEST_URL,
   PSOT_FORM_COMPOST_REQUEST_URL,
   FETCH_PICKUP_ITEM_CATEGORIES_URL,
-  FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL
+  FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL,
+  POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL
 } from '../constants/ApiConstants';
 
 
@@ -96,7 +97,6 @@ export function postFormObject(formObject) {
 export function fetchOrganicsForm(category) {
 
   return function(dispatch) {
-    dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL).then((data) => {
 
       dispatch({type: types.FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST, payload: data})
@@ -108,6 +108,27 @@ export function fetchOrganicsForm(category) {
       console.log(error.response.data);
       console.log(error.response.status);
       console.log(error.response.headers);
+    }
+  });
+  }
+}
+
+export function postOrganicsForm(formObject) {
+  return function(dispatch) {
+
+   axios({
+        method: 'post',
+        url: POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL,
+        data: formObject,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+    }).then((data) => {
+
+     dispatch({type: types.POST_FORM_COMMERCIAL_ORGANICS_REQUEST, payload: data})
+    }).catch(function (error) {
+      dispatch({type: types.ERROR_LOADING_REQUEST, payload:error})
+    if (error.response) {
     }
   });
   }
