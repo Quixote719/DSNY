@@ -84,7 +84,7 @@ const InputDropdown = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormDropdown name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormDropdown title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

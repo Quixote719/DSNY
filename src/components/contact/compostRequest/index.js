@@ -7,10 +7,10 @@ import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
-
+import {compostFormTitles as Titles} from './titles'
 import '../../../content/styles/compostRequest.css';
 
-
+const formTitles = Titles;
 
 class CompostRequestForm extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ class CompostRequestForm extends Component {
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
