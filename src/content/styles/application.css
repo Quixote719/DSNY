@@ -391,7 +391,21 @@ input[type=checkbox].error
     cursor: pointer;
     outline: none;
     font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px 15px 30px 0;
+}
+
+.formEditBtn{
+    font-size: 14px;
+    height: 36px;
+    width: 126px;
+    color: #0D653D;
+    background-color: #EDEDEE;
+    border-radius: 0.188em;
+    border: 0px;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    margin: 20px 15px 30px 0;
 }
 /* Common Form CSS -- End */

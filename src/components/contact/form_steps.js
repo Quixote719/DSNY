@@ -85,8 +85,8 @@ const Step2 = (props) => {
 
     </div>
     <Col xs={12}>
-    <button onClick={previousStep}>Previous</button>
-    <button type="submit">Submit</button>
+    <button className="formSubmitBtn" type="submit">SUBMIT</button>
+    <button className="formEditBtn" onClick={previousStep}>EDIT</button>
     </Col>
   </span>)
 };
