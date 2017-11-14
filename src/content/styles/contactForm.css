@@ -190,7 +190,7 @@ padding-top: 5px;
   height: 2px;
   background-color: #7CC04B;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .FormField {
@@ -307,5 +307,5 @@ padding-top: 5px;
   font-weight: bold;
   line-height: 17px;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
