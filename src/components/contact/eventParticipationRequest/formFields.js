@@ -8,6 +8,7 @@ import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
+import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/eventParticipantReqst.css';
@@ -47,7 +48,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextAreaInput} name="ProvidedEquipmentDescription" {...props} maxlength="200" required/>
     <Field component={TextAreaInput} name="RecyclableShippingInfo" {...props} maxlength="200" required/>
     <Field component={TextAreaInput} name="ProvidedParkingDescription" {...props} maxlength="100" required/>
-    {/*<Field component={MultiSelectInput} name="TypeOfBins" {...props} onMultiSelect={setFieldValue} options={values.TypeOfBins}/>*/}
+    <FormTitleCheckBoxes title='COSTUME CHARACTERS REQUESTED (SELECT ALL THAT APPLY)'/>
     <Field component={CheckBoxInput} name="ZeroWasteCan" {...props} />
     <Field component={CheckBoxInput} name="BlueBin" {...props} />
     <Field component={CheckBoxInput} name="GreenBin" {...props} />

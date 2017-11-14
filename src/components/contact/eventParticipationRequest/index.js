@@ -52,12 +52,11 @@ class eventParticipationRequestForm extends Component {
       'FirstName':formObject.PfirstName,
       'LastName':formObject.PLastName,
       'Phone':formObject.PPhone,
-      'FullName': `${formObject.PfirstName}  ${formObject.PLastName}`,
-      'FullNameLastFirst':`${formObject.PLastName}, ${formObject.PfirstName}`,
       'Title':formObject.PTitle,
       'Organization':formObject.POrganization,
       'Zip':null,
       'SelectedPhoneType':formObject.PrimarySelectedPhoneType,
+      'Email':formObject.PEmailConfirm,
     }
 
 
@@ -65,12 +64,11 @@ class eventParticipationRequestForm extends Component {
       'FirstName':formObject.SFirstName,
       'LastName':formObject.SLastName,
       'Phone':formObject.SPhone,
-      'FullName': `${formObject.SfirstName}  ${formObject.SLastName}`,
-      'FullNameLastFirst':`${formObject.SLastName}, ${formObject.SfirstName}`,
       'Title':formObject.STitle,
       'Organization':formObject.SOrganization,
       'Zip':null,
       'SelectedPhoneType':formObject.SecondarySelectedPhoneTypes,
+      'Email':formObject.SEmailConfirm,
     }
 
    

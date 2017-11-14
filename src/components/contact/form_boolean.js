@@ -37,10 +37,13 @@ class FormBoolean extends Component {
 
   renderOptions() {
     return (<div>
+      <label className="checkContainer">
       <input ref="checkboxinput" type="checkbox" onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
       className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
       <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
-      <label >{this.props.title}</label>
+      <span className="checkmark"></span>
+      <div className="checkBoxText">{this.props.title}</div>
+      </label>
     </div>)
   }
   render() {

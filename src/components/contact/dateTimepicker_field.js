@@ -2,6 +2,7 @@ import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import { Col} from 'react-bootstrap';
+import moment from 'moment';
 import Datetime from 'react-datetime';
 import '../../content/styles/subSectionHeader.css';
 import '../../content/styles/react-datetime.css';
@@ -12,7 +13,6 @@ class FormDateTimePicker extends Component {
   constructor(props){
     super(props);
     this.onInputChange = this.onInputChange.bind(this); 
-    //console.log(props);
   }
 
   onInputChange(item) {
@@ -28,7 +28,7 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
+            <Datetime defaultValue={this.props.defaultValue} className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
           </fieldset>
