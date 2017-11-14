@@ -18,7 +18,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeader title='Dead Animal Removal Request'/>
+    <FormHeader title='Online Complaint Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>

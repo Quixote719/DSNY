@@ -2,9 +2,9 @@ export const Titles = {
   sectionOne: 'ENTER YOUR ADDRESS',
   sectionTwo: 'ORGANICS BIN INFORMATION',
   sectionThree: 'CONTACT INFORMATION',
-  NumberOfOutdoorBinsId: 'NUMBER OF OUTDOOR BINS TO REPLACE',
+  BinsToReplace: 'NUMBER OF OUTDOOR BINS TO REPLACE',
   BARCodeOrRFID: 'BARCODE OR RFID # OF REMAINING BINS (OPTIONAL)',
-  ReasonForReplacementListId: 'REASON FOR REPLACEMENT',
+  ReasonForReplacement: 'REASON FOR REPLACEMENT',
   Comments: 'COMMENTS (OPTIONAL)',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
@@ -17,40 +17,42 @@ export const Titles = {
 export const formObject = {
   "ReasonForReplacementList": [
     {
-      "Id": 1,
+      "Id": "Bin stolen/missing",
       "Name": "Bin stolen/missing",
       "DisplayName": "Bin stolen/missing",
       "Selected": false
     },
     {
-      "Id": 2,
+      "Id": "Bin broken (explain in comments)",
       "Name": "Bin broken (explain in comments)",
       "DisplayName": "Bin broken (explain in comments)",
       "Selected": false
     },
     {
-      "Id": 3,
+      "Id": "Bin found - cancel previous request (explain in comments)",
       "Name": "Bin found - cancel previous request (explain in comments)",
       "DisplayName": "Bin found - cancel previous request (explain in comments)",
       "Selected": false
     }
   ],
   "ReasonForReplacementListId": 0,
+  "ReasonForReplacement": null,
   "NumberOfOutdoorBins": [
     {
-      "Id": 1,
+      "Id": "One 13-gallon bin",
       "Name": "One 13-gallon bin",
       "DisplayName": "One 13-gallon bin",
       "Selected": false
     },
     {
-      "Id": 2,
+      "Id": "One 21-gallon bin",
       "Name": "One 21-gallon bin",
       "DisplayName": "One 21-gallon bin",
       "Selected": false
     }
   ],
   "NumberOfOutdoorBinsId": 0,
+  "BinsToReplace": null,
   "BinsToReplace": null,
   "ReasonForReplacement": null,
   "BARCodeOrRFID": null,

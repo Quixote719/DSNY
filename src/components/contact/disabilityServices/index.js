@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_LITTER_BASKET_URL
+  PSOT_FORM_DISABILITY_SERVICES_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -26,7 +26,7 @@ class DisabilityServices extends Component {
   }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_LITTER_BASKET_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
   }
 
    validateForm(formObject, errors){
