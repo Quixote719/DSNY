@@ -28,12 +28,11 @@ class FormMultiSelect extends Component {
     if(options!=undefined){
       return options.map((Item, index) => {
         return (<div key={_.random(0, 200, true)}>
-
-          <label className="checkContainer">
-              <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
-              <span className="checkmark"></span>
-              <div className="checkBoxText">{Item.DisplayName}</div>
-          </label>
+        <label className="checkContainer">
+            <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
+            <span className="checkmark"></span>
+            <div className="checkBoxText">{Item.DisplayName}</div>
+        </label>
         </div>)
       });
     }

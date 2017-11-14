@@ -187,6 +187,16 @@ input[type=checkbox].error
 
 /* Common Form CSS -- Start */
 
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+-webkit-appearance: none;
+border-radius: 0;
+}
+
 .formPlacesAutosuggestRow{
     margin: 0;
 }

@@ -33,7 +33,7 @@
   "EquipmentMinimumCapacity": "MINIMUM CAPACITY(LBS/DAY)",
   "EquipmentMaximumCapacity": "MAXIMUM CAPACITY(LBS/DAY)",
   "InstallationDate": "INSTALLATION DATE (MM/DD/YYYY)",
-  "GreaseInterceptorTypeId": "GREASE INTERCEPTOR INSTALLATION",
+  "GreaseInterceptorTypeId": "GREASE INTERCEPTOR INSTALLATION (OPTIONAL)",
   "GiInstallOptional": "GREASE INTERCEPTOR INSTALLATION(OPTIONAL)",
   "GreaseInterceptorManufacturer": "MANUFACTURER (OPTIONAL)",
   "GreaseInterceptorModelNo": "MODEL # (OPTIONAL)",

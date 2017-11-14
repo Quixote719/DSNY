@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_FORM_DEAD_ANIMAL_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class CompostRequestForm extends Component {
+class DeadAnimalRemovalRequest extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -26,13 +26,8 @@ class CompostRequestForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
-
-
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_DEAD_ANIMAL_URL);
   }
 
    validateForm(formObject, errors){
@@ -49,22 +44,16 @@ class CompostRequestForm extends Component {
 
   render() {
 
-    //const {FormObject, error, success} = this.props;
-    const {success,error} = this.props;
-
-    if(success !== undefined)
-    {
-      return(<ThankYou>Your request has been successfully created</ThankYou>);
-    }
-
+    const {success} = this.props;
+    console.log(success);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    if (error){
-        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    }
+    // if (error){
+    //     return (<FetchError onRetry={ () => this.props.fetchDeadAnimalForm()}/>);
+    // }
     return(<div className='loader container'></div>)
  };
 };
@@ -75,4 +64,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CompostRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(DeadAnimalRemovalRequest);
