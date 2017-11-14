@@ -1,8 +1,9 @@
 .pleaseEnterAddressForm{
+    font-size: 14px;
     padding-top: 2px;
 }
 .errorMessageAddressForm{
-    color: #CC0029;	
-    font-size: 16px;	
+    color: #CC0029;
+    font-size: 16px;
     line-height: 18px;
 }

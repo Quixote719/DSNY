@@ -61,10 +61,8 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="InstallationDate" {...props} required/>
     <FormSectionHeader title={Titles.sectionSeven}/>
     <Field component={DropdownInput} name="GreaseInterceptorTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode} {...props} />
-
-
-    <Field component={TextInput} name="EquipmentManufacturer" {...props} required/>
-    <Field component={TextInput} name="EquipmentModelNo" {...props} required/>
+    <Field component={TextInput} name="GreaseInterceptorManufacturer" {...props} required/>
+    <Field component={TextInput} name="GreaseInterceptorModelNo" {...props} required/>
     <Field component={TextInput} name="GreaseInterceptorCapacity" {...props} required/>
     <Field component={TextInput} name="GreaseInterceptorFlow" {...props} required/>
   </fieldset>)
