@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-
+import {
+  PSOT_FORM_COMPOST_REQUEST_URL
+} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps from '../form_steps'
@@ -28,7 +30,7 @@ class CompostRequestForm extends Component {
   }
 
   postForm(formObject){
-      this.props.postFormObject(formObject);
+      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
    validateForm(formObject, errors){
@@ -46,7 +48,7 @@ class CompostRequestForm extends Component {
   render() {
 
       const {FormObject, error, success} = this.props;
-console.log(Titles);
+    console.log(success);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
