@@ -187,7 +187,15 @@ input[type=checkbox].error
 
 /* Common Form CSS -- Start */
 
+.dropdown-menu>li>a{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+.formCheckboxText{
+  display:inline-block;
+  vertical-align: text-bottom;
+  margin: 7px 0 0 10px;
+}
 
 .loader:empty {
   width: 4em;
@@ -236,7 +244,7 @@ input[type=checkbox].error
   height: 2px;
   background-color: #7CC04B;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 .FormField {
@@ -353,7 +361,7 @@ input[type=checkbox].error
   font-weight: bold;
   line-height: 17px;
   margin-top: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 /* Common Form CSS -- End */

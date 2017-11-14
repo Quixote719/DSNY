@@ -66,7 +66,7 @@ class FormField extends Component {
            return (<div>
             <input ref={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabledf} required={this.props.required} className={this.props.error?"input error":'input'} error={this.props.error}
+                : ''} disabled={this.props.disabledf} required={this.props.required} maxlength={this.props.maxlength} className={this.props.error?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
@@ -80,7 +80,7 @@ class FormField extends Component {
 
     return (<div >{
         !this.props.isHidden
-          ? <Col className='FormField' xs={12} sm={6} md={6}>
+          ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
                 <div className='FormMultiSelectTitle'>{this.props.title}</div>
                 <div>{this.renderField()}</div>
