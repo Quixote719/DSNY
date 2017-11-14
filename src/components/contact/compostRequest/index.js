@@ -54,9 +54,9 @@ class CompostRequestForm extends Component {
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    // }
+    if (error){
+        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+    }
     return(<div className='loader container'></div>)
  };
 };
