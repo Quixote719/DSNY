@@ -12,6 +12,7 @@ import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
+import axios from 'axios';
 
 const formTitles = Titles;
 
@@ -42,20 +43,24 @@ class DisabilityServices extends Component {
     return errors;
   }
 
+  componentDidMount() {
+    const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
+    `${REST_WEBAPI_URL}disabilityservices`
+    axios
+      .get(`${REST_WEBAPI_URL}disabilityservices`)
+      .then(res => this.setState({ posts: res.data }))
+      .catch(err => console.log(err))
+      console.log(this.state.posts);
+  }
+
   render() {
     
         //const {FormObject, error, success} = this.props;
         const {success,error} = this.props;
     
-        if(success !== undefined) {
-          if(FormObject.SRNo != null)
-            {
-              return(<ThankYou>{FormObject.SRNo}</ThankYou>);
-              
-            } else {
-              return(<ThankYou>???</ThankYou>);
-            }
-            console.log(FormObject.SRNo)
+        if(success !== undefined) {           
+            return(<ThankYou>???</ThankYou>);
+
           }
     
         if (FormObject && FormObject !== undefined) {
