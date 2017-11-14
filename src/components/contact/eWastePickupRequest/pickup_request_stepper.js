@@ -21,11 +21,10 @@ class RequestStepper extends Component {
       if (ItemCatg)
       return _.map(ItemCatg, Item => {
         const subCatg = Item.hasSubCategory === 1
-
-            if (subCatg){
-            console.log(Item.CategoryId);
-              return (<div><FormStepper title={Item.Category} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
-            }
+              if (subCatg){
+              console.log(Item.CategoryId);
+                return (<div><FormStepper title={Item.Category} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
+              }
 
         return (<div><FormStepper title={Item.Category} header={subCatg}/></div>);
       });
@@ -33,7 +32,6 @@ class RequestStepper extends Component {
 
     renderSubCatg(SubItemCatg) {
       if (SubItemCatg)
-
       return _.map(SubItemCatg, (Item,index) => {
       return (<div><FormStepper title={Item.Category} /></div>);
       });
@@ -41,11 +39,10 @@ class RequestStepper extends Component {
 
     render(){
       const {ItemCatg} = this.props;
-
       return (
         <div>
           <Col className='headerStepper' xs={12} >{this.props.header}</Col>
-          <Col className='tableHeaderStepper' xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col className='tableHeaderStepper' xs={2} sm={2} md={2}>Quantity</Col>
+          <Col className='tableHeaderStepper' xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col className='tableHeaderStepper' xs={2} sm={2} md={2}>  {`Quantity`}</Col>
           <Col className='hairline' xs={12}></Col>
             {this.renderCatg(ItemCatg)}
         </div>
