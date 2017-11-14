@@ -3,7 +3,7 @@ import RoundProfile from '../../shared/RoundProfile';
 import SubSectionHeaderGreen from '../../shared/sub_section_header_green'
 import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import _ from "lodash"
-import {fetchCardDetails} from "../../../actions"
+import {FetchCommissioner} from "../../../actions/actions_about"
 import {connect} from "react-redux"
 
 
@@ -13,28 +13,15 @@ class Biography extends Component {
     this.state = {
       reload: false
     };
-    const {slug} = this.props.match.params;
-    this.slug = slug;
   }
 
   componentWillMount() {
-    const {slug} = this.props.match.params;
-    console.log('testforparams');
-    console.log(this.props.match.params);
-    this.props.fetchCardDetails(slug);
+    this.props.FetchCommissioner();
   }
 
-  componentWillReceiveProps(nextProps, nextState) {
-    const {slug} = nextProps.match.params;
-    if (this.slug != slug) {
-      this.slug = slug;
-      this.setState({reload: true});
-      this.props.fetchCardDetails(slug);
-    }
-  }
-  renderPage(cardDetails){
+  renderPage(commissionerInfo){
 
-    return _.map(cardDetails, cItems => {
+    return _.map(commissionerInfo, cItems => {
 
       let banner;
       if(cItems!==undefined){
@@ -73,18 +60,17 @@ class Biography extends Component {
   }
 
   render() {
-    const {cardDetails} = this.props;
-
+    const {commissionerInfo} = this.props;
     return (
       <div className='biographyPage'>
-          {this.renderPage(cardDetails)}
+          {this.renderPage(commissionerInfo)}
       </div>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return {cardDetails: state.card};
+  return {commissionerInfo: state.AboutDataReducer.CommissionerData};
 }
 
-export default connect(mapStateToProps, {fetchCardDetails})(Biography);
+export default connect(mapStateToProps, {FetchCommissioner})(Biography);

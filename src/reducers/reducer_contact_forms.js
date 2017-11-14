@@ -23,7 +23,7 @@ export default function cardReducer(state = {}, action) {
         ...state,
         formObject:searchObj(action.payload.data, false, null)
       };
-      case types.POST_FORM_COMPOST_REQUEST:
+      case types.POST_FORM_REQUEST:
 
         return {
           ...state,

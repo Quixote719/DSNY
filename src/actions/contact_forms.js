@@ -73,13 +73,13 @@ export function PickupReqGetItemSubCategories(id) {
 
 }
 
-export function postFormObject(formObject) {
+export function postFormObject(formObject, Url) {
   return function(dispatch) {
-    dispatch({type: types.POST_FORM_COMPOST_REQUEST, payload: {}})
+    dispatch({type: types.POST_FORM_REQUEST, payload: {}})
 
-   axios.post(PSOT_FORM_COMPOST_REQUEST_URL ,formObject).then((data , headers) => {
+   axios.post(Url ,formObject).then((data , headers) => {
 
-     dispatch({type: types.POST_FORM_COMPOST_REQUEST, payload: data})
+     dispatch({type: types.POST_FORM_REQUEST, payload: data})
     }).catch(function (error) {
       console.log('yesh');
       console.log(JSON.stringify(error))
