@@ -55,11 +55,9 @@ const Step1 = (props) => {
   return (<span>
     {props.values.editMode = false}
     <props.formFields {...props} />
-    
+
     <Col xs={12}>
-      {console.log("DDD" + isSubmitting)}
-      {console.log("DDD" + !isEmpty(errors))}
-      <button onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>Next</button>
+      <button className="formSubmitBtn" onClick={ isSubmitting  || !isEmpty(errors) || !dirty ? (firsterror = true):nextStep}>NEXT</button>
     </Col>
 {/*<DisplayFormikState {...props}/>*/}
   </span>)
@@ -73,7 +71,7 @@ const Step2 = (props) => {
     {props.values.editMode = true}
     <props.formFields {...props} />
 
-    
+
     <div className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}
@@ -82,7 +80,7 @@ const Step2 = (props) => {
           onloadCallback={callback}
           expiredCallback={expiredCallback}
         />
-    
+
     </div>
     <Col xs={12}>
     <button onClick={previousStep}>Previous</button>
@@ -114,7 +112,7 @@ const FormSteps = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     validateStep: ({ stepValidated,validate,setStep, step }) =>
-      () =>validate,
+      () => validate,
     nextStep: ({ setStep, step }) =>
       () => setStep(step + 1),
     previousStep: ({ setStep, step }) =>
@@ -129,16 +127,16 @@ const FormSteps = compose(
     let errors = {}
     
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
-    
-    
+
+
     inputs.forEach(input => {
       //input.classList.add('active');
-      
+
       console.log(input.name);
       console.log(input.type);
       console.log(input.hasAttribute("required"));
       console.log(values[input.name]);
-      
+
       //Text, Checkbox Input Validation
       if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
       {
@@ -160,10 +158,10 @@ const FormSteps = compose(
           }
       }
 
-    
+
     });
 
-    
+
     //Get the required fields from the const schema defined above
     // for (var value in schema.requiredFields) {
     //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
@@ -192,16 +190,16 @@ const FormSteps = compose(
     return errors
   },
 
-  
+
   handleSubmit: (values, {props,setSubmitting}) => {
-   
+
     setTimeout(() => {
       console.log(this.props);
       alert(JSON.stringify(values, null, 2));
       props.onSubmit(values);
       setSubmitting(false);
       console.log(values);
-      
+
     }, 1000);
   },
   validateOnChange: true,

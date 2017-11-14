@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -25,9 +26,10 @@ class CompostRequestForm extends Component {
     }
   }
 
-  componentDidMount() {
-    //this.props.fetchFormObject();
-  }
+  // componentDidMount() {
+  //   this.props.fetchFormObject();
+  // }
+
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -47,13 +49,22 @@ class CompostRequestForm extends Component {
 
   render() {
 
-      const {success} = this.props;
+    const {success} = this.props;
     console.log(success);
+
+    
+    if(success !== undefined)
+    {
+      return(<ThankYou>Your request has been successfully created</ThankYou>);
+    }
+
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
+
+  
     // if (error){
     //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
     // }
