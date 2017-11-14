@@ -333,7 +333,7 @@ input[type=checkbox].error
 }
 
 .form fieldset label {
-  color: grey;
+  color: #333333;
   font-weight: 400;
   font-size: 16px;
   margin-left: 8px;
