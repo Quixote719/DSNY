@@ -26,9 +26,9 @@ class CompostRequestForm extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.fetchFormObject();
-  }
+  // componentDidMount() {
+  //   this.props.fetchFormObject();
+  // }
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -48,7 +48,8 @@ class CompostRequestForm extends Component {
 
   render() {
 
-    const {FormObject, error, success} = this.props;
+    //const {FormObject, error, success} = this.props;
+    const {success} = this.props;
     
     if(success !== undefined)
     {
