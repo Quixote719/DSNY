@@ -26,7 +26,7 @@ class CompostRequestForm extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchFormObject();
+    //this.props.fetchFormObject();
   }
 
   postForm(formObject){
@@ -47,7 +47,7 @@ class CompostRequestForm extends Component {
 
   render() {
 
-      const {FormObject, error, success} = this.props;
+      const {success} = this.props;
     console.log(success);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>

@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-
+import {
+  PSOT_FORM_LITTER_BASKET_URL
+} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps from '../form_steps'
@@ -23,12 +25,8 @@ class OverflowingLitterBasket extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.fetchFormObject();
-  }
-
   postForm(formObject){
-      this.props.postFormObject(formObject);
+      this.props.postFormObject(formObject, PSOT_FORM_LITTER_BASKET_URL);
   }
 
    validateForm(formObject, errors){
@@ -45,15 +43,15 @@ class OverflowingLitterBasket extends Component {
 
   render() {
 
-     // const {FormObject, error} = this.props;
-
+    const {success} = this.props;
+    console.log(success);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+    //     return (<FetchError onRetry={ () => this.props.fetchLitterBasketForm()}/>);
     // }
     return(<div className='loader container'></div>)
  };
@@ -61,7 +59,7 @@ class OverflowingLitterBasket extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
 }
 
 

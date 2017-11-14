@@ -9,6 +9,7 @@ export const Titles = {
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
+  ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
   IsAnonymous: 'I would like to remain anonymous',
   AdditionalLocation: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
@@ -16,6 +17,7 @@ export const Titles = {
 }
 
 export const formObject = {
+  "AnimalId": 0,
   "Animals": [
     {
       "Id": 1,
@@ -66,8 +68,8 @@ export const formObject = {
       "Selected": false
     }
   ],
-  "AnimalId": 0,
   "OtherAnimal": null,
+  "IsAnonymous": false,
   "Id": 0,
   "SRNumberId": 0,
   "SRNo": null,
@@ -94,7 +96,6 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
-  "IsAnonymous": false,
   "ExactLocation": [
     {
       "Id": 1,

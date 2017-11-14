@@ -48,6 +48,7 @@ import CompostRequest from './components/contact/compostRequest';
 import DeadAnimalRemovalRequest from './components/contact/deadAnimalRemovalRequest';
 import OverflowingLitterBasket from './components/contact/overflowingLitterBasket';
 import OrganicsBinReplacement from './components/contact/organicsBinReplacement';
+import DisabilityServices from './components/contact/disabilityServices';
 
 // import OrganicsForm from './components/contact/organicsIndex';
 
@@ -129,6 +130,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/dead-animal-removal-request"} component={DeadAnimalRemovalRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/overflowing-litter-basket-service-request"} component={OverflowingLitterBasket}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organics-bin-replacement-request"} component={OrganicsBinReplacement}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/disability-services"} component={DisabilityServices}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
