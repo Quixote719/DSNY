@@ -20,6 +20,14 @@
 }
 
 
+.form fieldset label {
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+
 .contactformButton {
   height: 36px;
   width: 126px;

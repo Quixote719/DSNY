@@ -240,7 +240,9 @@ const TestForm = compose(
   handleSubmit: (values, {props,setSubmitting}) => {
     setTimeout(() => {
       console.log(this.props);
-      alert(JSON.stringify(values, null, 2));
+      console.log('#########');
+      console.log(JSON.stringify(values, null, 2));
+      console.log('#########');
       props.onSubmit(values);
       setSubmitting(false);
       console.log(values);

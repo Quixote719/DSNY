@@ -17,6 +17,7 @@ class eventParticipationRequestForm extends Component {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+    this.modifyFormObject = this.modifyFormObject.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
@@ -28,6 +29,7 @@ class eventParticipationRequestForm extends Component {
   }
 
   postForm(formObject){
+      let modifyFormObject = this.modifyFormObject(formObject);
       this.props.postFormObject(formObject);
   }
 
@@ -42,6 +44,42 @@ class eventParticipationRequestForm extends Component {
 
     return errors;
   }
+
+  /* A method that moifies formObject to make it proper for Submission */
+  modifyFormObject(formObject){
+    
+    formObject.PrimaryContact  = {
+      'FirstName':formObject.PfirstName,
+      'LastName':formObject.PLastName,
+      'Phone':formObject.PPhone,
+      'FullName': `${formObject.PfirstName}  ${formObject.PLastName}`,
+      'FullNameLastFirst':`${formObject.PLastName}, ${formObject.PfirstName}`,
+      'Title':formObject.PTitle,
+      'Organization':formObject.POrganization,
+      'Zip':null,
+      'SelectedPhoneType':formObject.PrimarySelectedPhoneType,
+    }
+
+
+    formObject.SecondaryContact = {
+      'FirstName':formObject.SFirstName,
+      'LastName':formObject.SLastName,
+      'Phone':formObject.SPhone,
+      'FullName': `${formObject.SfirstName}  ${formObject.SLastName}`,
+      'FullNameLastFirst':`${formObject.SLastName}, ${formObject.SfirstName}`,
+      'Title':formObject.STitle,
+      'Organization':formObject.SOrganization,
+      'Zip':null,
+      'SelectedPhoneType':formObject.SecondarySelectedPhoneTypes,
+    }
+
+   
+
+    
+  }
+
+
+
 
   render() {
 
