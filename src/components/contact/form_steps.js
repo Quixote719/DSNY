@@ -57,9 +57,7 @@ const Step1 = (props) => {
     <props.formFields {...props} />
 
     <Col xs={12}>
-      {console.log("DDD" + isSubmitting)}
-      {console.log("DDD" + !isEmpty(errors))}
-      <button className="formSubmitBtn" onClick={ isSubmitting || !isEmpty(errors) ? '':nextStep}>NEXT</button>
+      <button className="formSubmitBtn" onClick={ isSubmitting  || !isEmpty(errors) || !dirty ? (firsterror = true):nextStep}>NEXT</button>
     </Col>
 {/*<DisplayFormikState {...props}/>*/}
   </span>)
@@ -114,7 +112,7 @@ const FormSteps = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     validateStep: ({ stepValidated,validate,setStep, step }) =>
-      () =>validate,
+      () => validate,
     nextStep: ({ setStep, step }) =>
       () => setStep(step + 1),
     previousStep: ({ setStep, step }) =>
@@ -127,7 +125,7 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-
+    
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
 
 
