@@ -12,7 +12,7 @@ import SubmitThankYou from './thank_you'
 import FormFileDropZone from './form_file_dropzone'
 import Datetime from 'react-datetime';
 import Yup from 'yup';
-import RequestStepper from './request_stepper'
+import RequestStepper from './pickup_request_stepper'
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'
@@ -75,14 +75,14 @@ const DisplayFormikState = props => (<div style={{
 //     <Field name="FirstName"  component={TextInput}/>
 //     <Field name="LastName" required component={TextInput}/>*/}
 //     {/*<Field name="SecondaryPhoneTypeId" component={DropdownInput} onChange={setFieldValue} disabled={values.editMode}/>*/}
-    
+
 //     {/*<FormField type="text" title={Titles.OrganizationTaxIdNumber} name="OrganizationTaxIdNumber" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTaxIdNumber} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
 //     <FormField title={Titles.OrganizationWebsite} type="text" name="OrganizationWebsite" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationWebsite} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>*/}
 //     {/*<FormField title={Titles.OrganizationFacebookPage} type="text" name="OrganizationFacebookPage" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationFacebookPage} error={touched.OrganizationFacebookPage && errors.OrganizationFacebookPage}></FormField>
 //     <FormField title={Titles.OrganizationTwitterHandle} type="text" name="OrganizationTwitterHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationTwitterHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
 //     <FormField title={Titles.OrganizationInstagramHandle} type="text" name="OrganizationInstagramHandle" onChange={handleChange} onBlur={handleBlur} value={values.OrganizationInstagramHandle} error={touched.OrganizationTwitterHandle && errors.OrganizationTwitterHandle}></FormField>
 //     <FormSectionHeader title={Titles.sectionFour}/>
-    
+
 //     <FormField title={Titles.FirstName} type="text" name="FirstName" onChange={handleChange} onBlur={handleBlur} value={values.FirstName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
 //     <FormField title={Titles.LastName} type="text" name="LastName" onChange={handleChange} onBlur={handleBlur} value={values.LastName}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
 //     <FormField title={Titles.Title} type="text" name="Title" onChange={handleChange} onBlur={handleBlur} value={values.Title}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
@@ -187,16 +187,16 @@ const TestForm = compose(
 
     //Setting no validate true for the form
     document.getElementById("form").noValidate = true;
-    
+
     const inputs = document.querySelectorAll('#form input');
-    
+
     inputs.forEach(input => {
       //input.classList.add('active');
-      
+
       console.log(input.name);
       console.log(input.required);
       console.log(values[input.name]);
-      
+
       if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
          {
            errors[input.name] = Titles.RequiredFieldMessage
@@ -206,10 +206,10 @@ const TestForm = compose(
              firsterror = false;
            }
          }
-    
+
     });
 
-    
+
     //Get the required fields from the const schema defined above
     // for (var value in schema.requiredFields) {
     //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
@@ -236,7 +236,7 @@ const TestForm = compose(
     return errors
   },
 
-  
+
   handleSubmit: (values, {props,setSubmitting}) => {
     setTimeout(() => {
       console.log(this.props);
