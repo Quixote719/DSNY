@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
