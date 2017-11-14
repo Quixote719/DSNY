@@ -202,7 +202,7 @@ const FormSteps = compose(
 
     }, 1000);
   },
-  validateOnChange: true,
+  validateOnChange: false,
   validateOnBlur: true,
   displayName: 'BasicForm'
 })
