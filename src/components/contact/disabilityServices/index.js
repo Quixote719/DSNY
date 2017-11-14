@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -42,19 +43,31 @@ class DisabilityServices extends Component {
   }
 
   render() {
-
-    const {success} = this.props;
-    console.log(success);
-    if (FormObject && FormObject !== undefined) {
-        return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
-                </div></div>);
-    };
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchLitterBasketForm()}/>);
-    // }
-    return(<div className='loader container'></div>)
- };
+    
+        //const {FormObject, error, success} = this.props;
+        const {success,error} = this.props;
+    
+        if(success !== undefined) {
+          if(FormObject.SRNo != null)
+            {
+              return(<ThankYou>{FormObject.SRNo}</ThankYou>);
+              
+            } else {
+              return(<ThankYou>???</ThankYou>);
+            }
+            console.log(FormObject.SRNo)
+          }
+    
+        if (FormObject && FormObject !== undefined) {
+            return (<div className='container'><div className='form compostForm'>
+                    <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                    </div></div>);
+        };
+        if (error){
+            return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+        }
+        return(<div className='loader container'></div>)
+     };
 };
 
 
