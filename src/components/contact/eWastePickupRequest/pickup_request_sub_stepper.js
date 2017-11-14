@@ -19,7 +19,7 @@ class RequestSubStepper extends Component {
     renderCatg(ItemSubCatg) {
       if (ItemSubCatg)
       return _.map(ItemSubCatg, Item => {
-        return (<div><FormStepper subCat title={Item.SubCategory}/>{}</div>);
+        return (<div><FormStepper subCat obj={Item} title={Item.SubCategory}/>{}</div>);
       });
     }
 

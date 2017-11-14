@@ -10,11 +10,18 @@ class RequestStepper extends Component {
 
     constructor(props) {
       super(props);
+      this.state = {
+        PickupRequestItems:[]
+      }
       this.renderCatg = this.renderCatg.bind(this);
     };
 
     componentDidMount() {
       this.props.PickupReqGetItemCategories();
+    }
+
+    updateState(){
+
     }
 
     renderCatg(ItemCatg) {
@@ -23,10 +30,10 @@ class RequestStepper extends Component {
         const subCatg = Item.hasSubCategory === 1
               if (subCatg){
               console.log(Item.CategoryId);
-                return (<div><FormStepper title={Item.Category} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
+                return (<div><FormStepper  obj={Item} title={Item.Category} onChange={this.updateState} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
               }
 
-        return (<div><FormStepper title={Item.Category} header={subCatg}/></div>);
+        return (<div><FormStepper obj={Item} title={Item.Category} onChange={this.updateState} header={subCatg}/></div>);
       });
     }
 
