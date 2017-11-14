@@ -46,7 +46,7 @@ import TestForm from './components/contact/index';
 import CompostRequest from './components/contact/compostRequest';
 import OrganicsForm from './components/contact/commercialOrganics';
 import CollectionBinRegistration from './components/contact/collectionBinRegistrationIndex';
-
+import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
@@ -120,6 +120,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/compostRequest"} component={CompostRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eWasteRequestForm"} component={EwasteRequestForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>

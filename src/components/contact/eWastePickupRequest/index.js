@@ -46,11 +46,12 @@ class EwasteRequestForm extends Component {
 
   render() {
 
-      const {FormObject, error, success} = this.props;
+      const { error, success} = this.props;
+
     console.log(success);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){

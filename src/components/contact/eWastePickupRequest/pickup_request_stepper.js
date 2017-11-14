@@ -2,50 +2,32 @@ import _ from "lodash";
 import React, {Component} from "react";
 import { Col} from 'react-bootstrap';
 import {connect} from "react-redux";
-import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject} from "../../actions/contact_forms";
-import FormStepper from './form_stepper'
+import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject} from "../../../actions/contact_forms";
+import FormStepper from '../form_stepper'
+import SnStepper from './pickup_request_sub_stepper'
 class RequestStepper extends Component {
 
 
     constructor(props) {
       super(props);
-      const {ItemCatg} = props ;
-
-      this.state =  {
-        header:'',
-        tableHeader:'',
-        category:null
-      }
-
       this.renderCatg = this.renderCatg.bind(this);
-
     };
 
-
     componentDidMount() {
-      console.log(this.props);
-      if (this.props.subCat) {
-        debugger;
-              this.props.PickupReqGetItemSubCategories(this.props.subCat);
-      }else {
-            this.props.PickupReqGetItemCategories();
-      }
+      this.props.PickupReqGetItemCategories();
     }
-
 
     renderCatg(ItemCatg) {
       if (ItemCatg)
       return _.map(ItemCatg, Item => {
         const subCatg = Item.hasSubCategory === 1
 
-            const {ItemSubCatg} = this.props;
             if (subCatg){
             console.log(Item.CategoryId);
-              <RequestStepper subCat={Item.CategoryId}/>
+              return (<div><FormStepper title={Item.Category} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
             }
 
-            //this.props.PickupReqGetItemSubCategories(Item.CategoryId);
-        return (<div><FormStepper title={Item.Category} header={subCatg}/>{}</div>);
+        return (<div><FormStepper title={Item.Category} header={subCatg}/></div>);
       });
     }
 
@@ -62,8 +44,9 @@ class RequestStepper extends Component {
 
       return (
         <div>
-          <div><Col>{this.props.header}</Col></div>
-          <div><Col xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col xs={2} sm={2} md={2}>Quantity</Col></div>
+          <Col className='headerStepper' xs={12} >{this.props.header}</Col>
+          <Col className='tableHeaderStepper' xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col className='tableHeaderStepper' xs={2} sm={2} md={2}>Quantity</Col>
+          <Col className='hairline' xs={12}></Col>
             {this.renderCatg(ItemCatg)}
         </div>
       );

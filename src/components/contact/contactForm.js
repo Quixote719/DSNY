@@ -12,7 +12,6 @@ import SubmitThankYou from './thank_you'
 import FormFileDropZone from './form_file_dropzone'
 import Datetime from 'react-datetime';
 import Yup from 'yup';
-import RequestStepper from './pickup_request_stepper'
 import FormTextarea from './textarea_field';
 import {withFormik, Formik, Field, Form} from 'formik'
 import {compostFormObject, compostFormTitles as Titles} from './titles'

@@ -19,6 +19,7 @@
   }
 }
 
+
 .thankYoupatternLine {
   height: 10px;
   margin: 40px 0px 70px 0px;
@@ -127,7 +128,9 @@ background-color: #F8FCF6;
   margin-top: 5px;
 }
 
-
+.FormFieldIncDec{
+  padding-top: 6px;
+}
 .increment{
     background-image:  url('../images/plus-default.png');
   height: 24px;	width: 24px;
@@ -135,6 +138,25 @@ background-color: #F8FCF6;
   margin-top: 5px;
   float: left;
 }
+
+.headerStepper {
+	margin-bottom: 5px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.tableHeaderStepper {
+	background-color: #F8F8F8;
+  color: #000000;
+  font-size: 14px;
+  font-weight: bold;
+  min-height: 36px;
+  padding-top: 5px;
+}
+
+
 .decrement{
   background-image:  url('../images/minus-default.png');
   height: 24px;	width: 24px;
@@ -144,7 +166,9 @@ background-color: #F8FCF6;
   margin-top: 5px;
 }
 
-
+.FormStepper{
+  height: 50px;
+}
 .incDecField{
 	height: 36px;
 	width: 40px !important;
@@ -159,7 +183,16 @@ color: #262626;
 font-size: 16px;
 font-weight: bold;
 padding-top: 5px;
+min-height: 45px;
+}
 
+.incDecSubFieldtext{
+  color: #262626;
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+  margin-left: 15px;
+  min-height: 45px;
 }
 
 
