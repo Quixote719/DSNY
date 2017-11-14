@@ -315,9 +315,9 @@ input[type=checkbox].error
   border: 1px solid #7CC04B;
 }
 
-.form input:invalid {
+/*.form input:invalid {
   border: 1px solid #D80035;
-}
+}*/
 
 .form input:disabled {
   border: 1px solid #D8D8D8;
