@@ -28,8 +28,12 @@ class FormMultiSelect extends Component {
     if(options!=undefined){
       return options.map((Item, index) => {
         return (<div key={_.random(0, 200, true)}>
-          <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
-          <span>{Item.DisplayName}</span>
+
+          <label className="checkContainer">
+              <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
+              <span className="checkmark"></span>
+              <div className="checkBoxText">{Item.DisplayName}</div>
+          </label>
         </div>)
       });
     }
@@ -68,7 +72,7 @@ const MultiSelectInput = ({
   return (
     <div >
       {<FormMultiSelect title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
-      
+
     </div>
   )
 }
