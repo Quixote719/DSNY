@@ -16,6 +16,7 @@
 }
 
 .subSectionHeaderImage {
+  margin-top: 35px;
   min-height: 65px;
   min-width: 190px;
   overflow: hidden;
