@@ -1,19 +1,7 @@
-.checkcheckContainer {
-     display: block;
-     position: relative;
-     padding-left: 35px;
-     margin-bottom: 12px;
-     cursor: pointer;
-     font-size: 14px;
-     -webkit-user-select: none;
-     -moz-user-select: none;
-     -ms-user-select: none;
-     user-select: none;
- }
-
 label.checkContainer{
   margin-top: 8px;
   margin-left: 0!important;
+  cursor: pointer;
 }
  /* Hide the browser's default checkbox */
  .checkContainer input {
@@ -47,6 +35,24 @@ label.checkContainer{
 
  /* Show the checkmark when checked */
  .checkContainer input:checked ~ .checkmark:after {
+     display: block;
+ }
+
+
+
+ .disabledContactForm .checkContainer input:disabled ~ .checkmark {
+     border: 1px solid #C4C9CD;
+ }
+
+
+
+ .disabledContactForm .checkContainer input:checked ~ .checkmark {
+     display: block;
+ }
+
+ .disabledContactForm .checkContainer input:disabled:checked ~ .checkmark:after {
+     border: solid #C4C9CD;
+     border-width: 0 3px 3px 0;
      display: block;
  }
 

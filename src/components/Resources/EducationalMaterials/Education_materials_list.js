@@ -24,7 +24,7 @@ class EducationalMaterialsList extends Component {
   renderPosts(cards) {
     return _.map(this.firstN(cards, 4), Item => {
       return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/resources/educational-materials/business-recycling-materials`}><CardTitle title={Item.title} key={Item.id}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardTitle title={Item.title} key={Item.id}/></Link>
       );
     });
   }

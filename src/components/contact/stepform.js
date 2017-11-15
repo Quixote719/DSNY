@@ -32,7 +32,7 @@ import { compose, withState, withHandlers } from 'recompose';
     setFieldTouched,
   validateStep  }) => (
   <div>
-      <FormHeader title='Online Application'/>
+    <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       'search box validation of address comes up'

@@ -5,6 +5,7 @@ import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
 import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
+import FormButton from './form_button';
 
 // import '../../content/styles/contactForm.css';
 
@@ -26,7 +27,7 @@ import Recaptcha from 'react-recaptcha';
 //     </pre>
 //   </div>);
 let firsterror = true;
-
+let initialFormLoad = true;
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -44,20 +45,42 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
+ 
+
+function handleNextClick(errors, dirty, isSubmitting, nextStep)
+{
+  //  console.log("IsSubmitting" + isSubmitting);
+  //  console.log("!isEmpty(errors)" + !isEmpty(errors));
+  //  console.log("!dirty" + !dirty);
+   
+   if(initialFormLoad)
+   {
+      initialFormLoad = false;
+      return;
+   }
+   else if(((isSubmitting  || !isEmpty(errors) || !dirty)) && !initialFormLoad) {
+      //firsterror = true;
+      return;
+   } 
+   else {
+      return nextStep;
+   }
+
+}
 
 const Step1 = (props) => {
   const {
     errors,
     dirty,
     isSubmitting,
-    nextStep
+    nextStep,
   } = props;
   return (<span>
     {props.values.editMode = false}
     <props.formFields {...props} />
 
     <Col xs={12}>
-      <button className="formSubmitBtn" onClick={ isSubmitting  || !isEmpty(errors) || !dirty ? (firsterror = true):nextStep}>NEXT</button>
+      <button className="formSubmitBtn" id="nextbtn" onClick={handleNextClick(errors, dirty, isSubmitting, nextStep)}>NEXT</button>
     </Col>
 {/*<DisplayFormikState {...props}/>*/}
   </span>)
@@ -111,8 +134,6 @@ const Steps = ({
 const FormSteps = compose(
   withState('step', 'setStep', 1),
   withHandlers({
-    validateStep: ({ stepValidated,validate,setStep, step }) =>
-      () => validate,
     nextStep: ({ setStep, step }) =>
       () => setStep(step + 1),
     previousStep: ({ setStep, step }) =>
@@ -189,8 +210,6 @@ const FormSteps = compose(
 
     return errors
   },
-
-
   handleSubmit: (values, {props,setSubmitting}) => {
 
     setTimeout(() => {
@@ -202,7 +221,7 @@ const FormSteps = compose(
 
     }, 1000);
   },
-  validateOnChange: false,
+  validateOnChange: true,
   validateOnBlur: true,
   displayName: 'BasicForm'
 })

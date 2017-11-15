@@ -170,6 +170,7 @@ class CardSec extends Component {
     const {dataObject} = this.props;
 
     let l = (dataObject.cards.length);
+
     let style = l > 2
       ? 'FullWidth'
       : dataObject.content !== ''
@@ -195,13 +196,17 @@ class CardSec extends Component {
     }
 
     let body;
+    
     if (dataObject.content !== '') {
 
       if (dataObject.cards.length > 0) {
 
-        let cType = dataObject.card_data.card_type !== "reference-details-card"
+        let cType = dataObject.card_data.card_type !== "reference-details-card" 
+      
+        /* This is to ensure multi-file cards appear as a single row below the content present in header Section */
+        let cardThreshold = dataObject.card_data.card_type == 'multi-file-card' ? 0 : 2;
 
-        let layoutTrigger = cType && l > 2
+        let layoutTrigger = cType && l > cardThreshold;
 
         body = (
           <div>
