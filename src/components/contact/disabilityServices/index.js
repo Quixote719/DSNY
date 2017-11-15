@@ -43,25 +43,20 @@ class DisabilityServices extends Component {
     return errors;
   }
 
-  componentDidMount() {
-    const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
-    `${REST_WEBAPI_URL}disabilityservices`
-    axios
-      .get(`${REST_WEBAPI_URL}disabilityservices`)
-      .then(res => this.setState({ posts: res.data }))
-      .catch(err => console.log(err))
-      console.log(this.state.posts);
-  }
-
   render() {
     
         //const {FormObject, error, success} = this.props;
-        const {success,error} = this.props;
+        const {success, error} = this.props;
+       
     
-        if(success !== undefined) {           
-            return(<ThankYou>???</ThankYou>);
-
-          }
+        if(success !== undefined) {
+          if(success != null) {
+            let message = 'Your response No. is: ' + success.SRNo;
+            return(<ThankYou>{message}</ThankYou>);
+          } else {
+            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+          }          
+        }
     
         if (FormObject && FormObject !== undefined) {
             return (<div className='container'><div className='form compostForm'>
