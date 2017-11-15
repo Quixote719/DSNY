@@ -56,6 +56,7 @@ class Event extends Component {
     return (
       <div>
         <SubSectionHeader title="DSNY Events"/>
+        <div className='eventhairline'></div>
         <div>{this.renderPosts(pr)}</div>
 
         {this.ViewAllButton(_.size(pr))}
