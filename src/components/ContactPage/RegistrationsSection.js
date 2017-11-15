@@ -25,7 +25,7 @@ class RegistrationsSection extends Component {
 
       return (
         <div className='RegistrationsCards' key={Item.id}>
-          <div><CardType style={style} className='BsubSectioncardType' title={Item.title}/></div>
+          <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardType style={style} className='BsubSectioncardType' title={Item.title}/></Link>
         </div>
       );
     });
@@ -35,7 +35,7 @@ class RegistrationsSection extends Component {
     return (
         <div>
           <SubSectionHeader title={this.props.RegistrationsProps.title}/>
-          <div className='container RegistrationsContainer'>
+          <div>
             <Row>
               {this.renderCards()}
             </Row>
