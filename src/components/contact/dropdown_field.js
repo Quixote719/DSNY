@@ -41,18 +41,28 @@ class FormDropdown extends Component {
 
   renderList(List) {
     return _.map(List, Item => {
-      return (<MenuItem key={Item.Id} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
+      return (<MenuItem key={Item.DisplayName} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
     });
+  }
+ 
+  /* Check if the field is a time field or a drop down */
+  checkIfTimeField(){
+          const props = this.props;
+          let timeField = (props.timeField != undefined) ? ( (props.timeField == true) ? true : false) : false;
+          let iconName = (timeField == true) ? 'fa fa-clock-o':'fa fa-caret-down';
+          return iconName;
   }
 
   render() {
-    return (<div >
+    console.log(this.state.option);
+    return (
+    <div>
       <Col className='FormField' xs={12} sm={6} md={6}>
         <fieldset>
           <div className='FormMultiSelectTitle'>{this.props.title}</div>
           <DropdownButton required={this.props.required} disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
-            </div> < div className = "col-xs-2 downArrow" > <i className="fa fa-caret-down "></i> </div> </div >} noCaret id="dropdown-no-caret">
+            </div> < div className = "col-xs-2 downArrow" > <i className={this.checkIfTimeField()} ></i> < /div> </div>} noCaret id="dropdown-no-caret">
             {
               this.renderList(
                 this.props.options
@@ -68,7 +78,8 @@ class FormDropdown extends Component {
 
 FormDropdown.propTypes = {
   options: PropTypes.array,
-  title: PropTypes.string
+  title: PropTypes.string,
+  timeField:PropTypes.any,
 };
 
 

@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class CompostRequestForm extends Component {
+class SiteVisitRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -29,7 +29,6 @@ class CompostRequestForm extends Component {
   // componentDidMount() {
   //   this.props.fetchFormObject();
   // }
-
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -50,8 +49,8 @@ class CompostRequestForm extends Component {
   render() {
 
     //const {FormObject, error, success} = this.props;
-    const {success,error} = this.props;
-
+    const {success} = this.props;
+    
     if(success !== undefined)
     {
       return(<ThankYou>Your request has been successfully created</ThankYou>);
@@ -62,9 +61,11 @@ class CompostRequestForm extends Component {
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    if (error){
-        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    }
+
+  
+    // if (error){
+    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+    // }
     return(<div className='loader container'></div>)
  };
 };
@@ -75,4 +76,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CompostRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(SiteVisitRequestForm);

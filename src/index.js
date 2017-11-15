@@ -44,6 +44,16 @@ import fullImageContainer from './components/shared/PageSection/full_img_contain
 
 import TestForm from './components/contact/index';
 import CompostRequest from './components/contact/compostRequest';
+import SiteVisitRequestForm from './components/contact/siteVisitRequest'
+import eventParticipationRequestForm from './components/contact/eventParticipationRequest';
+
+import DeadAnimalRemovalRequest from './components/contact/deadAnimalRemovalRequest';
+import OverflowingLitterBasket from './components/contact/overflowingLitterBasket';
+import OrganicsBinReplacement from './components/contact/organicsBinReplacement';
+import DisabilityServices from './components/contact/disabilityServices';
+
+// import OrganicsForm from './components/contact/organicsIndex';
+
 import OrganicsForm from './components/contact/commercialOrganics';
 import CollectionBinRegistration from './components/contact/collectionBinRegistrationIndex';
 import EwasteRequestForm from './components/contact/eWastePickupRequest'
@@ -116,9 +126,20 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search"} component={SiteSearch}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>
+              {/*<Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>*/}
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/compostRequest"} component={CompostRequest}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/siteVisitRequest"} component={SiteVisitRequestForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eventParticipationRequests"} component={eventParticipationRequestForm} />
+
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/dead-animal-removal-request"} component={DeadAnimalRemovalRequest}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/overflowing-litter-basket-service-request"} component={OverflowingLitterBasket}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organics-bin-replacement-request"} component={OrganicsBinReplacement}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/disability-services"} component={DisabilityServices}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
+
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
+
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eWasteRequestForm"} component={EwasteRequestForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />

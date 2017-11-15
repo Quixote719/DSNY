@@ -54,6 +54,7 @@
     "redux-logger": "^3.0.6",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
+    "value-equal": "^0.4.0",
     "yup": "^0.23.0"
   },
   "devDependencies": {
