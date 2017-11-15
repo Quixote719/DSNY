@@ -55,6 +55,8 @@ import DisabilityServices from './components/contact/disabilityServices';
 // import OrganicsForm from './components/contact/organicsIndex';
 
 import OrganicsForm from './components/contact/commercialOrganics';
+import CollectionBinReport from './components/contact/collectionBinReport';
+
 import CollectionBinRegistration from './components/contact/collectionBinRegistrationIndex';
 import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
@@ -139,6 +141,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinReport"} component={CollectionBinReport}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eWasteRequestForm"} component={EwasteRequestForm}/>

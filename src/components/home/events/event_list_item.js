@@ -23,16 +23,18 @@ class EventListItem extends Component {
             {/*<div className='listItemTag'>Press Release #{this.props.prid}</div>*/}
           </Col>
           <Col xs={10} md={10}>
-            <div >
-              <Link className='eventTitle' to={process.env.REACT_APP_SITE_RELATIVE_URL + `/eventdetail/${this.props.eventid}`}>
-                {this.props.title}
-              </Link>
+            <div className="EventTCDiv">
+              <div>
+                <Link className='eventTitle' to={process.env.REACT_APP_SITE_RELATIVE_URL + `/eventdetail/${this.props.eventid}`}>
+                  {this.props.title}
+                </Link>
+              </div>
+              <Dotdotdot clamp={2}>
+                <div className='eventDescription'>{this.props.description}</div>
+              </Dotdotdot>
             </div>
-            <Dotdotdot clamp={2}>
-              <div className='eventDescription'>{this.props.description}</div>
-            </Dotdotdot>
           </Col>
-          
+
         </Row>
         {/*<div className='PRLIhairline'></div>*/}
         <div className='eventhairline'></div>
