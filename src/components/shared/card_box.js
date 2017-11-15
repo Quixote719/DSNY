@@ -19,6 +19,9 @@ class CardBox extends Component {
         if(this.props.info.CardType=='standard-card-no-border'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
+        else if(this.props.info.CardType=='standard-card-with-border'){
+            card = <TitleCard title={item.title} link={item.linked_page.url} type='4' />
+        }
         else if(this.props.info.CardType=='color-bar-card'){
             card = <ColorCard dataObject={item}/>
         }

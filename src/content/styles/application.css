@@ -116,7 +116,8 @@ html body {
 }
 
 .container {
-  max-width: 940px;
+  max-width: 970px;
+  /*max-width: 940px;*/
 }
 
 a{

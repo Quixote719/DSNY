@@ -12,6 +12,7 @@ import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
+import axios from 'axios';
 
 const formTitles = Titles;
 
@@ -45,18 +46,17 @@ class DisabilityServices extends Component {
   render() {
     
         //const {FormObject, error, success} = this.props;
-        const {success,error} = this.props;
+        const {success, error} = this.props;
+       
     
         if(success !== undefined) {
-          if(FormObject.SRNo != null)
-            {
-              return(<ThankYou>{FormObject.SRNo}</ThankYou>);
-              
-            } else {
-              return(<ThankYou>???</ThankYou>);
-            }
-            console.log(FormObject.SRNo)
-          }
+          if(success != null) {
+            let message = 'Your response No. is: ' + success.SRNo;
+            return(<ThankYou>{message}</ThankYou>);
+          } else {
+            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+          }          
+        }
     
         if (FormObject && FormObject !== undefined) {
             return (<div className='container'><div className='form compostForm'>
