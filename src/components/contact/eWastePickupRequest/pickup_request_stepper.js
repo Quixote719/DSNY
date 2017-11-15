@@ -13,15 +13,19 @@ class RequestStepper extends Component {
       this.state = {
         PickupRequestItems:[]
       }
-      this.renderCatg = this.renderCatg.bind(this);
+    this.renderCatg = this.renderCatg.bind(this);
+      this.updateState = this.updateState.bind(this);
     };
 
     componentDidMount() {
       this.props.PickupReqGetItemCategories();
     }
 
-    updateState(){
-
+    updateState(obj) {
+    var p = this.state.PickupRequestItems
+    p = _.union(p, [obj]);
+    this.setState({PickupRequestItems:p});
+    this.props.onChange('PickupRequestItems', this.state.PickupRequestItems)
     }
 
     renderCatg(ItemCatg) {
@@ -30,17 +34,10 @@ class RequestStepper extends Component {
         const subCatg = Item.hasSubCategory === 1
               if (subCatg){
               console.log(Item.CategoryId);
-                return (<div><FormStepper  obj={Item} title={Item.Category} onChange={this.updateState} header={subCatg}/><SnStepper subCat={Item.CategoryId}/></div>)
+                return (<div><FormStepper  obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/><SnStepper onIncDec={ this.updateState} subCat={Item.CategoryId}/></div>)
               }
 
-        return (<div><FormStepper obj={Item} title={Item.Category} onChange={this.updateState} header={subCatg}/></div>);
-      });
-    }
-
-    renderSubCatg(SubItemCatg) {
-      if (SubItemCatg)
-      return _.map(SubItemCatg, (Item,index) => {
-      return (<div><FormStepper title={Item.Category} /></div>);
+        return (<div><FormStepper obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/></div>);
       });
     }
 

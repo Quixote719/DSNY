@@ -31,7 +31,6 @@ const DisplayFormikState = props =>
 const EwastePickUpRequestFormElements = (props) => {
   const {
     values,
-    handledropDown,
     setFieldValue,
   } = props;
 
@@ -41,7 +40,7 @@ const EwastePickUpRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionOne}/>
     <div><FormAddressAutocomplete/></div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Nstepper header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category'/>
+    <Nstepper header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' onChange={setFieldValue}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="FirstName" {...props} required/>
     <Field component={TextInput} name="LastName" {...props} required/>
