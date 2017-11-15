@@ -1,6 +1,5 @@
 .subSectionHeaderImageTitleText {
   color: #FFFFFF;
-  font-family: "Helvetica Neue";
   font-size: 36px;
   font-weight: bold;
   letter-spacing: -1px;
@@ -10,7 +9,6 @@
 
 .subSectionHeaderImagetitleBodyText {
   color: #333333;
-  font-family: "Helvetica Neue";
   font-size: 16px;
   line-height: 24px;
   border: 10px solid white;
@@ -37,4 +35,3 @@
   height: 226px;
   margin-bottom: 35px;
 }
-
