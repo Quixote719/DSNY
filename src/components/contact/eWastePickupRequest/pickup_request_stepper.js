@@ -33,10 +33,10 @@ class RequestStepper extends Component {
         const subCatg = Item.hasSubCategory === 1
               if (subCatg){
               console.log(Item.CategoryId);
-                return (<div><FormStepper  obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/><SnStepper onIncDec={this.updateState} subCat={Item.CategoryId}/></div>)
+                return (<div><FormStepper  disabled={this.props.disabled} obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} onIncDec={this.updateState} subCat={Item.CategoryId}/></div>)
               }
 
-        return (<div><FormStepper obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/></div>);
+        return (<div><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/></div>);
       });
     }
 

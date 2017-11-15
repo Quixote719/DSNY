@@ -6,7 +6,9 @@ export const Titles = {
   LastName: 'LAST NAME',
   Phone: 'PRIMARY PHONE NUMBER',
   Email: 'E-MAIL',
-  ConfirmEmail: 'CONFIRM E-MAIL'
+  ConfirmEmail: 'CONFIRM E-MAIL',
+  AppointmentDate:'APPOINTMENT DATE',
+  PickUpLocation:'PICKUP STREET'
 }
 
 

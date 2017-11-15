@@ -34,6 +34,15 @@ class FormStepper extends Component {
 
 
     renderItem(){
+      if (this.props.disabled && this.state.count === 0){
+        return (
+        <div className='FormStepper'>
+          <Col xs={10}><div className='incDecFieldtext'>{this.props.title}</div></Col>
+            <Col xs={2}>{this.state.count}</Col>
+          <Col xs={12} className='hairline'></Col>
+        </div>
+        );
+      }
       if (this.props.header){
         return (
         <div className='FormStepper'>
@@ -45,7 +54,7 @@ class FormStepper extends Component {
       return (
         <div className='FormStepper'>
           <Col xs={10} sm={10} md={10}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
-          <Col className='FormFieldIncDec' xs={2} sm={2} md={2}>
+          <Col className='FormFieldIncDec' xs={2}>
           <div className='decrement' onClick={this.decrement}></div>
           <input className='incDecField' type="number" value={this.state.count} readOnly />
             <div className='increment' onClick={this.increment}></div>
