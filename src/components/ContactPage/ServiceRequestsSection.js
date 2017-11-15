@@ -13,9 +13,7 @@ class ServiceRequestsSection extends Component {
   renderCards() {
     return _.map(this.props.ServiceRequestsProps.cards, Item => {
       return (
-        <div className='serviceRequestsCards' key={Item.id}>
           <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + `/contact/testform`}><CardTitle title={Item.title} key={Item.id} /></Link>
-        </div>
       );
     });
   }
@@ -24,7 +22,7 @@ class ServiceRequestsSection extends Component {
     return (
         <div>
           <SubSectionHeader title={this.props.ServiceRequestsProps.title}/>
-          <div className='container serviceRequestsContainer'>
+          <div className='container'>
             <Row>
               {this.renderCards()}
             </Row>
