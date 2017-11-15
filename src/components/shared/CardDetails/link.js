@@ -28,19 +28,19 @@ class Link extends React.Component {
     if(url===process.env.REACT_APP_SITE_RELATIVE_URL+'/') {
       this.props.setActiveNavTab("home")
     }
-    else if(url.includes("resources")){
+    else if(url.indexOf("resources") > -1){
       this.props.setActiveNavTab("resources")
     }
-    else if(url.includes("services")){      
+    else if(url.indexOf("services")  > -1){      
       this.props.setActiveNavTab("services")
     }    
-    else if(url.includes("about")){
+    else if(url.indexOf("about")  > -1){
       this.props.setActiveNavTab("about")
     }   
-    else if(url.includes("our-work")){
+    else if(url.indexOf("our-work")  > -1){
       this.props.setActiveNavTab("our-work")
     }    
-    else if(url.includes("contact")){
+    else if(url.indexOf("contact")  > -1){
       this.props.setActiveNavTab("contact")
     }
   }
