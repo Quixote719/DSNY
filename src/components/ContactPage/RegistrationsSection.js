@@ -12,18 +12,21 @@ class RegistrationsSection extends Component {
   renderCards() {
 
     return _.map(this.props.RegistrationsProps.cards, Item => {
+      console.log(Item)
       let l = (this.props.RegistrationsProps.cards.length);
       let style = l > 2
       ? 'FullWidth'
       : this.props.RegistrationsProps.content !== ''
         ? 'RightAlligned'
         : 'FullWidth'
+       
   
     let cn = this.props.RegistrationsProps.background_color === 'gray'
       ? 'NBsubSectioncardType'
       : 'BsubSectioncardType'
 
       return (
+        
         <div className='RegistrationsCards' key={Item.id}>
           <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardType style={style} className='BsubSectioncardType' title={Item.title}/></Link>
         </div>
