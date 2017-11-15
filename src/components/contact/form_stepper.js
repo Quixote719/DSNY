@@ -22,16 +22,14 @@ class FormStepper extends Component {
       var {count, object} = this.state
       var i = count += 1
       object.RequestedQty = i
-      this.setState({count:i , object:object});
-      this.props.onIncDec(this.state.object);
+      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+
     }
     decrement() {
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
-      this.setState({count:i, object:object});
-
-      this.props.onIncDec(this.state.object);
+      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
 
