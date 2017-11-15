@@ -9,9 +9,10 @@ import CardTitle from '../shared/Card_title';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
 class ServiceRequestsSection extends Component {
-
+  
   renderCards() {
     return _.map(this.props.ServiceRequestsProps.cards, Item => {
+      console.log(Item);
       return (
         <div className='serviceRequestsCards' key={Item.id}>
           <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardTitle title={Item.title} key={Item.id} /></Link>
