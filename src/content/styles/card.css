@@ -14,7 +14,7 @@
   min-height: 220px;
   min-width: 220px;
   background-color: #FFFFFF;
-  padding: 15px;
+  padding: 25px 15px;
   margin-top: 10px;
   margin-bottom:15px;
   cursor: pointer;
@@ -190,6 +190,10 @@
   margin-top: 30px;
   margin-bottom:15px;
   cursor: pointer;
+}
+
+.serviceRequestsCards .subSectioncardT {
+  margin-top: 0;
 }
 
 .subSectioncardT .cardTitleText {
