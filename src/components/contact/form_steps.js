@@ -27,7 +27,8 @@ import FormButton from './form_button';
 //     </pre>
 //   </div>);
 let firsterror = true;
-let initialFormLoad = true;
+let initialPageLoad = true;
+let nextbuttonClicked = false;
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -49,17 +50,15 @@ const expiredCallback = () => {
 
 function handleNextClick(errors, dirty, isSubmitting, nextStep)
 {
+  debugger;
   //  console.log("IsSubmitting" + isSubmitting);
   //  console.log("!isEmpty(errors)" + !isEmpty(errors));
   //  console.log("!dirty" + !dirty);
+  initialPageLoad = false;
+  nextbuttonClicked = true;
    
-   if(initialFormLoad)
-   {
-      initialFormLoad = false;
-      return;
-   }
-   else if(((isSubmitting  || !isEmpty(errors) || !dirty)) && !initialFormLoad) {
-      //firsterror = true;
+  if(((isSubmitting  || !isEmpty(errors) || !dirty))) {
+      firsterror = true;
       return;
    } 
    else {
@@ -80,7 +79,7 @@ const Step1 = (props) => {
     <props.formFields {...props} />
 
     <Col xs={12}>
-      <button className="formSubmitBtn" id="nextbtn" onClick={handleNextClick(errors, dirty, isSubmitting, nextStep)}>NEXT</button>
+      <button className="formSubmitBtn" id="nextbtn" onClick={() =>{handleNextClick(errors, dirty, isSubmitting, nextStep)}}>NEXT</button>
     </Col>
 {/*<DisplayFormikState {...props}/>*/}
   </span>)
@@ -149,77 +148,83 @@ const FormSteps = compose(
     
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
 
+    if(!initialPageLoad)
+    {
+        inputs.forEach(input => {
+          //input.classList.add('active');
 
-    inputs.forEach(input => {
-      //input.classList.add('active');
+          console.log(input.name);
+          console.log(input.type);
+          console.log(input.hasAttribute("required"));
+          console.log(values[input.name]);
 
-      console.log(input.name);
-      console.log(input.type);
-      console.log(input.hasAttribute("required"));
-      console.log(values[input.name]);
-
-      //Text, Checkbox Input Validation
-      if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
-      {
-          errors[input.name] = Titles.RequiredFieldMessage
-          if(firsterror)
+          //Text, Checkbox Input Validation
+          if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
           {
-            input.focus();
-            firsterror = false;
+              errors[input.name] = Titles.RequiredFieldMessage
+              if(nextbuttonClicked)
+              {
+                input.focus();
+                nextbuttonClicked = false;
+              }
           }
-      }
-      //Dropdown List Validation
-      else if (input.type === "button" && input.hasAttribute("required") && values[input.name] === null)
-      {
-          errors[input.name] = Titles.RequiredFieldMessage
-          if(firsterror)
+          //Dropdown List Validation
+          else if (input.type === "button" && input.hasAttribute("required") && values[input.name] === null)
           {
-            //input.focus();
-            firsterror = false;
+              errors[input.name] = Titles.RequiredFieldMessage
+              if(nextbuttonClicked)
+              {
+                input.focus();
+                nextbuttonClicked = false;
+              }
           }
-      }
 
 
-    });
+        });
 
 
-    //Get the required fields from the const schema defined above
-    // for (var value in schema.requiredFields) {
-    //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
-    //     {
-    //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
-    //     }
-    // }
+        //Get the required fields from the const schema defined above
+        // for (var value in schema.requiredFields) {
+        //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
+        //     {
+        //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
+        //     }
+        // }
 
 
-    // if (!values.OrganizationTaxIdNumber) {
-    //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    // }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-    //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-    // }
-    // if (!values.WillPostCompostRecipientSignage) {
+        // if (!values.OrganizationTaxIdNumber) {
+        //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+        // }
+        // if (!values.OrganizationWebsite) {
+        //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+        // }
+        // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+        //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+        // }
+        // if (!values.WillPostCompostRecipientSignage) {
 
-    //   errors.WillPostCompostRecipientSignage = 'please check this'
-    // }
-    if(isEmpty(errors))
-      props.validateForm(values,errors);
+        //   errors.WillPostCompostRecipientSignage = 'please check this'
+        // }
+        if(isEmpty(errors))
+          props.validateForm(values,errors);
+    }
 
     return errors
   },
   handleSubmit: (values, {props,setSubmitting}) => {
+    if(props.step > 1){
+      setTimeout(() => {
+        console.log(this.props);
+        alert(JSON.stringify(values, null, 2));
+        props.onSubmit(values);
+        setSubmitting(false);
+        console.log(values);
 
-    setTimeout(() => {
-      console.log(this.props);
-      alert(JSON.stringify(values, null, 2));
-      props.onSubmit(values);
-      setSubmitting(false);
-      console.log(values);
-
-    }, 1000);
+      }, 1000);
+    }
+    else{
+      props.nextStep();
+    }
   },
   validateOnChange: true,
   validateOnBlur: true,
