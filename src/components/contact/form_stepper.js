@@ -9,19 +9,27 @@ class FormStepper extends Component {
 
     constructor(props) {
       super(props);
+
       this.state =  {
-        count: 0
+        count: props.obj.RequestedQty,
+        object:props.obj
       }
       this.increment = this.increment.bind(this);
       this.decrement = this.decrement.bind(this);
     };
 
     increment(){
-      this.setState({count: this.state.count += 1});
+      var {count, object} = this.state
+      var i = count += 1
+      object.RequestedQty = i
+      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+
     }
     decrement() {
-      var {count} = this.state
-      this.setState({count:count > 0 ? count -= 1 : 0});
+      var {count, object} = this.state
+      var i = count > 0 ? count -= 1 : 0
+      object.RequestedQty = i
+      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
 
@@ -62,6 +70,7 @@ class FormStepper extends Component {
 
 FormStepper.propTypes = {
   title: PropTypes.string,
+  obj:PropTypes.any,
   header: PropTypes.bool
 };
 
