@@ -330,9 +330,14 @@ border-radius: 0;
 }*/
 
 .form input:disabled {
+  padding-top: 16px;
   border: 1px solid #D8D8D8;
   border-radius: 3px;
   background-color: #F8F8F8;
+}
+
+.dropdown.disabled .fa-caret-down {
+  display: none!important;
 }
 
 .disabledform input:disabled, .disabledform fieldset:disabled .btn-default {
