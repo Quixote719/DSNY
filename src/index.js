@@ -144,7 +144,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/collection-bin-on-public-property"} component={CollectionBinOnPublicProperty}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
 
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercial-organics"} component={OrganicsForm}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/e-waste-pickup-request"} component={EwasteRequestForm}/>
