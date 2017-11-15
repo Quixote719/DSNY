@@ -192,6 +192,10 @@
   cursor: pointer;
 }
 
+.serviceRequestsCards .subSectioncardT {
+  margin-top: 0;
+}
+
 .subSectioncardT .cardTitleText {
   max-height: 80px;
 }
