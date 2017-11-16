@@ -43,6 +43,11 @@ html body {
   background-color: #F2F2F2;
 }
 
+.fa-file-pdf-o:before{
+  position: absolute;
+  top: 18px;
+}
+
 .PRLIhairline{
   margin-right: 15px !important;
 }
@@ -59,6 +64,16 @@ html body {
   padding-top: 25px;
 }
 
+.breadcrumb>li+li:before{
+  padding: 0 9px 0 12px;
+  color: #FFFFFF;
+}
+
+.breadcrumbSymbol{
+  padding: 0 9px 0 12px;
+  color: #FFFFFF;
+}
+
 .boxPadding {
   padding: 30px 0;
 }
@@ -71,6 +86,10 @@ html body {
   margin: 30px auto;
   color: #333333;
   font-size: 16px;
+}
+
+.normalsection{
+  padding-bottom: 20px;
 }
 
 .bottomSection{
@@ -113,11 +132,21 @@ html body {
   #headerContent {
     min-height: calc(100vh - 1063px);
   }
+
+  .breadcrumb>li+li:before{
+    padding: 0 3px 0 7px;
+    color: #FFFFFF;
+  }
+
+  .breadcrumbSymbol{
+    padding: 0 3px 0 7px;
+    color: #FFFFFF;
+  }
 }
 
 .container {
   max-width: 970px;
-  /*max-width: 940px;*/
+  /* max-width: 940px; */
 }
 
 a{
@@ -203,7 +232,7 @@ border-radius: 0;
 }
 
 .placesCollectionSchedule{
-    width: 700px;
+    width: 100%;
 }
 
 #form .subSectionButton{

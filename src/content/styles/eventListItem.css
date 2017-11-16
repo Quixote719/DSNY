@@ -45,8 +45,24 @@
   height: 1px;
   margin: 10px 0px;
 }
+@media only screen and (max-width: 991px) {
+  .EventTCDiv{
+      margin: 5px 0 0 0;
+  }
+}
 
-@media (max-width: 667px) and (orientation:portrait) {
+@media (max-width: 667px){
+  .EventTCDiv{
+    margin: 5px 0 0 12%;
+  }
+}
+
+@media (max-width: 400px){
+  .EventTCDiv{
+    margin: 5px 0 0 20%;
+  }
+}
+/*@media (max-width: 667px) and (orientation:portrait) {
     .eventSection .col-xs-2 {
          width: 33.33%
     }
@@ -54,4 +70,4 @@
     .eventSection .col-xs-10 {
          width: 66.67%
     }
-}
+}*/

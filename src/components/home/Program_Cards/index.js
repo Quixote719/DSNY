@@ -38,7 +38,7 @@ class ProgramCards extends Component {
         return _.map(item.cards, (item,index) =>{
           return (
             <Col className="programData" key={index}>
-              <Col xs={12} lg={2} id="programCol">
+              <Col xs={12} lg={2} id="programCol" className ="programCol">
                 <div>
                   <div className="programImageDiv">
                     <img alt = {item.title} src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
@@ -60,7 +60,7 @@ class ProgramCards extends Component {
             <div className="programContainer">
               <div className="serviceRequestParentTablet">
                 <div className="serviceRequestTitleTablet">
-                  Check Service Request Number
+                  Check Service Request Status
                 </div>
                 <div className="serviceRequestInputTablet">
                   <input className="serviceRequestSearchTablet" type="text" placeholder="Service Request Number" >
@@ -72,10 +72,10 @@ class ProgramCards extends Component {
               <Row>
                 <div>
                   <Col className="programData serviceRequestCol"  >
-                    <Col xs={12} lg={2} id="programCol">
+                    <Col xs={12} lg={2} id="programCol" className ="programCol">
                       <div className="serviceRequestParent">
                         <div className="serviceRequestTitle">
-                          Check Service Request Number
+                          Check Service Request Status
                       </div>
                         <div className="serviceRequestInput">
                           <input className="serviceRequestSearch" type="text" placeholder="Service Request Number" >
