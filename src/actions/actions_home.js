@@ -31,7 +31,7 @@ return function(dispatch) {
 }
 }
 
-export function getCollectionSchedule(address) {
+export function getCollectionSchedule(address, callback=null) {
     return function (dispatch) {
         axios.get(COLLECTION_SCHEDULE_URL+address)
             .then((data) => {
@@ -72,6 +72,8 @@ export function getCollectionSchedule(address) {
                         noResultsError: data.data,
                         suggestionAddress: data.data.Suggestions,
                     })
+                    if(callback)
+                        callback();
                 })
             })}}
 

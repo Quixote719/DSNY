@@ -10,6 +10,12 @@ import styles from '../../content/styles/collectionBinForm.css';
 import _ from "lodash";
 let errorFlag = 0;
 
+var errorMessage =  (
+        <div className = "pleaseEnterAddressForm">
+        Please enter / select a valid address in order to complete the appointment request.
+        </div>
+    );
+
 class FormAddressAutocomplete extends Component {
     constructor(props, context) {
         super(props, context);
@@ -19,6 +25,13 @@ class FormAddressAutocomplete extends Component {
           };
     }
     handleChange = (address) =>{
+        if(address.trim().length === 0 || address === ""){
+            errorMessage = (
+                <div className = "pleaseEnterAddressForm">
+                Please enter / select a valid address in order to complete the appointment request.
+                </div>
+            );        
+        }
         this.setState({
             address,
         })
@@ -37,15 +50,28 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address: value,
          });
-         this.props.getCollectionSchedule(value);                        
-    }
+        //  this.props.getCollectionSchedule(value); 
+         this.props.getCollectionSchedule(value, this.successCallback);                                 
+        }
     handleSelect =(address)=>{
         if(errorFlag == 0){
             this.setState({
                 address: address,
              });
-            this.props.getCollectionSchedule(address);                            
+            // this.props.getCollectionSchedule(address);  
+         this.props.getCollectionSchedule(address, this.successCallback);                                             
         }        
+    }
+    successCallback = (success)=>{
+        if(this.props.collectionScheduleInfo == null ||this.props.suggestionAddress == null) {
+            errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
+        } else if((this.props.noResultsError.RegularCollectionSchedule == null) && (this.props.noResultsError.RecyclingCollectionSchedule) == null &&(this.props.noResultsError.OrganicsCollectionSchedule == null)){
+            errorMessage = (<div className="errorMessageAddressForm">
+            The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
+            </div>);
+        } else {
+            errorMessage = (<div></div>);
+        }
     }
     correctAddressList = () => {
         return _.map(this.props.suggestionAddress, (value,index)=> {
@@ -94,17 +120,17 @@ class FormAddressAutocomplete extends Component {
                 <Row className = "formPlacesAutosuggestRow">
                 <Col xs={12} md={8}>
                 <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
-                <div style = {(this.props.collectionScheduleInfo !== null ||this.props.suggestionAddress !==null)?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
+                {/* <div style = {(this.props.collectionScheduleInfo !== null ||this.props.suggestionAddress !==null)?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
                     No search results found
-                </div>
+                </div> */}
+                {errorMessage}
                 {this.correctAddressList()}
-                <div style = {((this.props.noResultsError?this.props.noResultsError.RegularCollectionSchedule == null:"") && (this.props.noResultsError?this.props.noResultsError.RecyclingCollectionSchedule:"") == null &&(this.props.noResultsError?this.props.noResultsError.OrganicsCollectionSchedule == null:"")) && ?{display: 'block'}:{display: 'none'} } className="errorMessageAddressForm">
+                {/* <div style = {((this.props.noResultsError?this.props.noResultsError.RegularCollectionSchedule == null:"") && (this.props.noResultsError?this.props.noResultsError.RecyclingCollectionSchedule:"") == null &&(this.props.noResultsError?this.props.noResultsError.OrganicsCollectionSchedule == null:""))?{display: 'block'}:{display: 'none'} } className="errorMessageAddressForm">
                 The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-                </div>
-                
-                <div className = "pleaseEnterAddressForm">
+                </div> */}
+                {/* <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.
-                </div>
+                </div> */}
                 </Col>
                 <Col xs={12} md={4}>
                 <SubSectionButton title='VALIDATE' />
