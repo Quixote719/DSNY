@@ -22,59 +22,36 @@ const CompostRequestFormElements = (props) => {
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-
+    <div>
+      <FormHeader title='Collection Bin on Public Property Removal Request '/>
+      <div className="container">
+        <p>Use this form to submit your request OR call the NYC Citizen Service Center at 3-1-1. Online requests may not be reviewed until the next business day. Call 311 for urgent situations. (Javascript must be enabled in order to submit a valid request)</p>
+        <p>It is illegal to place collection bins on NYC property or on any public sidewalk or roadway. Use this form to request removal of collection bins located on public streets or areas</p>
+      </div>    
+    </div>
+    <div className='patternLineGreen'></div>
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>
     </div>
+    <Field component={TextInput} name="BinLocationAdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props}/>
-    <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props}/>
-    <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props}/>
-    <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props}/>
+    <Field component={TextInput} name="BinColor" {...props} required maxlength={"20"}/>
+    <Field component={DateTimePickerInput} name="ObservationDate" {...props} onChange={setFieldValue} required/>
+    <Field component={DropdownInput} name="BinTypeId" {...props} onChange={setFieldValue} options={values.BinTypeList} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} maxlength={"25"}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} {...props} />
-    <Field component={TextInput} name="OrganizationName" {...props} isHidden={values.CompostSiteApplicantTypeId !== 2}/>
-    <Field component={TextInput} name="OrganizationTaxIdNumber" {...props} required/>
-    <Field component={TextInput} name="OrganizationWebsite" {...props} required/>
-    <Field component={TextInput} name="OrganizationFacebookPage" {...props}/>
-    <Field component={TextInput} name="OrganizationTwitterHandle" {...props}/>
-    <Field component={TextInput} name="OrganizationInstagramHandle" {...props}/>
-
+    <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required/>
+    <Field component={TextInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} required/>
+    <Field component={TextInput} name="OrganizationApartment" {...props} required maxlength={"10"}/>
+    <Field component={TextInput} name="OrganizationPhone" {...props} required maxlength={"21"}/>
     <FormSectionHeader title={Titles.sectionFour}/>
-    <Field component={TextInput} name="FirstName" {...props}/>
-    <Field component={TextInput} name="LastName" {...props}/>
-    <Field component={TextInput} name="Title" {...props}/>
-    <Field component={DropdownInput} name="IsCertifiedNycMasterComposter" {...props}  onChange={setFieldValue} noOptions="true" disabled={values.editMode} />
-    <Field component={TextInput} name="PrimaryPhone" {...props}/>
-    <Field component={DropdownInput} name="PrimaryPhoneTypeId" {...props} onChange={setFieldValue} options={values.PrimaryPhoneTypes} disabled={values.editMode}/>
-    <Field component={TextInput} name="SecondaryPhone"{...props}/>
-    <Field component={DropdownInput} name="SecondaryPhoneTypeId" {...props}  onChange={setFieldValue} options={values.SecondaryPhoneTypes} disabled={values.editMode}/>
-    <Field component={TextInput} name="Email" {...props}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props}/>
-
-    <FormSectionHeader title={Titles.sectionFive}/>
-    <Field component={DropdownInput} name="CompostSiteTypeId" {...props}  onChange={setFieldValue} options={values.CompostSiteTypes} disabled={values.editMode}/>
-    <Field component={TextInput} name="OtherCompostSiteType" {...props} isHidden={values.CompostSiteTypeId !== 9}/>
-    <Field component={DropdownInput} name="CompostSitePermittingOrganizationId" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>
-    <Field component={TextInput} name="OtherCompostSitePermittingOrganization"{...props} isHidden={values.CompostSitePermittingOrganizationId !== 6}/>
-    <Field component={TextInput} name="SiteSize" {...props}/>
-    <Field component={DropdownInput} name="IsGreenThumbGarden" {...props}  onChange={setFieldValue} disabled={values.editMode}/>
-    <Field component={DropdownInput} name="HasReceivedDsnyCompostBefore" {...props} onChange={setFieldValue} disabled={values.editMode}/>
-    <Field component={TextAreaInput} name="CompostUseDescription" {...props}/>
-
-    <FormSectionHeader title={Titles.sectionSix}/>
-    <Field component={TextInput} name="Pallets" {...props}/>
-    <Field component={DateTimePickerInput} name="DeliveryDeadline" {...props} onChange={setFieldValue}/>
-    <Field component={MultiSelectInput} name="DeliveryDays" {...props} onMultiSelect={setFieldValue} options={values.DeliveryDays}/>
-    <Field component={DropdownInput} name="FromHourOfDayId" {...props}  onChange={setFieldValue} options={values.FromHoursOfDay} disabled={values.editMode}/>
-    <Field component={DropdownInput} name="ToHourOfDayId" {...props}  onChange={setFieldValue} options={values.ToHoursOfDay} disabled={values.editMode}/>
-    <Field component={TextInput} name="DeliveryNotes" {...props}/>
-    <Field component={TextInput} name="EntranceHeightWidth" {...props}/>
-    <Field component={DropdownInput} name="HasAlternateSideParking" {...props}  onChange={setFieldValue} disabled={values.editMode}/>
-    <Field component={MultiSelectInput} name="AlternateSideParkingDays" {...props} onMultiSelect={setFieldValue} options={values.AlternateSideParkingDays} isHidden={values.HasAlternateSideParking !== true}/>
-    <Field component={TextInput} name="AlternateSideParkingTimes" {...props} isHidden={values.HasAlternateSideParking !== true}/>
+    <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"}/>
+    <Field component={TextInput} name="Phone" {...props} required maxlength={"25"}/>
   </fieldset>)
 };
 

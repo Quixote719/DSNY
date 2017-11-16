@@ -94,7 +94,7 @@ const Step2 = (props) => {
     <props.formFields {...props} />
 
 
-    <div className="FormField col-md-12 col-sm-12 col-xs-12">
+    {/* <div className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}
           render="explicit"
@@ -103,7 +103,7 @@ const Step2 = (props) => {
           expiredCallback={expiredCallback}
         />
 
-    </div>
+    </div> */}
     <Col xs={12}>
     <button className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
