@@ -4,6 +4,7 @@ export const Titles = {
   SectionThree: 'APPLICATION QUESTIONS (MAXIMUM 1500 CHARACTERS FOR EACH)',
   SectionFour:'CONTACT INFORMATION',
   PrefferedLocation:'PREFERED LOCATION',
+  Apartment:'FLOOR/SUITE/APT (OPTIONAL)',
   Address:'ADDRESS',
   AppliedToProgramBefore:'HAVE YOU APPLIED TO THIS PROGRAM BEFORE (OPTIONAL) ',
   DescribeExperience:'DESCRIBE YOUR COMPOSTING EXPERIENCE',
