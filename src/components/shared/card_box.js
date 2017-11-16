@@ -17,6 +17,12 @@ class CardBox extends Component {
         //  CardSize: 1.width:220px, 4 in a row    2.width:303px, 3 in a row
         let card = null;
         if(this.props.info.CardType=='standard-card-no-border'){
+            card = <TitleCard title={item.title} link={item.linked_page.url} type='1' />
+        }
+        else if(this.props.info.CardType=='square-card'){
+            card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
+        }
+        else if(this.props.info.CardType=='standard-card-with-border'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
         else if(this.props.info.CardType=='color-bar-card'){
@@ -30,7 +36,7 @@ class CardBox extends Component {
             card = <TitleContentCard dataObject={item}/>
         }
 
-        if(this.props.info.CardSize == 1){
+        if(this.props.info.CardType=='staff-card'||this.props.info.CardType=='square-card'){
           return (
             <Col xs={12} sm={4} md={3} key={item.id}>
               {card}

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_DISABILITY_SERVICES_URL
+  PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -12,11 +12,10 @@ import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
-import axios from 'axios';
 
 const formTitles = Titles;
 
-class DisabilityServices extends Component {
+class CollectionBinOnPublicProperty extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -27,8 +26,13 @@ class DisabilityServices extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   this.props.fetchFormObject();
+  // }
+
+
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
    validateForm(formObject, errors){
@@ -44,30 +48,25 @@ class DisabilityServices extends Component {
   }
 
   render() {
-    
-        //const {FormObject, error, success} = this.props;
-        const {success, error} = this.props;
-       
-    
-        if(success !== undefined) {
-          if(success != null) {
-            let message = 'Your response No. is: ' + success.SRNo;
-            return(<ThankYou>{message}</ThankYou>);
-          } else {
-            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
-          }          
-        }
-    
-        if (FormObject && FormObject !== undefined) {
-            return (<div className='container'><div className='form compostForm'>
-                    <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
-                    </div></div>);
-        };
-        if (error){
-            return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-        }
-        return(<div className='loader container'></div>)
-     };
+
+    //const {FormObject, error, success} = this.props;
+    const {success,error} = this.props;
+
+    if(success !== undefined)
+    {
+      return(<ThankYou>Your request has been successfully created</ThankYou>);
+    }
+
+    if (FormObject && FormObject !== undefined) {
+        return (<div className='container'><div className='form compostForm'>
+                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                </div></div>);
+    };
+    if (error){
+        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+    }
+    return(<div className='loader container'></div>)
+ };
 };
 
 
@@ -76,4 +75,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(DisabilityServices);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CollectionBinOnPublicProperty);

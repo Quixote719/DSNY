@@ -89,7 +89,7 @@
 }
 
 .TitleContentCard{
-  margin: 6px 0;
+  margin: 8px 0;
   cursor: pointer;
 }
 
@@ -168,7 +168,7 @@
 
 @media only screen and (max-width: 940px) {
   .ProfileCard{
-    width: 100%;  
+    width: 100%;
   }
 }
 
