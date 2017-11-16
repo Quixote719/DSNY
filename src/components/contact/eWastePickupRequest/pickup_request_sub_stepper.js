@@ -13,7 +13,7 @@ class RequestSubStepper extends Component {
 	};
 
 	componentDidMount() {
-		this.props.PickupReqGetItemSubCategories(1);
+		//this.props.PickupReqGetItemSubCategories(1);
 	}
 
 	renderCatg(ItemSubCatg) {
