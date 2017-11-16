@@ -22,7 +22,6 @@ class LawsList extends Component {
   }
 
   renderPosts(laws) {
-    console.log(laws);
     return _.map(this.firstN(laws, 8), (Item,index) => {
         return (<LawsListItem title={Item.title} body={Item.content} key={Item.id} url={Item.linked_page.url} header={Item.header}
                lawsIndex = {index}/>);

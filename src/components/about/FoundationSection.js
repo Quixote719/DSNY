@@ -11,7 +11,7 @@ class FoundationSection extends Component {
     return _.map(cards, item => {
       return (
         <div className='CardTitleBox' key={item.id}>
-          <TitleCard type='2' title={item.title} link={item.linked_page.url}/>
+          <TitleCard type='1' title={item.title} link={item.linked_page.url}/>
           <div className='FoundationSp'></div>
         </div>
       )

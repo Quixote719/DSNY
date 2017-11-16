@@ -37,10 +37,13 @@ class FormBoolean extends Component {
 
   renderOptions() {
     return (<div>
+      <label className="checkContainer">
       <input ref="checkboxinput" type="checkbox" onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
-      className={this.props.error?"input error":'input'} error={this.props.error}/>
+      className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
       <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
-      <label >{this.props.title}</label>
+      <span className="checkmark"></span>
+      <div className="checkBoxText">{this.props.title}</div>
+      </label>
     </div>)
   }
   render() {
@@ -59,4 +62,22 @@ FormBoolean.propTypes = {
   title: PropTypes.string
 };
 
-export default FormBoolean;
+const CheckboxInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormBoolean title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      
+    </div>
+  )
+}
+
+
+export default CheckboxInput;

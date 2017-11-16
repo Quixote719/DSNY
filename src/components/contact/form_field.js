@@ -7,8 +7,6 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 import isEmpty from 'lodash/isEmpty'
-import classnames from 'classnames'
-import {compostFormObject, compostFormTitles as Titles} from './titles'
 
 class FormField extends Component {
 
@@ -30,8 +28,8 @@ class FormField extends Component {
   }
 
   handleChange(event){
-    console.log("DINESH" + this.refs.myinput.value )
-    !isEmpty(this.refs.myinput.value) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
+    //console.log("DINESH" + this.refs.myinput.value )
+    (isEmpty(this.props.value)) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
   }
 
   handleFocusOut(event){
@@ -66,9 +64,9 @@ class FormField extends Component {
     //     default:
           
            return (<div>
-            <input ref="myinput" onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabledf} className={this.props.error?"input error":'input'} error={this.props.error}
+                : ''} disabled={this.props.disabledf} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
@@ -82,7 +80,7 @@ class FormField extends Component {
 
     return (<div >{
         !this.props.isHidden
-          ? <Col className='FormField' xs={12} sm={6} md={6}>
+          ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
                 <div className='FormMultiSelectTitle'>{this.props.title}</div>
                 <div>{this.renderField()}</div>
@@ -107,7 +105,7 @@ const TextInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField title={Titles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

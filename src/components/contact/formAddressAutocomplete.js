@@ -118,27 +118,18 @@ class FormAddressAutocomplete extends Component {
         return (
             <div>
                 <Row className = "formPlacesAutosuggestRow">
-                <Col xs={12} md={8}>
-                <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
-                {/* <div style = {(this.props.collectionScheduleInfo !== null ||this.props.suggestionAddress !==null)?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
-                    No search results found
-                </div> */}
-                {errorMessage}
-                {this.correctAddressList()}
-                {/* <div style = {((this.props.noResultsError?this.props.noResultsError.RegularCollectionSchedule == null:"") && (this.props.noResultsError?this.props.noResultsError.RecyclingCollectionSchedule:"") == null &&(this.props.noResultsError?this.props.noResultsError.OrganicsCollectionSchedule == null:""))?{display: 'block'}:{display: 'none'} } className="errorMessageAddressForm">
-                The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-                </div> */}
-                {/* <div className = "pleaseEnterAddressForm">
-                Please enter / select a valid address in order to complete the appointment request.
-                </div> */}
-                </Col>
-                <Col xs={12} md={4}>
-                <SubSectionButton title='VALIDATE' />
-                </Col>
+                    <Col xs={12} md={8}>
+                    <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
+                    {errorMessage}
+                    {this.correctAddressList()}
+                    </Col>
+                    <Col xs={12} md={4}>
+                    <SubSectionButton title='VALIDATE' />
+                    </Col>
                 </Row>
             </div>
 
-        )
+        );
     }
 }
 function mapStateToProps(state) { 

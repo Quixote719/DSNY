@@ -21,16 +21,21 @@ class FormMultiSelect extends Component {
 
     this.setState({options});
     object.Values = options;
-      this.props.onMultiSelect(this.props.name, object)
+    this.props.onMultiSelect(this.props.name, object)
   }
 
   renderOptions(options) {
-    return options.map((Item, index) => {
-      return (<div key={_.random(0, 200, true)}>
-        <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
-        <span>{Item.DisplayName}</span>
-      </div>)
-    });
+    if(options!=undefined){
+      return options.map((Item, index) => {
+        return (<div key={_.random(0, 200, true)}>
+        <label className="checkContainer">
+            <input type="checkbox" id={Item.id} name={Item.Name} value={Item.Name} checked={Item.Selected} onChange={this.toggleCheckbox.bind(this, index)}/>
+            <span className="checkmark"></span>
+            <div className="checkBoxText">{Item.DisplayName}</div>
+        </label>
+        </div>)
+      });
+    }
   }
 
   render() {
@@ -54,4 +59,22 @@ FormMultiSelect.propTypes = {
   title: PropTypes.string
 };
 
-export default FormMultiSelect;
+const MultiSelectInput = ({
+  field: { name, ...field }, // { name, value, onChange, onBlur }
+  form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  className,
+  label,
+  ...props
+})  => {
+  const error = errors[name]
+  const touch = touched[name]
+  return (
+    <div >
+      {<FormMultiSelect title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+
+    </div>
+  )
+}
+
+
+export default MultiSelectInput;
