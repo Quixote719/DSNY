@@ -59,6 +59,16 @@ html body {
   padding-top: 25px;
 }
 
+.breadcrumb>li+li:before{
+  padding: 0 9px 0 12px;
+  color: #FFFFFF;
+}
+
+.breadcrumbSymbol{
+  padding: 0 9px 0 12px;
+  color: #FFFFFF;
+}
+
 .boxPadding {
   padding: 30px 0;
 }
@@ -71,6 +81,10 @@ html body {
   margin: 30px auto;
   color: #333333;
   font-size: 16px;
+}
+
+.normalsection{
+  padding-bottom: 20px;
 }
 
 .bottomSection{
