@@ -24,14 +24,14 @@ const formFields = (props) => {
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 
-    <FormHeader title='Online Registration'/>
+    <FormHeader title='Online Complaint Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>
     </div>
     <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} {...props} />
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextInput} name="RegistrantBusinessName" fullRow={true} maxlength={50} {...props} required/>
+    <Field component={TextAreaInput} name="RegistrantBusinessName" {...props} required maxlength={"5000"}/>
     <Field component={TextInput} name="RegistrantFirstName" maxlength={20} {...props} required/>
     <Field component={TextInput} name="RegistrantLastName" maxlength={20} {...props} required/>
     <Field component={TextInput} name="RegistrantTitle" maxlength={30} {...props} required/>
