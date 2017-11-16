@@ -30,22 +30,14 @@ export function fetchFormObject(category) {
 
 }
 
-export function PickupReqGetItemCategories(category) {
+export function PickupReqGetItemCategories() {
 
 	return function(dispatch) {
 
 		axios.get(FETCH_PICKUP_ITEM_CATEGORIES_URL).then((data) => {
-
 			dispatch({type: types.FETCH_PICKUP_ITEM_CATEGORIES, payload: data,})
 		}).catch(function(error) {
-			console.log('yesh');
-			console.log(JSON.stringify(error))
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
 		});
 	}
 

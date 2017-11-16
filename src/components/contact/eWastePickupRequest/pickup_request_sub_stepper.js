@@ -20,15 +20,11 @@ class RequestSubStepper extends Component {
 		console.log(ItemSubCatg);
 		if (ItemSubCatg)
 			return _.map(ItemSubCatg, Item => {
-
 				return (<div><FormStepper subCat="subCat" obj={Item} disabled={this.props.disabled} onIncDec={this.props.onIncDec} title={Item.SubCategory}/></div>);
 			});
 		}
 
 	render() {
-		const {ItemSubCatg} = this.props;
-		console.log('varma', this.props.subCat);
-		console.log('yeshu', ItemSubCatg);
 		return (<div>
 			{this.renderCatg(this.props.subCat)}
 		</div>);
