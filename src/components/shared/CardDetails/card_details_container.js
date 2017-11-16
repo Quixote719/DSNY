@@ -59,7 +59,8 @@ class cardDetailContainer extends Component {
 
           let sections;
           if (cItems.sections) {
-            sections = _.map(cItems.sections.sections, sec => {
+            sections = _.map(cItems.sections.sections, (sec,index) => {
+
               if(sec.featured_image){
                 let ImageProps = {};
                 ImageProps = sec;
@@ -75,7 +76,7 @@ class cardDetailContainer extends Component {
                 return (
                   <div key={sec.id}>
                     <div>
-                      <CardSec dataObject={sec}/>
+                      <CardSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
                     </div>
                   </div>
                 );

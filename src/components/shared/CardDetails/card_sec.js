@@ -196,13 +196,13 @@ class CardSec extends Component {
     }
 
     let body;
-    
+
     if (dataObject.content !== '') {
 
       if (dataObject.cards.length > 0) {
 
-        let cType = dataObject.card_data.card_type !== "reference-details-card" 
-      
+        let cType = dataObject.card_data.card_type !== "reference-details-card"
+
         /* This is to ensure multi-file cards appear as a single row below the content present in header Section */
         let cardThreshold = dataObject.card_data.card_type == 'multi-file-card' ? 0 : 2;
 
@@ -277,6 +277,7 @@ class CardSec extends Component {
           <div>{header}</div>
           <div>{body}</div>
           <div> {viewAllButton} </div>
+          {this.props.finalSec==true?<div className = 'bottomSection'></div>:<div className = 'normalsection'></div>}
         </div>
       </div>
     );

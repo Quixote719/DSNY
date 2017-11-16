@@ -13,7 +13,7 @@ class LocationsSection extends Component {
     }
     const cardStyle = {
                         'float': 'right',
-                        'marginTop': '25px'
+                        'marginTop': '15px'
                       }
 
     return (

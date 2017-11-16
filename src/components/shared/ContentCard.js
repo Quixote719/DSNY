@@ -46,7 +46,7 @@ class ContentCard extends Component {
     let content = this.props.content||'';
     return (
         <div style = {cardType} className='CardContent'>
-            <TruncateMarkup lines={12}>
+            <TruncateMarkup lines={9}>
               <div>
                 {Parser(content)}
               </div>
