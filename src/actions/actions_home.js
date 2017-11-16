@@ -30,7 +30,14 @@ return function(dispatch) {
     })
 }
 }
-
+export function checkAddressValidator(key) {
+    return function (dispatch) {
+        dispatch({
+            type: 'SET_ADDRESS_VALIDATOR_FLAG',
+            payload: key,
+        })
+    }
+}
 export function getCollectionSchedule(address, callback=null) {
     return function (dispatch) {
         axios.get(COLLECTION_SCHEDULE_URL+address)

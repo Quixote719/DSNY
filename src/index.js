@@ -66,7 +66,7 @@ import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
-
+ 
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 

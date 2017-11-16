@@ -25,6 +25,7 @@ class FormAddressAutocomplete extends Component {
           };
     }
     handleChange = (address) =>{
+        this.props.checkAddressValidator(0);        
         if(address.trim().length === 0 || address === ""){
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
@@ -54,6 +55,7 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(value, this.successCallback);                                 
         }
     handleSelect =(address)=>{
+        this.props.checkAddressValidator(1);
         if(errorFlag == 0){
             this.setState({
                 address: address,
@@ -63,6 +65,7 @@ class FormAddressAutocomplete extends Component {
         }        
     }
     validateButtonClicked =()=>{
+         this.props.checkAddressValidator(1);        
          this.props.getCollectionSchedule(this.state.address, this.successCallback);                                             
     }
     successCallback = (success)=>{
@@ -88,7 +91,10 @@ class FormAddressAutocomplete extends Component {
         } );
     }
     render() {
+        console.log("Value of address validator: ")        
+        console.log(this.props.addressValidator)
         console.log(this.props.DSNYGeoCoder)
+        
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -150,6 +156,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) { 
     return {
+        addressValidator: state.carouselDataReducer.addressValidator,
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,        
         noResultsError: state.carouselDataReducer.noResultsError,
         suggestionAddress: state.carouselDataReducer.suggestionAddress,      
@@ -158,6 +165,7 @@ function mapStateToProps(state) {
   }
   
 let actionList = {
+    checkAddressValidator: actions.checkAddressValidator,
     getCollectionSchedule: actions.getCollectionSchedule,    
   };
 
