@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -32,7 +32,7 @@ class CollectionBinOnPublicProperty extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL);
   }
 
    validateForm(formObject, errors){
@@ -52,9 +52,13 @@ class CollectionBinOnPublicProperty extends Component {
     //const {FormObject, error, success} = this.props;
     const {success,error} = this.props;
 
-    if(success !== undefined)
-    {
-      return(<ThankYou>Your request has been successfully created</ThankYou>);
+    if(success !== undefined) {
+      if(success != null) {
+        let message = 'Success! Your response No. is: ' + success.SRNo;
+        return(<ThankYou>{message}</ThankYou>);
+      } else {
+        return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+      }          
     }
 
     if (FormObject && FormObject !== undefined) {
