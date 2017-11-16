@@ -33,7 +33,7 @@ const CompostRequestFormElements = (props) => {
       <FormAddressAutocomplete/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
-    <Field component={TextAreaInput} name="Description" {...props} required maxlength={"5000"}/>
+    <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
     <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>

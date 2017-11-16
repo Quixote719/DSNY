@@ -54,6 +54,7 @@ import DisabilityServices from './components/contact/disabilityServices';
 import LotCleaning from './components/contact/lotCleaning';
 import CollectionBinOnPublicProperty from './components/contact/collectionBinOnPublicProperty';
 import StreetSidewalkObstruction from './components/contact/streetSidewalkObstruction';
+import WeedRemovalRequest from './components/contact/weedRemovalRequest';
 
 // import OrganicsForm from './components/contact/organicsIndex';
 
@@ -142,6 +143,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/overflowing-litter-basket-service-request"} component={OverflowingLitterBasket}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organics-bin-replacement-request"} component={OrganicsBinReplacement}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/disability-services"} component={DisabilityServices}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/weed-removal-request"} component={WeedRemovalRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/lot-cleaning"} component={LotCleaning}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/collection-bin-on-public-property"} component={CollectionBinOnPublicProperty}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organicsform"} component={OrganicsForm}/>
