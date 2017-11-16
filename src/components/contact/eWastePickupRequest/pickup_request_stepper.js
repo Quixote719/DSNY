@@ -11,15 +11,23 @@ class RequestStepper extends Component {
     constructor(props) {
       super(props);
       this.state = {
+
         PickupRequestItems:[]
       }
     this.renderCatg = this.renderCatg.bind(this);
       this.updateState = this.updateState.bind(this);
+      this.updateValue = this.updateValue.bind(this);
     };
 
     componentDidMount() {
       this.props.PickupReqGetItemCategories();
     }
+
+
+  updateValue(ItemCatg){
+    console.log('varma');
+    //this.props.onChange('categories', ItemCatg);
+  }
 
     updateState(obj) {
     var p = this.state.PickupRequestItems
@@ -30,24 +38,27 @@ class RequestStepper extends Component {
     renderCatg(ItemCatg) {
       if (ItemCatg)
       return _.map(ItemCatg, Item => {
-        const subCatg = Item.hasSubCategory === 1
+        const subCatg = Item.hasSubCategory !== 0
               if (subCatg){
-              console.log(Item.CategoryId);
-                return (<div><FormStepper  disabled={this.props.disabled} obj={Item} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} onIncDec={this.updateState} subCat={Item.CategoryId}/></div>)
+              
+                return (<div><FormStepper  disabled={this.props.disabled} obj={Item} title={Item.Category} onIncDec={ this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} onIncDec={this.updateState} subCat={Item.hasSubCategory}/></div>)
               }
 
-        return (<div><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} y='yeshu' onIncDec={ this.updateState} header={subCatg}/></div>);
+        return (<div><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={ this.updateState} header={subCatg}/></div>);
       });
     }
 
     render(){
       const {ItemCatg} = this.props;
+    if(ItemCatg){
+      this.updateValue(ItemCatg);
+    }
       return (
         <div>
           <Col className='headerStepper' xs={12} >{this.props.header}</Col>
           <Col className='tableHeaderStepper' xs={10}  sm={10} md={10}>{this.props.tableHeader}</Col><Col className='tableHeaderStepper' xs={2} sm={2} md={2}>  {`Quantity`}</Col>
           <Col className='hairline' xs={12}></Col>
-            {this.renderCatg(ItemCatg)}
+            {this.renderCatg(this.props.categories)}
         </div>
       );
     }

@@ -13,10 +13,11 @@ class RequestSubStepper extends Component {
     };
 
     componentDidMount() {
-      this.props.PickupReqGetItemSubCategories(this.props.subCat);
+      //this.props.PickupReqGetItemSubCategories(this.props.subCat);
     }
 
     renderCatg(ItemSubCatg) {
+      console.log(ItemSubCatg);
       if (ItemSubCatg)
       return _.map(ItemSubCatg, Item => {
         Item.CategoryId = this.props.subCat;
@@ -28,7 +29,7 @@ class RequestSubStepper extends Component {
       const {ItemSubCatg} = this.props;
       return (
         <div>
-            {this.renderCatg(ItemSubCatg)}
+            {this.renderCatg(this.props.subCat)}
         </div>
       );
     }

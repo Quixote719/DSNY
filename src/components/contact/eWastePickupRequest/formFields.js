@@ -44,14 +44,14 @@ const EwastePickUpRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>
     <Field component={DateTimePickerInput} name="AppointmentDate" {...props} onChange={setFieldValue}/>
-    <Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required disabled={values.editMode} onChange={setFieldValue}/>
+    <Field component={Nstepper} categories={values.categories} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required disabled={values.editMode} onChange={setFieldValue}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="FirstName" {...props} required/>
     <Field component={TextInput} name="LastName" {...props} required/>
     <Field component={TextInput} name="Email" {...props} required/>
     <Field component={TextInput} name="ConfirmEmail" {...props} required/>
     <Field component={TextInput} name="Phone" {...props} required/>
-      <Col xs={12}><DisplayFormikState {...props} /></Col>
+      
   </fieldset>
 )
 };
