@@ -21,7 +21,7 @@ class FormAddressAutocomplete extends Component {
         super(props, context);
         this.state = {
             address: "",                        
-            placeholder: "Enter the address",
+            // placeholder: "Enter the address",
           };
     }
     handleChange = (address) =>{
@@ -37,14 +37,14 @@ class FormAddressAutocomplete extends Component {
         })
     }
     resetPlaceHolder = () =>{
-        this.setState({
-          placeholder: "Enter the address"
-        })
+        // this.setState({
+        //   placeholder: "Enter the address"
+        // })
       }
     setPlaceHolder = () =>{
-        this.setState({
-          placeholder: " "
-        })
+        // this.setState({
+        //   placeholder: " "
+        // })
     }
     suggestedAddressSelected = (value) =>{
         this.setState({
@@ -62,15 +62,21 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(address, this.successCallback);                                             
         }        
     }
+    validateButtonClicked =()=>{
+         this.props.getCollectionSchedule(this.state.address, this.successCallback);                                             
+    }
     successCallback = (success)=>{
-        if(this.props.collectionScheduleInfo == null ||this.props.suggestionAddress == null) {
+        if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
-        } else if((this.props.noResultsError.RegularCollectionSchedule == null) && (this.props.noResultsError.RecyclingCollectionSchedule) == null &&(this.props.noResultsError.OrganicsCollectionSchedule == null)){
+            this.forceUpdate();
+        } else if((this.props.noResultsError.RegularCollectionSchedule == null || this.props.noResultsError.RegularCollectionSchedule == "") && (this.props.noResultsError.RecyclingCollectionSchedule == null || this.props.noResultsError.RecyclingCollectionSchedule == "") &&(this.props.noResultsError.OrganicsCollectionSchedule == null || this.props.noResultsError.OrganicsCollectionSchedule == "") && this.props.suggestionAddress == null){
             errorMessage = (<div className="errorMessageAddressForm">
             The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
             </div>);
+            this.forceUpdate();                        
         } else {
             errorMessage = (<div></div>);
+            this.forceUpdate();                                                
         }
     }
     correctAddressList = () => {
@@ -82,6 +88,7 @@ class FormAddressAutocomplete extends Component {
         } );
     }
     render() {
+        console.log(this.props.DSNYGeoCoder)
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -118,13 +125,22 @@ class FormAddressAutocomplete extends Component {
         return (
             <div>
                 <Row className = "formPlacesAutosuggestRow">
-                    <Col xs={12} md={8}>
+                    <Col xs={12} md={10}>
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
                     {errorMessage}
-                    {this.correctAddressList()}
+                    <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
+                    <div className = "addressNotFound">
+                    The address entered can not be found. 
+                    </div>
+                    <div className = "selectFromAddressBelow">
+                    Please select from the possible addresses below                
+                    </div>
+                        {this.correctAddressList()}
+                    </div>
+                    {/* {this.correctAddressList()} */}
                     </Col>
-                    <Col xs={12} md={4}>
-                    <SubSectionButton title='VALIDATE' />
+                    <Col xs={12} md={2} className = "validateButtonCol">
+                    <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
                     </Col>
                 </Row>
             </div>
@@ -134,6 +150,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) { 
     return {
+        DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,        
         noResultsError: state.carouselDataReducer.noResultsError,
         suggestionAddress: state.carouselDataReducer.suggestionAddress,      
         collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,        

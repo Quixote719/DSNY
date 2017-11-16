@@ -88,11 +88,12 @@ class CollectionSchedule extends Component {
         } );
     }
     render() {
+        console.log(this.props.suggestionAddress?this.props.suggestionAddress.length: "nothing")
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
 
-        const inputProps = {
+        const inputProps = { 
             value: this.state.address,
             onChange: this.handleChange,
             placeholder: this.state.placeholder,
@@ -136,7 +137,7 @@ class CollectionSchedule extends Component {
                             </div>
                     </Col>
                 </Row>
-                <div style = {(this.props.suggestionAddress?this.props.suggestionAddress.length !=0:"") ||this.props.suggestionAddress !== null || this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
+                <div style = {this.props.suggestionAddress !== null || this.state.checkInputresults == "clearBoxChecked" || this.props.collectionScheduleInfo !== null?{display: 'none'}:{display:'block'}} className = "noOfSearchResults">
                     No search results found
                 </div>
 

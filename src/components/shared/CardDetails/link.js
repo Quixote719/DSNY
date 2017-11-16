@@ -26,6 +26,7 @@ class Link extends React.Component {
   }
   checkBreadCrumbInput(url){
     if(url===process.env.REACT_APP_SITE_RELATIVE_URL+'/') {
+      console.log("Homeeeeeeeeeeeee")
       this.props.setActiveNavTab("home")
     }
     else if(url.indexOf("resources") > -1){

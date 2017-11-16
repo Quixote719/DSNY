@@ -72,7 +72,7 @@ class SearchPage extends Component {
             return (
                 <div key={index}>
                 <div className={index == 0?"ridOfSearchResultsFirstParentDiv":"ridOfSearchResultsParentDiv"}>
-                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+(item.linkedPage?item.linkedPage.url:"")}>
+                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL+(item.linked_page?item.linked_page.url:"")}>
                     <div className ="ridOfItemTitle">
                     {item.header?item.header:item.page_header}
                     </div>
@@ -100,6 +100,7 @@ class SearchPage extends Component {
     }
     handleKeyPress = (event) => {
         if(event.key == 'Enter'){
+            this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
             this.props.getRidOfSearchResults(this.state.value);   
             this.setState({
                 checkInputresults: "clearBoxNotChecked",

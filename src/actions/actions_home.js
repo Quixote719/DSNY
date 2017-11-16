@@ -36,6 +36,28 @@ export function getCollectionSchedule(address, callback=null) {
         axios.get(COLLECTION_SCHEDULE_URL+address)
             .then((data) => {
                 axios.get(HOLIDAY_DATA_URL).then((holidayData)=>{
+                    if(callback){
+                        if(data.data.Goat!== null){
+                            var DSNYGeoCoder = {};
+                            DSNYGeoCoder['latitude'] = data.data.Goat.latitude;
+                            DSNYGeoCoder['longitude'] = data.data.Goat.longitude;
+                            DSNYGeoCoder['houseNumber'] = data.data.Goat.houseNumber;
+                            DSNYGeoCoder['street'] = data.data.Goat.firstStreetNameNormalized;
+                            DSNYGeoCoder['borough'] = data.data.Goat.firstBoroughName;
+                            DSNYGeoCoder['city'] = data.data.Goat.uspsPreferredCityName;
+                            DSNYGeoCoder['zipCode'] = data.data.Goat.zipCode;                        
+                            DSNYGeoCoder['sanitationCollectionSchedulingSectionAndSubsection'] = data.data.Goat.sanitationCollectionSchedulingSectionAndSubsection;
+                            DSNYGeoCoder['bbl'] = data.data.Goat.bbl;
+                            if (data.data.Goat.houseNumber) {
+                                // Address
+                                DSNYGeoCoder['houseNumber'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                            } else {
+                                // Place name
+                                DSNYGeoCoder['houseNumber'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                            }
+                            console.log(DSNYGeoCoder);
+                        }
+                    }
                     if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
                         var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;                    
                     }
@@ -64,6 +86,7 @@ export function getCollectionSchedule(address, callback=null) {
                     }
                     dispatch({
                         type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        DSNYGeoCoder: DSNYGeoCoder,
                         collectionScheduleInfo: data.data.Goat,
                         payload: collectionScheduleData,
                         routingData: data.data.RoutingTime,

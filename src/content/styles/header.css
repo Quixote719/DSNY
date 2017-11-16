@@ -487,7 +487,7 @@ input.searchMessagesInput:focus {
 }
 .newsEventsCarousel>.carousel-inner>.item>img {
     height: 280px;
-    width: 380px;
+    width: 100%;
 }
     .navbar-brand{
         padding: 0;

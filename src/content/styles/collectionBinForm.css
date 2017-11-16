@@ -2,8 +2,48 @@
     font-size: 14px;
     padding-top: 2px;
 }
+.formPlacesAutosuggestRow{
+    font-size: 14px;
+}
 .errorMessageAddressForm{
     color: #CC0029;
     font-size: 16px;
     line-height: 18px;
+}
+.formPlacesAutosuggestRow>div>div>.placesCollectionSchedule{
+    width: 100%;
+}
+.validateButtonCol{
+    padding-left: 1px;;
+}
+.validateButtonCol>button{
+    height: 35px;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.formPlacesAutosuggestRow>div>div>.placesCollectionSchedule>input {
+    line-height: 24px;
+    font-size: 17.5px;
+    color: #262626;
+    padding-left: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 33px;
+    height: 35px;
+    margin-right: 8px;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.formPlacesAutosuggestRow>div>.noOfSearchResults{
+    font-size: 14px;
+    padding-top: 8px;
+}
+.errorMessageAddressForm{
+    padding-top: 8px;
+    color: #CC0029;
+}
+.pleaseEnterAddressForm{
+    padding-top: 8px;
 }

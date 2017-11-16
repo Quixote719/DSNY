@@ -53,7 +53,7 @@ const CommonStep = (props) => {
   <FormAddressAutocomplete />
   </div>
   <FormSectionHeader title={Titles.ResidentInfo}/>
-  <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
+  {/* <FormFieldFull title={Titles.BusinessName} type="text" name="RegistrantBusinessName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantBusinessName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormFieldFull>
   <FormField title={Titles.FirstName} type="text" name="RegistrantFirstName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantFirstName} error={touched.OrganizationTaxIdNumber && errors.OrganizationTaxIdNumber}></FormField>
   <FormField title={Titles.LastName} type="text" name="RegistrantLastName" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantLastName} error={touched.OrganizationWebsite && errors.OrganizationWebsite}></FormField>
   <FormField title={Titles.Role} type="text" name="RegistrantTitle" onChange={handleChange} onBlur={handleBlur} value={values.RegistrantTitle}>{touched.OrganizationWebsite && errors.OrganizationWebsite && <div>{errors.email}</div>}</FormField>
@@ -84,7 +84,7 @@ const CommonStep = (props) => {
   <FormField title={Titles.Manufacturer} type="text" name="GreaseInspectorManufacturer" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorManufacturer}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
   <FormField title={Titles.Model} type="text" name="GreaseInspectorModelNo" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorModelNo}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
   <FormField title={Titles.CapOptional} type="text" name="GreaseInspectorCapacity" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorCapacity}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
-  <FormField title={Titles.Flow} type="text" name="GreaseInspectorFlow" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorFlow}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField>
+  <FormField title={Titles.Flow} type="text" name="GreaseInspectorFlow" onChange={handleChange} onBlur={handleBlur} value={values.GreaseInspectorFlow}>{touched.email && errors.email && <div>{errors.email}</div>}</FormField> */}
   </fieldset>)
 };
 

@@ -94,6 +94,8 @@
     line-height: 24px;
 }
 .collectionScheduleRow{
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 35px;
     width: 940px;
 }
@@ -130,11 +132,15 @@
     line-height: 18px;
 }
 .suggestedAddressListItem{
+    cursor: pointer;
     padding-bottom: 10px;
     color: #00764E;
     font-size: 16px;	
     font-weight: bold;	
     line-height: 19px;
+}
+.collectionScheduleColumn{
+    padding: 0;
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
