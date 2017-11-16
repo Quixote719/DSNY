@@ -105,7 +105,6 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/about-commissioner"} component={Biography}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan/:slug"} component={CardDetailContainer}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/foundation/:slug"} component={CardDetailContainer}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={CardDetailContainer}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} component={Services}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning/:slug"} component={CardDetailContainer}/>
