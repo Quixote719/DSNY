@@ -46,7 +46,7 @@ import TestForm from './components/contact/index';
 import CompostRequest from './components/contact/compostRequest';
 import SiteVisitRequestForm from './components/contact/siteVisitRequest'
 import eventParticipationRequestForm from './components/contact/eventParticipationRequest';
-
+import MasterComposerCertificateCourseForm from './components/contact/masterComposterCertificateCourse';
 import DeadAnimalRemovalRequest from './components/contact/deadAnimalRemovalRequest';
 import OverflowingLitterBasket from './components/contact/overflowingLitterBasket';
 import OrganicsBinReplacement from './components/contact/organicsBinReplacement';
@@ -135,7 +135,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/compostRequest"} component={CompostRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/site-visit-request"} component={SiteVisitRequestForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eventParticipationRequests"} component={eventParticipationRequestForm} />
-
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/mastercompostercourse/"} component={MasterComposerCertificateCourseForm} />
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/dead-animal-removal-request"} component={DeadAnimalRemovalRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/overflowing-litter-basket-service-request"} component={OverflowingLitterBasket}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organics-bin-replacement-request"} component={OrganicsBinReplacement}/>
