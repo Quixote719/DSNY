@@ -43,6 +43,11 @@ html body {
   background-color: #F2F2F2;
 }
 
+.fa-file-pdf-o:before{
+  position: absolute;
+  top: 18px;
+}
+
 .PRLIhairline{
   margin-right: 15px !important;
 }
