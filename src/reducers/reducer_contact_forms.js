@@ -47,6 +47,12 @@ export default function cardReducer(state = {}, action) {
             ...state,
             eWastePickupreqSubCatgItems:action.payload.data
           };
+           case types.FETCH_PICKUP_ITEM_SUB_CATEGORIES_NEW:
+
+          return {
+            ...state,
+            eWastePickupreqSubCatgItemsNew:action.payload.data
+          };
     default:
       return state;
   }

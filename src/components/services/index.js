@@ -7,6 +7,7 @@ import ContentCardRow from '../shared/content_card_row'
 import Header from '../shared/Breadcrumb/breadcrumb_container'
 import SubSectionHeader from '../shared/sub_section_header';
 import SubSectionButton from '../shared/sub_section_button';
+import { Link } from 'react-router-dom';
 import styles from '../../content/styles/services.css';
 import { connect } from 'react-redux';
 
@@ -59,7 +60,9 @@ class Services extends Component {
                 <div className='SContainer' key={sec.id}>
                   <SubSectionHeader title={sec.header}/>
                   <ContentCardRow dataObject = {sec}/>
-                  <SubSectionButton title='VIEW ALL'/>
+                  <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning"}>
+                    <SubSectionButton title='VIEW ALL'/>
+                  </Link>
                 </div>
               )
             }

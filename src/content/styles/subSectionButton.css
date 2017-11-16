@@ -10,22 +10,22 @@
   cursor: pointer;
   outline: none;
   font-weight: 600;
-  margin-top: 5px;
-  margin-bottom: 30px;
+  margin: 25px 0;
+}
+
+
+.subSectionButton:hover {
+  background-color: #005949;
 }
 
 .subSectionButton:active {
-  background-color: #5ca470;
+  background-color: #005949;
   transform: translateY(2px);
   transition: 0.25s;
 }
 
-.subSectionButton:hover {
-  background-color: #5ca470;
-}
-
 .subSectionButton:focus {
-  background-color: #5ca470;
+  background-color: #005949;
 }
 
 .subSectionButton:disabled {

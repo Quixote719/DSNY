@@ -26,9 +26,9 @@ class BreadcrumbSec extends Component {
     console.log("Breadcrumb rerendered!!!!!!!!!!!!!!!!!!!")
     return (
       <div className="BreadcrumbList">
-        <div className='container'>
+        <div className='SContainer'>
           <Breadcrumb>
-            {this.renderBreadcrumbSec(this.props.breadcrumbList)}
+            {this.renderBreadcrumbSec(this.props.breadcrumbList)}<span className='breadcrumbSymbol'>/</span>
           </Breadcrumb>
         </div>
       </div>

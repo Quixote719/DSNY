@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_DEAD_ANIMAL_URL
+  PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class DeadAnimalRemovalRequest extends Component {
+class StreetSidewalkObstruction extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -27,7 +27,7 @@ class DeadAnimalRemovalRequest extends Component {
   }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_DEAD_ANIMAL_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL);
   }
 
    validateForm(formObject, errors){
@@ -55,14 +55,13 @@ class DeadAnimalRemovalRequest extends Component {
         return(<ThankYou>Please make sure your message is correct.</ThankYou>);
       }          
     }
-
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchDeadAnimalForm()}/>);
+    //     return (<FetchError onRetry={ () => this.props.fetchLitterBasketForm()}/>);
     // }
     return(<div className='loader container'></div>)
  };
@@ -74,4 +73,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(DeadAnimalRemovalRequest);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(StreetSidewalkObstruction);
