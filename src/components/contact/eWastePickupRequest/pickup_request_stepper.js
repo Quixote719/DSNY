@@ -7,14 +7,14 @@ import FormStepper from '../form_stepper'
 import SnStepper from './pickup_request_sub_stepper'
 
 let initialCall = false;
-
+let subList = false;
 class RequestStepper extends Component {
-  
-  
+
+
 
 	constructor(props) {
 		super(props);
-    
+
 		this.state = {
 
 			PickupRequestItems: []
@@ -26,30 +26,44 @@ class RequestStepper extends Component {
 
 	componentWillMount() {
 		this.props.PickupReqGetItemCategories();
-
-  
-    
+    this.props.PickupReqGetItemSubCategories(1);
 	}
 
 	updateValue(ItemCatg) {
-
-		console.log('varma');
-		this.props.onAppend('categories', ItemCatg);
-
     if (ItemCatg) {
       	 _.map(ItemCatg, Item => {
 				const subCatg = Item.hasSubCategory !== 0
 				if (subCatg) {
 				this.props.PickupReqGetItemSubCategories(Item.CategoryId)
 				}
-
-				// return (<div><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState} header={subCatg}/></div>);
 			});
     }
 	}
 
+  updateSubCatg(ItemCatg,ItemSubCatg){
+    if (ItemCatg && ItemSubCatg) {
+         _.map(ItemCatg, Item => {
+        const subCatg = Item.hasSubCategory !== 0
+        if (subCatg) {
+if (Item.Category === "Televisions CRT") {
+          _.map(ItemSubCatg, I => {
+              I.CategoryId = Item.CategoryId
+      });
+         Item.hasSubCategory = ItemSubCatg
+       }
+       if (Item.Category === "Televisions LCD") {
+                 _.map(ItemSubCatg, I => {
+                     I.CategoryId = Item.CategoryId
+             });
+                Item.hasSubCategory = ItemSubCatg
+              }
+        }
+     });
+     	this.props.onAppend('categories', ItemCatg);
+    }
+  }
+
 	updateState(obj) {
-		debugger;
 		var p = this.state.PickupRequestItems
 		p = _.union(p, [obj]);
 		this.setState({
@@ -73,14 +87,15 @@ class RequestStepper extends Component {
 		}
 
 	render() {
-    debugger;
+    const {ItemCatg, ItemSubCatg} = this.props;
 
-    const {ItemCatg} = this.props;
-		 if (ItemCatg && !initialCall) {
-		 	this.updateValue(ItemCatg);
-       initialCall = true;
+
+     if (ItemCatg && ItemSubCatg && !subList){
+
+      this.updateSubCatg(ItemCatg, ItemSubCatg);
+      subList = true;
      }
-  
+
       return (<div>
         <Col className='headerStepper' xs={12}>{this.props.header}</Col>
         <Col className='tableHeaderStepper' xs={10} sm={10} md={10}>{this.props.tableHeader}</Col>
@@ -90,7 +105,7 @@ class RequestStepper extends Component {
         {this.renderCatg(this.props.values.categories)}
       </div>);
     }
-    
+
 }
 
 function mapStateToProps(state) {
@@ -118,7 +133,7 @@ const StepperInput = ({
   return (
     <div >
       {<RequestStepper title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
-      
+
     </div>
   )
 }
