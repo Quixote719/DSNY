@@ -18,13 +18,6 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <div>
-      <FormHeader title='Organics Bin Replacement Request'/>
-      <div className="container">
-        <p>Use this form to submit your request OR call the NYC Citizen Service Center at 3-1-1. Online requests may not be reviewed until the next business day. Call 311 for urgent situations. (Javascript must be enabled in order to submit a valid request)</p>
-        <p>It is illegal to place collection bins on NYC property or on any public sidewalk or roadway. Use this form to request removal of collection bins located on public streets or areas</p>
-      </div>    
-    </div>
     <div className='patternLineGreen'></div>
     <FormHeader title='Online Service Request Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
