@@ -14,6 +14,8 @@ import CardSec from './CardDetails/card_sec'
 import DisabilityServices from '../contact/disabilityServices'
 import OrganicsBinReplacement from '../contact/organicsBinReplacement'
 import EwasteRequestForm from '../contact/eWastePickupRequest'
+import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
+import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
 
 class FormDetail extends Component {
 
@@ -61,6 +63,10 @@ class FormDetail extends Component {
               return <OrganicsBinReplacement />;
               case 'e-waste-pickup-request':
               return <EwasteRequestForm />
+              case 'recyclable-material-theft-observation':
+              return <RecyclableMaterialTheft />
+              case 'failure-to-store-receptacles':
+              return <FailureStoreReceptacles />
               break;
               default:
               break;
@@ -87,7 +93,7 @@ class FormDetail extends Component {
           let sections;
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, (sec,index) => {
-              
+
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 
               // if there's an image in your header, the code should be like this:

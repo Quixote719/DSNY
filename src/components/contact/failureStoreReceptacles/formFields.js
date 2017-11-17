@@ -6,6 +6,7 @@ import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
+import TimePickerInput from '../time_picker'
 import TextAreaInput from '../textarea_field';
 import {Field} from 'formik'
 import {Titles} from './constants'
@@ -36,6 +37,7 @@ const formFields = (props) => {
     <Field component={TextInput} name="ViolatorApartment" maxlength={20} {...props} required/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
+    <Field component={TimePickerInput} name="TimeOfOccurrence" {...props}  defalutValue={values.TimeOfOccurrence} />
     <Field component={TextInput} name="FirstName" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>
     <Field component={TextInput} name="LastName" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>
     <Field component={TextInput} name="Email" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>
