@@ -56,7 +56,11 @@ class EventDetail extends Component {
 
     if (cardDetails) {
         var mail = "mailTo:" + cardDetails.ContactEmail
-        var website = "" + cardDetails.Website
+        var website = "" + cardDetails.Website;
+        if (!website.match(/^[a-zA-Z]+:\/\//))
+        {
+            website = 'http://' + website;
+        }
         let date = dateFormat(cardDetails.FromDateTime, "mmmm d yyyy, dddd, h TT") + ' - '+
         dateFormat(cardDetails.ToDateTime, "mmmm d yyyy, dddd, h TT").split(',').pop();
 
@@ -69,6 +73,7 @@ class EventDetail extends Component {
                    <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
                      <li className=""><a href = {process.env.REACT_APP_SITE_RELATIVE_URL}>Home</a></li>
                      <li className=""><a href= {process.env.REACT_APP_SITE_RELATIVE_URL + '/dsnyevents'}>Events</a></li>
+                     <span className='breadcrumbSymbol'>/</span>
                     </ol>
                  </div>
                </div>
