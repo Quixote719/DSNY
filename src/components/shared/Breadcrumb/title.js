@@ -9,7 +9,7 @@ class Title extends Component {
   render() {
     return (
       <div className='BreadcrumbHeaderTitleSection'>
-        <div className='container'>
+        <div className='SContainer'>
           {this.props.title}
         </div>
       </div>

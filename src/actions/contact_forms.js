@@ -30,13 +30,26 @@ export function fetchFormObject(category) {
 
 }
 
-export function PickupReqGetItemCategories(category) {
+export function PickupReqGetItemCategories() {
 
 	return function(dispatch) {
 
 		axios.get(FETCH_PICKUP_ITEM_CATEGORIES_URL).then((data) => {
-
 			dispatch({type: types.FETCH_PICKUP_ITEM_CATEGORIES, payload: data,})
+		}).catch(function(error) {
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+		});
+	}
+
+}
+
+export function PickupReqGetItemSubCategories(id) {
+
+	return function(dispatch) {
+
+		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
+			console.log('data', data);
+			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES, payload: data,})
 		}).catch(function(error) {
 			console.log('yesh');
 			console.log(JSON.stringify(error))
@@ -51,13 +64,13 @@ export function PickupReqGetItemCategories(category) {
 
 }
 
-export function PickupReqGetItemSubCategories(id) {
+export function PickupReqGetItemSubCategoriesNew(id) {
 
 	return function(dispatch) {
 
 		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
 			console.log('data', data);
-			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES, payload: data,})
+			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES_NEW, payload: data,})
 		}).catch(function(error) {
 			console.log('yesh');
 			console.log(JSON.stringify(error))

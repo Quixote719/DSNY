@@ -13,22 +13,18 @@ class RequestSubStepper extends Component {
 	};
 
 	componentDidMount() {
-		this.props.PickupReqGetItemSubCategories(1);
+		//this.props.PickupReqGetItemSubCategories(1);
 	}
 
 	renderCatg(ItemSubCatg) {
 		console.log(ItemSubCatg);
 		if (ItemSubCatg)
 			return _.map(ItemSubCatg, Item => {
-
 				return (<div><FormStepper subCat="subCat" obj={Item} disabled={this.props.disabled} onIncDec={this.props.onIncDec} title={Item.SubCategory}/></div>);
 			});
 		}
 
 	render() {
-		const {ItemSubCatg} = this.props;
-		console.log('varma', this.props.subCat);
-		console.log('yeshu', ItemSubCatg);
 		return (<div>
 			{this.renderCatg(this.props.subCat)}
 		</div>);
@@ -36,7 +32,6 @@ class RequestSubStepper extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log('yesh', state);
 	return {ItemSubCatg: state.forms.eWastePickupreqSubCatgItems, error: state.error.type,};
 }
 

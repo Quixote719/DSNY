@@ -34,7 +34,9 @@ class FormStepper extends Component {
 
 
     renderItem(){
-      if (this.props.disabled && this.state.count === 0){
+      debugger;
+      console.log('boolean',this.props.disabled);
+      if (this.props.disabled && this.state.count > 0){
         return (
         <div className='FormStepper'>
           <Col xs={10}><div className='incDecFieldtext'>{this.props.title}</div></Col>
@@ -42,6 +44,8 @@ class FormStepper extends Component {
           <Col xs={12} className='hairline'></Col>
         </div>
         );
+      }else if (this.props.disabled && this.state.count === 0){
+        return(<div></div>)
       }
       if (this.props.header){
         return (
@@ -73,8 +77,6 @@ class FormStepper extends Component {
       );
     }
   }
-
-
 
 
 FormStepper.propTypes = {
