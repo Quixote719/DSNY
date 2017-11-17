@@ -6,10 +6,8 @@ import { Col} from 'react-bootstrap';
 
 class FormStepper extends Component {
 
-
     constructor(props) {
       super(props);
-
       this.state =  {
         count: props.obj.RequestedQty,
         object:props.obj
@@ -23,8 +21,8 @@ class FormStepper extends Component {
       var i = count += 1
       object.RequestedQty = i
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
-
     }
+
     decrement() {
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
@@ -32,13 +30,9 @@ class FormStepper extends Component {
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
-
     renderItem(){
 
-      console.log('boolean',this.props.disabled);
-
       if (this.props.disabled && this.props.header){
-        debugger;
         return (
         <div className='FormStepper'>
           <Col xs={12}><div className='incDecFieldtext'>{this.props.title}</div></Col>
@@ -58,8 +52,6 @@ class FormStepper extends Component {
       }else if (this.props.disabled && this.state.count === 0){
         return(<div></div>)
       }
-
-
 
       if (this.props.header){
         return (
@@ -83,7 +75,6 @@ class FormStepper extends Component {
     }
 
     render(){
-
       return (
         <div>
           {this.renderItem()}
@@ -91,7 +82,6 @@ class FormStepper extends Component {
       );
     }
   }
-
 
 FormStepper.propTypes = {
   title: PropTypes.string,
