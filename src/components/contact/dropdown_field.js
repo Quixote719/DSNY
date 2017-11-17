@@ -44,7 +44,7 @@ class FormDropdown extends Component {
       return (<MenuItem key={Item.DisplayName} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
     });
   }
- 
+
   /* Check if the field is a time field or a drop down */
   checkIfTimeField(){
           const props = this.props;
@@ -54,7 +54,7 @@ class FormDropdown extends Component {
   }
 
   render() {
-    console.log(this.state.option);
+
     return (
     <div>
       <Col className='FormField' xs={12} sm={6} md={6}>
@@ -95,10 +95,9 @@ const InputDropdown = ({
   return (
     <div >
       {<FormDropdown title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
-      
+
     </div>
   )
 }
 
 export default InputDropdown;
-

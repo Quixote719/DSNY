@@ -99,6 +99,7 @@ const Step2 = (props) => {
     <props.formFields {...props} />
 
 
+    
     <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}

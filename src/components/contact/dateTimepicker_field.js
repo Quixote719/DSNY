@@ -21,14 +21,14 @@ class FormDateTimePicker extends Component {
   }
 
   render() {
-
+    // console.log(this.props.disabled);
     return (
       <div>
         <Col xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime defaultValue={this.props.defaultValue} className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
+            <Datetime  inputProps={{disabled: this.props.disabled }} defaultValue={this.props.defaultValue} className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
           </fieldset>

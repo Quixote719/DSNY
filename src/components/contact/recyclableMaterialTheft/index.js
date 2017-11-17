@@ -3,7 +3,8 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
 //Actions
-import {fetchOrganicsForm, postOrganicsForm} from "../../../actions/contact_forms";
+// import {fetchOrganicsForm, postOrganicsForm} from "../../../actions/contact_forms";
+import { POST_FORM_RECYCLABLE_MATERIAL_URL } from '../../../constants/ApiConstants';
 import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -12,7 +13,7 @@ import '../../../content/styles/compostRequest.css';
 
 const formTitles = Titles;
 
-class CommercialOrganicsForm extends Component {
+class RecyclableMaterialTheft extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -23,12 +24,8 @@ class CommercialOrganicsForm extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.fetchOrganicsForm();
-  }
-
   postForm(formObject){
-      this.props.postOrganicsForm(formObject);
+      this.props.postFormObject(formObject, POST_FORM_RECYCLABLE_MATERIAL_URL);
   }
 
    validateForm(formObject, errors){
@@ -52,9 +49,7 @@ class CommercialOrganicsForm extends Component {
                 <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    // }
+
     return(<div className='loader container'></div>)
  };
 };
@@ -65,4 +60,5 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(CommercialOrganicsForm);
+// export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(CommercialOrganicsForm);
+export default RecyclableMaterialTheft;

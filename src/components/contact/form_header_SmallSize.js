@@ -5,12 +5,12 @@ import '../../content/styles/subSectionHeader.css';
 const FormHeaderSmallSize = props => {
   return (
     <div>
-      <Col xs={12} md={6}>
+      <Col xs={12} md={8}>
         <div className='sectionHeaderFormSmallSize'>
           {props.title}
         </div>
       </Col>  
-      <Col xs={12} md={6}>
+      <Col xs={12} md={4}>
       <div className = 'sectionHeaderInformationText pull-right'>
           {props.information}
       </div>

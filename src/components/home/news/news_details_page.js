@@ -58,14 +58,15 @@ class NewsDetails extends Component {
                 <div>
                     <div key={sec.name}>{this.rendertop(sec)}</div>
                     <div key={sec.name}><PressReleaseBody data={sec}/></div>
-                </div>                
-            )             
+                </div>
+            )
           })
         }
 
         return (
           <div key ={cItems.id}>
-            <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>News</Link></li></ol></div></div> </div></div>
+            <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
+            <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>News</Link></li><span className='breadcrumbSymbol'>/</span></ol></div></div> </div></div>
             <div className='container'>{sections}</div>
           </div>
         )

@@ -48,7 +48,10 @@ export const PSOT_FORM_LITTER_BASKET_URL = `${REST_WEBAPI_URL}litterbaskets`;
 export const PSOT_FORM_DISABILITY_SERVICES_URL = `${REST_WEBAPI_URL}disabilityservices`;
 export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;
+export const PSOT_FORM_EEO_COMPLAINTS_URL = `${REST_WEBAPI_URL}eeocomplaints`;
 export const PSOT_FORM_WEED_REMOVAL_PROPERTY_URL = `${REST_WEBAPI_URL}weedremoval`;
+
+export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
 
 
 //Forms - E.Waste Pickup Request

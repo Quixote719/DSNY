@@ -1,6 +1,6 @@
   export const Titles = {
   "sectionOne": "BUSINESS LOCATION ADDRESS",
-  "sectionTwo": "REGISTRANT INFORMATION",
+  "sectionTwo": "SPECIFIC INFORMATION",
   "sectionThree": "MAILING ADDRESS(IF DIFFERENT THAN BUSINESS LOCATION)",
   "sectionFour": "BUSINESS TYPE",
   "sectionFive": "ON-SITE PROCESSING METHOD",
