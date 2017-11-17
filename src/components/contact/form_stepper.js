@@ -34,19 +34,33 @@ class FormStepper extends Component {
 
 
     renderItem(){
-      debugger;
+
       console.log('boolean',this.props.disabled);
+
+      if (this.props.disabled && this.props.header){
+        debugger;
+        return (
+        <div className='FormStepper'>
+          <Col xs={12}><div className='incDecFieldtext'>{this.props.title}</div></Col>
+          <Col xs={12} className='hairline'></Col>
+        </div>
+        );
+      }
+
       if (this.props.disabled && this.state.count > 0){
         return (
         <div className='FormStepper'>
-          <Col xs={10}><div className='incDecFieldtext'>{this.props.title}</div></Col>
-            <Col xs={2}>{this.state.count}</Col>
+          <Col xs={10} sm={10} md={10}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
+            <Col className='FormStepperNoEdit' xs={2}>{this.state.count}</Col>
           <Col xs={12} className='hairline'></Col>
         </div>
         );
       }else if (this.props.disabled && this.state.count === 0){
         return(<div></div>)
       }
+
+
+
       if (this.props.header){
         return (
         <div className='FormStepper'>
