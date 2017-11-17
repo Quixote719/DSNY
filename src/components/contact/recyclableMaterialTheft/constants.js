@@ -8,8 +8,6 @@
   "IncidentTime": "INCIDENT TIME (OPTIONAL)",
   "VehicleLicensePlateNumber": "VEHICLE LICENSE PLATE# (OPTIONAL)",
   "VehicleState": "LICENSED STATE (OPTIONAL)",
-  // "VehicleMake": "VEHICLE LICENSE PLATE# (OPTIONAL)",
-  // "LicensedState": "LICENSED STATE (OPTIONAL)",
   "VehicleMake": "VEHICLE MAKE (OPTIONAL)",
   "VehicleModel": "VEHICLE MODEL (OPTIONAL)",
   "VehicleColor": "VEHICLE COLOR (OPTIONAL)",
