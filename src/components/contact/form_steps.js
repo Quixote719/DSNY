@@ -108,7 +108,7 @@ const Step2 = (props) => {
         />
      <Tooltip placement="bottom" id="tooltip-bottom" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
 
-    </div> */}
+    </div>
     <Col xs={12}>
     <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
