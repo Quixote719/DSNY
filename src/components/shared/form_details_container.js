@@ -42,8 +42,8 @@ class FormDetail extends Component {
 
   render() {
     const {cardDetails} = this.props;
-    return (<div>
-      {this.renderPage(cardDetails)}
+    return (<div className="topheader">
+      <div>{this.renderPage(cardDetails)}</div>
       <div className="formContainer">{this.renderForms(cardDetails)}</div>
     </div>);
   };
@@ -80,7 +80,7 @@ class FormDetail extends Component {
         if (cItems !== undefined) {
           if (cItems.name != '') {
             banner = (<div key={cItems.id}>
-              <Header breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+              <Header breadCrumbList={cItems.breadcrumb}/>
             </div>)
           }
 

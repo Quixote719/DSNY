@@ -203,8 +203,10 @@ class CardSec extends Component {
 
         let cType = dataObject.card_data.card_type !== "reference-details-card"
 
-        /* This is to ensure multi-file cards appear as a single row below the content present in header Section */
-        let cardThreshold = dataObject.card_data.card_type == 'multi-file-card' ? 0 : 2;
+        /* This is to ensure multi-file cards appear as a single row below the content present in header Section         
+            If the card is a 'form-link-card' then it is made to appear in a seperate line */
+
+        let cardThreshold = (dataObject.card_data.card_type == 'multi-file-card' || dataObject.card_data.card_type == 'form-link-card') ? 0 : 2;
 
         let layoutTrigger = cType && l > cardThreshold;
 
