@@ -34,7 +34,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={CheckBoxInput} name="DebrisInsideLot" tableHeader='SELECT ALL THAT APPLY' {...props} />
     <Field component={CheckBoxInput} name="DebrisInFrontOfLot" {...props}/>
     <Field component={CheckBoxInput} name="VehiclesOnLot" {...props}/>
-    <Field component={FileDropZone} name="files" {...props}  tableHeader='VIDEO AND PICTURE UPLOAD' header='You can upload a total of three files, but the total size of all files uploaded cannot exceed 3 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/>
+    <Field component={FileDropZone} name="files" {...props} tableHeader='VIDEO AND PICTURE UPLOAD' header='You can upload a total of three files, but the total size of all files uploaded cannot exceed 3 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/>
     {/* <Field component={FileDropZone} name="files" {...props}  onChange={setFieldValue}/>
     <Field component={FileDropZone} name="files" {...props}  onChange={setFieldValue}/> */}    
     <FormSectionHeader title={Titles.sectionThree}/>
