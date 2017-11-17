@@ -33,12 +33,16 @@ class FormStepper extends Component {
     renderItem(){
 
       if (this.props.disabled && this.props.header){
-        return (
-        <div className='FormStepper'>
-          <Col xs={12}><div className='incDecFieldtext'>{this.props.title}</div></Col>
-          <Col xs={12} className='hairline'></Col>
-        </div>
-        );
+
+        if (this.props.hasSubCategory){
+          return (
+          <div className='FormStepper'>
+            <Col xs={12}><div className='incDecFieldtext'>{this.props.title}</div></Col>
+            <Col xs={12} className='hairline'></Col>
+          </div>
+          );
+        }
+        return (  <div></div>);
       }
 
       if (this.props.disabled && this.state.count > 0){
