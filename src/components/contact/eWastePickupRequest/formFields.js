@@ -36,16 +36,10 @@ const DisplayFormikState = props => <div style={{
 //   <Col xs={12}><DisplayFormikState {...props} /></Col>
 //
 
-function assignAddress(values, address){
-	if (values && address){
-		values.Borough = address.borough
-		values.BuildingNumber = address.houseNumber
-		values.Street = address.street
-	}
-}
+
 const EwastePickUpRequestFormElements = (props) => {
 	const {values, setFieldValue} = props;
-   assignAddress(values, props.address)
+   
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
