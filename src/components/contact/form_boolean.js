@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import {Col, Tooltip} from 'react-bootstrap';
+import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import isEmpty from 'lodash/isEmpty'
 
@@ -35,10 +35,34 @@ class FormBoolean extends Component {
     });
   }
 
+  /* Check If the CheckBoxes are adjacent to one another in two columns */
+  renderAccordingToCheckBoxType(props){ 
+    if(props.checkBoxType == 'semiwidth'){
+       return (
+                <div>
+                <Col xs={12} md={6}>
+                    <fieldset>
+                        <div>{this.renderOptions()}</div>
+                    </fieldset>
+                </Col>
+              </div>
+              );
+    }  
+       return (<div>
+               <Col xs={12}>
+                   <fieldset>
+                        <div>{this.renderOptions()}</div>
+                 </fieldset>
+             </Col>
+             </div>);
+  }
+
+
+
   renderOptions() {
     return (<div>
       <label className="checkContainer">
-      <input ref="checkboxinput" type="checkbox" onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
+      <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
       className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
       <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
       <span className="checkmark"></span>
@@ -47,19 +71,13 @@ class FormBoolean extends Component {
     </div>)
   }
   render() {
-    return (<div>
-      <Col xs={12}>
-        <fieldset>
-          <div>{this.renderOptions()}</div>
-        </fieldset>
-      </Col>
-
-    </div>);
+        return this.renderAccordingToCheckBoxType(this.props);
   };
 };
 
 FormBoolean.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  checkBoxType:PropTypes.any
 };
 
 const CheckboxInput = ({
