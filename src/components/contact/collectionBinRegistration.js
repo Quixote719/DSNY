@@ -5,7 +5,6 @@ import FormHeader from './form_header';
 import FormMultiSelect from './multiselect_field'
 import FormBoolean from './form_boolean';
 import FormField from './form_field';
-import FormFieldFull from './form_field_full';
 import FormDropdown from './dropdown_field'
 import FormDateTimePicker from './dateTimepicker_field'
 import Datetime from 'react-datetime';

@@ -31,37 +31,24 @@ const formFields = (props) => {
     </div>
     <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} {...props} />
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextAreaInput} name="RegistrantBusinessName" {...props} required maxlength={"5000"}/>
-    <Field component={TextInput} name="RegistrantFirstName" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="RegistrantLastName" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="RegistrantTitle" maxlength={30} {...props} required/>
-    <Field component={TextInput} name="RegistrantEmail" maxlength={30} {...props} required/>
-    <Field component={TextInput} name="RegistrantPhone" maxlength={21} {...props} required/>
-    <Field component={DropdownInput} name="RegistrantPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.RegistrantPhoneTypes} disabled={values.editMode}/>
+    <Field component={TextAreaInput} name="RemovedMaterialsDescription" {...props} maxlength={5000} />
+    <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={values.IncidentDate} />
+    <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} />
+    <Field component={TextInput} name="VehicleLicensePlateNumber" maxlength={20} {...props} />
+    <Field component={TextInput} name="VehicleState" maxlength={20} {...props} />
+    <Field component={CheckBoxInput} name="IsVehicleCommercial" {...props}/>
+    <Field component={TextInput} name="VehicleMake" maxlength={20} {...props} />
+    <Field component={TextInput} name="VehicleModel" maxlength={20} {...props} />
+    <Field component={TextInput} name="VehicleColor" maxlength={20} {...props} />
+    <Field component={TextInput} name="VehicleType" maxlength={20} {...props} />
+    <Field component={TextAreaInput} name="AdditionalVehicleInfo" maxlength={5000} {...props} />
     <FormSectionHeader title={Titles.sectionThree}/>
-
-    <Field component={TextInput} name="AddressAsEntered" fullRow={true} maxlength={200} {...props} />
-    <Field component={TextInput} name="MailingApartment" maxlength={10} {...props} />
-
-    <FormSectionHeader title={Titles.sectionFour}/>
-    <Field component={MultiSelectInput} name="BusinessActivityTypes" {...props} onMultiSelect={setFieldValue} options={values.BusinessActivityTypes} required/>
-    <Field component={TextInput} name="OtherDescribe" fullRow={true} maxlength={200} {...props} isHidden={!values.BusinessActivityTypes.Values[5].Selected} required/>
-    <FormSectionHeader title={Titles.sectionFive}/>
-    <Field component={MultiSelectInput} name="OnSiteProcessingTypes" {...props} onMultiSelect={setFieldValue} options={values.OnSiteProcessingTypes} required/>
-
-    <FormSectionHeader title={Titles.sectionSix}/>
-    <Field component={TextInput} name="EquipmentManufacturer" maxlength={100} {...props} />
-    <Field component={TextInput} name="EquipmentModelNo" maxlength={100} {...props} />
-    <Field component={TextInput} name="EquipmentDescribeSystem" maxlength={200} {...props} />
-    <Field component={TextInput} name="EquipmentMinimumCapacity" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="EquipmentMaximumCapacity" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="InstallationDate" {...props} required/>
-    <FormSectionHeader title={Titles.sectionSeven}/>
-    <Field component={DropdownInput} name="GreaseInterceptorTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorManufacturer" maxlength={100} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorModelNo" maxlength={100} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorCapacity" maxlength={20} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorFlow" maxlength={50} {...props} />
+    <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
+    <Field component={TextInput} name="FirstName" maxlength={20} {...props} required/>
+    <Field component={TextInput} name="LastName" maxlength={20} {...props} required/>
+    <Field component={TextInput} name="Email" maxlength={20} {...props} required/>
+    <Field component={TextInput} name="ConfirmEmail" maxlength={20} {...props} required/>
+    <Field component={TextInput} name="Phone" maxlength={20} {...props} required/>
   </fieldset>)
 };
 
