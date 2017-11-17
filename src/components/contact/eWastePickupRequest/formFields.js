@@ -73,7 +73,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-		<Col xs={12}><DisplayFormikState {...props}/></Col>
+		
 	</fieldset>)
 };
 

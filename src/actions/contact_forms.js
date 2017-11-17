@@ -10,76 +10,43 @@ import {
 } from '../constants/ApiConstants';
 
 export function fetchFormObject(category) {
-
 	return function(dispatch) {
 		dispatch({type: types.FETCH_FORM_GET_COMPOST_REQUEST, payload: {},})
 		axios.get(FETCH_FORM_GET_COMPOST_REQUEST_URL).then((data) => {
-
 			dispatch({type: types.FETCH_FORM_GET_COMPOST_REQUEST, payload: data,})
 		}).catch(function(error) {
-			console.log('yesh');
-			console.log(JSON.stringify(error))
-			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
+		dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
 		});
 	}
 
 }
 
 export function PickupReqGetItemCategories() {
-
 	return function(dispatch) {
-
 		axios.get(FETCH_PICKUP_ITEM_CATEGORIES_URL).then((data) => {
 			dispatch({type: types.FETCH_PICKUP_ITEM_CATEGORIES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
 		});
 	}
-
 }
 
 export function PickupReqGetItemSubCategories(id) {
-
 	return function(dispatch) {
-
 		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
-			console.log('data', data);
 			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES, payload: data,})
 		}).catch(function(error) {
-			console.log('yesh');
-			console.log(JSON.stringify(error))
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
 		});
 	}
-
 }
 
 export function PickupReqGetItemSubCategoriesNew(id) {
-
 	return function(dispatch) {
-
 		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
-			console.log('data', data);
 			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES_NEW, payload: data,})
 		}).catch(function(error) {
-			console.log('yesh');
-			console.log(JSON.stringify(error))
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
 		});
 	}
 
@@ -88,45 +55,26 @@ export function PickupReqGetItemSubCategoriesNew(id) {
 export function postFormObject(formObject, Url) {
 	return function(dispatch) {
 		dispatch({type: types.POST_FORM_REQUEST, payload: {},})
-
 		axios.post(Url, formObject).then((data, headers) => {
-
 			dispatch({type: types.POST_FORM_REQUEST, payload: data,})
 		}).catch(function(error) {
-			console.log('yesh');
-			console.log(JSON.stringify(error))
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
 		});
 	}
 }
 
 export function fetchOrganicsForm(category) {
-
 	return function(dispatch) {
 		axios.get(FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL).then((data) => {
-
 			dispatch({type: types.FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST, payload: data,})
 		}).catch(function(error) {
-			console.log('Daniel');
-			console.log(JSON.stringify(error))
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-			if (error.response) {
-				console.log(error.response.data);
-				console.log(error.response.status);
-				console.log(error.response.headers);
-			}
 		});
 	}
 }
 
 export function postOrganicsForm(formObject) {
 	return function(dispatch) {
-
 		axios({
 			method: 'post',
 			url: POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL,
@@ -135,7 +83,6 @@ export function postOrganicsForm(formObject) {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			}
 		}).then((data) => {
-
 			dispatch({type: types.POST_FORM_COMMERCIAL_ORGANICS_REQUEST, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})

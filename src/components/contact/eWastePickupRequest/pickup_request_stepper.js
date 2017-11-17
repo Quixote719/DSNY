@@ -45,7 +45,7 @@ class RequestStepper extends Component {
   //   if (ItemCatg && ItemSubCatg) {
   //        _.map(ItemCatg, Item => {
   //       const subCatg = Item.hasSubCategory !== 0
-       
+
   //       if (subCatg) {
   //         if (Item.Category === "Televisions LCD") {
   //                _.map(ItemSubCatg, I => {
@@ -55,13 +55,13 @@ class RequestStepper extends Component {
   //             }
   //       }
   //   if (Item.Category === "Televisions CRT") {
-    
+
   //         _.map(ItemSubCatgNew, I => {
   //             I.CategoryId = Item.CategoryId
   //     });
   //        Item.hasSubCategory = ItemSubCatgNew
   //      }
-       
+
   //    });
   //    	this.props.onAppend('categories', ItemCatg);
   //   }
@@ -82,16 +82,14 @@ class RequestStepper extends Component {
 			return _.map(ItemCatg, Item => {
 				const subCatg = Item.hasSubCategory !== 0
 				if (subCatg) {
-					console.log('test', Item);
-					return (<div><FormStepper disabled={this.props.disabled} obj={Item} title={Item.Category} onIncDec={this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} onIncDec={this.updateState} subCat={Item.hasSubCategory}/></div>)
+					return (<div key={Item.Category}><FormStepper disabled={this.props.disabled} obj={Item} title={Item.Category} onIncDec={this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} onIncDec={this.updateState} subCat={Item.hasSubCategory}/></div>)
 				}
-
-				return (<div><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState} header={subCatg}/></div>);
+				return (<div key={Item.Category}><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState} header={subCatg}/></div>);
 			});
 		}
 
 	render() {
-    
+
     // const {ItemCatg, ItemSubCatg, ItemSubCatgNew} = this.props;
 
     //  //const ItemSubCatgNew = ItemSubCatg;
