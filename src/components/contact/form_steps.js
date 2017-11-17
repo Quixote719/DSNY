@@ -100,7 +100,7 @@ const Step2 = (props) => {
 
 
     
-    <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
+    {/* <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}
           render="explicit"
@@ -110,7 +110,7 @@ const Step2 = (props) => {
         />
      <Tooltip placement="bottom" id="recaptchaTooltip" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
 
-    </div>
+    </div> */}
     <Col xs={12}>
     <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
