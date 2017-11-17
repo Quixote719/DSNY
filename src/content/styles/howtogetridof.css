@@ -1,5 +1,5 @@
 .howToGetRidOfParent>.GBanner>div>.BreadcrumbHeaderTitleSection>.container{
-    padding-left: 0px;
+    /* padding-left: 0px; */
 }
 .react-autosuggest__suggestions-container {
     position: relative;
@@ -280,6 +280,9 @@ input::-ms-clear {
 }
   /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
+    .howToGetRidOfParent>.GBanner>div>.BreadcrumbHeaderTitleSection>.container{
+        padding-left: 0px;
+    }
     .collectionSearchAutoComplete{
         margin-top: 25px;
         width: 95%;
@@ -305,6 +308,9 @@ input::-ms-clear {
 }
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .howToGetRidOfParent>.GBanner>div>.BreadcrumbHeaderTitleSection>.container{
+        padding-left: 0px;
+    }
 .react-autosuggest__suggestions-container--open{
         margin-left: 14px;
         margin-right: 14px;
@@ -333,6 +339,9 @@ input::-ms-clear {
 }    
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .howToGetRidOfParent>.GBanner>div>.BreadcrumbHeaderTitleSection>.container{
+        padding-left: 0px;
+    }
     .react-autosuggest__suggestions-container--open{
         margin-left: 10px;
         margin-right: 10px;

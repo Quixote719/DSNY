@@ -12,7 +12,6 @@ import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
-import axios from 'axios';
 
 const formTitles = Titles;
 
@@ -51,7 +50,7 @@ class DisabilityServices extends Component {
     
         if(success !== undefined) {
           if(success != null) {
-            let message = 'Your response No. is: ' + success.SRNo;
+            let message = 'Success! Your response No. is: ' + success.SRNo;
             return(<ThankYou>{message}</ThankYou>);
           } else {
             return(<ThankYou>Please make sure your message is correct.</ThankYou>);

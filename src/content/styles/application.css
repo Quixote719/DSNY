@@ -146,7 +146,7 @@ html body {
 
 .container {
   max-width: 970px;
-  /*max-width: 940px;*/
+  /* max-width: 940px; */
 }
 
 a{
@@ -232,7 +232,7 @@ border-radius: 0;
 }
 
 .placesCollectionSchedule{
-    width: 700px;
+    width: 100%;
 }
 
 #form .subSectionButton{

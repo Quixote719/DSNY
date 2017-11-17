@@ -54,6 +54,9 @@ import DisabilityServices from './components/contact/disabilityServices';
 import LotCleaning from './components/contact/lotCleaning';
 import CollectionBinOnPublicProperty from './components/contact/collectionBinOnPublicProperty';
 import adoptABasketForm from './components/contact/adoptABasket'
+import StreetSidewalkObstruction from './components/contact/streetSidewalkObstruction';
+import WeedRemovalRequest from './components/contact/weedRemovalRequest';
+
 
 // import OrganicsForm from './components/contact/organicsIndex';
 
@@ -66,7 +69,7 @@ import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
-
+ 
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 
@@ -138,9 +141,11 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eventParticipationRequests"} component={eventParticipationRequestForm} />
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/mastercompostercourse/"} component={MasterComposerCertificateCourseForm} />
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/dead-animal-removal-request"} component={DeadAnimalRemovalRequest}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/street-sidewalk-obstruction"} component={StreetSidewalkObstruction}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/overflowing-litter-basket-service-request"} component={OverflowingLitterBasket}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/organics-bin-replacement-request"} component={OrganicsBinReplacement}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/disability-services"} component={DisabilityServices}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/weed-removal-request"} component={WeedRemovalRequest}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/lot-cleaning"} component={LotCleaning}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/collection-bin-on-public-property"} component={CollectionBinOnPublicProperty}/>
 

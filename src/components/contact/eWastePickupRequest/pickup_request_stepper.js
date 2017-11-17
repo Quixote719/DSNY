@@ -2,12 +2,12 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {Col} from 'react-bootstrap';
 import {connect} from "react-redux";
-import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject,} from "../../../actions/contact_forms";
+//import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,} from "../../../actions/contact_forms";
 import FormStepper from '../form_stepper'
 import SnStepper from './pickup_request_sub_stepper'
 
-let initialCall = false;
-let subList = false;
+//let initialCall = false;
+//ylet subList = false;
 class RequestStepper extends Component {
 
 
@@ -21,47 +21,51 @@ class RequestStepper extends Component {
 		}
 		this.renderCatg = this.renderCatg.bind(this);
 		this.updateState = this.updateState.bind(this);
-		this.updateValue = this.updateValue.bind(this);
+		//this.updateValue = this.updateValue.bind(this);
 	};
 
 	componentWillMount() {
-		this.props.PickupReqGetItemCategories();
-    this.props.PickupReqGetItemSubCategories(1);
+		// this.props.PickupReqGetItemCategories();
+    // this.props.PickupReqGetItemSubCategories(1);
+    // this.props.PickupReqGetItemSubCategoriesNew(17);
 	}
 
-	updateValue(ItemCatg) {
-    if (ItemCatg) {
-      	 _.map(ItemCatg, Item => {
-				const subCatg = Item.hasSubCategory !== 0
-				if (subCatg) {
-				this.props.PickupReqGetItemSubCategories(Item.CategoryId)
-				}
-			});
-    }
-	}
+	// updateValue(ItemCatg) {
+  //   if (ItemCatg) {
+  //     	 _.map(ItemCatg, Item => {
+	// 			const subCatg = Item.hasSubCategory !== 0
+	// 			if (subCatg) {
+	// 			this.props.PickupReqGetItemSubCategories(Item.CategoryId)
+	// 			}
+	// 		});
+  //   }
+	// }
 
-  updateSubCatg(ItemCatg,ItemSubCatg){
-    if (ItemCatg && ItemSubCatg) {
-         _.map(ItemCatg, Item => {
-        const subCatg = Item.hasSubCategory !== 0
-        if (subCatg) {
-if (Item.Category === "Televisions CRT") {
-          _.map(ItemSubCatg, I => {
-              I.CategoryId = Item.CategoryId
-      });
-         Item.hasSubCategory = ItemSubCatg
-       }
-       if (Item.Category === "Televisions LCD") {
-                 _.map(ItemSubCatg, I => {
-                     I.CategoryId = Item.CategoryId
-             });
-                Item.hasSubCategory = ItemSubCatg
-              }
-        }
-     });
-     	this.props.onAppend('categories', ItemCatg);
-    }
-  }
+  // updateSubCatg(ItemCatg,ItemSubCatg, ItemSubCatgNew){
+  //   if (ItemCatg && ItemSubCatg) {
+  //        _.map(ItemCatg, Item => {
+  //       const subCatg = Item.hasSubCategory !== 0
+       
+  //       if (subCatg) {
+  //         if (Item.Category === "Televisions LCD") {
+  //                _.map(ItemSubCatg, I => {
+  //                    I.CategoryId = Item.CategoryId
+  //            });
+  //               Item.hasSubCategory = ItemSubCatg
+  //             }
+  //       }
+  //   if (Item.Category === "Televisions CRT") {
+    
+  //         _.map(ItemSubCatgNew, I => {
+  //             I.CategoryId = Item.CategoryId
+  //     });
+  //        Item.hasSubCategory = ItemSubCatgNew
+  //      }
+       
+  //    });
+  //    	this.props.onAppend('categories', ItemCatg);
+  //   }
+  // }
 
 	updateState(obj) {
 		var p = this.state.PickupRequestItems
@@ -87,14 +91,15 @@ if (Item.Category === "Televisions CRT") {
 		}
 
 	render() {
-    const {ItemCatg, ItemSubCatg} = this.props;
+    
+    // const {ItemCatg, ItemSubCatg, ItemSubCatgNew} = this.props;
 
+    //  //const ItemSubCatgNew = ItemSubCatg;
+    //  if (ItemCatg && ItemSubCatg && ItemSubCatgNew && !subList){
 
-     if (ItemCatg && ItemSubCatg && !subList){
-
-      this.updateSubCatg(ItemCatg, ItemSubCatg);
-      subList = true;
-     }
+    //   this.updateSubCatg(ItemCatg, ItemSubCatg, ItemSubCatgNew);
+    //   subList = true;
+    //  }
 
       return (<div>
         <Col className='headerStepper' xs={12}>{this.props.header}</Col>
@@ -102,24 +107,23 @@ if (Item.Category === "Televisions CRT") {
         <Col className='tableHeaderStepper' xs={2} sm={2} md={2}>
           {`Quantity`}</Col>
         <Col className='hairline' xs={12}></Col>
-        {this.renderCatg(this.props.values.categories)}
+        {this.renderCatg(this.props.categories)}
       </div>);
     }
 
 }
 
-function mapStateToProps(state) {
+// function mapStateToProps(state) {
 
-	return {
-		ItemCatg: state.forms.eWastePickupreqCatgItems,
-		ItemSubCatg: state.forms.eWastePickupreqSubCatgItems
-			? state.forms.eWastePickupreqSubCatgItems
-			: undefined,
-		error: state.error.type,
-	};
-}
+// 	return {
+// 		ItemCatg: state.forms.eWastePickupreqCatgItems,
+// 		ItemSubCatg: state.forms.eWastePickupreqSubCatgItems,
+//     ItemSubCatgNew: state.forms.eWastePickupreqSubCatgItemsNew,
+// 		error: state.error.type,
+// 	};
+// }
 
-//default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject,})(RequestStepper);
+//}
 
 const StepperInput = ({
   field: { name, ...field }, // { name, value, onChange, onBlur }
@@ -139,4 +143,5 @@ const StepperInput = ({
 }
 
 
-export default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject,})(StepperInput);
+//export default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,})(StepperInput);
+export default StepperInput;

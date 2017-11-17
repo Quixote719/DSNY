@@ -64,6 +64,27 @@ export function PickupReqGetItemSubCategories(id) {
 
 }
 
+export function PickupReqGetItemSubCategoriesNew(id) {
+
+	return function(dispatch) {
+
+		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
+			console.log('data', data);
+			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES_NEW, payload: data,})
+		}).catch(function(error) {
+			console.log('yesh');
+			console.log(JSON.stringify(error))
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+			if (error.response) {
+				console.log(error.response.data);
+				console.log(error.response.status);
+				console.log(error.response.headers);
+			}
+		});
+	}
+
+}
+
 export function postFormObject(formObject, Url) {
 	return function(dispatch) {
 		dispatch({type: types.POST_FORM_REQUEST, payload: {},})

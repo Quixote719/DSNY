@@ -1,5 +1,5 @@
 import React from "react";
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col, Tooltip} from 'react-bootstrap';
 import {withFormik, Formik, Field, Form} from 'formik'
 import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
@@ -29,6 +29,8 @@ import FormButton from './form_button';
 let firsterror = true;
 let initialPageLoad = true;
 let nextbuttonClicked = false;
+let captchaVerified = false;
+let captchaMessage;
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -39,7 +41,10 @@ const callback = () => {
 };
 
 const verifyCallback = (response) => {
-  console.log(response);
+  console.log("Captcha Verified");
+  captchaVerified = true;
+  captchaMessage = null;
+  document.getElementById(`recaptchaTooltip`).classList.remove('in');
 };
 
 const expiredCallback = () => {
@@ -94,7 +99,7 @@ const Step2 = (props) => {
     <props.formFields {...props} />
 
 
-    <div className="FormField col-md-12 col-sm-12 col-xs-12">
+    <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}
           render="explicit"
@@ -102,10 +107,11 @@ const Step2 = (props) => {
           onloadCallback={callback}
           expiredCallback={expiredCallback}
         />
+     <Tooltip placement="bottom" id="recaptchaTooltip" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
 
     </div>
     <Col xs={12}>
-    <button className="formSubmitBtn" type="submit">SUBMIT</button>
+    <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
     </Col>
   </span>)
@@ -213,16 +219,25 @@ const FormSteps = compose(
   },
   handleSubmit: (values, {props,setSubmitting}) => {
     if(props.step > 1){
-      setTimeout(() => {
-        console.log(this.props);
-        alert(JSON.stringify(values, null, 2));
-        props.onSubmit(values);
-        setSubmitting(false);
-        console.log(values);
+        if(captchaVerified)
+        {
+          //setTimeout(() => {
+          //console.log(this.props);
+          alert(JSON.stringify(values, null, 2));
+          props.onSubmit(values);
+          setSubmitting(false);
+          //console.log(values);
 
-      }, 1000);
+        //}, 1000);
+        }
+      else
+      {
+        captchaMessage = "Please select the Recaptcha";
+        document.getElementById(`recpatcha`).focus();
+        //alert("Please validate captcha");
+      }
     }
-    else{
+    else if(nextbuttonClicked){
       props.nextStep();
     }
   },
