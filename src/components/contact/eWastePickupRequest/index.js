@@ -28,6 +28,8 @@ class EwasteRequestForm extends Component {
     this.props.fetchFormObject();
   }
 
+  
+
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
@@ -45,10 +47,11 @@ class EwasteRequestForm extends Component {
   }
 
   render() {
-      const { error, success} = this.props;
+      const { error, success, address} = this.props;
+      console.log('address',address);
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} address={address} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -60,7 +63,7 @@ class EwasteRequestForm extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, address:state.carouselDataReducer.DSNYGeoCoder,error:state.error.type};
 }
 
 
