@@ -42,8 +42,9 @@ const callback = () => {
 
 const verifyCallback = (response) => {
   console.log("Captcha Verified");
-  document.getElementById(`tooltip-bottom`).hide();
   captchaVerified = true;
+  captchaMessage = null;
+  document.getElementById(`recaptchaTooltip`).classList.remove('in');
 };
 
 const expiredCallback = () => {
@@ -106,7 +107,7 @@ const Step2 = (props) => {
           onloadCallback={callback}
           expiredCallback={expiredCallback}
         />
-     <Tooltip placement="bottom" id="tooltip-bottom" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
+     <Tooltip placement="bottom" id="recaptchaTooltip" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
 
     </div>
     <Col xs={12}>
