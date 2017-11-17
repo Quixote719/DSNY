@@ -62,6 +62,7 @@ import WeedRemovalRequest from './components/contact/weedRemovalRequest';
 
 import OrganicsForm from './components/contact/commercialOrganics';
 import RecyclableMaterialTheft from './components/contact/recyclableMaterialTheft';
+import FailureStoreReceptacles from './components/contact/failureStoreReceptacles';
 import CollectionBinReport from './components/contact/collectionBinReport';
 import eeoComplaintForm from './components/contact/employmentOpportunityComplaint';
 import CollectionBinRegistration from './components/contact/collectionBinRegistrationIndex';
@@ -69,7 +70,7 @@ import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
- 
+
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 
@@ -152,6 +153,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/recyclableMaterialTheft"} component={RecyclableMaterialTheft}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/failureStoreReceptacles"} component={FailureStoreReceptacles}/>
 
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
