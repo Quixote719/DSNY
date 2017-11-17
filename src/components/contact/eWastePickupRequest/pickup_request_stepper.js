@@ -2,12 +2,12 @@ import _ from "lodash";
 import React, {Component} from "react";
 import {Col} from 'react-bootstrap';
 import {connect} from "react-redux";
-import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,} from "../../../actions/contact_forms";
+//import {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,} from "../../../actions/contact_forms";
 import FormStepper from '../form_stepper'
 import SnStepper from './pickup_request_sub_stepper'
 
-let initialCall = false;
-let subList = false;
+//let initialCall = false;
+//ylet subList = false;
 class RequestStepper extends Component {
 
 
@@ -25,9 +25,9 @@ class RequestStepper extends Component {
 	};
 
 	componentWillMount() {
-		this.props.PickupReqGetItemCategories();
-    this.props.PickupReqGetItemSubCategories(1);
-    this.props.PickupReqGetItemSubCategoriesNew(17);
+		// this.props.PickupReqGetItemCategories();
+    // this.props.PickupReqGetItemSubCategories(1);
+    // this.props.PickupReqGetItemSubCategoriesNew(17);
 	}
 
 	// updateValue(ItemCatg) {
@@ -41,31 +41,31 @@ class RequestStepper extends Component {
   //   }
 	// }
 
-  updateSubCatg(ItemCatg,ItemSubCatg, ItemSubCatgNew){
-    if (ItemCatg && ItemSubCatg) {
-         _.map(ItemCatg, Item => {
-        const subCatg = Item.hasSubCategory !== 0
+  // updateSubCatg(ItemCatg,ItemSubCatg, ItemSubCatgNew){
+  //   if (ItemCatg && ItemSubCatg) {
+  //        _.map(ItemCatg, Item => {
+  //       const subCatg = Item.hasSubCategory !== 0
        
-        if (subCatg) {
-          if (Item.Category === "Televisions LCD") {
-                 _.map(ItemSubCatg, I => {
-                     I.CategoryId = Item.CategoryId
-             });
-                Item.hasSubCategory = ItemSubCatg
-              }
-        }
-    if (Item.Category === "Televisions CRT") {
+  //       if (subCatg) {
+  //         if (Item.Category === "Televisions LCD") {
+  //                _.map(ItemSubCatg, I => {
+  //                    I.CategoryId = Item.CategoryId
+  //            });
+  //               Item.hasSubCategory = ItemSubCatg
+  //             }
+  //       }
+  //   if (Item.Category === "Televisions CRT") {
     
-          _.map(ItemSubCatgNew, I => {
-              I.CategoryId = Item.CategoryId
-      });
-         Item.hasSubCategory = ItemSubCatgNew
-       }
+  //         _.map(ItemSubCatgNew, I => {
+  //             I.CategoryId = Item.CategoryId
+  //     });
+  //        Item.hasSubCategory = ItemSubCatgNew
+  //      }
        
-     });
-     	this.props.onAppend('categories', ItemCatg);
-    }
-  }
+  //    });
+  //    	this.props.onAppend('categories', ItemCatg);
+  //   }
+  // }
 
 	updateState(obj) {
 		var p = this.state.PickupRequestItems
@@ -92,14 +92,14 @@ class RequestStepper extends Component {
 
 	render() {
     
-    const {ItemCatg, ItemSubCatg, ItemSubCatgNew} = this.props;
+    // const {ItemCatg, ItemSubCatg, ItemSubCatgNew} = this.props;
 
-     //const ItemSubCatgNew = ItemSubCatg;
-     if (ItemCatg && ItemSubCatg && ItemSubCatgNew && !subList){
+    //  //const ItemSubCatgNew = ItemSubCatg;
+    //  if (ItemCatg && ItemSubCatg && ItemSubCatgNew && !subList){
 
-      this.updateSubCatg(ItemCatg, ItemSubCatg, ItemSubCatgNew);
-      subList = true;
-     }
+    //   this.updateSubCatg(ItemCatg, ItemSubCatg, ItemSubCatgNew);
+    //   subList = true;
+    //  }
 
       return (<div>
         <Col className='headerStepper' xs={12}>{this.props.header}</Col>
@@ -107,23 +107,23 @@ class RequestStepper extends Component {
         <Col className='tableHeaderStepper' xs={2} sm={2} md={2}>
           {`Quantity`}</Col>
         <Col className='hairline' xs={12}></Col>
-        {this.renderCatg(this.props.values.categories)}
+        {this.renderCatg(this.props.categories)}
       </div>);
     }
 
 }
 
-function mapStateToProps(state) {
+// function mapStateToProps(state) {
 
-	return {
-		ItemCatg: state.forms.eWastePickupreqCatgItems,
-		ItemSubCatg: state.forms.eWastePickupreqSubCatgItems,
-    ItemSubCatgNew: state.forms.eWastePickupreqSubCatgItemsNew,
-		error: state.error.type,
-	};
-}
+// 	return {
+// 		ItemCatg: state.forms.eWastePickupreqCatgItems,
+// 		ItemSubCatg: state.forms.eWastePickupreqSubCatgItems,
+//     ItemSubCatgNew: state.forms.eWastePickupreqSubCatgItemsNew,
+// 		error: state.error.type,
+// 	};
+// }
 
-//default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, fetchFormObject,})(RequestStepper);
+//}
 
 const StepperInput = ({
   field: { name, ...field }, // { name, value, onChange, onBlur }
@@ -143,4 +143,5 @@ const StepperInput = ({
 }
 
 
-export default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,})(StepperInput);
+//export default connect(mapStateToProps, {PickupReqGetItemCategories, PickupReqGetItemSubCategories, PickupReqGetItemSubCategoriesNew, fetchFormObject,})(StepperInput);
+export default StepperInput;

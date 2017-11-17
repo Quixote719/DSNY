@@ -56,6 +56,10 @@ import CollectionBinOnPublicProperty from './components/contact/collectionBinOnP
 import StreetSidewalkObstruction from './components/contact/streetSidewalkObstruction';
 import WeedRemovalRequest from './components/contact/weedRemovalRequest';
 import adoptABasketForm from './components/contact/adoptABasket'
+import adoptABasketForm from './components/contact/adoptABasket'
+import StreetSidewalkObstruction from './components/contact/streetSidewalkObstruction';
+import WeedRemovalRequest from './components/contact/weedRemovalRequest';
+
 
 // import OrganicsForm from './components/contact/organicsIndex';
 
@@ -68,7 +72,7 @@ import EwasteRequestForm from './components/contact/eWastePickupRequest'
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
-
+ 
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 

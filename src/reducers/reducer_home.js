@@ -30,6 +30,10 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
     return { ...state, activeNavTab: action.payload };    
       case 'SET_RID_OFF_ITEM_DETAILS':
       return { ...state, getRidOfItemDetailsData: action.payload};
+      
+      case 'SET_ADDRESS_VALIDATOR_FLAG':
+      return { ...state, addressValidator: action.payload};
+
     case 'SET_NEWS_PAGE':
     return {
       ...state,
