@@ -34,31 +34,18 @@ const DisplayFormikState = props => <div style={{
 //  <Nstepper disabled={values.editMode} header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' onChange={setFieldValue} required/>
 // Our inner form component which receives our form's state and updater methods as props
 //   <Col xs={12}><DisplayFormikState {...props} /></Col>
-const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue,} = props;
+//
 
-	function isCyclic(obj) {
-		var seenObjects = [];
-
-		function detect(obj) {
-			if (obj && typeof obj === 'object') {
-				if (seenObjects.indexOf(obj) !== -1) {
-					return true;
-				}
-				seenObjects.push(obj);
-				for (var key in obj) {
-					if (obj.hasOwnProperty(key) && detect(obj[key])) {
-						console.log(obj, 'cycle at ' + key);
-						return true;
-					}
-				}
-			}
-			return false;
-		}
-
-		return detect(obj);
+function assignAddress(values, address){
+	if (values && address){
+		values.Borough = address.borough
+		values.BuildingNumber = address.houseNumber
+		values.Street = address.street
 	}
-
+}
+const EwastePickUpRequestFormElements = (props) => {
+	const {values, setFieldValue} = props;
+   assignAddress(values, props.address)
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
@@ -73,7 +60,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-		
+<Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 
