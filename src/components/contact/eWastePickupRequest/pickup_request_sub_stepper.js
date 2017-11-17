@@ -32,7 +32,6 @@ class RequestSubStepper extends Component {
 }
 
 function mapStateToProps(state) {
-	console.log('yesh', state);
 	return {ItemSubCatg: state.forms.eWastePickupreqSubCatgItems, error: state.error.type,};
 }
 
