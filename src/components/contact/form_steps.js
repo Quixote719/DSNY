@@ -239,6 +239,7 @@ const FormSteps = compose(
       }
     }
     else if(nextbuttonClicked){
+      captchaVerified = false;
       props.nextStep();
     }
   },
