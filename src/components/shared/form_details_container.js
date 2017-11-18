@@ -8,12 +8,18 @@ import ImageSection from './ImageSection'
 
 //Sub Components
 import Header from './Breadcrumb/breadcrumb_container'
-import CardSec from './CardDetails/card_sec'
+import CardSec from './form_sec'
 
 // Form Components
 import DisabilityServices from '../contact/disabilityServices'
 import OrganicsBinReplacement from '../contact/organicsBinReplacement'
 import EwasteRequestForm from '../contact/eWastePickupRequest'
+import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
+import LotCleaning from '../contact/lotCleaning'
+import WeedRemovalRequest from '../contact/weedRemovalRequest'
+import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
+import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
+import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 
 class FormDetail extends Component {
 
@@ -59,8 +65,20 @@ class FormDetail extends Component {
               return <DisabilityServices />;
               case 'organics-bin-replacement-request':
               return <OrganicsBinReplacement />;
+              case 'streetsidewalk-obstruction-complaint':
+              return <StreetSidewalkObstruction />;
+              case 'lot-cleaning-request':
+              return <LotCleaning />;
+              case 'weed-removal-request':
+              return <WeedRemovalRequest />;
+              case 'litter-basket-request':
+              return <OverflowingLitterBasket />;
+              case 'dead-animal-removal-request':
+              return <DeadAnimalRemovalRequest />;
+              case 'collection-bin-on-public-property-removal-request':
+              return <CollectionBinOnPublicProperty />;
               case 'e-waste-pickup-request':
-              return <EwasteRequestForm />
+              return <EwasteRequestForm />;
               break;
               default:
               break;
@@ -117,7 +135,7 @@ class FormDetail extends Component {
               return (
                 <div key={sec.id}>
                   <div>
-                    <CardSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
+                    <CardSec dataObject={sec}/>
                   </div>
                 </div>
               );
@@ -126,7 +144,7 @@ class FormDetail extends Component {
 
           return (<div key={cItems.id}>
             <div>{banner}</div>
-            <div >{sections}</div>
+            <div>{sections}</div>
           </div>)
         }
       });
