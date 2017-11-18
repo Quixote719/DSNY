@@ -8,38 +8,23 @@ import '../../content/styles/subSectionHeader.css';
 import '../../content/styles/react-datetime.css';
 
 class FormTimePicker extends Component {
+    constructor() {
+      super();
 
+      this.handleTimeChange = this.handleTimeChange.bind(this);
 
-  constructor(props){
-    super(props);
-    this.onInputChange = this.onInputChange.bind(this);
+      this.state = { time: 0 };
+    }
+
+    handleTimeChange(time) {
+      console.log(time);     // <- prints "3600" if "01:00" is picked
+      this.setState({ time });
+    }
+
+    render() {
+      return <TimePicker onChange={this.handleTimeChange} value={this.state.time}/>;
+    }
   }
-
-  onInputChange(item) {
-    console.log('!')
-    console.log(item);
-    // this.props.onChange(this.props.name, item._d)
-  }
-
-  render() {
-    // console.log(this.props.disabled);
-    return (
-      <div>
-        <Col xs={12} sm={6} md={6}>
-          <fieldset>
-            <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
-            <div className="form-group has-feedback">
-
-            <TimePicker inputProps={{disabled: this.props.disabled }} defaultValue={this.props.defaultValue} value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} start="9:00" end="21:00" step={30} onChange={event => this.onInputChange(event)}/>
-            <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
-            </div>
-          </fieldset>
-
-        </Col>
-      </div>
-    );
-  };
-};
 
 FormTimePicker.propTypes = {
   title: PropTypes.string,
