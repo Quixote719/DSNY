@@ -18,6 +18,10 @@ import $ from 'jquery';
 
 class CardSec extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   CardType(cardType, Item, style) {
 
     let url;
@@ -120,16 +124,13 @@ class CardSec extends Component {
       return `${basepath}${filename}`;
   }
 
-
-
-
   /*The Header is made green to be displayed as title */
   getGreenHeader(dataObject,headerContent){
-        return(
-               <div key={dataObject.id}>
-                  <SubSectionHeaderGreen title={headerContent}/>
-                </div>
-              );
+      return(
+              <div key={dataObject.id}>
+                <SubSectionHeaderGreen title={headerContent}/>
+              </div>
+            );
     }
 
   /* Normal Black Header is returned, provided there are no tags in the dataObject header */
@@ -146,26 +147,16 @@ class CardSec extends Component {
     return /<[a-z][\s\S]*>/i.test(dataObject.header);
   }
 
-
-  viewAll(maxCards,cardCount,child_url){
-
-    /* If max cards are zero, then the page can have any number of cards */
-    if(maxCards == 0){
-      return false;
-    }
-
-    /* Logic to return view All Button */
-    if (maxCards < cardCount) {
-      return (
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+ child_url}><SubSectionButton title='VIEW ALL'/></Link>
-      );
-    }
-
-    return false;
-  }
-
   render() {
     const {dataObject} = this.props;
+    const {success} = this.props;
+
+    if(success !== undefined) {
+      if(success != null) {
+        console.log(success.SRNo);
+      }          
+    }
+
 
     let l = (dataObject.cards.length);
 
@@ -185,8 +176,7 @@ class CardSec extends Component {
     let headerContent;
     
     if (dataObject.header !== '') {
-          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
-         if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
+         if(dataObject.header_text_color == 'green' || dataObject.header_text_color == 'rgb(0, 128, 0)'){
             headerContent = dataObject.header.replace(/<[^>]+>/g, '');
             header = this.getGreenHeader(dataObject,headerContent);
          }else{
@@ -195,6 +185,7 @@ class CardSec extends Component {
     }
 
     let body;
+    
 
     if (dataObject.content !== '') {
 
@@ -260,20 +251,11 @@ class CardSec extends Component {
       )
     }
 
-
-    let bg = dataObject.background_color === 'gray'
-      ? 'greyBcg'
-      : ''
-    let maxCards = dataObject.card_data.max_cards;
-    let cardCount = dataObject.card_data.card_count;
-
     return (
-      <div className={bg}>
         <div className='SContainer'>
           <div>{header}</div>
           <div>{body}</div>
         </div>
-      </div>
     );
   };
 };
@@ -281,5 +263,9 @@ CardSec.propTypes = {
   dataObject: PropTypes.object,
   className: PropTypes.string
 };
+
+function mapStateToProps(state) {
+  return {success:state.forms.success, error:state.error.type};
+}
 
 export default CardSec;
