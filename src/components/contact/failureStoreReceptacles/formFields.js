@@ -6,7 +6,6 @@ import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
-import TimePickerInput from '../time_picker'
 import TextAreaInput from '../textarea_field';
 import {Field} from 'formik'
 import {Titles} from './constants'
