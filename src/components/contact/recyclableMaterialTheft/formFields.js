@@ -33,7 +33,7 @@ const formFields = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextAreaInput} name="RemovedMaterialsDescription" {...props} maxlength={5000} />
     <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={values.IncidentDate} />
-    <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} />
+    <Field component={DropdownInput} name="FromHourOfDayId" {...props} timeField={true} onChange={setFieldValue} options={values.FromHoursOfDay} disabled={values.editMode}/>
     <Field component={TextInput} name="VehicleLicensePlateNumber" maxlength={20} {...props} />
     <Field component={TextInput} name="VehicleState" maxlength={20} {...props} />
     <Field component={CheckBoxInput} name="IsVehicleCommercial" {...props}/>

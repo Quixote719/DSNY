@@ -34,6 +34,8 @@ const formFields = (props) => {
     <Field component={TextInput} name="ViolatorName" fullRow={true} maxlength={20} {...props} />
     <Field component={TextInput} name="ViolatorAddressAsEntered" fullRow={true} maxlength={20} {...props} />
     <Field component={TextInput} name="ViolatorApartment" maxlength={20} {...props} />
+    <Field component={DropdownInput} name="FromHourOfDayId" {...props} timeField={true} onChange={setFieldValue} options={values.FromHoursOfDay} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PlaceTime" {...props}  onChange={setFieldValue} options={values.ToHoursOfDay} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
     <Field component={TextInput} name="FirstName" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>
