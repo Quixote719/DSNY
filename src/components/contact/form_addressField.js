@@ -7,11 +7,13 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 import isEmpty from 'lodash/isEmpty'
+import FormAddressAutocompleteNoValidation from '../../components/contact/formAdressAutoCmpleteNoValidation';
 
 class FormField extends Component {
 
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       input: '',
       hideToolTip: true
@@ -38,13 +40,12 @@ class FormField extends Component {
 
   renderField() {          
            return (<div>
-            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
-                ? this.props.value
-                : ''} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
+            <FormAddressAutocompleteNoValidation ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} 
+               disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
-          </div>)
+                  </div>)
       }
   
   render() {
@@ -67,8 +68,8 @@ class FormField extends Component {
 };
 
 
-const TextInput = ({
-  field: { name, ...field }, // { name, value, onChange, onBlur }
+const AdressInput = ({
+  field: { name,value,...field }, // { name, value, onChange, onBlur }
   form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
   className,
   label,
@@ -78,11 +79,11 @@ const TextInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField disabled={props.editMode} title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField disabled={props.editMode} title={props.formTitles[name]} value={props.value} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
 }
 
 
-export default TextInput;
+export default AdressInput;

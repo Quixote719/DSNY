@@ -75,7 +75,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 
 function handleNextClick(errors, dirty, isSubmitting, nextStep)
 {
-  debugger;
+  //debugger;
   //  console.log("IsSubmitting" + isSubmitting);
   //  console.log("!isEmpty(errors)" + !isEmpty(errors));
   //  console.log("!dirty" + !dirty);
@@ -93,6 +93,7 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
 }
 
 const Step1 = (props) => {
+  console.log(props);
   const {
     errors,
     dirty,
@@ -180,12 +181,6 @@ const FormSteps = compose(
     if(!initialPageLoad)
     {
         inputs.forEach(input => {
-          //input.classList.add('active');
-
-          console.log(input.name);
-          console.log(input.type);
-          console.log(input.hasAttribute("required"));
-          console.log(values[input.name]);
 
           //Text, Checkbox Input Validation
           if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
