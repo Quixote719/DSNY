@@ -51,6 +51,8 @@ export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}col
 export const PSOT_FORM_EEO_COMPLAINTS_URL = `${REST_WEBAPI_URL}eeocomplaints`;
 export const PSOT_FORM_WEED_REMOVAL_PROPERTY_URL = `${REST_WEBAPI_URL}weedremoval`;
 
+export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
+export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failuretostorereceptaclecomplaints`;
 
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;

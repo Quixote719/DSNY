@@ -3,16 +3,18 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
 //Actions
-import {fetchOrganicsForm, postOrganicsForm} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
+import { POST_FORM_RECYCLABLE_MATERIAL_URL } from '../../../constants/ApiConstants';
 import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class CommercialOrganicsForm extends Component {
+class RecyclableMaterialTheft extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -23,12 +25,13 @@ class CommercialOrganicsForm extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.fetchOrganicsForm();
-  }
+  // componentDidMount() {
+  //   this.props.fetchFormObject();
+  // }
+
 
   postForm(formObject){
-      this.props.postOrganicsForm(formObject);
+      this.props.postFormObject(formObject, POST_FORM_RECYCLABLE_MATERIAL_URL);
   }
 
    validateForm(formObject, errors){
@@ -45,16 +48,22 @@ class CommercialOrganicsForm extends Component {
 
   render() {
 
-     // const {FormObject, error} = this.props;
+    //const {FormObject, error, success} = this.props;
+    const {success,error} = this.props;
+
+    if(success !== undefined)
+    {
+      return(<ThankYou>Your request has been successfully created</ThankYou>);
+    }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    // }
+    if (error){
+        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+    }
     return(<div className='loader container'></div>)
  };
 };
@@ -65,4 +74,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(CommercialOrganicsForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(RecyclableMaterialTheft);

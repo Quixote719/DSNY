@@ -51,6 +51,26 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
+
+function assignGeoCoderAddressValues(values, geoCoderAddressResult){
+	if (values && geoCoderAddressResult){
+    values.latitude = geoCoderAddressResult.latitude
+		values.longitude = geoCoderAddressResult.longitude
+    values.address = geoCoderAddressResult.address
+		values.houseNumber = geoCoderAddressResult.houseNumber
+    values.street = geoCoderAddressResult.street
+    values.borough = geoCoderAddressResult.borough
+    values.city = geoCoderAddressResult.city
+    values.zipCode = geoCoderAddressResult.zipCode
+    values.sanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.bbl = geoCoderAddressResult.bbl
+    values.sanitationDistrict = geoCoderAddressResult.sanitationDistrict
+
+		values.Borough = geoCoderAddressResult.borough
+		values.BuildingNumber = geoCoderAddressResult.houseNumber
+		values.Street = geoCoderAddressResult.street
+	}
+}
  
 
 function handleNextClick(errors, dirty, isSubmitting, nextStep)
@@ -82,6 +102,7 @@ const Step1 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = false}
+    {assignGeoCoderAddressValues(props.values, props.address)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -97,6 +118,7 @@ const Step2 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = true}
+    {assignGeoCoderAddressValues(props.values, props.address)}
     <props.formFields {...props} />
 
 
@@ -148,7 +170,7 @@ const FormSteps = compose(
   }),
   withFormik({
   // Transform outer props into form values
-  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles}),
+  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
 
@@ -234,6 +256,7 @@ const FormSteps = compose(
       }
     }
     else if(nextbuttonClicked){
+      captchaVerified = false;
       props.nextStep();
     }
   },

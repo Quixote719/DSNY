@@ -52,33 +52,34 @@ export function getCollectionSchedule(address, callback=null) {
                             DSNYGeoCoder['street'] = data.data.Goat.firstStreetNameNormalized;
                             DSNYGeoCoder['borough'] = data.data.Goat.firstBoroughName;
                             DSNYGeoCoder['city'] = data.data.Goat.uspsPreferredCityName;
-                            DSNYGeoCoder['zipCode'] = data.data.Goat.zipCode;                        
+                            DSNYGeoCoder['zipCode'] = data.data.Goat.zipCode;
                             DSNYGeoCoder['sanitationCollectionSchedulingSectionAndSubsection'] = data.data.Goat.sanitationCollectionSchedulingSectionAndSubsection;
                             DSNYGeoCoder['bbl'] = data.data.Goat.bbl;
+                            DSNYGeoCoder['sanitationDistrict'] = data.data.Goat.sanitationDistrict;
                             if (data.data.Goat.houseNumber) {
                                 // Address
-                                DSNYGeoCoder['houseNumber'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                                DSNYGeoCoder['address'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             } else {
                                 // Place name
-                                DSNYGeoCoder['houseNumber'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                                DSNYGeoCoder['address'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             }
                             console.log(DSNYGeoCoder);
                         }
                     }
                     if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
-                        var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;                    
+                        var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;
                     }
                     else{
                         var sanitationRegularCollectionSchedule =""
                     }
                     if(data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null){
-                        var sanitationRecyclingCollectionSchedule = data.data.RecyclingCollectionSchedule;                    
+                        var sanitationRecyclingCollectionSchedule = data.data.RecyclingCollectionSchedule;
                     }
                     else{
                         var sanitationRecyclingCollectionSchedule =""
                     }
                     if(data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null){
-                        var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;                    
+                        var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;
                     }
                     else{
                         var sanitationOrganicsCollectionSchedule =""
@@ -88,9 +89,10 @@ export function getCollectionSchedule(address, callback=null) {
                         var collectionScheduleLength = 0;
                     }
                     else{
-                        var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]                    
+                        var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]
                         var arrayLength = collectionScheduleData.filter(Boolean).length
                     }
+                    
                     dispatch({
                         type: 'SET_COLLECTION_SCHEDULE_DATA',
                         DSNYGeoCoder: DSNYGeoCoder,

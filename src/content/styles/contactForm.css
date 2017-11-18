@@ -25,7 +25,10 @@
   margin: 40px 0px 70px 0px;
   background: url('../images/Lightgreen.png');
 }
-
+.FormStepperNoEdit{
+    padding-top: 10px;
+  text-align: center;
+}
 .thankyoulable{
   color: #00764E;
   font-size: 64px;
