@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_FORM_SITE_VISIT_REQUEST
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -31,7 +31,8 @@ class SiteVisitRequestForm extends Component {
   // }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      let modifyFormObject = this.modifyFormObject(formObject);
+      this.props.postFormObject(formObject, PSOT_FORM_SITE_VISIT_REQUEST);
   }
 
    validateForm(formObject, errors){
@@ -46,15 +47,52 @@ class SiteVisitRequestForm extends Component {
     return errors;
   }
 
+   /* A method that moifies formObject to make it proper for Submission */
+  modifyFormObject(formObject){
+    
+    formObject.PrimaryContact  = {
+      'FirstName':formObject.PfirstName,
+      'LastName':formObject.PLastName,
+      'Phone':formObject.PPhone,
+      'Title':formObject.PTitle,
+      'SelectedPhoneType':formObject.PrimarySelectedPhoneType,
+      'Email':formObject.PEmailConfirm,
+    }
+
+
+    formObject.SecondaryContact = {
+      'FirstName':formObject.SFirstName,
+      'LastName':formObject.SLastName,
+      'Phone':formObject.SPhone,
+      'Title':formObject.STitle,
+      'SelectedPhoneType':formObject.SecondarySelectedPhoneTypes,
+      'Email':formObject.SEmailConfirm,
+    }
+
+   
+
+    
+  }
+
+
+
+
+
   render() {
 
     //const {FormObject, error, success} = this.props;
     const {success} = this.props;
     
-    if(success !== undefined)
-    {
-      return(<ThankYou>Your request has been successfully created</ThankYou>);
-    }
+     if(success !== undefined) {
+          if(success != null) {
+            let message= 'Your Site Visit Request form has been submitted succesfully.Your response No. is: ' + success.SRNo;
+            return(<ThankYou>
+                      {message}
+                  </ThankYou>);
+          } else {
+            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+          }          
+        }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>

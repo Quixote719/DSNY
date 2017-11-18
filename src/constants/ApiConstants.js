@@ -50,7 +50,9 @@ export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;
 export const PSOT_FORM_EEO_COMPLAINTS_URL = `${REST_WEBAPI_URL}eeocomplaints`;
 export const PSOT_FORM_WEED_REMOVAL_PROPERTY_URL = `${REST_WEBAPI_URL}weedremoval`;
-
+export const PSOT_FORM_SITE_VISIT_REQUEST  = `${REST_WEBAPI_URL}sitevisitrequest`;
+export const PSOT_FORM_MASTER_COMPOST_REQST = `${REST_WEBAPI_URL}mastercompostercourse`;
+export const POST_FORM_ADOPT_BASKET_URL = `${REST_WEBAPI_URL}adoptedbaskets`
 export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
 export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failuretostorereceptaclecomplaints`;
 
