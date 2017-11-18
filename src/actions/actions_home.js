@@ -55,12 +55,13 @@ export function getCollectionSchedule(address, callback=null) {
                             DSNYGeoCoder['zipCode'] = data.data.Goat.zipCode;
                             DSNYGeoCoder['sanitationCollectionSchedulingSectionAndSubsection'] = data.data.Goat.sanitationCollectionSchedulingSectionAndSubsection;
                             DSNYGeoCoder['bbl'] = data.data.Goat.bbl;
+                            DSNYGeoCoder['sanitationDistrict'] = data.data.Goat.sanitationDistrict;
                             if (data.data.Goat.houseNumber) {
                                 // Address
-                                DSNYGeoCoder['houseNumber'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                                DSNYGeoCoder['address'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             } else {
                                 // Place name
-                                DSNYGeoCoder['houseNumber'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
+                                DSNYGeoCoder['address'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             }
                             console.log(DSNYGeoCoder);
                         }
