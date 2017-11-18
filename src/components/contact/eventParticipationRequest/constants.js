@@ -32,7 +32,7 @@ export const Titles = {
   PFullNameLastFirst: null,
   PTitle: 'TITLE',
   POrganization: 'ORGANIZATION',
-  PAddress: 'ADDRESS',
+  PFullAddress: 'ADDRESS',
   PSuite:'FLOOR/SUITE/APT (OPTIONAL)',
   PrimarySelectedPhoneType:'PHONE TYPE',
   PEmailConfirm:'CONFIRM E-MAIL',
