@@ -56,19 +56,19 @@ class WeedRemovalRequest extends Component {
     }
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
-    if (error){
-        return (<FetchError onRetry={ () => this.props.postFormObject()}/>);
-    }
+    // if (error){
+    //     return (<FetchError onRetry={ () => this.props.postFormObject()}/>);
+    // }
     return(<div className='loader container'></div>)
  };
 };
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,error:state.error.type};
 }
 
 

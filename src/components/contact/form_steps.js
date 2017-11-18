@@ -57,7 +57,8 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.latitude = geoCoderAddressResult.latitude
 		values.longitude = geoCoderAddressResult.longitude
     values.address = geoCoderAddressResult.address
-		values.houseNumber = geoCoderAddressResult.houseNumber
+    values.houseNumber = geoCoderAddressResult.houseNumber
+
     values.street = geoCoderAddressResult.street
     values.borough = geoCoderAddressResult.borough
     values.city = geoCoderAddressResult.city
@@ -68,7 +69,8 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 
 		values.Borough = geoCoderAddressResult.borough
 		values.BuildingNumber = geoCoderAddressResult.houseNumber
-		values.Street = geoCoderAddressResult.street
+    values.Street = geoCoderAddressResult.street
+    values.HouseNumber = geoCoderAddressResult.HouseNumber
 	}
 }
  
