@@ -15,7 +15,34 @@ import {Titles} from './constants'
 import '../../../content/styles/eventParticipantReqst.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormAddressAutocompleteNoValidation from '../formAdressAutoCmpleteNoValidation';
- 
+import {Col} from 'react-bootstrap';
+
+
+const DisplayFormikState = props => <div style={{
+		margin: '1rem 0'
+	}}>
+	<h3 style={{
+			fontFamily: 'monospace'
+		}}/>
+	<pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '2rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>values</strong> ={' '}
+
+      {JSON.stringify(props.values, null, 2)}
+    </pre>
+  </div>;
+
+
+function handleSelect(adress) {
+      console.log(adress);
+    //this.setState({ input: e.target.value });
+};
+
 
 
 
@@ -67,8 +94,9 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextInput} name="POrganization" {...props} maxlength="35" required/>
 
 
-    <Field component={AddressInput} name="PFullAddress" {...props} onChange={setFieldValue}/>
-    {/*<Field component={TextInput} name="PFullAddress" {...props} maxlength="50" required/>*/}
+    {/*<FormAddressAutocompleteNoValidation id="PFullAddress" name="PFullAddress" handleSelect={this.handleSelect} {...props} />      */}
+    {/*<Field component={AddressInput} name="PFullAddress" {...props} onChange={setFieldValue}  />*/}
+    <Field component={TextInput} name="PFullAddress" {...props} maxlength="50" required/>
     <Field component={TextInput} name="PSuite" {...props} maxlength="10" required/>
     <Field component={TextInput} name="PPhone" {...props} maxlength="21" required/>
     <Field component={DropdownInput} name="PrimarySelectedPhoneType" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
@@ -86,7 +114,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={DropdownInput} name="SecondarySelectedPhoneTypes" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" />
     <Field component={TextInput} name="SEmailConfirm" {...props} maxlength="50" />
-    
+    <Col xs={12}><DisplayFormikState {...props} /></Col>
   </fieldset>)
 };
 
