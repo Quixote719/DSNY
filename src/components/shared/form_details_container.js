@@ -87,6 +87,7 @@ class FormDetail extends Component {
           let sections;
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, (sec,index) => {
+              console.log(sec)
               
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 

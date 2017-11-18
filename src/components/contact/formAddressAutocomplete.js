@@ -20,18 +20,18 @@ class FormAddressAutocomplete extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            address: "",                        
+            address: "",
             // placeholder: "Enter the address",
           };
     }
     handleChange = (address) =>{
-        this.props.checkAddressValidator(0);        
+        this.props.checkAddressValidator(0);
         if(address.trim().length === 0 || address === ""){
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.
                 </div>
-            );        
+            );
         }
         this.setState({
             address,
@@ -51,8 +51,8 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address: value,
          });
-        //  this.props.getCollectionSchedule(value); 
-         this.props.getCollectionSchedule(value, this.successCallback);                                 
+        //  this.props.getCollectionSchedule(value);
+         this.props.getCollectionSchedule(value, this.successCallback);
         }
     handleSelect =(address)=>{
         this.props.checkAddressValidator(1);
@@ -60,26 +60,30 @@ class FormAddressAutocomplete extends Component {
             this.setState({
                 address: address,
              });
-            // this.props.getCollectionSchedule(address);  
-         this.props.getCollectionSchedule(address, this.successCallback);                                             
-        }        
+            // this.props.getCollectionSchedule(address);
+         this.props.getCollectionSchedule(address, this.successCallback);
+        }
     }
     validateButtonClicked =()=>{
-         this.props.checkAddressValidator(1);        
-         this.props.getCollectionSchedule(this.state.address, this.successCallback);                                             
+         this.props.checkAddressValidator(1);
+         this.props.getCollectionSchedule(this.state.address, this.successCallback);
     }
     successCallback = (success)=>{
         if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.forceUpdate();
-        } else if((this.props.noResultsError.RegularCollectionSchedule == null || this.props.noResultsError.RegularCollectionSchedule == "") && (this.props.noResultsError.RecyclingCollectionSchedule == null || this.props.noResultsError.RecyclingCollectionSchedule == "") &&(this.props.noResultsError.OrganicsCollectionSchedule == null || this.props.noResultsError.OrganicsCollectionSchedule == "") && this.props.suggestionAddress == null){
+        } else if(
+          (this.props.noResultsError.RegularCollectionSchedule == null || this.props.noResultsError.RegularCollectionSchedule == "") &&
+          (this.props.noResultsError.RecyclingCollectionSchedule == null || this.props.noResultsError.RecyclingCollectionSchedule == "") &&
+          (this.props.noResultsError.OrganicsCollectionSchedule == null || this.props.noResultsError.OrganicsCollectionSchedule === " ") &&
+          this.props.suggestionAddress == null){
             errorMessage = (<div className="errorMessageAddressForm">
             The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
             </div>);
-            this.forceUpdate();                        
+            this.forceUpdate();
         } else {
             errorMessage = (<div></div>);
-            this.forceUpdate();                                                
+            this.forceUpdate();
         }
     }
     correctAddressList = () => {
@@ -91,10 +95,10 @@ class FormAddressAutocomplete extends Component {
         } );
     }
     render() {
-        console.log("Value of address validator: ")        
+        console.log("Value of address validator: ")
         console.log(this.props.addressValidator)
         console.log(this.props.DSNYGeoCoder)
-        
+
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -108,7 +112,7 @@ class FormAddressAutocomplete extends Component {
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
-            root: "placesCollectionSchedule",            
+            root: "placesCollectionSchedule",
             googleLogoContainer: 'googleLogoContainer',
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
@@ -136,10 +140,10 @@ class FormAddressAutocomplete extends Component {
                     {errorMessage}
                     <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                     <div className = "addressNotFound">
-                    The address entered can not be found. 
+                    The address entered can not be found.
                     </div>
                     <div className = "selectFromAddressBelow">
-                    Please select from the possible addresses below                
+                    Please select from the possible addresses below
                     </div>
                         {this.correctAddressList()}
                     </div>
@@ -154,19 +158,19 @@ class FormAddressAutocomplete extends Component {
         );
     }
 }
-function mapStateToProps(state) { 
+function mapStateToProps(state) {
     return {
         addressValidator: state.carouselDataReducer.addressValidator,
-        DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,        
+        DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,
         noResultsError: state.carouselDataReducer.noResultsError,
-        suggestionAddress: state.carouselDataReducer.suggestionAddress,      
-        collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,        
+        suggestionAddress: state.carouselDataReducer.suggestionAddress,
+        collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,
     }
   }
-  
+
 let actionList = {
     checkAddressValidator: actions.checkAddressValidator,
-    getCollectionSchedule: actions.getCollectionSchedule,    
+    getCollectionSchedule: actions.getCollectionSchedule,
   };
 
   FormAddressAutocomplete = connect(mapStateToProps, actionList)(FormAddressAutocomplete);

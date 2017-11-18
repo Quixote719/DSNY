@@ -31,17 +31,9 @@ const formFields = (props) => {
     </div>
     <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} {...props} />
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextAreaInput} name="RemovedMaterialsDescription" {...props} maxlength={5000} />
-    <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={values.IncidentDate} />
-    <Field component={DateTimePickerInput} name="IncidentDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} />
-    <Field component={TextInput} name="VehicleLicensePlateNumber" maxlength={20} {...props} />
-    <Field component={TextInput} name="VehicleState" maxlength={20} {...props} />
-    <Field component={CheckBoxInput} name="IsVehicleCommercial" {...props}/>
-    <Field component={TextInput} name="VehicleMake" maxlength={20} {...props} />
-    <Field component={TextInput} name="VehicleModel" maxlength={20} {...props} />
-    <Field component={TextInput} name="VehicleColor" maxlength={20} {...props} />
-    <Field component={TextInput} name="VehicleType" maxlength={20} {...props} />
-    <Field component={TextAreaInput} name="AdditionalVehicleInfo" maxlength={5000} {...props} />
+    <Field component={TextInput} name="ViolatorName" fullRow={true} maxlength={20} {...props} />
+    <Field component={TextInput} name="ViolatorAddressAsEntered" fullRow={true} maxlength={20} {...props} />
+    <Field component={TextInput} name="ViolatorApartment" maxlength={20} {...props} required/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
     <Field component={TextInput} name="FirstName" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>
