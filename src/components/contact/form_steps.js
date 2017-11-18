@@ -68,10 +68,12 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     // values.sanitationDistrict = geoCoderAddressResult.sanitationDistrict
 
     values.AddressAsEntered = "20 Union Ave"
-     values.latitude = "70.00"
+    values.latitude = "70.00"
 		values.longitude = "-70.00"
     values.address = "20 Union Ave"
     values.HouseNumber = "20"
+    values.Apartment = "1"
+    values.State = "NY"
 
     values.Street = "Union Ave"
     values.Borough = "Staten Island"
