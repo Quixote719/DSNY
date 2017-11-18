@@ -22,6 +22,7 @@ import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
 import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
+import OrganicsForm from '../contact/commercialOrganics'
 
 class FormDetail extends Component {
 
@@ -85,6 +86,8 @@ class FormDetail extends Component {
               return <RecyclableMaterialTheft />
               case 'failure-to-store-receptacles':
               return <FailureStoreReceptacles />
+              case 'commercial-organics-on-site-processing-registration':
+              return <OrganicsForm />
               break;
               default:
               break;
@@ -112,7 +115,7 @@ class FormDetail extends Component {
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, (sec,index) => {
               console.log(sec)
-              
+
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 
               // if there's an image in your header, the code should be like this:
