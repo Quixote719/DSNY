@@ -25,6 +25,7 @@ class eeoComplaintForm extends Component {
   }
 
   postForm(formObject){
+      console.log('####');
       console.log(formObject);
       this.props.postFormObject(formObject, PSOT_FORM_EEO_COMPLAINTS_URL);
   }
@@ -55,8 +56,10 @@ class eeoComplaintForm extends Component {
     
     if(success !== undefined) {
           if(success != null) {
-            let message = 'Your response No. is: ' + success.SRNo;
-            return(<ThankYou>{message}</ThankYou>);
+            let message= 'Your Equal Employment Opportunity Complaint form has been submitted succesfully.Your response No. is: ' + success.SRNo;
+            return(<ThankYou>
+                      {message}
+                  </ThankYou>);
           } else {
             return(<ThankYou>Please make sure your message is correct.</ThankYou>);
           }          

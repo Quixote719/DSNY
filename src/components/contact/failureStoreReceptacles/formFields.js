@@ -33,7 +33,7 @@ const formFields = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="ViolatorName" fullRow={true} maxlength={20} {...props} />
     <Field component={TextInput} name="ViolatorAddressAsEntered" fullRow={true} maxlength={20} {...props} />
-    <Field component={TextInput} name="ViolatorApartment" maxlength={20} {...props} required/>
+    <Field component={TextInput} name="ViolatorApartment" maxlength={20} {...props} />
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
     <Field component={TextInput} name="FirstName" maxlength={20} {...props} isHidden={values.IsAnonymous} required/>

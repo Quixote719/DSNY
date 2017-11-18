@@ -20,6 +20,8 @@ import WeedRemovalRequest from '../contact/weedRemovalRequest'
 import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
+import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
+import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
 
 class FormDetail extends Component {
 
@@ -79,6 +81,10 @@ class FormDetail extends Component {
               return <CollectionBinOnPublicProperty />;
               case 'e-waste-pickup-request':
               return <EwasteRequestForm />;
+              case 'recyclable-material-theft-observation':
+              return <RecyclableMaterialTheft />
+              case 'failure-to-store-receptacles':
+              return <FailureStoreReceptacles />
               break;
               default:
               break;
