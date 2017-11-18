@@ -19,7 +19,6 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <div className='patternLineGreen'></div>
     <FormHeader title='Online Contact Form'/>
     <Field component={TextInput} name="Name" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
