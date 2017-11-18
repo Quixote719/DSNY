@@ -24,6 +24,31 @@ html body {
   padding-left: 8px;
 }
 
+.input.error{
+  border-color: #D80035!important;
+}
+
+.tooltip.in{
+  opacity: 1;
+}
+
+#tooltip-bottom > .tooltip-inner {
+  padding: 4px;
+  font-size: 1.2em;
+  background-color: #D80035;
+  color: #FFFFFF;
+  border: 1px solid #D80035;
+}
+
+#tooltip-bottom{
+  position: absolute;
+  right: 7px;
+}
+
+#tooltip-bottom > .tooltip-arrow {
+  border-bottom-color: #D80035;
+}
+
 .gm-svpc{
   display: none;
 }
