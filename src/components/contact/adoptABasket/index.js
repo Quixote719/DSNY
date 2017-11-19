@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  POST_FORM_ADOPT_BASKET_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class adoptABasketForm extends Component {
+class AdoptABasketForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -26,12 +26,10 @@ class adoptABasketForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      console.log(formObject);
+      this.props.postFormObject(formObject, POST_FORM_ADOPT_BASKET_URL);
   }
 
   
@@ -40,16 +38,10 @@ class adoptABasketForm extends Component {
 
 
    validateForm(formObject, errors){
-
-    //const adress = actionList.getCollectionSchedule(formObject.);
-    //formObject & Values are same
+     
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
-
     return errors;
   }
 
@@ -58,10 +50,16 @@ class adoptABasketForm extends Component {
     //const {FormObject, error, success} = this.props;
     const {success} = this.props;
     
-    if(success !== undefined)
-    {
-      return(<ThankYou>Your request has been successfully created</ThankYou>);
-    }
+      if(success !== undefined) {
+          if(success != null) {
+            let message= 'Your Site Visit Request form has been submitted succesfully.Your response No. is: ' + success.SRNo;
+            return(<ThankYou>
+                      {message}
+                  </ThankYou>);
+          } else {
+            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+          }          
+        }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
@@ -83,4 +81,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(adoptABasketForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(AdoptABasketForm);

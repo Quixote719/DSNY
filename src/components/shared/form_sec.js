@@ -1,19 +1,19 @@
 import _ from "lodash";
 import React, {Component} from "react";
-import Link from './link'
+import Link from './CardDetails/link'
 import PropTypes from 'prop-types';
 import {Row, Col} from 'react-bootstrap';
-import '../../../content/styles/lawsListItem.css';
-import SubSectionHeader from '../sub_section_header';
-import SubSectionHeaderGreen from '../sub_section_header_green';
-import CardType from './card_type'
-import TableDictionary from './card_table_dictionary'
-import CardFullWidth from './card_full_width'
-import CardTitleBody from '../Card_title_body'
-import CardMultifile from './card_multifile'
-import SubSectionButton from '../../shared/sub_section_button';
-import CardReferenceDetails from '../../PressReleases/reference_details_card';
-import CardTitleImage from '../Card_title_image';
+import '../../content/styles/lawsListItem.css';
+import SubSectionHeader from './sub_section_header';
+import SubSectionHeaderGreen from './sub_section_header_green';
+import CardType from './CardDetails/card_type'
+import TableDictionary from './CardDetails/card_table_dictionary'
+import CardFullWidth from './CardDetails/card_full_width'
+import CardTitleBody from './Card_title_body'
+import CardMultifile from './CardDetails/card_multifile'
+import SubSectionButton from './sub_section_button';
+import CardReferenceDetails from '../PressReleases/reference_details_card';
+import CardTitleImage from './Card_title_image';
 import $ from 'jquery';
 
 class CardSec extends Component {
@@ -28,7 +28,6 @@ class CardSec extends Component {
     if(Item.featured_image){
       ImageUrl  = this.getImageUrl(Item);
     }
-
 
     if (Item.linked_url !== " ") {
       type = 'eUrl';
@@ -95,7 +94,6 @@ class CardSec extends Component {
         return (<CardFullWidth link={url} dataObject={Item}/>);
       case 'multi-file-card':
         return (<CardMultifile dataObject={Item}/>);
-
       case 'reference-details-card':
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
       default:
@@ -185,6 +183,7 @@ class CardSec extends Component {
     let header;
     let headerColor;
     let headerContent;
+    
     if (dataObject.header !== '') {
           headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
          if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
@@ -268,18 +267,11 @@ class CardSec extends Component {
     let maxCards = dataObject.card_data.max_cards;
     let cardCount = dataObject.card_data.card_count;
 
-    /* Code to see the View All Button, when there are more cards than max number of cards */
-    let viewAllButton = this.viewAll(maxCards,cardCount,dataObject.button_linked_page.url);
-
-
-
     return (
       <div className={bg}>
         <div className='SContainer'>
           <div>{header}</div>
-          <div>{body}</div>
-          <div> {viewAllButton} </div>
-          {this.props.finalSec==true?<div className = 'bottomSection'></div>:<div className = 'normalsection'></div>}
+          <div id="contactPageBody">{body}</div>
         </div>
       </div>
     );

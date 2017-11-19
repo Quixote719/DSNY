@@ -54,28 +54,26 @@ const expiredCallback = () => {
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
-    values.latitude = geoCoderAddressResult.latitude
-		values.longitude = geoCoderAddressResult.longitude
+    values.Latitude = geoCoderAddressResult.latitude
+		values.Longitude = geoCoderAddressResult.longitude
     values.address = geoCoderAddressResult.address
-		values.houseNumber = geoCoderAddressResult.houseNumber
-    values.street = geoCoderAddressResult.street
-    values.borough = geoCoderAddressResult.borough
-    values.city = geoCoderAddressResult.city
-    values.zipCode = geoCoderAddressResult.zipCode
-    values.sanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
-    values.bbl = geoCoderAddressResult.bbl
-    values.sanitationDistrict = geoCoderAddressResult.sanitationDistrict
+    values.HouseNumber = geoCoderAddressResult.houseNumber
+    values.BuildingNumber = geoCoderAddressResult.houseNumber
 
-		values.Borough = geoCoderAddressResult.borough
-		values.BuildingNumber = geoCoderAddressResult.houseNumber
-		values.Street = geoCoderAddressResult.street
+    values.Street = geoCoderAddressResult.street
+    values.Borough = geoCoderAddressResult.borough
+    values.City = geoCoderAddressResult.city
+    values.Zip = geoCoderAddressResult.zipCode
+    values.SanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.BBL = geoCoderAddressResult.bbl
+    values.SanitationDistrict = geoCoderAddressResult.sanitationDistrict
 	}
 }
  
 
 function handleNextClick(errors, dirty, isSubmitting, nextStep)
 {
-  debugger;
+  //debugger;
   //  console.log("IsSubmitting" + isSubmitting);
   //  console.log("!isEmpty(errors)" + !isEmpty(errors));
   //  console.log("!dirty" + !dirty);
@@ -93,6 +91,7 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
 }
 
 const Step1 = (props) => {
+  console.log(props);
   const {
     errors,
     dirty,
@@ -101,7 +100,7 @@ const Step1 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = false}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -117,7 +116,7 @@ const Step2 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = true}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
 
 
@@ -180,12 +179,6 @@ const FormSteps = compose(
     if(!initialPageLoad)
     {
         inputs.forEach(input => {
-          //input.classList.add('active');
-
-          console.log(input.name);
-          console.log(input.type);
-          console.log(input.hasAttribute("required"));
-          console.log(values[input.name]);
 
           //Text, Checkbox Input Validation
           if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
@@ -246,7 +239,7 @@ const FormSteps = compose(
         {
           //setTimeout(() => {
           //console.log(this.props);
-          alert(JSON.stringify(values, null, 2));
+          //alert(JSON.stringify(values, null, 2));
           props.onSubmit(values);
           setSubmitting(false);
           //console.log(values);

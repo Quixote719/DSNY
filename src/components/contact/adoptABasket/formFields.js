@@ -35,6 +35,7 @@ const adoptABasketElements = (props) => {
     
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100"/>
+    <Field component={TextInput} name="BusinessAddressAsEntered" {...props} fullRow={true} maxlength="100"/>
     <Field component={TextInput} name="BusinessApartment" {...props} maxlength="100" /> 
 
     <FormSectionHeader title={Titles.sectionThree} />

@@ -8,12 +8,23 @@ import ImageSection from './ImageSection'
 
 //Sub Components
 import Header from './Breadcrumb/breadcrumb_container'
-import CardSec from './CardDetails/card_sec'
+import CardSec from './form_sec'
 
 // Form Components
 import DisabilityServices from '../contact/disabilityServices'
 import OrganicsBinReplacement from '../contact/organicsBinReplacement'
 import EwasteRequestForm from '../contact/eWastePickupRequest'
+import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
+import LotCleaning from '../contact/lotCleaning'
+import WeedRemovalRequest from '../contact/weedRemovalRequest'
+import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
+import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
+import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
+import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
+import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
+import SiteVisitRequestForm   from '../contact/siteVisitRequest'
+import MasterComposerCertificateCourseForm from '../contact/masterComposterCertificateCourse'
+import AdoptABasketForm from '../contact/adoptABasket'
 
 class FormDetail extends Component {
 
@@ -42,8 +53,8 @@ class FormDetail extends Component {
 
   render() {
     const {cardDetails} = this.props;
-    return (<div>
-      {this.renderPage(cardDetails)}
+    return (<div className="topheader">
+      <div>{this.renderPage(cardDetails)}</div>
       <div className="formContainer">{this.renderForms(cardDetails)}</div>
     </div>);
   };
@@ -59,9 +70,30 @@ class FormDetail extends Component {
               return <DisabilityServices />;
               case 'organics-bin-replacement-request':
               return <OrganicsBinReplacement />;
+              case 'streetsidewalk-obstruction-complaint':
+              return <StreetSidewalkObstruction />;
+              case 'lot-cleaning-request':
+              return <LotCleaning />;
+              case 'weed-removal-request':
+              return <WeedRemovalRequest />;
+              case 'litter-basket-request':
+              return <OverflowingLitterBasket />;
+              case 'dead-animal-removal-request':
+              return <DeadAnimalRemovalRequest />;
+              case 'collection-bin-on-public-property-removal-request':
+              return <CollectionBinOnPublicProperty />;
               case 'e-waste-pickup-request':
-              return <EwasteRequestForm />
-              break;
+              return <EwasteRequestForm />;
+              case 'recyclable-material-theft-observation':
+              return <RecyclableMaterialTheft />
+              case 'failure-to-store-receptacles':
+              return <FailureStoreReceptacles />
+              case   'site-visit-request':
+              return <SiteVisitRequestForm />
+              case 'master-composter-certificate-course':
+              return <MasterComposerCertificateCourseForm />
+              case 'adopt-a-basket-program':
+              return <AdoptABasketForm />
               default:
               break;
             }
@@ -80,13 +112,14 @@ class FormDetail extends Component {
         if (cItems !== undefined) {
           if (cItems.name != '') {
             banner = (<div key={cItems.id}>
-              <Header breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
+              <Header breadCrumbList={cItems.breadcrumb}/>
             </div>)
           }
 
           let sections;
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, (sec,index) => {
+              console.log(sec)
               
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 
@@ -116,7 +149,7 @@ class FormDetail extends Component {
               return (
                 <div key={sec.id}>
                   <div>
-                    <CardSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
+                    <CardSec dataObject={sec}/>
                   </div>
                 </div>
               );
@@ -125,7 +158,7 @@ class FormDetail extends Component {
 
           return (<div key={cItems.id}>
             <div>{banner}</div>
-            <div >{sections}</div>
+            <div>{sections}</div>
           </div>)
         }
       });

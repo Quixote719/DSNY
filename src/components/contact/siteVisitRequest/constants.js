@@ -148,5 +148,16 @@ export const formObject = {
   "Section": null,
   "BBL": null,
   "Latitude": 0,
-  "Longitude": 0
+  "Longitude": 0,
+  "PfirstName": null,
+  "PLastName":null,
+  "PTitle":null,
+  "PEmail": null,
+  "PPhone": null,
+  "PhoneTypeId": null,
+  "SfirstName": null,
+  "SLastName": null,
+  "STitle": null,
+  "SEmail": null,
+  "SPhone": null,
 }
