@@ -7,13 +7,14 @@ const SubmitThankYou = props => {
   return (      
       <div>
         <Col>
-          <div className='thankYoupatternLine'></div>
+          {/*<div className='thankYoupatternLine'></div>*/}
+          { document.getElementById(`contactPageBody`).classList.add('hide')}
             <div className='thankyoulable'>THANK YOU</div>
               <div className='thankyoubody' >
                 {Parser(props.children)}
               </div>
           <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
-          <div className='thankYoupatternLine'></div>
+          {/*<div className='thankYoupatternLine'></div>*/}
         </Col>
       </div>
   );
