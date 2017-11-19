@@ -4,6 +4,7 @@ export const Titles = {
   sectionThree:'CONTACT INFORMATION',
   BasketAdditionalLocationInfo:'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
   BusinessName:'BUSINESS/ORGANIZATION NAME',
+  BusinessAddressAsEntered:'ADDRESS',
   BusinessApartment:'FLOOR/APT/SUITE (OPTIONAL)',
   FirstName:'FIRST NAME',
   LastName:'LAST NAME',

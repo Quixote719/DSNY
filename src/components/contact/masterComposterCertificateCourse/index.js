@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_FORM_MASTER_COMPOST_REQST
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -31,7 +31,8 @@ class MasterComposerCertificateCourseForm extends Component {
   // }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      console.log(formObject);
+      this.props.postFormObject(formObject, PSOT_FORM_MASTER_COMPOST_REQST);
   }
 
   
@@ -58,10 +59,16 @@ class MasterComposerCertificateCourseForm extends Component {
     //const {FormObject, error, success} = this.props;
     const {success} = this.props;
     
-    if(success !== undefined)
-    {
-      return(<ThankYou>Your request has been successfully created</ThankYou>);
-    }
+     if(success !== undefined) {
+          if(success != null) {
+            let message= 'Your Master Composter Certificate Course form has been submitted succesfully.Your response No. is: ' + success.SRNo;
+            return(<ThankYou>
+                      {message}
+                  </ThankYou>);
+          } else {
+            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+          }          
+        }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>

@@ -22,6 +22,9 @@ import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
 import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
+import SiteVisitRequestForm   from '../contact/siteVisitRequest'
+import MasterComposerCertificateCourseForm from '../contact/masterComposterCertificateCourse'
+import AdoptABasketForm from '../contact/adoptABasket'
 import OrganicsForm from '../contact/commercialOrganics'
 
 class FormDetail extends Component {
@@ -89,6 +92,12 @@ class FormDetail extends Component {
               case 'commercial-organics-on-site-processing-registration':
               return <OrganicsForm />
               break;
+              case   'site-visit-request':
+              return <SiteVisitRequestForm />
+              case 'master-composter-certificate-course':
+              return <MasterComposerCertificateCourseForm />
+              case 'adopt-a-basket-program':
+              return <AdoptABasketForm />
               default:
               break;
             }
