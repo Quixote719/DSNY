@@ -239,7 +239,7 @@ const FormSteps = compose(
         {
           //setTimeout(() => {
           //console.log(this.props);
-          alert(JSON.stringify(values, null, 2));
+          //alert(JSON.stringify(values, null, 2));
           props.onSubmit(values);
           setSubmitting(false);
           //console.log(values);
