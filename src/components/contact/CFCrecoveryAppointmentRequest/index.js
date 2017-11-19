@@ -13,7 +13,7 @@ import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 
 
-class EwasteRequestForm extends Component {
+class CFCRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -28,7 +28,7 @@ class EwasteRequestForm extends Component {
     this.props.fetchFormObject();
   }
 
-  
+
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -48,7 +48,7 @@ class EwasteRequestForm extends Component {
 
   render() {
     const { error, success, geoCoderAddressResult} = this.props;
-     
+
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
@@ -67,4 +67,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(EwasteRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CFCRequestForm);
