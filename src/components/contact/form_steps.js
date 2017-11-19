@@ -53,40 +53,21 @@ const expiredCallback = () => {
 
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
-//	if (values && geoCoderAddressResult){
-    // values.latitude = geoCoderAddressResult.latitude
-		// values.longitude = geoCoderAddressResult.longitude
-    // values.address = geoCoderAddressResult.address
-    // values.houseNumber = geoCoderAddressResult.houseNumber
+	if (values && geoCoderAddressResult){
+    values.Latitude = geoCoderAddressResult.latitude
+		values.Longitude = geoCoderAddressResult.longitude
+    values.address = geoCoderAddressResult.address
+    values.HouseNumber = geoCoderAddressResult.houseNumber
+    values.BuildingNumber = geoCoderAddressResult.houseNumber
 
-    // values.street = geoCoderAddressResult.street
-    // values.borough = geoCoderAddressResult.borough
-    // values.city = geoCoderAddressResult.city
-    // values.zipCode = geoCoderAddressResult.zipCode
-    // values.sanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
-    // values.bbl = geoCoderAddressResult.bbl
-    // values.sanitationDistrict = geoCoderAddressResult.sanitationDistrict
-
-    values.AddressAsEntered = "20 Union Ave"
-     values.latitude = "70.00"
-		values.longitude = "-70.00"
-    values.address = "20 Union Ave"
-    values.HouseNumber = "20"
-
-    values.Street = "Union Ave"
-    values.Borough = "Staten Island"
-    values.City = "New York"
-    values.Zip = "10303"
-    values.sanitationCollectionSchedulingSectionAndSubsection = "501"
-    values.bbl = "3000303030"
-    values.sanitationDistrict = "501"
-
-
-		// values.Borough = geoCoderAddressResult.borough
-		// values.BuildingNumber = geoCoderAddressResult.houseNumber
-    // values.Street = geoCoderAddressResult.street
-    // values.HouseNumber = geoCoderAddressResult.HouseNumber
-	//}
+    values.Street = geoCoderAddressResult.street
+    values.Borough = geoCoderAddressResult.borough
+    values.City = geoCoderAddressResult.city
+    values.Zip = geoCoderAddressResult.zipCode
+    values.SanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.BBL = geoCoderAddressResult.bbl
+    values.SanitationDistrict = geoCoderAddressResult.sanitationDistrict
+	}
 }
  
 
@@ -119,7 +100,7 @@ const Step1 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = false}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -135,7 +116,7 @@ const Step2 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = true}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
 
 

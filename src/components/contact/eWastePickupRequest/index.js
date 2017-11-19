@@ -25,7 +25,7 @@ class EwasteRequestForm extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchFormObject();
+    //this.props.fetchFormObject();
   }
 
   
