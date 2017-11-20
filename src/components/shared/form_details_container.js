@@ -25,6 +25,8 @@ import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
 import SiteVisitRequestForm   from '../contact/siteVisitRequest'
 import MasterComposerCertificateCourseForm from '../contact/masterComposterCertificateCourse'
 import AdoptABasketForm from '../contact/adoptABasket'
+import CRFLRequestForm from '../contact/CRforLargeItems'
+import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 
 class FormDetail extends Component {
 
@@ -94,6 +96,10 @@ class FormDetail extends Component {
               return <MasterComposerCertificateCourseForm />
               case 'adopt-a-basket-program':
               return <AdoptABasketForm />
+              case 'cfc-recovery-appointment-request':
+              return < CFCRequestForm/>
+              case 'collection-request-for-large-items':
+              return <CRFLRequestForm />
               default:
               break;
             }
@@ -120,7 +126,7 @@ class FormDetail extends Component {
           if (cItems.sections) {
             sections = _.map(cItems.sections.sections, (sec,index) => {
               console.log(sec)
-              
+
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 
               // if there's an image in your header, the code should be like this:
