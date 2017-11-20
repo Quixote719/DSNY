@@ -39,22 +39,22 @@ const DisplayFormikState = props => <div style={{
 
 const EwastePickUpRequestFormElements = (props) => {
 	const {values, setFieldValue} = props;
-   
+
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete/></div>
 		<FormSectionHeader title={Titles.sectionTwo}/>
-		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>
+		<Field component={DropdownInput} name="RecyclingLocation" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>
 		<Field component={DateTimePickerInput} name="AppointmentDate" {...props} onChange={setFieldValue}/>
-		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
+		<Field component={Nstepper} name="Appliances" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
 		<Field component={TextInput} name="LastName" {...props} required="required"/>
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-<Col xs={12}><DisplayFormikState {...props} /></Col>
+
 	</fieldset>)
 };
 

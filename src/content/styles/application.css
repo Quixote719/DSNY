@@ -15,6 +15,10 @@ html body {
     margin-left: -8px;
 }
 
+.form-group{
+    margin-bottom: 10px;
+}
+
 [class*="navbar"]{
   padding:0;
 }
@@ -38,6 +42,7 @@ html body {
   background-color: #D80035;
   color: #FFFFFF;
   border: 1px solid #D80035;
+  border-radius: 3px;
 }
 
 #tooltip-bottom{
