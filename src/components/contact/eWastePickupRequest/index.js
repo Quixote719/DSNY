@@ -5,7 +5,7 @@ import {
   PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject, IsDistrictActive, GetUnavailableDates} from "../../../actions/contact_forms";
 import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -18,6 +18,7 @@ class EwasteRequestForm extends Component {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+    this.updateValues = this.updateValues.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
@@ -28,7 +29,13 @@ class EwasteRequestForm extends Component {
     //this.props.fetchFormObject();
   }
 
-  
+  updateValues(geoCoderAddressResult){
+   this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
+   this.props.GetUnavailableDates(geoCoderAddressResult.sanitationDistrict)
+  }
+
+
+
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -47,11 +54,17 @@ class EwasteRequestForm extends Component {
   }
 
   render() {
-    const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
-     
+    const { error, success, isDistrictActive, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
+
+    if (geoCoderAddressResult){
+      console.log(this.props);
+      if (typeof unavailableDates === 'undefined' || isDistrictActive )
+      this.updateValues(geoCoderAddressResult)
+    }
+
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} isDistrictActive={isDistrictActive} Dates={unavailableDates} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -63,8 +76,16 @@ class EwasteRequestForm extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator,error:state.error.type};
+  return {
+    FormObject: state.forms.formObject,
+    success:state.forms.success,
+    isDistrictActive:state.forms.isDistrictActive,
+    unavailableDates:state.forms.unavailableDates,
+    geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
+    isAddressValidated: state.carouselDataReducer.addressValidator,
+    error:state.error.type
+    };
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(EwasteRequestForm);
+export default connect(mapStateToProps, {fetchFormObject,IsDistrictActive, GetUnavailableDates, postFormObject})(EwasteRequestForm);

@@ -34,6 +34,7 @@ export default function cardReducer(state = {}, action) {
         formObject:searchObj(action.payload.data, false, null)
       };
       case types.IS_DISTRICT_ACTIVE:
+      console.log('isdisteictctive:', action.payload.data);
         return {
           ...state,
           isDistrictActive:action.payload.data

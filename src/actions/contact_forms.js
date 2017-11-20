@@ -45,7 +45,8 @@ export function PickupReqGetItemSubCategories(id) {
 export function IsDistrictActive(id) {
 	return function(dispatch) {
 		axios.get(IS_DISTRICT_ACTIVE.replace(':Id', id)).then((data) => {
-			dispatch({type: types.IS_DISTRICT_ACTIVE, payload: data,})
+			
+			dispatch({type: types.IS_DISTRICT_ACTIVE, payload: data})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
 		});
