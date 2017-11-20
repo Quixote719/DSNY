@@ -6,6 +6,7 @@ import {Row, Col} from 'react-bootstrap';
 import '../../content/styles/lawsListItem.css';
 import SubSectionHeader from './sub_section_header';
 import SubSectionHeaderGreen from './sub_section_header_green';
+import FormIntroSubSectionHeaderGreen from './formIntro_Subsection_Header';
 import CardType from './CardDetails/card_type'
 import TableDictionary from './CardDetails/card_table_dictionary'
 import CardFullWidth from './CardDetails/card_full_width'
@@ -14,6 +15,7 @@ import CardMultifile from './CardDetails/card_multifile'
 import SubSectionButton from './sub_section_button';
 import CardReferenceDetails from '../PressReleases/reference_details_card';
 import CardTitleImage from './Card_title_image';
+
 import $ from 'jquery';
 
 class FormSec extends Component {
@@ -124,6 +126,33 @@ class FormSec extends Component {
       return `${basepath}${filename}`;
   }
 
+
+
+  /* The Header consists of a green header and a brief introduction as well . 
+      The green line is below the description */
+  getFormIntroductionHeader(dataObject){
+          return(
+                  <div key={dataObject.id}>
+                      <FormIntroSubSectionHeaderGreen title={dataObject.header} content={dataObject.content}/>
+                  </div>
+          );
+  }
+
+
+  /* Return Normal Header type, that is all header sections except for Form Introduction Header Types */
+  getHeader(dataObject,header){
+    let headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
+     if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
+            let headerContent = dataObject.header.replace(/<[^>]+>/g, '');
+            header = this.getGreenHeader(dataObject,headerContent);
+         }else{
+            header = this.getBlackHeader(dataObject);
+         }
+         return header;
+  }
+
+
+
   /*The Header is made green to be displayed as title */
   getGreenHeader(dataObject,headerContent){
       return(
@@ -134,7 +163,7 @@ class FormSec extends Component {
     }
 
   /* Normal Black Header is returned, provided there are no tags in the dataObject header */
-  getHeader(dataObject){
+  getBlackHeader(dataObject){
       return(
                 <div key={dataObject.id}>
                   <SubSectionHeader title={dataObject.header}/>
@@ -172,16 +201,14 @@ class FormSec extends Component {
 
 
     let header;
-    let headerColor;
-    let headerContent;
-    
+
+    /* Get Form Introduction Header OR Default Header OR Green header, depending on word-press conditions */
     if (dataObject.header !== '') {
-         if(dataObject.header_text_color == 'green' || dataObject.header_text_color == 'rgb(0, 128, 0)'){
-            headerContent = dataObject.header.replace(/<[^>]+>/g, '');
-            header = this.getGreenHeader(dataObject,headerContent);
-         }else{
-            header = this.getHeader(dataObject);
-         }
+        if(dataObject.section_style == 'form-introduction'){
+            header = this.getFormIntroductionHeader(dataObject);
+        }else{
+            header = this.getHeader(dataObject,header);
+        }
     }
 
     let body;
@@ -251,10 +278,20 @@ class FormSec extends Component {
       )
     }
 
+
+    let bg = dataObject.background_color === 'gray'
+      ? 'greyBcg'
+      : ''
+    let maxCards = dataObject.card_data.max_cards;
+    let cardCount = dataObject.card_data.card_count;
+
+
     return (
         <div className='SContainer'>
-          <div>{header}</div>
-          <div id="contactPageBody">{body}</div>
+          {header && <div>{header}</div>}
+          {body && <div>{body}</div> }
+          <div></div>
+          {dataObject.content ? <div className='patternLineGreen increasedTopMargin'></div> : ''}
         </div>
     );
   };
