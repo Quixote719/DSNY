@@ -6,19 +6,19 @@ import _ from "lodash";
 class ContactUs extends Component {
 
     renderLeft() {
-      return _.map(this.props.ContactUsProps.cards, Item => {
+      return _.map(this.props.ContactUsProps.cards, (Item,index) => {
         if (Item.name === 'contact-us-left-part')
         return (
-          <div dangerouslySetInnerHTML={{__html: Item.content}}></div>
+          <div id={index} dangerouslySetInnerHTML={{__html: Item.content}}></div>
         );
       });
     }
 
     renderRight() {
-      return _.map(this.props.ContactUsProps.cards, Item => {
+      return _.map(this.props.ContactUsProps.cards, (Item,index) => {
         if (Item.name === 'contact-us-right-part')
         return (
-          <div dangerouslySetInnerHTML={{__html: Item.content}}></div>
+          <div id={index} dangerouslySetInnerHTML={{__html: Item.content}}></div>
         );
       });
     }

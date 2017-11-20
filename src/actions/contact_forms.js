@@ -3,10 +3,11 @@ import * as types from '../constants/ActionTypes';
 import {
 	FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL,
 	FETCH_FORM_GET_COMPOST_REQUEST_URL,
-	PSOT_FORM_COMPOST_REQUEST_URL,
 	FETCH_PICKUP_ITEM_CATEGORIES_URL,
 	FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL,
 	POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL,
+	GET_UNAVAILABLE_DATES,
+	IS_DISTRICT_ACTIVE
 } from '../constants/ApiConstants';
 
 export function fetchFormObject(category) {
@@ -35,6 +36,27 @@ export function PickupReqGetItemSubCategories(id) {
 	return function(dispatch) {
 		axios.get(FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL.replace(':Id', id)).then((data) => {
 			dispatch({type: types.FETCH_PICKUP_ITEM_SUB_CATEGORIES, payload: data,})
+		}).catch(function(error) {
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+		});
+	}
+}
+
+export function IsDistrictActive(id) {
+	return function(dispatch) {
+		axios.get(IS_DISTRICT_ACTIVE.replace(':Id', id)).then((data) => {
+			
+			dispatch({type: types.IS_DISTRICT_ACTIVE, payload: data})
+		}).catch(function(error) {
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+		});
+	}
+}
+
+export function GetUnavailableDates(id) {
+	return function(dispatch) {
+		axios.get(GET_UNAVAILABLE_DATES.replace(':Id', id)).then((data) => {
+			dispatch({type: types.GET_UNAVAILABLE_DATES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
 		});
