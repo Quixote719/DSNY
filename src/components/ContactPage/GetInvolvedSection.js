@@ -36,13 +36,6 @@ class GetInvolvedSection extends Component {
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
             </div>
         </div>
-        {/* <div className='renderInvolvedCards'>
-          <div className='SContainer'>
-            <Row>
-              {this.renderCards()}
-            </Row>
-          </div>
-        </div> */}
       </div>
     )
   }
