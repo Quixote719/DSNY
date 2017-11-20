@@ -6,6 +6,7 @@ import isEmpty from 'lodash/isEmpty'
 import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
 import FormButton from './form_button';
+import ThankYou from './thank_you';
 
 // import '../../content/styles/contactForm.css';
 
@@ -51,6 +52,15 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
+export function displayThankYouPage(success, successMessage, failureMessage)
+{
+  if(success.SRNo !== undefined) {
+      return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
+    } else {
+      return(<ThankYou>{failureMessage}</ThankYou>);
+    } 
+
+}
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 //	if (values && geoCoderAddressResult){
@@ -89,6 +99,21 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     // values.Street = geoCoderAddressResult.street
     // values.HouseNumber = geoCoderAddressResult.HouseNumber
 	//}
+	if (values && geoCoderAddressResult){
+    values.Latitude = geoCoderAddressResult.latitude
+		values.Longitude = geoCoderAddressResult.longitude
+    values.address = geoCoderAddressResult.address
+    values.HouseNumber = geoCoderAddressResult.houseNumber
+    values.BuildingNumber = geoCoderAddressResult.houseNumber
+
+    values.Street = geoCoderAddressResult.street
+    values.Borough = geoCoderAddressResult.borough
+    values.City = geoCoderAddressResult.city
+    values.Zip = geoCoderAddressResult.zipCode
+    values.SanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.BBL = geoCoderAddressResult.bbl
+    values.SanitationDistrict = geoCoderAddressResult.sanitationDistrict
+	}
 }
  
 
@@ -121,7 +146,7 @@ const Step1 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = false}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -137,7 +162,7 @@ const Step2 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = true}
-    {assignGeoCoderAddressValues(props.values, props.address)}
+    {/*{assignGeoCoderAddressValues(props.values, geoCoderAddressResultObject)}*/}
     <props.formFields {...props} />
 
 
@@ -189,12 +214,15 @@ const FormSteps = compose(
   }),
   withFormik({
   // Transform outer props into form values
-  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult}),
+  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult, isAddressValidated:props.isAddressValidated}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
 
     let errors = {}
     
+    //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
+        //console.log("Cannot proceed")
+
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
 
     if(!initialPageLoad)
@@ -260,7 +288,7 @@ const FormSteps = compose(
         {
           //setTimeout(() => {
           //console.log(this.props);
-          alert(JSON.stringify(values, null, 2));
+          //alert(JSON.stringify(values, null, 2));
           props.onSubmit(values);
           setSubmitting(false);
           //console.log(values);

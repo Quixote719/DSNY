@@ -3,6 +3,7 @@ import Banner from '../shared/banner';
 import SearchBoxCollection from '../shared/searchBoxCollection';
 import ServiceRequestsSection from './ServiceRequestsSection';
 import RegistrationsSection from './RegistrationsSection';
+import ReportingSection from './ReportingSection';
 import GetInvolvedSection from './GetInvolvedSection';
 import Complaints from './ComplaintsSection';
 import ContactUs from './ContactUsSection';
@@ -40,10 +41,11 @@ class Contact extends Component {
     let ServiceRequestsProps = {};
     let ComplaintsProps = {};
     let RegistrationsProps = {};
+    let ReportingProps = {};
     let GetInvolvedProps = {};
     let ContactUsProps = {};
 
-    this.parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps);
+    this.parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps, ReportingProps);
 
     return (
       <div>
@@ -68,7 +70,11 @@ class Contact extends Component {
         <div className = 'container'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
-
+        <div className = 'greyBcg'>
+          <div className = 'container'>
+            <ReportingSection ReportingProps = {ReportingProps}/>
+          </div>
+        </div>
         <div className = 'SContainer'>
           <ContactUs ContactUsProps = {ContactUsProps}/>
         </div>
@@ -79,7 +85,7 @@ class Contact extends Component {
 
 
 
-  parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps) {
+  parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps, ReportingProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
@@ -102,6 +108,11 @@ class Contact extends Component {
           case 'applications-and-registrations': {
             RegistrationsProps.title = item.header;
             RegistrationsProps.cards = item.cards;
+            break;
+          }
+          case 'reporting': {
+            ReportingProps.title = item.header;
+            ReportingProps.cards = item.cards;
             break;
           }
           case 'get-involved-section': {
