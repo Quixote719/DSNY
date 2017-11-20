@@ -52,12 +52,12 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
-export function displayThankYouPage(SRNo, SuccessMessage, FailureMessage)
+export function displayThankYouPage(success, successMessage, failureMessage)
 {
-  if(SRNo !== undefined) {
-      return(<ThankYou>{SuccessMessage + SRNo}</ThankYou>);
+  if(success.SRNo !== undefined) {
+      return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
     } else {
-      return(<ThankYou>{FailureMessage}</ThankYou>);
+      return(<ThankYou>{failureMessage}</ThankYou>);
     } 
 
 }
@@ -178,12 +178,15 @@ const FormSteps = compose(
   }),
   withFormik({
   // Transform outer props into form values
-  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult}),
+  mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult, isAddressValidated:props.isAddressValidated}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
 
     let errors = {}
     
+    //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
+        //console.log("Cannot proceed")
+
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
 
     if(!initialPageLoad)
