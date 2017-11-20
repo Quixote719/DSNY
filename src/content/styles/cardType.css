@@ -81,3 +81,28 @@
     padding-bottom: 8px;
     cursor: pointer;
   }
+
+  .FormRow .patternLineGreen{
+    margin-top: -40px;
+  }
+
+  .FormRow .fa-caret-right{
+    font-size: 28px;
+    position: relative;
+    bottom: 20px;
+    float: right;
+  }
+
+  .FormRow .cardTitleText{
+    padding-left: 10px;
+  }
+
+  .FormRow .file-pdf-o-font-awesome{
+    color: #00764D;
+    float: left;
+  }
+
+  .FormRow .fa-file-pdf-o:before{
+    left: 9px;
+    top: 22px;
+  }

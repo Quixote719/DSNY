@@ -3,12 +3,19 @@ import { Row, Col } from 'react-bootstrap';
 import Parser from 'html-react-parser';
 import SubSectionButton from '../shared/sub_section_button';
 
+
+function demoDisplay()  {
+    if(document.getElementById("contactPageBody") !== null && document.getElementById('contactPageBody') !== undefined) {
+      document.getElementById("contactPageBody").style.display = "none";
+    }
+}
+
 const SubmitThankYou = props => {
   return (      
       <div>
         <Col>
           {/*<div className='thankYoupatternLine'></div>*/}
-          { document.getElementById(`contactPageBody`) !== undefined?document.getElementById(`contactPageBody`).classList.add('hide'):''}
+          { demoDisplay()}
             <div className='thankyoulable'>THANK YOU</div>
               <div className='thankyoubody' >
                 {Parser(props.children)}

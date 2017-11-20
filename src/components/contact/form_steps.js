@@ -63,42 +63,6 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 }
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
-//	if (values && geoCoderAddressResult){
-    // values.latitude = geoCoderAddressResult.latitude
-		// values.longitude = geoCoderAddressResult.longitude
-    // values.address = geoCoderAddressResult.address
-    // values.houseNumber = geoCoderAddressResult.houseNumber
-
-    // values.street = geoCoderAddressResult.street
-    // values.borough = geoCoderAddressResult.borough
-    // values.city = geoCoderAddressResult.city
-    // values.zipCode = geoCoderAddressResult.zipCode
-    // values.sanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
-    // values.bbl = geoCoderAddressResult.bbl
-    // values.sanitationDistrict = geoCoderAddressResult.sanitationDistrict
-
-    values.AddressAsEntered = "20 Union Ave"
-    values.latitude = "70.00"
-		values.longitude = "-70.00"
-    values.address = "20 Union Ave"
-    values.HouseNumber = "20"
-    values.Apartment = "1"
-    values.State = "NY"
-
-    values.Street = "Union Ave"
-    values.Borough = "Staten Island"
-    values.City = "New York"
-    values.Zip = "10303"
-    values.sanitationCollectionSchedulingSectionAndSubsection = "501"
-    values.bbl = "3000303030"
-    values.sanitationDistrict = "501"
-
-
-		// values.Borough = geoCoderAddressResult.borough
-		// values.BuildingNumber = geoCoderAddressResult.houseNumber
-    // values.Street = geoCoderAddressResult.street
-    // values.HouseNumber = geoCoderAddressResult.HouseNumber
-	//}
 	if (values && geoCoderAddressResult){
     values.Latitude = geoCoderAddressResult.latitude
 		values.Longitude = geoCoderAddressResult.longitude
@@ -282,7 +246,7 @@ const FormSteps = compose(
 
     return errors
   },
-  handleSubmit: (values, {props,setSubmitting}) => {
+  handleSubmit: (values, {props,setSubmitting, resetForm}) => {
     if(props.step > 1){
         if(captchaVerified)
         {
@@ -291,6 +255,8 @@ const FormSteps = compose(
           //alert(JSON.stringify(values, null, 2));
           props.onSubmit(values);
           setSubmitting(false);
+          resetForm(values);
+          initialPageLoad = true;
           //console.log(values);
 
         //}, 1000);

@@ -6,7 +6,9 @@ import {Row, Col} from 'react-bootstrap';
 import '../../content/styles/lawsListItem.css';
 import SubSectionHeader from './sub_section_header';
 import SubSectionHeaderGreen from './sub_section_header_green';
+import FormIntroSubSectionHeaderGreen from './formIntro_Subsection_Header';
 import CardType from './CardDetails/card_type'
+import FormRow from './form_detail_row'
 import TableDictionary from './CardDetails/card_table_dictionary'
 import CardFullWidth from './CardDetails/card_full_width'
 import CardTitleBody from './Card_title_body'
@@ -14,6 +16,7 @@ import CardMultifile from './CardDetails/card_multifile'
 import SubSectionButton from './sub_section_button';
 import CardReferenceDetails from '../PressReleases/reference_details_card';
 import CardTitleImage from './Card_title_image';
+
 import $ from 'jquery';
 
 class CardSec extends Component {
@@ -100,6 +103,10 @@ class CardSec extends Component {
         return (<CardMultifile dataObject={Item}/>);
       case 'reference-details-card':
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
+      case 'form-link-card':
+        return (url
+          ? <Link to={url}><FormRow style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
+          : <FormRow style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       default:
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
@@ -124,6 +131,33 @@ class CardSec extends Component {
       return `${basepath}${filename}`;
   }
 
+
+
+  /* The Header consists of a green header and a brief introduction as well .
+      The green line is below the description */
+  getFormIntroductionHeader(dataObject){
+          return(
+                  <div key={dataObject.id}>
+                      <FormIntroSubSectionHeaderGreen title={dataObject.header} content={dataObject.content}/>
+                  </div>
+          );
+  }
+
+
+  /* Return Normal Header type, that is all header sections except for Form Introduction Header Types */
+  getHeader(dataObject,header){
+    let headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
+     if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
+            let headerContent = dataObject.header.replace(/<[^>]+>/g, '');
+            header = this.getGreenHeader(dataObject,headerContent);
+         }else{
+            header = this.getBlackHeader(dataObject);
+         }
+         return header;
+  }
+
+
+
   /*The Header is made green to be displayed as title */
   getGreenHeader(dataObject,headerContent){
       return(
@@ -134,7 +168,7 @@ class CardSec extends Component {
     }
 
   /* Normal Black Header is returned, provided there are no tags in the dataObject header */
-  getHeader(dataObject){
+  getBlackHeader(dataObject){
       return(
                 <div key={dataObject.id}>
                   <SubSectionHeader title={dataObject.header}/>
@@ -154,7 +188,7 @@ class CardSec extends Component {
     if(success !== undefined) {
       if(success != null) {
         console.log(success.SRNo);
-      }          
+      }
     }
 
 
@@ -172,20 +206,18 @@ class CardSec extends Component {
 
 
     let header;
-    let headerColor;
-    let headerContent;
-    
+
+    /* Get Form Introduction Header OR Default Header OR Green header, depending on word-press conditions */
     if (dataObject.header !== '') {
-         if(dataObject.header_text_color == 'green' || dataObject.header_text_color == 'rgb(0, 128, 0)'){
-            headerContent = dataObject.header.replace(/<[^>]+>/g, '');
-            header = this.getGreenHeader(dataObject,headerContent);
-         }else{
-            header = this.getHeader(dataObject);
-         }
+        if(dataObject.section_style == 'form-introduction'){
+            header = this.getFormIntroductionHeader(dataObject);
+        }else{
+            header = this.getHeader(dataObject,header);
+        }
     }
 
     let body;
-    
+
 
     if (dataObject.content !== '') {
 
@@ -193,12 +225,13 @@ class CardSec extends Component {
 
         let cType = dataObject.card_data.card_type !== "reference-details-card"
 
-        /* This is to ensure multi-file cards appear as a single row below the content present in header Section         
+        /* This is to ensure multi-file cards appear as a single row below the content present in header Section
             If the card is a 'form-link-card' then it is made to appear in a seperate line */
 
         let cardThreshold = (dataObject.card_data.card_type == 'multi-file-card' || dataObject.card_data.card_type == 'form-link-card') ? 0 : 2;
 
         let layoutTrigger = cType && l > cardThreshold;
+
 
         body = (
           <div>
@@ -251,10 +284,19 @@ class CardSec extends Component {
       )
     }
 
+
+    let bg = dataObject.background_color === 'gray'
+      ? 'greyBcg'
+      : ''
+    let maxCards = dataObject.card_data.max_cards;
+    let cardCount = dataObject.card_data.card_count;
+
+
     return (
         <div className='SContainer'>
-          <div>{header}</div>
-          <div id="contactPageBody">{body}</div>
+          {header && <div>{header}</div>}
+          {body && <div id="contactPageBody">{body}</div> }
+          <div></div>
         </div>
     );
   };
