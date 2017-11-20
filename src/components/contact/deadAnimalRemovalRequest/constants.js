@@ -4,8 +4,8 @@ export const Titles = {
   sectionThree: 'CONTACT INFORMATION',
   AnimalId: 'TYPE OF ANIMAL',
   OtherAnimal: 'OTHER ANIMAL',
-  ExactLocationId: 'EXACT LOCATION',
-  OtherLocation: 'OTHER LOCATION',
+  DeadAnimalLocationId: 'EXACT LOCATION',
+  OtherDeadAnimalLocation: 'OTHER LOCATION',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
@@ -20,6 +20,7 @@ export const Titles = {
 }
 
 export const formObject = {
+
   "AnimalId": 0,
   "Animals": [
     {
@@ -99,7 +100,7 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
-  "ExactLocation": [
+  "DeadAnimalLocations": [
     {
       "Id": 1,
       "Name": "Highway",
@@ -125,7 +126,7 @@ export const formObject = {
       "Selected": false
     }
   ],
-  "ExactLocationId": 0,
+  "DeadAnimalLocationId": 0,
   "OtherLocation": null,
-  "AdditionalLocation": null
+  "OtherDeadAnimalLocation": null
 }

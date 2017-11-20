@@ -24,8 +24,8 @@ const CompostRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete/>
     </div>
-    <Field component={DropdownInput} name="ExactLocationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ExactLocation} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherLocation" {...props} isHidden={values.ExactLocationId !== 4} maxlength={"25"}/>
+    <Field component={DropdownInput} name="DeadAnimalLocationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.DeadAnimalLocations} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="OtherDeadAnimalLocation" {...props} isHidden={values.DeadAnimalLocationId !== 4} maxlength={"25"}/>
     <Field component={TextInput} name="AdditionalLocation" {...props} fullRow={true} maxlength={"100"}/>
 
     <FormSectionHeader title={Titles.sectionTwo}/>

@@ -59,7 +59,6 @@ import RecyclableMaterialTheft from './components/contact/recyclableMaterialThef
 import FailureStoreReceptacles from './components/contact/failureStoreReceptacles';
 import CollectionBinReport from './components/contact/collectionBinReport';
 import eeoComplaintForm from './components/contact/employmentOpportunityComplaint';
-import CollectionBinRegistration from './components/contact/collectionBinRegistrationIndex';
 import EwasteRequestForm from './components/contact/eWastePickupRequest'
 import CFCRequestForm from './components/contact/CFCrecoveryAppointmentRequest'
 import CRFLRequestForm from './components/contact/CRforLargeItems'
@@ -143,7 +142,6 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/commercialOrganics"} component={OrganicsForm}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/recyclableMaterialTheft"} component={RecyclableMaterialTheft}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/failureStoreReceptacles"} component={FailureStoreReceptacles}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>

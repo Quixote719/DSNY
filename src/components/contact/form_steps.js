@@ -54,7 +54,7 @@ const expiredCallback = () => {
 
 export function displayThankYouPage(success, successMessage, failureMessage)
 {
-  if(success.SRNo !== undefined) {
+  if(success != null && success.SRNo !== undefined) {
       return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
     } else {
       return(<ThankYou>{failureMessage}</ThankYou>);
@@ -64,8 +64,11 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
-    values.AddressAsEntered = geoCoderAddressResult.addressAsEnetered
+
     values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
+
+    values.AddressAsEntered = geoCoderAddressResult.addressAsEntered
+
     values.CrossStreet = geoCoderAddressResult.crossStreet
     values.PickupStreets = geoCoderAddressResult.pickupStreets
     values.Latitude = geoCoderAddressResult.latitude
@@ -78,9 +81,10 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.Borough = geoCoderAddressResult.borough
     values.City = geoCoderAddressResult.city
     values.Zip = geoCoderAddressResult.zipCode
-    values.SanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.Section = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
     values.BBL = geoCoderAddressResult.bbl
-    values.SanitationDistrict = geoCoderAddressResult.sanitationDistrict
+    values.District = geoCoderAddressResult.sanitationDistrict
+    values.Source = 'DSNY'
 	}
 }
  

@@ -25,6 +25,14 @@ export const formObject = {
   "DebrisInsideLot": false,
   "DebrisInFrontOfLot": false,
   "VehiclesOnLot": false,
+  "MediaFiles": [
+    {
+      "Id": 0,
+      "DetailRecordId": 0,
+      "FileName": null,
+      "URI": null
+    }
+  ],
   "IsAnonymous": false,
   "Id": 0,
   "SRNumberId": 0,

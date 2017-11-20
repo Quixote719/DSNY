@@ -41,6 +41,7 @@ export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL}garages`;
 //Forms
 export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests/1`;
 export const PSOT_FORM_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests`;
+export const PSOT_COLLECTION_BIN_REGISTRATION_URL = `${REST_WEBAPI_URL}collectionbinregistration`;
 export const PSOT_FORM_DEAD_ANIMAL_URL = `${REST_WEBAPI_URL}deadanimals`;
 export const PSOT_FORM_ORGANICS_BIN_URL = `${REST_WEBAPI_URL}organicsbinreplacement`;
 export const PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL = `${REST_WEBAPI_URL}obstructions`;

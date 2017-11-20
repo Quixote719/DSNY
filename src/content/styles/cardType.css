@@ -93,6 +93,10 @@
     float: right;
   }
 
+  .FormRow .cardTypeTitle{
+    padding-right: 15px;
+  }
+
   .FormRow .cardTitleText{
     padding-left: 10px;
   }

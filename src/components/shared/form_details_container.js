@@ -28,6 +28,7 @@ import AdoptABasketForm from '../contact/adoptABasket'
 import OrganicsForm from '../contact/commercialOrganics'
 import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
+import CompostRequest from '../contact/compostRequest'
 
 class FormDetail extends Component {
 
@@ -103,6 +104,8 @@ class FormDetail extends Component {
               return < CFCRequestForm/>
               case 'collection-request-for-large-items':
               return <CRFLRequestForm />
+              case 'dsny-compost-request':
+              return <CompostRequest />
               default:
               break;
             }
