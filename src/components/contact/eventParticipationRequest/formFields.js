@@ -99,7 +99,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextInput} name="PFullAddress" {...props} maxlength="50" required/>
     <Field component={TextInput} name="PSuite" {...props} maxlength="10" required/>
     <Field component={TextInput} name="PPhone" {...props} maxlength="21" required/>
-    <Field component={DropdownInput} name="PrimarySelectedPhoneType" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PSelectedPhoneType" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
     <Field component={TextInput}   name="PEmail" {...props} maxlength="50" required/>
     <Field component={TextInput}   name="PEmailConfirm" {...props} maxlength="50" required/>
 
@@ -111,7 +111,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextInput} name="SAddress"{...props} maxlength="50" />
     <Field component={TextInput} name="SSuite" {...props} maxlength="10" />
     <Field component={TextInput} name="SPhone" {...props} maxlength="21" />
-    <Field component={DropdownInput} name="SecondarySelectedPhoneTypes" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
+    <Field component={DropdownInput} name="SSelectedPhoneType" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" />
     <Field component={TextInput} name="SEmailConfirm" {...props} maxlength="50" />
     <Col xs={12}><DisplayFormikState {...props} /></Col>

@@ -64,7 +64,7 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
-    values.AddressAsEntered = geoCoderAddressResult.addressAsEnetered
+    values.AddressAsEntered = geoCoderAddressResult.addressAsEntered
     values.CrossStreet = geoCoderAddressResult.crossStreet
     values.PickupStreets = geoCoderAddressResult.pickupStreets
     values.Latitude = geoCoderAddressResult.latitude
@@ -77,9 +77,10 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.Borough = geoCoderAddressResult.borough
     values.City = geoCoderAddressResult.city
     values.Zip = geoCoderAddressResult.zipCode
-    values.SanitationCollectionSchedulingSectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
+    values.Section = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection
     values.BBL = geoCoderAddressResult.bbl
-    values.SanitationDistrict = geoCoderAddressResult.sanitationDistrict
+    values.District = geoCoderAddressResult.sanitationDistrict
+    values.Source = 'DSNY'
 	}
 }
  

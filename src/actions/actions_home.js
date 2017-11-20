@@ -46,7 +46,7 @@ export function getCollectionSchedule(address, callback=null) {
                     if(callback){
                         if(data.data.Goat!== null){
                             var DSNYGeoCoder = {};
-                            DSNYGeoCoder['addressAsEnetered'] = address;
+                            DSNYGeoCoder['addressAsEntered'] = address;
                             DSNYGeoCoder['crossStreet'] = data.data.Goat.CrossStreet;
                             DSNYGeoCoder['pickupStreets'] = data.data.Goat.PickupStreets;
                             DSNYGeoCoder['latitude'] = data.data.Goat.latitude;

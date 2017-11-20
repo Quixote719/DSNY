@@ -55,10 +55,13 @@ export const PSOT_FORM_MASTER_COMPOST_REQST = `${REST_WEBAPI_URL}mastercomposter
 export const POST_FORM_ADOPT_BASKET_URL = `${REST_WEBAPI_URL}adoptedbaskets`
 export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
 export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failuretostorereceptaclecomplaints`;
+export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL}eventparticipationrequests`;
 
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;
 export const FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemSubCategories?CategoryID=:Id`;
+export const IS_DISTRICT_ACTIVE = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/IsDistrictActive?districtCode=:Id`;
+export const GET_UNAVAILABLE_DATES = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetUnavailableDates?District=:Id&IsInsert=true`;
 
 export const POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration`;
 export const FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration/new`;

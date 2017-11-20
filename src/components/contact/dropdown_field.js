@@ -35,13 +35,13 @@ class FormDropdown extends Component {
       }
   }
   onInputChange(item) {
-    this.setState({option: item.DisplayName});
-    this.props.onChange(this.props.name, item.Id)
+    this.setState({option: item.DisplayName ?  item.DisplayName : item});
+    this.props.onChange(this.props.name, item.Id ? item.Id : item)
   }
 
   renderList(List) {
     return _.map(List, Item => {
-      return (<MenuItem key={Item.DisplayName} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
+      return (<MenuItem key={Item.DisplayName ? Item.DisplayName : Item} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName ? Item.DisplayName : Item}</MenuItem>);
     });
   }
 
