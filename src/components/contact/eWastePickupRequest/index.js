@@ -24,10 +24,14 @@ class EwasteRequestForm extends Component {
       editMode:true
     }
   }
-
-  componentDidMount() {
-    //this.props.fetchFormObject();
-  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.geoCoderAddressResult !== this.props.geoCoderAddressResult) {
+      const {geoCoderAddressResult} = nextProps
+      if (geoCoderAddressResult){
+        this.updateValues(geoCoderAddressResult)
+      }
+    }
+}
 
   updateValues(geoCoderAddressResult){
    this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
@@ -58,7 +62,7 @@ class EwasteRequestForm extends Component {
 
     if (geoCoderAddressResult){
       console.log(this.props);
-      if (typeof unavailableDates === 'undefined' || isDistrictActive )
+      if (typeof unavailableDates === 'undefined')
       this.updateValues(geoCoderAddressResult)
     }
 
