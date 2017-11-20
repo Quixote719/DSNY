@@ -27,12 +27,12 @@ class FormDateTimePicker extends Component {
 
     if(Dates){
 
-      var ddd = _.map(Dates,function(o) { return moment(o.UnavailableDate) });
-      console.log(ddd);
+      var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate) });
+
       var d = Dates[0];
   var valid = function( current ){
     var ddd = _.map(Dates,function(o) { return current !== moment(o.UnavailableDate) });
-      return current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 && ddd;
+      return current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 && !_.includes(dd, current);
     }
 
 };

@@ -40,8 +40,8 @@ const DisplayFormikState = props => <div style={{
 
 
 const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue, Dates, isDistrictActive} = props;
-
+	const {values, setFieldValue, Dates, isDistrictActive, geoCoderAddressResult} = props;
+console.log(geoCoderAddressResult ? geoCoderAddressResult.pickupStreets : 'zcbbzmfmasfnamnfd');
 	if (Dates  && typeof isDistrictActive !== undefined){
      values.isDistrictActive = isDistrictActive;
      values.Dates = Dates;
@@ -52,7 +52,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete/></div>
 		<FormSectionHeader title={Titles.sectionTwo}/>
-		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={values.PickupStreet} disabled={values.editMode}/>
+		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode}/>
 		<Field component={DateTimePickerInput} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
