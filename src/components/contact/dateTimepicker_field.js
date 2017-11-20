@@ -12,23 +12,25 @@ class FormDateTimePicker extends Component {
 
   constructor(props){
     super(props);
-    this.onInputChange = this.onInputChange.bind(this); 
+    this.onInputChange = this.onInputChange.bind(this);
+    this.state={
+      defaultDateFormat:'MM/DD/YYYY'
+    } 
   }
 
   onInputChange(item) {
-    console.log(item);
+    /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
+    item._d = moment(item._d).format(this.state.defaultDateFormat);
     this.props.onChange(this.props.name, item._d)
   }
 
   render() {
-    // console.log(this.props.disabled);
     return (
       <div>
         <Col xs={12} sm={6} md={6}>
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled }} defaultValue={this.props.defaultValue} className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
           </fieldset>

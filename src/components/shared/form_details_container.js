@@ -27,6 +27,7 @@ import MasterComposerCertificateCourseForm from '../contact/masterComposterCerti
 import AdoptABasketForm from '../contact/adoptABasket'
 import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
+import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 
 class FormDetail extends Component {
 
@@ -84,6 +85,8 @@ class FormDetail extends Component {
               return <DeadAnimalRemovalRequest />;
               case 'collection-bin-on-public-property-removal-request':
               return <CollectionBinOnPublicProperty />;
+              case 'event-participation-request':
+              return <EventParticipationRequestForm/>;
               case 'e-waste-pickup-request':
               return <EwasteRequestForm />;
               case 'recyclable-material-theft-observation':

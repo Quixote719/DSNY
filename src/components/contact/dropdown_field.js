@@ -36,12 +36,14 @@ class FormDropdown extends Component {
   }
   onInputChange(item) {
     this.setState({option: item.DisplayName});
-    this.props.onChange(this.props.name, item.Id)
+    /* If the dropdown is a time Drop down, then we map the Display Name to JSON Object instead of Id  */
+    const mapValueToJson = (item.type == 'time') ? item.DisplayName : item.Id;
+    this.props.onChange(this.props.name, mapValueToJson);
   }
 
   renderList(List) {
-    return _.map(List, Item => {
-      return (<MenuItem key={Item.DisplayName} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
+    return _.map(List, (Item,index) => {
+      return (<MenuItem key={Item.Id} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName}</MenuItem>);
     });
   }
 

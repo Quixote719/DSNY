@@ -26,10 +26,6 @@ class SiteVisitRequestForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
-
   postForm(formObject){
       let modifyFormObject = this.modifyFormObject(formObject);
       this.props.postFormObject(formObject, PSOT_FORM_SITE_VISIT_REQUEST);
