@@ -13,7 +13,6 @@ function searchObj (obj, query, replace) {
     }
 return obj
 }
-
 export default function cardReducer(state = {}, action) {
 
   switch (action.type) {
@@ -30,28 +29,20 @@ export default function cardReducer(state = {}, action) {
           success:action.payload.data
         };
     case types.FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST:
-
       return {
         ...state,
         formObject:searchObj(action.payload.data, false, null)
       };
-      case types.FETCH_PICKUP_ITEM_CATEGORIES:
-
+      case types.IS_DISTRICT_ACTIVE:
         return {
           ...state,
-          eWastePickupreqCatgItems:action.payload.data
+          isDistrictActive:action.payload.data
         };
-        case types.FETCH_PICKUP_ITEM_SUB_CATEGORIES:
+        case types.GET_UNAVAILABLE_DATES:
 
           return {
             ...state,
-            eWastePickupreqSubCatgItems:action.payload.data
-          };
-           case types.FETCH_PICKUP_ITEM_SUB_CATEGORIES_NEW:
-
-          return {
-            ...state,
-            eWastePickupreqSubCatgItemsNew:action.payload.data
+            unavailableDates:action.payload.data
           };
     default:
       return state;
