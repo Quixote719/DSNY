@@ -144,10 +144,6 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/recyclableMaterialTheft"} component={RecyclableMaterialTheft}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/failureStoreReceptacles"} component={FailureStoreReceptacles}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinRegistration"} component={CollectionBinRegistration}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/e-waste-pickup-request"} component={EwasteRequestForm}/>
-                <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/CFCRequestForm"} component={CFCRequestForm}/>
-<Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/CRFLRequestForm"} component={CRFLRequestForm}/>
-
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>
