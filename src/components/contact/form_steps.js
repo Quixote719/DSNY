@@ -64,7 +64,8 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
-    values.AdressAsEnetered = geoCoderAddressResult.addressAsEnetered
+    values.AddressAsEntered = geoCoderAddressResult.addressAsEnetered
+    values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
     values.CrossStreet = geoCoderAddressResult.crossStreet
     values.PickupStreets = geoCoderAddressResult.pickupStreets
     values.Latitude = geoCoderAddressResult.latitude
