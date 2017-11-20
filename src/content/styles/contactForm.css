@@ -198,6 +198,21 @@ min-height: 45px;
   min-height: 45px;
 }
 
+.incDecFieldbody{
+	color: #333333;
+	font-size: 16px;
+  margin-top: -15px;
+  margin-bottom: 12px;
+}
+.incDecSubFieldbody{
+	color: #333333;
+	font-size: 16px;
+  padding-top: 5px;
+  margin-top: -15px;
+  margin-bottom: 12px;
+  margin-left: 15px;
+  min-height: 45px;
+}
 
 .contactformButton {
   height: 36px;
@@ -221,6 +236,7 @@ min-height: 45px;
   line-height: 19px;
   margin-top: 40px;
 }
+
 
 .formSectionHeaderHairline {
   height: 2px;

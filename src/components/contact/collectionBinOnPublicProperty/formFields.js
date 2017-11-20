@@ -37,7 +37,7 @@ const CompostRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required/>
     <Field component={TextInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} required/>
-    <Field component={TextInput} name="OrganizationApartment" {...props} required maxlength={"10"}/>
+    <Field component={TextInput} name="OrganizationApartment" {...props} maxlength={"10"}/>
     <Field component={TextInput} name="OrganizationPhone" {...props} required maxlength={"21"}/>
     <FormSectionHeader title={Titles.sectionFour}/>
     <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
