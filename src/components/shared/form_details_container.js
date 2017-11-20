@@ -26,6 +26,8 @@ import SiteVisitRequestForm   from '../contact/siteVisitRequest'
 import MasterComposerCertificateCourseForm from '../contact/masterComposterCertificateCourse'
 import AdoptABasketForm from '../contact/adoptABasket'
 import OrganicsForm from '../contact/commercialOrganics'
+import CRFLRequestForm from '../contact/CRforLargeItems'
+import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 
 class FormDetail extends Component {
 
@@ -91,13 +93,16 @@ class FormDetail extends Component {
               return <FailureStoreReceptacles />
               case 'commercial-organics-on-site-processing-registration':
               return <OrganicsForm />
-              break;
               case   'site-visit-request':
               return <SiteVisitRequestForm />
               case 'master-composter-certificate-course':
               return <MasterComposerCertificateCourseForm />
               case 'adopt-a-basket-program':
               return <AdoptABasketForm />
+              case 'cfc-recovery-appointment-request':
+              return < CFCRequestForm/>
+              case 'collection-request-for-large-items':
+              return <CRFLRequestForm />
               default:
               break;
             }
