@@ -295,7 +295,7 @@ class CardSec extends Component {
     return (
         <div className='SContainer'>
           {header && <div>{header}</div>}
-          {body && <div>{body}</div> }
+          {body && <div id="contactPageBody">{body}</div> }
           <div></div>
         </div>
     );
