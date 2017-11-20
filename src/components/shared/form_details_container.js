@@ -25,9 +25,11 @@ import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
 import SiteVisitRequestForm   from '../contact/siteVisitRequest'
 import MasterComposerCertificateCourseForm from '../contact/masterComposterCertificateCourse'
 import AdoptABasketForm from '../contact/adoptABasket'
+import OrganicsForm from '../contact/commercialOrganics'
 import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
+import CompostRequest from '../contact/compostRequest'
 
 class FormDetail extends Component {
 
@@ -93,6 +95,8 @@ class FormDetail extends Component {
               return <RecyclableMaterialTheft />
               case 'failure-to-store-receptacles':
               return <FailureStoreReceptacles />
+              case 'commercial-organics-on-site-processing-registration':
+              return <OrganicsForm />
               case   'site-visit-request':
               return <SiteVisitRequestForm />
               case 'master-composter-certificate-course':
@@ -103,6 +107,8 @@ class FormDetail extends Component {
               return < CFCRequestForm/>
               case 'collection-request-for-large-items':
               return <CRFLRequestForm />
+              case 'dsny-compost-request':
+              return <CompostRequest />
               default:
               break;
             }

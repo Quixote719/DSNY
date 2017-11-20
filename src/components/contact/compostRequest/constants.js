@@ -45,6 +45,8 @@ export const Titles = {
   AlternateSideParking: 'ALTERNATE SIDE PARKING DAYS? (Select ALL that apply)',
   AlternateSideParkingTimes: 'PREFERRED DELIVERY TIMES From',
   RequiredFieldMessage: 'This field is required',
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
 }
 
 

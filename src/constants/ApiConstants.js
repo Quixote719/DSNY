@@ -60,6 +60,8 @@ export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL}eventparticipati
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;
 export const FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemSubCategories?CategoryID=:Id`;
+export const IS_DISTRICT_ACTIVE = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/IsDistrictActive?districtCode=:Id`;
+export const GET_UNAVAILABLE_DATES = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetUnavailableDates?District=:Id&IsInsert=true`;
 
 export const POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration`;
 export const FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration/new`;

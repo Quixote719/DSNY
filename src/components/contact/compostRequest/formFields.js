@@ -41,7 +41,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="OrganizationFacebookPage" {...props}/>
     <Field component={TextInput} name="OrganizationTwitterHandle" {...props}/>
     <Field component={TextInput} name="OrganizationInstagramHandle" {...props}/>
-    <Field component={FileDropZone} name="dummy" {...props}/>
+    {/*<Field component={FileDropZone} name="dummy" {...props}/>*/}
 
     <FormSectionHeader title={Titles.sectionFour}/>
     <Field component={TextInput} name="FirstName" {...props}/>
