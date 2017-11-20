@@ -31,7 +31,6 @@ class FormDateTimePicker extends Component {
 
       var d = Dates[0];
   var valid = function( current ){
-    var ddd = _.map(Dates,function(o) { return current !== moment(o.UnavailableDate) });
       return current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 && !_.includes(dd, current);
     }
 
