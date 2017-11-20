@@ -53,7 +53,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<div><FormAddressAutocomplete/></div>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={values.PickupStreet} disabled={values.editMode}/>
-		<Field component={DateTimePickerInput} Dates={values.Dates} name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={DateTimePickerInput} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
