@@ -54,7 +54,7 @@ const expiredCallback = () => {
 
 export function displayThankYouPage(success, successMessage, failureMessage)
 {
-  if(success.SRNo !== undefined) {
+  if(success != null && success.SRNo !== undefined) {
       return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
     } else {
       return(<ThankYou>{failureMessage}</ThankYou>);
@@ -64,7 +64,7 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
-    values.AdressAsEnetered = geoCoderAddressResult.addressAsEnetered
+    values.AddressAsEntered = geoCoderAddressResult.addressAsEnetered
     values.CrossStreet = geoCoderAddressResult.crossStreet
     values.PickupStreets = geoCoderAddressResult.pickupStreets
     values.Latitude = geoCoderAddressResult.latitude
