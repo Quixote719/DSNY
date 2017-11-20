@@ -12,25 +12,6 @@ import FormAddressAutocomplete from '../formAddressAutocomplete'
 import TextAreaInput from '../textarea_field';
 import {Col} from 'react-bootstrap';
 
-const DisplayFormikState = props => <div style={{
-  margin: '1rem 0'
-}}>
-<h3 style={{
-    fontFamily: 'monospace'
-  }}/>
-<pre
-    style={{
-      background: '#f6f8fa',
-      fontSize: '2rem',
-      padding: '.5rem',
-    }}
-  >
-    <strong>values</strong> ={' '}
-
-    {JSON.stringify(props.values, null, 2)}
-  </pre>
-</div>;
-
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
   const {
@@ -53,7 +34,6 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
     <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"}/>   
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
   </fieldset>)
 };
 

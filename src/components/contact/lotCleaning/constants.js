@@ -12,6 +12,9 @@ export const Titles = {
   Email: 'E-MAIL',
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
+  Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
 }
 
@@ -50,16 +53,5 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": null,
   "AddressTextOneLine": null,
-  "MediaFiles": [
-    {
-      "Id": 0,
-      "SRNo": null,
-      "RequestCode": null,
-      "DirectoryName": null,
-      "DetailRecordId": 0,
-      "FileName": null,
-      "ImageUrl": null
-    }
-  ],
   "files": []
 }
