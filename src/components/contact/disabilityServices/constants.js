@@ -4,6 +4,8 @@ export const Titles = {
   Email: 'YOUR E-MAIL ADDRESS',
   Subject: "SUBJECT",
   Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
   // RequiredFieldMessage: 'This field is required',
 }
 

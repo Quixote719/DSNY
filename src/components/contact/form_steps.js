@@ -6,6 +6,7 @@ import isEmpty from 'lodash/isEmpty'
 import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
 import FormButton from './form_button';
+import ThankYou from './thank_you';
 
 // import '../../content/styles/contactForm.css';
 
@@ -51,6 +52,15 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
+export function displayThankYouPage(SRNo, SuccessMessage, FailureMessage)
+{
+  if(SRNo !== undefined) {
+      return(<ThankYou>{SuccessMessage + SRNo}</ThankYou>);
+    } else {
+      return(<ThankYou>{FailureMessage}</ThankYou>);
+    } 
+
+}
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
@@ -116,7 +126,7 @@ const Step2 = (props) => {
   } = props;
   return (<span>
     {props.values.editMode = true}
-    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
+    {/*{assignGeoCoderAddressValues(props.values, geoCoderAddressResultObject)}*/}
     <props.formFields {...props} />
 
 

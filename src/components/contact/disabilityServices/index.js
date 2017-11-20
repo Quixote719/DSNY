@@ -6,12 +6,11 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
-import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -47,14 +46,8 @@ class DisabilityServices extends Component {
         //const {FormObject, error, success} = this.props;
         const {success, error} = this.props;
        
-    
         if(success !== undefined) {
-          if(success != null) {
-            let message = 'Success! Your response No. is: ' + success.SRNo;
-            return(<ThankYou>{message}</ThankYou>);
-          } else {
-            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
-          }          
+          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
         }
     
         if (FormObject && FormObject !== undefined) {
