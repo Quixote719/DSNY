@@ -57,9 +57,9 @@ class FormRow extends Component {
       default:
         return (
           <Col className='nopadding' xs={12} sm={style == 'FullWidth'
-            ? 6
+            ? 12
             : 12} md={style == 'FullWidth'
-            ? 4
+            ? 12
             : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
