@@ -34,7 +34,7 @@ export const Titles = {
   POrganization: 'ORGANIZATION',
   PFullAddress: 'ADDRESS',
   PSuite:'FLOOR/SUITE/APT (OPTIONAL)',
-  PrimarySelectedPhoneType:'PHONE TYPE',
+  PSelectedPhoneType:'PHONE TYPE',
   PEmailConfirm:'CONFIRM E-MAIL',
   SFirstName:'FIRST NAME (OPTIONAL)',
   SLastName: 'LAST NAME (OPTIONAL)',
@@ -45,7 +45,7 @@ export const Titles = {
   SAddress: 'ADDRESS (OPTIONAL)',
   SSuite:'FLOOR/SUITE/APT (OPTIONAL)',
   SPHONE:'PHONE (OPTIONAL)',
-  SecondarySelectedPhoneTypes:'PHONE TYPE (OPTIONAL)',
+  SSelectedPhoneType:'PHONE TYPE (OPTIONAL)',
   SEmailConfirm: 'CONFIRM E-MAIL (OPTIONAL)',
   Theme:'EVENT THEME',
   TargetAudiences:'TARGET AUDIENCE',
@@ -132,6 +132,7 @@ export const formObject = {
   "PTitle": null,
   "POrganization": null,
   "PFullAddress": null,
+  "PSelectedPhoneType":null,
   "SFirstName": null,
   "SLastName": null,
   "SPhone": null,
@@ -146,19 +147,19 @@ export const formObject = {
   "Theme":null,
    "PrimarySelectedPhoneType": [
     {
-      "Id": 1,
+      "Id": '1',
       "Name": "Work",
       "DisplayName": "Work",
       "Selected": false
     },
     {
-      "Id": 2,
+      "Id": '2',
       "Name": "Mobile",
       "DisplayName": "Mobile",
       "Selected": false
     },
     {
-      "Id": 3,
+      "Id": '3',
       "Name": "Home",
       "DisplayName": "Home",
       "Selected": false
@@ -166,19 +167,19 @@ export const formObject = {
   ],
   "SecondarySelectedPhoneTypes": [
     {
-      "Id": 1,
+      "Id": '1',
       "Name": "Work",
       "DisplayName": "Work",
       "Selected": false
     },
     {
-      "Id": 2,
+      "Id": '2',
       "Name": "Mobile",
       "DisplayName": "Mobile",
       "Selected": false
     },
     {
-      "Id": 3,
+      "Id": '3',
       "Name": "Home",
       "DisplayName": "Home",
       "Selected": false
@@ -189,91 +190,106 @@ export const formObject = {
       "Id": 1,
       "Name": "OneAm",
       "DisplayName": "01:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 13,
       "Name": "OnePm",
       "DisplayName": "01:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 2,
       "Name": "TwoAm",
       "DisplayName": "02:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 14,
       "Name": "TwoPm",
       "DisplayName": "02:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 3,
       "Name": "ThreeAm",
       "DisplayName": "03:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 15,
       "Name": "ThreePm",
       "DisplayName": "03:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 4,
       "Name": "FourAm",
       "DisplayName": "04:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 16,
       "Name": "FourPm",
       "DisplayName": "04:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 5,
       "Name": "FiveAm",
       "DisplayName": "05:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 17,
       "Name": "FivePm",
       "DisplayName": "05:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 6,
       "Name": "SixAm",
       "DisplayName": "06:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 18,
       "Name": "SixPm",
       "DisplayName": "06:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 19,
       "Name": "SevenPm",
       "DisplayName": "07:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 8,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 20,
@@ -285,49 +301,57 @@ export const formObject = {
       "Id": 9,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 21,
       "Name": "NinePm",
       "DisplayName": "09:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 10,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 22,
       "Name": "TenPm",
       "DisplayName": "10:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 11,
       "Name": "ElevenAm",
       "DisplayName": "11:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 23,
       "Name": "ElevenPm",
       "DisplayName": "11:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 0,
       "Name": "TwelveAm",
       "DisplayName": "12:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 12,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     }
   ],
   "EndDailyTimes": [
@@ -341,139 +365,162 @@ export const formObject = {
       "Id": 13,
       "Name": "OnePm",
       "DisplayName": "01:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 2,
       "Name": "TwoAm",
       "DisplayName": "02:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 14,
       "Name": "TwoPm",
       "DisplayName": "02:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 3,
       "Name": "ThreeAm",
       "DisplayName": "03:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 15,
       "Name": "ThreePm",
       "DisplayName": "03:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 4,
       "Name": "FourAm",
       "DisplayName": "04:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 16,
       "Name": "FourPm",
       "DisplayName": "04:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 5,
       "Name": "FiveAm",
       "DisplayName": "05:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 17,
       "Name": "FivePm",
       "DisplayName": "05:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 6,
       "Name": "SixAm",
       "DisplayName": "06:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 18,
       "Name": "SixPm",
       "DisplayName": "06:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 19,
       "Name": "SevenPm",
       "DisplayName": "07:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 8,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 20,
       "Name": "EightPm",
       "DisplayName": "08:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 9,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 21,
       "Name": "NinePm",
       "DisplayName": "09:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 10,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 22,
       "Name": "TenPm",
       "DisplayName": "10:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 11,
       "Name": "ElevenAm",
       "DisplayName": "11:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 23,
       "Name": "ElevenPm",
       "DisplayName": "11:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 0,
       "Name": "TwelveAm",
       "DisplayName": "12:00 AM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     },
     {
       "Id": 12,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
-      "Selected": false
+      "Selected": false,
+      "type":"time",
     }
   ],
   

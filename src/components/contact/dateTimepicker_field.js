@@ -13,10 +13,14 @@ class FormDateTimePicker extends Component {
   constructor(props){
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
+    this.state={
+      defaultDateFormat:'MM/DD/YYYY'
+    } 
   }
 
   onInputChange(item) {
-    console.log(item);
+    /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
+    item._d = moment(item._d).format(this.state.defaultDateFormat);
     this.props.onChange(this.props.name, item._d)
   }
 
