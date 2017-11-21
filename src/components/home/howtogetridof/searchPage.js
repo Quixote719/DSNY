@@ -29,7 +29,6 @@ class SearchPage extends Component {
             value: this.props.keyword,
             suggestions: [],
             placeholder: "Enter your search term",
-            checkInputresults: "",
             searchResult: "",
           };
     }
@@ -83,11 +82,10 @@ class SearchPage extends Component {
                 </div>
                 </div>
             );
-        });
+        }); 
       };
     searchResultPage(event,{suggestion}){
         this.setState({
-            checkInputresults: "clearBoxNotChecked",
             searchResult: ""
          });
         this.props.getRidOfSearchResults(suggestion);   
@@ -95,15 +93,16 @@ class SearchPage extends Component {
     clearSearchBox(){
         this.setState({
             value: "",
-            checkInputresults: "clearBoxChecked"
          });
     }
     handleKeyPress = (event) => {
+        if(this.state.value.trim().length == 0 && event.keyCode == 32){
+            event.preventDefault();
+          }   
         if(event.key == 'Enter'){
             this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
             this.props.getRidOfSearchResults(this.state.value);   
             this.setState({
-                checkInputresults: "clearBoxNotChecked",
                 searchResult: ""
              });           
         }
@@ -113,6 +112,16 @@ class SearchPage extends Component {
             activePage: eventKey
         });
     }
+    resetPlaceHolder = () =>{
+        this.setState({
+          placeholder: "Enter your search term"
+        })
+      }
+      setPlaceHolder = () =>{
+        this.setState({
+          placeholder: " "
+        })
+      }
     render() {
         const activePage = this.state.activePage;
         let length = this.props.getRidOfSearchResultsData.length;
@@ -134,25 +143,28 @@ class SearchPage extends Component {
                                 getSuggestionValue={getSuggestionValue}
                                 renderSuggestion={renderSuggestion}
                                 onSuggestionSelected={this.searchResultPage}
-                                inputProps={{
+                                    inputProps={{
+                                    onBlur: this.resetPlaceHolder,
+                                    onFocus: this.setPlaceHolder,
                                     value: this.state.value,
                                     onChange: this.onChange,
                                     className: "ridOfSearchResults",
                                     placeholder: this.state.placeholder,
-                                    onKeyPress: this.handleKeyPress
+                                    onKeyPress: this.handleKeyPress,                         onKeyDown: this.handleKeyPress,
+                                    onKeyDown: this.handleKeyPress,
                                 }}/>
                                 <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.state.value!==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
                                 <i className="fa fa-search collectionSearch" style={this.state.value ==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
                             </div>
                     </Col>
                 </Row>
-                <div style={this.state.checkInputresults == "clearBoxChecked" || this.state.searchResult =="noSearchResults"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
+                <div style={this.state.searchResult =="noSearchResults"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
 
-                <div style={this.state.checkInputresults == "clearBoxChecked"?{display: 'none'}:{display: 'block'}}>
+                <div>
                     {this.ridOfSearchResults(messageList)}
                 </div>
                 <Pagination className="searchBoxPaginate"
-                        style={this.state.checkInputresults == "clearBoxChecked" || this.props.noOfSearchResults <= 0 ? {display: 'none'}:{display: 'block'}}
+                        style={this.props.noOfSearchResults <= 0 ? {display: 'none'}:{display: 'block'}}
                         prev={<img src={paginationleftArrow} alt="paginationleftArrow" />}
                         next={<img src={paginationrightArrow} alt="paginationrightArrow" />}
                         ellipsis
