@@ -38,7 +38,7 @@ export function checkAddressValidator(key) {
         })
     }
 }
-export function getCollectionSchedule(address, callback=null) {
+export function getCollectionSchedule(address, callback=null, callbackSuccess = null) {
     return function (dispatch) {
         axios.get(COLLECTION_SCHEDULE_URL+address)
             .then((data) => {
@@ -107,6 +107,8 @@ export function getCollectionSchedule(address, callback=null) {
                         noResultsError: data.data,
                         suggestionAddress: data.data.Suggestions,
                     })
+                    if(callbackSuccess)
+                    callbackSuccess();
                     if(callback)
                         callback();
                 })

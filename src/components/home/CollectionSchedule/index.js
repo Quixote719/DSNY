@@ -20,13 +20,13 @@ class CollectionSchedule extends Component {
         super(props, context);
         this.state = {
             address: this.props.match.params.address,            
-            placeholder: "Enter your search term",
+            placeholder: "When is Collection at ...",
             checkInputresults: "",            
           };
     }
     componentWillMount(){
         var address = this.props.match.params.address;
-        this.props.getCollectionSchedule(address);                
+        this.props.getCollectionSchedule(address, null, this.successCallback);                
         if(this.props.match.path !== "/assets/donate/development/react/collectionSchedule"){
             this.setState({
                 checkInputresults: ""                
@@ -46,7 +46,7 @@ class CollectionSchedule extends Component {
     }
     resetPlaceHolder = () =>{
         this.setState({
-          placeholder: "Enter your search term"
+          placeholder: "When is Collection at ..."
         })
       }
     setPlaceHolder = () =>{
@@ -66,10 +66,20 @@ class CollectionSchedule extends Component {
                 address: address,
                 checkInputresults: "clearBoxNotChecked"                
              });
-            this.props.getCollectionSchedule(address);                            
+            this.props.getCollectionSchedule(address, null, this.successCallback);
             this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
         }        
     }
+    successCallback =(success)=>{
+        this.setState({
+            address: this.props.noResultsError.FormattedAddress,
+         });
+    }
+    handleKeyPress = (event) => {
+        if(this.state.address.trim().length == 0 && event.keyCode == 32){
+          event.preventDefault();
+        }   
+      }
     collectionScheduleTable(){
         return (<CollectionScheduleTable holidayData = {this.props.holidayData} arrayLength ={this.props.arrayLength} collectionScheduleData = {this.props.collectionScheduleData}/>)
     }
@@ -94,6 +104,7 @@ class CollectionSchedule extends Component {
             new window.google.maps.LatLng(40.495992,-74.257159));
 
         const inputProps = { 
+            onKeyDown: this.handleKeyPress,            
             value: this.state.address,
             onChange: this.handleChange,
             placeholder: this.state.placeholder,
@@ -142,12 +153,12 @@ class CollectionSchedule extends Component {
                 </div>
 
                 <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
-                <div className = "addressNotFound">
-                The address entered can not be found. 
-                </div>
-                <div className = "selectFromAddressBelow">
-                Please select from the possible addresses below                
-                </div>
+                    <div className = "addressNotFound">
+                    The address entered can not be found. 
+                    </div>
+                    <div className = "selectFromAddressBelow">
+                    Please select from the possible addresses below                
+                    </div>
                     {this.correctAddressList()}
                 </div>
 

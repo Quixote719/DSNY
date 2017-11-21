@@ -39,9 +39,9 @@ class RoutingTimes extends Component {
                     <span>
                         {this.props.collectionScheduleInfo?" "+this.districtInfo():""}
                     </span>
-                    <div className="moreCollectionInfo">
+                    {/* <div className="moreCollectionInfo">
                     More Collection Information
-                    </div>
+                    </div> */}
             </div>
         )
     }
