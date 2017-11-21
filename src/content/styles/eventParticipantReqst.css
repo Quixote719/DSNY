@@ -59,7 +59,8 @@
 }
 
 .FormField {
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
+  margin-bottom: 10px;
 }
 
 .open>.dropdown-menu {

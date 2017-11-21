@@ -16,6 +16,7 @@ const SubmitThankYou = props => {
         <Col>
           {/*<div className='thankYoupatternLine'></div>*/}
           { demoDisplay()}
+          <div className='SContainer patternLineGreen'></div>
             <div className='thankyoulable'>THANK YOU</div>
               <div className='thankyoubody' >
                 {Parser(props.children)}

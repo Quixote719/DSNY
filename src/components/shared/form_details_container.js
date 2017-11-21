@@ -8,7 +8,7 @@ import ImageSection from './ImageSection'
 
 //Sub Components
 import Header from './Breadcrumb/breadcrumb_container'
-import CardSec from './form_sec'
+import FormSec from './form_sec'
 
 // Form Components
 import DisabilityServices from '../contact/disabilityServices'
@@ -155,7 +155,7 @@ class FormDetail extends Component {
                 return (
                   <div key={sec.id}>
                     <div>
-                      <CardSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
+                      <FormSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
                     </div>
                   </div>
                 );
@@ -164,7 +164,7 @@ class FormDetail extends Component {
               return (
                 <div key={sec.id}>
                   <div>
-                    <CardSec dataObject={sec}/>
+                    <FormSec dataObject={sec}/>
                   </div>
                 </div>
               );
