@@ -58,7 +58,7 @@ class EwasteRequestForm extends Component {
   }
 
   render() {
-    const { error, success, isDistrictActive, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
+    const { error, success, isDistrictActive, buildingStatus, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
 
     if (geoCoderAddressResult){
       console.log(this.props);
@@ -85,6 +85,7 @@ function mapStateToProps(state) {
     success:state.forms.success,
     isDistrictActive:state.forms.isDistrictActive,
     unavailableDates:state.forms.unavailableDates,
+    buildingStatus:state.forms.buildingStatus,
     geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
     isAddressValidated: state.carouselDataReducer.addressValidator,
     error:state.error.type
