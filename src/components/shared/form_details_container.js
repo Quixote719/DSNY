@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 
 //Actions
-import {fetchCardDetails} from "../../actions";
+import {fetchPageData} from "../../actions";
 import ImageSection from './ImageSection'
 
 //Sub Components
@@ -44,7 +44,7 @@ class FormDetail extends Component {
 
   componentWillMount() {
     const {slug} = this.props.match.params;
-    this.props.fetchCardDetails(slug);
+    this.props.fetchPageData(slug);
   }
 
   componentWillReceiveProps(nextProps, nextState) {
@@ -52,7 +52,7 @@ class FormDetail extends Component {
     if (this.slug !== slug) {
       this.slug = slug;
       this.setState({reload: true});
-      this.props.fetchCardDetails(slug);
+      this.props.fetchPageData(slug);
     }
   }
 
@@ -187,4 +187,4 @@ function mapStateToProps(state) {
   return {cardDetails: state.card};
 }
 
-export default connect(mapStateToProps, {fetchCardDetails})(FormDetail);
+export default connect(mapStateToProps, {fetchPageData})(FormDetail);

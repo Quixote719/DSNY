@@ -3,7 +3,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 
 //Actions
-import {fetchCardDetails} from "../../../actions";
+import {fetchPageData} from "../../../actions";
 import ImageSection from '../../shared/ImageSection'
 
 //Sub Components
@@ -24,7 +24,7 @@ class cardDetailContainer extends Component {
 
   componentWillMount() {
     const {slug} = this.props.match.params;
-    this.props.fetchCardDetails(slug);
+    this.props.fetchPageData(slug);
   }
 
   componentWillReceiveProps(nextProps, nextState) {
@@ -32,7 +32,7 @@ class cardDetailContainer extends Component {
     if (this.slug !== slug) {
       this.slug = slug;
       this.setState({reload: true});
-      this.props.fetchCardDetails(slug);
+      this.props.fetchPageData(slug);
     }
   }
 
@@ -101,4 +101,4 @@ function mapStateToProps(state) {
   return {cardDetails: state.card};
 }
 
-export default connect(mapStateToProps, {fetchCardDetails})(cardDetailContainer);
+export default connect(mapStateToProps, {fetchPageData})(cardDetailContainer);
