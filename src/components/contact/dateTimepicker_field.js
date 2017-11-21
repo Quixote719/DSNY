@@ -13,9 +13,10 @@ class FormDateTimePicker extends Component {
   constructor(props){
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
+
     this.state={
       defaultDateFormat:'MM/DD/YYYY'
-    } 
+    }
   }
 
   onInputChange(item) {
@@ -24,18 +25,32 @@ class FormDateTimePicker extends Component {
     this.props.onChange(this.props.name, item._d);
   }
 
+
+
   render() {
-    var yesterday = Datetime.moment().subtract(1, 'day');
+
     const{Dates} = this.props;
 
+    function contains(a, obj) {
+       var i = a.length;
+       while (i--) {
+         
+          if (moment(a[i]).isSame(moment(obj))) {
+
+              return true;
+          }
+       }
+       return false;
+   }
 
     if(Dates){
 
-      var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate) });
+      var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
 
       var d = Dates[0];
   var valid = function( current ){
-      return current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 && !_.includes(dd, current);
+    console.log(contains(dd, current._d));
+      return (!contains(dd, current._d) ) && (current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 ) ;
     }
 
 };
