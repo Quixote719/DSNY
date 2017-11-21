@@ -21,45 +21,59 @@ export const Titles = {
 
 export const formObject = {
 
-  "AdditionalLocationInfo": null,
-  "DebrisInsideLot": false,
-  "DebrisInFrontOfLot": false,
-  "VehiclesOnLot": false,
-  "MediaFiles": [
-    {
-      "Id": 0,
-      "DetailRecordId": 0,
-      "FileName": null,
-      "URI": null
-    }
-  ],
-  "IsAnonymous": false,
-  "Id": 0,
-  "SRNumberId": 0,
-  "SRNo": null,
-  "ServiceRequestStatusId": 0,
-  "Source": null,
-  "CreatedDate": "0001-01-01T00:00:00",
-  "FirstName": null,
-  "LastName": null,
-  "Phone": null,
-  "Email": null,
-  "FullName": null,
-  "FullNameLastFirst": null,
-  "AddressAsEntered": null,
-  "HouseNumber": null,
-  "Street": null,
-  "Apartment": null,
-  "Borough": null,
-  "City": null,
-  "State": null,
-  "Zip": null,
-  "District": null,
-  "Section": null,
-  "BBL": null,
-  "Latitude": 0,
-  "Longitude": 0,
-  "AddressText": null,
-  "AddressTextOneLine": null,
+  // "AdditionalLocationInfo": null,
+  // "DebrisInsideLot": false,
+  // "DebrisInFrontOfLot": false,
+  // "VehiclesOnLot": false,
+  // "MediaFiles": [
+  //   {
+  //     "Id": 0,
+  //     "DetailRecordId": 0,
+  //     "FileName": null,
+  //     "URI": null
+  //   }
+  // ],
+  // "IsAnonymous": false,
+  // "Id": 0,
+  // "SRNumberId": 0,
+  // "SRNo": null,
+  // "ServiceRequestStatusId": 0,
+  // "Source": null,
+  // "CreatedDate": "0001-01-01T00:00:00",
+  // "FirstName": null,
+  // "LastName": null,
+  // "Phone": null,
+  // "Email": null,
+  // "FullName": null,
+  // "FullNameLastFirst": null,
+  // "AddressAsEntered": null,
+  // "HouseNumber": null,
+  // "Street": null,
+  // "Apartment": null,
+  // "Borough": null,
+  // "City": null,
+  // "State": null,
+  // "Zip": null,
+  // "District": null,
+  // "Section": null,
+  // "BBL": null,
+  // "Latitude": 0,
+  // "Longitude": 0,
+  // "AddressText": null,
+  // "AddressTextOneLine": null,
+  // "files": []
+}
+
+export const fileObject = {
+  // "DetailRecordId": 0,
+  // "FileName": null,
+  // "SRNo": null,
+  // "RequestCode": null,
+  // "RequestCodeObject": {
+  //   "DisplayName": null,
+  //   "RequestCode": null
+  // },
+  // "Id": 0,
+  // "URI": null
   "files": []
 }

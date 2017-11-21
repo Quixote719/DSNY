@@ -30,6 +30,8 @@ import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
+import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationForm'
+
 
 class FormDetail extends Component {
 
@@ -109,6 +111,8 @@ class FormDetail extends Component {
               return <CRFLRequestForm />
               case 'dsny-compost-request':
               return <CompostRequest />
+              case 'collection-bin-registration':
+              return <CollectionBinRegistrationForm />
               default:
               break;
             }
