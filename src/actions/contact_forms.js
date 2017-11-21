@@ -56,7 +56,7 @@ export function IsDistrictActive(id) {
 
 export function GetUnavailableDates(id) {
 	return function(dispatch) {
-		axios.get(FETCH_TEN_PLUS_BUILDINGS_STATUS.replace(':Id', id)).then((data) => {
+		axios.get(GET_UNAVAILABLE_DATES.replace(':Id', id)).then((data) => {
 			dispatch({type: types.GET_UNAVAILABLE_DATES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
@@ -66,7 +66,7 @@ export function GetUnavailableDates(id) {
 
 export function GetBulidingUnits(bbl) {
 	return function(dispatch) {
-		axios.get(GET_UNAVAILABLE_DATES.replace(':BBL', bbl)).then((data) => {
+		axios.get(FETCH_TEN_PLUS_BUILDINGS_STATUS.replace(':BBL', bbl)).then((data) => {
 			dispatch({type: types.TEN_PLUS_BUILDINGS_STATUS, payload: data})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error})
