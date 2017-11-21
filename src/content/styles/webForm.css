@@ -68,3 +68,12 @@ label.checkContainer{
      -ms-transform: rotate(45deg);
      transform: rotate(45deg);
  }
+
+ .fa-plus-circle{
+   margin: 12px 0 0 0;
+   color: #00764D;
+   width: 28px;
+   height: 28px;
+   font-size: 28px;
+   display: block;
+ }

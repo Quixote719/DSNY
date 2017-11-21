@@ -42,7 +42,6 @@ class CollectionBinReport extends Component {
   }
 
   render() {
-
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
