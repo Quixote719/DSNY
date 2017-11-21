@@ -30,6 +30,8 @@ import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
+import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationForm'
+
 
 class WebformPage extends Component {
 
@@ -108,7 +110,9 @@ class WebformPage extends Component {
               case 'collection-request-for-large-items':
                 return <CRFLRequestForm />
               case 'dsny-compost-request':
-                return <CompostRequest />
+              return <CompostRequest />
+              case 'collection-bin-registration':
+              return <CollectionBinRegistrationForm />
               default:
                 break;
             }
