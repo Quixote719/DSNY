@@ -75,5 +75,5 @@ export const fileObject = {
   // },
   // "Id": 0,
   // "URI": null
-  "files": []
+  "TEST": []
 }

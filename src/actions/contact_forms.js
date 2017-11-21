@@ -85,6 +85,28 @@ export function postFormObject(formObject, Url) {
 	}
 }
 
+// export function postFormObject(formObject, Url) {
+// 	return function(dispatch) {
+// 		dispatch({type: types.POST_FORM_REQUEST, payload: {},})
+// 		var testFile = formObject.TEST[0];
+// 		// axios.post(Url, {data: file});
+		
+// 		axios({
+// 			method: 'post',
+// 			url: Url,
+// 			data: testFile,
+// 			headers: {
+// 				'Content-Type': 'multipart/form-data'
+// 			}
+// 		}).then((data) => {
+// 		//axios.post(Url, formObject).then((data, headers) => {
+// 			dispatch({type: types.POST_FORM_REQUEST, payload: data,})
+// 		}).catch(function(error) {
+// 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+// 		});
+// 	}
+// }
+
 export function fetchOrganicsForm(category) {
 	return function(dispatch) {
 		axios.get(FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL).then((data) => {

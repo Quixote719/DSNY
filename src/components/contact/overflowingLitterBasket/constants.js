@@ -1,6 +1,7 @@
 export const Titles = {
   sectionOne: 'WHERE IS LITTER BASKET LOCATED',
-  sectionTwo: 'CONTACT INFORMATION',
+  sectionTwo: ' INFORMATION',
+  sectionThree: 'CONTACT INFORMATION',
   AnimalId: 'TYPE OF ANIMAL',
   OtherAnimal: 'OTHER ANIMAL',
   ExactLocationId: 'EXACT LOCATION',
@@ -15,6 +16,8 @@ export const Titles = {
   Message: "MESSAGE",
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
+  LitterBasketReasonId: 'REASON FOR LITTER BASKET REQUEST',
+  OtherReason:'OTHER REASON',
   RequiredFieldMessage: 'This field is required',
 }
 
@@ -23,8 +26,38 @@ export const formObject = {
   "Reasons": [
     {
       "Id": 1,
-      "Name": "",
-      "DisplayName": "",
+      "Name": "Bus Stop",
+      "DisplayName": "Bus Stop",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "High Pedestrian Traffic",
+      "DisplayName": "High Pedestrian Traffic",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "School",
+      "DisplayName": "School",
+      "Selected": false
+    },
+    {
+      "Id": 4,
+      "Name": "Subway",
+      "DisplayName": "Subway",
+      "Selected": false
+    },
+    {
+      "Id": 5,
+      "Name": "Commercial Area",
+      "DisplayName": "Commercial Area",
+      "Selected": false
+    },
+    {
+      "Id": 6,
+      "Name": "Other",
+      "DisplayName": "Other",
       "Selected": false
     }
   ],
