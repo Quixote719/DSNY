@@ -10,7 +10,7 @@ import ImageSection from '../../shared/ImageSection'
 import Header from '../Breadcrumb/breadcrumb_container'
 import CardSec from './card_sec'
 
-class cardDetailContainer extends Component {
+class StandardPage extends Component {
 
   constructor(props) {
     super(props);
@@ -100,4 +100,4 @@ function mapStateToProps(state) {
   return { cardDetails: state.card };
 }
 
-export default connect(mapStateToProps, { fetchPageData })(cardDetailContainer);
+export default connect(mapStateToProps, { fetchPageData })(StandardPage);

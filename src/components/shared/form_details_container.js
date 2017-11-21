@@ -31,7 +31,7 @@ import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
 
-class FormDetail extends Component {
+class WebformPage extends Component {
 
   constructor(props) {
     super(props);
@@ -188,4 +188,4 @@ function mapStateToProps(state) {
   return { pageData: state.card };
 }
 
-export default connect(mapStateToProps, { fetchPageData })(FormDetail);
+export default connect(mapStateToProps, { fetchPageData })(WebformPage);
