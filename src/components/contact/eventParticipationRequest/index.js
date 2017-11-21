@@ -47,8 +47,8 @@ class EventParticipationRequestForm extends Component {
       'Phone':formObject.PPhone,
       'Title':formObject.PTitle,
       'Organization':formObject.POrganization,
-      'Zip':null,
-      'SelectedPhoneType':formObject.PrimarySelectedPhoneType,
+      'Zip':'11218',
+      'PhoneTypeId':formObject.PPhoneTypeId,
       'Email':formObject.PEmailConfirm,
     }
 
@@ -59,8 +59,8 @@ class EventParticipationRequestForm extends Component {
       'Phone':formObject.SPhone,
       'Title':formObject.STitle,
       'Organization':formObject.SOrganization,
-      'Zip':null,
-      'SelectedPhoneType':formObject.SecondarySelectedPhoneTypes,
+      'Zip':'11218',
+      'PhoneTypeId':formObject.SPhoneTypeId,
       'Email':formObject.SEmailConfirm,
     }
 
@@ -75,8 +75,8 @@ class EventParticipationRequestForm extends Component {
   render() {
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
        
-        if(success !== undefined) {
-          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+        if(success !== undefined && success !== null) {
+            return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage);
         }
     
         if (FormObject && FormObject !== undefined) {
@@ -93,7 +93,7 @@ class EventParticipationRequestForm extends Component {
 };
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,  geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success,  geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator, error:state.error.type};
 }
 
 
