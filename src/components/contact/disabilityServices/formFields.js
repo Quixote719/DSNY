@@ -1,6 +1,7 @@
 import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
+import FormHeaderSmallSize from '../form_header_SmallSize';
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
@@ -19,7 +20,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeader title='Online Contact Form'/>
+    <FormHeaderSmallSize title='Online Contact Form' information='All fields are required unless indicated as optional'/>
     <Field component={TextInput} name="Name" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Subject" {...props} required fullRow={true} maxlength={"200"}/>

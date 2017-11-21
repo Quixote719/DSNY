@@ -12,6 +12,9 @@ export const Titles = {
   Email: 'E-MAIL',
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
+  Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
 }
 
@@ -22,6 +25,14 @@ export const formObject = {
   "DebrisInsideLot": false,
   "DebrisInFrontOfLot": false,
   "VehiclesOnLot": false,
+  "MediaFiles": [
+    {
+      "Id": 0,
+      "DetailRecordId": 0,
+      "FileName": null,
+      "URI": null
+    }
+  ],
   "IsAnonymous": false,
   "Id": 0,
   "SRNumberId": 0,
@@ -50,16 +61,5 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": null,
   "AddressTextOneLine": null,
-  "MediaFiles": [
-    {
-      "Id": 0,
-      "SRNo": null,
-      "RequestCode": null,
-      "DirectoryName": null,
-      "DetailRecordId": 0,
-      "FileName": null,
-      "ImageUrl": null
-    }
-  ],
   "files": []
 }

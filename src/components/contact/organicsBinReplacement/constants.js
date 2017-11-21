@@ -11,6 +11,9 @@ export const Titles = {
   Email: 'E-MAIL',
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
+  Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
 }
 

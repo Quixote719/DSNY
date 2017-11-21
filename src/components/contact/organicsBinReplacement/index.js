@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -44,21 +44,18 @@ class OrganicsBinReplacement extends Component {
 
   render() {
 
-    const {success} = this.props;
-    console.log(success);
-
+    const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
+    
     if(success !== undefined) {
-      if(success != null) {
-        let message = 'Success! Your response No. is: ' + success.SRNo;
-        return(<ThankYou>{message}</ThankYou>);
-      } else {
-        return(<ThankYou>Please make sure your message is correct.</ThankYou>);
-      }          
+      if (success != null) {
+        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+      }
     }
+
     if (FormObject && FormObject !== undefined) {
-        return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
-                </div></div>);
+      return (<div className='container'><div className='form compostForm'>
+              <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+              </div></div>);
     };
     // if (error){
     //     return (<FetchError onRetry={ () => this.props.fetchOrganicsBinForm()}/>);
@@ -69,7 +66,7 @@ class OrganicsBinReplacement extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator,error:state.error.type};
 }
 
 

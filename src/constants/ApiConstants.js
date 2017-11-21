@@ -23,11 +23,10 @@ export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?n
 
 // zzzzexport const MEDIAS_ALL_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/`;
 export const MEDIA_URL = `${ROOT_WORDPRESS_URL}wp/v2/media/id`;
-export const SUB_SECTION_HEADER_URL = constructWpUrl('wp/v2/pagesection?slug=id');
 export const FETCH_PRESS_RELEASE_DETAILS_URL = constructWpUrl('dsny/v1/getPressReleasePage?name=id');
 export const FETCH_PRESS_RELEASE_LIST_URL = constructWpUrl('dsny/v1/getPressReleaseListPage?year=:Year');
-export const FETCH_LANDING_PAGE_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:category`;
-export const FETCH_CARD_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:category`;
+export const FETCH_LANDING_PAGE_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:slug`;
+export const FETCH_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=:slug`;
 
 export const FETCH_DROPDOWN_LIST = `${ROOT_WORDPRESS_URL}dsny/v1/getDropdownOptions?cat=:category`;
 export const FETCH_BUREAUS_DETAILS_URL = constructWpUrl('dsny/v1/getPressReleasePage?name=id');
@@ -41,6 +40,7 @@ export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL}garages`;
 //Forms
 export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests/1`;
 export const PSOT_FORM_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL}compostrequests`;
+export const PSOT_COLLECTION_BIN_REGISTRATION_URL = `${REST_WEBAPI_URL}collectionbinregistration`;
 export const PSOT_FORM_DEAD_ANIMAL_URL = `${REST_WEBAPI_URL}deadanimals`;
 export const PSOT_FORM_ORGANICS_BIN_URL = `${REST_WEBAPI_URL}organicsbinreplacement`;
 export const PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL = `${REST_WEBAPI_URL}obstructions`;
@@ -56,6 +56,8 @@ export const POST_FORM_ADOPT_BASKET_URL = `${REST_WEBAPI_URL}adoptedbaskets`
 export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
 export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failuretostorereceptaclecomplaints`;
 export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL}eventparticipationrequests`;
+//10+ units pluto call
+export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`
 
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;
