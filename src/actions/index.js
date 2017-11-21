@@ -13,9 +13,15 @@ import {
   FETCH_BUREAUS_DETAILS_URL
 } from '../constants/ApiConstants';
 
-export function fetchLandinPageDetails(category) {
+/**
+ * Deprecated - this needs to be converted use the new methodology of fetchPageData.
+ * Once the changeover is made, remove this method, and remove FETCH_LANDING_PAGE_URL constant.
+ * 
+ * Used by Resources_container.js
+ */
+export function fetchLandinPageDetails(slug) {
   return function(dispatch) {
-    axios.get(FETCH_LANDING_PAGE_URL.replace(':category', category)).then((data) => {
+    axios.get(FETCH_LANDING_PAGE_URL.replace(':slug', slug)).then((data) => {
       dispatch({type: types.RESOURCES_LANDING_SECTION, payload: data})
 
     })
