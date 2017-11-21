@@ -59,6 +59,7 @@ export function getCollectionSchedule(address, callback=null) {
                             DSNYGeoCoder['sanitationCollectionSchedulingSectionAndSubsection'] = data.data.Goat.sanitationCollectionSchedulingSectionAndSubsection;
                             DSNYGeoCoder['bbl'] = data.data.Goat.bbl;
                             DSNYGeoCoder['sanitationDistrict'] = data.data.Goat.sanitationDistrict;
+                            DSNYGeoCoder['BinLocationAddressAsEntered'] = data.data.Goat.address;
                             if (data.data.Goat.houseNumber) {
                                 // Address
                                 DSNYGeoCoder['address'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";

@@ -2,6 +2,7 @@ export const Titles = {
 	sectionOne: 'ENTER YOUR ADDRESS',
 	sectionTwo: 'SPECIFIC INFORMATION',
 	sectionThree: 'CONTACT INFORMATION',
+	crossStreet:'CROSS STREET',
 	FirstName: 'FIRST NAME',
 	LastName: 'LAST NAME',
 	Phone: 'PRIMARY PHONE NUMBER',
