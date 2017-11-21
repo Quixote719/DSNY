@@ -1,4 +1,6 @@
   export const Titles = {
+  "SuccessMessage": "Success! Your response No. is: ",
+  "FailureMessage":"Please make sure your message is correct.",
   "sectionOne": "BUSINESS LOCATION ADDRESS",
   "sectionTwo": "SPECIFIC INFORMATION",
   "sectionThree": "CONTACT INFORMATION",

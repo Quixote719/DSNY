@@ -112,6 +112,10 @@
     height: 93px!important;
   }
 
+  .BreadcrumbHeaderTitleSection{
+    font-size: 40px;  
+  }
+
   .GBannerContent{
     display: none;
   }
@@ -130,7 +134,7 @@
   }
 
   .PreviousPath{
-    display: none;
+    display: none!important;
   }
 }
 

@@ -21,6 +21,14 @@ class FormFileDropZone extends Component {
       f = _.union(f, [files]);
       this.setState({files: f}, () => { this.props.onChange('TEST', this.state.files) });
     }
+  // onDrop(files, acceptedFiles) {
+  //   console.log(files);
+  //   var files=this.state.files;
+  //   files.push(acceptedFiles);
+  //    this.setState({
+  //     filesToBeSent
+  //    });
+  //  }
             
     body(type,name){
       switch (type) {
