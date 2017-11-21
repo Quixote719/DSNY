@@ -9,7 +9,22 @@ export const Titles = {
   "Phone":"CONTACT PHONE",
   "CollectionBinAnnualReportId":"DSNY ASSIGNED BIN ID 1",
   "WeightInPounds":"WEIGHT (IN LBS)",
-  "Removed":"REMOVED"
+  "Removed":"REMOVED",
+  "CollectionBinAnnualReportId2":"DSNY ASSIGNED BIN ID 2",
+  "WeightInPounds2":"WEIGHT (IN LBS)",
+  "Removed2":"REMOVED",
+  "CollectionBinAnnualReportId3":"DSNY ASSIGNED BIN ID 3",
+  "WeightInPounds3":"WEIGHT (IN LBS)",
+  "Removed3":"REMOVED",
+  "CollectionBinAnnualReportId4":"DSNY ASSIGNED BIN ID 4",
+  "WeightInPounds4":"WEIGHT (IN LBS)",
+  "Removed4":"REMOVED",
+  "CollectionBinAnnualReportId5":"DSNY ASSIGNED BIN ID 5",
+  "WeightInPounds5":"WEIGHT (IN LBS)",
+  "Removed5":"REMOVED",
+  "CollectionBinAnnualReportId6":"DSNY ASSIGNED BIN ID 6",
+  "WeightInPounds6":"WEIGHT (IN LBS)",
+  "Removed6":"REMOVED",
 }
 
 export const formObject = {

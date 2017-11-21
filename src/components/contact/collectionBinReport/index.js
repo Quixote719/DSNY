@@ -19,10 +19,15 @@ class CollectionBinReport extends Component {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+    this.addBin = this.addBin.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
     }
+  }
+
+  addBin(){
+    alert('Add Bin');
   }
 
   postForm(formObject){
