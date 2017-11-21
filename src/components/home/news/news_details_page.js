@@ -65,8 +65,17 @@ class NewsDetails extends Component {
 
         return (
           <div key ={cItems.id}>
-            <div className="GBanner"><div><div className="BreadcrumbList"><div className="container"><ol role="navigation" aria-label="breadcrumbs" className="breadcrumb"><li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
-            <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>News</Link></li><span className='breadcrumbSymbol'>/</span></ol></div></div> </div></div>
+            <div className="GBanner">
+              <div className="BreadcrumbList">
+                <div className="container">
+                  <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
+                    <span className='fa fa-angle-left'></span>
+                    <li className="PreviousPath"><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
+                    <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>News</Link></li><span className='breadcrumbSymbol'>/</span>
+                  </ol>
+                </div>
+              </div>
+            </div>
             <div className='container'>{sections}</div>
           </div>
         )
