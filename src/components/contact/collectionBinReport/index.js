@@ -28,7 +28,7 @@ class CollectionBinReport extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_FORM_COLLECTION_BIN_REPORT);
+      this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
   }
 
    validateForm(formObject, errors){

@@ -41,17 +41,19 @@ class FormRow extends Component {
             : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
-                <Col className='nopadding' xs={8}>
+                <Col className='nopadding' xs={12}>
                   <div className='cardTypeTitle'>
                     <Dotdotdot clamp={3}>
-                      <div className='cardTitleText' dangerouslySetInnerHTML={{
+                      <div className='cardTitleTextHavingURL' dangerouslySetInnerHTML={{
                         __html: this.props.title
                       }}/>
                     </Dotdotdot>
                   </div>
+                  <i className='fa fa-caret-right'></i>
                 </Col>
               </Row>
             </div>
+             <div className='patternLineGreen'></div>
           </Col>
         );
       default:

@@ -8,26 +8,32 @@ import {
   FETCH_PRESS_RELEASE_LIST_URL,
   FETCH_EVENTS_SUB_LIST_URL,
   FETCH_LANDING_PAGE_URL,
-  FETCH_CARD_DETAILS_URL,
+  FETCH_PAGE_DATA_URL,
   FETCH_DROPDOWN_LIST,
   FETCH_BUREAUS_DETAILS_URL
 } from '../constants/ApiConstants';
 
-export function fetchLandinPageDetails(category) {
+/**
+ * Deprecated - this needs to be converted use the new methodology of fetchPageData.
+ * Once the changeover is made, remove this method, and remove FETCH_LANDING_PAGE_URL constant.
+ * 
+ * Used by Resources_container.js
+ */
+export function fetchLandinPageDetails(slug) {
   return function(dispatch) {
-    axios.get(FETCH_LANDING_PAGE_URL.replace(':category', category)).then((data) => {
+    axios.get(FETCH_LANDING_PAGE_URL.replace(':slug', slug)).then((data) => {
       dispatch({type: types.RESOURCES_LANDING_SECTION, payload: data})
 
     })
   }
 }
 
-export function fetchCardDetails(category) {
-  console.log(category);
+export function fetchPageData(slug) {
+  console.log(slug);
   return function(dispatch) {
     dispatch({type: types.POST_FORM_REQUEST, payload: {}})
     dispatch({type: types.CARD_DETAILS, payload: {}})
-    axios.get(FETCH_CARD_DETAILS_URL.replace(':category', category)).then((data) => {
+    axios.get(FETCH_PAGE_DATA_URL.replace(':slug', slug)).then((data) => {
       // debugger;
       dispatch({type: types.CARD_DETAILS, payload: data})
     })
@@ -68,20 +74,4 @@ export function fetchBureausDetails(slug) {
 export function fetchmedia(id) {
   const request = axios.get(MEDIA_URL.replace('id', id));
   return {type: types.FETCH_MEDIA, payload: request};
-}
-
-export function fetchsubSectionHeader(id) {
-  return function(dispatch) {
-    axios.get(SUB_SECTION_HEADER_URL.replace('id', id)).then((data) => {
-      let src = {};
-      let temp = data.data[0]
-      src['title'] = temp.title.rendered
-      src['body'] = temp.content.rendered
-      let featureImage = temp.feature_image.ID
-      axios.get(MEDIA_URL.replace('id', featureImage)).then((media) => {
-        src['imgSrc'] = media.data.source_url;
-        dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
-      })
-    })
-  }
 }
