@@ -160,7 +160,7 @@ class CollectionSchedule extends Component {
                     <Col xs={12}>
                         <div style={this.props.collectionScheduleInfo !== null && this.props.suggestionAddress == null && this.props.holidayData ? { display: 'block' } : { display: 'none' }} className="nonServiceDay">
                             Today is holiday. There is no service today!
-                    </div>
+                        </div>
                     </Col>
                     <Col xs={12} md={8} style={this.props.holidayData ? { display: 'none' } : { display: 'block' }} className="collectionScheduleColumn">
                         {this.collectionScheduleTable()}
