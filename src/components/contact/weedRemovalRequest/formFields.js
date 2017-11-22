@@ -1,7 +1,6 @@
 import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
-import FormHeaderSmallSize from '../form_header_SmallSize';
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
@@ -12,6 +11,25 @@ import FormAddressAutocomplete from '../formAddressAutocomplete'
 import TextAreaInput from '../textarea_field';
 import {Col} from 'react-bootstrap';
 
+const DisplayFormikState = props => <div style={{
+  margin: '1rem 0'
+}}>
+<h3 style={{
+    fontFamily: 'monospace'
+  }}/>
+<pre
+    style={{
+      background: '#f6f8fa',
+      fontSize: '2rem',
+      padding: '.5rem',
+    }}
+  >
+    <strong>values</strong> ={' '}
+
+    {JSON.stringify(props.values, null, 2)}
+  </pre>
+</div>;
+
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
   const {
@@ -21,7 +39,8 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
+    <div className='patternLineGreen'></div>
+    <FormHeader title='Online Complaint Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>
@@ -34,6 +53,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
     <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"}/>   
+    <Col xs={12}><DisplayFormikState {...props} /></Col>
   </fieldset>)
 };
 

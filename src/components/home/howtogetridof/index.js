@@ -27,7 +27,7 @@ class HowToGetRidOf extends Component {
         return (
             <div className = "howToGetRidOfParent">
             <Header title='How to Get Rid of ...' breadCrumbList= "" />
-            <SearchPage pushHistory = {this.props} getRidOfSearchResults={this.props.getRidOfSearchResults?this.props.getRidOfSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData?this.props.getRidOfSearchResultsData:""} ridOffKeywords={this.props.ridOffKeywords?this.props.ridOffKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
+            <SearchPage setPaginationKey = {this.props.setPaginationKey} paginationKeyValue = {this.props.paginationKeyValue} pushHistory = {this.props} getRidOfSearchResults={this.props.getRidOfSearchResults?this.props.getRidOfSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.getRidOfSearchResultsData?this.props.getRidOfSearchResultsData:""} ridOffKeywords={this.props.ridOffKeywords?this.props.ridOffKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
             </div>
         )
     }
@@ -36,13 +36,15 @@ function mapStateToProps(state) {
     return {
         noOfSearchResults: state.carouselDataReducer.noOfSearchResults,        
         getRidOfSearchResultsData: state.carouselDataReducer.getRidOfSearchResultsData,
-        ridOffKeywords: state.carouselDataReducer.ridOffKeywords,        
+        ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
+        paginationKeyValue: state.carouselDataReducer.paginationKeyValue,        
     }
   }
   
 let actionList = {
     getRidOffKeywords: actions.getRidOffKeywords,    
     getRidOfSearchResults: actions.getRidOfSearchResults,
+    setPaginationKey: actions.setPaginationKey,    
   };
 
   HowToGetRidOf = connect(mapStateToProps, actionList)(HowToGetRidOf);

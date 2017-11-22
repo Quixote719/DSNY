@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 import Header from '../Breadcrumb/breadcrumb_container'
 //Actions
-import {fetchPageData} from "../../../actions";
+import {fetchCardDetails} from "../../../actions";
 
 //Sub Components
 import Banner from '../banner';
@@ -25,7 +25,7 @@ class fullImageContainer extends Component {
 
   componentWillMount() {
     const {slug} = this.props.match.params;
-    this.props.fetchPageData(slug);
+    this.props.fetchCardDetails(slug);
   }
 
   componentWillReceiveProps(nextProps, nextState) {
@@ -33,7 +33,7 @@ class fullImageContainer extends Component {
     if (this.slug != slug) {
       this.slug = slug;
       this.setState({reload: true});
-      this.props.fetchPageData(slug);
+      this.props.fetchCardDetails(slug);
     }
   }
 
@@ -107,4 +107,4 @@ function mapStateToProps(state) {
   return {cardDetails: state.card};
 }
 
-export default connect(mapStateToProps, {fetchPageData})(fullImageContainer);
+export default connect(mapStateToProps, {fetchCardDetails})(fullImageContainer);

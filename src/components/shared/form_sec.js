@@ -19,7 +19,7 @@ import CardTitleImage from './Card_title_image';
 
 import $ from 'jquery';
 
-class FormSec extends Component {
+class CardSec extends Component {
 
   constructor(props) {
     super(props);
@@ -301,7 +301,7 @@ class FormSec extends Component {
     );
   };
 };
-FormSec.propTypes = {
+CardSec.propTypes = {
   dataObject: PropTypes.object,
   className: PropTypes.string
 };
@@ -310,4 +310,4 @@ function mapStateToProps(state) {
   return {success:state.forms.success, error:state.error.type};
 }
 
-export default FormSec;
+export default CardSec;

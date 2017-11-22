@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps, {displayThankYouPage} from '../form_steps'
+import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -44,18 +44,20 @@ class WeedRemovalRequest extends Component {
 
   render() {
 
-    const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
-    
-    if(success !== undefined) {
-      if (success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
-      }
-    }
+    const {error, success, geoCoderAddressResult} = this.props;
 
+    if(success !== undefined) {
+      if(success != null) {
+        let message = 'Success! Your response No. is: ' + success.SRNo;
+        return(<ThankYou>{message}</ThankYou>);
+      } else {
+        return(<ThankYou>Please make sure your message is correct.</ThankYou>);
+      }          
+    }
     if (FormObject && FormObject !== undefined) {
-      return (<div className='container'><div className='form compostForm'>
-              <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
-              </div></div>);
+        return (<div className='container'><div className='form compostForm'>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                </div></div>);
     };
     // if (error){
     //     return (<FetchError onRetry={ () => this.props.postFormObject()}/>);
@@ -66,7 +68,7 @@ class WeedRemovalRequest extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator,error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,error:state.error.type};
 }
 
 

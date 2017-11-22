@@ -1,81 +1,82 @@
 import _ from "lodash";
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, {Component} from "react";
+import {connect} from "react-redux";
 
 //Actions
-import { fetchPageData } from "../../../actions";
+import {fetchCardDetails} from "../../../actions";
 import ImageSection from '../../shared/ImageSection'
 
 //Sub Components
 import Header from '../Breadcrumb/breadcrumb_container'
 import CardSec from './card_sec'
 
-class StandardPage extends Component {
+class cardDetailContainer extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
       reload: false
     };
-    const { slug } = this.props.match.params;
+    const {slug} = this.props.match.params;
     this.slug = slug;
+
   }
 
   componentWillMount() {
-    const { slug } = this.props.match.params;
-    this.props.fetchPageData(slug);
+    const {slug} = this.props.match.params;
+    this.props.fetchCardDetails(slug);
   }
 
   componentWillReceiveProps(nextProps, nextState) {
-    const { slug } = nextProps.match.params;
+    const {slug} = nextProps.match.params;
     if (this.slug !== slug) {
       this.slug = slug;
-      this.setState({ reload: true });
-      this.props.fetchPageData(slug);
+      this.setState({reload: true});
+      this.props.fetchCardDetails(slug);
     }
   }
 
   render() {
-    const { pageData } = this.props;
+    const {cardDetails} = this.props;
     return (<div>
-      {this.renderPage(pageData)}
+      {this.renderPage(cardDetails)}
     </div>);
   };
 
-  renderPage(pageData) {
+  renderPage(cardDetails) {
 
-    if (pageData) {
+    if (cardDetails) {
 
-      return _.map(pageData, item => {
+      return _.map(cardDetails, cItems => {
 
         let banner;
-        if (item !== undefined) {
-          if (item.name != '') {
-            banner = (<div key={item.id}>
-              <Header title={item.title} breadCrumbList={item.breadcrumb} body={item.header_content} />
+        if (cItems !== undefined) {
+          if (cItems.name != '') {
+            banner = (<div key={cItems.id}>
+              <Header title={cItems.title} breadCrumbList={cItems.breadcrumb} body={cItems.header_content}/>
             </div>)
           }
 
           let sections;
-          if (item.sections) {
-            sections = _.map(item.sections.sections, (pagesection, index) => {
+          if (cItems.sections) {
+            sections = _.map(cItems.sections.sections, (sec,index) => {
 
-              if (pagesection.featured_image) {
+              if(sec.featured_image){
                 let ImageProps = {};
-                ImageProps = pagesection;
+                ImageProps = sec;
                 return (
-                  <div key={pagesection.id}>
+                  <div key={sec.id}>
                     <div>
-                      <ImageSection ImageProps={ImageProps} />
+                      <ImageSection ImageProps = {ImageProps}/>
                     </div>
                   </div>
                 );
               }
-              else {
+              else{
                 return (
-                  <div key={pagesection.id}>
+                  <div key={sec.id}>
                     <div>
-                      <CardSec dataObject={pagesection} finalSec={index == item.sections.sections.length - 1} />
+                      <CardSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
                     </div>
                   </div>
                 );
@@ -83,11 +84,11 @@ class StandardPage extends Component {
             })
           }
 
-          return (
-            <div key={item.id}>
-              <div>{banner}</div>
-              <div>{sections}</div>
-            </div> )
+          return (<div key={cItems.id}>
+
+            <div>{banner}</div>
+            <div >{sections}</div>
+          </div>)
         }
       });
     } else {
@@ -97,7 +98,7 @@ class StandardPage extends Component {
 };
 
 function mapStateToProps(state) {
-  return { cardDetails: state.card };
+  return {cardDetails: state.card};
 }
 
-export default connect(mapStateToProps, { fetchPageData })(StandardPage);
+export default connect(mapStateToProps, {fetchCardDetails})(cardDetailContainer);

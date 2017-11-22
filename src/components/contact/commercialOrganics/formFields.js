@@ -55,7 +55,7 @@ const formFields = (props) => {
     <Field component={TextInput} name="EquipmentDescribeSystem" maxlength={200} {...props} />
     <Field component={TextInput} name="EquipmentMinimumCapacity" maxlength={20} {...props} required/>
     <Field component={TextInput} name="EquipmentMaximumCapacity" maxlength={20} {...props} required/>
-    <Field component={DateTimePickerInput} name="InstallationDate" {...props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>
+    <Field component={TextInput} name="InstallationDate" {...props} required/>
     <FormSectionHeader title={Titles.sectionSeven}/>
     <Field component={DropdownInput} name="GreaseInterceptorTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode} {...props} />
     <Field component={TextInput} name="GreaseInterceptorManufacturer" maxlength={100} {...props} />

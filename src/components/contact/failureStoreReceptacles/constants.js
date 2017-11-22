@@ -1,6 +1,4 @@
   export const Titles = {
-  "SuccessMessage": "Success! Your response No. is: ",
-  "FailureMessage":"Please make sure your message is correct.",
   "sectionOne": "WHERE IS THE VIOLATION OCCURRING",
   "sectionTwo": "VIOLATOR NAME AND ADDRESS",
   "sectionThree": "CONTACT INFORMATION",

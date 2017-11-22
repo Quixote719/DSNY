@@ -12,9 +12,6 @@ export const Titles = {
   Phone: 'PHONE',
   IsAnonymous: 'I would like to remain anonymous',
   AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
-  Message: "MESSAGE",
-  SuccessMessage: "Success! Your response No. is: ",
-  FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
 }
 

@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import { POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
+import {fetchOrganicsForm, postOrganicsForm} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -29,7 +29,7 @@ class CommercialOrganicsForm extends Component {
   // }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL);
+      this.props.postOrganicsForm(formObject, POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL);
   }
 
    validateForm(formObject, errors){
@@ -72,4 +72,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CommercialOrganicsForm);
+export default connect(mapStateToProps, {fetchOrganicsForm, postOrganicsForm})(CommercialOrganicsForm);

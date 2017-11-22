@@ -7,8 +7,7 @@ import {
 	FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL,
 	POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL,
 	GET_UNAVAILABLE_DATES,
-	IS_DISTRICT_ACTIVE,
-	FETCH_TEN_PLUS_BUILDINGS_STATUS
+	IS_DISTRICT_ACTIVE
 } from '../constants/ApiConstants';
 
 export function fetchFormObject(category) {
@@ -46,7 +45,7 @@ export function PickupReqGetItemSubCategories(id) {
 export function IsDistrictActive(id) {
 	return function(dispatch) {
 		axios.get(IS_DISTRICT_ACTIVE.replace(':Id', id)).then((data) => {
-
+			
 			dispatch({type: types.IS_DISTRICT_ACTIVE, payload: data})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
@@ -60,16 +59,6 @@ export function GetUnavailableDates(id) {
 			dispatch({type: types.GET_UNAVAILABLE_DATES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
-		});
-	}
-}
-
-export function GetBulidingUnits(bbl) {
-	return function(dispatch) {
-		axios.get(FETCH_TEN_PLUS_BUILDINGS_STATUS.replace(':BBL', bbl)).then((data) => {
-			dispatch({type: types.TEN_PLUS_BUILDINGS_STATUS, payload: data})
-		}).catch(function(error) {
-			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error})
 		});
 	}
 }

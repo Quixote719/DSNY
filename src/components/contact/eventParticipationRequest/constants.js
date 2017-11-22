@@ -34,7 +34,7 @@ export const Titles = {
   POrganization: 'ORGANIZATION',
   PFullAddress: 'ADDRESS',
   PSuite:'FLOOR/SUITE/APT (OPTIONAL)',
-  PPhoneTypeId:'PHONE TYPE',
+  PSelectedPhoneType:'PHONE TYPE',
   PEmailConfirm:'CONFIRM E-MAIL',
   SFirstName:'FIRST NAME (OPTIONAL)',
   SLastName: 'LAST NAME (OPTIONAL)',
@@ -45,14 +45,12 @@ export const Titles = {
   SAddress: 'ADDRESS (OPTIONAL)',
   SSuite:'FLOOR/SUITE/APT (OPTIONAL)',
   SPHONE:'PHONE (OPTIONAL)',
-  SPhoneTypeId:'PHONE TYPE (OPTIONAL)',
+  SSelectedPhoneType:'PHONE TYPE (OPTIONAL)',
   SEmailConfirm: 'CONFIRM E-MAIL (OPTIONAL)',
   Theme:'EVENT THEME',
   TargetAudiences:'TARGET AUDIENCE',
   RequiredFieldMessage: 'This field is required',
-  Message: "MESSAGE",
-  SuccessMessage: "Success! Your response No. is: ",
-  FailureMessage:"Please make sure your message is correct.",
+  
 }
 
 

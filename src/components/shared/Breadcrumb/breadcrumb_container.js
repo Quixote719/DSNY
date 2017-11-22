@@ -1,7 +1,7 @@
 import _ from "lodash";
 import Link from '../CardDetails/link'
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import '../../../content/styles/banner.css';
 import Title from './title';
@@ -16,17 +16,19 @@ class Header extends Component {
   }
 
   renderTitle() {
-    const { title, body } = this.props;
+    const {title, body} = this.props;
+
     if (title) {
+
       return (
-        <div><Title title={title} /></div>
+        <div><Title title={title}/></div>
       )
     }
   }
 
   renderBreadcrumb() {
     let blist = this.props.breadCrumbList;
-    const { title, body } = this.props;
+    const {title, body} = this.props;
     if (blist != undefined && blist.length > 2) {
       let l = _.dropRight(blist);
       let title = _.last(blist);
@@ -35,8 +37,9 @@ class Header extends Component {
         : 'BreadcrumbHeaderTitleSectionNoBg'
       return (
         <div>
-          <Breadcrumb breadcrumbList={l} /> {this.renderTitle()}
+          <Breadcrumb breadcrumbList={l}/> {this.renderTitle()}
         </div>
+
       )
     }
     else {
@@ -45,7 +48,7 @@ class Header extends Component {
         BannerText.title = title;
         BannerText.content = body;
         return (
-          <div><Banner text={BannerText} /></div>
+          <div><Banner text={BannerText}/></div>
         )
       }
       return (this.renderTitle())
@@ -56,6 +59,7 @@ class Header extends Component {
     return (
       <div className="GBanner">
         {this.renderBreadcrumb()}
+
       </div>
     )
   }

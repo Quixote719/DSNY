@@ -93,7 +93,7 @@ class SearchCards extends Component {
             <div className="container searchContainerRidCollection">
                 <Row className="searchRow">
                     <Col xs={12} md={6} className="searchRidParent">
-                    <SearchBoxHome ridOffKeywords = {this.props.ridOffKeywords} test ={this.props}/>
+                    <SearchBoxHome setPaginationKey = {this.props.setPaginationKey} paginationKeyValue = {this.props.paginationKeyValue} ridOffKeywords = {this.props.ridOffKeywords} test ={this.props}/>
                     </Col>
                     <Col xs={12} md={6} className="searchCollectionParent">
                         <div id="TextureSquare">
@@ -123,10 +123,12 @@ class SearchCards extends Component {
 function mapStateToProps(state) {
     return {
         ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
+        paginationKeyValue: state.carouselDataReducer.paginationKeyValue,                
     }
   }
   
 let actionList = {
+    setPaginationKey: actions.setPaginationKey,        
     getRidOfSearchResults: actions.getRidOfSearchResults,
   };
 

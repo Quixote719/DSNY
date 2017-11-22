@@ -41,25 +41,17 @@ const DisplayFormikState = props => <div style={{
 
 
 const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue, Dates, isDistrictActive, geoCoderAddressResult, buildingStatus} = props;
-
+	const {values, setFieldValue, Dates, isDistrictActive, geoCoderAddressResult} = props;
+console.log(geoCoderAddressResult ? geoCoderAddressResult.pickupStreets : 'zcbbzmfmasfnamnfd');
 	if (Dates  && typeof isDistrictActive !== undefined){
      values.isDistrictActive = isDistrictActive;
      values.Dates = Dates;
-	}
-
-	if(buildingStatus){
-		let features = buildingStatus.features[0]
-		let unitNumber = features.attributes.UnitsTotal
-		console.log('buildingStatus', unitNumber);
-		values.buildingStatus = unitNumber >= 10 ? true : false;
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete/></div>
-			<div>{values.buildingStatus ? 'You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit nyc.gov/ecycle' : ''}</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode}/>

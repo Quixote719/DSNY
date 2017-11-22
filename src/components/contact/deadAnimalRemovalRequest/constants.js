@@ -4,8 +4,8 @@ export const Titles = {
   sectionThree: 'CONTACT INFORMATION',
   AnimalId: 'TYPE OF ANIMAL',
   OtherAnimal: 'OTHER ANIMAL',
-  DeadAnimalLocationId: 'EXACT LOCATION',
-  OtherDeadAnimalLocation: 'OTHER LOCATION',
+  ExactLocationId: 'EXACT LOCATION',
+  OtherLocation: 'OTHER LOCATION',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
@@ -13,14 +13,10 @@ export const Titles = {
   Phone: 'PHONE',
   IsAnonymous: 'I would like to remain anonymous',
   AdditionalLocation: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
-  Message: "MESSAGE",
-  SuccessMessage: "Success! Your response No. is: ",
-  FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
 }
 
 export const formObject = {
-
   "AnimalId": 0,
   "Animals": [
     {
@@ -100,7 +96,7 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
-  "DeadAnimalLocations": [
+  "ExactLocation": [
     {
       "Id": 1,
       "Name": "Highway",
@@ -126,7 +122,7 @@ export const formObject = {
       "Selected": false
     }
   ],
-  "DeadAnimalLocationId": 0,
+  "ExactLocationId": 0,
   "OtherLocation": null,
-  "OtherDeadAnimalLocation": null
+  "AdditionalLocation": null
 }

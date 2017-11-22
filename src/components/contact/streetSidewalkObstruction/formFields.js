@@ -1,7 +1,6 @@
 import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
-import FormHeaderSmallSize from '../form_header_SmallSize';
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
@@ -20,7 +19,8 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
+    <div className='patternLineGreen'></div>
+    <FormHeader title='Online Complaint Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>

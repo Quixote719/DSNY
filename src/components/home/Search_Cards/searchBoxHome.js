@@ -73,11 +73,13 @@ class SearchBoxHome extends Component {
         event.preventDefault();
       }   
       if(event.key == 'Enter'){ 
-          this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
+        this.props.setPaginationKey(1);
+        this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
       }
     }
     searchIconClicked = () => {
       if(this.state.value.trim().length !== 0){
+        this.props.setPaginationKey(1);        
         this.props.test.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/howtogetridof/"+this.state.value)
       }
     }
@@ -85,6 +87,9 @@ class SearchBoxHome extends Component {
       this.setState({
           value: "",
        });
+  }
+  searchResultPage = () =>{
+    this.props.setPaginationKey(1);            
   }
     render() {
 
