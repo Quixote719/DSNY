@@ -27,7 +27,7 @@ export function fetchCardDetails(category) {
   return function(dispatch) {
     dispatch({type: types.POST_FORM_REQUEST, payload: {}})
     dispatch({type: types.CARD_DETAILS, payload: {}})
-    axios.get(FETCH_CARD_DETAILS_URL.replace(':category', category)).then((data) => {
+    axios.get(FETCH_LANDING_PAGE_URL.replace(':category', category)).then((data) => {
       // debugger;
       dispatch({type: types.CARD_DETAILS, payload: data})
     })
@@ -70,18 +70,18 @@ export function fetchmedia(id) {
   return {type: types.FETCH_MEDIA, payload: request};
 }
 
-export function fetchsubSectionHeader(id) {
-  return function(dispatch) {
-    axios.get(SUB_SECTION_HEADER_URL.replace('id', id)).then((data) => {
-      let src = {};
-      let temp = data.data[0]
-      src['title'] = temp.title.rendered
-      src['body'] = temp.content.rendered
-      let featureImage = temp.feature_image.ID
-      axios.get(MEDIA_URL.replace('id', featureImage)).then((media) => {
-        src['imgSrc'] = media.data.source_url;
-        dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
-      })
-    })
-  }
-}
+// export function fetchsubSectionHeader(id) {
+//   return function(dispatch) {
+//     axios.get(SUB_SECTION_HEADER_URL.replace('id', id)).then((data) => {
+//       let src = {};
+//       let temp = data.data[0]
+//       src['title'] = temp.title.rendered
+//       src['body'] = temp.content.rendered
+//       let featureImage = temp.feature_image.ID
+//       axios.get(MEDIA_URL.replace('id', featureImage)).then((media) => {
+//         src['imgSrc'] = media.data.source_url;
+//         dispatch({type: types.FETCH_SUB_SECTION_HEADER, payload: src})
+//       })
+//     })
+//   }
+// }
