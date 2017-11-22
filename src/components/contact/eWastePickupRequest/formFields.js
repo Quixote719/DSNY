@@ -10,6 +10,7 @@ import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
 import TextdisplayField from '../form_display_field'
 import Nstepper from './pickup_request_stepper'
+import FormAddressValidatorError from '../form_address_validator_error'
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
@@ -59,7 +60,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete/></div>
-			<div>{values.buildingStatus ? 'You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit nyc.gov/ecycle' : ''}</div>
+		<div><FormAddressValidatorError>{values.buildingStatus ? '<p><span style="font-weight: 400;">You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">nyc.gov/ecycle</a></p>' : ''}</FormAddressValidatorError></div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode}/>
