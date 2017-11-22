@@ -51,10 +51,10 @@ class Contact extends Component {
       <div>
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>
-          <div className='sectionHeader'>{this.renderRequest()}</div>
+          <div className='sectionHeader SContainer'>{this.renderRequest()}</div>
           <div className='largeSearchBox'><SearchBoxCollection /></div>
         </div>
-        <div className = 'SContainer'>
+        <div className = 'container'>
           <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>
         </div>
         <Row className='greyBcg'>
@@ -67,11 +67,11 @@ class Contact extends Component {
             <Complaints ComplaintsProps = {ComplaintsProps} />
           </div>
         </div>
-        <div className = 'SContainer RegistrationContainer'>
+        <div className = 'container'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
         <div className = 'greyBcg'>
-          <div className = 'SContainer ReportingContainer'>
+          <div className = 'container'>
             <ReportingSection ReportingProps = {ReportingProps}/>
           </div>
         </div>
@@ -108,13 +108,11 @@ class Contact extends Component {
           case 'applications-and-registrations': {
             RegistrationsProps.title = item.header;
             RegistrationsProps.cards = item.cards;
-            RegistrationsProps.CardType = item.card_data.card_type;
             break;
           }
           case 'reporting': {
             ReportingProps.title = item.header;
             ReportingProps.cards = item.cards;
-            ReportingProps.CardType = item.card_data.card_type;
             break;
           }
           case 'get-involved-section': {

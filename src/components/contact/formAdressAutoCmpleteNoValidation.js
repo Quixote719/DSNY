@@ -26,18 +26,23 @@ class FormAddressAutocompleteNoValidation extends Component {
     }
   
     suggestedAddressSelected = (value) =>{
-        
          this.setState(prevState => ({
             address: value,
         }));   
-                                 
     }
 
 
-    handleSelect =(address)=>{
-            this.setState(prevState => ({
-            address: address,
-        }));                                                  
+    /* When Proper address is selected from the drop down list, the address state is modified & passed to parents method*/
+    handleSelect = (address)=>{ 
+        this.setState(prevState => ({
+             address: address,
+         }));
+        this.props.onChange(address);
+    }
+
+    /* If the address is entered and no value is selected from the drop down list, the address state is passed to the parents method */
+    handleBlur = (event) => {
+        this.props.onChange(this.state.address);
     }
     
 
@@ -78,11 +83,12 @@ class FormAddressAutocompleteNoValidation extends Component {
             name:this.props.name,
             value: this.state.address,
             onChange: this.handleChange,
+            onBlur:this.handleBlur,
         }
         return (
             <div>
                 <Row className = "formPlacesAutosuggestRow">
-                    <AddressAutocomplete inputProps = {inputProps}  options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
+                    <AddressAutocomplete inputProps = {inputProps}  options = {options} onSelect={event =>this.handleSelect(event)}  onEnterKeyDown={event => this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
                     <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                         {this.correctAddressList()}
                     </div>

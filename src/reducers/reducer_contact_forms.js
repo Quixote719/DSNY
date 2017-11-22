@@ -34,7 +34,7 @@ export default function cardReducer(state = {}, action) {
         formObject:searchObj(action.payload.data, false, null)
       };
       case types.IS_DISTRICT_ACTIVE:
-      console.log('isdisteictctive:', action.payload.data);
+
         return {
           ...state,
           isDistrictActive:action.payload.data
@@ -45,6 +45,12 @@ export default function cardReducer(state = {}, action) {
             ...state,
             unavailableDates:action.payload.data
           };
+          case types.TEN_PLUS_BUILDINGS_STATUS:
+
+            return {
+              ...state,
+              buildingStatus:action.payload.data
+            };
     default:
       return state;
   }

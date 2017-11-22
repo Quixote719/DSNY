@@ -1,8 +1,8 @@
 import _ from "lodash";
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Link from './link'
 import PropTypes from 'prop-types';
-import {Row, Col} from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import '../../../content/styles/lawsListItem.css';
 import SubSectionHeader from '../sub_section_header';
 import SubSectionHeaderGreen from '../sub_section_header_green';
@@ -25,8 +25,8 @@ class CardSec extends Component {
     let ImageUrl;
 
     /* A condition check to ensure featured Image exists, to fetch the url of the Image */
-    if(Item.featured_image){
-      ImageUrl  = this.getImageUrl(Item);
+    if (Item.featured_image) {
+      ImageUrl = this.getImageUrl(Item);
     }
 
 
@@ -53,55 +53,111 @@ class CardSec extends Component {
       type = 'iUrl';
       url = process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url
     }
+
     /**
-    article-search-result-card | Article Search Result
-    color-bar-card | Color Bar Card
-    contact-card | Contact Card
-    header-title-blurb-card | Header/Title/Blurb Card
-    icon-category | Icon Category Card
-    multi-file-card | Multi-File Card
-    news-card | News Card
-    reference-details-card | Reference/Details Card
-    square-card | Square Card
-    square-card-with-image | Square Card (with Image)
-    staff-card | Staff Card | Square Card (No Border)
-    standard-card-no-border | Standard Card (no border)
-    standard-card-with-border | Standard Card (with border)
+        article-search-result-card | Article Search Result
+        color-bar-card | Color Bar Card
+        contact-card | Contact Card
+        full-width-card | Full Width Card
+        header-title-blurb-card | Header/Title/Blurb Card
+        hero-card | Hero Card
+        icon-category | Icon Category Card
+        multi-file-card | Multi-File Card
+        news-card | News Card
+        press-release-card | Press Release Card
+        reference-details-card | Reference/Details Card
+        square-card | Square Card
+        square-card-no-border | Square Card (with no border)
+        square-card-with-image | Square Card (with Image)
+        staff-card | Staff Card
+        standard-card-no-border | Standard Card (no border)
+        standard-card-with-border | Standard Card (with border)
+        table-dictionary-card | Table Dictionary Card
+        form-link-card | Form Link Card
      */
     switch (cardType) {
-      case 'table-dictionary-card':
-        return (<TableDictionary title={Item.title} body={Item.content} url = {Item.linked_page.url}  header ={Item.header}/> );
-      case 'square-card-no-border':
-            return (url
-          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content}/></Link>
-          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
-      case 'square-card-with-image':
-            return (url
-          ? <Link to={url}><CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl}/></Link>
-          : <CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl}/>);
+
+      case 'article-search-result-card':
+        //TODO
+        return;
+
+      case 'color-bar-card':
+        //TODO
+        return;
+
+      case 'contact-card':
+        //TODO
+        return;
+
+      case 'full-width-card':
+        return (<CardFullWidth link={url} dataObject={Item} />);
+
+      case 'header-title-blurb-card':
+        //TODO
+        return;
+
+      case 'hero-card':
+        //TODO
+        return;
+
+      case 'icon-category':
+        //TODO
+        return;
+
+      case 'multi-file-card':
+        return (<CardMultifile dataObject={Item} />);
+
+      case 'news-card':
+        //TODO
+        return;
+
+      case 'press-release-card':
+        //TODO
+        return;
+        
+      case 'reference-details-card':
+        return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)} />);
+
       case 'square-card':
         return (url
-          ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
+          ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} /></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
+
+      case 'square-card-no-border':
+        return (url
+          ? <Link to={url}><CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} /></Link>
+          : <CardTitleBody className='NBsubSectioncardTB' title={Item.title} body={Item.content} />);
+
+      case 'square-card-with-image':
+        return (url
+          ? <Link to={url}><CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl} /></Link>
+          : <CardTitleImage className='NBsubSectioncardTB' title={Item.title} body={Item.content} ImgSrc={ImageUrl} />);
+
+      case 'staff-card':
+        //TODO
+        return;
+
       case 'standard-card-no-border':
         return (url
-          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type={type} title={Item.title} /></Link>
+          : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
+
       case 'standard-card-with-border':
         return (url
-          ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
-      case 'full-width-card':
-        return (<CardFullWidth link={url} dataObject={Item}/>);
-      case 'multi-file-card':
-        return (<CardMultifile dataObject={Item}/>);
+          ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} /></Link>
+          : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
 
-      case 'reference-details-card':
-        return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
+      case 'table-dictionary-card':
+        return (<TableDictionary title={Item.title} body={Item.content} url={Item.linked_page.url} header={Item.header} />);
+
+      case 'form-link-card':
+        //TODO
+        return;
+
       default:
         return (url
-          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type={type} title={Item.title} /></Link>
+          : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
     }
   }
 
@@ -116,50 +172,50 @@ class CardSec extends Component {
   }
 
   /* Get Url of the Image File, using base path && File name */
-  getImageUrl(Item){
-      let basepath = Item.featured_image.base_path;
-      let filename = Item.featured_image.file;
-      return `${basepath}${filename}`;
+  getImageUrl(Item) {
+    let basepath = Item.featured_image.base_path;
+    let filename = Item.featured_image.file;
+    return `${basepath}${filename}`;
   }
 
 
 
 
   /*The Header is made green to be displayed as title */
-  getGreenHeader(dataObject,headerContent){
-        return(
-               <div key={dataObject.id}>
-                  <SubSectionHeaderGreen title={headerContent}/>
-                </div>
-              );
-    }
+  getGreenHeader(dataObject, headerContent) {
+    return (
+      <div key={dataObject.id}>
+        <SubSectionHeaderGreen title={headerContent} />
+      </div>
+    );
+  }
 
   /* Normal Black Header is returned, provided there are no tags in the dataObject header */
-  getHeader(dataObject){
-      return(
-                <div key={dataObject.id}>
-                  <SubSectionHeader title={dataObject.header}/>
-                </div>
-               )
+  getHeader(dataObject) {
+    return (
+      <div key={dataObject.id}>
+        <SubSectionHeader title={dataObject.header} />
+      </div>
+    )
   }
 
   /* Check if the Header of the Page is Valid HTML, if it is then only css is colour is obtained from the Header */
-  checkifValidHTML(dataObject){
+  checkifValidHTML(dataObject) {
     return /<[a-z][\s\S]*>/i.test(dataObject.header);
   }
 
 
-  viewAll(maxCards,cardCount,child_url){
+  viewAll(maxCards, cardCount, child_url) {
 
     /* If max cards are zero, then the page can have any number of cards */
-    if(maxCards == 0){
+    if (maxCards == 0) {
       return false;
     }
 
     /* Logic to return view All Button */
     if (maxCards < cardCount) {
       return (
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL+ child_url}><SubSectionButton title='VIEW ALL'/></Link>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + child_url}><SubSectionButton title='VIEW ALL' /></Link>
       );
     }
 
@@ -167,7 +223,7 @@ class CardSec extends Component {
   }
 
   render() {
-    const {dataObject} = this.props;
+    const { dataObject } = this.props;
 
     let l = (dataObject.cards.length);
 
@@ -186,13 +242,13 @@ class CardSec extends Component {
     let headerColor;
     let headerContent;
     if (dataObject.header !== '') {
-          headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
-         if(headerColor == 'green' || headerColor == 'rgb(0, 128, 0)'){
-            headerContent = dataObject.header.replace(/<[^>]+>/g, '');
-            header = this.getGreenHeader(dataObject,headerContent);
-         }else{
-            header = this.getHeader(dataObject);
-         }
+      headerColor = this.checkifValidHTML(dataObject) ? $(dataObject.header).css("color") : false;
+      if (headerColor == 'green' || headerColor == 'rgb(0, 128, 0)') {
+        headerContent = dataObject.header.replace(/<[^>]+>/g, '');
+        header = this.getGreenHeader(dataObject, headerContent);
+      } else {
+        header = this.getHeader(dataObject);
+      }
     }
 
     let body;
@@ -213,32 +269,17 @@ class CardSec extends Component {
         body = (
           <div>
             <Row className='nopadding'>
-              <Col className='nopadding' xs={layoutTrigger
-                ? 12
-                : 12} sm={layoutTrigger
-                ? 12
-                : cType
-                  ? 6
-                  : 9} md={layoutTrigger
-                ? 12
-                : cType
-                  ? 8
-                  : 9}>
+              <Col className='nopadding'
+                xs={layoutTrigger ? 12 : 12}
+                sm={layoutTrigger ? 12 : cType ? 6 : 9}
+                md={layoutTrigger ? 12 : cType ? 8 : 9}>
                 <div key={dataObject.id} className='cardTypeBody' dangerouslySetInnerHTML={{
                   __html: dataObject.content
-                }}/>
+                }} />
               </Col>
-              <Col className='nopadding' xs={layoutTrigger
-                ? 12
-                : 12} sm={layoutTrigger
-                ? 12
-                : cType
-                  ? 6
-                  : 3} md={layoutTrigger
-                ? 12
-                : cType
-                  ? 4
-                  : 3}>
+              <Col className='nopadding' xs={layoutTrigger ? 12 : 12}
+                sm={layoutTrigger ? 12 : cType ? 6 : 3}
+                md={layoutTrigger ? 12 : cType ? 4 : 3}>
                 <div className='cardTypeCards'>
                   <Row className='nopadding'>
                     {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
@@ -251,7 +292,7 @@ class CardSec extends Component {
       } else {
         body = (<div key={dataObject.id} className='cardTypeBodyNoHeader' dangerouslySetInnerHTML={{
           __html: dataObject.content
-        }}/>)
+        }} />)
       }
 
     } else {
@@ -261,7 +302,6 @@ class CardSec extends Component {
       )
     }
 
-
     let bg = dataObject.background_color === 'gray'
       ? 'greyBcg'
       : ''
@@ -269,9 +309,7 @@ class CardSec extends Component {
     let cardCount = dataObject.card_data.card_count;
 
     /* Code to see the View All Button, when there are more cards than max number of cards */
-    let viewAllButton = this.viewAll(maxCards,cardCount,dataObject.button_linked_page.url);
-
-
+    let viewAllButton = this.viewAll(maxCards, cardCount, dataObject.button_linked_page.url);
 
     return (
       <div className={bg}>
@@ -279,12 +317,13 @@ class CardSec extends Component {
           <div>{header}</div>
           <div>{body}</div>
           <div> {viewAllButton} </div>
-          {this.props.finalSec==true?<div className = 'bottomSection'></div>:<div className = 'normalsection'></div>}
+          {this.props.finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>}
         </div>
       </div>
     );
   };
 };
+
 CardSec.propTypes = {
   dataObject: PropTypes.object,
   className: PropTypes.string

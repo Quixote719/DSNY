@@ -27,8 +27,6 @@ export default function AboutDataReducer(state = { bureaus: {} }, action) {
       return {...state, FleetData: action.payload};
     case 'SET_CONTACT_PAGE':
       return {...state, ContactPageData: action.payload};
-    case 'SET_COMPLAINTS_PAGE':
-      return {...state, ComplaintsPageData: action.payload};
     default:
       return state;
   }

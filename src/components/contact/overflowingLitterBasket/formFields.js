@@ -1,6 +1,7 @@
 import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
+import FormHeaderSmallSize from '../form_header_SmallSize';
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
@@ -18,17 +19,13 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <div className='patternLineGreen'></div>
-    <FormHeader title='Online Complaint Form'/>
+    <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={DropdownInput} name="LitterBasketReasonId" {...props} onChange={setFieldValue} options={values.Reasons} disabled={values.editMode} {...props} />
-    <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} maxlength={"25"}/>
-    <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
     <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>
     <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"}/>

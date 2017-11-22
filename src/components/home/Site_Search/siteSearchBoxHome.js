@@ -25,7 +25,6 @@ class SiteSearchBox extends Component {
             placeholder: "Search"
           };
     }
-
     getSuggestionValue = suggestion => suggestion;
     renderSuggestion = suggestion => (
       <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/site-search/${suggestion}`}>
@@ -51,6 +50,7 @@ class SiteSearchBox extends Component {
         });
       };
       onSuggestionsClearRequested = () => {
+        
         this.setState({
           suggestions: []
         });
@@ -75,7 +75,6 @@ class SiteSearchBox extends Component {
       //     checkInputresults: "clearBoxNotChecked",
       //     searchResult: ""
       //  });
-      this.props.setPaginationKey(1);      
       this.props.setSearchClearBoxValue("clearBoxNotChecked")      
       this.props.setSiteSearchValue(suggestion);
       this.props.getSiteSearchResults(suggestion);                 
@@ -86,13 +85,10 @@ class SiteSearchBox extends Component {
         window.staticUrl.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
         this.props.setSearchClearBoxValue("clearBoxNotChecked")      
         this.props.setSiteSearchValue(this.state.value);
-        this.props.getSiteSearchResults(this.state.value);
-        this.props.setPaginationKey(1);
-        this.setState({
-          value: "",
-          placeholder: "Search"          
-        });
-        document.activeElement.blur();
+        this.props.getSiteSearchResults(this.state.value);  
+      //   this.setState({
+      //     value: "",
+      //  });
       }        
     }
     handleKeyPress = (event) => {
@@ -101,8 +97,8 @@ class SiteSearchBox extends Component {
       }   
       if(event.key == 'Enter'){ 
         this.props.setSearchClearBoxValue("clearBoxNotChecked")        
-        // this.props.setSiteSearchValue(this.state.value);        
-        // this.props.getSiteSearchResults(this.state.value);           
+        this.props.setSiteSearchValue(this.state.value);        
+        this.props.getSiteSearchResults(this.state.value);           
         document.getElementById("siteSearchLink").click();
       }
     }
@@ -112,7 +108,7 @@ class SiteSearchBox extends Component {
        });
   }
     render() {
-
+console.log("Again rendered")
         return (
             <div className = "siteSearchBoxParent">
                         <Autosuggest
@@ -142,14 +138,12 @@ class SiteSearchBox extends Component {
 }
 function mapStateToProps(state) {
   return {
-      paginationKeyValue: state.carouselDataReducer.paginationKeyValue,            
       siteClearBoxValue: state.carouselDataReducer.siteClearBoxValue,    
       siteSearchValue: state.carouselDataReducer.siteSearchValue,                
   }
 }
 
 let actionList = {
-  setPaginationKey: actions.setPaginationKey,      
   setSearchClearBoxValue: actions.setSearchClearBoxValue,      
   getSiteSearchResults: actions.getSiteSearchResults,  
   setSiteSearchValue: actions.setSiteSearchValue,
