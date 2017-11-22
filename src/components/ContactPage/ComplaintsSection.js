@@ -10,7 +10,7 @@ class Complaints extends Component {
         <div className="Complaints">
           <SubSectionHeader title = {this.props.ComplaintsProps.title}/>
           <div dangerouslySetInnerHTML={{__html: this.props.ComplaintsProps.content}}></div>
-          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints"}>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/Complaints"}>
             <div className='viewAllComplaints'> <SubSectionButton title='VIEW ALL COMPLAINTS'/></div>
           </Link>
         </div>
