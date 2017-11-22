@@ -88,8 +88,6 @@ class Complaints extends Component {
   }
 
 
-
-
   parseComplaintsData(Complaints, BannerText, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps) {
     if(this.props.ComplaintsPageData !== undefined){
         Complaints = this.props.ComplaintsPageData.data;
