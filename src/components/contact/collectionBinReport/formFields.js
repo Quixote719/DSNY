@@ -44,9 +44,9 @@ class formFields extends Component {
     )
   }
 
-  addBin(Bins){
+  addBin(Bin){
     let temp = this.state.BinCount;
-    ++temp;
+    Bin?++temp:--temp;
     this.setState({BinCount: temp},()=>{this.forceUpdate()});
   }
 
@@ -74,10 +74,21 @@ class formFields extends Component {
 
             <Field component={TextInput} name="CollectionBinAnnualReportId" maxlength={50} {...this.props} />
             <Field component={TextInput} name="WeightInPounds" maxlength={50} {...this.props} />
-            <Field component={DropdownInput} name="Removed" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
+            <Field component={DropdownInput} name="Removed" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  />
+            {values.Removed && <Field component={DateTimePickerInput} name="RemovalDate" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>}
             {dom}
             <Col xs={12} md={12}>
-              <div className="fa fa-plus-circle" onClick={()=>{this.addBin(this.state.BinCount)}}></div>
+            <span>
+              <span className="fa fa-plus-circle" onClick={()=>{this.addBin(true)}}></span>
+              <span className="MangeBinText">Add bin</span>
+            </span>
+              {    this.state.BinCount>1 &&
+                <span>
+                      <span className="fa fa-minus-circle" onClick={()=>{this.addBin(false)}}></span>
+                      <span className="MangeBinText">Remove bin</span>
+                </span>
+              }
+
             </Col>
         </fieldset>
       )

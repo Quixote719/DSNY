@@ -9,6 +9,7 @@ export const Titles = {
   "LastName":"CONTACT LAST NAME",
   "Email":"CONTACT E-MAIL",
   "Phone":"CONTACT PHONE",
+  "RemovalDate":"DATE REMOVED",
   "CollectionBinAnnualReportId":"DSNY ASSIGNED BIN ID 1",
   "WeightInPounds":"WEIGHT (IN LBS)",
   "Removed":"REMOVED",
@@ -101,14 +102,7 @@ export const formObject = {
     "CompanyName": "",
     "Title": "",
     "CollectionBins": [
-      {
-        "Id": 0,
-        "CollectionBinAnnualReportId": 0,
-        "DsnyAssignedBinId": "",
-        "WeightInPounds": 0,
-        "Removed": true,
-        "RemovalDate": "2017-11-21T20:15:10.688Z"
-      }
+
     ],
     "CollectionBinAnnualReportId": 0,
     "WeightInPounds": 0,
