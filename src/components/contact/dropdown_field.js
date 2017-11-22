@@ -28,20 +28,28 @@ class FormDropdown extends Component {
   }
 
    searchKey(Key, myArray){
-      for (var i=0; i < myArray.length; i++) {
-          if (myArray[i].Id === Key) {
-              return myArray[i].DisplayName;
-          }
-      }
+    if(myArray === undefined  && Key !== undefined){
+          return Key.DisplayName;
+    }
+        for (var i=0; i < myArray.length; i++) {
+            if (myArray[i].Id === Key) {
+                return myArray[i].DisplayName;
+            }
+     }  
   }
   onInputChange(item) {
+    console.log('%%');
+    console.log(item);
     this.setState({option: item.DisplayName ?  item.DisplayName : item});
-    this.props.onChange(this.props.name, item.Id ? item.Id : item)
+    /* In case of Boolen, */ 
+    typeof this.props.value === "boolean" ? this.props.onChange(this.props.name, item.Id) :  this.props.onChange(this.props.name, item.Id ? item.Id : item);
+
+   
   }
 
   renderList(List) {
     return _.map(List, Item => {
-      return (<MenuItem key={Item.DisplayName ? Item.DisplayName : Item} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName ? Item.DisplayName : Item}</MenuItem>);
+      return (<MenuItem key={Item.DisplayName ? Item.DisplayName : Item} value={this.props.value} className='SubSectionDropdownMenuItem' onChange={event => this.onInputChange(event)} onSelect={event => this.onInputChange(event)} eventKey={Item}>{Item.DisplayName ? Item.DisplayName : Item}</MenuItem>);
     });
   }
 

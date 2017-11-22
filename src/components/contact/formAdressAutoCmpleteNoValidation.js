@@ -14,9 +14,10 @@ let errorFlag = 0;
 class FormAddressAutocompleteNoValidation extends Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            address: '',                        
-          };
+        console.log(this.props);
+            this.state = {
+                address: this.props.value || '',                        
+            };
     }
     
     handleChange = (address) =>{
@@ -104,8 +105,7 @@ function mapStateToProps(state) {
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,        
         noResultsError: state.carouselDataReducer.noResultsError,
         suggestionAddress: state.carouselDataReducer.suggestionAddress,      
-        collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,
-        value:state.address,        
+        collectionScheduleInfo: state.carouselDataReducer.collectionScheduleInfo,     
     }
   }
   

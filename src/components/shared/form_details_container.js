@@ -30,6 +30,7 @@ import CRFLRequestForm from '../contact/CRforLargeItems'
 import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
+import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
 
 class FormDetail extends Component {
 
@@ -97,6 +98,8 @@ class FormDetail extends Component {
               return <FailureStoreReceptacles />
               case 'commercial-organics-on-site-processing-registration':
               return <OrganicsForm />
+              case 'equal-employment-opportunity-complaint-form':
+              return <EEOComplaintForm />
               case   'site-visit-request':
               return <SiteVisitRequestForm />
               case 'master-composter-certificate-course':
