@@ -47,9 +47,9 @@ class EventParticipationRequestForm extends Component {
       'Phone':formObject.PPhone,
       'Title':formObject.PTitle,
       'Organization':formObject.POrganization,
-      'Zip':'11218',
       'PhoneTypeId':formObject.PPhoneTypeId,
       'Email':formObject.PEmailConfirm,
+       'Zip':null,
     }
 
 
@@ -59,9 +59,9 @@ class EventParticipationRequestForm extends Component {
       'Phone':formObject.SPhone,
       'Title':formObject.STitle,
       'Organization':formObject.SOrganization,
-      'Zip':'11218',
       'PhoneTypeId':formObject.SPhoneTypeId,
       'Email':formObject.SEmailConfirm,
+      'Zip':null,
     }
 
    

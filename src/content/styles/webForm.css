@@ -68,3 +68,24 @@ label.checkContainer{
      -ms-transform: rotate(45deg);
      transform: rotate(45deg);
  }
+
+ .fa-plus-circle, .fa-minus-circle{
+     margin: 12px 6px 0 0;
+     color: #00764D;
+     width: 28px;
+     height: 28px;
+     font-size: 28px;
+     cursor: pointer;
+     display: inline-block;
+ }
+
+ .MangeBinText{
+    position: relative;
+    bottom: 5px;
+    margin-right: 40px;
+   	font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #00764D;
+    display: inline-block;
+ }

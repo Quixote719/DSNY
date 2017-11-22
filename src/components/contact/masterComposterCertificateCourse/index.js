@@ -26,67 +26,46 @@ class MasterComposerCertificateCourseForm extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
-
   postForm(formObject){
       console.log(formObject);
       this.props.postFormObject(formObject, PSOT_FORM_MASTER_COMPOST_REQST);
   }
 
-  
-  
-
-
-
    validateForm(formObject, errors){
 
-    //const adress = actionList.getCollectionSchedule(formObject.);
-    //formObject & Values are same
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
+    if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
-
     return errors;
   }
 
   render() {
 
-    //const {FormObject, error, success} = this.props;
-    const {success} = this.props;
+     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
-     if(success !== undefined) {
-          if(success != null) {
-            let message= 'Your Master Composter Certificate Course form has been submitted succesfully.Your response No. is: ' + success.SRNo;
-            return(<ThankYou>
-                      {message}
-                  </ThankYou>);
-          } else {
-            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
-          }          
-        }
-
-    if (FormObject && FormObject !== undefined) {
-        return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+     if(success !== undefined && success !== null) {
+         return (<div className='container'><div className='form compostForm'>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
-    };
+      };
 
-  
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    // }
-    return(<div className='loader container'></div>)
+      if (FormObject && FormObject !== undefined) {
+        return (<div className='container'><div className='form compostForm'>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                </div></div>);
+        };
+
+      if (error){
+            return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+      }
+
+      return(<div className='loader container'></div>)
  };
 };
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success,  geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator, error:state.error.type};
 }
 
 

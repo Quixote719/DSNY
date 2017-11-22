@@ -10,6 +10,7 @@ export const Titles = {
 	ConfirmEmail: 'CONFIRM E-MAIL',
 	AppointmentDate: 'APPOINTMENT DATE',
 	PickUpLocation: 'PICKUP STREET',
+	overideAddressValidation:'I certify that this request is not for a commercial business or an apartment with more than 10 units.'
 }
 
 export const formObject = {
