@@ -11,7 +11,9 @@ export const Titles = {
   Email:'EMAIL',
   confirmEmail:'CONFIRM EMAIL',
   Phone:'PHONE',
-
+  Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
   
 }
 

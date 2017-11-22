@@ -134,6 +134,7 @@ export const formObject = {
   "PTitle": null,
   "POrganization": null,
   "PFullAddress": null,
+  "PSuite":null,
   "PSelectedPhoneType":null,
   "SFirstName": null,
   "SLastName": null,

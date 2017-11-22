@@ -55,6 +55,10 @@
     line-height: 19px;
   }
 
+  .FormRow .cardTitleTextHavingURL{
+    padding-left: 0px;
+  }
+
   .cardTypeCards {
     /*margin-top: 30px;*/
   }

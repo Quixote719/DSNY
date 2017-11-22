@@ -14,6 +14,7 @@ import Home from './components/home';
 import About from './components/about';
 import Services from './components/services'
 import Contact from './components/ContactPage';
+import Complaints from './components/ContactPage/Complaints';
 import Location from './components/about/Location';
 import Leadership from './components/about/Leadership';
 import Bureaus from './components/about/Bureaus';
@@ -131,10 +132,9 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
               {/*<Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>*/}
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints"} component={Complaints}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/:slug"} component={WebformPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/:slug"} component={WebformPage}/>
-
-              
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eeocomplaints"} component={eeoComplaintForm} />
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/adoptedbaskets"} component={adoptABasketForm} /> */}
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/compostRequest"} component={CompostRequest}/> */}
@@ -145,6 +145,8 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/recyclableMaterialTheft"} component={RecyclableMaterialTheft}/> */}
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/failureStoreReceptacles"} component={FailureStoreReceptacles}/> */}
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinReport"} component={CollectionBinReport}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/:slug"} component={WebformPage}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/:slug"} component={WebformPage}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>
           </div>

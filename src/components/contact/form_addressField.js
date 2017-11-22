@@ -15,7 +15,6 @@ class FormField extends Component {
     super(props);
     console.log(props);
     this.state = {
-      input: '',
       hideToolTip: true
     }
 
@@ -26,6 +25,7 @@ class FormField extends Component {
   /* Mapping of address value with the Prop name to create the JSON object */
   onInputChange(address) {
     this.props.onChange(this.props.name, address);
+    this.props.setFieldValue(this.props.name, address);
   }
 
   handleChange(event){
@@ -39,7 +39,7 @@ class FormField extends Component {
   renderField() {          
            return (<div>
             <FormAddressAutocompleteNoValidation ref={this.props.name}  maxLength = {this.props.maxlength}  type="text" name={this.props.name} onChange = {event => this.onInputChange(event)}
-               onBlur =  {event => this.onInputChange(event)} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
+               value={this.props.value ? this.props.value : ''} onBlur =  {event => this.onInputChange(event)} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
             <div>{this.props.children}</div>
@@ -77,7 +77,7 @@ const AdressInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField disabled={props.editMode} title={props.formTitles[name]} value={props.value} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField disabled={props.editMode} title={props.formTitles[name]} value={props.values[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )
