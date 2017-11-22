@@ -28,7 +28,7 @@ class SiteSearch extends Component {
         return (
             <div className = "howToGetRidOfParent">
             <Header title='Search' breadCrumbList= "" />
-            <SearchPage paginationKeyValue = {this.props.paginationKeyValue} setPaginationKey = {this.props.setPaginationKey} siteClearBoxValue = {this.props.siteClearBoxValue} setSearchClearBoxValue ={this.props.setSearchClearBoxValue} setSiteSearchValue={this.props.setSiteSearchValue?this.props.setSiteSearchValue:""} siteSearchValue= {this.props.siteSearchValue?this.props.siteSearchValue:""} pushHistory = {this.props} getRidOfSearchResults={this.props.getSiteSearchResults?this.props.getSiteSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.siteSearchResultsData?this.props.siteSearchResultsData:""} ridOffKeywords={this.props.siteSearchKeywords?this.props.siteSearchKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
+            <SearchPage siteClearBoxValue = {this.props.siteClearBoxValue} setSearchClearBoxValue ={this.props.setSearchClearBoxValue} setSiteSearchValue={this.props.setSiteSearchValue?this.props.setSiteSearchValue:""} siteSearchValue= {this.props.siteSearchValue?this.props.siteSearchValue:""} pushHistory = {this.props} getRidOfSearchResults={this.props.getSiteSearchResults?this.props.getSiteSearchResults:""} noOfSearchResults ={this.props.noOfSearchResults?this.props.noOfSearchResults:0} getRidOfSearchResultsData={this.props.siteSearchResultsData?this.props.siteSearchResultsData:""} ridOffKeywords={this.props.siteSearchKeywords?this.props.siteSearchKeywords:""} keyword={this.props.match.params.keyword?this.props.match.params.keyword:""}/>
             </div>
         )
     }
@@ -40,7 +40,6 @@ function mapStateToProps(state) {
         noOfSearchResults: state.carouselDataReducer.noOfSearchResults,        
         siteSearchResultsData: state.carouselDataReducer.siteSearchResultsData,
         siteSearchKeywords: state.carouselDataReducer.siteSearchKeywords,        
-        paginationKeyValue: state.carouselDataReducer.paginationKeyValue,                
     }
   }
   
@@ -49,7 +48,6 @@ let actionList = {
     setSiteSearchValue: actions.setSiteSearchValue,
     getSiteSearchKeywords: actions.getSiteSearchKeywords,    
     getSiteSearchResults: actions.getSiteSearchResults,
-    setPaginationKey: actions.setPaginationKey,        
   };
 
 SiteSearch = connect(mapStateToProps, actionList)(SiteSearch);

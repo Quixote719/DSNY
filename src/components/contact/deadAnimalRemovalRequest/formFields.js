@@ -2,6 +2,7 @@ import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
 import CheckBoxInput from '../form_boolean';
+import FormHeaderSmallSize from '../form_header_SmallSize';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import {Field} from 'formik'
@@ -18,14 +19,13 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <div className='patternLineGreen'></div>
-    <FormHeader title='Online Complaint Form'/>
+    <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete/>
     </div>
-    <Field component={DropdownInput} name="ExactLocationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ExactLocation} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherLocation" {...props} isHidden={values.ExactLocationId !== 4} maxlength={"25"}/>
+    <Field component={DropdownInput} name="DeadAnimalLocationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.DeadAnimalLocations} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="OtherDeadAnimalLocation" {...props} isHidden={values.DeadAnimalLocationId !== 4} maxlength={"25"}/>
     <Field component={TextInput} name="AdditionalLocation" {...props} fullRow={true} maxlength={"100"}/>
 
     <FormSectionHeader title={Titles.sectionTwo}/>

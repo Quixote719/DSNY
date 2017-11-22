@@ -26,7 +26,7 @@ class SearchSitePage extends Component {
         super(props, context);
         this.searchResultPage = this.searchResultPage.bind(this);        
         this.state = {
-            // activePage: 1,            
+            activePage: 1,            
             suggestions: [],
             placeholder: "Enter your search term",
             searchResult: "",
@@ -86,7 +86,6 @@ class SearchSitePage extends Component {
         });
       };
     searchResultPage(event,{suggestion}){
-        this.props.setPaginationKey(1);        
         this.props.setSearchClearBoxValue("clearBoxNotChecked")
         this.props.getRidOfSearchResults(suggestion);   
     }
@@ -99,16 +98,14 @@ class SearchSitePage extends Component {
             event.preventDefault();
           }   
         if(event.key == 'Enter'){
-            this.props.setPaginationKey(1);
             this.props.getRidOfSearchResults(this.props.siteSearchValue);   
             this.props.setSearchClearBoxValue("clearBoxNotChecked")                   
         }
       }
     handleSelect = (eventKey) => {
-        // this.setState({
-        //     activePage: eventKey
-        // });
-        this.props.setPaginationKey(eventKey);
+        this.setState({
+            activePage: eventKey
+        });
     }
     resetPlaceHolder = () =>{
         this.setState({
@@ -122,7 +119,7 @@ class SearchSitePage extends Component {
       }
     render() {
         console.log("The search site page RENDER METHOD has been entererd..................");
-        const activePage = this.props.paginationKeyValue;
+        const activePage = this.state.activePage;
         let length = this.props.getRidOfSearchResultsData.length;
         length = Math.ceil(length / pageSize);
         const indexOfLast = activePage * pageSize;
@@ -170,7 +167,7 @@ class SearchSitePage extends Component {
                         boundaryLinks
                         items={length}
                         maxButtons={3}
-                        activePage={this.props.paginationKeyValue}
+                        activePage={this.state.activePage}
                         onSelect={this.handleSelect} />
             </div>
             </div>
