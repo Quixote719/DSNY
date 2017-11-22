@@ -25,7 +25,6 @@ class SiteSearchBox extends Component {
             placeholder: "Search"
           };
     }
-
     getSuggestionValue = suggestion => suggestion;
     renderSuggestion = suggestion => (
       <Link to={`${process.env.REACT_APP_SITE_RELATIVE_URL}/site-search/${suggestion}`}>
@@ -82,12 +81,20 @@ class SiteSearchBox extends Component {
     }
     siteSearchIcon = () =>{
       // this.props.showModal;
-      this.props.setSearchClearBoxValue("clearBoxNotChecked")      
-      this.props.setSiteSearchValue(this.state.value);
-      this.props.getSiteSearchResults(this.state.value);  
-      
+      if(this.state.value.trim().length !== 0){
+        window.staticUrl.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
+        this.props.setSearchClearBoxValue("clearBoxNotChecked")      
+        this.props.setSiteSearchValue(this.state.value);
+        this.props.getSiteSearchResults(this.state.value);  
+      //   this.setState({
+      //     value: "",
+      //  });
+      }        
     }
     handleKeyPress = (event) => {
+      if(this.state.value.trim().length == 0 && event.keyCode == 32){
+        event.preventDefault();
+      }   
       if(event.key == 'Enter'){ 
         this.props.setSearchClearBoxValue("clearBoxNotChecked")        
         this.props.setSiteSearchValue(this.state.value);        
@@ -95,8 +102,13 @@ class SiteSearchBox extends Component {
         document.getElementById("siteSearchLink").click();
       }
     }
+    clearSearchBox(){
+      this.setState({
+          value: "",
+       });
+  }
     render() {
-
+console.log("Again rendered")
         return (
             <div className = "siteSearchBoxParent">
                         <Autosuggest
@@ -113,11 +125,13 @@ class SiteSearchBox extends Component {
                                 placeholder: this.state.placeholder,
                                 onBlur: this.resetPlaceHolder,
                                 onFocus: this.setPlaceHolder,
-                                onKeyPress: this.handleKeyPress,                                
+                                onKeyPress: this.handleKeyPress,          
+                                onKeyDown: this.handleKeyPress,                                
                             }}/>
-                        <Link onClick = {this.props.showModal} to = {process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value} id = "siteSearchLink">
-                        <i className="fa fa-search searchMessagesInputIcon" onClick = {this.siteSearchIcon} ></i>
-                        </Link>
+                        {/* <Link onClick = {this.props.showModal} to = {process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value} id = "siteSearchLink"> */}
+                        <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.state.value!==""?{display: 'block'}:{display: 'none'}} id="siteSearchResults"></i>
+                        <i className="fa fa-search searchMessagesInputIcon"  style={this.state.value ==""?{display: 'block'}:{display: 'none'}} id = "siteSearchLink" onClick = {this.siteSearchIcon} ></i>
+                        {/* </Link> */}
             </div>
     )
   } 

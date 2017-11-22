@@ -5,7 +5,7 @@ import {
   PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject, IsDistrictActive, GetUnavailableDates} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject, IsDistrictActive,GetBulidingUnits, GetUnavailableDates} from "../../../actions/contact_forms";
 import FormSteps from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -36,6 +36,7 @@ class EwasteRequestForm extends Component {
   updateValues(geoCoderAddressResult){
    this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
    this.props.GetUnavailableDates(geoCoderAddressResult.sanitationDistrict)
+   this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
   }
 
 
@@ -58,7 +59,7 @@ class EwasteRequestForm extends Component {
   }
 
   render() {
-    const { error, success, isDistrictActive, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
+    const { error, success, isDistrictActive, buildingStatus, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
 
     if (geoCoderAddressResult){
       console.log(this.props);
@@ -68,7 +69,7 @@ class EwasteRequestForm extends Component {
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} isDistrictActive={isDistrictActive} Dates={unavailableDates} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} buildingStatus={buildingStatus} isDistrictActive={isDistrictActive} Dates={unavailableDates} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -85,6 +86,7 @@ function mapStateToProps(state) {
     success:state.forms.success,
     isDistrictActive:state.forms.isDistrictActive,
     unavailableDates:state.forms.unavailableDates,
+    buildingStatus:state.forms.buildingStatus,
     geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
     isAddressValidated: state.carouselDataReducer.addressValidator,
     error:state.error.type
@@ -92,4 +94,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject,IsDistrictActive, GetUnavailableDates, postFormObject})(EwasteRequestForm);
+export default connect(mapStateToProps, {fetchFormObject,IsDistrictActive,GetBulidingUnits, GetUnavailableDates, postFormObject})(EwasteRequestForm);

@@ -142,6 +142,11 @@
 .collectionScheduleColumn{
     padding: 0;
 }
+.errorUserAddressParent{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
     .searchContainerCollection {

@@ -45,10 +45,28 @@ class SearchCards extends Component {
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)
     }
     searchIconSelected = () =>{
+        if(this.state.address.trim().length !== 0){            
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)
+    }
+    }
+    handleKeyPress = (event) => {
+        console.log(this.state.address)
+        console.log(this.state.address.length)
+        if(this.state.address.trim().length == 0 && event.keyCode == 32){
+          event.preventDefault();
+        }   
+        if(event.key == 'Enter'){ 
+            this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)
+        }
+      }
+      clearSearchBox(){
+        this.setState({
+            address: "",
+         });
     }
     render() {
         const inputProps = {
+            onKeyDown : this.handleKeyPress,              
             value: this.state.address,
             onChange: this.handleChange,
             placeholder: this.state.placeholder,
@@ -88,7 +106,9 @@ class SearchCards extends Component {
                                     classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses}
                                 />
                                 </div>
-                                <i className="fa fa-search collectionSearch" id="collectionSearch" onClick = {()=>{this.searchIconSelected()}}></i>
+                                <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} id="collectionSearchResultsHome" style={this.state.address!==""?{display: 'block'}:{display: 'none'}}></i>
+                                <i className="fa fa-search collectionSearch" style={this.state.address ==""?{display: 'block'}:{display: 'none'}}
+                                id="collectionSearch" onClick = {()=>{this.searchIconSelected()}}></i>
                                 <div style={this.state.address ==""?{display: 'block'}:{display:'none'}} className="exampleRidSearch"> Example: 454 W 12th Ave, New York </div>
                             </div>
                         </div>
