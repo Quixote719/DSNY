@@ -1,4 +1,6 @@
 export const Titles = {
+  "SuccessMessage": "Success! Your response No. is: ",
+  "FailureMessage":"Please make sure your message is correct.",
   "sectionOne": "BIN OWNER INFORMATION",
   "sectionTwo": "BIN INFORMATION",
   "CompanyName":"COMPANY NAME",
@@ -85,20 +87,29 @@ export const Titles = {
 }
 
 export const formObject = {
-    "Id": 0,
+  "Id": 0,
     "SRNumberId": 0,
-    "SRNo": null,
+    "SRNo": "",
     "ServiceRequestStatusId": 0,
-    "CreatedDate": "0001-01-01T00:00:00",
-    "FirstName": null,
-    "LastName": null,
-    "Phone": null,
-    "Email": null,
-    "FullName": null,
-    "FullNameLastFirst": null,
-    "CompanyName": null,
-    "Title": null,
-    "CollectionBins": [],
+    "CreatedDate": "2017-11-21T20:15:10.688Z",
+    "FirstName": "",
+    "LastName": "",
+    "Phone": "",
+    "Email": "",
+    "FullName": "",
+    "FullNameLastFirst": "",
+    "CompanyName": "",
+    "Title": "",
+    "CollectionBins": [
+      {
+        "Id": 0,
+        "CollectionBinAnnualReportId": 0,
+        "DsnyAssignedBinId": "",
+        "WeightInPounds": 0,
+        "Removed": true,
+        "RemovalDate": "2017-11-21T20:15:10.688Z"
+      }
+    ],
     "CollectionBinAnnualReportId": 0,
     "WeightInPounds": 0,
     "Removed": false,

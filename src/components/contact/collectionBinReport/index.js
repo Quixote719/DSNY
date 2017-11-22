@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -27,7 +28,7 @@ class CollectionBinReport extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
+      this.props.postFormObject(formObject, POST_FORM_COLLECTION_BIN_REPORT);
   }
 
    validateForm(formObject, errors){

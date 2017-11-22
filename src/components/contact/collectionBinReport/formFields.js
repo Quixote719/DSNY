@@ -24,6 +24,7 @@ class formFields extends Component {
         BinCount: 1,
       }
       this.renderComp.bind(this);
+      this.addBin.bind(this);
   }
   componentWillMount() {
     const { values, setFieldValue} = this.props;
@@ -42,6 +43,13 @@ class formFields extends Component {
       </div>
     )
   }
+
+  addBin(Bins){
+    let temp = this.state.BinCount;
+    ++temp;
+    this.setState({BinCount: temp},()=>{this.forceUpdate()});
+  }
+
   render(){
     const { values, setFieldValue, handledropDown} = this.props;
 
