@@ -98,5 +98,11 @@ export const formObject = {
     "FullNameLastFirst": null,
     "CompanyName": null,
     "Title": null,
-    "CollectionBins": []
+    "CollectionBins": [],
+    "CollectionBinAnnualReportId": 0,
+    "WeightInPounds": 0,
+    "Removed": false,
+    "CollectionBinAnnualReportId2": 0,
+    "WeightInPounds2": 0,
+    "Removed2": false,
 }

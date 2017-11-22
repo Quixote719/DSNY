@@ -23,49 +23,45 @@ class formFields extends Component {
       this.state = {
         BinCount: 1,
       }
-      this.addBin.bind(this);
-      this.createNewBin.bind(this);
-      this.addOneBin.bind(this);
+      this.renderComp.bind(this);
   }
   componentWillMount() {
     const { values, setFieldValue} = this.props;
     console.log(values);
     console.log(setFieldValue);
   }
+
+  renderComp(i){
+    const { values, setFieldValue, handledropDown} = this.props;
+    return(
+      <div>
+        <Col xs={12} md={12}></Col>
+        <Field component={TextInput} name={"CollectionBinAnnualReportId" + i} maxlength={50} {...this.props} />
+        <Field component={TextInput} name={"WeightInPounds" + i} maxlength={50} {...this.props} />
+        <Field component={DropdownInput} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
+      </div>
+    )
+  }
   render(){
     const { values, setFieldValue, handledropDown} = this.props;
-    const ChildComponent = props =>
-
-        // console.log("key" + props.key)
-        // console.log("this.props")
-        // console.log(this.props)
-        // return(
-        <div>
-          <Col xs={12} md={12}></Col>
-          <Field component={TextInput} name={"CollectionBinAnnualReportId" + props.number} maxlength={50} {...this.props} />
-          <Field component={TextInput} name={"WeightInPounds" + props.number} maxlength={50} {...this.props} />
-          <Field component={DropdownInput} name={"Removed" + props.number} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
-        </div>
-
-    //   )
-    // }
 
     console.log("Bin " + this.state.BinCount)
     const dom = [];
     for(let i=2; i<=this.state.BinCount; i++){
-      dom.push(<ChildComponent key={i} number={i} props={this.props}/>);
+      // dom.push(<ChildComponent key={i} number={i} props={this.props}/>);
+        dom.push(this.renderComp(i))
     }
     console.log(dom);
     return (
       <fieldset className='disabledContactForm' disabled={values.editMode}>
           <FormHeader title='Online Reporting Form'/>
           <FormSectionHeader title={Titles.sectionOne}/>
-            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="Title" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="Email" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} />
+            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="Title" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="Email" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} required/>
           <FormSectionHeader title={Titles.sectionTwo}/>
 
             <Field component={TextInput} name="CollectionBinAnnualReportId" maxlength={50} {...this.props} />
@@ -78,37 +74,7 @@ class formFields extends Component {
         </fieldset>
       )
   }
-  addOneBin(){
-    const { values, setFieldValue, handledropDown} = this.props;
-    const ChildComponent = props => {
-      <div>{"I am child " + props.number}</div>;
-    }
-    return(
-      <div>
-      <Field component={TextInput} name="CollectionBinAnnualReportId" maxlength={50} {...this.props} />
-      <Field component={TextInput} name="WeightInPounds" maxlength={50} {...this.props} />
-      <Field component={DropdownInput} name="Removed" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
-      </div>
-    )
-  }
-  // const ChildComponent = props => {
-  //   <div>{"I am child " + props.number}</div>;
-  // }
 
-  addBin(Bins){
-    let temp = this.state.BinCount;
-    ++temp;
-    this.setState({BinCount: temp},()=>{this.forceUpdate()});
-  }
-  createNewBin(){
-      const { values, setFieldValue, handledropDown} = this.props;
-      console.log("this.state.BinCount  " + this.state.BinCount)
-      let dom1 = null;
-          for(let i=1; i<this.state.BinCount; i++){
-            dom1 += this.addOneBin();
-          }
-      return dom1;
-  }
 };
 
 

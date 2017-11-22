@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_DISABILITY_SERVICES_URL
+  POST_FORM_COLLECTION_BIN_REPORT, PSOT_FORM_DISABILITY_SERVICES_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -19,16 +19,12 @@ class CollectionBinReport extends Component {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
-    this.addBin = this.addBin.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
     }
   }
 
-  addBin(){
-    alert('Add Bin');
-  }
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
