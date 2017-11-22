@@ -25,7 +25,7 @@ class SearchPage extends Component {
         super(props, context);
         this.searchResultPage = this.searchResultPage.bind(this);        
         this.state = {
-            activePage: 1,            
+            // activePage: 1,            
             value: this.props.keyword,
             suggestions: [],
             placeholder: "Enter your search term",
@@ -88,6 +88,7 @@ class SearchPage extends Component {
         this.setState({
             searchResult: ""
          });
+        this.props.setPaginationKey(1);                     
         this.props.getRidOfSearchResults(suggestion);   
     }
     clearSearchBox(){
@@ -100,6 +101,7 @@ class SearchPage extends Component {
             event.preventDefault();
           }   
         if(event.key == 'Enter'){
+            this.props.setPaginationKey(1);            
             this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
             this.props.getRidOfSearchResults(this.state.value);   
             this.setState({
@@ -108,9 +110,10 @@ class SearchPage extends Component {
         }
       }
     handleSelect = (eventKey) => {
-        this.setState({
-            activePage: eventKey
-        });
+        // this.setState({
+        //     activePage: eventKey
+        // });
+        this.props.setPaginationKey(eventKey);
     }
     resetPlaceHolder = () =>{
         this.setState({
@@ -123,7 +126,7 @@ class SearchPage extends Component {
         })
       }
     render() {
-        const activePage = this.state.activePage;
+        const activePage = this.props.paginationKeyValue;
         let length = this.props.getRidOfSearchResultsData.length;
         length = Math.ceil(length / pageSize);
         const indexOfLast = activePage * pageSize;
@@ -171,7 +174,7 @@ class SearchPage extends Component {
                         boundaryLinks
                         items={length}
                         maxButtons={3}
-                        activePage={this.state.activePage}
+                        activePage={this.props.paginationKeyValue}
                         onSelect={this.handleSelect} />
             </div>
             </div>
