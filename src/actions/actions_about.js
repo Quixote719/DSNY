@@ -35,7 +35,10 @@ export function FetchContactData() {
   const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=contact`);
   return {type: 'SET_CONTACT_PAGE', payload: request}
 }
-
+export function FetchComplaintsData() {
+  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=complaints`);
+  return {type: 'SET_COMPLAINTS_PAGE', payload: request}
+}
 export function FetchCommissioner () {
     const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=about-commissioner`);
     return {type: 'SET_COMMISSIONER', payload: request}
