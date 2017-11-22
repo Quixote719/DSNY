@@ -40,25 +40,26 @@ const masterComposerCertificateCourseElements = (props) => {
     <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="Address" />
-    <Field component={TextInput} name="Apartment" {...props} maxlength="100"/>
+    <FormAddressAutocomplete name="Address" required />
+    <Field component={TextInput} name="Apartment" {...props} maxlength="100" required />
     
     <FormSectionHeader title={Titles.SectionTwo} />
-    <Field component={DropdownInput} name="PrefferedLocation" {...props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.PrefferedLocationType} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PrefferedLocation" {...props} ondropDownChange={handledropDown} onChange={setFieldValue}  
+    options={values.PrefferedLocationType} disabled={values.editMode} required />
     
     <FormSectionHeader title={Titles.SectionThree} />
-    <Field component={DropdownInput} name="AppliedToProgramBefore" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}/> 
-    <Field component={TextAreaInput} name="DescribeExperience" maxlength="1500" {...props}/>
-    <Field component={TextAreaInput} name="WhyYouWantToBecome" maxlength="1500" {...props} />
-    <Field component={TextAreaInput} name="HowWouldYouUse" maxlength="1500" {...props} />
-    <Field component={TextAreaInput} name="CommunityAffiliations" maxlength="1500" {...props} />
+    <Field component={DropdownInput} name="AppliedToProgramBefore" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} /> 
+    <Field component={TextAreaInput} name="DescribeExperience" maxlength="1500" {...props} required/>
+    <Field component={TextAreaInput} name="WhyYouWantToBecome" maxlength="1500" {...props} required/>
+    <Field component={TextAreaInput} name="HowWouldYouUse" maxlength="1500" {...props} required/>
+    <Field component={TextAreaInput} name="CommunityAffiliations" maxlength="1500" {...props} required/>
 
     <FormSectionHeader title={Titles.SectionFour} />
-    <Field component={TextInput} name="FirstName" {...props} maxlength="100"/>
-    <Field component={TextInput} name="LastName" {...props} maxlength="100"/>
-    <Field component={TextInput} name="Email" {...props} maxlength="100"/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="100"/>
-    <Field component={TextInput} name="Phone" {...props} maxlength="100" />
+    <Field component={TextInput} name="FirstName" {...props} maxlength="25" required/>
+    <Field component={TextInput} name="LastName" {...props} maxlength="25" required/>
+    <Field component={TextInput} name="Email" {...props} maxlength="50" required/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50" required/>
+    <Field component={TextInput} name="Phone" {...props} maxlength="21" required/>
 
   </fieldset>)
 };

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_DISABILITY_SERVICES_URL
+  POST_FORM_COLLECTION_BIN_REPORT, PSOT_FORM_DISABILITY_SERVICES_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -24,6 +25,7 @@ class CollectionBinReport extends Component {
       editMode:true
     }
   }
+
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
@@ -42,7 +44,6 @@ class CollectionBinReport extends Component {
   }
 
   render() {
-
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 

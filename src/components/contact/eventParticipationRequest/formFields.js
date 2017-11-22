@@ -18,26 +18,6 @@ import FormAddressAutocompleteNoValidation from '../formAdressAutoCmpleteNoValid
 import {Col} from 'react-bootstrap';
 
 
-const DisplayFormikState = props => <div style={{
-		margin: '1rem 0'
-	}}>
-	<h3 style={{
-			fontFamily: 'monospace'
-		}}/>
-	<pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '2rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>values</strong> ={' '}
-
-      {JSON.stringify(props.values, null, 2)}
-    </pre>
-  </div>;
-
-
 // Our inner form component which receives our form's state and updater methods as props 
 const eventParticipationRequestFormElements = (props) => {
  
@@ -85,11 +65,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextInput} name="PTitle" {...props} maxlength="35" required/>
     <Field component={TextInput} name="POrganization" {...props} maxlength="35" required/>
 
-
-    {/*<FormAddressAutocompleteNoValidation id="PFullAddress" name="PFullAddress" handleSelect={this.handleSelect} {...props} />      */}
-    <Field component={AddressInput} name="PFullAddress" {...props} onChange={setFieldValue}  />
-    {/*<Field component={TextInput} name="PFullAddress" {...props} maxlength="50" required/>*/}
-    <Field component={TextInput} name="PSuite" {...props} maxlength="10" required/>
+    {/*<Field component={AddressInput} name="PFullAddress" {...props} onChange={setFieldValue}  disabled={values.editMode}/>*/}
     <Field component={TextInput} name="PPhone" {...props} maxlength="21" required/>
     <Field component={DropdownInput} name="PPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
     <Field component={TextInput}   name="PEmail" {...props} maxlength="50" required/>
@@ -100,13 +76,12 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={TextInput} name="SLastName" {...props} maxlength="25" />
     <Field component={TextInput} name="STitle" {...props} maxlength="35" />
     <Field component={TextInput} name="SOrganization" {...props} maxlength="35" />
-    <Field component={TextInput} name="SAddress"{...props} maxlength="50" />
-    <Field component={TextInput} name="SSuite" {...props} maxlength="10" />
+    {/*<Field component={AddressInput} name="SAddress" {...props} onChange={setFieldValue}  />*/}
     <Field component={TextInput} name="SPhone" {...props} maxlength="21" />
     <Field component={DropdownInput} name="SPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" />
     <Field component={TextInput} name="SEmailConfirm" {...props} maxlength="50" />
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
+   
   </fieldset>)
 };
 
