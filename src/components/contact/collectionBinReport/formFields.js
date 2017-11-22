@@ -40,11 +40,13 @@ class formFields extends Component {
         // console.log("this.props")
         // console.log(this.props)
         // return(
-          <Col xs={12} md={12}>
+        <div>
+          <Col xs={12} md={12}></Col>
           <Field component={TextInput} name={"CollectionBinAnnualReportId" + props.number} maxlength={50} {...this.props} />
           <Field component={TextInput} name={"WeightInPounds" + props.number} maxlength={50} {...this.props} />
           <Field component={DropdownInput} name={"Removed" + props.number} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
-          </Col>
+        </div>
+
     //   )
     // }
 
