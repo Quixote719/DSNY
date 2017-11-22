@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject, fileObject as FormObject } from './constants'
@@ -55,7 +55,7 @@ class LotCleaning extends Component {
   render() {
 
     //const {FormObject, error, success} = this.props;
-    const {success,error} = this.props;
+    const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
       if (success != null) {        
@@ -68,16 +68,13 @@ class LotCleaning extends Component {
               <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postFile}/>
               </div></div>);
     };
-    if (error){
-        return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    }
     return(<div className='loader container'></div>)
  };
 };
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator,error:state.error.type};
 }
 
 
