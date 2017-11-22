@@ -31,6 +31,7 @@ import CFCRequestForm from '../contact/CFCrecoveryAppointmentRequest'
 import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
 import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
+import CollectionBinReport from '../contact/collectionBinReport';
 
 class WebformPage extends Component {
 
@@ -112,6 +113,8 @@ class WebformPage extends Component {
                 return <CRFLRequestForm />
               case 'dsny-compost-request':
                 return <CompostRequest />
+              case 'collection-bin-annual-reporting-form':
+                return <CollectionBinReport />
               default:
                 break;
             }
