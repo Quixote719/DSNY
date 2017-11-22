@@ -108,11 +108,13 @@ class Contact extends Component {
           case 'applications-and-registrations': {
             RegistrationsProps.title = item.header;
             RegistrationsProps.cards = item.cards;
+            RegistrationsProps.CardType = item.card_data.card_type;
             break;
           }
           case 'reporting': {
             ReportingProps.title = item.header;
             ReportingProps.cards = item.cards;
+            ReportingProps.CardType = item.card_data.card_type;
             break;
           }
           case 'get-involved-section': {

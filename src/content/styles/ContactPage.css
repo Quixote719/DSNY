@@ -1,5 +1,12 @@
 .serviceRequestsContainer{
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+
+.ReportingSection{
+  margin-bottom: 25px;
+}
+.RegistrationSection{
+  margin-bottom: 25px;
 }
 
 .viewAllComplaints> .subSectionButton{
@@ -27,7 +34,7 @@
 .contactUsDetails> .contactUsRight{
   display: inline-block;
   float: right;
-  /* padding-right: 200px; */
+  padding-right: 300px;
 }
 
 .emailCommissioner{
