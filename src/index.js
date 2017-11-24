@@ -63,6 +63,8 @@ import eeoComplaintForm from './components/contact/employmentOpportunityComplain
 import EwasteRequestForm from './components/contact/eWastePickupRequest'
 import CFCRequestForm from './components/contact/CFCrecoveryAppointmentRequest'
 import CRFLRequestForm from './components/contact/CRforLargeItems'
+import SanitationTruckSpillage from './components/contact/sanitationTruckSpillage'
+
 /* import PostsIndex from './components/posts_index';
 /*import reducers from './reducers';
 import PostsIndex from './components/posts_index';
@@ -131,12 +133,11 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search"} component={SiteSearch}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
-              {/*<Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>*/}
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints"} component={Complaints}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/:slug"} component={WebformPage}/>
-              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/:slug"} component={WebformPage}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/sanitationTruckSpillage"} component={SanitationTruckSpillage}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/collectionBinReport"} component={CollectionBinReport}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/eeocomplaints"} component={eeoComplaintForm} />
+              {/*<Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/testform"} component={TestForm}/>*/}
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/adoptedbaskets"} component={adoptABasketForm} /> */}
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/compostRequest"} component={CompostRequest}/> */}
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/site-visit-request"} component={SiteVisitRequestForm}/> */}

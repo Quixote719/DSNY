@@ -17,7 +17,7 @@ import EwasteRequestForm from '../contact/eWastePickupRequest'
 import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
 import LotCleaning from '../contact/lotCleaning'
 import WeedRemovalRequest from '../contact/weedRemovalRequest'
-import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
+import LitterBasketRequest from '../contact/litterBasketRequest'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
@@ -85,7 +85,7 @@ class WebformPage extends Component {
               case 'weed-removal-request':
                 return <WeedRemovalRequest />;
               case 'litter-basket-request':
-                return <OverflowingLitterBasket />;
+                return <LitterBasketRequest />;
               case 'dead-animal-removal-request':
                 return <DeadAnimalRemovalRequest />;
               case 'collection-bin-on-public-property-removal-request':

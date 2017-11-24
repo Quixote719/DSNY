@@ -37,7 +37,7 @@ export function FetchContactData() {
 }
 export function FetchComplaintsData() {
   const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=complaints`);
-  return {type: 'SET_COMPALINTS_PAGE', payload: request}
+  return {type: 'SET_COMPLAINTS_PAGE', payload: request}
 }
 
 export function FetchCommissioner () {
