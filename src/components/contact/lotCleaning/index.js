@@ -5,7 +5,7 @@ import {
   PSOT_LOT_CLEANING_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
+import {fetchFormObject, postFileObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -32,7 +32,7 @@ class LotCleaning extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_LOT_CLEANING_URL);
+      this.props.postFileObject(formObject, PSOT_LOT_CLEANING_URL);
   }
 
    validateForm(formObject, errors){
@@ -73,4 +73,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(LotCleaning);
+export default connect(mapStateToProps, {fetchFormObject, postFileObject})(LotCleaning);

@@ -18,7 +18,7 @@
 }
 .holidayCollectionScheduleTable{
     border: 1px solid #F4F4F5;    
-    margin-top: 32px;    
+    margin-top: 10px;    
 }
 .normalDay, .currentDay{
     padding-top: 6px;
@@ -40,7 +40,7 @@
 }
 .holidayCollectionScheduleTable{
     border: 1px solid #F4F4F5;    
-    margin-top: 32px;    
+    margin-top: 10px;    
 }
 .evenRowsSchedule{
     background-color: white; 
@@ -81,7 +81,7 @@
     text-align: center;
 }
 .enforcementTitleHoliday{
-    padding-top: 32px;
+    padding-top: 10px;
 }
 .routingTitle{
     font-weight: bolder;
@@ -147,8 +147,38 @@
     margin-left: auto;
     margin-right: auto;
 }
+.collectionScheduleAddressName{
+    margin-top: 32px;
+    color: #262626;	
+    font-size: 17.5px;	
+    font-weight: bold;	
+    line-height: 20px;
+}
+.defaultTableCell{
+    height: 160px;
+}
+.tableDefaultMobile{
+    width: 100%;
+}
+.collectionScheduleIcons{
+    text-align: center;
+}
+.collectionDefaultText{
+    padding-top: 21px;
+}
+.collectionDefaultCol{
+    padding-top: 18px;
+}
+.collectionTableDefaultRow{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
+    .collectionTableDefaultRow{
+        width: auto;
+    }
     .searchContainerCollection {
         padding: 0;
         margin-left: 15px;
@@ -197,6 +227,9 @@
 }    
   /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .collectionTableDefaultRow{
+        width: auto;
+    }
     .downloadAppContainer{
         width: 720px;
     }
@@ -219,6 +252,9 @@
 }    
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .collectionTableDefaultRow{
+        width: auto;
+    }
     .searchContainerCollection {
         padding: 0;
         margin-left: 15px;

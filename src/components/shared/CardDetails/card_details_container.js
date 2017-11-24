@@ -97,7 +97,7 @@ class StandardPage extends Component {
 };
 
 function mapStateToProps(state) {
-  return { cardDetails: state.card };
+  return { pageData: state.card };
 }
 
 export default connect(mapStateToProps, { fetchPageData })(StandardPage);
