@@ -166,7 +166,7 @@ cursor: text !important;
 }
 #navBar>ul>li>a {
     color: #333333;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 16px;
 }
 #slideNav>.container{

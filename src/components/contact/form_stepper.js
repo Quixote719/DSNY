@@ -71,14 +71,16 @@ class FormStepper extends Component {
       }
       return (
         <div className='FormStepper'>
-          <Col xs={10} sm={10} md={10}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
-          <Col className='FormFieldIncDec' xs={2}>
-          <div className='decrement' onClick={this.decrement}></div>
-          <input className='incDecField' type="number" value={this.state.count} readOnly />
+          <Col xs={6} sm={8} md={8}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
+          <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
+          <div className='MarnageIncDec'>
+            <div className='decrement' onClick={this.decrement}></div>
+            <input className='incDecField' type="number" value={this.state.count} readOnly />
             <div className='increment' onClick={this.increment}></div>
+          </div>
           </Col>
-          <Col xs={10}><div className='incDecFieldbody'>{this.props.body}</div></Col>
-            <Col xs={2}></Col>
+          <Col xs={6}><div className='incDecFieldbody'>{this.props.body}</div></Col>
+            <Col xs={6}></Col>
           <Col xs={12} className='hairline'></Col>
         </div>
       );

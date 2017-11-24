@@ -89,3 +89,16 @@ label.checkContainer{
     color: #00764D;
     display: inline-block;
  }
+
+ .decrement, .increment{
+    cursor: pointer;
+ }
+
+ .MarnageIncDec{
+   float:right;
+   display:block;
+ }
+
+ .tableHeaderStepper.QuantityTitle{
+   text-align: center;
+ }

@@ -121,7 +121,7 @@ class EventDetail extends Component {
         )
     } else {
       return (
-        <div>loading.....</div>
+        <div className='loader container'></div>
       )
     }
   }
