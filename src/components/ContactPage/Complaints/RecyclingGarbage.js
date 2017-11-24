@@ -14,6 +14,7 @@ class RecyclingGarbageSection extends Component {
     return (
         <div className="RecyclingGarbageSection">
           <SubSectionHeader title={this.props.RecyclingGarbageProps.title}/>
+          {/* <Link to={this.props.RecyclingGarbageProps.link}><CardBox info={this.props.RecyclingGarbageProps}/></Link> */}
           <CardBox info={this.props.RecyclingGarbageProps}/>
         </div>
     );

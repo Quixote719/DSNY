@@ -28,6 +28,9 @@ export const Titles = {
   Visit1PotentialDate:'DATE FOR POTENTIAL VISIT 1',
   Visit2PotentialDate:'DATE FOR POTENTIAL VISIT 2',
   RequiredFieldMessage: 'This field is required',
+  Message: "MESSAGE",
+  SuccessMessage: "Success! Your response No. is: ",
+  FailureMessage:"Please make sure your message is correct.",
 }
 
 
@@ -154,10 +157,10 @@ export const formObject = {
   "PTitle":null,
   "PEmail": null,
   "PPhone": null,
-  "PhoneTypeId": null,
   "SfirstName": null,
   "SLastName": null,
   "STitle": null,
   "SEmail": null,
   "SPhone": null,
+  "SPhoneTypeId":null,
 }

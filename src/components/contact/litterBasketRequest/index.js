@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class OverflowingLitterBasket extends Component {
+class LitterBasketRequest extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -70,4 +70,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(OverflowingLitterBasket);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(LitterBasketRequest);

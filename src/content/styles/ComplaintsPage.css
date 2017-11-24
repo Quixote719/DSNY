@@ -1,0 +1,30 @@
+.EqualOpportunitySection, .RecyclingGarbageSection, .IllegalDumpingSection, .LitterBasketsSection{
+    margin-bottom: 25px;
+}
+.AnimalsSection{
+    margin-bottom: 100px;
+}
+/*Mobile View*/
+@media only screen and (max-width: 499px) {
+    .AnimalsSection{
+        margin-bottom: 50px;
+    }
+}
+/*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .AnimalsSection{
+        margin-bottom: 50px;
+    }
+}
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
+    .AnimalsSection{
+        margin-bottom: 50px;
+    }
+}
+/*BETWEEN DESKTOP AND TABLET*/
+@media (min-width: 960px) and (max-width: 1284px) {
+    .AnimalsSection{
+        margin-bottom: 50px;
+    }
+}

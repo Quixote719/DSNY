@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import FormSteps,{displayThankYouPage}  from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -45,24 +45,23 @@ class SiteVisitRequestForm extends Component {
 
    /* A method that moifies formObject to make it proper for Submission */
   modifyFormObject(formObject){
-    
     formObject.PrimaryContact  = {
       'FirstName':formObject.PfirstName,
       'LastName':formObject.PLastName,
       'Phone':formObject.PPhone,
       'Title':formObject.PTitle,
-      'SelectedPhoneType':formObject.PrimarySelectedPhoneType,
-      'Email':formObject.PEmailConfirm,
+      'SelectedPhoneType':formObject.PhoneTypeId,
+      'Email':formObject.PEmail,
     }
 
 
     formObject.SecondaryContact = {
-      'FirstName':formObject.SFirstName,
+      'FirstName':formObject.SfirstName,
       'LastName':formObject.SLastName,
       'Phone':formObject.SPhone,
       'Title':formObject.STitle,
-      'SelectedPhoneType':formObject.SecondarySelectedPhoneTypes,
-      'Email':formObject.SEmailConfirm,
+      'SelectedPhoneType':formObject.SPhoneTypeId,
+      'Email':formObject.SEmail,
     }
 
    
@@ -70,43 +69,28 @@ class SiteVisitRequestForm extends Component {
     
   }
 
-
-
-
-
   render() {
-
-    //const {FormObject, error, success} = this.props;
-    const {success} = this.props;
-    
-     if(success !== undefined) {
-          if(success != null) {
-            let message= 'Your Site Visit Request form has been submitted succesfully.Your response No. is: ' + success.SRNo;
-            return(<ThankYou>
-                      {message}
-                  </ThankYou>);
-          } else {
-            return(<ThankYou>Please make sure your message is correct.</ThankYou>);
-          }          
+        const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
+       
+        if(success !== undefined && success !== null) {
+            return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage);
         }
-
-    if (FormObject && FormObject !== undefined) {
+    
+        if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={formTitles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
-    };
+        };
 
-  
-    // if (error){
-    //     return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-    // }
-    return(<div className='loader container'></div>)
- };
+        if (error){
+            return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
+        }
+        return(<div className='loader container'></div>)
+    }
 };
 
-
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, error:state.error.type};
+  return {FormObject: state.forms.formObject,success:state.forms.success,  geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder, isAddressValidated: state.carouselDataReducer.addressValidator, error:state.error.type};
 }
 
 

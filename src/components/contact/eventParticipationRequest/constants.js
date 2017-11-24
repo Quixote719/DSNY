@@ -168,6 +168,7 @@ export const formObject = {
       "Selected": false
     }
   ],
+  "PPhoneTypeId":null,
   "SecondarySelectedPhoneTypes": [
     {
       "Id": '1',
@@ -188,6 +189,7 @@ export const formObject = {
       "Selected": false
     }
   ],
+  "SPhoneTypeId":null,
   "startDailyTimes": [
     {
       "Id": 1,
