@@ -18,6 +18,7 @@ import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
 import LotCleaning from '../contact/lotCleaning'
 import WeedRemovalRequest from '../contact/weedRemovalRequest'
 import LitterBasketRequest from '../contact/litterBasketRequest'
+import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
@@ -115,6 +116,8 @@ class WebformPage extends Component {
                 return <CompostRequest />
               case 'collection-bin-annual-reporting-form':
                 return <CollectionBinReport />
+              case 'overflowing-litter-basket-service-request':
+                return <OverflowingLitterBasket />
               default:
                 break;
             }

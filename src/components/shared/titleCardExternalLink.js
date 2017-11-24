@@ -33,7 +33,7 @@ class TitleCardExternalLink extends Component {
 
     let link = this.props.link;
     return (
-        <Link to={link}>
+        <Link to={link} target="_blank">
             <div style = {CardType} className='CardTitle'>
                 {this.props.title}
             </div>

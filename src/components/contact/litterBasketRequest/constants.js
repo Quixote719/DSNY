@@ -1,5 +1,5 @@
 export const Titles = {
-  sectionOne: 'WHERE IS LITTER BASKET LOCATED',
+  sectionOne: 'WHERE WOULD YOU LIKE THE LITTER BASKET PLACED',
   sectionTwo: 'SPECIFIC INFORMATION',
   sectionThree: 'CONTACT INFORMATION',
   LitterBasketReasonId: 'REASON FOR LITTER BASKET REQUEST',
