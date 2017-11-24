@@ -112,15 +112,26 @@ export function postFileObject(fileObject, Url) {
         //     alert("hooray!");
         // });
 
-		var formData = new FormData(fileObject);
+		var formData = new FormData();
+		
+		var inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
+		inputs.forEach(input => {
+			 formData.append(input.name, fileObject[input.name]);
+		 });
+
 		formData.append("image", fileObject.files[0][0]);
+		
 		axios.post(Url, formData, {
 			headers: {
 			'Content-Type': 'multipart/form-data'
 			}
 		})
-
-    }
+		.then(function (result) {
+				console.log(result);
+				}, function (error) {
+				console.log(error);
+	 		})
+		}
 }
 
 export function fetchOrganicsForm(category) {
