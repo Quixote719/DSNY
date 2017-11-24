@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import { POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL } from '../../../constants/ApiConstants';
+import {
+  PSOT_FORM_COMPOST_REQUEST_URL
+} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
@@ -13,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class SanitationTruckSpillage extends Component {
+class CompostRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -25,11 +27,12 @@ class SanitationTruckSpillage extends Component {
   }
 
   // componentDidMount() {
-  //   this.props.fetchOrganicsForm();
+  //   this.props.fetchFormObject();
   // }
 
+
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
    validateForm(formObject, errors){
@@ -44,7 +47,7 @@ class SanitationTruckSpillage extends Component {
     return errors;
   }
 
-  render() {
+   render() {
 
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
@@ -72,4 +75,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(SanitationTruckSpillage);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CompostRequestForm);

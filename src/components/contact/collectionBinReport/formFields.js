@@ -93,7 +93,6 @@ class formFields extends Component {
         </fieldset>
       )
   }
-
 };
 
 
