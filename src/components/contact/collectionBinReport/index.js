@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_DISABILITY_SERVICES_URL
+  POST_FORM_COLLECTION_BIN_REPORT, PSOT_FORM_DISABILITY_SERVICES_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -11,6 +11,7 @@ import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
+import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
@@ -25,8 +26,37 @@ class CollectionBinReport extends Component {
     }
   }
 
+
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
+      console.warn('What is this?');
+      console.log(JSON.stringify(formObject));
+      formObject={
+        "Id": 0,
+        "SRNumberId": 0,
+        "SRNo": "string",
+        "ServiceRequestStatusId": 0,
+        "CreatedDate": "2017-11-21T20:15:30.338Z",
+        "FirstName": "string",
+        "LastName": "string",
+        "Phone": "string",
+        "Email": "string",
+        "FullName": "string",
+        "FullNameLastFirst": "string",
+        "CompanyName": "string",
+        "Title": "string",
+        "CollectionBins": [
+          {
+            "Id": 0,
+            "CollectionBinAnnualReportId": 0,
+            "DsnyAssignedBinId": "string",
+            "WeightInPounds": 0,
+            "Removed": true,
+            "RemovalDate": "2017-11-21T20:15:30.338Z"
+          }
+        ]
+      }
+      console.log(JSON.stringify(formObject));
+      this.props.postFormObject(formObject, POST_FORM_COLLECTION_BIN_REPORT);
   }
 
    validateForm(formObject, errors){
@@ -42,7 +72,6 @@ class CollectionBinReport extends Component {
   }
 
   render() {
-
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 

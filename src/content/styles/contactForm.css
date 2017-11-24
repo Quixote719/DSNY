@@ -137,6 +137,15 @@ background-color: #F8FCF6;
 .FormFieldIncDec{
   padding-top: 6px;
 }
+
+
+
+.formStateError {
+  margin-top: 5px;
+	color: #CC0029;
+	font-size: 16px;
+}
+
 .increment{
     background-image:  url('../images/plus-default.png');
   height: 24px;	width: 24px;

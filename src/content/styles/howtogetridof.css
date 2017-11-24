@@ -53,9 +53,18 @@
     height: 126px!important;
 }
 #ridOfSearchResults {
+    cursor: pointer;
     position: absolute;
     top: 0px;
     right:8px;    
+    color: #7CC04B!important;
+    font-size: 24px;
+}
+#ridOfSearchResultsClear {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right:41px;    
     color: #7CC04B!important;
     font-size: 24px;
 }
@@ -278,6 +287,14 @@ input::-ms-clear {
     position: absolute;
     top: 30px;
     right: 8px;
+    color: #7CC04B!important;
+    font-size: 24px;
+}
+#collectionSearchResultsClear{
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 47px;
     color: #7CC04B!important;
     font-size: 24px;
 }

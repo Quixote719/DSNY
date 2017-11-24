@@ -25,6 +25,12 @@ const CompostRequestFormElements = (props) => {
   // data={values.file} 
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
+  <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
+  <FormSectionHeader title={Titles.sectionOne}/>
+
+  {/* <Field component={FileDropZone} name="TEST" {...props} tableHeader='VIDEO AND PICTURE UPLOAD' header='You can upload a total of three files, but the total size of all files uploaded cannot exceed 3 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/> */}
+  {/*<input type="file" name="TEST" />*/}
+
     <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>

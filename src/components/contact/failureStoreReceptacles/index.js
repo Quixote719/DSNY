@@ -31,7 +31,19 @@ class FailureStoreReceptacles extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_FORM_FAILURE_STORE_RECEPTACLES_URL);
+    formObject=  {
+    "SRNo": "string",
+    "RequestCode": "string",
+    "RequestCodeObject": {
+      "DisplayName": "string",
+      "RequestCode": "string"
+    },
+    "Id": 0,
+    "URI": "string"
+    }
+    console.log(formObject);
+    console.log(JSON.stringify(formObject));
+    this.props.postFormObject(formObject, POST_FORM_FAILURE_STORE_RECEPTACLES_URL);
   }
 
    validateForm(formObject, errors){

@@ -91,13 +91,13 @@ class StandardPage extends Component {
         }
       });
     } else {
-      return (<div>loading.....</div>)
+      return (<div className='loader container'></div>)
     }
   }
 };
 
 function mapStateToProps(state) {
-  return { cardDetails: state.card };
+  return { pageData: state.card };
 }
 
 export default connect(mapStateToProps, { fetchPageData })(StandardPage);

@@ -106,8 +106,8 @@ class RequestStepper extends Component {
 
       return (<div>
         <Col className='headerStepper' xs={12}>{this.props.header}</Col>
-        <Col className='tableHeaderStepper' xs={10} sm={10} md={10}>{this.props.tableHeader}</Col>
-        <Col className='tableHeaderStepper' xs={2} sm={2} md={2}>
+        <Col className='tableHeaderStepper' xs={7} sm={10} md={10}>{this.props.tableHeader}</Col>
+        <Col className='tableHeaderStepper QuantityTitle' xs={5} sm={2} md={2}>
           {`Quantity`}</Col>
         <Col className='hairline' xs={12}></Col>
         {this.renderCatg(this.props.categories)}
