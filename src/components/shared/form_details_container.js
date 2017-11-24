@@ -33,6 +33,7 @@ import CompostRequest from '../contact/compostRequest'
 import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
 import CollectionBinReport from '../contact/collectionBinReport';
 import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
+import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 
 class WebformPage extends Component {
 
@@ -118,6 +119,8 @@ class WebformPage extends Component {
                 return <CollectionBinReport />
               case 'sanitation-truck-spillage-complaint':
                 return <SanitationTruckSpillageForm />
+              case 'private-receptacle-complaint':
+                return <PrivateReceptableComplaintForm />
               default:
                 break;
             }
