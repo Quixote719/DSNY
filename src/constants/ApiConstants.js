@@ -45,6 +45,7 @@ export const PSOT_FORM_DEAD_ANIMAL_URL = `${REST_WEBAPI_URL}deadanimals`;
 export const PSOT_FORM_ORGANICS_BIN_URL = `${REST_WEBAPI_URL}organicsbinreplacement`;
 export const PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL = `${REST_WEBAPI_URL}obstructions`;
 export const PSOT_FORM_LITTER_BASKET_URL = `${REST_WEBAPI_URL}litterbaskets`;
+export const PSOT_FORM_OVERFLOWING_LITTER_BASKET_URL = `${REST_WEBAPI_URL}overflowinglitterbaskets`;
 export const PSOT_FORM_DISABILITY_SERVICES_URL = `${REST_WEBAPI_URL}disabilityservices`;
 export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;
@@ -56,6 +57,8 @@ export const POST_FORM_ADOPT_BASKET_URL = `${REST_WEBAPI_URL}adoptedbaskets`
 export const POST_FORM_RECYCLABLE_MATERIAL_URL = `${REST_WEBAPI_URL}recyclablematerialthefts`;
 export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failuretostorereceptaclecomplaints`;
 export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL}eventparticipationrequests`;
+export const POST_FORM_TRUCK_SPILLAGE_URL= `${REST_WEBAPI_URL}truckspillages`;
+export const POST_FORM_PRVT_RCPTBLE_CMPLNTS_URL= `${REST_WEBAPI_URL}privatereceptaclecomplaints`;
 //10+ units pluto call
 export const POST_FORM_COLLECTION_BIN_REPORT = `${REST_WEBAPI_URL}collectionBinAnnualReports`;
 export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`

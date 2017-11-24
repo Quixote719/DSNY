@@ -118,7 +118,6 @@ class Complaints extends Component {
             RecyclingGarbageProps.title = item.header;
             RecyclingGarbageProps.cards = item.cards;
             RecyclingGarbageProps.CardType = item.card_data.card_type;
-            RecyclingGarbageProps.link = item.linked_url;
             break;
           }
           case 'illegal-dumping-vacant-lots':{

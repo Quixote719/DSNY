@@ -76,7 +76,7 @@ const eeoComplaintElements = (props) => {
     <FormSectionHeader title={Titles.SectionThree} />
     <Field component={CheckBoxInput} name="Affirmation" {...props} />
     <Field component={TextInput} name="Signature" {...props} />
-    <Field component={DateTimePickerInput} name="SignatureDate" {...props} onChange={setFieldValue}/>
+    <Field component={DateTimePickerInput} name="SignatureDate" {...props} onChange={setFieldValue} />
     </div>
 
   </fieldset>)

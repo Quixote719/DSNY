@@ -18,6 +18,7 @@ import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
 import LotCleaning from '../contact/lotCleaning'
 import WeedRemovalRequest from '../contact/weedRemovalRequest'
 import LitterBasketRequest from '../contact/litterBasketRequest'
+import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
@@ -32,6 +33,8 @@ import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
 import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
 import CollectionBinReport from '../contact/collectionBinReport';
+import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
+import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 
 class WebformPage extends Component {
 
@@ -115,6 +118,12 @@ class WebformPage extends Component {
                 return <CompostRequest />
               case 'collection-bin-annual-reporting-form':
                 return <CollectionBinReport />
+              case 'sanitation-truck-spillage-complaint':
+                return <SanitationTruckSpillageForm />
+              case 'private-receptacle-complaint':
+                return <PrivateReceptableComplaintForm />
+              case 'overflowing-litter-basket-service-request':
+                return <OverflowingLitterBasket />
               default:
                 break;
             }
