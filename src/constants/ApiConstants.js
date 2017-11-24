@@ -45,6 +45,7 @@ export const PSOT_FORM_DEAD_ANIMAL_URL = `${REST_WEBAPI_URL}deadanimals`;
 export const PSOT_FORM_ORGANICS_BIN_URL = `${REST_WEBAPI_URL}organicsbinreplacement`;
 export const PSOT_FORM_STREET_SIDEWALK_OBSTRUCTION_URL = `${REST_WEBAPI_URL}obstructions`;
 export const PSOT_FORM_LITTER_BASKET_URL = `${REST_WEBAPI_URL}litterbaskets`;
+export const PSOT_FORM_OVERFLOWING_LITTER_BASKET_URL = `${REST_WEBAPI_URL}overflowinglitterbaskets`;
 export const PSOT_FORM_DISABILITY_SERVICES_URL = `${REST_WEBAPI_URL}disabilityservices`;
 export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;

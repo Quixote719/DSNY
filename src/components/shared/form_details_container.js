@@ -18,6 +18,7 @@ import StreetSidewalkObstruction from '../contact/streetSidewalkObstruction'
 import LotCleaning from '../contact/lotCleaning'
 import WeedRemovalRequest from '../contact/weedRemovalRequest'
 import LitterBasketRequest from '../contact/litterBasketRequest'
+import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
@@ -121,6 +122,8 @@ class WebformPage extends Component {
                 return <SanitationTruckSpillageForm />
               case 'private-receptacle-complaint':
                 return <PrivateReceptableComplaintForm />
+              case 'overflowing-litter-basket-service-request':
+                return <OverflowingLitterBasket />
               default:
                 break;
             }

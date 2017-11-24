@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import SubSectionHeader from '../shared/sub_section_header'
 import SubSectionButton from '../shared/sub_section_button';
 import TitleCard from '../shared/TitleCard';
+import TitleCardExternalLink from '../shared/titleCardExternalLink';
 import TitleContentCard from '../shared/TitleContentCard';
 import ColorCard from '../shared/ColorCard';
 import ProfileCard from '../shared/ProfileCard'
@@ -17,13 +18,21 @@ class CardBox extends Component {
         //  CardSize: 1.width:220px, 4 in a row    2.width:303px, 3 in a row
         let card = null;
         if(this.props.info.CardType=='standard-card-no-border'){
+          if(item.linked_page == false && item.linked_url !== " ") {
+            card = <TitleCardExternalLink title={item.title} link={item.linked_url} type='1' />
+          } else {
             card = <TitleCard title={item.title} link={item.linked_page.url} type='1' />
+          }            
         }
         else if(this.props.info.CardType=='square-card'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
         }
         else if(this.props.info.CardType=='standard-card-with-border'){
+          if(item.linked_page == false && item.linked_url !== " ") {
+            card = <TitleCardExternalLink title={item.title} link={item.linked_url} type='2' />
+          } else {
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
+          }            
         }
         else if(this.props.info.CardType=='color-bar-card'){
             card = <ColorCard dataObject={item}/>
