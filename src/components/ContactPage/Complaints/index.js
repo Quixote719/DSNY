@@ -12,6 +12,8 @@ import * as actions from '../../../actions/actions_about';
 import _ from "lodash";
 import { connect } from 'react-redux';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
+import {Link} from "react-router-dom";
+import PageText from '../../shared/PageText';
 
 
 
@@ -25,16 +27,6 @@ class Complaints extends Component {
       this.props.FetchComplaintsData();
   }
 
-//   renderRequest(){
-//     if(this.props.ComplaintsPageData !== undefined){
-//       return _.map(this.props.ComplaintsPageData.data.sections.sections, item => {
-//         if(item.name === 'my-request-status') {
-//           return item.header;
-//         }
-//       });
-//     }
-//   }
-
   render() {
 
     let Complaints = {};
@@ -47,12 +39,26 @@ class Complaints extends Component {
     let LitterBasketsProps = {};
     let RecyclingGarbageProps = {};
     let StreetSideProps = {};
+    let PageExplanation = {};
 
-    this.parseComplaintsData(Complaints, BannerText, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps);
+    this.parseComplaintsData(Complaints, BannerText, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps);
 
     return (
       <div>
-        {<Banner text = {BannerText} />}
+        <div className="GBanner">
+            <div className="BreadcrumbList">
+              <div className="container">
+                <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
+                  <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
+                  <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>Contact</Link><span className='breadcrumbSymbol'>/</span></li>
+                </ol>
+              </div>
+            </div>
+            <div><div className="BreadcrumbHeaderTitleSection"><div className="container">Complaints</div></div></div>
+        </div>
+        <div className = 'SContainer'>
+            <PageText PageExplanation = {PageExplanation} />
+        </div>
         <div className = 'greyBcg'>
           <div className = 'SContainer'>
             <EqualOpportunitySection EqualOpportunityProps = {EqualOpportunityProps}/>
@@ -88,7 +94,7 @@ class Complaints extends Component {
   }
 
 
-  parseComplaintsData(Complaints, BannerText, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps) {
+  parseComplaintsData(Complaints, BannerText, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps) {
     if(this.props.ComplaintsPageData !== undefined){
         Complaints = this.props.ComplaintsPageData.data;
     }
@@ -98,40 +104,59 @@ class Complaints extends Component {
     if(this.props.ComplaintsPageData !== undefined) {
       _.map(this.props.ComplaintsPageData.data.sections.sections, item =>{
         switch (item.name){
+          case 'complaints-top':{
+            PageExplanation.content = item.content;
+            break;
+          }
           case 'equal-employment-opportunity':{
             EqualOpportunityProps.title = item.header;
             EqualOpportunityProps.cards = item.cards;
             EqualOpportunityProps.CardType = item.card_data.card_type;
             break;
           }
-        //   case 'complaints': {
-        //     ComplaintsProps.title = item.header;
-        //     ComplaintsProps.content = item.content;
-        //     break;
-        //   }
-        //   case 'applications-and-registrations': {
-        //     RegistrationsProps.title = item.header;
-        //     RegistrationsProps.cards = item.cards;
-        //     RegistrationsProps.CardType = item.card_data.card_type;
-        //     break;
-        //   }
-        //   case 'reporting': {
-        //     ReportingProps.title = item.header;
-        //     ReportingProps.cards = item.cards;
-        //     ReportingProps.CardType = item.card_data.card_type;
-        //     break;
-        //   }
-        //   case 'get-involved-section': {
-        //     GetInvolvedProps.image = item.featured_image.base_path + item.featured_image.file;
-        //     GetInvolvedProps.content = item.content;
-        //     GetInvolvedProps.cards = item.cards;
-        //     break;
-        //   }
-        //   case 'contact-us': {
-        //     ContactUsProps.title = item.header;
-        //     ContactUsProps.cards = item.cards;
-        //     break;
-        //   }
+          case 'recycling-garbage':{
+            RecyclingGarbageProps.title = item.header;
+            RecyclingGarbageProps.cards = item.cards;
+            RecyclingGarbageProps.CardType = item.card_data.card_type;
+            RecyclingGarbageProps.link = item.linked_url;
+            break;
+          }
+          case 'illegal-dumping-vacant-lots':{
+            IllegalDumpingProps.title = item.header;
+            IllegalDumpingProps.cards = item.cards;
+            IllegalDumpingProps.CardType = item.card_data.card_type;
+            break;
+          }
+          case 'litter':{
+            LitterProps.title = item.header;
+            LitterProps.cards = item.cards;
+            LitterProps.CardType = item.card_data.card_type;
+            break;
+          }
+          case 'litter-baskets':{
+            LitterBasketsProps.title = item.header;
+            LitterBasketsProps.cards = item.cards;
+            LitterBasketsProps.CardType = item.card_data.card_type;
+            break;
+          }
+          case 'street-sidewalk-obstructions':{
+            StreetSideProps.title = item.header;
+            StreetSideProps.cards = item.cards;
+            StreetSideProps.CardType = item.card_data.card_type;
+            break;
+          }
+          case 'graffiti-posters':{
+            GraffitiProps.title = item.header;
+            GraffitiProps.cards = item.cards;
+            GraffitiProps.CardType = item.card_data.card_type;
+            break;
+          }
+          case 'animals':{
+            AnimalsProps.title = item.header;
+            AnimalsProps.cards = item.cards;
+            AnimalsProps.CardType = item.card_data.card_type;
+            break;
+          }
           default:{
             break;
           }
