@@ -31,6 +31,50 @@ class RecyclableMaterialTheft extends Component {
 
 
   postForm(formObject){
+    console.log(formObject);
+    console.log(JSON.stringify(formObject));
+    // formObject =
+    // {
+    //   "AdditionalLocationInfo": "string",
+    //   "RemovedMaterialsDescription": "string",
+    //   "IncidentDate": "2017-11-24T15:10:18.424Z",
+    //   "VehicleLicensePlateNumber": "string",
+    //   "VehicleState": "string",
+    //   "IsVehicleCommercial": true,
+    //   "VehicleMake": "string",
+    //   "VehicleModel": "string",
+    //   "VehicleColor": "string",
+    //   "VehicleType": "string",
+    //   "AdditionalVehicleInfo": "string",
+    //   "IsAnonymous": true,
+    //   "Id": 0,
+    //   "SRNumberId": 0,
+    //   "SRNo": "string",
+    //   "ServiceRequestStatusId": 0,
+    //   "Source": "string",
+    //   "CreatedDate": "2017-11-24T15:10:18.424Z",
+    //   "FirstName": "string",
+    //   "LastName": "string",
+    //   "Phone": "string",
+    //   "Email": "string",
+    //   "FullName": "string",
+    //   "FullNameLastFirst": "string",
+    //   "AddressAsEntered": "string",
+    //   "HouseNumber": "string",
+    //   "Street": "string",
+    //   "Apartment": "string",
+    //   "Borough": "string",
+    //   "City": "string",
+    //   "State": "string",
+    //   "Zip": "string",
+    //   "District": "string",
+    //   "Section": "string",
+    //   "BBL": "string",
+    //   "Latitude": 0,
+    //   "Longitude": 0,
+    //   "AddressText": "string",
+    //   "AddressTextOneLine": "string"
+    // }
       this.props.postFormObject(formObject, POST_FORM_RECYCLABLE_MATERIAL_URL);
   }
 
