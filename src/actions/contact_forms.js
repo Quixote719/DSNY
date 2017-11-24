@@ -10,6 +10,7 @@ import {
 	IS_DISTRICT_ACTIVE,
 	FETCH_TEN_PLUS_BUILDINGS_STATUS
 } from '../constants/ApiConstants';
+// import $ from 'jquery';
 
 export function fetchFormObject(category) {
 	return function(dispatch) {
@@ -94,6 +95,32 @@ export function postFormObject(formObject, Url) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
 		});
 	}
+}
+
+export function postFileObject(fileObject, Url) {
+    return function(dispatch) {
+        // var data = new FormData();
+        // data.append('file', fileObject.files[0][0]);
+        // $.ajax({
+        //     type: "POST",
+        //     url: Url,
+        //     data: data,
+        //     dataType: "JSON",
+        //     processData: false,
+        //     contentType: false
+        // }).done(function(json){
+        //     alert("hooray!");
+        // });
+
+		var formData = new FormData(fileObject);
+		formData.append("image", fileObject.files[0][0]);
+		axios.post(Url, formData, {
+			headers: {
+			'Content-Type': 'multipart/form-data'
+			}
+		})
+
+    }
 }
 
 export function fetchOrganicsForm(category) {

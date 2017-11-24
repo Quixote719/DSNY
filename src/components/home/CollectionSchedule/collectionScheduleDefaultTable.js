@@ -12,65 +12,29 @@ let days = [{ id: "Monday", alias: "MON" }, { id: "Tuesday", alias: "TUE" }, { i
 { id: "Friday", alias: "FRI" }, { id: "Saturday", alias: "SAT" }];
 let d=new Date();
 let today = d.getDay() - 1;
-class CollectionScheduleTable extends Component {
+class CollectionScheduleDefaultTable extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
         };
     }
-    garbageCollection = (index) =>{
-        if(index == 0 ){
-        return(
-            <div>
-                <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon"/>
-                <div className ="garbageTitle">
-                    GARBAGE
-                </div>
-            </div>
-        );
-        }
-        else if(index == 1){
-            return(
-                <div>
-                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
-                    <div className ="recycleTitle">
-                        RECYCLING
-                    </div>
-                </div>
-                </div>);
-        }
-        else{
-            return(
-                <div>
-                    <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon"/>
-                    <div className ="organicsTitle">
-                        ORGANICS
-                    </div>
-                </div>
-        );            
-        }
-    }
     tableCell = (value,index) => {
         var evenRows = [0, 2, 4];
         var oddRows = [1, 3, 5];  
-        if(value !== ""){
-            return _.map(days, (day,indexRows) => {
-                return(
-                    <td  key ={indexRows} id ={this.props.arrayLength == index ?"lastTableRow":""} className={evenRows.includes(indexRows)?"evenRowsSchedule":oddRows.includes(indexRows)?"oddRowsSchedule":""}>
-                    {value.includes(day.id)?this.garbageCollection(index):<div></div>}
-                    </td>
-                );
-            })
-        }
+        return _.map(days, (day,index) =>{
+            return(
+                <td className = {evenRows.includes(index)?"defaultTableCell evenRowsSchedule":oddRows.includes(index)?"defaultTableCell oddRowsSchedule":""}>
+                </td>
+            );
+        })
     }
     daysTable = () => {
-        return _.map(this.props.collectionScheduleData, (value,index)=> {
-            if(value !==""){
-                return(<tr key ={index}>
-                    {this.tableCell(value,index)}
+        for(var i = 0; i<3; i++){
+            return(
+                <tr>
+                    {this.tableCell()}
                 </tr>);
-            }
-        } );
+        }
     }
     tableHeader = () => {
         return _.map(days, (day,index) => {
@@ -98,16 +62,10 @@ class CollectionScheduleTable extends Component {
        })
     }
     tableCellMobile = (day) => {
-
-        return _.map(this.props.collectionScheduleData, (value,indexRows) => {
-            if(value !==""){
                 return(
-                    <td className={this.props.arrayLength == 2?"mobileCollectionTableData":this.props.arrayLength == 1?"mobileCollectionTableDataTwo":"mobileCollectionTableDataOne"}>
-                    {value.includes(day.id)?this.garbageCollection(indexRows):""}
+                    <td className="tableDefaultMobile">
                     </td>
                 );
-            }
-        })
     }
     desktopTable = () =>{
         return(
@@ -145,4 +103,4 @@ class CollectionScheduleTable extends Component {
         )
     }
 }
-export default CollectionScheduleTable;
+export default CollectionScheduleDefaultTable;

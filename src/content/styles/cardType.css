@@ -70,6 +70,7 @@
 
   .breadcrumb>li>a, .breadcrumb>li>a>a {
     color: white;
+    font-weight: 400;
   }
 
   .breadcrumb>.active {

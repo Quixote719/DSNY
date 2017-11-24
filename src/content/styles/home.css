@@ -456,7 +456,7 @@ input.serviceRequestSearch:focus {
     cursor: pointer;
     position: absolute;
     top: 42px;
-    right: 32px;
+    right: 67px;
     color: #7CC04B!important;
     font-size: 24px;
 }
@@ -464,7 +464,7 @@ input.serviceRequestSearch:focus {
     cursor: pointer;
     position: absolute;
     top: 18px;
-    right: 11px;
+    right: 32px;
     color: #767676!important;
     font-size: 16px;
 }
