@@ -41,8 +41,7 @@ class FormDropdown extends Component {
     console.log('%%');
     console.log(item);
     this.setState({option: item.DisplayName ?  item.DisplayName : item});
-    /* In case of Boolen, */ 
-    typeof this.props.value === "boolean" ? this.props.onChange(this.props.name, item.Id) :  this.props.onChange(this.props.name, item.Id ? item.Id : item);
+    this.props.onChange(this.props.name, item.Id);
 
    
   }

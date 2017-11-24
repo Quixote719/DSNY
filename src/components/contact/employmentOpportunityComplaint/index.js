@@ -25,8 +25,6 @@ class EEOComplaintForm extends Component {
   }
 
   postForm(formObject){
-      console.log('####');
-      console.log(formObject);
       this.props.postFormObject(formObject, PSOT_FORM_EEO_COMPLAINTS_URL);
   }
 
