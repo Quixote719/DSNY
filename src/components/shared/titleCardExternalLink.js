@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
 import '../../content/styles/dsnyCard.css';
+import PropTypes from 'prop-types';
 
 class TitleCardExternalLink extends Component {
   render() {
@@ -31,7 +32,6 @@ class TitleCardExternalLink extends Component {
     }
 
     let link = this.props.link;
-    console.log(link);
     return (
         <Link to={link}>
             <div style = {CardType} className='CardTitle'>
@@ -41,6 +41,5 @@ class TitleCardExternalLink extends Component {
     );
   };
 };
-
 
 export default TitleCardExternalLink;
