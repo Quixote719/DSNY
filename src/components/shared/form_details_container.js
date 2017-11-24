@@ -69,8 +69,8 @@ class WebformPage extends Component {
     if (pageData) {
       return _.map(pageData, item => {
         if (item !== undefined) {
-          if (item.name != '') {
-            console.log(item.name)
+          if (item.name !== '') {
+
             switch (item.name) {
               case 'disability-services':
                 return <DisabilityServices />;
@@ -129,7 +129,7 @@ class WebformPage extends Component {
 
         let banner;
         if (item !== undefined) {
-          if (item.name != '') {
+          if (item.name !== '') {
             banner = (<div key={item.id}>
               <Header breadCrumbList={item.breadcrumb} />
             </div>)
@@ -138,7 +138,7 @@ class WebformPage extends Component {
           let sections;
           if (item.sections) {
             sections = _.map(item.sections.sections, (sec, index) => {
-              console.log(sec)
+
 
               // You can edit this part if the header of your form contains some special part like images, links, etc.
 
@@ -182,7 +182,7 @@ class WebformPage extends Component {
         }
       });
     } else {
-      return (<div>loading.....</div>)
+      return (<div className='loader container'></div>)
     }
   }
 };

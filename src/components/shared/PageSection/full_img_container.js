@@ -98,7 +98,7 @@ class fullImageContainer extends Component {
 
       });
     } else {
-      return (<div>loading.....</div>)
+      return (<div className='loader container'></div>)
     }
   }
 };

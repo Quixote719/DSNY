@@ -97,7 +97,7 @@ class PressReleaseList extends Component {
       });
     } else {
       return (
-        <div>loading.....</div>
+        <div className='loader container'></div>
       )
     }
   }

@@ -58,7 +58,7 @@ export function displayThankYouPage(success, successMessage, failureMessage)
       return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
     } else {
       return(<ThankYou>{failureMessage}</ThankYou>);
-    } 
+    }
 
 }
 
@@ -87,7 +87,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.Source = 'DSNY'
 	}
 }
- 
+
 
 function handleNextClick(errors, dirty, isSubmitting, nextStep)
 {
@@ -97,11 +97,11 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
   //  console.log("!dirty" + !dirty);
   initialPageLoad = false;
   nextbuttonClicked = true;
-   
+
   if(((isSubmitting  || !isEmpty(errors) || !dirty))) {
       firsterror = true;
       return;
-   } 
+   }
    else {
       return nextStep;
    }
@@ -109,7 +109,6 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
 }
 
 const Step1 = (props) => {
-  console.log(props);
   const {
     errors,
     dirty,
@@ -138,7 +137,7 @@ const Step2 = (props) => {
     <props.formFields {...props} />
 
 
-    
+
     <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
     <Recaptcha
           sitekey={sitekey}
@@ -191,7 +190,7 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    
+
     //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
         //console.log("Cannot proceed")
 
