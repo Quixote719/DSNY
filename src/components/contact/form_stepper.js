@@ -22,6 +22,18 @@ class FormStepper extends Component {
       console.log(this.props);
       object.RequestedQty = i
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+
+      var inputs = document.querySelectorAll('#form input');
+      
+      let total = 1;
+      inputs.forEach(input => {
+        if(input.type === "number")
+        {
+          total +=  parseInt(input.value, 10);
+        }
+      });
+      console.log(total);
+
     }
 
     decrement() {
