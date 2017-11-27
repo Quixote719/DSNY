@@ -22,6 +22,18 @@ class FormStepper extends Component {
       console.log(this.props);
       object.RequestedQty = i
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+
+      var inputs = document.querySelectorAll('#form input');
+
+      let total = 1;
+      inputs.forEach(input => {
+        if(input.type === "number")
+        {
+          total +=  parseInt(input.value, 10);
+        }
+      });
+      console.log(total);
+
     }
 
     decrement() {
@@ -29,6 +41,10 @@ class FormStepper extends Component {
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
+    }
+
+    onInputChange(e) {
+      !isNaN(e)  ?   this.setState({count:e}) : console.log('enter number');
     }
 
     renderItem(){
@@ -76,7 +92,7 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className='incDecField' type="number" value={this.state.count} readOnly />
+            <input className='incDecField' onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
