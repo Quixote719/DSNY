@@ -29,6 +29,13 @@ class FormBoolean extends Component {
   }
 
   onInputChange(e) {
+    
+    if(this.props.required)
+    {
+      this.props.onChange(this.props.name, e.target.checked);
+      !isEmpty(this.props.value) || (e.target.checked) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
+    }
+    
     this.setState({
       accepted: !e.target.checked,
       declined: e.target.checked
@@ -64,7 +71,7 @@ class FormBoolean extends Component {
       <label className="checkContainer">
       <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
       className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
-      <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
+      <Tooltip placement="bottom" id="tooltip-left" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
       <span className="checkmark"></span>
       <div className="checkBoxText">{this.props.title}</div>
       </label>

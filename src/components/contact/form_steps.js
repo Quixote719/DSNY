@@ -195,13 +195,23 @@ const FormSteps = compose(
         //console.log("Cannot proceed")
 
     const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
+  
 
     if(!initialPageLoad)
     {
         inputs.forEach(input => {
-
+          
           //Text, Checkbox Input Validation
-          if (input.required && (!values[input.name] ||  values[input.name] === 'Select one'))
+          if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+          {
+              errors[input.name] = Titles.RequiredFieldMessage
+              if(nextbuttonClicked)
+              {
+                input.focus();
+                nextbuttonClicked = false;
+              }
+          }
+          else if (input.required && input.type === "checkbox"  && (!values[input.name]))
           {
               errors[input.name] = Titles.RequiredFieldMessage
               if(nextbuttonClicked)
@@ -211,9 +221,9 @@ const FormSteps = compose(
               }
           }
           //Dropdown List Validation
-          else if (input.type === "button" && input.hasAttribute("required") && values[input.name] === null)
+          else if (input.type === "button" && input.hasAttribute("required") && values[input.name] === 0)
           {
-              errors[input.name] = Titles.RequiredFieldMessage
+              errors[input.name] = "Please select from the list"
               if(nextbuttonClicked)
               {
                 input.focus();
