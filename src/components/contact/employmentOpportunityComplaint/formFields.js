@@ -74,8 +74,8 @@ const eeoComplaintElements = (props) => {
 
     <div className={values.editMode ? 'visible' : 'hidden'} disabled={!values.editMode}  >
     <FormSectionHeader title={Titles.SectionThree} />
-    <Field component={CheckBoxInput} name="Affirmation" {...props} />
-    <Field component={TextInput} name="Signature" {...props} />
+    <Field component={CheckBoxInput} name="Affirmation" {...props} required={values.editMode} onChange={setFieldValue} />
+    <Field component={TextInput} name="Signature" {...props} required={values.editMode}/>
     <Field component={DateTimePickerInput} name="SignatureDate" {...props} onChange={setFieldValue} />
     </div>
 
