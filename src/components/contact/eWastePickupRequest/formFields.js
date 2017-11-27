@@ -17,6 +17,7 @@ import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import {IsDistrictActive, GetUnavailableDates} from "../../../actions/contact_forms";
 import {Col} from 'react-bootstrap';
+import moment from 'moment';
 const DisplayFormikState = props => <div style={{
 		margin: '1rem 0'
 	}}>
@@ -47,6 +48,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	if (Dates  && typeof isDistrictActive !== undefined){
      values.isDistrictActive = isDistrictActive;
      values.Dates = Dates;
+		 values.AppointmentDate = moment(Dates[0].StartDate)
 	}
 
 	if(buildingStatus){
@@ -65,7 +67,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode} required/>
-		<Field component={DateTimePickerInput} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={DateTimePickerInput} value={values.isDistrictActive ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
