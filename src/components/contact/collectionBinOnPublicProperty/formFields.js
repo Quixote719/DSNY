@@ -12,7 +12,8 @@ import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
-import FormAddressAutocomplete from '../formAddressAutocomplete'
+import FormAddressAutocomplete from '../formAddressAutocomplete';
+import AddressInput from '../form_addressField';
 
 
 // Our inner form component which receives our form's state and updater methods as props
