@@ -18,12 +18,14 @@ class FormStepper extends Component {
     };
 
     increment(){
+
       var {count, object} = this.state
       fieldTotal += 1;
       var i = count += 1
       console.log(fieldTotal);
       console.log(this.props);
       object.RequestedQty = i
+      if(fieldTotal < 20 && i <= this.props.maxValue)
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
 
    /*   var inputs = document.querySelectorAll('#form input.incDecField');
@@ -40,11 +42,13 @@ class FormStepper extends Component {
     }
 
     decrement() {
+
       fieldTotal -= 1;
       console.log(fieldTotal);
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
+        if(fieldTotal < 20 && i <= this.props.maxValue)
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
