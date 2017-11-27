@@ -89,6 +89,11 @@
   padding-top:3px;
 }
 
+/* */
+.CardTitleTextEmptyBody > span {
+    white-space: nowrap;
+}
+
 .cardBody {
   min-height: 72px;
   min-width: 186px;
