@@ -43,6 +43,10 @@ class FormStepper extends Component {
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
+    onInputChange(e) {
+      !isNaN(e)  ?   this.setState({count:e}) : console.log('enter number');
+    }
+
     renderItem(){
 
       if (this.props.disabled && this.props.header){
@@ -88,7 +92,7 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className='incDecField' type="number" value={this.state.count}  />
+            <input className='incDecField' onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
