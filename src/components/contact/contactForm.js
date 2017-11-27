@@ -187,7 +187,7 @@ const TestForm = compose(
     //Setting no validate true for the form
     document.getElementById("form").noValidate = true;
 
-    const inputs = document.querySelectorAll('#form input');
+    const inputs = Array.from(document.querySelectorAll('#form input'));
 
     inputs.forEach(input => {
       //input.classList.add('active');

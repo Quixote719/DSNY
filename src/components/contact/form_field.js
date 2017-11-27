@@ -29,7 +29,7 @@ class FormField extends Component {
 
   handleChange(event){
     //console.log("DINESH" + this.refs.myinput.value )
-    (isEmpty(this.props.value) || this.props.value.trim() === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+    (isEmpty(this.props.value) || this.props.value.trim() === "" || this.props.error) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
   }
 
   handleFocusOut(event){
@@ -42,7 +42,7 @@ class FormField extends Component {
                 ? this.props.value
                 : ''} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={((isEmpty(this.props.value) || this.props.value.trim() === "") && this.props.error)?"input error":'input'} error={this.props.error}
                 />
-                  <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
+                {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
             <div>{this.props.children}</div>
           </div>)
       }

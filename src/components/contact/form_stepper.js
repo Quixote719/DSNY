@@ -61,7 +61,7 @@ class FormStepper extends Component {
     onInputChange(e) {
 
 
-      var inputs = document.querySelectorAll('#form input.incDecField, #form input.incDecSubField');
+      var inputs = Array.from(document.querySelectorAll('#form input.incDecField, #form input.incDecSubField'));
 
       let total = 0;
       inputs.forEach(input => {
