@@ -24,7 +24,7 @@ class FormStepper extends Component {
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
 
       var inputs = document.querySelectorAll('#form input');
-      
+
       let total = 1;
       inputs.forEach(input => {
         if(input.type === "number")
@@ -88,7 +88,7 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className='incDecField' type="number" value={this.state.count} readOnly />
+            <input className='incDecField' type="number" value={this.state.count}  />
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
