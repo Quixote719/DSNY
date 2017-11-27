@@ -39,12 +39,13 @@ label.checkContainer{
  }
 
 
+ .disabledContactForm .checkContainer .input.error ~ .checkmark {
+     border: 1px solid #D80035;
+ }
 
  .disabledContactForm .checkContainer input:disabled ~ .checkmark {
      border: 1px solid #C4C9CD;
  }
-
-
 
  .disabledContactForm .checkContainer input:checked ~ .checkmark {
      display: block;
@@ -62,7 +63,7 @@ label.checkContainer{
      top: 2px;
      width: 6px;
      height: 12px;
-     border: solid #333333;
+     border: 1px solid #333333;
      border-width: 0 3px 3px 0;
      -webkit-transform: rotate(45deg);
      -ms-transform: rotate(45deg);

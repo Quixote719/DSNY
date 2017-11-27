@@ -50,8 +50,18 @@ html body {
   right: 7px;
 }
 
-#tooltip-bottom > .tooltip-arrow, #tooltip-left > .tooltip-inner {
+#tooltip-bottom > .tooltip-arrow{
   border-bottom-color: #D80035;
+}
+
+#tooltip-left > .tooltip-arrow{
+  border-top-color: #D80035;
+  border-bottom-color: #D80035;
+  left: 14px;
+}
+
+.checkContainer ~ #tooltip-left{
+  margin-top: -70px;
 }
 
 .gm-svpc{

@@ -30,9 +30,9 @@ const CompostRequestFormElements = (props) => {
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props} onChange={setFieldValue} required/>
-    <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props}/>
-    <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props}/>
-    <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props}/>
+    <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props} onChange={setFieldValue} required/>
+    <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props} onChange={setFieldValue} required/>
+    <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props} onChange={setFieldValue} required/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} required onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} />
     <Field component={TextInput} name="OrganizationName" {...props} isHidden={values.CompostSiteApplicantTypeId !== 2}/>
