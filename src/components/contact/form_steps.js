@@ -221,7 +221,7 @@ const FormSteps = compose(
               }
           }
           //Dropdown List Validation
-          else if (input.type === "button" && input.hasAttribute("required") && values[input.name] === 0)
+          else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
           {
               errors[input.name] = "Please select from the list"
               if(nextbuttonClicked)

@@ -14,6 +14,7 @@ class FormStepper extends Component {
       }
       this.increment = this.increment.bind(this);
       this.decrement = this.decrement.bind(this);
+      this.onInputChange = this.onInputChange.bind(this);
     };
 
     increment(){
@@ -47,10 +48,15 @@ class FormStepper extends Component {
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
+    onBlur(e) {
+
+      if (e === '') this.setState({count:0});
+    }
+
     onInputChange(e) {
 
 
-      var inputs = document.querySelectorAll('#form input.incDecField');
+      var inputs = document.querySelectorAll('#form input.incDecField, #form input.incDecSubField');
 
       let total = 0;
       inputs.forEach(input => {
@@ -62,7 +68,20 @@ class FormStepper extends Component {
       fieldTotal = total;
       console.log(fieldTotal);
 
-      !isNaN(e)  ?   this.setState({count:parseInt(e, 10)}) : console.log('enter number');
+
+      if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || fieldTotal > 20))
+      {
+        this.setState({count:0})
+      }
+      else if(!isNaN(e) && parseInt(e,10))
+      {
+        this.setState({count:parseInt(e, 10)})
+      }
+      else
+      {
+        this.setState({count:''})
+      }
+
     }
 
     renderItem(){
@@ -110,8 +129,8 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
-            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>test</Tooltip>
+            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
+            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `${this.props.maxValue}`:`${this.props.maxValue}`}</Tooltip>
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
