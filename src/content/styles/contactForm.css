@@ -184,7 +184,7 @@ background-color: #F8FCF6;
 .FormStepper{
   height: 50px;
 }
-.incDecField{
+.incDecField, .incDecSubField{
 	height: 36px;
 	width: 40px !important;
 	border: 1px solid #D8D8D8;

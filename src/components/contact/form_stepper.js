@@ -48,7 +48,7 @@ class FormStepper extends Component {
     }
 
     onInputChange(e) {
-     
+
 
       var inputs = document.querySelectorAll('#form input.incDecField');
 
@@ -110,8 +110,8 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className='incDecField' onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
-            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > 20 ?"in":''}></Tooltip>
+            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
+            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>test</Tooltip>
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
@@ -134,7 +134,8 @@ class FormStepper extends Component {
 FormStepper.propTypes = {
   title: PropTypes.string,
   obj:PropTypes.any,
-  header: PropTypes.bool
+  header: PropTypes.bool,
+  maxValue:PropTypes.any
 };
 
 export default FormStepper;
