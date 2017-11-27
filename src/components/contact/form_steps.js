@@ -254,7 +254,10 @@ const FormSteps = compose(
     return errors
   },
   handleSubmit: (values, {props,setSubmitting, resetForm}) => {
-    props.stepFunc();
+    if(props.stepFunc){
+          props.stepFunc();
+    }
+
     if(props.step > 1){
         if(captchaVerified)
         {
