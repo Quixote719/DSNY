@@ -10,7 +10,8 @@ class FormStepper extends Component {
       super(props);
       this.state =  {
         count: props.obj.RequestedQty,
-        object:props.obj
+        object:props.obj,
+        hideToolTip: true
       }
       this.increment = this.increment.bind(this);
       this.decrement = this.decrement.bind(this);
@@ -26,7 +27,7 @@ class FormStepper extends Component {
       console.log(this.props);
       object.RequestedQty = i
       if(fieldTotal < 20 && i <= this.props.maxValue)
-      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+      this.setState({count:i , object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
 
    /*   var inputs = document.querySelectorAll('#form input.incDecField');
 
@@ -49,11 +50,11 @@ class FormStepper extends Component {
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
         if(fieldTotal < 20 && i <= this.props.maxValue)
-      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
+      this.setState({count:i, object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
     }
 
     onBlur(e) {
-
+     this.setState({hideToolTip: true});
       if (e === '') this.setState({count:0});
     }
 
@@ -75,11 +76,11 @@ class FormStepper extends Component {
 
       if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || fieldTotal > 20))
       {
-        this.setState({count:0})
+        this.setState({count:0,hideToolTip: false})
       }
       else if(!isNaN(e) && parseInt(e,10))
       {
-        this.setState({count:parseInt(e, 10)})
+        this.setState({count:parseInt(e, 10), hideToolTip: false})
       }
       else
       {
@@ -134,7 +135,7 @@ class FormStepper extends Component {
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
             <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
-            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `${this.props.maxValue}`:`${this.props.maxValue}`}</Tooltip>
+            <Tooltip placement="bottom" id="tooltip-bottom" className={!this.state.hideToolTip && fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `${this.props.maxValue}`:`${this.props.maxValue}`}</Tooltip>
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
