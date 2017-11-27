@@ -1,35 +1,50 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import { POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL } from '../../../constants/ApiConstants';
+import {
+  PSOT_FORM_COMPOST_REQUEST_URL
+} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
+import {Field} from 'formik'
+import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
 import FetchError from '../fetchError'
+// import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class SanitationTruckSpillage extends Component {
+class CompostRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+    this.stepFunc = this.stepFunc.bind(this);
     this.state = {
     FormObject:{},
-      editMode:true
+      editMode:true,
+      step: 1
     }
   }
 
   // componentDidMount() {
-  //   this.props.fetchOrganicsForm();
+  //   this.props.fetchFormObject();
   // }
 
+  stepFunc(){
+    let temp = this.state.step;
+    ++temp;
+    this.setState({
+      step: temp
+    });
+  }
+
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
    validateForm(formObject, errors){
@@ -44,7 +59,7 @@ class SanitationTruckSpillage extends Component {
     return errors;
   }
 
-  render() {
+   render() {
 
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
@@ -54,8 +69,15 @@ class SanitationTruckSpillage extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
+
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                {  this.state.step==1 &&
+                  <div>
+                    <div>step 1</div>
+                  </div>
+                }
+
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
                 </div></div>);
         };
 
@@ -72,4 +94,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(SanitationTruckSpillage);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CompostRequestForm);

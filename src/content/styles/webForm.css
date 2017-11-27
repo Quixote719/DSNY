@@ -103,6 +103,12 @@ label.checkContainer{
    text-align: center;
  }
 
+ .FormField .dropdown-toggle:hover,.FormField .dropdown-toggle:focus{
+   background-color: transparent!important;
+   box-shadow: none;
+ }
+
+
 @media only screen and (max-width: 767px){
   .tableHeaderStepper.QuantityTitle{
     text-align: right;
