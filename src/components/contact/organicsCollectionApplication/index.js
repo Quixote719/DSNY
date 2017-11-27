@@ -7,8 +7,11 @@ import {
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
+import {Field} from 'formik'
+import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
 import FetchError from '../fetchError'
+// import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
@@ -24,6 +27,7 @@ class CompostRequestForm extends Component {
     this.state = {
     FormObject:{},
       editMode:true,
+      step: 1
     }
   }
 
@@ -32,7 +36,11 @@ class CompostRequestForm extends Component {
   // }
 
   stepFunc(){
-    alert("?!");
+    let temp = this.state.step;
+    ++temp;
+    this.setState({
+      step: temp
+    });
   }
 
   postForm(formObject){
@@ -55,16 +63,19 @@ class CompostRequestForm extends Component {
 
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
-        console.log("???")
-        console.log(this.props);
+
         if(success !== undefined) {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
         }
 
         if (FormObject && FormObject !== undefined) {
-        let step = 1;
+
         return (<div className='container'><div className='form compostForm'>
-                {step==1 && <div>Justice</div>}
+                {  this.state.step==1 &&
+                  <div>
+                    <div>step 1</div>
+                  </div>
+                }
 
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
                 </div></div>);
