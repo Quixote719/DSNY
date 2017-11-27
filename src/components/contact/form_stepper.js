@@ -1,9 +1,9 @@
 import _ from "lodash";
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
-import { Col} from 'react-bootstrap';
+import { Col, Tooltip} from 'react-bootstrap';
 
-
+var fieldTotal = 0;
 class FormStepper extends Component {
 
     constructor(props) {
@@ -18,17 +18,51 @@ class FormStepper extends Component {
 
     increment(){
       var {count, object} = this.state
+      fieldTotal += 1;
       var i = count += 1
+      console.log(fieldTotal);
       console.log(this.props);
       object.RequestedQty = i
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+
+   /*   var inputs = document.querySelectorAll('#form input.incDecField');
+
+      let total = 1;
+      inputs.forEach(input => {
+        //if(input.type === "number")
+        //{
+          total +=  parseInt(input.value, 10);
+        //}
+      });
+      console.log(total); */
+
     }
 
     decrement() {
+      fieldTotal -= 1;
+      console.log(fieldTotal);
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
+    }
+
+    onInputChange(e) {
+
+
+      var inputs = document.querySelectorAll('#form input.incDecField');
+
+      let total = 0;
+      inputs.forEach(input => {
+        //if(input.type === "number")
+        //{
+          total +=  parseInt(input.value, 10);
+        //}
+      });
+      fieldTotal = total;
+      console.log(fieldTotal);
+
+      !isNaN(e)  ?   this.setState({count:parseInt(e, 10)}) : console.log('enter number');
     }
 
     renderItem(){
@@ -76,7 +110,8 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className='incDecField' type="number" value={this.state.count} readOnly />
+            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
+            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>test</Tooltip>
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
@@ -99,7 +134,8 @@ class FormStepper extends Component {
 FormStepper.propTypes = {
   title: PropTypes.string,
   obj:PropTypes.any,
-  header: PropTypes.bool
+  header: PropTypes.bool,
+  maxValue:PropTypes.any
 };
 
 export default FormStepper;

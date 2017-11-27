@@ -29,12 +29,12 @@ const CompostRequestFormElements = (props) => {
       <FormAddressAutocomplete/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props}/>
+    <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props} onChange={setFieldValue} required/>
     <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props}/>
     <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props}/>
     <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} {...props} />
+    <Field component={DropdownInput} name="CompostSiteApplicantTypeId" {...props} required onChange={setFieldValue} options={values.CompostSiteApplicantTypes} disabled={values.editMode} />
     <Field component={TextInput} name="OrganizationName" {...props} isHidden={values.CompostSiteApplicantTypeId !== 2}/>
     <Field component={TextInput} name="OrganizationTaxIdNumber" {...props} required/>
     <Field component={TextInput} name="OrganizationWebsite" {...props} required/>

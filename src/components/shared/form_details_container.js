@@ -8,7 +8,8 @@ import ImageSection from './ImageSection'
 
 //Sub Components
 import Header from './Breadcrumb/breadcrumb_container'
-import FormSec from './form_sec'
+import FormSec from './form_sec';
+import FullImageSec from './PageSection/full_img_sec';
 
 // Form Components
 import DisabilityServices from '../contact/disabilityServices'
@@ -34,6 +35,8 @@ import CompostRequest from '../contact/compostRequest'
 import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
 import CollectionBinReport from '../contact/collectionBinReport';
 import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationForm';
+import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
+import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 
 class WebformPage extends Component {
 
@@ -121,6 +124,12 @@ class WebformPage extends Component {
                 return <CompostRequest />
               case 'collection-bin-annual-reporting-form':
                 return <CollectionBinReport />
+              case 'sanitation-truck-spillage-complaint':
+                return <SanitationTruckSpillageForm />
+              case 'private-receptacle-complaint':
+                return <PrivateReceptableComplaintForm />
+              case 'overflowing-litter-basket-service-request':
+                return <OverflowingLitterBasket />
               default:
                 break;
             }
@@ -130,8 +139,23 @@ class WebformPage extends Component {
     }
   }
 
-  renderPage(pageData) {
+  /*Returns any section other than image section  */
+  getSection(sec){
+    return (<div key={sec.id}>
+      <div><FormSec dataObject={sec}/></div>
+    </div>);
+  }
 
+
+  /* Return content with Background image */
+  getBackGroundImageContent(sec) {
+    return (<div key={sec.id}>
+      <div><FullImageSec dataObject={sec}/></div>
+    </div>);
+  }
+
+  renderPage(pageData) {
+    console.log(pageData);
     if (pageData) {
 
       return _.map(pageData, item => {
@@ -147,40 +171,11 @@ class WebformPage extends Component {
           let sections;
           if (item.sections) {
             sections = _.map(item.sections.sections, (sec, index) => {
-
-
-              // You can edit this part if the header of your form contains some special part like images, links, etc.
-
-              // if there's an image in your header, the code should be like this:
-
-              {/** if(sec.featured_image){
-                let ImageProps = {};
-                ImageProps = sec;
-                return (
-                  <div key={sec.id}>
-                    <div>
-                      <ImageSection ImageProps = {ImageProps}/>
-                    </div>
-                  </div>
-                );
-              }
-              else{
-                return (
-                  <div key={sec.id}>
-                    <div>
-                      <FormSec dataObject={sec} finalSec={index == cItems.sections.sections.length - 1}/>
-                    </div>
-                  </div>
-                );
-              } **/}
-
-              return (
-                <div key={sec.id}>
-                  <div>
-                    <FormSec dataObject={sec} />
-                  </div>
-                </div>
-              );
+              if(sec.featured_image != ''){
+                  return this.getBackGroundImageContent(sec);
+              }else{
+                  return this.getSection(sec);
+              }   
             })
           }
 

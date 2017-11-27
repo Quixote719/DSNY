@@ -36,7 +36,7 @@ html body {
   opacity: 1;
 }
 
-#tooltip-bottom > .tooltip-inner {
+#tooltip-bottom > .tooltip-inner, #tooltip-left > .tooltip-inner {
   padding: 4px;
   font-size: 1.2em;
   background-color: #D80035;
@@ -50,7 +50,7 @@ html body {
   right: 7px;
 }
 
-#tooltip-bottom > .tooltip-arrow {
+#tooltip-bottom > .tooltip-arrow, #tooltip-left > .tooltip-inner {
   border-bottom-color: #D80035;
 }
 
