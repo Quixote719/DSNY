@@ -150,6 +150,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               {/* <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/failureStoreReceptacles"} component={FailureStoreReceptacles}/> */}
 
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints/:slug"} component={WebformPage}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/get-involved/:slug"} component={WebformPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/:slug"} component={WebformPage}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/:slug" } component = {fullImageContainer} />
             </Switch>

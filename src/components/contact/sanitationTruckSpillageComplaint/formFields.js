@@ -44,7 +44,7 @@ const sanitationTruckSpillageFormElements = (props) => {
     <Field component={TextInput} name="ConfirmEmail" {...props} />
     <Field component={TextInput} name="Phone" {...props} />
     
-    //TruckSpillages
+  
   </fieldset>)
 };
 
