@@ -8,12 +8,24 @@ import Parser from 'html-react-parser';
 
 class CardTitle extends Component {
 
+  constructor(){
+    super();
+    this.state ={
+      expanded: false,
+      truncated: false
+    }
+  }
+
+
+
   render() {
     return (
       <Col xs={12} sm={6} md={3}>
       <div className={this.props.className}>
         <div className='subSectioncardT' onClick={this.login}>
-            <div className='CardTitleTextEmptyBody'><Truncate lines={2}> {Parser(this.props.title)} </Truncate> </div>
+            <div className='CardTitleTextEmptyBody'>
+              <Truncate lines={2}> {this.props.title} </Truncate> 
+              </div>
         </div>
       </div>  
       </Col>
