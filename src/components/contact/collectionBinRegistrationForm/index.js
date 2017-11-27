@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_LOT_CLEANING_URL
+  PSOT_COLLECTION_BIN_REGISTRATION_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFileObject} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -15,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class LotCleaning extends Component {
+class CollectionBinRegistrationForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -32,7 +32,7 @@ class LotCleaning extends Component {
 
 
   postForm(formObject){
-      this.props.postFileObject(formObject, PSOT_LOT_CLEANING_URL);
+      this.props.postFormObject(formObject, PSOT_COLLECTION_BIN_REGISTRATION_URL);
   }
 
    validateForm(formObject, errors){
@@ -49,10 +49,13 @@ class LotCleaning extends Component {
 
   render() {
 
+    //const {FormObject, error, success} = this.props;
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
-    if(success !== undefined && success != null) {
+    if(success !== undefined) {
+      if (success != null) {
         return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+      }
     }
 
     if (FormObject && FormObject !== undefined) {
@@ -70,4 +73,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFileObject})(LotCleaning);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CollectionBinRegistrationForm);

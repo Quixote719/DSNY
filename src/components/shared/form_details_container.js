@@ -34,6 +34,7 @@ import EventParticipationRequestForm from '../contact/eventParticipationRequest'
 import CompostRequest from '../contact/compostRequest'
 import EEOComplaintForm from '../contact/employmentOpportunityComplaint'
 import CollectionBinReport from '../contact/collectionBinReport';
+import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationForm';
 import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
 import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 
@@ -93,6 +94,10 @@ class WebformPage extends Component {
                 return <DeadAnimalRemovalRequest />;
               case 'collection-bin-on-public-property-removal-request':
                 return <CollectionBinOnPublicProperty />;
+              case 'overflowing-litter-basket-service-request':
+                return <OverflowingLitterBasket />
+              case 'collection-bin-registration':
+                return <CollectionBinRegistrationForm />
               case 'event-participation-request':
                 return <EventParticipationRequestForm />;
               case 'e-waste-pickup-request':
