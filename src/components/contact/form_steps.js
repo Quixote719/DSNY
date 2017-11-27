@@ -200,9 +200,18 @@ const FormSteps = compose(
     if(!initialPageLoad)
     {
         inputs.forEach(input => {
-       
+          
           //Text, Checkbox Input Validation
-          if (input.required && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+          if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+          {
+              errors[input.name] = Titles.RequiredFieldMessage
+              if(nextbuttonClicked)
+              {
+                input.focus();
+                nextbuttonClicked = false;
+              }
+          }
+          else if (input.required && input.type === "checkbox"  && (!values[input.name]))
           {
               errors[input.name] = Titles.RequiredFieldMessage
               if(nextbuttonClicked)

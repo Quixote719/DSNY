@@ -29,7 +29,7 @@ const CompostRequestFormElements = (props) => {
       <FormAddressAutocomplete/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props}/>
+    <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props} onChange={setFieldValue} required/>
     <Field component={CheckBoxInput} name="WillPostSignageWithinTwoWeeks" {...props}/>
     <Field component={CheckBoxInput} name="WillSubmitThreePhotos" {...props}/>
     <Field component={CheckBoxInput} name="ConsentToDsnyUseOfPhotos"{...props}/>
