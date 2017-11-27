@@ -17,10 +17,16 @@ class FormFileDropZone extends Component {
       this.setState({
         files
       });
+      // this.state.files.map(f => this.props.onChange('files', this.state.files))
       var f = this.state.files;
       f = _.union(f, [files]);
-      this.setState({files: f}, () => { this.props.onChange('files', this.state.files) });
+      this.setState({f}, () => { this.props.onChange('files', this.state.files) });
     }
+    // onDropAccepted(files) {
+    //   var f = this.state.files;
+    //   f = _.union(f, [files]);
+    //   this.setState({files: f}, () => { this.props.onChange('files', this.state.files) });
+    // }
             
     body(type,name){
       switch (type) {
@@ -33,8 +39,7 @@ class FormFileDropZone extends Component {
         case 'Success':
 
         if (_.includes(name, '.pdf')) {
-          return(<div className='alignCenter filedropZoneinfo fileDropzoneAcpt'><img src={require('../../content/images/file_upload_pdf.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
-          
+          return(<div className='alignCenter filedropZoneinfo fileDropzoneAcpt'><img src={require('../../content/images/file_upload_pdf.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)         
         }
         if (_.includes(name, '.png')) {
           return(<div className='alignCenter filedropZoneinfo fileDropzoneAcpt'><img src={require('../../content/images/file_upload_image.png')} alt='upload File'  className="recyclingIcon" /><div><div>{name}</div><div className='click-on-the-icon'>CLICK ON THE ICON OR DRAG & DROP AN IMAGE / PDF FILE</div><div className='file-types'>Max File Size: 10MB  Images: .PNG .JPG .EPS .GIF</div></div></div>)
@@ -58,24 +63,25 @@ class FormFileDropZone extends Component {
     }
 
   render() {
+
     return (
       <div>
         <Col xs={12}>
           <div className='fileDropZoneHeader'>{this.props.header}</div>
           <div className='fileDropZoneNote'>{this.props.note}</div>
           <Dropzone onDrop={this.onDrop.bind(this)} className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' accept="image/jpeg, image/png,.pdf">
-  {({ isDragActive, isDragReject, acceptedFiles, rejectedFiles }) => {
-    if (isDragActive) {
-
-      return (<div className='alignCenter'>this file is accepted</div>);
-    }
-    if (isDragReject) {
-      return "This file is not authorized";
-    }
-    return acceptedFiles.length
-      ?  this.state.files.map(f => this.body('Success', f.name))
-      : rejectedFiles.length ? this.body('error'): this.body('placeHolder');
-  }}
+            {({ isDragActive, isDragReject, acceptedFiles, rejectedFiles }) => {
+              if (isDragActive) {
+                return (<div className='alignCenter'>this file is accepted</div>);
+              }
+              if (isDragReject) {
+                return "This file is not authorized";
+              }
+              console.log(acceptedFiles.length); 
+              return acceptedFiles.length
+                ?  this.state.files.map(f => this.body('Success', f.name))
+                : rejectedFiles.length ? this.body('error'): this.body('placeHolder');
+            }}
        </Dropzone>
         </Col>
       </div>
@@ -97,7 +103,7 @@ const FileDropZone = ({
   
   return (
     <div >
-      {<FormFileDropZone header={header} note={note} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormFileDropZone header={header} note={note} value={props.values[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
     </div>
   )
 }

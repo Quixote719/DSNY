@@ -99,19 +99,6 @@ export function postFormObject(formObject, Url) {
 
 export function postFileObject(fileObject, Url) {
     return function(dispatch) {
-        // var data = new FormData();
-        // data.append('file', fileObject.files[0][0]);
-        // $.ajax({
-        //     type: "POST",
-        //     url: Url,
-        //     data: data,
-        //     dataType: "JSON",
-        //     processData: false,
-        //     contentType: false
-        // }).done(function(json){
-        //     alert("hooray!");
-        // });
-
 		var formData = new FormData();
 		
 		var inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
