@@ -293,11 +293,13 @@ class FormSec extends Component {
 
 
     return (
+        <div className={bg}>
         <div className='SContainer'>
           {header && <div>{header}</div>}
           {body && <div id="contactPageBody">{body}</div> }
           <div></div>
         </div>
+       </div> 
     );
   };
 };
