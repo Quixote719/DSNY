@@ -33,11 +33,8 @@ class Leadership extends Component {
                         <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
                       </div>
                    )
-            // cards = this.renderCards(data.sections.sections.cards);
-            leadersCard = data.sections.sections[0].cards;
-            // ProfileCards.CardSize = 1;
-            // ProfileCards.CardType = 'staff-card';
 
+            leadersCard = data.sections.sections[0].cards;
             staffCard = leadersCard.splice(2);
             LeaderObject.cards = leadersCard;
             StaffObejct.cards = staffCard;
@@ -45,15 +42,11 @@ class Leadership extends Component {
             LeaderObject.CardType = data.sections.sections[0].card_data.card_type;
             StaffObejct.CardSize = 1;
             StaffObejct.CardType = data.sections.sections[0].card_data.card_type;
-            console.log("Leader");
-            console.log(LeaderObject);
-            console.log("Staff");
-            console.log(StaffObejct);
         }
     return (
       <div className="LeadershipPage greyBcg">
         {banner}
-        <div className="SContainer">
+        <div className="SContainer boxPadding">
           <div><CardBox info={LeaderObject}/></div>
           <div><CardBox info={StaffObejct}/></div>
         </div>
