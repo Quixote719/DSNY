@@ -26,7 +26,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete/>
+      <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props} onChange={setFieldValue} required/>
