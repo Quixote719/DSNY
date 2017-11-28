@@ -130,7 +130,7 @@ class WebformPage extends Component {
                 return <CRFLRequestForm />
               case 'dsny-compost-request':
                 return <CompostRequest />
-              case 'collection-bin-annual-reporting-form':
+              case 'collection-bin-annual-reporting':
                 return <CollectionBinReport />
               case 'sanitation-truck-spillage-complaint':
                 return <SanitationTruckSpillageForm />
@@ -181,7 +181,7 @@ class WebformPage extends Component {
                   return this.getBackGroundImageContent(sec);
               }else{
                   return this.getSection(sec);
-              }   
+              }
             })
           }
 
