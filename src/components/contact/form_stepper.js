@@ -135,7 +135,7 @@ class FormStepper extends Component {
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
             <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
-            <Tooltip placement="bottom" id="tooltip-bottom" className={!this.state.hideToolTip && fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `${this.props.maxValue}`:`${this.props.maxValue}`}</Tooltip>
+            {!this.state.hideToolTip && <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} televisions`:`You can not enter more than ${this.props.maxValue} items (including televisions)`}</Tooltip>}
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
