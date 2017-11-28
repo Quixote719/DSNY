@@ -19,11 +19,15 @@ var errorMessage =  (
 class FormAddressAutocomplete extends Component {
     constructor(props, context) {
         super(props, context);
+        const propName = props.name;
+        console.log(props.disabled);
         this.state = {
-            address: "",
-            // placeholder: "Enter the address",
+            address: props.values[propName] || "",
+            name:props.name,       
           };
     }
+ 
+
     handleChange = (address) =>{
         this.props.checkAddressValidator(0);
         if(address.trim().length === 0 || address === ""){
@@ -36,6 +40,7 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address,
         })
+      
     }
     resetPlaceHolder = () =>{
         // this.setState({
@@ -64,6 +69,11 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(address, this.successCallback);
         }
     }
+
+    handleVisiblity = (props) =>{
+        alert(props.disabled);
+    }
+    
     validateButtonClicked =()=>{
          this.props.checkAddressValidator(1);
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
@@ -95,10 +105,6 @@ class FormAddressAutocomplete extends Component {
         } );
     }
     render() {
-        console.log("Value of address validator: ")
-        console.log(this.props.addressValidator)
-        console.log(this.props.DSNYGeoCoder)
-
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -126,6 +132,7 @@ class FormAddressAutocomplete extends Component {
             componentRestrictions: {country: 'us'}
           }
         const inputProps = {
+            name:this.state.name,
             value: this.state.address,
             onChange: this.handleChange,
             placeholder: this.state.placeholder,
@@ -135,10 +142,10 @@ class FormAddressAutocomplete extends Component {
         return (
             <div>
                 <Row className = "formPlacesAutosuggestRow">
-                    <Col xs={12} md={10}>
+                    <Col xs={12} md={this.props.disabled ? 12 : 10}>
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
                     {errorMessage}
-                    <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
+                    {(this.props.DSNYGeoCoder != null || this.props.suggestionAddress != null)?<div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                     <div className = "addressNotFound">
                     The address entered can not be found.
                     </div>
@@ -146,12 +153,16 @@ class FormAddressAutocomplete extends Component {
                     Please select from the possible addresses below
                     </div>
                         {this.correctAddressList()}
-                    </div>
+                    </div>:null}
                     {/* {this.correctAddressList()} */}
                     </Col>
+                    
+                    <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}} >
                     <Col xs={12} md={2} className = "validateButtonCol">
-                    <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
+                    <SubSectionButton title='VALIDATE'   onClick = {this.validateButtonClicked}/>
                     </Col>
+                    </div>
+
                 </Row>
             </div>
 

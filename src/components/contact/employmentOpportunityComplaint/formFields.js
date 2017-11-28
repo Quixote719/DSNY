@@ -16,8 +16,6 @@ import {Titles} from './constants'
 import '../../../content/styles/eeo.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 
- 
-
 // Our inner form component which receives our form's state and updater methods as props
 const eeoComplaintElements = (props) => {
 

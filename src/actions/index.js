@@ -32,6 +32,18 @@ export function fetchPageData(slug) {
   console.log(slug);
   return function(dispatch) {
     dispatch({type: types.POST_FORM_REQUEST, payload: {}})
+
+     dispatch({
+                        type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        DSNYGeoCoder: null,
+                        collectionScheduleInfo: null,
+                        payload: null,
+                        routingData: null,
+                        arrayLength: null,
+                        holidayData: null,
+                        noResultsError: null,
+                        suggestionAddress: null,
+                    })
     dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_PAGE_DATA_URL.replace(':slug', slug)).then((data) => {
       // debugger;

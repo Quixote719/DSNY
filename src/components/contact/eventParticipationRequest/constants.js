@@ -128,6 +128,7 @@ export const formObject = {
   "PfirstName":null,
   "PLastName":null,
   "PPhone": null,
+  "AddressAsEntered":null,
   "PEmail":null,
   "PFullName": null,
   "PFullNameLastFirst": null,
