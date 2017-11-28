@@ -17,6 +17,25 @@ import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormAddressAutocompleteNoValidation from '../formAdressAutoCmpleteNoValidation';
 import {Col} from 'react-bootstrap';
 
+const DisplayFormikState = props => <div style={{
+		margin: '1rem 0'
+	}}>
+	<h3 style={{
+			fontFamily: 'monospace'
+		}}/>
+	<pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '2rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>values</strong> ={' '}
+
+      {JSON.stringify(props.values, null, 2)}
+    </pre>
+  </div>;
+
 
 // Our inner form component which receives our form's state and updater methods as props 
 const eventParticipationRequestFormElements = (props) => {
@@ -27,12 +46,15 @@ const eventParticipationRequestFormElements = (props) => {
     setFieldValue,
   } = props;
   
+  
+  
+
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
-    <FormSectionHeader title={Titles.sectionOne}/>
+    <FormSectionHeader title={Titles.sectionOne} />
     <div>
-      <FormAddressAutocomplete />
+      <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow= {true} {...props} maxlength="100"/>
     <FormSectionHeader title={Titles.sectionTwo}/>
@@ -81,7 +103,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={DropdownInput} name="SPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" />
     <Field component={TextInput} name="SEmailConfirm" {...props} maxlength="50" />
-   
+    <Col xs={12}><DisplayFormikState {...props} /></Col>
   </fieldset>)
 };
 

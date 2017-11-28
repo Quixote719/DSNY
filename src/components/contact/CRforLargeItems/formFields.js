@@ -43,7 +43,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
-		<div><FormAddressAutocomplete/></div>
+		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>
 		<Field component={DropdownInput} name="PickUpStreet" {...props} onChange={setFieldValue} options={values.CompostSitePermittingOrganizations} disabled={values.editMode}/>

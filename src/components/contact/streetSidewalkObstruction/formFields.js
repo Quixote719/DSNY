@@ -17,13 +17,13 @@ const CompostRequestFormElements = (props) => {
     values,
     handledropDown,
     setFieldValue,
-  } = props;
+  } = props;  
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete/>
+      <FormAddressAutocomplete  {...props}   value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"}/>
