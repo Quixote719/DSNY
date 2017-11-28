@@ -85,6 +85,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.BBL = geoCoderAddressResult.bbl
     values.District = geoCoderAddressResult.sanitationDistrict
     values.Source = 'DSNY'
+    values.State = 'NY'
 	}
 }
 
@@ -97,6 +98,7 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
   //  console.log("!dirty" + !dirty);
   initialPageLoad = false;
   nextbuttonClicked = true;
+  console.log(isSubmitting);
 
   if(((isSubmitting  || !isEmpty(errors) || !dirty))) {
       firsterror = true;
@@ -109,6 +111,7 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
 }
 
 const Step1 = (props) => {
+  console.log('Next clicked');
   const {
     errors,
     dirty,

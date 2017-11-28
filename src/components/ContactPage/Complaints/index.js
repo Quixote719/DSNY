@@ -98,10 +98,8 @@ class Complaints extends Component {
     if(this.props.ComplaintsPageData !== undefined){
         Complaints = this.props.ComplaintsPageData.data;
     }
-    BannerText.title = Complaints.title;
-    BannerText.content = Complaints.header_content;
 
-    if(this.props.ComplaintsPageData !== undefined) {
+    if(this.props.ComplaintsPageData !== undefined && this.props.ComplaintsPageData.data.sections.sections !== undefined) {
       _.map(this.props.ComplaintsPageData.data.sections.sections, item =>{
         switch (item.name){
           case 'complaints-top':{

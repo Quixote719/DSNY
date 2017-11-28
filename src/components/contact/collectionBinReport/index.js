@@ -29,32 +29,32 @@ class CollectionBinReport extends Component {
 
   postForm(formObject){
       console.warn('What is this?');
-      console.log(JSON.stringify(formObject));
+
       formObject={
-        "Id": 0,
-        "SRNumberId": 0,
-        "SRNo": "string",
-        "ServiceRequestStatusId": 0,
-        "CreatedDate": "2017-11-21T20:15:30.338Z",
-        "FirstName": "string",
-        "LastName": "string",
-        "Phone": "string",
-        "Email": "string",
-        "FullName": "string",
-        "FullNameLastFirst": "string",
-        "CompanyName": "string",
-        "Title": "string",
-        "CollectionBins": [
-          {
-            "Id": 0,
-            "CollectionBinAnnualReportId": 0,
-            "DsnyAssignedBinId": "string",
-            "WeightInPounds": 0,
-            "Removed": true,
-            "RemovalDate": "2017-11-21T20:15:30.338Z"
-          }
-        ]
-      }
+          "Id": 0,
+          "SRNumberId": 0,
+          "SRNo": "string",
+          "ServiceRequestStatusId": 0,
+          "CreatedDate": "2017-11-27T21:22:10.309Z",
+          "FirstName": "string",
+          "LastName": "string",
+          "Phone": "string",
+          "Email": "string",
+          "FullName": "string",
+          "FullNameLastFirst": "string",
+          "CompanyName": "string",
+          "Title": "string",
+          "CollectionBins": [
+            {
+              "Id": 0,
+              "CollectionBinAnnualReportId": 0,
+              "DsnyAssignedBinId": "string",
+              "WeightInPounds": 0,
+              "Removed": true,
+              "RemovalDate": "2017-11-27T21:22:10.309Z"
+            }
+          ]
+        }
       console.log(JSON.stringify(formObject));
       this.props.postFormObject(formObject, POST_FORM_COLLECTION_BIN_REPORT);
   }

@@ -26,7 +26,7 @@ const sanitationTruckSpillageFormElements = (props) => {
     
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered" />
+    <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow={true} {...props} maxlength="100" />
 
     <FormSectionHeader title={Titles.sectionTwo} />

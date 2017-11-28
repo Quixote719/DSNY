@@ -61,7 +61,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
-		<div><FormAddressAutocomplete/></div>
+		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
 		<div><FormAddressValidatorError>{values.buildingStatus ? '<p><span style="font-weight: 400;">You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">nyc.gov/ecycle</a></p>' : ''}</FormAddressValidatorError></div>
     <div>{values.buildingStatus ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props}/> : '' }</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
@@ -75,7 +75,6 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
- <Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 

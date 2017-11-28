@@ -20,6 +20,7 @@ import LotCleaning from '../contact/lotCleaning'
 import WeedRemovalRequest from '../contact/weedRemovalRequest'
 import LitterBasketRequest from '../contact/litterBasketRequest'
 import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
+import RequestCollection from '../contact/requestCollection'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
@@ -98,6 +99,8 @@ class WebformPage extends Component {
                 return <OverflowingLitterBasket />
               case 'collection-bin-registration':
                 return <CollectionBinRegistrationForm />
+              case 'request-collection-service':
+                return <RequestCollection />
               case 'event-participation-request':
                 return <EventParticipationRequestForm />;
               case 'e-waste-pickup-request':

@@ -1,7 +1,7 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
 #headerContent {
   min-height: calc(100vh - 341px);
-} 
+}
 
 html body {
   color: #333333;
@@ -58,6 +58,14 @@ html body {
   border-top-color: #D80035;
   border-bottom-color: #D80035;
   left: 14px;
+}
+
+.MarnageIncDec #tooltip-bottom  .tooltip-arrow{
+  margin-left: 45px;
+}
+
+.MarnageIncDec #tooltip-bottom{
+  margin: 40px 0 0 100px;
 }
 
 .checkContainer ~ #tooltip-left{
@@ -155,6 +163,12 @@ html body {
 }
 
 @media only screen and (max-width: 991px) {
+  .MarnageIncDec #tooltip-bottom{
+    margin-left: 0px;
+  }
+  .MarnageIncDec #tooltip-bottom  .tooltip-arrow{
+    margin-left: 35px;
+  }
   .paddingRight{
     padding-right: 15px;
   }

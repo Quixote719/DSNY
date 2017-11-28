@@ -34,7 +34,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/> 
     <Field component={TextInput} name="BinOwnerCompanyName" {...props} required fullRow={true} maxlength={"25"}/>
-    <Field component={AddressInput} name="BinOwnerAddressAsEntered" {...props} onChange={setFieldValue} required fullRow={true} disabled={values.editMode} maxlength={"100"}/>
+    <Field component={AddressInput} name="BinOwnerCompanyAddress" {...props} onChange={setFieldValue} required disabled={values.editMode} maxlength={"100"}/>
     <Field component={TextInput} name="BinOwnerApartment" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="BinOwnerFirstName" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="BinOwnerLastName" {...props} required maxlength={"25"}/>
@@ -42,18 +42,18 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="BinOwnerPhone" {...props} required maxlength={"21"}/>  
     <Field component={TextInput} name="BinOwnerEmail" {...props} required maxlength={"50"}/> 
     <FormSectionHeader title={Titles.sectionThree}/> 
-    <Field component={TextInput} name="PropertyOwnerCompanyName" {...props} required fullRow={true} maxlength={"25"}/>
-    <Field component={AddressInput} name="PropertyOwnerCompanyAddressAsEntered" {...props} onChange={setFieldValue} required fullRow={true} disabled={values.editMode} maxlength={"100"}/>
-    <Field component={TextInput} name="PropertyOwnerApartment" {...props} maxlength={"25"}/>
-    <Field component={TextInput} name="PropertyOwnerFirstName" {...props} maxlength={"25"}/>
-    <Field component={TextInput} name="PropertyOwnerLastName" {...props} maxlength={"25"}/>
-    <Field component={TextInput} name="PropertyOwnerTitle" {...props} maxlength={"50"}/>
-    <Field component={TextInput} name="PropertyOwnerPhone" {...props} maxlength={"21"}/>  
-    <Field component={TextInput} name="PropertyOwnerEmail" {...props} maxlength={"50"}/>  
+    <Field component={TextInput} name="PropertyOwnerName" {...props} required fullRow={true} maxlength={"25"}/>
+    <Field component={AddressInput} name="PropertyOwnerAddress" {...props} onChange={setFieldValue} required disabled={values.editMode} maxlength={"100"}/>
+    <Field component={TextInput} name="PropertyOwnerApartment" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="PropertyOwnerFirstName" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="PropertyOwnerLastName" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="PropertyOwnerTitle" {...props} required maxlength={"50"}/>
+    <Field component={TextInput} name="PropertyOwnerPhone" {...props} required maxlength={"21"}/>  
+    <Field component={TextInput} name="PropertyOwnerEmail" {...props} required maxlength={"50"}/>  
     <FormSectionHeader title={Titles.sectionFour}/>
     <Field component={TextAreaInput} name="DescribeBinAppearances" {...props}  maxlength={"2000"}/>   
-    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED N THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" />
-    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} />
+    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED ON THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" />
+    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} required />
     <FormTitleCheckBoxes title="TYPE(S) OF MATERIAL COLLECTED (CHECK ALL THAT APPLY)" />
     <Field component={CheckBoxInput} name="ClothingCollected" {...props} />
     <Field component={CheckBoxInput} name="ShoesCollected" {...props}/>
@@ -67,7 +67,7 @@ const CompostRequestFormElements = (props) => {
     <FormTitleCheckBoxes title="IS THIS BIN MANAGED BY A NON-PROFIT AGENCY OR ORGNIZATION (OPTIONAL)"/>
     <Field component={DropdownInput} name="IsManagedByANonProfit" {...props}  onChange={setFieldValue} disabled={values.editMode} />
     <FormTitleCheckBoxes title="THE BIN OWNER RECEIVED WRITTEN PERMISSION FROM PROPERTY OWNER"/>
-    <Field component={DropdownInput} name="ReceivedWrittenPermission" {...props}  onChange={setFieldValue} disabled={values.editMode} />
+    <Field component={DropdownInput} name="ReceivedWrittenPermission" {...props}  onChange={setFieldValue} disabled={values.editMode} required/>
   </fieldset>)
 };
 
