@@ -21,7 +21,10 @@ class Leadership extends Component {
 
   render() {
         let cards = null;
-        let ProfileCards = {};
+        let leadersCard = [];
+        let staffCard = [];
+        let LeaderObject = {};
+        let StaffObejct = {};
         let banner;
         if(this.props.LeadershipData !== undefined){
           let data = this.props.LeadershipData.data;
@@ -30,30 +33,35 @@ class Leadership extends Component {
                         <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
                       </div>
                    )
-            cards = this.renderCards(data.sections.sections);
-            ProfileCards.cards = data.sections.sections;
-            ProfileCards.CardSize = 1;
-            ProfileCards.CardType = 'staff-card';
+            // cards = this.renderCards(data.sections.sections.cards);
+            leadersCard = data.sections.sections[0].cards;
+            // ProfileCards.CardSize = 1;
+            // ProfileCards.CardType = 'staff-card';
+
+            staffCard = leadersCard.splice(2);
+            LeaderObject.cards = leadersCard;
+            StaffObejct.cards = staffCard;
+            LeaderObject.CardSize = 1;
+            LeaderObject.CardType = data.sections.sections[0].card_data.card_type;
+            StaffObejct.CardSize = 1;
+            StaffObejct.CardType = data.sections.sections[0].card_data.card_type;
+            console.log("Leader");
+            console.log(LeaderObject);
+            console.log("Staff");
+            console.log(StaffObejct);
         }
     return (
       <div className="LeadershipPage greyBcg">
         {banner}
         <div className="SContainer">
-            <CardBox info={ProfileCards}/>
+          <div><CardBox info={LeaderObject}/></div>
+          <div><CardBox info={StaffObejct}/></div>
         </div>
       </div>
     )
   }
 
-  renderCards(cards = []) {
-    return _.map(cards, item => {
-        return (
-          <span key={item.id}>
-              <ProfileCard name={item.title} duty={item.content} image={item.featured_image.base_path + item.featured_image.file}/>
-          </span>
-        );
-      })
-  }
+
 }
 
 function mapStateToProps(state) {
