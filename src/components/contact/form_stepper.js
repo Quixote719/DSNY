@@ -3,7 +3,10 @@ import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import { Col, Tooltip} from 'react-bootstrap';
 
+var categoryTotal = 0;
+var subCategoryTotal = 0;
 var fieldTotal = 0;
+
 class FormStepper extends Component {
 
     constructor(props) {
@@ -17,6 +20,40 @@ class FormStepper extends Component {
       this.decrement = this.decrement.bind(this);
       this.onInputChange = this.onInputChange.bind(this);
     };
+
+
+    getCategoryTotal()
+    {
+
+      var inputs = Array.from(document.querySelectorAll('#form input.incDecField'));
+
+      let total = 0;
+      inputs.forEach(input => {
+        //if(input.type === "number")
+        //{
+          total +=  parseInt(input.value, 10);
+        //}
+      });
+      categoryTotal = total;
+      return categoryTotal;
+
+    }
+
+    getSubCategoryTotal()
+    {
+      var inputs = Array.from(document.querySelectorAll('#form input.incDecSubField'));
+
+      let total = 0;
+      inputs.forEach(input => {
+        //if(input.type === "number")
+        //{
+          total +=  parseInt(input.value, 10);
+        //}
+      });
+      subCategoryTotal = total;
+      return subCategoryTotal;
+    }
+
 
     increment(){
 
@@ -59,33 +96,61 @@ class FormStepper extends Component {
     }
 
     onInputChange(e) {
+      
+      categoryTotal = this.getCategoryTotal();
+      subCategoryTotal = this.getSubCategoryTotal();
+      fieldTotal = categoryTotal + subCategoryTotal;
+      var {count, object} = this.state
+      
+      // var inputs = Array.from(document.querySelectorAll('#form input.incDecField, #form input.incDecSubField'));
 
+      // let total = 0;
+      // inputs.forEach(input => {
+      //   //if(input.type === "number")
+      //   //{
+      //     total +=  parseInt(input.value, 10);
+      //   //}
+      // });
+      // fieldTotal = total;
+      // console.log(fieldTotal);
 
-      var inputs = Array.from(document.querySelectorAll('#form input.incDecField, #form input.incDecSubField'));
+      // if(this.props.subCat)
+      // {
+        if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat? subCategoryTotal: categoryTotal)> this.props.maxValue) || fieldTotal > 20))
+        {
+          object.RequestedQty = 0
+          this.setState({count:0,hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
+        }
+        else if(!isNaN(e) && parseInt(e,10))
+        {
+          object.RequestedQty = parseInt(e, 10)
+          this.setState({count:parseInt(e, 10), hideToolTip: true},()=>{this.props.onIncDec(this.state.object)});
+           
+        }
+        else
+        {
+          object.RequestedQty = 0
+          this.setState({count:''},()=>{this.props.onIncDec(this.state.object)});
+        }
+      // }
+      // else
+      // {
+      //   console.log("cat" + fieldTotal);
 
-      let total = 0;
-      inputs.forEach(input => {
-        //if(input.type === "number")
-        //{
-          total +=  parseInt(input.value, 10);
-        //}
-      });
-      fieldTotal = total;
-      console.log(fieldTotal);
+      //   if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || categoryTotal > this.props.maxValue || fieldTotal > 20))
+      //   {
+      //     this.setState({count:0,hideToolTip: false})
+      //   }
+      //   else if(!isNaN(e) && parseInt(e,10))
+      //   {
+      //     this.setState({count:parseInt(e, 10), hideToolTip: false})
+      //   }
+      //   else
+      //   {
+      //     this.setState({count:''})
+      //   }
 
-
-      if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || fieldTotal > 20))
-      {
-        this.setState({count:0,hideToolTip: false})
-      }
-      else if(!isNaN(e) && parseInt(e,10))
-      {
-        this.setState({count:parseInt(e, 10), hideToolTip: false})
-      }
-      else
-      {
-        this.setState({count:''})
-      }
+      // }
 
     }
 
@@ -135,7 +200,7 @@ class FormStepper extends Component {
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
             <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
-            {!this.state.hideToolTip && <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} televisions`:`You can not enter more than ${this.props.maxValue} items (including televisions)`}</Tooltip>}
+            {!this.state.hideToolTip && fieldTotal > this.props.maxValue && <Tooltip placement="bottom" id="tooltip-bottom" className={"in"}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} televisions`:`You can not enter more than ${this.props.maxValue} items (including televisions)`}</Tooltip>}
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>

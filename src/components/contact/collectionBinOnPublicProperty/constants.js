@@ -38,6 +38,12 @@ export const formObject = {
   "ObservationDate": "0001-01-01T00:00:00",
   "BinTypeList": [
     {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
+    {
       "Id": 1,
       "Name": "Clothing Collection",
       "DisplayName": "Clothing Collection",

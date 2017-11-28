@@ -85,6 +85,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult){
     values.BBL = geoCoderAddressResult.bbl
     values.District = geoCoderAddressResult.sanitationDistrict
     values.Source = 'DSNY'
+    values.State = 'NY'
 	}
 }
 

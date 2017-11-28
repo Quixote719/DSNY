@@ -6,6 +6,7 @@ export const Titles = {
   DebrisInsideLot: 'Yes, debris inside the lot',
   DebrisInFrontOfLot: 'Yes, debris in front of the lot',
   VehiclesOnLot: 'Yes, vehicles on the lot',
+  PublicArea: 'FROM WHAT PUBLIC AREA CAN YOU SEE THIS DEBRIS',
   IsAnonymous: 'I would like to remain anonymous',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
