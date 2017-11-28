@@ -61,5 +61,7 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": null,
   "AddressTextOneLine": null,
-  "files": []
+  "files1": [],
+  "files2": [],
+  "files3": []
 }

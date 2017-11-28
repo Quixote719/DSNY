@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from 'react-bootstrap';
 import Parser from 'html-react-parser';
 import SubSectionButton from '../shared/sub_section_button';
+import { Link } from 'react-router-dom';
 
 
 function demoDisplay()  {
@@ -21,7 +22,9 @@ const SubmitThankYou = props => {
               <div className='thankyoubody' >
                 {Parser(props.children)}
               </div>
-          <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
+            <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
+          </Link>
           {/*<div className='thankYoupatternLine'></div>*/}
         </Col>
       </div>

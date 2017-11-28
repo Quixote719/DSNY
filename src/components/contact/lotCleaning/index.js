@@ -49,13 +49,10 @@ class LotCleaning extends Component {
 
   render() {
 
-    //const {FormObject, error, success} = this.props;
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
-    if(success !== undefined) {
-      if (success != null) {
+    if(success !== undefined && success != null) {
         return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
-      }
     }
 
     if (FormObject && FormObject !== undefined) {

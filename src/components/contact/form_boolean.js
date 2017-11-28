@@ -15,9 +15,10 @@ class FormBoolean extends Component {
       declined: false,
       hideToolTip: true
     }
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
+    this.showToolTip = this.showToolTip.bind(this);
   }
 
   handleChange(event){
@@ -29,13 +30,13 @@ class FormBoolean extends Component {
   }
 
   onInputChange(e) {
-    
+
     if(this.props.required)
     {
       this.props.onChange(this.props.name, e.target.checked);
       !isEmpty(this.props.value) || (e.target.checked) ? this.setState({hideToolTip: true}) : this.setState({hideToolTip: false});
     }
-    
+
     this.setState({
       accepted: !e.target.checked,
       declined: e.target.checked
@@ -43,7 +44,7 @@ class FormBoolean extends Component {
   }
 
   /* Check If the CheckBoxes are adjacent to one another in two columns */
-  renderAccordingToCheckBoxType(props){ 
+  renderAccordingToCheckBoxType(props){
     if(props.checkBoxType == 'semiwidth'){
        return (
                 <div>
@@ -54,7 +55,7 @@ class FormBoolean extends Component {
                 </Col>
               </div>
               );
-    }  
+    }
        return (<div>
                <Col xs={12}>
                    <fieldset>
@@ -64,17 +65,27 @@ class FormBoolean extends Component {
              </div>);
   }
 
+  showToolTip(){
 
+    if(this.props.error && !this.state.hideToolTip)
+    {
+    return(
+      <Tooltip placement="top" id="tooltip-left" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
+      );
+    }
+  }
 
   renderOptions() {
     return (<div>
       <label className="checkContainer">
-      <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)} 
+      <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)}
       className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
-      <Tooltip placement="bottom" id="tooltip-left" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
+
       <span className="checkmark"></span>
       <div className="checkBoxText">{this.props.title}</div>
       </label>
+      {this.showToolTip()}
+
     </div>)
   }
   render() {
@@ -99,7 +110,7 @@ const CheckboxInput = ({
   return (
     <div >
       {<FormBoolean title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
-      
+
     </div>
   )
 }

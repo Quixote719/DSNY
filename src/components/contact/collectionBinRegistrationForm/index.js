@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-
+import {
+  PSOT_COLLECTION_BIN_REGISTRATION_URL
+} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import { POST_FORM_FAILURE_STORE_RECEPTACLES_URL } from '../../../constants/ApiConstants';
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -14,7 +15,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class FailureStoreReceptacles extends Component {
+class CollectionBinRegistrationForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -31,10 +32,7 @@ class FailureStoreReceptacles extends Component {
 
 
   postForm(formObject){
-
-    console.log(formObject);
-    console.log(JSON.stringify(formObject));
-    this.props.postFormObject(formObject, POST_FORM_FAILURE_STORE_RECEPTACLES_URL);
+      this.props.postFormObject(formObject, PSOT_COLLECTION_BIN_REGISTRATION_URL);
   }
 
    validateForm(formObject, errors){
@@ -51,24 +49,22 @@ class FailureStoreReceptacles extends Component {
 
   render() {
 
-        //const {FormObject, error, success} = this.props;
-        const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
+    //const {FormObject, error, success} = this.props;
+    const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
+    
+    if(success !== undefined) {
+      if (success != null) {
+        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+      }
+    }
 
-        if(success !== undefined) {
-          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
-        }
-
-        if (FormObject && FormObject !== undefined) {
-        return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
-                </div></div>);
-        };
-
-        if (error){
-            return (<FetchError onRetry={ () => this.props.fetchFormObject()}/>);
-        }
-        return(<div className='loader container'></div>)
-     };
+    if (FormObject && FormObject !== undefined) {
+      return (<div className='container'><div className='form compostForm'>
+              <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+              </div></div>);
+    };
+    return(<div className='loader container'></div>)
+ };
 };
 
 
@@ -77,4 +73,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(FailureStoreReceptacles);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CollectionBinRegistrationForm);

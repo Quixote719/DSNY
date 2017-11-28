@@ -10,20 +10,24 @@ class FormStepper extends Component {
       super(props);
       this.state =  {
         count: props.obj.RequestedQty,
-        object:props.obj
+        object:props.obj,
+        hideToolTip: true
       }
       this.increment = this.increment.bind(this);
       this.decrement = this.decrement.bind(this);
+      this.onInputChange = this.onInputChange.bind(this);
     };
 
     increment(){
+
       var {count, object} = this.state
       fieldTotal += 1;
       var i = count += 1
       console.log(fieldTotal);
       console.log(this.props);
       object.RequestedQty = i
-      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+      if(fieldTotal < 20 && i <= this.props.maxValue)
+      this.setState({count:i , object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
 
    /*   var inputs = document.querySelectorAll('#form input.incDecField');
 
@@ -39,18 +43,25 @@ class FormStepper extends Component {
     }
 
     decrement() {
+
       fieldTotal -= 1;
       console.log(fieldTotal);
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
-      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
+        if(fieldTotal < 20 && i <= this.props.maxValue)
+      this.setState({count:i, object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
+    }
+
+    onBlur(e) {
+     this.setState({hideToolTip: true});
+      if (e === '') this.setState({count:0});
     }
 
     onInputChange(e) {
 
 
-      var inputs = document.querySelectorAll('#form input.incDecField');
+      var inputs = Array.from(document.querySelectorAll('#form input.incDecField, #form input.incDecSubField'));
 
       let total = 0;
       inputs.forEach(input => {
@@ -62,7 +73,20 @@ class FormStepper extends Component {
       fieldTotal = total;
       console.log(fieldTotal);
 
-      !isNaN(e)  ?   this.setState({count:parseInt(e, 10)}) : console.log('enter number');
+
+      if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || fieldTotal > 20))
+      {
+        this.setState({count:0,hideToolTip: false})
+      }
+      else if(!isNaN(e) && parseInt(e,10))
+      {
+        this.setState({count:parseInt(e, 10), hideToolTip: false})
+      }
+      else
+      {
+        this.setState({count:''})
+      }
+
     }
 
     renderItem(){
@@ -110,8 +134,8 @@ class FormStepper extends Component {
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
-            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} />
-            <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>test</Tooltip>
+            <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
+            {!this.state.hideToolTip && <Tooltip placement="bottom" id="tooltip-bottom" className={fieldTotal > this.props.maxValue ?"in":''}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} televisions`:`You can not enter more than ${this.props.maxValue} items (including televisions)`}</Tooltip>}
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>
