@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  POST_E_WASTE_PICKUP_REQUEST
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, IsDistrictActive,GetBulidingUnits, GetUnavailableDates} from "../../../actions/contact_forms";
@@ -43,7 +43,7 @@ class EwasteRequestForm extends Component {
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, POST_E_WASTE_PICKUP_REQUEST);
   }
 
    validateForm(formObject, errors){
@@ -57,6 +57,9 @@ class EwasteRequestForm extends Component {
 
     return errors;
   }
+
+
+
 
   render() {
     const { error, success, isDistrictActive, buildingStatus, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;

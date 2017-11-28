@@ -40,16 +40,17 @@ class FormDropdown extends Component {
             if (myArray[i].Id === Key) {
                 return myArray[i].DisplayName;
             }
-     }  
+     }
   }
   onInputChange(item) {
     console.log('%%');
     console.log(item);
-    
+
     this.setState({option: item.DisplayName ?  item.DisplayName : item});
-    this.props.onChange(this.props.name, item.Id);
+    debugger;
+    this.props.onChange(this.props.name, item.DisplayName ?  item.DisplayName : item);
   }
-  
+
   handleChange(event){
     //console.log("DINESH" + this.refs.myinput.value )
      this.props.value === 0 ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
