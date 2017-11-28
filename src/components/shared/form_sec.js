@@ -292,12 +292,29 @@ class FormSec extends Component {
     let cardCount = dataObject.card_data.card_count;
 
 
+    function checkforGreenPatternLine(section,header,content,cards){
+    
+    /*The green line appears in the form introduction, only when it has both Header & Content & There are no cards & if the section
+       Type is form-introduction */
+      switch(section){
+        case 'form-introduction':
+            return(
+                    <div>     
+                    {header &&  content && !cards && <div className='patternLineGreen'></div>}
+                    </div>
+            );
+        default:
+            break;    
+      }    
+      
+    }
+
     return (
         <div className={bg}>
         <div className='SContainer'>
           {header && <div>{header}</div>}
           {body && <div id="contactPageBody">{body}</div> }
-          <div></div>
+          {checkforGreenPatternLine(dataObject.section_style,header,dataObject.content,dataObject.card_data)}
         </div>
        </div> 
     );
