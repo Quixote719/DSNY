@@ -43,9 +43,9 @@ class SearchSitePage extends Component {
         }
         
     }
-    componentMount(){
-        console.log("search site page DID MOUNT rerendered......");        
-    }
+    // componentMount(){
+    //     console.log("search site page DID MOUNT rerendered......");        
+    // }
     getSuggestions = value => {
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
@@ -92,8 +92,10 @@ class SearchSitePage extends Component {
     }
     searchIconPressed(){
         this.props.setPaginationKey(1);        
-        this.props.setSearchClearBoxValue("clearBoxNotChecked")
-        this.props.getRidOfSearchResults(this.props.siteSearchValue);   
+        if(this.props.siteSearchValue.trim().length !== 0){
+            this.props.setSearchClearBoxValue("clearBoxNotChecked")
+            this.props.getRidOfSearchResults(this.props.siteSearchValue);  
+        }            
     }
     clearSearchBox(){
         this.props.setSiteSearchValue("");
@@ -105,8 +107,10 @@ class SearchSitePage extends Component {
           }   
         if(event.key == 'Enter'){
             this.props.setPaginationKey(1);
-            this.props.getRidOfSearchResults(this.props.siteSearchValue);   
-            this.props.setSearchClearBoxValue("clearBoxNotChecked")                   
+            if(this.props.siteSearchValue.trim().length !== 0){
+                this.props.getRidOfSearchResults(this.props.siteSearchValue);   
+                this.props.setSearchClearBoxValue("clearBoxNotChecked")       
+            }
         }
       }
     handleSelect = (eventKey) => {
@@ -158,7 +162,7 @@ class SearchSitePage extends Component {
                                     onKeyDown: this.handleKeyPress,                                    
                                 }}/>
                                 <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.props.siteSearchValue!==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResultsClear"></i>
-                                <i className="fa fa-search collectionSearch"  onClick = {()=>{this.searchIconPressed()}}id="ridOfSearchResults"></i>
+                                <i className="fa fa-search collectionSearch"  onClick = {()=>{this.searchIconPressed()}} id="ridOfSearchResultsSiteSearch"></i>
                             </div>
                     </Col>
                 </Row>

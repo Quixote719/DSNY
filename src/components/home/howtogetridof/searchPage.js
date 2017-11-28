@@ -88,8 +88,10 @@ class SearchPage extends Component {
         this.setState({
             searchResult: ""
          });
-        this.props.setPaginationKey(1);                     
-        this.props.getRidOfSearchResults(suggestion);   
+        this.props.setPaginationKey(1);        
+        if(this.state.value.trim().length !== 0){
+            this.props.getRidOfSearchResults(suggestion);               
+        }            
     }
     clearSearchBox(){
         this.setState({
@@ -101,14 +103,28 @@ class SearchPage extends Component {
             event.preventDefault();
           }   
         if(event.key == 'Enter'){
-            this.props.setPaginationKey(1);            
-            this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
-            this.props.getRidOfSearchResults(this.state.value);   
-            this.setState({
-                searchResult: ""
-             });           
+            this.props.setPaginationKey(1);  
+            if(this.state.value.trim().length !== 0){
+                this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
+                this.props.getRidOfSearchResults(this.state.value);   
+                this.setState({
+                    searchResult: ""
+                 });        
+            }          
         }
       }
+
+      searchResultsIcon = () => {  
+            this.props.setPaginationKey(1);  
+            if(this.state.value.trim().length !== 0){
+                this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
+                this.props.getRidOfSearchResults(this.state.value);   
+                this.setState({
+                    searchResult: ""
+                 });        
+            }          
+      }
+
     handleSelect = (eventKey) => {
         // this.setState({
         //     activePage: eventKey
@@ -153,11 +169,11 @@ class SearchPage extends Component {
                                     onChange: this.onChange,
                                     className: "ridOfSearchResults",
                                     placeholder: this.state.placeholder,
-                                    onKeyPress: this.handleKeyPress,                         onKeyDown: this.handleKeyPress,
+                                    // onKeyPress: this.handleKeyPress,                         
                                     onKeyDown: this.handleKeyPress,
                                 }}/>
                                 <i className="fa fa-times collectionSearch" onClick = {()=>{this.clearSearchBox()}} style={this.state.value!==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
-                                <i className="fa fa-search collectionSearch" style={this.state.value ==""?{display: 'block'}:{display: 'none'}} id="ridOfSearchResults"></i>
+                                <i className="fa fa-search collectionSearch" onClick = {()=>{this.searchResultsIcon()}} id="ridOfSearchResultsNotClear"></i>
                             </div>
                     </Col>
                 </Row>

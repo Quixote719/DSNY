@@ -69,7 +69,7 @@ class CollectionScheduleDefaultTable extends Component {
     }
     desktopTable = () =>{
         return(
-            <table id ={this.props.collectionScheduleData == "noValue"?"noDesktopTable":"desktopTable"} className={!this.props.holidayData? "holidayCollectionScheduleTable desktopCollectionSchedule":"collectionScheduleTable desktopCollectionSchedule"}>
+            <table id ={this.props.collectionScheduleData == "noValue"?"noDesktopTable":"desktopTable"} className={!this.props.holidayData? "holidayCollectionScheduleTableNoTable desktopCollectionSchedule":"collectionScheduleTable desktopCollectionSchedule"}>
                     <thead>
                         <tr>
                         {this.tableHeader()}
@@ -84,7 +84,7 @@ class CollectionScheduleDefaultTable extends Component {
     }
     mobileTable = () =>{
         return(
-            <table id = {this.props.collectionScheduleData == "noValue"?"noMobileTable":"mobileTable"} className={!this.props.holidayData? "holidayCollectionScheduleTable mobileCollectionSchedule":"collectionScheduleTable mobileCollectionSchedule"}>
+            <table id = {this.props.collectionScheduleData == "noValue"?"noMobileTable":"mobileTable"} className={!this.props.holidayData? "holidayCollectionScheduleTableNoTable mobileCollectionSchedule":"collectionScheduleTable mobileCollectionSchedule"}>
                 <tbody>
                     {this.tableHeaderMobile()}
                 </tbody>

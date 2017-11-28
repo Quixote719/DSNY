@@ -28,7 +28,8 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
       return { ...state, siteSearchResultsData: action.payload, noOfSearchResults: action.length };
     case 'SET_ACTIVE_NAV_TAB':
     return { ...state, activeNavTab: action.payload };    
-      case 'SET_RID_OFF_ITEM_DETAILS':
+
+    case 'SET_RID_OFF_ITEM_DETAILS':
       return { ...state, getRidOfItemDetailsData: action.payload};
       
       case 'SET_ADDRESS_VALIDATOR_FLAG':

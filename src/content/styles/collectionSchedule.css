@@ -20,6 +20,10 @@
     border: 1px solid #F4F4F5;    
     margin-top: 10px;    
 }
+.holidayCollectionScheduleTableNoTable{
+    border: 1px solid #F4F4F5;    
+    margin-top: 35px;    
+}
 .normalDay, .currentDay{
     padding-top: 6px;
     padding-bottom: 5px;
@@ -164,15 +168,25 @@
     text-align: center;
 }
 .collectionDefaultText{
-    padding-top: 21px;
+    padding-top: 30px;
 }
 .collectionDefaultCol{
-    padding-top: 18px;
+    padding-top: 35px;
 }
 .collectionTableDefaultRow{
     width: 940px;
     margin-left: auto;
     margin-right: auto;
+}
+.collectionTableDefaultColumn{
+    padding-left: 0;
+}
+.exampleCollectionSearch{
+    margin-top: 8px;
+    margin-left: 0px;
+    color: #9B9B9B;
+    font-size: 15px;
+    line-height: 17px;
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {

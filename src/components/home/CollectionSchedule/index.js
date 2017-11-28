@@ -74,8 +74,10 @@ class CollectionSchedule extends Component {
                 address: address,
                 checkInputresults: "clearBoxNotChecked"
             });
-            this.props.getCollectionSchedule(address, null, this.successCallback);
-            this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + address)
+            if(this.state.address !== "" || this.state.address.trim().length !== 0){
+                this.props.getCollectionSchedule(address, null, this.successCallback);
+                this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + address)
+            }                
         }
     }
     searchIcon = () => {
@@ -84,8 +86,10 @@ class CollectionSchedule extends Component {
             this.setState({
                 checkInputresults: "clearBoxNotChecked"
             });
-            this.props.getCollectionSchedule(this.state.address, null, this.successCallback);
-            this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + this.state.address)
+            if(this.state.address !== "" || this.state.address.trim().length !== 0){
+                this.props.getCollectionSchedule(this.state.address, null, this.successCallback);
+                this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + this.state.address)
+            }                
         }
     }
     successCallback = (success) => {
@@ -109,7 +113,7 @@ class CollectionSchedule extends Component {
         this.setState({
             address: value,
         });
-        this.props.getCollectionSchedule(value);
+            this.props.getCollectionSchedule(value);            
     }
     correctAddressList = () => {
         return _.map(this.props.suggestionAddress, (value, index) => {
@@ -123,9 +127,49 @@ class CollectionSchedule extends Component {
         if (this.props.collectionScheduleInfo == null && showTableFlag !==0 && this.props.suggestionAddress == null) {
             console.log("In first if")
             return (
-                <div className="noOfSearchResults">
-                    No search results found
+                <div>
+                <div className="noOfSearchResultsCollectionSchedule">
+                    No search results found for "{this.props.match.params.address}"
                 </div>
+                <Row className = "collectionTableDefaultRow">
+                    <Col xs={12} md={8} className = "collectionTableDefaultColumn">
+                        <CollectionScheduleDefaultTable />
+                    </Col>
+                    <Col xs={12} md={4} className = "collectionDefaultCol"> 
+                        <Col xs={4} className ="collectionScheduleIcons">
+                        <div>
+                            <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon"/>
+                            <div className ="garbageTitle">
+                                GARBAGE
+                            </div>
+                        </div>
+                        </Col>
+                        <Col xs={4} className ="collectionScheduleIcons">
+                        <div>
+                            <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
+                            <div className ="recycleTitle">
+                                RECYCLING
+                            </div>
+                            </div>
+                        </div>
+                        </Col>
+                        <Col xs={4} className ="collectionScheduleIcons">
+                        <div>
+                            <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon"/>
+                            <div className ="organicsTitle">
+                                ORGANICS
+                            </div>
+                        </div>
+                        </Col>
+                        <Col xs={12} className = "collectionDefaultText">
+                        <div>
+                        Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
+                        </div>
+                        </Col>
+                    </Col>
+                    </Row>
+                </div>
+                                        
             )
         } else if (this.props.suggestionAddress != null || (this.props.suggestionAddress?this.props.suggestionAddress.length > 0:"")) {
             console.log("In Second if")                
@@ -165,7 +209,8 @@ class CollectionSchedule extends Component {
             else{
                 return(
                     <Row className = "collectionTableDefaultRow">
-                    <Col xs={12} md={8}>
+                     <div style={this.state.address == "" || this.state.address == undefined?{display: 'block'}:{display:'none'}} className="exampleCollectionSearch"> Example: 454 W 12th Ave, New York </div>
+                    <Col xs={12} md={8} className = "collectionTableDefaultColumn">
                         <CollectionScheduleDefaultTable />
                     </Col>
                     <Col xs={12} md={4} className = "collectionDefaultCol"> 
@@ -196,7 +241,7 @@ class CollectionSchedule extends Component {
                         </Col>
                         <Col xs={12} className = "collectionDefaultText">
                         <div>
-                        Please enter your address in the search field above to get the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
+                        Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
                         </div>
                         </Col>
                     </Col>
