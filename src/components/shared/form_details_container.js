@@ -22,6 +22,7 @@ import LitterBasketRequest from '../contact/litterBasketRequest'
 import OverflowingLitterBasket from '../contact/overflowingLitterBasket'
 import RequestCollection from '../contact/requestCollection'
 import DeadAnimalRemovalRequest from '../contact/deadAnimalRemovalRequest'
+import NycAgencyRecycling from '../contact/nycAgencyRecycling'
 import CollectionBinOnPublicProperty from '../contact/collectionBinOnPublicProperty'
 import RecyclableMaterialTheft from '../contact/recyclableMaterialTheft'
 import FailureStoreReceptacles from '../contact/failureStoreReceptacles'
@@ -79,6 +80,7 @@ class WebformPage extends Component {
           if (item.name !== '') {
 
             switch (item.name) {
+              // Q's forms
               case 'disability-services':
                 return <DisabilityServices />;
               case 'organics-bin-replacement-request':
@@ -101,6 +103,9 @@ class WebformPage extends Component {
                 return <CollectionBinRegistrationForm />
               case 'request-collection-service':
                 return <RequestCollection />
+              case 'nyc-agency-recycling-plan-annual-report-submission':
+                return <NycAgencyRecycling />
+              // Q's forms end
               case 'event-participation-request':
                 return <EventParticipationRequestForm />;
               case 'e-waste-pickup-request':
@@ -131,8 +136,6 @@ class WebformPage extends Component {
                 return <SanitationTruckSpillageForm />
               case 'private-receptacle-complaint':
                 return <PrivateReceptableComplaintForm />
-              case 'overflowing-litter-basket-service-request':
-                return <OverflowingLitterBasket />
               default:
                 break;
             }

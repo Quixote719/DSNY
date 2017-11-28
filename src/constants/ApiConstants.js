@@ -49,6 +49,7 @@ export const PSOT_FORM_OVERFLOWING_LITTER_BASKET_URL = `${REST_WEBAPI_URL}overfl
 export const PSOT_FORM_DISABILITY_SERVICES_URL = `${REST_WEBAPI_URL}disabilityservices`;
 export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
 export const PSOT_REQUEST_COLLECTION_URL = `${REST_WEBAPI_URL}collectionServiceRequests`;
+export const PSOT_NYC_AGENCY_RECYCLING_URL = `${REST_WEBAPI_URL}NycAgencyRecyclingPlanAnnualReports`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;
 export const PSOT_FORM_EEO_COMPLAINTS_URL = `${REST_WEBAPI_URL}eeocomplaints`;
 export const PSOT_FORM_WEED_REMOVAL_PROPERTY_URL = `${REST_WEBAPI_URL}weedremoval`;
