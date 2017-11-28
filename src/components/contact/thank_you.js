@@ -15,9 +15,9 @@ const SubmitThankYou = props => {
   return (      
       <div>
         <Col>
-          {/*<div className='thankYoupatternLine'></div>*/}
+         <div className='SContainer'>
+          <div className='thankYoupatternLine'></div>
           { demoDisplay()}
-          {/*<div className='SContainer'></div>*/}
             <div className='thankyoulable'>THANK YOU</div>
               <div className='thankyoubody' >
                 {Parser(props.children)}
@@ -25,7 +25,8 @@ const SubmitThankYou = props => {
           <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
             <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
           </Link>
-          {/*<div className='thankYoupatternLine'></div>*/}
+          <div className='thankYoupatternLine'></div>
+          </div>
         </Col>
       </div>
   );
