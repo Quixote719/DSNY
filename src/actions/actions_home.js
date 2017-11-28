@@ -68,6 +68,9 @@ export function getCollectionSchedule(address, callback=null, callbackSuccess = 
                             }
                             console.log(DSNYGeoCoder);
                         }
+                        else{
+                            var DSNYGeoCoder = null;
+                        }
                     }
                     if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
                         var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;

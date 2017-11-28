@@ -1,12 +1,7 @@
 export const Titles = {
-  sectionOne: 'DESCRIBE SETOUT LOCATION OF RECYCLABLE MATERIAL',
-  sectionTwo: 'SPECIFIC INFORMATION',
+  sectionOne: 'ENTER YOUR ADDRESS',
+  sectionTwo: 'UPLOAD DOCUMENTS',
   sectionThree: 'CONTACT INFORMATION',
-  AdditionalLocationInfo: "ADDITIONAL LOCATION INFORMATION (OPTIONAL)",
-  DebrisInsideLot: 'Yes, debris inside the lot',
-  DebrisInFrontOfLot: 'Yes, debris in front of the lot',
-  VehiclesOnLot: 'Yes, vehicles on the lot',
-  PublicArea: 'FROM WHAT PUBLIC AREA CAN YOU SEE THIS DEBRIS',
   IsAnonymous: 'I would like to remain anonymous',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
@@ -21,11 +16,7 @@ export const Titles = {
 
 
 export const formObject = {
-
-  "AdditionalLocationInfo": null,
-  "DebrisInsideLot": false,
-  "DebrisInFrontOfLot": false,
-  "VehiclesOnLot": false,
+  
   "MediaFiles": [
     {
       "Id": 0,
@@ -34,7 +25,6 @@ export const formObject = {
       "URI": null
     }
   ],
-  "IsAnonymous": false,
   "Id": 0,
   "SRNumberId": 0,
   "SRNo": null,
@@ -63,6 +53,5 @@ export const formObject = {
   "AddressText": null,
   "AddressTextOneLine": null,
   "files1": [],
-  "files2": [],
-  "files3": []
+  "files2": []
 }
