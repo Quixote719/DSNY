@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, IsDistrictActive,GetBulidingUnits, GetUnavailableDates} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -64,6 +64,10 @@ class EwasteRequestForm extends Component {
   render() {
     const { error, success, isDistrictActive, buildingStatus, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
 
+    if(success !== undefined) {
+          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+    }
+    
     if (geoCoderAddressResult){
       console.log(this.props);
       if (typeof unavailableDates === 'undefined')
