@@ -106,9 +106,19 @@ export function postFileObject(fileObject, Url) {
 			 formData.append(input.name, fileObject[input.name]);
 		 });
 
-		formData.append("image", fileObject.files1[0][0]);
-		formData.append("image", fileObject.files2[0][0]);
-		formData.append("image", fileObject.files3[0][0]);
+		switch (fileObject) {
+			case fileObject.files1:
+			formData.append("image", fileObject.files1[0][0]);
+			break;
+			case fileObject.files2:
+			formData.append("image", fileObject.files2[0][0]);
+			break;
+			case fileObject.files3:
+			formData.append("image", fileObject.files3[0][0]);
+			break;
+			default:
+			break;
+		}
 		
 		axios.post(Url, formData, {
 			headers: {
