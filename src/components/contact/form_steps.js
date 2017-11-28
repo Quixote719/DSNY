@@ -194,7 +194,7 @@ const FormSteps = compose(
     //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
         //console.log("Cannot proceed")
 
-    const inputs = document.querySelectorAll('#form input, #form .dropdown-toggle');
+    const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
   
 
     if(!initialPageLoad)
@@ -205,6 +205,15 @@ const FormSteps = compose(
           if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
           {
               errors[input.name] = Titles.RequiredFieldMessage
+              if(nextbuttonClicked)
+              {
+                input.focus();
+                nextbuttonClicked = false;
+              }
+          }
+          else if (input.required && input.type === "text"  && (input.name ==="Email" && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+          {
+              errors[input.name] = "Please enter valid Email Address"
               if(nextbuttonClicked)
               {
                 input.focus();

@@ -1,7 +1,7 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
-/* #headerContent {
+#headerContent {
   min-height: calc(100vh - 341px);
-} */
+} 
 
 html body {
   color: #333333;
@@ -169,9 +169,9 @@ html body {
 }
 
 @media (min-width:0)and (max-width: 767px) {
-  /* #headerContent {
+  #headerContent {
     min-height: calc(100vh - 1063px);
-  } */
+  }
 }
 
 .container {
