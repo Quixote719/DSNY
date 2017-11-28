@@ -46,10 +46,9 @@ class Header extends React.Component {
     }
     onNavChange=(key, event)=> {
         this.props.setActiveNavTab(key);
-        console.log(this.props.activeNavTab);
     }
     render() {
-        
+        console.log("this.props.activeNavTab")        
         console.log(this.props.activeNavTab)
         window.showModalStatic = this.state.showModal;
         var url = window.location.pathname;
@@ -123,7 +122,6 @@ class Header extends React.Component {
                             <NavItem eventKey = {7} className="search-box-header">
                             </NavItem>
                             <SearchBoxHome getRidOfSearchResults={this.props.getSiteSearchResults?this.props.getSiteSearchResults:""} ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props}/>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
