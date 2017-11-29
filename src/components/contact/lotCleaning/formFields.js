@@ -14,7 +14,6 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
-import {Col} from 'react-bootstrap';
 
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {

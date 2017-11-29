@@ -14,6 +14,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import AddressInput from '../form_addressField';
+import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
 
 
 // Our inner form component which receives our form's state and updater methods as props
@@ -27,14 +28,15 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
+      <FormTitleCheckBoxes title="NEAREST ADDRESS" />
       <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="BinLocationAdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextInput} name="BinColor" {...props} required maxlength={"20"}/>
+    <Field component={TextInput} name="BinColor" {...props} maxlength={"20"} required/>
     <Field component={DateTimePickerInput} name="ObservationDate" {...props} onChange={setFieldValue} required/>
-    <Field component={DropdownInput} name="BinTypeId" {...props} onChange={setFieldValue} options={values.BinTypeList} disabled={values.editMode} {...props} />
-    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} maxlength={"25"}/>
+    <Field component={DropdownInput} name="BinTypeId" {...props} onChange={setFieldValue} options={values.BinTypeList} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} required={values.BinTypeId !== 3} maxlength={"25"}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required/>
     <Field component={TextInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} required/>

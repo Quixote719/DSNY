@@ -24,6 +24,12 @@ export const formObject = {
   "AnimalId": 0,
   "Animals": [
     {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
+    {
       "Id": 1,
       "Name": "Bird",
       "DisplayName": "Bird",
@@ -101,6 +107,12 @@ export const formObject = {
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
   "DeadAnimalLocations": [
+    {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Highway",

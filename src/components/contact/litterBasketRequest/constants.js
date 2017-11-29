@@ -21,6 +21,12 @@ export const formObject = {
   "AdditionalLocationInfo": null,
   "Reasons": [
     {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
+    {
       "Id": 1,
       "Name": "Bus Stop",
       "DisplayName": "Bus Stop",
