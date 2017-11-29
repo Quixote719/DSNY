@@ -30,8 +30,8 @@ const adoptABasketElements = (props) => {
     <FormHeaderSmallSize title='New Enrollment' information='All fields are required unless indicated as optional'/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered" {...props}   value="" disabled={values.editMode}/>
-    <Field component={TextAreaInput} name="BasketAdditionalLocationInfo" {...props} maxlength="1500"/>
+    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
+    <Field component={TextAreaInput} name="BasketAdditionalLocationInfo" {...props} />
     
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100"/>

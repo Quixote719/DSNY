@@ -199,6 +199,11 @@
 .blankLoadingDivCollectionSchedule{
     height: 298px;
 }
+.loadingIconDiv{
+    text-align: center;
+    padding-top: 119px;
+    padding-bottom: 119px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
     .collectionTableDefaultRow{

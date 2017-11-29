@@ -180,7 +180,6 @@ class CollectionSchedule extends Component {
                         </Col>
                     </Row>
                 </div>
-
             )
         } else if ((showSuggestedFlag !== 1 && this.props.suggestionAddress !== null && this.props.suggestionAddress !== undefined)){
             return (
@@ -258,9 +257,13 @@ class CollectionSchedule extends Component {
                 )
             }
             else{
-                return(<div className = "blankLoadingDivCollectionSchedule">
-                    
-                </div>);
+                return(                
+                <div className = "blankLoadingDivCollectionSchedule">
+                    <div className = "loadingIconDiv">
+                    <img src={require('../../../content/images/loading.svg')} alt="Loading Icon Collection" />
+                    </div>
+                </div>
+                );
             }
 
         }

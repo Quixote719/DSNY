@@ -13,6 +13,7 @@ import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
+import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
  
 
 // Our inner form component which receives our form's state and updater methods as props
@@ -27,15 +28,15 @@ const siteVisitRequestFormElements = (props) => {
     
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered" {...props}   value="" disabled={values.editMode} />
+    <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   value="" disabled={values.editMode} />
     <Field component={TextInput} name="Apartment" fullRow= {true} {...props} maxlength="100"/>
     <FormSectionHeader title={Titles.sectionTwo} />
-    <Field component={DropdownInput} name="CategorizeSiteTypeId" {...props} maxlength="35" required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CategorizeSiteTypes} disabled={values.editMode}/>
-    <Field component={TextInput} name="SpecifyOther" {...props} maxlength="35" isHidden={values.CategorizeSiteTypeId !== 7} required/>
-    <Field component={TextInput} name="NameOfSite" {...props} maxlength="35" required/>
-    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="35" required/>
-    <Field component={TextAreaInput} name="Notes" {...props} maxlength="35" required/>
-    <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props} maxlength="35" required/>
+    <Field component={DropdownInput} name="CategorizeSiteTypeId" {...props}  required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CategorizeSiteTypes} disabled={values.editMode}/>
+    <Field component={TextInput} name="SpecifyOther" {...props} maxlength="100" isHidden={values.CategorizeSiteTypeId !== 7} required/>
+    <Field component={TextInput} name="NameOfSite" {...props} maxlength="100" required/>
+    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" required/>
+    <Field component={TextAreaInput} name="Notes" {...props}  required/>
+    <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required/>
     
     <FormSectionHeader title={Titles.sectionThree} />
     <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} />
