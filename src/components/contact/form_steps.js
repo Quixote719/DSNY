@@ -216,11 +216,16 @@ const FormSteps = compose(
           inputs.forEach(input => {
             
             //Text, Checkbox Input Validation
-            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
+            //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
+            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
             {
                 //alert("Hi");
                 //errors[input.name] = "Please validate the above address"
-                errors[input.name] = Titles.RequiredFieldMessage
+                if(props.isAddressValidated === undefined && props.isAddressValidated === "")
+                  errors[input.name] = Titles.RequiredFieldMessage
+                else
+                  errors[input.name] = "Please enter NY address and click on Validate"
+
                 if(nextbuttonClicked)
                 {
                   input.focus();
