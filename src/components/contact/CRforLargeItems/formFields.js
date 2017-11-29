@@ -39,8 +39,7 @@ const EwastePickUpRequestFormElements = (props) => {
 
 
 
-	if (Dates  && typeof isDistrictActive !== undefined){
-     values.isDistrictActive = isDistrictActive;
+	if (Dates ){
      values.Dates = Dates;
 		 values.AppointmentDate = moment(Dates[0].StartDate)
 	}
@@ -52,7 +51,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} disabled={values.editMode}/>
 		<Field component={DropdownInput} name="PickUpStreet" {...props} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} onChange={setFieldValue} disabled={values.editMode}/>
-		<Field component={DateTimePickerInput} value={values.isDistrictActive ? values.AppointmentDate : ''} Dates={values.Dates} name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={DateTimePickerInput} value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
