@@ -41,7 +41,6 @@ class CollectionBinReport extends Component {
 
   postForm(formObject){
       console.warn('What is this?');
-      console.log(JSON.stringify(formObject));
       let newFormObject = this.generateNewFormObject(formObject);
       console.log(JSON.stringify(newFormObject));
       this.props.postFormObject(newFormObject, POST_FORM_COLLECTION_BIN_REPORT);

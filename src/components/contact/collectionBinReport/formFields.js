@@ -64,7 +64,6 @@ class formFields extends Component {
 
     const MoreBins = [];
     for(let i=2; i<=values.BinCount; i++){
-      // MoreBins.push(<ChildComponent key={i} number={i} props={this.props}/>);
         MoreBins.push(this.renderComp(i))
     }
     return (
@@ -79,9 +78,9 @@ class formFields extends Component {
             <Field component={TextInput} name="Phone" maxlength={50} {...this.props} required/>
           <FormSectionHeader title={Titles.sectionTwo}/>
 
-            <Field component={TextInput} name="DsnyAssignedBinId1" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="WeightInPounds1" maxlength={50} {...this.props} />
-            <Field component={DropdownInput} name="Removed1" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  />
+            <Field component={TextInput} name="DsnyAssignedBinId1" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="WeightInPounds1" maxlength={50} {...this.props} required/>
+            <Field component={DropdownInput} name="Removed1" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  required/>
             {values.Removed1 && <Field component={DateTimePickerInput} name="RemovalDate1" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>}
 
             {MoreBins}
