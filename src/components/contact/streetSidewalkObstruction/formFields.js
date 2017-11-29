@@ -10,6 +10,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import TextAreaInput from '../textarea_field';
+import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
 
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
@@ -23,6 +24,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
+      <FormTitleCheckBoxes title="NEAREST ADDRESS" />
       <FormAddressAutocomplete  {...props}   value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
