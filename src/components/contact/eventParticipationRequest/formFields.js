@@ -60,7 +60,7 @@ const eventParticipationRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="EventName" {...props} maxlength="35" required/>
     <Field component={TextInput} name="AlternateName" {...props} maxlength="35" required/>
-    <Field component={DateTimePickerInput} name="StartDate" {...props} onChange={setFieldValue} />
+    <Field component={DateTimePickerInput} name="StartDate" {...props} onChange={setFieldValue} required/>
     <Field component={DateTimePickerInput} name="EndDate" {...props} onChange={setFieldValue} required />
     <Field component={DropdownInput}  name="StartTime" timeField={true} {...props} required ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.startDailyTimes} disabled={values.editMode}/>
     <Field component={DropdownInput} name="EndTime" timeField={true} {...props} required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.EndDailyTimes} disabled={values.editMode} />

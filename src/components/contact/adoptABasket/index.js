@@ -29,12 +29,14 @@ class AdoptABasketForm extends Component {
 
   postForm(formObject){
       console.log(formObject);
+      this.modifyFormObject(formObject);
       this.props.postFormObject(formObject, POST_FORM_ADOPT_BASKET_URL);
   }
 
-  
-  
-
+  /* BasketAddressAsEntered is a required field for the JSON */
+  modifyFormObject(formObject){
+     formObject.BasketAddressAsEntered = formObject.AddressAsEntered;
+  }
 
 
    validateForm(formObject, errors){

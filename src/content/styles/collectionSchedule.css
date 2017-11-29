@@ -196,6 +196,9 @@
     font-size: 15px;
     line-height: 17px;
 }
+.blankLoadingDivCollectionSchedule{
+    height: 298px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 599px) {
     .collectionTableDefaultRow{
@@ -238,7 +241,7 @@
     }
     .collectionScheduleRow{
         margin-right: 0; 
-        width: 104%;
+        width: 100%;
     }
     .desktopCollectionSchedule{
         display: none;
