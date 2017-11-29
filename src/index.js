@@ -73,13 +73,14 @@ import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 
+let routeChange = () =>{
+  console.log("ROUTE CHANGEEEE")
+}
 const middleware = applyMiddleware(promise, thunk);
-
 ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
     <ScrollToTop>
       <div>
-
         <div id="headerContent" className="headerContent">
         <Header />
           <div>
@@ -109,7 +110,8 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={StandardPage}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services"} component={Services}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL  + "/services"} component={Services}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL +"/services/donate-goods/:slug"} component={WebformPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/:slug"} component={StandardPage}/>
 

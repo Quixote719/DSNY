@@ -10,6 +10,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
+import {Col} from 'react-bootstrap';
 
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
@@ -38,6 +39,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Phone" {...props} required maxlength={"21"}/>    
+    
   </fieldset>)
 };
 

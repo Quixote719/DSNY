@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import {SITE_SEARCH_RESULTS_URL,SITE_SEARCH_KEYWORDS_URL,HOLIDAY_DATA_URL,COLLECTION_SCHEDULE_URL,RID_OF_ITEM_DETAILS_URL,HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
+import { SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
 
 export function carouselData() {
     return function (dispatch) {
@@ -16,19 +16,19 @@ export function carouselData() {
     }
 }
 export function getNewsDataList(year) {
-    return function(dispatch) {
-      axios.get(NEWS_PAGE_DATA_URL.replace(/:MonthYear/g, year)).then((data) => {
-        dispatch({type: 'SET_NEWS_PAGE', payload: data})
-      })
+    return function (dispatch) {
+        axios.get(NEWS_PAGE_DATA_URL.replace(/:MonthYear/g, year)).then((data) => {
+            dispatch({ type: 'SET_NEWS_PAGE', payload: data })
+        })
     }
-  }
+}
 
 export function fetchNewsDetails(slug) {
-return function(dispatch) {
-    axios.get(FETCH_NEWS_DETAILS_URL.replace('id', slug)).then((data) => {
-    dispatch({type: 'SET_NEWS_DATA', payload: data})
-    })
-}
+    return function (dispatch) {
+        axios.get(FETCH_NEWS_DETAILS_URL.replace('id', slug)).then((data) => {
+            dispatch({ type: 'SET_NEWS_DATA', payload: data })
+        })
+    }
 }
 export function checkAddressValidator(key) {
     return function (dispatch) {
@@ -38,13 +38,13 @@ export function checkAddressValidator(key) {
         })
     }
 }
-export function getCollectionSchedule(address, callback=null, callbackSuccess = null) {
+export function getCollectionSchedule(address, callback = null, callbackSuccess = null) {
     return function (dispatch) {
-        axios.get(COLLECTION_SCHEDULE_URL+address)
+        axios.get(COLLECTION_SCHEDULE_URL + address)
             .then((data) => {
-                axios.get(HOLIDAY_DATA_URL).then((holidayData)=>{
-                    if(callback){
-                        if(data.data.Goat!== null){
+                axios.get(HOLIDAY_DATA_URL).then((holidayData) => {
+                    if (callback) {
+                        if (data.data.Goat !== null) {
                             var DSNYGeoCoder = {};
                             DSNYGeoCoder['addressAsEntered'] = address;
                             DSNYGeoCoder['crossStreet'] = data.data.Goat.CrossStreet;
@@ -68,39 +68,42 @@ export function getCollectionSchedule(address, callback=null, callbackSuccess = 
                             }
                             console.log(DSNYGeoCoder);
                         }
-                        else{
+                        else {
                             var DSNYGeoCoder = null;
                         }
                     }
-                    if(data.data.Goat !== null && data.data.RegularCollectionSchedule !== null){
+                    if (data.data.Goat !== null && data.data.RegularCollectionSchedule !== null) {
                         var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;
                     }
-                    else{
-                        var sanitationRegularCollectionSchedule =""
+                    else {
+                        var sanitationRegularCollectionSchedule = ""
                     }
-                    if(data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null){
+                    if (data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null) {
+                        var recyclingCollectionScheduleForm =  data.data.Goat.sanitationRecyclingCollectionSchedule;
                         var sanitationRecyclingCollectionSchedule = data.data.RecyclingCollectionSchedule;
                     }
-                    else{
-                        var sanitationRecyclingCollectionSchedule =""
+                    else {
+                        var recyclingCollectionScheduleForm = null;
+                        var sanitationRecyclingCollectionSchedule = ""
                     }
-                    if(data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null){
+                    if (data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null) {
                         var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;
                     }
-                    else{
-                        var sanitationOrganicsCollectionSchedule =""
+                    else {
+                        var sanitationOrganicsCollectionSchedule = ""
                     }
-                    if(sanitationRegularCollectionSchedule ==""&& sanitationRecyclingCollectionSchedule=="" && sanitationOrganicsCollectionSchedule==""){
-                        var collectionScheduleData="noValue";
+                    if (sanitationRegularCollectionSchedule == "" && sanitationRecyclingCollectionSchedule == "" && sanitationOrganicsCollectionSchedule == "") {
+                        var collectionScheduleData = "noValue";
                         var collectionScheduleLength = 0;
                     }
-                    else{
-                        var collectionScheduleData = [sanitationRegularCollectionSchedule,sanitationRecyclingCollectionSchedule,sanitationOrganicsCollectionSchedule]
+                    else {
+                        var collectionScheduleData = [sanitationRegularCollectionSchedule, sanitationRecyclingCollectionSchedule, sanitationOrganicsCollectionSchedule]
                         var arrayLength = collectionScheduleData.filter(Boolean).length
                     }
-                    
+
                     dispatch({
                         type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        recyclingCollectionScheduleForm: recyclingCollectionScheduleForm,
                         DSNYGeoCoder: DSNYGeoCoder,
                         collectionScheduleInfo: data.data.Goat,
                         payload: collectionScheduleData,
@@ -110,13 +113,31 @@ export function getCollectionSchedule(address, callback=null, callbackSuccess = 
                         noResultsError: data.data,
                         suggestionAddress: data.data.Suggestions,
                     })
-                    if(callbackSuccess)
-                    callbackSuccess();
-                    if(callback)
+                    if (callbackSuccess)
+                        callbackSuccess();
+                    if (callback)
                         callback();
                 })
-            })}}
-
+            })
+    }
+}
+export function clearCollectionSchedule() {
+    return function (dispatch) {
+        dispatch({
+            type: 'SET_COLLECTION_SCHEDULE_DATA',
+            DSNYGeoCoder: undefined,
+            collectionScheduleInfo: undefined,
+            payload: undefined,
+            routingData: undefined,
+            collectionScheduleData: undefined,
+            routingData: undefined,
+            arrayLength: 0,
+            holidayData: undefined,
+            noResultsError: undefined,
+            suggestionAddress: undefined
+        });
+    }
+}
 export function getRidOffKeywords() {
     return function (dispatch) {
         axios.get(RID_OF_KEYWORDS_URL)
@@ -131,7 +152,7 @@ export function getRidOffKeywords() {
 
 export function getRidOfSearchResults(suggestion) {
     return function (dispatch) {
-        axios.get(RID_OF_SEARCH_RESULTS_URL+"="+suggestion)
+        axios.get(RID_OF_SEARCH_RESULTS_URL + "=" + suggestion)
             .then((data) => {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
@@ -156,7 +177,7 @@ export function getSiteSearchKeywords() {
 
 export function getSiteSearchResults(suggestion) {
     return function (dispatch) {
-        axios.get(SITE_SEARCH_RESULTS_URL+"="+suggestion)
+        axios.get(SITE_SEARCH_RESULTS_URL + "=" + suggestion)
             .then((data) => {
                 dispatch({
                     type: 'SET_SITE_SEARCH_RESULTS',
@@ -169,7 +190,7 @@ export function getSiteSearchResults(suggestion) {
 
 export function getRidOffItemDetails(itemName) {
     return function (dispatch) {
-        axios.get(RID_OF_ITEM_DETAILS_URL+"="+itemName)
+        axios.get(RID_OF_ITEM_DETAILS_URL + "=" + itemName)
             .then((data) => {
                 dispatch({
                     type: 'SET_RID_OFF_ITEM_DETAILS',
@@ -188,7 +209,7 @@ export function carouselPanelData() {
         var year = date.getUTCFullYear().toString();
         var currentDate = parseInt(month + day + year);
 
-        axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate,  { crossdomain: true } )
+        axios.get('http://nyc-csg-web.csc.nycnet/apps/311api/municipalservices/?startDate=' + currentDate, { crossdomain: true })
             .then((data) => {
                 let carouselPanelItems = [];
                 data.data.items[0].items.map((item) => {
@@ -241,19 +262,19 @@ export function carouselPanelDataTemporary() {
 }
 
 export function fetchEventSubList(borough) {
-    return function(dispatch) {
+    return function (dispatch) {
         axios.get(FETCH_EVENTS_SUB_LIST_URL.replace(':borough', borough)).then((data) => {
-        dispatch({type: types.FETCH_EVENT_SUB_LIST, payload: data})
+            dispatch({ type: types.FETCH_EVENT_SUB_LIST, payload: data })
         })
     }
 }
 
 export function fetchEventDetails(slug) {
-  return function(dispatch) {
-    axios.get(FETCH_EVENT_DETAILS_URL.replace(':eventID', slug)).then((data) => {
-      dispatch({type: types.FETCH_EVENT_DETAILS, payload: data})
-    })
-  }
+    return function (dispatch) {
+        axios.get(FETCH_EVENT_DETAILS_URL.replace(':eventID', slug)).then((data) => {
+            dispatch({ type: types.FETCH_EVENT_DETAILS, payload: data })
+        })
+    }
 }
 export function setActiveNavTab(key) {
     return function (dispatch) {
@@ -264,12 +285,12 @@ export function setActiveNavTab(key) {
     }
 }
 export function setSiteSearchValue(value) {
-        return function (dispatch) {
-            dispatch({
-                type: 'SET_SITE_SEARCH_VALUE',
-                payload: value
-            });
-        }
+    return function (dispatch) {
+        dispatch({
+            type: 'SET_SITE_SEARCH_VALUE',
+            payload: value
+        });
+    }
 }
 export function setSearchClearBoxValue(value) {
     return function (dispatch) {

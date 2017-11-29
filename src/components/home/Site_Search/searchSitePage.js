@@ -108,6 +108,7 @@ class SearchSitePage extends Component {
         if(event.key == 'Enter'){
             this.props.setPaginationKey(1);
             if(this.props.siteSearchValue.trim().length !== 0){
+                document.activeElement.blur();                                
                 this.props.getRidOfSearchResults(this.props.siteSearchValue);   
                 this.props.setSearchClearBoxValue("clearBoxNotChecked")       
             }

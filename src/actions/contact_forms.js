@@ -101,10 +101,9 @@ export function postFileObject(fileObject, Url) {
     return function(dispatch) {
 		var formData = new FormData();
 		
-		var inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
-		inputs.forEach(input => {
-			 formData.append(input.name, fileObject[input.name]);
-		 });
+		Object.keys(fileObject).forEach(function(key) {
+			formData.append(key, fileObject[key]);
+		});
 
 		
 		if (fileObject.hasOwnProperty('files1') && fileObject.files1[0] !== undefined) {
