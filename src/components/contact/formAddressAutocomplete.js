@@ -42,16 +42,6 @@ class FormAddressAutocomplete extends Component {
         })
       
     }
-    resetPlaceHolder = () =>{
-        // this.setState({
-        //   placeholder: "Enter the address"
-        // })
-      }
-    setPlaceHolder = () =>{
-        // this.setState({
-        //   placeholder: " "
-        // })
-    }
     suggestedAddressSelected = (value) =>{
         this.setState({
             address: value,
@@ -171,6 +161,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        recyclingCollectionScheduleForm: state.carouselDataReducer.recyclingCollectionScheduleForm,        
         addressValidator: state.carouselDataReducer.addressValidator,
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,
         noResultsError: state.carouselDataReducer.noResultsError,

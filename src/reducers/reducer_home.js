@@ -55,7 +55,7 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
       }
     };
     case 'SET_COLLECTION_SCHEDULE_DATA':
-      return { ...state, DSNYGeoCoder: action.DSNYGeoCoder, noResultsError: action.noResultsError, suggestionAddress: action.suggestionAddress, collectionScheduleInfo: action.collectionScheduleInfo,routingData: action.routingData, collectionScheduleData: action.payload, arrayLength: action.arrayLength, holidayData: action.holidayData};
+      return { ...state, recyclingCollectionScheduleForm: action.recyclingCollectionScheduleForm, DSNYGeoCoder: action.DSNYGeoCoder, noResultsError: action.noResultsError, suggestionAddress: action.suggestionAddress, collectionScheduleInfo: action.collectionScheduleInfo,routingData: action.routingData, collectionScheduleData: action.payload, arrayLength: action.arrayLength, holidayData: action.holidayData};
     case types.FETCH_EVENT_SUB_LIST:
       return {...state, EventsSubList: _.mapKeys(action.payload.data, "$id")};
     case types.FETCH_EVENT_DETAILS:

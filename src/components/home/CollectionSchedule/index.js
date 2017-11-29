@@ -27,12 +27,14 @@ class CollectionSchedule extends Component {
         };
     }
     componentWillMount() {
+
+        document.activeElement.blur();
         var address = this.props.match.params.address;
-        if(address == undefined){
-            showTableFlag = 0;            
-        }else{
-            showTableFlag = 1;                        
-            this.props.getCollectionSchedule(address, null, this.successCallback);                                  
+        if (address == undefined) {
+            showTableFlag = 0;
+        } else {
+            showTableFlag = 1;
+            this.props.getCollectionSchedule(address, null, this.successCallback);
         }
         if (this.props.match.path !== "/assets/donate/development/react/collectionSchedule") {
             this.setState({
@@ -45,6 +47,10 @@ class CollectionSchedule extends Component {
             });
         }
 
+    }
+    componentWillUnmount() {
+        // console.log("UNMOUNTING!!!")
+        this.props.clearCollectionSchedule();
     }
     handleChange = (address) => {
         this.setState({
@@ -74,26 +80,31 @@ class CollectionSchedule extends Component {
                 address: address,
                 checkInputresults: "clearBoxNotChecked"
             });
-            if(this.state.address !== "" || this.state.address.trim().length !== 0){
+            if (this.state.address !== "" || this.state.address.trim().length !== 0) {
+                document.activeElement.blur();                
                 this.props.getCollectionSchedule(address, null, this.successCallback);
                 this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + address)
-            }                
+            }
         }
     }
     searchIcon = () => {
-        showTableFlag = 1;        
+        showTableFlag = 1;
         if (errorFlag == 0) {
             this.setState({
                 checkInputresults: "clearBoxNotChecked"
             });
-            if(this.state.address !== "" || this.state.address.trim().length !== 0){
+            if (this.state.address !== "" || this.state.address.trim().length !== 0) {
                 this.props.getCollectionSchedule(this.state.address, null, this.successCallback);
                 this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + this.state.address)
-            }                
+            }
         }
     }
     successCallback = (success) => {
-        if(this.props.noResultsError.FormattedAddress){
+        console.log("this.props.collectionScheduleData")        
+        console.log(this.props.collectionScheduleData)
+        console.log("this.props.collectionScheduleInfo")
+        console.log(this.props.collectionScheduleInfo)
+        if (this.props.noResultsError.FormattedAddress) {
             this.setState({
                 address: this.props.noResultsError.FormattedAddress,
             });
@@ -101,19 +112,19 @@ class CollectionSchedule extends Component {
     }
     handleKeyPress = (event) => {
         if (event.keyCode == 32) {
-            if(this.state.address.trim().length == 0)
-            event.preventDefault();
+            if (this.state.address.trim().length == 0)
+                event.preventDefault();
         }
     }
     collectionScheduleTable() {
-        return (<CollectionScheduleTable showTableFlag = {showTableFlag} holidayData={this.props.holidayData} arrayLength={this.props.arrayLength} collectionScheduleData={this.props.collectionScheduleData} />)
+        return (<CollectionScheduleTable showTableFlag={showTableFlag} holidayData={this.props.holidayData} arrayLength={this.props.arrayLength} collectionScheduleData={this.props.collectionScheduleData} />)
     }
     suggestedAddressSelected = (value) => {
-        showTableFlag = 1;        
+        showTableFlag = 1;
         this.setState({
             address: value,
         });
-            this.props.getCollectionSchedule(value);            
+        this.props.getCollectionSchedule(value);
     }
     correctAddressList = () => {
         return _.map(this.props.suggestionAddress, (value, index) => {
@@ -124,55 +135,53 @@ class CollectionSchedule extends Component {
         });
     }
     contentHTML = () => {
-        if (this.props.collectionScheduleInfo == null && showTableFlag !==0 && this.props.suggestionAddress == null) {
-            console.log("In first if")
+        if (this.props.collectionScheduleInfo == null && showTableFlag !== 0 && this.props.suggestionAddress == null) {
             return (
                 <div>
-                <div className="noOfSearchResultsCollectionSchedule">
-                    No search results found for "{this.props.match.params.address}"
+                    <div className="noOfSearchResultsCollectionSchedule">
+                        No search results found for "{this.props.match.params.address}"
                 </div>
-                <Row className = "collectionTableDefaultRow">
-                    <Col xs={12} md={8} className = "collectionTableDefaultColumn">
-                        <CollectionScheduleDefaultTable />
-                    </Col>
-                    <Col xs={12} md={4} className = "collectionDefaultCol"> 
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon"/>
-                            <div className ="garbageTitle">
-                                GARBAGE
-                            </div>
-                        </div>
+                    <Row className="collectionTableDefaultRow">
+                        <Col xs={12} md={8} className="collectionTableDefaultColumn">
+                            <CollectionScheduleDefaultTable />
                         </Col>
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
-                            <div className ="recycleTitle">
-                                RECYCLING
+                        <Col xs={12} md={4} className="collectionDefaultCol">
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon" />
+                                    <div className="garbageTitle">
+                                        GARBAGE
                             </div>
+                                </div>
+                            </Col>
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon" />                <div className="recyclingTypeTitle">
+                                        <div className="recycleTitle">
+                                            RECYCLING
                             </div>
-                        </div>
-                        </Col>
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon"/>
-                            <div className ="organicsTitle">
-                                ORGANICS
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon" />
+                                    <div className="organicsTitle">
+                                        ORGANICS
                             </div>
+                                </div>
+                            </Col>
+                            <Col xs={12} className="collectionDefaultText">
+                                <div>
+                                    Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
                         </div>
+                            </Col>
                         </Col>
-                        <Col xs={12} className = "collectionDefaultText">
-                        <div>
-                        Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
-                        </div>
-                        </Col>
-                    </Col>
                     </Row>
                 </div>
-                                        
+
             )
-        } else if (this.props.suggestionAddress != null || (this.props.suggestionAddress?this.props.suggestionAddress.length > 0:"")) {
-            console.log("In Second if")                
+        } else if (this.props.suggestionAddress != null || (this.props.suggestionAddress ? this.props.suggestionAddress.length > 0 : "")) {
             return (
                 <div className="errorUserAddressParent">
                     <div className="addressNotFound">
@@ -185,73 +194,74 @@ class CollectionSchedule extends Component {
                 </div>
             )
         } else {
-            console.log("In third if")    
-            if(showTableFlag == 1){
+            if (showTableFlag == 1) {
                 return (
                     <Row className="collectionScheduleRow">
-                    <Col xs={12}>
-                        <div style={this.props.collectionScheduleInfo !== null && this.props.suggestionAddress == null && this.props.holidayData ? { display: 'block' } : { display: 'none' }} className="nonServiceDay">
-                            Today is holiday. There is no service today!
+                        <Col xs={12}>
+                            <div style={this.props.collectionScheduleInfo !== null && this.props.suggestionAddress == null && this.props.holidayData ? { display: 'block' } : { display: 'none' }} className="nonServiceDay">
+                                Today is holiday. There is no service today!
                     </div>
-                    </Col>
-                    <div className = "collectionScheduleAddressName">The collection schedule for "{this.props.noResultsError?this.props.noResultsError.FormattedAddress:""}"</div>
-                    <Col xs={12} md={8} style={this.props.holidayData ? { display: 'none' } : { display: 'block' }} className="collectionScheduleColumn">
-                        {this.collectionScheduleTable()}
-                    </Col>
-                    <Col xs={12} md={4} style={this.props.holidayData ? { display: 'none' } : { display: 'block' }} className="ridOfCol">
-                        <div className={!this.props.holidayData ? "enforcementTitleHoliday" : "enforcementTitleNoHoliday"}>
-                            <RoutingTimes showTableFlag = {showTableFlag} collectionScheduleData={this.props.collectionScheduleData} collectionScheduleInfo={this.props.collectionScheduleInfo} routingData={this.props.routingData ? this.props.routingData : ""} />
-                        </div>
-                    </Col>
-                </Row>
-                )
-            }            
-            else{
-                return(
-                    <Row className = "collectionTableDefaultRow">
-                     <div style={this.state.address == "" || this.state.address == undefined?{display: 'block'}:{display:'none'}} className="exampleCollectionSearch"> Example: 454 W 12th Ave, New York </div>
-                    <Col xs={12} md={8} className = "collectionTableDefaultColumn">
-                        <CollectionScheduleDefaultTable />
-                    </Col>
-                    <Col xs={12} md={4} className = "collectionDefaultCol"> 
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon"/>
-                            <div className ="garbageTitle">
-                                GARBAGE
-                            </div>
-                        </div>
                         </Col>
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
-                            <div className ="recycleTitle">
-                                RECYCLING
-                            </div>
-                            </div>
-                        </div>
+                        <div className="collectionScheduleAddressName">The collection schedule for "{this.props.noResultsError ? this.props.noResultsError.FormattedAddress : ""}"</div>
+                        <Col xs={12} md={8} style={this.props.holidayData ? { display: 'none' } : { display: 'block' }} className="collectionScheduleColumn">
+                            {this.collectionScheduleTable()}
                         </Col>
-                        <Col xs={4} className ="collectionScheduleIcons">
-                        <div>
-                            <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon"/>
-                            <div className ="organicsTitle">
-                                ORGANICS
+                        <Col xs={12} md={4} style={this.props.holidayData ? { display: 'none' } : { display: 'block' }} className="ridOfCol">
+                            <div className={!this.props.holidayData ? "enforcementTitleHoliday" : "enforcementTitleNoHoliday"}>
+                                <RoutingTimes showTableFlag={showTableFlag} collectionScheduleData={this.props.collectionScheduleData} collectionScheduleInfo={this.props.collectionScheduleInfo} routingData={this.props.routingData ? this.props.routingData : ""} />
                             </div>
-                        </div>
                         </Col>
-                        <Col xs={12} className = "collectionDefaultText">
-                        <div>
-                        Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
-                        </div>
-                        </Col>
-                    </Col>
                     </Row>
                 )
-            }                
+            }
+            else {
+                return (
+                    <Row className="collectionTableDefaultRow">
+                        <div style={this.state.address == "" || this.state.address == undefined ? { display: 'block' } : { display: 'none' }} className="exampleCollectionSearch"> Example: 454 W 12th Ave, New York </div>
+                        <Col xs={12} md={8} className="collectionTableDefaultColumn">
+                            <CollectionScheduleDefaultTable />
+                        </Col>
+                        <Col xs={12} md={4} className="collectionDefaultCol">
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon" />
+                                    <div className="garbageTitle">
+                                        GARBAGE
+                            </div>
+                                </div>
+                            </Col>
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon" />                <div className="recyclingTypeTitle">
+                                        <div className="recycleTitle">
+                                            RECYCLING
+                            </div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col xs={4} className="collectionScheduleIcons">
+                                <div>
+                                    <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon" />
+                                    <div className="organicsTitle">
+                                        ORGANICS
+                            </div>
+                                </div>
+                            </Col>
+                            <Col xs={12} className="collectionDefaultText">
+                                <div>
+                                    Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
+                        </div>
+                            </Col>
+                        </Col>
+                    </Row>
+                )
+            }
 
         }
     }
     render() {
+
+        
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568, -73.699215),
             new window.google.maps.LatLng(40.495992, -74.257159));
@@ -321,6 +331,7 @@ function mapStateToProps(state) {
 
 let actionList = {
     getCollectionSchedule: actions.getCollectionSchedule,
+    clearCollectionSchedule: actions.clearCollectionSchedule
 };
 
 CollectionSchedule = connect(mapStateToProps, actionList)(CollectionSchedule);
