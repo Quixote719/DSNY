@@ -13,6 +13,7 @@ export const Titles = {
   Email: 'E-MAIL',
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
+  AddressAsEntered: 'NEAREST ADDRESS',
   Message: "MESSAGE",
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
