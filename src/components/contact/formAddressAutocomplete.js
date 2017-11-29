@@ -20,7 +20,6 @@ class FormAddressAutocomplete extends Component {
     constructor(props, context) {
         super(props, context);
         const propName = props.name;
-        console.log(props.disabled);
         this.state = {
             address: props.values[propName] || "",
             name:props.name,       
