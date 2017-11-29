@@ -189,6 +189,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        recyclingCollectionScheduleForm: state.carouselDataReducer.recyclingCollectionScheduleForm,        
         addressValidator: state.carouselDataReducer.addressValidator,
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,
         noResultsError: state.carouselDataReducer.noResultsError,

@@ -27,7 +27,7 @@ const formFields = (props) => {
     <FormHeader title='Online Complaint Form'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete/>
+      <FormAddressAutocomplete name="ViolatorAddressAsEntered"  {...props}  value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} {...props} />
     <FormSectionHeader title={Titles.sectionTwo}/>

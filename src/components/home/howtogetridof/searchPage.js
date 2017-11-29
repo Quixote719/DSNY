@@ -33,6 +33,7 @@ class SearchPage extends Component {
           };
     }
     componentWillMount(){
+        document.activeElement.blur();                        
         this.setState({
             searchResult: "noSearchResults"
           });
@@ -105,6 +106,7 @@ class SearchPage extends Component {
         if(event.key == 'Enter'){
             this.props.setPaginationKey(1);  
             if(this.state.value.trim().length !== 0){
+                document.activeElement.blur();                                
                 this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/howtogetridof/"+this.state.value)
                 this.props.getRidOfSearchResults(this.state.value);   
                 this.setState({
