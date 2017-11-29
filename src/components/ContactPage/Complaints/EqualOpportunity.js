@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import SubSectionHeader from '../../shared/sub_section_header';
-import '../../../content/styles/ComplaintsPage.css';
+import '../../../content/styles/Section.css';
 import CardTitle from '../../shared/Card_title';
 import {Row} from 'react-bootstrap';
 import {Link} from "react-router-dom";
@@ -11,7 +11,7 @@ import CardBox from '../../shared/card_box';
 class EqualOpportunitySection extends Component {
     render() {
       return (
-        <div className="EqualOpportunitySection">
+        <div className="Section">
           <SubSectionHeader title = {this.props.EqualOpportunityProps.title}/>
           <CardBox info={this.props.EqualOpportunityProps}/>
         </div>
