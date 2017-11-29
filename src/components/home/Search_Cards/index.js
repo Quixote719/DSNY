@@ -52,8 +52,6 @@ class SearchCards extends Component {
     }
     }
     handleKeyPress = (event) => {
-        console.log(this.state.address)
-        console.log(this.state.address.length)
         if(this.state.address.trim().length == 0 && event.keyCode == 32){
           event.preventDefault();
         }   

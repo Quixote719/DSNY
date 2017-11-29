@@ -22,7 +22,6 @@ const renderSuggestion = suggestion => (
 let pageSize = 5;  
 class SearchSitePage extends Component {
     constructor(props, context) {
-        console.log("Hiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
         super(props, context);
         this.searchResultPage = this.searchResultPage.bind(this);        
         this.state = {
@@ -131,7 +130,6 @@ class SearchSitePage extends Component {
         })
       }
     render() {
-        console.log("The search site page RENDER METHOD has been entererd..................");
         const activePage = this.props.paginationKeyValue;
         let length = this.props.getRidOfSearchResultsData.length;
         length = Math.ceil(length / pageSize);

@@ -136,8 +136,6 @@ class CollectionSchedule extends Component {
         });
     }
     contentHTML = () => {
-        console.log("this.props.collectionScheduleInfo")        
-        console.log(this.props.collectionScheduleInfo)
         if (this.props.collectionScheduleInfo === null && showTableFlag !== 0 && this.props.suggestionAddress === null) {
             return (
                 <div>
