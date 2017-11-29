@@ -5,7 +5,7 @@ import {
   PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject, GetUnavailableDates} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -40,8 +40,9 @@ class CRFLRequestForm extends Component {
 }
 
 updateValues(geoCoderAddressResult){
+  console.log(geoCoderAddressResult);
  // this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
- // this.props.GetUnavailableDates(geoCoderAddressResult.sanitationDistrict)
+ this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationDistrict}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationDistrict}&SectionAndSubsection=${geoCoderAddressResult.sanitationDistrict}`)
  // this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
 }
 
@@ -92,4 +93,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CRFLRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject,GetUnavailableDates})(CRFLRequestForm);
