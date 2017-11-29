@@ -38,7 +38,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={CheckBoxInput} name="VehiclesOnLot" {...props}/>
     <Field component={FileDropZone} name="files1" {...props} value={values.files1} header='VIDEO AND PICTURE UPLOAD' note='You can upload a total of 3 files, but the total size of all files uploaded cannot exceed 10 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/>   
     <Field component={FileDropZone} name="files2" {...props} value={values.files2} onChange={setFieldValue}/>   
-    <Field component={FileDropZone} name="files3" {...props} value={values.files3}  isHidden={!values.DebrisInsideLot} onChange={setFieldValue}/>   
+    <Field component={FileDropZone} name="files3" {...props} value={values.files3} onChange={setFieldValue}/>   
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
     <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>
