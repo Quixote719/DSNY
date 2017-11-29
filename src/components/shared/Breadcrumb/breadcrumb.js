@@ -11,7 +11,6 @@ class BreadcrumbSec extends Component {
   renderBreadcrumbSec(breadcrumbList) {
     return _.map(breadcrumbList, (Item, index) => {
     let linkUrl = null;
-    console.log(Item.display_name);
     if(index == breadcrumbList.length - 1){
         linkUrl = Item.url
         ? <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.url} >{Item.display_name}</Link>

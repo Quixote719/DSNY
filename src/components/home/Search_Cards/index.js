@@ -39,11 +39,11 @@ class SearchCards extends Component {
         })
     }
     changeDetected = (e) =>{
-    console.log(e)
+    // console.log(e)
     }
     handleSelect = (address) =>{
         if(this.state.address.trim().length !== 0){
-            this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)            
+            this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+address)  
         }
     }
     searchIconSelected = () =>{
@@ -52,14 +52,12 @@ class SearchCards extends Component {
     }
     }
     handleKeyPress = (event) => {
-        console.log(this.state.address)
-        console.log(this.state.address.length)
         if(this.state.address.trim().length == 0 && event.keyCode == 32){
           event.preventDefault();
         }   
         if(event.key == 'Enter'){ 
             if(this.state.address.trim().length !== 0){
-                this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)                
+                this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)     
             }                
         }
       }

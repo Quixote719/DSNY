@@ -55,9 +55,9 @@ export function IsDistrictActive(id) {
 	}
 }
 
-export function GetUnavailableDates(id) {
+export function GetUnavailableDates(Url) {
 	return function(dispatch) {
-		axios.get(GET_UNAVAILABLE_DATES.replace(':Id', id)).then((data) => {
+		axios.get(Url).then((data) => {
 			dispatch({type: types.GET_UNAVAILABLE_DATES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
@@ -100,13 +100,12 @@ export function postFormObject(formObject, Url) {
 export function postFileObject(fileObject, Url) {
     return function(dispatch) {
 		var formData = new FormData();
-		
-		var inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
-		inputs.forEach(input => {
-			 formData.append(input.name, fileObject[input.name]);
-		 });
 
-		
+		Object.keys(fileObject).forEach(function(key) {
+			formData.append(key, fileObject[key]);
+		});
+
+
 		if (fileObject.hasOwnProperty('files1') && fileObject.files1[0] !== undefined) {
 			formData.append("image", fileObject.files1[0][0]);
 		}
@@ -117,7 +116,7 @@ export function postFileObject(fileObject, Url) {
 			formData.append("image", fileObject.files3[0][0]);
 		}
 
-		
+
 		axios.post(Url, formData, {
 			headers: {
 			'Content-Type': 'multipart/form-data'

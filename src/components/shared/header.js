@@ -8,6 +8,7 @@ import $ from 'jquery';
 import TextSizeModal from './TextSizeModal';
 import SearchBoxHome from "../home/Site_Search/siteSearchBoxHome";
 import * as actions from '../../actions/actions_home';
+import { withRouter } from 'react-router'
 
 class Header extends React.Component {
     constructor(props, context) {
@@ -41,6 +42,9 @@ class Header extends React.Component {
         this.setState({textSizePopUp: !this.state.textSizePopUp});
     }
     componentWillMount() {
+        this.props.history.listen((location, action) => {
+            this.forceUpdate();
+          });
         this.props.getSiteSearchKeywords();
         this.props.setActiveNavTab("home");        
     }
@@ -48,8 +52,6 @@ class Header extends React.Component {
         this.props.setActiveNavTab(key);
     }
     render() {
-        console.log("this.props.activeNavTab")        
-        console.log(this.props.activeNavTab)
         window.showModalStatic = this.state.showModal;
         var url = window.location.pathname;
         return (
@@ -186,6 +188,6 @@ function mapStateToProps(state) {
     getSiteSearchKeywords: actions.getSiteSearchKeywords,
     setActiveNavTab: actions.setActiveNavTab    
   };
-Header = connect(mapStateToProps,actionList)(Header);
+Header = withRouter(connect(mapStateToProps,actionList)(Header));
 export default Header;
 

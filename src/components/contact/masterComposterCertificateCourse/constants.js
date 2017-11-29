@@ -5,7 +5,7 @@ export const Titles = {
   SectionFour:'CONTACT INFORMATION',
   PrefferedLocation:'PREFERED LOCATION',
   Apartment:'FLOOR/SUITE/APT (OPTIONAL)',
-  Address:'ADDRESS',
+  AddressAsEntered:'ADDRESS',
   AppliedToProgramBefore:'HAVE YOU APPLIED TO THIS PROGRAM BEFORE (OPTIONAL) ',
   DescribeExperience:'DESCRIBE YOUR COMPOSTING EXPERIENCE',
   WhyYouWantToBecome:'WHY DO YOU WANT TO BECOME A MASTER COMPOSTER',

@@ -26,7 +26,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeader title='Online Application'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" {...props} required value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" {...props} value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={CheckBoxInput} name="WillPostCompostRecipientSignage" {...props} onChange={setFieldValue} required/>
@@ -76,6 +76,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={DropdownInput} name="HasAlternateSideParking" {...props}  onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={MultiSelectInput} name="AlternateSideParkingDays" {...props} onMultiSelect={setFieldValue} options={values.AlternateSideParkingDays} isHidden={values.HasAlternateSideParking !== true}/>
     <Field component={TextInput} name="AlternateSideParkingTimes" {...props} isHidden={values.HasAlternateSideParking !== true}/>
+      
   </fieldset>)
 };
 

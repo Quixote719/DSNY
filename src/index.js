@@ -73,13 +73,14 @@ import PostsIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
 import PostsShow from './components/posts_show'; */
 
+let routeChange = () =>{
+  console.log("ROUTE CHANGEEEE")
+}
 const middleware = applyMiddleware(promise, thunk);
-
 ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
   <BrowserRouter>
     <ScrollToTop>
       <div>
-
         <div id="headerContent" className="headerContent">
         <Header />
           <div>

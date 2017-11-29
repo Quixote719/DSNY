@@ -11,6 +11,7 @@ import Autosuggest from 'react-autosuggest';
 import About from '../../about/index';
 import {Link} from "react-router-dom";
 import $ from 'jquery';
+import { withRouter } from 'react-router'
 
 
 class SiteSearchBox extends Component {
@@ -36,12 +37,10 @@ class SiteSearchBox extends Component {
       );
 
     getSuggestions = value => {
-      console.log("Props are")
-      console.log(this.props);
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
       
-        return inputLength === 0 ? [] : (this.props.ridOffKeywords?this.props.ridOffKeywords:"").filter(lang =>
+        return inputLength === 0 ? [] : (this.props.ridOffKeywords?this.props.ridOffKeywords:[]).filter(lang =>
           lang.toLowerCase().slice(0, inputLength) === inputValue
         );
       };
@@ -81,9 +80,8 @@ class SiteSearchBox extends Component {
       this.props.getSiteSearchResults(suggestion);                 
     }
     siteSearchIcon = () =>{
-      // this.props.showModal;
       if(this.state.value.trim().length !== 0){
-        window.staticUrl.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
+        this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+ "/site-search/"+this.state.value)
         this.props.setSearchClearBoxValue("clearBoxNotChecked")      
         this.props.setSiteSearchValue(this.state.value);
         this.props.getSiteSearchResults(this.state.value);
@@ -93,6 +91,8 @@ class SiteSearchBox extends Component {
           placeholder: "Search"          
         });
         document.activeElement.blur();
+        if(this.props.showModal)
+          this.props.showModal();
       }        
     }
     handleKeyPress = (event) => {
@@ -100,10 +100,11 @@ class SiteSearchBox extends Component {
         event.preventDefault();
       }   
       if(event.key == 'Enter'){ 
-        this.props.setSearchClearBoxValue("clearBoxNotChecked")        
+        // this.props.setSearchClearBoxValue("clearBoxNotChecked")        
         // this.props.setSiteSearchValue(this.state.value);        
-        // this.props.getSiteSearchResults(this.state.value);           
-        document.getElementById("siteSearchLink").click();
+        // this.props.getSiteSearchResults(this.state.value);    
+        // document.getElementById("siteSearchLink").click();
+        this.siteSearchIcon();
       }
     }
     clearSearchBox(){
@@ -155,5 +156,5 @@ let actionList = {
   setSiteSearchValue: actions.setSiteSearchValue,
 };
 
-SiteSearchBox = connect(mapStateToProps, actionList)(SiteSearchBox);
+SiteSearchBox = withRouter(connect(mapStateToProps, actionList)(SiteSearchBox));
 export default SiteSearchBox;
