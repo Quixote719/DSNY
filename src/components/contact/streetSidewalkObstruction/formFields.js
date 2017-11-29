@@ -25,7 +25,7 @@ const CompostRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormTitleCheckBoxes title="NEAREST ADDRESS" />
-      <FormAddressAutocomplete  {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" {...props}   value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"}/>

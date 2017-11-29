@@ -20,6 +20,12 @@ export const Titles = {
 export const formObject = {
   "ReasonForReplacementList": [
     {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
+    {
       "Id": "Bin stolen/missing",
       "Name": "Bin stolen/missing",
       "DisplayName": "Bin stolen/missing",
@@ -41,6 +47,12 @@ export const formObject = {
   "ReasonForReplacementListId": 0,
   "ReasonForReplacement": null,
   "NumberOfOutdoorBins": [
+    {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
     {
       "Id": "One 13-gallon bin",
       "Name": "One 13-gallon bin",
