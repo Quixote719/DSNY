@@ -73,7 +73,6 @@ class CarouselData extends Component {
         }
     }
     goRight() {
-        console.log("goRight()");
         let anchorObj = document.getElementsByClassName("carousel-control right")[0];
         if (anchorObj.click) {
             anchorObj.click()
@@ -85,7 +84,6 @@ class CarouselData extends Component {
         }
     }
     goLeft() {
-        console.log("goLeft()");
         let anchorObj = document.getElementsByClassName("carousel-control left")[0];
         if (anchorObj.click) {
             anchorObj.click()
