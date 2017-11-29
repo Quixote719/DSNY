@@ -9,6 +9,7 @@ import SubSectionButton from '../shared/sub_section_button';
 import styles from '../../content/styles/collectionBinForm.css';
 import _ from "lodash";
 import isEmpty from 'lodash/isEmpty';
+import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 
 import {addressValidationMessage} from './form_steps'
 
@@ -154,6 +155,7 @@ class FormAddressAutocomplete extends Component {
         return (
             <div>
                 {console.log("DDD" + this.props.addressValidator)}
+                <FormTitleCheckBoxes title={this.props.title}/>
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} md={this.props.disabled ? 12 : 10}>
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />

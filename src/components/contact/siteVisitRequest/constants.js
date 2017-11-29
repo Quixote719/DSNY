@@ -1,6 +1,7 @@
 export const Titles = {
   sectionOne: 'WHERE IS THE EVENT',
   Apartment:'FLOOR/SUITE/APT (OPTIONAL)',
+  AddressAsEntered:'ADDRESS',
   sectionTwo: 'MORE INFORMATION ABOUT YOUR SITE',
   sectionThree: 'POTENTIAL DATES FOR SITE VISIT',
   sectionFour: 'PRIMARY CONTACT INFORMATION',
