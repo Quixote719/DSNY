@@ -37,8 +37,6 @@ class SiteSearchBox extends Component {
       );
 
     getSuggestions = value => {
-      console.log("Props are")
-      console.log(this.props);
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;
       

@@ -35,7 +35,7 @@ class EwasteRequestForm extends Component {
 
   updateValues(geoCoderAddressResult){
    this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
-   this.props.GetUnavailableDates(geoCoderAddressResult.sanitationDistrict)
+   this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District=${geoCoderAddressResult.sanitationDistrict}&IsInsert=true`)
    this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
   }
 
@@ -67,7 +67,7 @@ class EwasteRequestForm extends Component {
     if(success !== undefined) {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
     }
-    
+
     if (geoCoderAddressResult){
       console.log(this.props);
       if (typeof unavailableDates === 'undefined')

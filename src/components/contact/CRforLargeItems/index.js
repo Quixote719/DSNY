@@ -5,8 +5,8 @@ import {
   PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
-import FormSteps from '../form_steps'
+import {fetchFormObject, postFormObject, GetUnavailableDates} from "../../../actions/contact_forms";
+import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -18,6 +18,7 @@ class CRFLRequestForm extends Component {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+      this.updateValues = this.updateValues.bind(this);
     this.state = {
     FormObject:{},
       editMode:true
@@ -28,6 +29,23 @@ class CRFLRequestForm extends Component {
     this.props.fetchFormObject();
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.geoCoderAddressResult !== this.props.geoCoderAddressResult) {
+      const {geoCoderAddressResult} = nextProps
+      if (geoCoderAddressResult){
+      console.log('varma', geoCoderAddressResult);
+        this.updateValues(geoCoderAddressResult)
+      }
+    }
+}
+
+updateValues(geoCoderAddressResult){
+  console.log(geoCoderAddressResult);
+ // this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
+ this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationDistrict}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationDistrict}&SectionAndSubsection=${geoCoderAddressResult.sanitationDistrict}`)
+ // this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
+}
+
 
 
   postForm(formObject){
@@ -35,19 +53,25 @@ class CRFLRequestForm extends Component {
   }
 
    validateForm(formObject, errors){
-    //formObject & Values are same
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
-
     return errors;
   }
 
   render() {
     const { error, success, geoCoderAddressResult} = this.props;
+
+
+        if(success !== undefined) {
+              return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+        }
+
+        if (geoCoderAddressResult){
+          console.log(this.props);
+          if (typeof unavailableDates === 'undefined')
+          this.updateValues(geoCoderAddressResult)
+        }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
@@ -63,8 +87,10 @@ class CRFLRequestForm extends Component {
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,error:state.error.type};
+
+  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
+  error:state.error.type};
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CRFLRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject,GetUnavailableDates})(CRFLRequestForm);

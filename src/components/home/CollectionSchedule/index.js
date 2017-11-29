@@ -17,6 +17,7 @@ import CollectionScheduleDefaultTable from './collectionScheduleDefaultTable'
 
 let errorFlag = 0;
 var showTableFlag;
+var showSuggestedFlag = 0;
 class CollectionSchedule extends Component {
     constructor(props, context) {
         super(props, context);
@@ -74,6 +75,7 @@ class CollectionSchedule extends Component {
         });
     }
     handleSelect = (address) => {
+        this.props.clearCollectionSchedule();        
         showTableFlag = 1;
         if (errorFlag == 0) {
             this.setState({
@@ -88,6 +90,7 @@ class CollectionSchedule extends Component {
         }
     }
     searchIcon = () => {
+        this.props.clearCollectionSchedule();        
         showTableFlag = 1;
         if (errorFlag == 0) {
             this.setState({
@@ -100,10 +103,6 @@ class CollectionSchedule extends Component {
         }
     }
     successCallback = (success) => {
-        console.log("this.props.collectionScheduleData")        
-        console.log(this.props.collectionScheduleData)
-        console.log("this.props.collectionScheduleInfo")
-        console.log(this.props.collectionScheduleInfo)
         if (this.props.noResultsError.FormattedAddress) {
             this.setState({
                 address: this.props.noResultsError.FormattedAddress,
@@ -120,7 +119,9 @@ class CollectionSchedule extends Component {
         return (<CollectionScheduleTable showTableFlag={showTableFlag} holidayData={this.props.holidayData} arrayLength={this.props.arrayLength} collectionScheduleData={this.props.collectionScheduleData} />)
     }
     suggestedAddressSelected = (value) => {
+        this.props.clearCollectionSchedule();        
         showTableFlag = 1;
+        showSuggestedFlag = 1;
         this.setState({
             address: value,
         });
@@ -135,7 +136,7 @@ class CollectionSchedule extends Component {
         });
     }
     contentHTML = () => {
-        if (this.props.collectionScheduleInfo == null && showTableFlag !== 0 && this.props.suggestionAddress == null) {
+        if (this.props.collectionScheduleInfo === null && showTableFlag !== 0 && this.props.suggestionAddress === null) {
             return (
                 <div>
                     <div className="noOfSearchResultsCollectionSchedule">
@@ -181,7 +182,7 @@ class CollectionSchedule extends Component {
                 </div>
 
             )
-        } else if (this.props.suggestionAddress != null || (this.props.suggestionAddress ? this.props.suggestionAddress.length > 0 : "")) {
+        } else if ((showSuggestedFlag !== 1 && this.props.suggestionAddress !== null && this.props.suggestionAddress !== undefined)){
             return (
                 <div className="errorUserAddressParent">
                     <div className="addressNotFound">
@@ -194,7 +195,7 @@ class CollectionSchedule extends Component {
                 </div>
             )
         } else {
-            if (showTableFlag == 1) {
+            if (showTableFlag === 1 && this.props.collectionScheduleInfo !== undefined && this.props.collectionScheduleInfo !== null) {
                 return (
                     <Row className="collectionScheduleRow">
                         <Col xs={12}>
@@ -214,7 +215,7 @@ class CollectionSchedule extends Component {
                     </Row>
                 )
             }
-            else {
+            else if(showTableFlag === 0){
                 return (
                     <Row className="collectionTableDefaultRow">
                         <div style={this.state.address == "" || this.state.address == undefined ? { display: 'block' } : { display: 'none' }} className="exampleCollectionSearch"> Example: 454 W 12th Ave, New York </div>
@@ -256,12 +257,15 @@ class CollectionSchedule extends Component {
                     </Row>
                 )
             }
+            else{
+                return(<div className = "blankLoadingDivCollectionSchedule">
+                    
+                </div>);
+            }
 
         }
     }
     render() {
-
-        
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568, -73.699215),
             new window.google.maps.LatLng(40.495992, -74.257159));
@@ -305,7 +309,7 @@ class CollectionSchedule extends Component {
                         <Col xs={12} md={12} className="searchRidOfParent">
                             <div id="innersquareRidOf">
                                 <AddressAutocomplete inputProps={inputProps} options={options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames={this.state.address !== "" ? cssClassesSelected : cssClasses} />
-                                <i className="fa fa-times collectionSearch" onClick={() => { this.clearSearchBox() }} style={this.state.address !== "" ? { display: 'block' } : { display: 'none' }} id="collectionSearchResultsClear"></i>
+                                <i className="fa fa-times collectionSearch" onClick={() => { this.clearSearchBox() }} style={this.state.address !== "" && this.state.address !== undefined ? { display: 'block' } : { display: 'none' }} id="collectionSearchResultsClear"></i>
                                 <i className="fa fa-search collectionSearch" onClick={this.searchIcon} id="collectionSearchResults"></i>
                             </div>
                         </Col>
