@@ -33,7 +33,7 @@ const CompostRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <FormTitleCheckBoxes title="SELECT ALL THAT APPLY" />
     <Field component={CheckBoxInput} name="DebrisInsideLot" {...props} />
-    <Field component={TextInput} name="PublicArea" {...props} fullRow={true} maxlength={"100"} isHidden={!values.DebrisInsideLot}/>
+    <Field component={TextInput} name="PublicArea" {...props} fullRow={true} maxlength={"100"} isHidden={!values.DebrisInsideLot} required={values.DebrisInsideLot}/>
     <Field component={CheckBoxInput} name="DebrisInFrontOfLot" {...props}/>
     <Field component={CheckBoxInput} name="VehiclesOnLot" {...props}/>
     <Field component={FileDropZone} name="files1" {...props} value={values.files1} header='VIDEO AND PICTURE UPLOAD' note='You can upload a total of 3 files, but the total size of all files uploaded cannot exceed 10 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/>   

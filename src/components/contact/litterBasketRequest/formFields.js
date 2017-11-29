@@ -29,7 +29,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={DropdownInput} name="LitterBasketReasonId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.Reasons} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} required={values.IsAnonymous !== true} maxlength={"25"}/>
+    <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} required={values.LitterBasketReasonId == 6} maxlength={"25"}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
     <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>

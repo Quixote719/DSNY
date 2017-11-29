@@ -31,23 +31,23 @@ const CompostRequestFormElements = (props) => {
       <FormTitleCheckBoxes title="NEAREST ADDRESS" />
       <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="BinLocationAdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
+    <Field component={TextInput} name="BinLocationAdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextInput} name="BinColor" {...props} maxlength={"20"} required/>
-    <Field component={DateTimePickerInput} name="ObservationDate" {...props} onChange={setFieldValue} required/>
+    <Field component={TextInput} name="BinColor" {...props} maxlength={"20"} required disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="ObservationDate" {...props} onChange={setFieldValue} required disabled={values.editMode}/>
     <Field component={DropdownInput} name="BinTypeId" {...props} onChange={setFieldValue} options={values.BinTypeList} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} required={values.BinTypeId !== 3} maxlength={"25"}/>
+    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} required={values.BinTypeId !== 3} maxlength={"25"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required/>
-    <Field component={TextInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} required/>
-    <Field component={TextInput} name="OrganizationApartment" {...props} maxlength={"10"}/>
-    <Field component={TextInput} name="OrganizationPhone" {...props} required maxlength={"21"}/>
+    <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required disabled={values.editMode}/>
+    <Field component={AddressInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} onChange={setFieldValue} disabled={values.editMode} required/>
+    <Field component={TextInput} name="OrganizationApartment" {...props} maxlength={"10"} disabled={values.editMode}/>
+    <Field component={TextInput} name="OrganizationPhone" {...props} required maxlength={"21"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionFour}/>
-    <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
-    <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
-    <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"}/>
-    <Field component={TextInput} name="Phone" {...props} required maxlength={"25"}/>
+    <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} required maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} required maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} required maxlength={"25"} disabled={values.editMode}/>
   </fieldset>)
 };
 
