@@ -15,6 +15,7 @@ export const Titles = {
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
+  AddressAsEntered: 'ADDRESS',
 }
 
 export const formObject = {

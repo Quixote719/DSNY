@@ -24,8 +24,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormTitleCheckBoxes title="ADDRESS" />
-      <FormAddressAutocomplete name="AddressAsEntered" required {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" required {...props} title={Titles.AddressAsEntered}  value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={DropdownInput} name="BinsToReplace" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.NumberOfOutdoorBins} disabled={values.editMode} {...props} required/>

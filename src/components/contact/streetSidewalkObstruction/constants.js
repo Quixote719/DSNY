@@ -6,6 +6,7 @@ export const Titles = {
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
+  AddressAsEntered: 'NEAREST ADDRESS',
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
   IsAnonymous: 'I would like to remain anonymous',
