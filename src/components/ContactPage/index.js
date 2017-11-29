@@ -89,11 +89,13 @@ class Contact extends Component {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
-    BannerText.title = Contact.title;
-    BannerText.content = Contact.header_content;
 
-    if(this.props.ContactPageData !== undefined && this.props.ContactPageData.data.sections.sections !== undefined) {
-      _.map(this.props.ContactPageData.data.sections.sections, item =>{
+    if(this.props.ContactPageData !== undefined && Contact.sections.sections !== undefined) {
+
+      BannerText.title = Contact.title;
+      BannerText.content = Contact.header_content;
+      
+      _.map(Contact.sections.sections, item =>{
         switch (item.name){
           case 'service-request':{
             ServiceRequestsProps.title = item.header;

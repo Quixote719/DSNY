@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from 'react';
 import SubSectionHeader from '../../shared/sub_section_header';
-import '../../../content/styles/ContactPage.css';
+import '../../../content/styles/Section.css';
 import CardTitle from '../../shared/Card_title';
 import {Row} from 'react-bootstrap';
 import {Link} from "react-router-dom";
@@ -12,7 +12,7 @@ class RecyclingGarbageSection extends Component {
 
   render() {
     return (
-        <div className="RecyclingGarbageSection">
+        <div className="Section">
           <SubSectionHeader title={this.props.RecyclingGarbageProps.title}/>
           <CardBox info={this.props.RecyclingGarbageProps}/>
         </div>

@@ -22,7 +22,7 @@ class CardBox extends Component {
             card = <TitleCardExternalLink title={item.title} link={item.linked_url} type='1' />
           } else {
             card = <TitleCard title={item.title} link={item.linked_page.url} type='1' />
-          }            
+          }
         }
         else if(this.props.info.CardType=='square-card'){
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
@@ -32,14 +32,13 @@ class CardBox extends Component {
             card = <TitleCardExternalLink title={item.title} link={item.linked_url} type='2' />
           } else {
             card = <TitleCard title={item.title} link={item.linked_page.url} type='2' />
-          }            
+          }
         }
         else if(this.props.info.CardType=='color-bar-card'){
             card = <ColorCard dataObject={item}/>
         }
         else if(this.props.info.CardType=='staff-card'){
-            let profileImage;
-            card = <ProfileCard name={item.header} duty={item.content} image={item.featured_image} />
+            card = <ProfileCard name={item.title} duty={item.content} image={item.featured_image} />
         }
         else{
             card = <TitleContentCard dataObject={item}/>

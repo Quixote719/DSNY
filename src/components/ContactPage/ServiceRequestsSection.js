@@ -5,6 +5,7 @@ import CardBox from '../shared/card_box';
 import TitleCard from '../shared/TitleCard';
 import { Link } from 'react-router-dom';
 import '../../content/styles/ContactPage.css';
+import '../../content/styles/Section.css';
 import CardTitle from '../shared/Card_title';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 
@@ -25,7 +26,7 @@ class ServiceRequestsSection extends Component {
     return (
         <div>
           <SubSectionHeader title={this.props.ServiceRequestsProps.title}/>
-          <div className='serviceRequestsContainer'>
+          <div className='Section'>
             <Row>
               {this.renderCards()}
             </Row>

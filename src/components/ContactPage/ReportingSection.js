@@ -2,6 +2,7 @@ import _ from "lodash";
 import React, { Component } from 'react';
 import SubSectionHeader from '../shared/sub_section_header';
 import '../../content/styles/ContactPage.css';
+import '../../content/styles/Section.css';
 import CardTitle from '../shared/Card_title';
 import {Row} from 'react-bootstrap';
 import {Link} from "react-router-dom";
@@ -12,7 +13,7 @@ class ReportingSection extends Component {
 
   render() {
     return (
-        <div className="ReportingSection">
+        <div className="Section">
           <SubSectionHeader title={this.props.ReportingProps.title}/>
           <CardBox info={this.props.ReportingProps}/>
         </div>
