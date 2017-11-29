@@ -52,8 +52,6 @@ class Header extends React.Component {
         this.props.setActiveNavTab(key);
     }
     render() {
-        console.log("this.props.activeNavTab")        
-        console.log(this.props.activeNavTab)
         window.showModalStatic = this.state.showModal;
         var url = window.location.pathname;
         return (

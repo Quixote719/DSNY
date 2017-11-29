@@ -34,7 +34,8 @@ class FormAddressAutocomplete extends Component {
  
 
     handleChange = (address) =>{
-        this.props.checkAddressValidator(0);
+        //this.props.checkAddressValidator(0);
+        this.props.checkAddressValidator(address);
         if(address.trim().length === 0 || address === ""){
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
@@ -60,7 +61,7 @@ class FormAddressAutocomplete extends Component {
         // })
   
     //console.log("DINESH" + this.refs.myinput.value )
-    (isEmpty(this.state.address) || this.state.address.trim() === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+         this.setState({hideToolTip: false});
   
     }
     suggestedAddressSelected = (value) =>{
@@ -90,6 +91,11 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
     }
     successCallback = (success)=>{
+        if (this.props.noResultsError.FormattedAddress) {
+            this.setState({
+                address: this.props.noResultsError.FormattedAddress,
+            });
+        }
         if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.forceUpdate();
@@ -125,7 +131,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: (this.props.errors[this.props.name] && this.state.address.trim() === "")?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && !this.state.hideToolTip))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -134,7 +140,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: (this.props.errors[this.props.name] && this.state.address.trim() === "")?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && !this.state.hideToolTip))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -150,7 +156,6 @@ class FormAddressAutocomplete extends Component {
             onBlur: this.resetPlaceHolder,
             onFocus: this.setPlaceHolder,
             error: this.props.errors[this.props.name],
-            required: true,
         }
         return (
             <div>
@@ -191,6 +196,8 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        organicsCollectionScheduleForm: state.carouselDataReducer.organicsCollectionScheduleForm,        
+        regularCollectionScheduleForm: state.carouselDataReducer.regularCollectionScheduleForm,        
         recyclingCollectionScheduleForm: state.carouselDataReducer.recyclingCollectionScheduleForm,        
         addressValidator: state.carouselDataReducer.addressValidator,
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,

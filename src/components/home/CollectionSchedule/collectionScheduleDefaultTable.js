@@ -92,9 +92,7 @@ class CollectionScheduleDefaultTable extends Component {
         );
 
     }
-    render() {
-        console.log("Flag for table show")
-        console.log(this.props.showTableFlag)        
+    render() {      
         return (
             <div className="collectionScheduleTableParent">
                 {this.desktopTable()}
