@@ -39,6 +39,7 @@ import CollectionBinReport from '../contact/collectionBinReport';
 import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationForm';
 import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
 import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
+import RefashionNYCForm from '../contact/refashionNYC';
 
 class WebformPage extends Component {
 
@@ -110,6 +111,8 @@ class WebformPage extends Component {
                 return <EventParticipationRequestForm />;
               case 'e-waste-pickup-request':
                 return <EwasteRequestForm />;
+              case 'refashion-nyc':
+                return <RefashionNYCForm />;  
               case 'recyclable-material-theft-observation':
                 return <RecyclableMaterialTheft />
               case 'failure-to-store-receptacles':

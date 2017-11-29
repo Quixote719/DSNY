@@ -9,6 +9,9 @@ const FormTitleCheckBoxes = props => {
         {props.title}
       </div>
     </Col>
+    <Col xs={12}>
+    { props.subHeading && <div> {props.subHeading} </div>}
+    </Col>
   </div>);
 };
 
