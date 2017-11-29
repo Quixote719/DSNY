@@ -43,12 +43,8 @@ class FormDropdown extends Component {
      }
   }
   onInputChange(item) {
-    console.log('%%');
-    console.log(item);
-
     this.setState({option: item.DisplayName ?  item.DisplayName : item});
-    debugger;
-    this.props.onChange(this.props.name, item.DisplayName ?  item.DisplayName : item);
+    this.props.onChange(this.props.name, item.DisplayName ?  item.Id : item);
   }
 
   handleChange(event){
