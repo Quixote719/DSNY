@@ -24,31 +24,22 @@ class FormStepper extends Component {
 
     getCategoryTotal()
     {
-
       var inputs = Array.from(document.querySelectorAll('#form input.incDecField'));
-
       let total = 0;
       inputs.forEach(input => {
-        //if(input.type === "number")
-        //{
           total +=  parseInt(input.value, 10);
-        //}
+
       });
       categoryTotal = total;
       return categoryTotal;
-
     }
 
     getSubCategoryTotal()
     {
       var inputs = Array.from(document.querySelectorAll('#form input.incDecSubField'));
-
       let total = 0;
       inputs.forEach(input => {
-        //if(input.type === "number")
-        //{
           total +=  parseInt(input.value, 10);
-        //}
       });
       subCategoryTotal = total;
       return subCategoryTotal;
@@ -56,38 +47,27 @@ class FormStepper extends Component {
 
 
     increment(){
-
+      categoryTotal = this.getCategoryTotal();
+      subCategoryTotal = this.getSubCategoryTotal();
+      fieldTotal = categoryTotal + subCategoryTotal;
       var {count, object} = this.state
-      fieldTotal += 1;
       var i = count += 1
-      console.log(fieldTotal);
       console.log(this.props);
       object.RequestedQty = i
       if(fieldTotal < 20 && i <= this.props.maxValue)
-      this.setState({count:i , object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
-
-   /*   var inputs = document.querySelectorAll('#form input.incDecField');
-
-      let total = 1;
-      inputs.forEach(input => {
-        //if(input.type === "number")
-        //{
-          total +=  parseInt(input.value, 10);
-        //}
-      });
-      console.log(total); */
-
+      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
     decrement() {
-
-      fieldTotal -= 1;
+      categoryTotal = this.getCategoryTotal();
+      subCategoryTotal = this.getSubCategoryTotal();
+      fieldTotal = categoryTotal + subCategoryTotal;
       console.log(fieldTotal);
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
         if(fieldTotal < 20 && i <= this.props.maxValue)
-      this.setState({count:i, object:object, hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
+      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
     onBlur(e) {
@@ -96,26 +76,12 @@ class FormStepper extends Component {
     }
 
     onInputChange(e) {
-      
-      categoryTotal = this.getCategoryTotal();
-      subCategoryTotal = this.getSubCategoryTotal();
-      fieldTotal = categoryTotal + subCategoryTotal;
-      var {count, object} = this.state
-      
-      // var inputs = Array.from(document.querySelectorAll('#form input.incDecField, #form input.incDecSubField'));
 
-      // let total = 0;
-      // inputs.forEach(input => {
-      //   //if(input.type === "number")
-      //   //{
-      //     total +=  parseInt(input.value, 10);
-      //   //}
-      // });
-      // fieldTotal = total;
-      // console.log(fieldTotal);
+        categoryTotal = this.getCategoryTotal();
+        subCategoryTotal = this.getSubCategoryTotal();
+        fieldTotal = categoryTotal + subCategoryTotal;
+        var {count, object} = this.state
 
-      // if(this.props.subCat)
-      // {
         if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat? subCategoryTotal: categoryTotal)> this.props.maxValue) || fieldTotal > 20))
         {
           object.RequestedQty = 0
@@ -125,33 +91,12 @@ class FormStepper extends Component {
         {
           object.RequestedQty = parseInt(e, 10)
           this.setState({count:parseInt(e, 10), hideToolTip: true},()=>{this.props.onIncDec(this.state.object)});
-           
         }
         else
         {
           object.RequestedQty = 0
           this.setState({count:''},()=>{this.props.onIncDec(this.state.object)});
         }
-      // }
-      // else
-      // {
-      //   console.log("cat" + fieldTotal);
-
-      //   if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || categoryTotal > this.props.maxValue || fieldTotal > 20))
-      //   {
-      //     this.setState({count:0,hideToolTip: false})
-      //   }
-      //   else if(!isNaN(e) && parseInt(e,10))
-      //   {
-      //     this.setState({count:parseInt(e, 10), hideToolTip: false})
-      //   }
-      //   else
-      //   {
-      //     this.setState({count:''})
-      //   }
-
-      // }
-
     }
 
     renderItem(){

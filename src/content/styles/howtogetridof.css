@@ -32,17 +32,17 @@
     color: black;
 }
 .react-autosuggest__suggestions-container--open>ul>li>a:hover{
-    color: white;
+    /* color: white; */
 }
 .react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted{
-    background-color: #7CC04B;
+    background-color: #F1F1F1 ;
 }
 .react-autosuggest__suggestion.react-autosuggest__suggestion--highlighted>a{
-    color: white;
+    /* color: white; */
 }
 .react-autosuggest__suggestions-container--open>ul>li:hover{
-    background-color: #7CC04B !important;
-    color: #ffffff !important;
+    background-color: #F1F1F1  !important;
+    /* color: #ffffff !important; */
 }
 .ridOfSuggestions{
     padding-left: 16px;
@@ -53,6 +53,22 @@
     height: 126px!important;
 }
 #ridOfSearchResults {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right:41px;    
+    color: #7CC04B!important;
+    font-size: 24px;
+}
+#ridOfSearchResultsSiteSearch {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right:8px;    
+    color: #7CC04B!important;
+    font-size: 24px;
+}
+#ridOfSearchResultsNotClear {
     cursor: pointer;
     position: absolute;
     top: 0px;
@@ -91,7 +107,7 @@
     line-height: 17px;
 }
 .ridOfSearchResults{
-    padding-right: 37px;
+    padding-right: 65px;
     line-height: 24px;
     outline: none;
     height: 33px;
@@ -157,6 +173,16 @@
     font-weight: bold;	
     line-height: 22px;
     padding-top: 32px;
+}
+.noOfSearchResultsCollectionSchedule{
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333333;	
+    font-size: 17.5px;	
+    font-weight: bold;	
+    line-height: 22px;
+    padding-top: 15px;
 }
 .searchBoxPaginate{
     width: 100%;
@@ -233,9 +259,9 @@ input::-ms-clear {
     padding-left: 16px;
     padding-right: 16px;    
     padding-top: 20px;
-    color: white;
+    /* color: white; */
     cursor: pointer;
-    background-color: #7CC04B;    
+    background-color: #F1F1F1 ;    
 }
 .googleLogoContainer, .googleLogoImage{
     display: none;
@@ -244,7 +270,7 @@ input::-ms-clear {
     outline: none;
 }
 .collectionSearchAutoComplete{
-    padding-right: 40px;
+    padding-right: 65px;
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -252,7 +278,7 @@ input::-ms-clear {
     border-top: none;
     margin-right: 8px;
     width: 420px;
-    margin-top: 29px;
+    margin-top: 30px;
     margin-left: 13px;
     border-bottom: 2px solid #7CC04B;
     border-left: none;
@@ -264,7 +290,7 @@ input::-ms-clear {
 }
 .collectionSearchInput{
     line-height: 24px;
-    padding-right: 33px;
+    padding-right: 74px;
     height: 33px;
     font-weight: 700;
     color: #000;
@@ -304,6 +330,9 @@ input::-ms-clear {
         padding-left: 0px;
     }
     .collectionSearchAutoComplete{
+        margin-left: 9px;
+        margin-right: 8px;
+        height: 29px;
         margin-top: 25px;
         width: 95%;
     }
@@ -336,6 +365,7 @@ input::-ms-clear {
         margin-right: 14px;
 }
 .collectionSearchAutoComplete{
+    margin-top: 30px;
     width: 663.88px;
 }
 .BreadcrumbHeaderTitleSection>.container{
@@ -370,7 +400,34 @@ input::-ms-clear {
         font-size: 24px;
         margin-left: 15px;
     }
+    /* .collectionSearchAutoComplete{
+        padding-right: 65px;
+        height: 33px;
+        font-weight: 700;
+        color: #000;
+        font-size: 18px;
+        border-top: none;
+        margin-right: 8px;
+        width: 420px;
+        margin-top: 29px;
+        margin-left: 13px;
+        border-bottom: 2px solid #7CC04B;
+        border-left: none;
+        border-right: none;
+        -webkit-text-fill-color: #231F20 !important;
+    }
+    .ridOfSearch,
+    .actual-edit-overlay {
+        padding-right: 37px;
+        height: 29px;
+        margin-top: 25px!important;
+        font-size: 18px;
+        width: 95%;
+        margin-left: 9px;
+    } */
     .collectionSearchAutoComplete{
+        margin-top: 25px;
+        height: 29px;
         margin-left: 9px;
         margin-right: 8px;
         width: calc(100% - 18px);

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Grid, Row, Col, Tooltip } from 'react-bootstrap';
 import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete'
 import * as actions from '../../actions/actions_home';
 import { connect } from 'react-redux';
@@ -8,6 +8,10 @@ import AddressAutocomplete from '../home/CollectionSchedule/addressAutocomplete'
 import SubSectionButton from '../shared/sub_section_button';
 import styles from '../../content/styles/collectionBinForm.css';
 import _ from "lodash";
+import isEmpty from 'lodash/isEmpty';
+
+import {addressValidationMessage} from './form_steps'
+
 let errorFlag = 0;
 
 var errorMessage =  (
@@ -19,10 +23,11 @@ var errorMessage =  (
 class FormAddressAutocomplete extends Component {
     constructor(props, context) {
         super(props, context);
-        const propName = props.name;
+        //const propName = props.name;
+        console.log(props.disabled);
         this.state = {
-            address: props.values[propName] || "",
-            name:props.name,       
+            address: props.values[props.name] || "",
+            hideToolTip: true,
           };
     }
  
@@ -39,17 +44,23 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address,
         })
-      
+        
+        isEmpty(address) || address.trim() === "" ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
     }
     resetPlaceHolder = () =>{
         // this.setState({
         //   placeholder: "Enter the address"
         // })
+        this.setState({hideToolTip: true});
       }
     setPlaceHolder = () =>{
         // this.setState({
         //   placeholder: " "
         // })
+  
+    //console.log("DINESH" + this.refs.myinput.value )
+    (isEmpty(this.state.address) || this.state.address.trim() === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+  
     }
     suggestedAddressSelected = (value) =>{
         this.setState({
@@ -113,7 +124,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: 'collectionSearchInput',
+            input: (this.props.errors[this.props.name] && this.state.address.trim() === "")?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -122,7 +133,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: 'collectionSearchInput',
+            input: (this.props.errors[this.props.name] && this.state.address.trim() === "")?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -131,18 +142,22 @@ class FormAddressAutocomplete extends Component {
             componentRestrictions: {country: 'us'}
           }
         const inputProps = {
-            name:this.state.name,
+            name:this.props.name,
             value: this.state.address,
             onChange: this.handleChange,
             placeholder: this.state.placeholder,
             onBlur: this.resetPlaceHolder,
             onFocus: this.setPlaceHolder,
+            error: this.props.errors[this.props.name],
+            required: true,
         }
         return (
             <div>
+                {console.log("DDD" + this.props.addressValidator)}
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} md={this.props.disabled ? 12 : 10}>
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
+                    {this.props.errors[this.props.name] && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
                     {errorMessage}
                     {(this.props.DSNYGeoCoder != null || this.props.suggestionAddress != null)?<div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                     <div className = "addressNotFound">
@@ -158,7 +173,11 @@ class FormAddressAutocomplete extends Component {
                     
                     <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}} >
                     <Col xs={12} md={2} className = "validateButtonCol">
-                    <SubSectionButton title='VALIDATE'   onClick = {this.validateButtonClicked}/>
+                    <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
+                    {/*<button id="validateBtn" onClick={this.validateButtonClicked} className='subSectionButton'>
+                        VALIDATE
+                    </button>
+                    {(addressValidationMessage)?<Tooltip placement="bottom" id="tooltip-bottom" className={addressValidationMessage?"in":''}>{addressValidationMessage}</Tooltip>:null}*/}
                     </Col>
                     </div>
 

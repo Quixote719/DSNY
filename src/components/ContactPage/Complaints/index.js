@@ -99,8 +99,8 @@ class Complaints extends Component {
         Complaints = this.props.ComplaintsPageData.data;
     }
 
-    if(this.props.ComplaintsPageData !== undefined) {
-      _.map(this.props.ComplaintsPageData.data.sections.sections, item =>{
+    if(this.props.ComplaintsPageData !== undefined && this.props.ComplaintsPageData.data !== undefined) {
+      _.map(Complaints.sections.sections, item =>{
         switch (item.name){
           case 'complaints-top':{
             PageExplanation.content = item.content;

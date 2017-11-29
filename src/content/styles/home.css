@@ -154,7 +154,7 @@
 .ridOfSearch,
 .actual-edit-overlay {
     padding-bottom: 0px;
-    padding-right: 35px;
+    padding-right: 65px;
     line-height: 24px;
     padding-top: 5px;
     height: 33px;
@@ -473,17 +473,17 @@ input.serviceRequestSearch:focus {
 @media only screen and (max-width: 599px) {
     #siteSearchResults {
         top: 34px;
-        right: 24px;
+        right: 47px;
         cursor: pointer;
         position: absolute;
         color: #767676!important;
-        font-size: 16px;
+        font-size: 17px;
     }
     #collectionSearchResultsHome {
         cursor: pointer;
         position: absolute;
-        top: 35px;
-        right: 38px;
+        top: 33px;
+        right: 72px;
         color: #7CC04B!important;
         font-size: 24px;
     }
@@ -504,7 +504,7 @@ input.serviceRequestSearch:focus {
     }
     .ridOfSearch,
     .actual-edit-overlay {
-        padding-right: 37px;
+        padding-right: 65px;
         height: 29px;
         margin-top: 25px!important;
         font-size: 18px;
@@ -909,11 +909,14 @@ input.serviceRequestSearch:focus {
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    #siteSearchResults {
+        top: 34px;
+    }        
     #collectionSearchResultsHome {
         cursor: pointer;
         position: absolute;
-        top: 35px;
-        right: 38px;
+        top: 32px;
+        right: 68px;
         color: #7CC04B!important;
         font-size: 24px;
     }

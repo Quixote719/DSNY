@@ -1,13 +1,8 @@
-.serviceRequestsContainer{
-  margin-bottom: 25px;
-}
-
-.ReportingSection{
-  margin-bottom: 25px;
-}
-.RegistrationSection{
-  margin-bottom: 25px;
-}
+/**
+ DEPRECATED STYLE PAGE!!!
+ We should NOT be styling specific pages as they come from Wordpress dynamically.
+ We SHOULD be styling specific types of items that come out of Wordpress.
+ **/
 
 .viewAllComplaints> .subSectionButton{
   width: 192px;

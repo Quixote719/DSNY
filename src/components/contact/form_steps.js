@@ -32,6 +32,7 @@ let initialPageLoad = true;
 let nextbuttonClicked = false;
 let captchaVerified = false;
 let captchaMessage;
+export let addressValidationMessage = "";
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -193,86 +194,107 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
+    // alert(props.geoCoderAddressResult);
+    // alert(props.isAddressValidated);
+    // //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
+    //     //console.log("Cannot proceed")
+    // if((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0))
+    // {
+    //     //console.log("Cannot proceed")
+       
+    //    addressValidationMessage = "Please validate the Address";
+    //    errors["AddressAsEntered"] = addressValidationMessage
+    //    document.getElementById(`validateBtn`).focus();
+    // }    
+    // else
+    // {
+      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
+    
 
-    //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
-        //console.log("Cannot proceed")
-
-    const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
-  
-
-    if(!initialPageLoad)
-    {
-        inputs.forEach(input => {
-          
-          //Text, Checkbox Input Validation
-          if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
-          {
-              errors[input.name] = Titles.RequiredFieldMessage
-              if(nextbuttonClicked)
-              {
-                input.focus();
-                nextbuttonClicked = false;
-              }
-          }
-          else if (input.required && input.type === "text"  && (input.name ==="Email" && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
-          {
-              errors[input.name] = "Please enter valid Email Address"
-              if(nextbuttonClicked)
-              {
-                input.focus();
-                nextbuttonClicked = false;
-              }
-          }
-          else if (input.required && input.type === "checkbox"  && (!values[input.name]))
-          {
-              errors[input.name] = Titles.RequiredFieldMessage
-              if(nextbuttonClicked)
-              {
-                input.focus();
-                nextbuttonClicked = false;
-              }
-          }
-          //Dropdown List Validation
-          else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
-          {
-              errors[input.name] = "Please select from the list"
-              if(nextbuttonClicked)
-              {
-                input.focus();
-                nextbuttonClicked = false;
-              }
-          }
-
-
-        });
-
-
-        //Get the required fields from the const schema defined above
-        // for (var value in schema.requiredFields) {
-        //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
-        //     {
-        //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
-        //     }
-        // }
+      if(!initialPageLoad)
+      {
+          inputs.forEach(input => {
+            
+            //Text, Checkbox Input Validation
+            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
+            {
+                //alert("Hi");
+                //errors[input.name] = "Please validate the above address"
+                errors[input.name] = Titles.RequiredFieldMessage
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            {
+                errors[input.name] = Titles.RequiredFieldMessage
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            else if (input.required && input.type === "text"  && (input.name ==="Email" && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+            {
+                errors[input.name] = "Please enter valid Email Address"
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            else if (input.required && input.type === "checkbox"  && (!values[input.name]))
+            {
+                errors[input.name] = Titles.RequiredFieldMessage
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            //Dropdown List Validation
+            else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
+            {
+                errors[input.name] = "Please select from the list"
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
 
 
-        // if (!values.OrganizationTaxIdNumber) {
-        //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-        // }
-        // if (!values.OrganizationWebsite) {
-        //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-        // }
-        // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-        //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-        // }
-        // if (!values.WillPostCompostRecipientSignage) {
+          });
 
-        //   errors.WillPostCompostRecipientSignage = 'please check this'
-        // }
-        if(isEmpty(errors))
-          props.validateForm(values,errors);
-    }
 
+          //Get the required fields from the const schema defined above
+          // for (var value in schema.requiredFields) {
+          //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
+          //     {
+          //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
+          //     }
+          // }
+
+
+          // if (!values.OrganizationTaxIdNumber) {
+          //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+          // }
+          // if (!values.OrganizationWebsite) {
+          //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
+          // }
+          // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
+          //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
+          // }
+          // if (!values.WillPostCompostRecipientSignage) {
+
+          //   errors.WillPostCompostRecipientSignage = 'please check this'
+          // }
+          if(isEmpty(errors))
+            props.validateForm(values,errors);
+      }
+    //}  
     return errors
   },
   handleSubmit: (values, {props,setSubmitting, resetForm}) => {

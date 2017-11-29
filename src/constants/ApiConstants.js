@@ -48,6 +48,8 @@ export const PSOT_FORM_LITTER_BASKET_URL = `${REST_WEBAPI_URL}litterbaskets`;
 export const PSOT_FORM_OVERFLOWING_LITTER_BASKET_URL = `${REST_WEBAPI_URL}overflowinglitterbaskets`;
 export const PSOT_FORM_DISABILITY_SERVICES_URL = `${REST_WEBAPI_URL}disabilityservices`;
 export const PSOT_LOT_CLEANING_URL = `${REST_WEBAPI_URL}lotcleanings`;
+export const PSOT_REQUEST_COLLECTION_URL = `${REST_WEBAPI_URL}collectionServiceRequests`;
+export const PSOT_NYC_AGENCY_RECYCLING_URL = `${REST_WEBAPI_URL}NycAgencyRecyclingPlanAnnualReports`;
 export const PSOT_COLLECTION_BIN_OM_PUBLIC_PROPERTY_URL = `${REST_WEBAPI_URL}collectionbinonpublicproperty`;
 export const PSOT_FORM_EEO_COMPLAINTS_URL = `${REST_WEBAPI_URL}eeocomplaints`;
 export const PSOT_FORM_WEED_REMOVAL_PROPERTY_URL = `${REST_WEBAPI_URL}weedremoval`;
@@ -69,6 +71,7 @@ export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}Picku
 export const FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemSubCategories?CategoryID=:Id`;
 export const IS_DISTRICT_ACTIVE = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/IsDistrictActive?districtCode=:Id`;
 export const GET_UNAVAILABLE_DATES = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetUnavailableDates?District=:Id&IsInsert=true`;
+export const POST_E_WASTE_PICKUP_REQUEST = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/AddUpdatePickUpRequest`;
 
 export const POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration`;
 export const FETCH_FORM_GET_COMMERCIAL_ORGANICS_REQUEST_URL = `${REST_WEBAPI_URL}commercialorganicsonsiteprocessingregistration/new`;
