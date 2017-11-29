@@ -89,6 +89,11 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
     }
     successCallback = (success)=>{
+        if (this.props.noResultsError.FormattedAddress) {
+            this.setState({
+                address: this.props.noResultsError.FormattedAddress,
+            });
+        }
         if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.forceUpdate();
@@ -189,6 +194,8 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        organicsCollectionScheduleForm: state.carouselDataReducer.organicsCollectionScheduleForm,        
+        regularCollectionScheduleForm: state.carouselDataReducer.regularCollectionScheduleForm,        
         recyclingCollectionScheduleForm: state.carouselDataReducer.recyclingCollectionScheduleForm,        
         addressValidator: state.carouselDataReducer.addressValidator,
         DSNYGeoCoder: state.carouselDataReducer.DSNYGeoCoder,

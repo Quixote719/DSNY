@@ -73,9 +73,11 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                         }
                     }
                     if (data.data.Goat !== null && data.data.RegularCollectionSchedule !== null) {
+                        var regularCollectionScheduleForm =  data.data.Goat.sanitationRegularCollectionSchedule;                        
                         var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;
                     }
                     else {
+                        var regularCollectionScheduleForm = null;                        
                         var sanitationRegularCollectionSchedule = ""
                     }
                     if (data.data.Goat !== null && data.data.RecyclingCollectionSchedule !== null) {
@@ -87,9 +89,11 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                         var sanitationRecyclingCollectionSchedule = ""
                     }
                     if (data.data.Goat !== null && data.data.OrganicsCollectionSchedule !== null) {
+                        var organicsCollectionScheduleForm =  data.data.Goat.sanitationOrganicsCollectionSchedule;                        
                         var sanitationOrganicsCollectionSchedule = data.data.OrganicsCollectionSchedule;
                     }
                     else {
+                        var organicsCollectionScheduleForm = null;                        
                         var sanitationOrganicsCollectionSchedule = ""
                     }
                     if (sanitationRegularCollectionSchedule == "" && sanitationRecyclingCollectionSchedule == "" && sanitationOrganicsCollectionSchedule == "") {
@@ -103,6 +107,8 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
 
                     dispatch({
                         type: 'SET_COLLECTION_SCHEDULE_DATA',
+                        regularCollectionScheduleForm: regularCollectionScheduleForm,
+                        organicsCollectionScheduleForm: organicsCollectionScheduleForm,                        
                         recyclingCollectionScheduleForm: recyclingCollectionScheduleForm,
                         DSNYGeoCoder: DSNYGeoCoder,
                         collectionScheduleInfo: data.data.Goat,
