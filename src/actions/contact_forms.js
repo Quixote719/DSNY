@@ -38,7 +38,14 @@ export function PickupReqGetItemCategories() {
 export function PickupLocations() {
 	return function(dispatch) {
 		axios.get(FETCH_PICKUP_LOCATIONS_URL).then((data) => {
-			dispatch({type: types.FETCH_PICKUP_LOCATIONS, payload: data})
+		let pickuLocations = [];
+		data.data.map((item) => {
+				let temp = {};
+						temp['Id'] = item.Id;
+						temp['DisplayName'] = item.Name;
+				pickuLocations.push(temp);
+		})
+			dispatch({type: types.FETCH_PICKUP_LOCATIONS, payload: pickuLocations})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error})
 		});
