@@ -32,6 +32,7 @@ class FormDateTimePicker extends Component {
   render() {
 
     const{Dates} = this.props;
+
     function contains(a, obj) {
        var i = a.length;
        while (i--) {
@@ -43,12 +44,10 @@ class FormDateTimePicker extends Component {
    }
 
     if(Dates){
-
       var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
       var d = Dates[0];
       if (d)
-  var valid = function( current ){
-    console.log(contains(dd, current._d));
+     var valid = function( current ){
       return (!contains(dd, current._d) ) && (current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 ) ;
     }
 };

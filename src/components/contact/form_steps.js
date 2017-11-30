@@ -218,12 +218,11 @@ const FormSteps = compose(
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
             if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
             {
-                //alert("Hi");
                 //errors[input.name] = "Please validate the above address"
                 if(props.isAddressValidated === undefined || props.isAddressValidated === "")
                   errors[input.name] = Titles.RequiredFieldMessage
                 //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
-                else
+                else if(props.isAddressValidated !==1)
                   errors[input.name] = "Please enter NY address and click on Validate"
 
                 if(nextbuttonClicked)

@@ -119,9 +119,9 @@
 .mobileCollectionSchedule{
     display: none;
 }
-#noDesktopTable, #noMobileTable{
+/* #noDesktopTable, #noMobileTable{
     display: none;
-}
+} */
 .addressNotFound{
     padding-top: 17px;
     color: #D80035;

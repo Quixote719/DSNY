@@ -66,6 +66,9 @@ export const POST_FORM_PRVT_RCPTBLE_CMPLNTS_URL= `${REST_WEBAPI_URL}privaterecep
 export const POST_FORM_COLLECTION_BIN_REPORT = `${REST_WEBAPI_URL}collectionBinAnnualReports`;
 export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`
 
+//Forms - Bulk Pickup Request
+export const FETCH_PICKUP_LOCATIONS_URL = `${REST_WEBAPI_EPICKUP_URL}BulkPickups/GetPickupLocations`;
+
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;
 export const FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemSubCategories?CategoryID=:Id`;

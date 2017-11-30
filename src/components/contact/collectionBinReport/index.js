@@ -26,37 +26,24 @@ class CollectionBinReport extends Component {
     }
   }
 
+  generateNewFormObject(obj){
+    obj.CollectionBins = [];
+    for(let i = 1; i <= obj.BinCount; i++){
+        let BinData = {};
+        BinData.DsnyAssignedBinId = obj["DsnyAssignedBinId" + i];
+        BinData.WeightInPounds = obj["WeightInPounds" + i];
+        BinData.Removed = obj["Removed" + i];
+        BinData.RemovalDate = obj["RemovalDate" + i];
+        obj.CollectionBins.push(BinData);
+    }
+    return obj;
+  }
 
   postForm(formObject){
       console.warn('What is this?');
-
-      formObject={
-          "Id": 0,
-          "SRNumberId": 0,
-          "SRNo": "string",
-          "ServiceRequestStatusId": 0,
-          "CreatedDate": "2017-11-27T21:22:10.309Z",
-          "FirstName": "string",
-          "LastName": "string",
-          "Phone": "string",
-          "Email": "string",
-          "FullName": "string",
-          "FullNameLastFirst": "string",
-          "CompanyName": "string",
-          "Title": "string",
-          "CollectionBins": [
-            {
-              "Id": 0,
-              "CollectionBinAnnualReportId": 0,
-              "DsnyAssignedBinId": "string",
-              "WeightInPounds": 0,
-              "Removed": true,
-              "RemovalDate": "2017-11-27T21:22:10.309Z"
-            }
-          ]
-        }
-      console.log(JSON.stringify(formObject));
-      this.props.postFormObject(formObject, POST_FORM_COLLECTION_BIN_REPORT);
+      let newFormObject = this.generateNewFormObject(formObject);
+      console.log(JSON.stringify(newFormObject));
+      this.props.postFormObject(newFormObject, POST_FORM_COLLECTION_BIN_REPORT);
   }
 
    validateForm(formObject, errors){
@@ -80,6 +67,13 @@ class CollectionBinReport extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
+          for(let i=0; i<25; i++){
+                FormObject['DsnyAssignedBinId'+i] = 0;
+                FormObject['WeightInPound'+i] = 0;
+                FormObject['Removed'+i] = null;
+                FormObject['RemovalDate'+i] = "";
+          }
+
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);

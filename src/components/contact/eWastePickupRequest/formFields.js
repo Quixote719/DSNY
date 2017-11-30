@@ -54,7 +54,6 @@ const EwastePickUpRequestFormElements = (props) => {
 	if(buildingStatus){
 		let features = buildingStatus.features[0]
 		let unitNumber = features.attributes.UnitsTotal
-		console.log('buildingStatus', unitNumber);
 		values.buildingStatus = unitNumber >= 10 ? true : false;
 	}
 

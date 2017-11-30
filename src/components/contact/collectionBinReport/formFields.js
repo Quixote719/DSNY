@@ -20,11 +20,8 @@ class formFields extends Component {
 
   constructor(props, context) {
       super(props, context);
-      this.state = {
-        BinCount: 1,
-      }
       this.renderComp.bind(this);
-      this.addBin.bind(this);
+      this.changeBin.bind(this);
   }
   componentWillMount() {
     const { values, setFieldValue} = this.props;
@@ -37,58 +34,71 @@ class formFields extends Component {
     return(
       <div>
         <Col xs={12} md={12}></Col>
-        <Field component={TextInput} name={"CollectionBinAnnualReportId" + i} maxlength={50} {...this.props} />
-        <Field component={TextInput} name={"WeightInPounds" + i} maxlength={50} {...this.props} />
-        <Field component={DropdownInput} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
+        <Field component={TextInput} title={"DSNY ASSIGNED BIN ID "+i} name={"DsnyAssignedBinId" + i} maxlength={50} disabled={values.editMode} {...this.props} />
+        <Field component={TextInput} title={Titles.WeightInPounds1} name={"WeightInPounds" + i} maxlength={50} disabled={values.editMode} {...this.props} />
+        <Field component={DropdownInput} title={Titles.Removed1} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
+        {values["Removed" + i] && <Field component={DateTimePickerInput} title={Titles.RemovalDate1} name={"RemovalDate" + i} {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  disabled={values.editMode} required/>}
       </div>
     )
   }
 
-  addBin(Bin){
-    let temp = this.state.BinCount;
-    Bin?++temp:--temp;
-    this.setState({BinCount: temp},()=>{this.forceUpdate()});
+  changeBin(Bin){
+    const { values, setFieldValue, handledropDown} = this.props;
+
+    if(Bin){
+      if(values.BinCount < 25){
+        ++values.BinCount;
+      }
+    }
+    else{
+      if(values.BinCount > 1){
+        --values.BinCount;
+      }
+    }
+    console.log(values.BinCount);
+    this.forceUpdate()
   }
 
   render(){
     const { values, setFieldValue, handledropDown} = this.props;
 
-    console.log("Bin " + this.state.BinCount)
-    const dom = [];
-    for(let i=2; i<=this.state.BinCount; i++){
-      // dom.push(<ChildComponent key={i} number={i} props={this.props}/>);
-        dom.push(this.renderComp(i))
+    const MoreBins = [];
+    for(let i=2; i<=values.BinCount; i++){
+        MoreBins.push(this.renderComp(i))
     }
-    console.log(dom);
     return (
       <fieldset className='disabledContactForm' disabled={values.editMode}>
           <FormHeader title='Online Reporting Form'/>
           <FormSectionHeader title={Titles.sectionOne}/>
-            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Title" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Email" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Title" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Email" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} disabled={values.editMode} required/>
           <FormSectionHeader title={Titles.sectionTwo}/>
 
-            <Field component={TextInput} name="CollectionBinAnnualReportId" maxlength={50} {...this.props} />
-            <Field component={TextInput} name="WeightInPounds" maxlength={50} {...this.props} />
-            <Field component={DropdownInput} name="Removed" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  />
-            {values.Removed && <Field component={DateTimePickerInput} name="RemovalDate" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>}
-            {dom}
+            <Field component={TextInput} name="DsnyAssignedBinId1" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="WeightInPounds1" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={DropdownInput} name="Removed1" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  required/>
+            {values.Removed1 && <Field component={DateTimePickerInput} name="RemovalDate1" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate} disabled={values.editMode} required/>}
+
+            {MoreBins}
             <Col xs={12} md={12}>
-            <span>
-              <span className="fa fa-plus-circle" onClick={()=>{this.addBin(true)}}></span>
-              <span className="MangeBinText">Add bin</span>
-            </span>
-              {    this.state.BinCount>1 &&
+              {
+                !values.editMode && values.BinCount < 25 &&
                 <span>
-                      <span className="fa fa-minus-circle" onClick={()=>{this.addBin(false)}}></span>
+                  <span className="fa fa-plus-circle" onClick={()=>{this.changeBin(true)}}></span>
+                  <span className="MangeBinText">Add bin</span>
+                </span>
+              }
+              {
+                !values.editMode && values.BinCount > 1 &&
+                <span>
+                      <span className="fa fa-minus-circle" onClick={()=>{this.changeBin(false)}}></span>
                       <span className="MangeBinText">Remove bin</span>
                 </span>
               }
-
             </Col>
         </fieldset>
       )

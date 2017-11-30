@@ -89,7 +89,7 @@ class RequestStepper extends Component {
 				if (subCatg) {
 					return (<div key={Item.Category}><FormStepper hasSubCategory={this.subSecItemsavilable(Item.hasSubCategory)} Category={Item.Category} disabled={this.props.disabled} obj={Item} title={Item.Category} onIncDec={this.updateState} header={subCatg}/><SnStepper disabled={this.props.disabled} maxValu='5' onIncDec={this.updateState} subCat={Item.hasSubCategory}/></div>)
 				}
-				return (<div key={Item.Category}><FormStepper obj={Item} maxValue='20' disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState} header={subCatg}/></div>);
+				return (<div key={Item.Category}><FormStepper obj={Item} total='20' maxValue='20' disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState} header={subCatg}/></div>);
 			});
 		}
 
