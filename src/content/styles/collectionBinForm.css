@@ -47,3 +47,9 @@
 .pleaseEnterAddressForm{
     padding-top: 8px;
 }
+.validatedAddress{
+    padding-top: 9px;
+    color: #6BB73B;
+    font-size: 16px;	
+    line-height: 18px;
+}
