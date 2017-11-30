@@ -240,9 +240,9 @@ const FormSteps = compose(
                   nextbuttonClicked = false;
                 }
             }
-            else if (input.required && input.type === "text"  && (input.name ==="Email" && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+            else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
             {
-                errors[input.name] = "Please enter valid Email Address"
+                errors[input.name] = "Enter valid Email Address"
                 if(nextbuttonClicked)
                 {
                   input.focus();

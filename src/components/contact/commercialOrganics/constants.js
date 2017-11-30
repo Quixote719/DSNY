@@ -42,7 +42,8 @@
   "GreaseInterceptorFlow": "FLOW(UNITS PER MANUFATURER SPECS)(OPTIONAL)",
   "BusinessActivityTypes": "WHAT IS THE NATURE OF BUSINESS ACTIVITY AT THIS PREMISES? (SELECT ALL THAT APPLY)",
   "OnsitePMOptions": "ON-SITE PROCESSING METHOD (SELECT ALL THAT APPLY)",
-  "OtherDescribe": "PLEASE DESCRIBE"
+  "OtherDescribe": "PLEASE DESCRIBE",
+  "AddressAsEntered": "ADDRESS"
 }
 
 export const formObject = {

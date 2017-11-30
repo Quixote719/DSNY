@@ -51,7 +51,7 @@
 }
 
 .ProfileCardName{
-  color: #00764D;
+  color: #262626;
   font-size: 17.5px;
   font-weight: bold;
   text-align: center;
@@ -129,15 +129,10 @@
   height: 155px;
   width: 100%;
   padding: 40px 20px 0 20px;
-  font-weight: 600;
-  color: #00764D;
+  font-weight: 400;
+  color: #262626;;
   background-color: #FFFFFF;
-  font-size: 17.5px;
-}
-
-.ColorCardContent:hover{
-  color: #7CC04B;
-  cursor: pointer;
+  font-size: 16px;
 }
 
 

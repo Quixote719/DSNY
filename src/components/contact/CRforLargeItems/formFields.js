@@ -40,7 +40,9 @@ const EwastePickUpRequestFormElements = (props) => {
 	if (Dates && pickupLocations && geoCoderAddressResult){
      values.Dates = Dates;
 		 values.PickupLocations = pickupLocations;
-		 values.AppointmentDate = moment(Dates[0].StartDate)
+		 values.AppointmentDate = moment(Dates[0].StartDate);
+		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
+		 values.Frequency = "Tuesday Thursday Saturday"
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
@@ -48,17 +50,17 @@ const EwastePickUpRequestFormElements = (props) => {
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
 		<FormSectionHeader title={Titles.sectionTwo}/>
-		<Field component={DropdownInput} name="PickUpLocation" {...props} options={values.PickupLocations ? values.PickupLocations :[]} onChange={setFieldValue} disabled={values.editMode}/>
-		<Field component={DropdownInput} name="PickUpStreet" {...props} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} onChange={setFieldValue} disabled={values.editMode}/>
-		<Field component={DateTimePickerInput} value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ values.editMode} name="AppointmentDate" {...props} onChange={setFieldValue}/>
-		<Field component={Nstepper} name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
+		<Field component={DropdownInput} required name="LocationId" {...props} options={values.PickupLocations ? values.PickupLocations :[]} onChange={setFieldValue} disabled={values.editMode}/>
+		<Field component={DropdownInput} required name="PickUpLocation" {...props} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} onChange={setFieldValue} disabled={values.editMode}/>
+		<Field component={DateTimePickerInput} required value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ values.editMode} name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={Nstepper} name="ElectronicCategory" header='BULK ITEM CATEGORY' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
 		<Field component={TextInput} name="LastName" {...props} required="required"/>
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
+
 	</fieldset>)
 };
 
