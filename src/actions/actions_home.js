@@ -339,3 +339,14 @@ export function setPaginationKey(value) {
         });
     }
 }
+export function commercialAddressFlag(flag, message) {
+    return function (dispatch) {
+        var commercialAddress = {}; 
+        commercialAddress['commercialFlag'] = flag;
+        commercialAddress['commercialMessage'] = message              
+        dispatch({
+            type: 'SET_COMMERICIAL_FLAG',
+            commercialAddress: commercialAddress,            
+        });
+    }
+}

@@ -104,19 +104,24 @@ class FormAddressAutocomplete extends Component {
             });
         }
         if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
+            this.props.commercialAddressFlag(0, null)            
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.forceUpdate();
         } else if(
-          (this.props.noResultsError.RegularCollectionSchedule == null || this.props.noResultsError.RegularCollectionSchedule == "") &&
-          (this.props.noResultsError.RecyclingCollectionSchedule == null || this.props.noResultsError.RecyclingCollectionSchedule == "") &&
-          (this.props.noResultsError.OrganicsCollectionSchedule == null || this.props.noResultsError.OrganicsCollectionSchedule === " ") &&
-          this.props.suggestionAddress == null){
+          (this.props.noResultsError.RegularCollectionSchedule === null || this.props.noResultsError.RegularCollectionSchedule === "") &&
+          (this.props.noResultsError.RecyclingCollectionSchedule === null || this.props.noResultsError.RecyclingCollectionSchedule === "") &&
+          (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
+          this.props.suggestionAddress === null){
+            this.props.commercialAddressFlag(1, "I certify that this request is not for a commercial business or an apartment with more than 10 units.")
             errorMessage = (<div className="errorMessageAddressForm">
             The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
             </div>);
             this.forceUpdate();
         } else {
-            errorMessage = (<div></div>);
+            this.props.commercialAddressFlag(0, null)                        
+            errorMessage = (
+            <div className ="validatedAddress">Address Validated</div>
+        );
             this.forceUpdate();
         }
     }
@@ -128,7 +133,7 @@ class FormAddressAutocomplete extends Component {
                 </div>);
         } );
     }
-    render() {
+    render() {      
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -166,7 +171,7 @@ class FormAddressAutocomplete extends Component {
         }
         return (
             <div>
-                {console.log("DDD" + this.props.addressValidator)}
+                {/* {console.log("DDD" + this.props.addressValidator)} */}
                 <FormTitleCheckBoxes title={this.props.title}/>
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} md={this.props.disabled ? 12 : 10}>
@@ -199,6 +204,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        commercialAddress: state.carouselDataReducer.commercialAddress,                
         organicsCollectionScheduleForm: state.carouselDataReducer.organicsCollectionScheduleForm,        
         regularCollectionScheduleForm: state.carouselDataReducer.regularCollectionScheduleForm,        
         recyclingCollectionScheduleForm: state.carouselDataReducer.recyclingCollectionScheduleForm,        
@@ -211,6 +217,7 @@ function mapStateToProps(state) {
   }
 
 let actionList = {
+    commercialAddressFlag: actions.commercialAddressFlag,    
     checkAddressValidator: actions.checkAddressValidator,
     getCollectionSchedule: actions.getCollectionSchedule,
   };

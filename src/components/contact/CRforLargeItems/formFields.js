@@ -35,16 +35,12 @@ const DisplayFormikState = props => <div style={{
 
 
 const EwastePickUpRequestFormElements = (props) => {
-	const { values, setFieldValue,pickupLocations, Dates,  geoCoderAddressResult } = props;
-
-console.log('sufsahdb vadhfaskdfbsad ', pickupLocations);
+	const { values, setFieldValue, pickupLocations, Dates,  geoCoderAddressResult } = props;
 
 	if (Dates && pickupLocations && geoCoderAddressResult){
      values.Dates = Dates;
 		 values.PickupLocations = pickupLocations;
 		 values.AppointmentDate = moment(Dates[0].StartDate)
-		 console.log(values.AppointmentDate);
-		 console.log( values.Dates = Dates);
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
@@ -62,7 +58,7 @@ console.log('sufsahdb vadhfaskdfbsad ', pickupLocations);
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-
+    <Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 
