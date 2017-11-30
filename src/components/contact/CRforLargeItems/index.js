@@ -54,7 +54,7 @@ updateValues(geoCoderAddressResult){
   }
 
   render() {
-    const { error, success,unavailableDates, pickupLocations,  geoCoderAddressResult} = this.props;
+    const { error, success,unavailableDates, pickupLocations,  geoCoderAddressResult, isAddressValidated} = this.props;
 
 
         if(success !== undefined) {
@@ -69,7 +69,7 @@ updateValues(geoCoderAddressResult){
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
