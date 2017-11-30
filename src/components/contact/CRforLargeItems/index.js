@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  POST_BULK_PICKUP_REQUEST
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, GetUnavailableDates, PickupLocations} from "../../../actions/contact_forms";
@@ -43,7 +43,7 @@ updateValues(geoCoderAddressResult){
 
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, POST_BULK_PICKUP_REQUEST);
   }
 
    validateForm(formObject, errors){
@@ -81,7 +81,6 @@ updateValues(geoCoderAddressResult){
 
 
 function mapStateToProps(state) {
-console.log('varma',state.forms.pickupLocations);
   return {FormObject: state.forms.formObject,pickupLocations:state.forms.pickupLocations,success:state.forms.success,unavailableDates:state.forms.unavailableDates, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
   error:state.error.type};
 }
