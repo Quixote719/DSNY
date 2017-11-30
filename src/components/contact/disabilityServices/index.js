@@ -46,7 +46,7 @@ class DisabilityServices extends Component {
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
        
-        if(success !== undefined) {
+        if(success !== undefined && success != null) {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
         }
     

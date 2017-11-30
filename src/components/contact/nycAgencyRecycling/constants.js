@@ -34,14 +34,6 @@ export const formObject = {
       "Name": "Select One",
       "DisplayName": "Select One",
       "Selected": false
-    }
-  ],
-  "PhoneTypes": [
-    {
-      "Id": 0,
-      "Name": "Select One",
-      "DisplayName": "Select One",
-      "Selected": false
     },
     {
       "Id": 1,
