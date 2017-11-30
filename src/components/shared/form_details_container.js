@@ -123,8 +123,6 @@ class WebformPage extends Component {
                 return <OrganicsForm />
               case 'collection-bin-annual-reporting':
                 return <CollectionBinReport />
-              case 'organics-collection-application':
-                return <OrganicsCollectionApplication />
               // Daniel's form end
               case 'equal-employment-opportunity-complaint-form':
               return <EEOComplaintForm />

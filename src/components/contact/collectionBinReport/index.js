@@ -67,6 +67,13 @@ class CollectionBinReport extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
+          for(let i=0; i<25; i++){
+                FormObject['DsnyAssignedBinId'+i] = 0;
+                FormObject['WeightInPound'+i] = 0;
+                FormObject['Removed'+i] = null;
+                FormObject['RemovalDate'+i] = "";
+          }
+
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
