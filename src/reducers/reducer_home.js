@@ -37,7 +37,8 @@ export default function carouselDataReducer(state = {newsData: {}}, action) {
 
       case 'SET_PAGINATION_VALUE':
       return { ...state, paginationKeyValue: action.payload};
-
+      case 'SET_COMMERICIAL_FLAG':
+      return { ...state, commercialAddress: action.commercialAddress};
     case 'SET_NEWS_PAGE':
     return {
       ...state,

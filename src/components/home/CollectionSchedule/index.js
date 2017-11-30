@@ -193,7 +193,53 @@ class CollectionSchedule extends Component {
                     {this.correctAddressList()}
                 </div>
             )
-        } else {
+        } 
+        else if(this.props.collectionScheduleInfo !== null && this.props.noResultsError !== undefined && this.props.noResultsError.OrganicsCollectionSchedule === "" && this.props.noResultsError.RecyclingCollectionSchedule === "" && this.props.noResultsError.RegularCollectionSchedule ==="" ){
+            return(        
+            <div>
+                <div className="noOfSearchResultsCollectionSchedule">
+                    The above address is a commercial address and hence no search results found.
+                </div>
+                <Row className="collectionTableDefaultRow">
+                    <Col xs={12} md={8} className="collectionTableDefaultColumn">
+                        <CollectionScheduleDefaultTable />
+                    </Col>
+                    <Col xs={12} md={4} className="collectionDefaultCol">
+                        <Col xs={4} className="collectionScheduleIcons">
+                            <div>
+                                <img src={require('../../../content/images/collectionschedule-garbage.svg')} className="garbageIcon" alt="Garbage Icon" />
+                                <div className="garbageTitle">
+                                    GARBAGE
+                                </div>
+                            </div>
+                        </Col>
+                        <Col xs={4} className="collectionScheduleIcons">
+                            <div>
+                                <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon" />                <div className="recyclingTypeTitle">
+                                    <div className="recycleTitle">
+                                        RECYCLING
+                                    </div>
+                            </div>
+                            </div>
+                        </Col>
+                        <Col xs={4} className="collectionScheduleIcons">
+                            <div>
+                                <img src={require('../../../content/images/collectionschedule-organics.svg')} className="organicsIcon" alt="Organics Icon" />
+                                <div className="organicsTitle">
+                                    ORGANICS
+                                </div>
+                            </div>
+                        </Col>
+                        <Col xs={12} className="collectionDefaultText">
+                            <div>
+                                Please enter your address in the search field above to view the collection schedule. You can also download the DSNY Info app to view schedules and receive reminders.
+                             </div>
+                    </Col>
+                    </Col>
+                </Row>
+            </div>);
+        }
+        else {
             if (showTableFlag === 1 && this.props.collectionScheduleInfo !== undefined && this.props.collectionScheduleInfo !== null) {
                 return (
                     <Row className="collectionScheduleRow">
