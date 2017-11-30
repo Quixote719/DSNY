@@ -24,17 +24,17 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Complaint Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" {...props} title={Titles.AddressAsEntered} value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="AdditionalLocationInfo" title={Titles.AddressAsEntered} {...props} fullRow={true} maxlength={"100"}/>
-    <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"}/>
+    <Field component={TextInput} name="AdditionalLocationInfo"  {...props} fullRow={true} maxlength={"100"} disabled={values.editMode}/>
+    <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
-    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>
-    <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"}/>
-    <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
-    <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"}/>   
+    <Field component={CheckBoxInput} name={"IsAnonymous"} {...props} disabled={values.editMode}/>
+    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"} disabled={values.editMode}/>   
   </fieldset>)
 };
 

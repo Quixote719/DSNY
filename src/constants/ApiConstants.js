@@ -68,6 +68,8 @@ export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `https://services5.arcgis.com/Gfw
 
 //Forms - Bulk Pickup Request
 export const FETCH_PICKUP_LOCATIONS_URL = `${REST_WEBAPI_EPICKUP_URL}BulkPickups/GetPickupLocations`;
+export const POST_BULK_PICKUP_REQUEST = `${REST_WEBAPI_EPICKUP_URL}BulkPickups/AddUpdatePickUpRequest`;
+
 
 //Forms - E.Waste Pickup Request
 export const FETCH_PICKUP_ITEM_CATEGORIES_URL = `${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetItemCategories`;
