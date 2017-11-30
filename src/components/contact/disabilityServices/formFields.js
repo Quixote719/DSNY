@@ -24,7 +24,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="Name" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="Subject" {...props} required fullRow={true} maxlength={"200"}/>
-    <Field component={TextAreaInput} name="Message" {...props} required maxlength={"5000"}/>
+    <Field component={TextAreaInput} name="Message" {...props} required />
   </fieldset>)
 };
 

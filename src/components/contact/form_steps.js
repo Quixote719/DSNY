@@ -210,7 +210,6 @@ const FormSteps = compose(
     // {
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
     
-
       if(!initialPageLoad)
       {
           inputs.forEach(input => {
@@ -221,8 +220,9 @@ const FormSteps = compose(
             {
                 //alert("Hi");
                 //errors[input.name] = "Please validate the above address"
-                if(props.isAddressValidated === undefined && props.isAddressValidated === "")
+                if(props.isAddressValidated === undefined || props.isAddressValidated === "")
                   errors[input.name] = Titles.RequiredFieldMessage
+                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
                 else
                   errors[input.name] = "Please enter NY address and click on Validate"
 

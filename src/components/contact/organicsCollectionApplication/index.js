@@ -18,7 +18,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class CompostRequestForm extends Component {
+class OrganicsCollectionApplication extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -94,4 +94,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject})(CompostRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(OrganicsCollectionApplication);
