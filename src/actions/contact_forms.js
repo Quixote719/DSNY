@@ -7,6 +7,7 @@ import {
 	FETCH_PICKUP_ITEM_SUB_CATEGORIES_URL,
 	POST_FORM_COMMERCIAL_ORGANICS_REQUEST_URL,
 	GET_UNAVAILABLE_DATES,
+	FETCH_PICKUP_LOCATIONS_URL,
 	IS_DISTRICT_ACTIVE,
 	FETCH_TEN_PLUS_BUILDINGS_STATUS
 } from '../constants/ApiConstants';
@@ -30,6 +31,16 @@ export function PickupReqGetItemCategories() {
 			dispatch({type: types.FETCH_PICKUP_ITEM_CATEGORIES, payload: data,})
 		}).catch(function(error) {
 			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+		});
+	}
+}
+
+export function PickupLocations() {
+	return function(dispatch) {
+		axios.get(FETCH_PICKUP_LOCATIONS_URL).then((data) => {
+			dispatch({type: types.FETCH_PICKUP_LOCATIONS, payload: data})
+		}).catch(function(error) {
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error})
 		});
 	}
 }
