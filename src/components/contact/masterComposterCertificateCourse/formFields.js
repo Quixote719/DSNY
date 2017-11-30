@@ -41,7 +41,7 @@ const masterComposerCertificateCourseElements = (props) => {
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} required  value="" disabled={values.editMode}/>
-    <Field component={TextInput} name="Apartment" {...props} maxlength="35" required />
+    <Field component={TextInput} name="Apartment" {...props} maxlength="35" />
     
     <FormSectionHeader title={Titles.SectionTwo} />
     <Field component={DropdownInput} name="PrefferedLocation" {...props} ondropDownChange={handledropDown} onChange={setFieldValue}  
