@@ -63,7 +63,7 @@ updateValues(geoCoderAddressResult){
 
         if (geoCoderAddressResult){
           console.log(this.props);
-          if (typeof pickupLocations === 'undefined')
+          if (typeof unavailableDates === 'undefined')
           this.updateValues(geoCoderAddressResult)
         }
 
@@ -81,7 +81,7 @@ updateValues(geoCoderAddressResult){
 
 
 function mapStateToProps(state) {
-
+console.log('varma',state.forms.pickupLocations);
   return {FormObject: state.forms.formObject,pickupLocations:state.forms.pickupLocations,success:state.forms.success,unavailableDates:state.forms.unavailableDates, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
   error:state.error.type};
 }

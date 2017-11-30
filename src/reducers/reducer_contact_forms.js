@@ -40,10 +40,9 @@ export default function cardReducer(state = {}, action) {
           isDistrictActive:action.payload.data
         };
         case types.FETCH_PICKUP_LOCATIONS:
-
           return {
             ...state,
-            pickupLocations:action.payload.data
+            pickupLocations:action.payload
           };
         case types.GET_UNAVAILABLE_DATES:
 

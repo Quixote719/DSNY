@@ -37,10 +37,9 @@ const DisplayFormikState = props => <div style={{
 const EwastePickUpRequestFormElements = (props) => {
 	const { values, setFieldValue,pickupLocations, Dates,  geoCoderAddressResult } = props;
 
+console.log('sufsahdb vadhfaskdfbsad ', pickupLocations);
 
-
-	if (Dates){
-		debugger;
+	if (Dates && pickupLocations && geoCoderAddressResult){
      values.Dates = Dates;
 		 values.PickupLocations = pickupLocations;
 		 values.AppointmentDate = moment(Dates[0].StartDate)
