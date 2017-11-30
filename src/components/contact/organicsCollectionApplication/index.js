@@ -10,6 +10,7 @@ import FormSteps, {displayThankYouPage} from '../form_steps'
 import {Field} from 'formik'
 import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
+import IdentitySelector from './identitySelector'
 import FetchError from '../fetchError'
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject } from './constants'
@@ -27,7 +28,7 @@ class OrganicsCollectionApplication extends Component {
     this.state = {
     FormObject:{},
       editMode:true,
-      step: 1
+      step: false
     }
   }
 
@@ -36,10 +37,9 @@ class OrganicsCollectionApplication extends Component {
   // }
 
   stepFunc(){
-    let temp = this.state.step;
-    ++temp;
+
     this.setState({
-      step: temp
+      step: true
     });
   }
 
@@ -70,15 +70,21 @@ class OrganicsCollectionApplication extends Component {
 
         if (FormObject && FormObject !== undefined) {
 
-        return (<div className='container'><div className='form compostForm'>
-                {  this.state.step==1 &&
-                  <div>
-                    <div>step 1</div>
-                  </div>
-                }
-
+        return (
+          <div>
+          {  !this.state.step &&
+              <div className='container'>
+                <div className='form compostForm'>
+                    <FormSteps formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm}/>
+                </div>
+              </div>
+          }
+          <div className='container'>
+            <div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
-                </div></div>);
+            </div>
+          </div>
+        </div>);
         };
 
         if (error){
