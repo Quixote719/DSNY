@@ -139,6 +139,7 @@ class WebformPage extends Component {
               case 'sanitation-truck-spillage-complaint':
                 return <SanitationTruckSpillageForm />
               case 'private-receptacle-complaint':
+                return <PrivateReceptableComplaintForm />
               // The big form
               case 'organics-collection-application':
                 return <OrganicsCollectionApplication />

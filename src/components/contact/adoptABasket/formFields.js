@@ -31,19 +31,19 @@ const adoptABasketElements = (props) => {
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
-    <Field component={TextAreaInput} name="BasketAdditionalLocationInfo" {...props} />
+    <Field component={TextAreaInput} name="BasketAdditionalLocationInfo" {...props} disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100"/>
-    <Field component={TextInput} name="BusinessAddressAsEntered" {...props} fullRow={true} maxlength="100"/>
-    <Field component={TextInput} name="BusinessApartment" {...props} maxlength="100" /> 
+    <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100" disabled={values.editMode}/>
+    <Field component={TextInput} name="BusinessAddressAsEntered" {...props} fullRow={true} maxlength="100" disabled={values.editMode}/>
+    <Field component={TextInput} name="BusinessApartment" {...props} maxlength="100" disabled={values.editMode}/> 
 
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={TextInput} name="FirstName" {...props} maxlength="100" />
-    <Field component={TextInput} name="LastName" {...props} maxlength="100" />
-    <Field component={TextInput} name="Email" {...props} maxlength="100" />
-    <Field component={TextInput} name="confirmEmail" {...props} maxlength="100" />
-    <Field component={TextInput} name="Phone" {...props} maxlength="100"/>
+    <Field component={TextInput} name="FirstName" {...props} maxlength="100" disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} maxlength="100" disabled={values.editMode}disabled={values.editMode}disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} maxlength="100" disabled={values.editMode}disabled={values.editMode}/>
+    <Field component={TextInput} name="confirmEmail" {...props} maxlength="100" disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} maxlength="100" disabled={values.editMode}/>
 
   </fieldset>)
 };
