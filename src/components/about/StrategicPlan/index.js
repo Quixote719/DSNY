@@ -65,13 +65,6 @@ class StrategicPlan extends Component {
           {banner}
               <div>{STdata.header}</div>
               <ImageSection ImageProps = {ImageProps}/>
-              <div className = 'SContainer'>
-                <Row>
-                  <Col xs={12} sm={12} md={12}>
-                    <PageText PageExplanation = {PageExplanation} />
-                  </Col>
-                </Row>
-              </div>
               <div className = 'greyBcg' >
                 <div className = 'SContainer boxPadding'>
                   <CardBox info={PlanProps}/>

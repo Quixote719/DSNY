@@ -29,39 +29,39 @@ const formFields = (props) => {
     <div>
       <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} {...props} />
+    <Field component={TextInput} name="Apartment" fullRow={true} maxlength={10} disabled={values.editMode} {...props} />
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={TextInput} name="RegistrantBusinessName" fullRow={true} maxlength={50} {...props} required/>
-    <Field component={TextInput} name="RegistrantFirstName" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="RegistrantLastName" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="RegistrantTitle" maxlength={30} {...props} required/>
-    <Field component={TextInput} name="RegistrantEmail" maxlength={30} {...props} required/>
-    <Field component={TextInput} name="RegistrantPhone" maxlength={21} {...props} required/>
-    <Field component={DropdownInput} name="RegistrantPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.RegistrantPhoneTypes} disabled={values.editMode}/>
+    <Field component={TextInput} name="RegistrantBusinessName" fullRow={true} maxlength={50} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="RegistrantFirstName" maxlength={20} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="RegistrantLastName" maxlength={20} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="RegistrantTitle" maxlength={30} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="RegistrantEmail" maxlength={30} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="RegistrantPhone" maxlength={21} disabled={values.editMode} {...props} required/>
+    <Field component={DropdownInput} name="RegistrantPhoneTypeId" disabled={values.editMode} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.RegistrantPhoneTypes} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
 
-    <Field component={TextInput} name="AddressAsEntered" fullRow={true} maxlength={200} {...props} />
-    <Field component={TextInput} name="MailingApartment" maxlength={10} {...props} />
+    <Field component={TextInput} name="AddressAsEntered" fullRow={true} maxlength={200} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="MailingApartment" maxlength={10} disabled={values.editMode} {...props} />
 
     <FormSectionHeader title={Titles.sectionFour}/>
-    <Field component={MultiSelectInput} name="BusinessActivityTypes" {...props} onMultiSelect={setFieldValue} options={values.BusinessActivityTypes} required/>
-    <Field component={TextInput} name="OtherDescribe" fullRow={true} maxlength={200} {...props} isHidden={!values.BusinessActivityTypes.Values[5].Selected} required/>
+    <Field component={MultiSelectInput} name="BusinessActivityTypes" disabled={values.editMode} {...props} onMultiSelect={setFieldValue} options={values.BusinessActivityTypes} required/>
+    <Field component={TextInput} name="OtherDescribe" fullRow={true} maxlength={200} disabled={values.editMode} {...props} isHidden={!values.BusinessActivityTypes.Values[5].Selected} required/>
     <FormSectionHeader title={Titles.sectionFive}/>
-    <Field component={MultiSelectInput} name="OnSiteProcessingTypes" {...props} onMultiSelect={setFieldValue} options={values.OnSiteProcessingTypes} required/>
+    <Field component={MultiSelectInput} name="OnSiteProcessingTypes" disabled={values.editMode} {...props} onMultiSelect={setFieldValue} options={values.OnSiteProcessingTypes} required/>
 
     <FormSectionHeader title={Titles.sectionSix}/>
-    <Field component={TextInput} name="EquipmentManufacturer" maxlength={100} {...props} />
-    <Field component={TextInput} name="EquipmentModelNo" maxlength={100} {...props} />
-    <Field component={TextInput} name="EquipmentDescribeSystem" maxlength={200} {...props} />
-    <Field component={TextInput} name="EquipmentMinimumCapacity" maxlength={20} {...props} required/>
-    <Field component={TextInput} name="EquipmentMaximumCapacity" maxlength={20} {...props} required/>
-    <Field component={DateTimePickerInput} name="InstallationDate" {...props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>
+    <Field component={TextInput} name="EquipmentManufacturer" maxlength={100} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="EquipmentModelNo" maxlength={100} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="EquipmentDescribeSystem" maxlength={200} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="EquipmentMinimumCapacity" maxlength={20} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="EquipmentMaximumCapacity" maxlength={20} disabled={values.editMode} {...props} required/>
+    <Field component={DateTimePickerInput} name="InstallationDate" {...props} onChange={setFieldValue} defaultValue={values.InstallationDate} disabled={values.editMode}  required/>
     <FormSectionHeader title={Titles.sectionSeven}/>
     <Field component={DropdownInput} name="GreaseInterceptorTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorManufacturer" maxlength={100} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorModelNo" maxlength={100} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorCapacity" maxlength={20} {...props} />
-    <Field component={TextInput} name="GreaseInterceptorFlow" maxlength={50} {...props} />
+    <Field component={TextInput} name="GreaseInterceptorManufacturer" maxlength={100} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="GreaseInterceptorModelNo" maxlength={100} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="GreaseInterceptorCapacity" maxlength={20} disabled={values.editMode} {...props} />
+    <Field component={TextInput} name="GreaseInterceptorFlow" maxlength={50} disabled={values.editMode} {...props} />
   </fieldset>)
 };
 
