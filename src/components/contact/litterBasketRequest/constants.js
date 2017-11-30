@@ -15,11 +15,18 @@ export const Titles = {
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
+  AddressAsEntered: 'NEAREST ADDRESS',
 }
 
 export const formObject = {
   "AdditionalLocationInfo": null,
   "Reasons": [
+    {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Bus Stop",

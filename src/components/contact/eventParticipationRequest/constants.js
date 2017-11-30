@@ -1,6 +1,7 @@
 export const Titles = {
-  sectionOne: 'SECTION 1: WHERE IS THE EVENT',
+  sectionOne: 'WHERE IS THE EVENT',
   sectionTwo: 'EVENT INFORMATION',
+  AddressAsEntered:'ADDRESS',
   sectionThree: 'PRIMARY CONTACT INFORMATION',
   sectionFour: 'SECONDARY CONTACT INFORMATION (OPTIONAL)',
   sectionFive: 'SECTION 5: SITE INFORMATION',

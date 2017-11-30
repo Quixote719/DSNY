@@ -17,12 +17,19 @@ export const Titles = {
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',
+  AddressAsEntered: 'NEAREST ADDRESS',
 }
 
 export const formObject = {
 
   "AnimalId": 0,
   "Animals": [
+    {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Bird",
@@ -101,6 +108,12 @@ export const formObject = {
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
   "DeadAnimalLocations": [
+    {
+      "Id": 0,
+      "Name": "Select One",
+      "DisplayName": "Select One",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Highway",

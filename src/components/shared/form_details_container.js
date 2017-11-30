@@ -40,7 +40,11 @@ import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationF
 import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
 import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 import RefashionNYCForm from '../contact/refashionNYC';
+<<<<<<< HEAD
 import OrganicsCollectionApplication from '../contact/organicsCollectionApplication'
+=======
+import OrganicsCollectionApplication from '../contact/organicsCollectionApplication';
+>>>>>>> e32c5bc9a18042f773e73d75d1ce8d6eb5592481
 
 class WebformPage extends Component {
 
@@ -143,7 +147,9 @@ class WebformPage extends Component {
               case 'sanitation-truck-spillage-complaint':
                 return <SanitationTruckSpillageForm />
               case 'private-receptacle-complaint':
-                return <PrivateReceptableComplaintForm />
+              // The big form
+              case 'organics-collection-application':
+                return <OrganicsCollectionApplication />
               default:
                 break;
             }
