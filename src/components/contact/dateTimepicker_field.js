@@ -44,7 +44,6 @@ console.log(Dates);
    }
 
     if(Dates){
-  debugger;
       var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
       var d = Dates[0];
       if (d)
