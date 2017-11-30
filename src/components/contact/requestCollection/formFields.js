@@ -31,14 +31,14 @@ const CompostRequestFormElements = (props) => {
       <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={FileDropZone} name="files1" {...props} value={values.files1} header='A COPY OF THE CERTIFICATE OF OCCUPANCY' note='temporary one is acceptable; not required for nonprofit organizations that lease or rent their space'  onChange={setFieldValue}/>   
-    <Field component={FileDropZone} name="files2" {...props} value={values.files2} header='FOR NONPROFIT ORGNIZATIONS ONLY' note='A copy of the Notice of Assessment Statement from the Department of Finance, or a letter from another City Agency stating that the organization receives funding from and operates as an agent or contractor of the Agency to operate at the address for which they are requesting collection services.' onChange={setFieldValue}/>    
+    <Field component={FileDropZone} name="files1" {...props} disabled={values.editMode} value={values.files1} header='A COPY OF THE CERTIFICATE OF OCCUPANCY' note='temporary one is acceptable; not required for nonprofit organizations that lease or rent their space'  onChange={setFieldValue}/>   
+    <Field component={FileDropZone} name="files2" {...props} disabled={values.editMode} value={values.files2} header='FOR NONPROFIT ORGNIZATIONS ONLY' note='A copy of the Notice of Assessment Statement from the Department of Finance, or a letter from another City Agency stating that the organization receives funding from and operates as an agent or contractor of the Agency to operate at the address for which they are requesting collection services.' onChange={setFieldValue}/>    
     <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
-    <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
-    <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"}/>
-    <Field component={TextInput} name="Phone" {...props} required maxlength={"21"}/>   
+    <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} required maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} required maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} required maxlength={"21"} disabled={values.editMode}/>   
   </fieldset>)
 };
 

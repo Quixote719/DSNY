@@ -25,17 +25,17 @@ const CompostRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
+    <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={DropdownInput} name="LitterBasketReasonId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.Reasons} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} required={values.LitterBasketReasonId == 6} maxlength={"25"}/>
+    <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} required={values.LitterBasketReasonId == 6} maxlength={"25"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={CheckBoxInput} name={"IsAnonymous"} {...props}/>
-    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"}/>
-    <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"}/>
-    <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"}/>
-    <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"}/>   
+    <Field component={CheckBoxInput} name={"IsAnonymous"} {...props} disabled={values.editMode}/>
+    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"} disabled={values.editMode}/>   
   </fieldset>)
 };
 
