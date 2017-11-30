@@ -32,6 +32,7 @@ class FormDateTimePicker extends Component {
   render() {
 
     const{Dates} = this.props;
+console.log(Dates);
     function contains(a, obj) {
        var i = a.length;
        while (i--) {
@@ -43,7 +44,7 @@ class FormDateTimePicker extends Component {
    }
 
     if(Dates){
-
+  debugger;
       var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
       var d = Dates[0];
       if (d)
