@@ -21,7 +21,8 @@
   "ConfirmEmail": "CONFIRM E-MAIL",
   "Phone": "PHONE",
   "IsAnonymous": "I would like to remain anonymous",
-  "IsVehicleCommercial": "Commercial License"
+  "IsVehicleCommercial": "Commercial License",
+  "AddressAsEntered": "ADDRESS"
 }
 
 export const formObject = {

@@ -17,6 +17,7 @@
   "ConfirmEmail": "CONFIRM E-MAIL",
   "Phone": "PHONE",
   "IsAnonymous": "I would like to remain anonymous",
+  "AddressAsEntered": "ADDRESS"
 }
 
 export const formObject = {
