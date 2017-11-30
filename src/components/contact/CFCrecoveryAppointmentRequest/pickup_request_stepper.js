@@ -35,7 +35,7 @@ class RequestStepper extends Component {
 	renderCatg(ItemCatg) {
 		if (ItemCatg)
 			return _.map(ItemCatg, Item => {
-				return (<div key={Item.Category}><FormStepper obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState}/></div>);
+				return (<div key={Item.Category}><FormStepper   total='99'  maxValue='99' obj={Item} disabled={this.props.disabled} title={Item.Category} onIncDec={this.updateState}/></div>);
 			});
 
 		}

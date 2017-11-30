@@ -39,9 +39,7 @@ class CFCRequestForm extends Component {
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
+  
 
     return errors;
   }
