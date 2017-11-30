@@ -17,26 +17,6 @@ import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormAddressAutocompleteNoValidation from '../formAdressAutoCmpleteNoValidation';
 import {Col} from 'react-bootstrap';
 
-const DisplayFormikState = props => <div style={{
-		margin: '1rem 0'
-	}}>
-	<h3 style={{
-			fontFamily: 'monospace'
-		}}/>
-	<pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '2rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>values</strong> ={' '}
-
-      {JSON.stringify(props.values, null, 2)}
-    </pre>
-  </div>;
-
-
 // Our inner form component which receives our form's state and updater methods as props 
 const eventParticipationRequestFormElements = (props) => {
  
@@ -46,21 +26,18 @@ const eventParticipationRequestFormElements = (props) => {
     setFieldValue,
   } = props;
   
-  
-  
+
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne} />
-    <div>
-      <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
-    </div>
+    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow= {true} {...props} maxlength="100"/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="EventName" {...props} maxlength="35" required/>
     <Field component={TextInput} name="AlternateName" {...props} maxlength="35" required/>
-    <Field component={DateTimePickerInput} name="StartDate" {...props} onChange={setFieldValue} required/>
+    <Field component={DateTimePickerInput} name="StartDate" {...props} onChange={setFieldValue}  required />
     <Field component={DateTimePickerInput} name="EndDate" {...props} onChange={setFieldValue} required />
     <Field component={DropdownInput}  name="StartTime" timeField={true} {...props} required ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.startDailyTimes} disabled={values.editMode}/>
     <Field component={DropdownInput} name="EndTime" timeField={true} {...props} required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.EndDailyTimes} disabled={values.editMode} />
@@ -103,7 +80,6 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={DropdownInput} name="SPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SecondarySelectedPhoneTypes}  disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" />
     <Field component={TextInput} name="SEmailConfirm" {...props} maxlength="50" />
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
   </fieldset>)
 };
 

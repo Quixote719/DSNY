@@ -40,6 +40,7 @@ import CollectionBinRegistrationForm from '../contact/collectionBinRegistrationF
 import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageComplaint';
 import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 import RefashionNYCForm from '../contact/refashionNYC';
+import OrganicsCollectionApplication from '../contact/organicsCollectionApplication';
 
 class WebformPage extends Component {
 
@@ -112,13 +113,17 @@ class WebformPage extends Component {
               case 'e-waste-pickup-request':
                 return <EwasteRequestForm />;
               case 'refashion-nyc':
-                return <RefashionNYCForm />;  
+                return <RefashionNYCForm />;
+              // Daniel's form
               case 'recyclable-material-theft-observation':
                 return <RecyclableMaterialTheft />
               case 'failure-to-store-receptacles':
                 return <FailureStoreReceptacles />
               case 'commercial-organics-on-site-processing-registration':
-              return <OrganicsForm />
+                return <OrganicsForm />
+              case 'collection-bin-annual-reporting':
+                return <CollectionBinReport />
+              // Daniel's form end
               case 'equal-employment-opportunity-complaint-form':
               return <EEOComplaintForm />
               case   'site-visit-request':
@@ -133,12 +138,12 @@ class WebformPage extends Component {
                 return <CRFLRequestForm />
               case 'dsny-compost-request':
                 return <CompostRequest />
-              case 'collection-bin-annual-reporting':
-                return <CollectionBinReport />
               case 'sanitation-truck-spillage-complaint':
                 return <SanitationTruckSpillageForm />
               case 'private-receptacle-complaint':
-                return <PrivateReceptableComplaintForm />
+              // The big form
+              case 'organics-collection-application':
+                return <OrganicsCollectionApplication />
               default:
                 break;
             }

@@ -9,9 +9,8 @@ import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
+import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
 import {Col} from 'react-bootstrap';
-
-
 
 // Our inner form component which receives our form's state and updater methods as props
 const CompostRequestFormElements = (props) => {
@@ -25,7 +24,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" required {...props} title={Titles.AddressAsEntered}  value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={DropdownInput} name="BinsToReplace" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.NumberOfOutdoorBins} disabled={values.editMode} {...props} required/>

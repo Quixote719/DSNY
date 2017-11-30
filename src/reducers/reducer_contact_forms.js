@@ -39,6 +39,11 @@ export default function cardReducer(state = {}, action) {
           ...state,
           isDistrictActive:action.payload.data
         };
+        case types.FETCH_PICKUP_LOCATIONS:
+          return {
+            ...state,
+            pickupLocations:action.payload
+          };
         case types.GET_UNAVAILABLE_DATES:
 
           return {

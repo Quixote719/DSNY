@@ -19,7 +19,8 @@ class FormDateTimePicker extends Component {
     }
   }
 
-  onInputChange(item) {
+  onInputChange(a,item) {
+   // console.log(a);
     /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
     if(item._d !== undefined){
        item._d = moment(item._d).format(this.state.defaultDateFormat);
@@ -28,10 +29,10 @@ class FormDateTimePicker extends Component {
   }
 
 
-
   render() {
 
     const{Dates} = this.props;
+
     function contains(a, obj) {
        var i = a.length;
        while (i--) {
@@ -43,12 +44,10 @@ class FormDateTimePicker extends Component {
    }
 
     if(Dates){
-
       var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
       var d = Dates[0];
       if (d)
-  var valid = function( current ){
-    console.log(contains(dd, current._d));
+     var valid = function( current ){
       return (!contains(dd, current._d) ) && (current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 ) ;
     }
 };
@@ -59,7 +58,7 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled }} defaultValue={this.props.defaultValue} isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
+            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} defaultValue={this.props.defaultValue} isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}/>
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
           </fieldset>
@@ -86,7 +85,7 @@ const DateTimePickerInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormDateTimePicker name={name} title={props.formTitles[name]} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormDateTimePicker name={name} title={props.formTitles[name]} {...field}  {...props}  touch={touch} error={error} />}
 
     </div>
   )

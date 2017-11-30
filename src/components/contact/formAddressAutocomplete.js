@@ -9,10 +9,12 @@ import SubSectionButton from '../shared/sub_section_button';
 import styles from '../../content/styles/collectionBinForm.css';
 import _ from "lodash";
 import isEmpty from 'lodash/isEmpty';
+import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 
-import {addressValidationMessage} from './form_steps'
+
 
 let errorFlag = 0;
+let showflag = true;
 
 var errorMessage =  (
         <div className = "pleaseEnterAddressForm">
@@ -35,6 +37,7 @@ class FormAddressAutocomplete extends Component {
     handleChange = (address) =>{
         //this.props.checkAddressValidator(0);
         this.props.checkAddressValidator(address);
+        showflag = true;
         if(address.trim().length === 0 || address === ""){
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
@@ -46,7 +49,8 @@ class FormAddressAutocomplete extends Component {
             address,
         })
         
-        isEmpty(address) || address.trim() === "" ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        isEmpty(address) || address.trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+
     }
     resetPlaceHolder = () =>{
         // this.setState({
@@ -59,9 +63,11 @@ class FormAddressAutocomplete extends Component {
         //   placeholder: " "
         // })
   
-    //console.log("DINESH" + this.refs.myinput.value )
-         this.setState({hideToolTip: false});
-  
+        if(this.props.errors[this.props.name] === "This field is required")
+            isEmpty(this.state.address) || this.state.address.trim().trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        else
+            this.setState({hideToolTip: false});
+
     }
     suggestedAddressSelected = (value) =>{
         this.setState({
@@ -78,6 +84,7 @@ class FormAddressAutocomplete extends Component {
              });
             // this.props.getCollectionSchedule(address);
          this.props.getCollectionSchedule(address, this.successCallback);
+         showflag = false;
         }
     }
 
@@ -88,6 +95,7 @@ class FormAddressAutocomplete extends Component {
     validateButtonClicked =()=>{
          this.props.checkAddressValidator(1);
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
+         showflag = false;
     }
     successCallback = (success)=>{
         if (this.props.noResultsError.FormattedAddress) {
@@ -135,7 +143,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && !this.state.hideToolTip))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && showflag))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -144,7 +152,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && !this.state.hideToolTip))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && showflag))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -163,10 +171,12 @@ class FormAddressAutocomplete extends Component {
         }
         return (
             <div>
+                {/* {console.log("DDD" + this.props.addressValidator)} */}
+                <FormTitleCheckBoxes title={this.props.title}/>
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} md={this.props.disabled ? 12 : 10}>
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
-                    {this.props.errors[this.props.name] && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
+                    {this.props.errors[this.props.name] && !this.state.hideToolTip && showflag?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
                     {errorMessage}
                     {(this.props.DSNYGeoCoder != null || this.props.suggestionAddress != null)?<div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                     <div className = "addressNotFound">
@@ -183,10 +193,6 @@ class FormAddressAutocomplete extends Component {
                     <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}} >
                     <Col xs={12} md={2} className = "validateButtonCol">
                     <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
-                    {/*<button id="validateBtn" onClick={this.validateButtonClicked} className='subSectionButton'>
-                        VALIDATE
-                    </button>
-                    {(addressValidationMessage)?<Tooltip placement="bottom" id="tooltip-bottom" className={addressValidationMessage?"in":''}>{addressValidationMessage}</Tooltip>:null}*/}
                     </Col>
                     </div>
 

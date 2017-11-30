@@ -54,7 +54,7 @@ class FormStepper extends Component {
       var i = count += 1
       console.log(this.props);
       object.RequestedQty = i
-      if(fieldTotal < 20 && i <= this.props.maxValue)
+      if(fieldTotal < this.props.total && i <= this.props.maxValue)
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
@@ -66,7 +66,7 @@ class FormStepper extends Component {
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
-        if(fieldTotal < 20 && i <= this.props.maxValue)
+        if(fieldTotal < this.props.total && i <= this.props.maxValue)
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
@@ -82,7 +82,7 @@ class FormStepper extends Component {
         fieldTotal = categoryTotal + subCategoryTotal;
         var {count, object} = this.state
 
-        if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat? subCategoryTotal: categoryTotal)> this.props.maxValue) || fieldTotal > 20))
+        if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat? subCategoryTotal: categoryTotal)> this.props.maxValue) || fieldTotal > this.props.total))
         {
           object.RequestedQty = 0
           this.setState({count:0,hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});

@@ -26,6 +26,7 @@ class EventParticipationRequestForm extends Component {
   }
 
   postForm(formObject){
+      console.log(formObject);
       let modifyFormObject = this.modifyFormObject(formObject);
       this.props.postFormObject(formObject, POST_FORM_EVNT_PARTICIP_REQ_URL);
   }

@@ -23,13 +23,11 @@ const CompostRequestFormElements = (props) => {
     setFieldValue,
   } = props;
 
-  // data={values.file} 
-
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeaderSmallSize title='Online Registration' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" {...props} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"}/>
     <FormSectionHeader title={Titles.sectionTwo}/> 
@@ -63,7 +61,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={CheckBoxInput} name="CoatsCollected" {...props}/>
     <Field component={CheckBoxInput} name="RugsCollected" {...props}/>
     <Field component={CheckBoxInput} name="OtherCollected" {...props}/>
-    <Field component={TextInput} name="OtherCollecdtedMaterialDescribe" {...props} fullRow={true} isHidden={!values.OtherCollected} maxlength={"100"}/>
+    <Field component={TextInput} name="OtherCollecdtedMaterialDescribe" {...props} fullRow={true} isHidden={!values.OtherCollected} required={values.OtherCollected} maxlength={"100"}/>
     <FormTitleCheckBoxes title="IS THIS BIN MANAGED BY A NON-PROFIT AGENCY OR ORGNIZATION (OPTIONAL)"/>
     <Field component={DropdownInput} name="IsManagedByANonProfit" {...props}  onChange={setFieldValue} disabled={values.editMode} />
     <FormTitleCheckBoxes title="THE BIN OWNER RECEIVED WRITTEN PERMISSION FROM PROPERTY OWNER"/>

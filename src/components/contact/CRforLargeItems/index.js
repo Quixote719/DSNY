@@ -5,7 +5,7 @@ import {
   PSOT_FORM_COMPOST_REQUEST_URL
 } from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFormObject, GetUnavailableDates} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject, GetUnavailableDates, PickupLocations} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -25,25 +25,19 @@ class CRFLRequestForm extends Component {
     }
   }
 
-  componentDidMount() {
-    this.props.fetchFormObject();
-  }
-
   componentWillReceiveProps(nextProps) {
     if (nextProps.geoCoderAddressResult !== this.props.geoCoderAddressResult) {
       const {geoCoderAddressResult} = nextProps
       if (geoCoderAddressResult){
-      console.log('varma', geoCoderAddressResult);
         this.updateValues(geoCoderAddressResult)
       }
     }
 }
 
 updateValues(geoCoderAddressResult){
-  console.log(geoCoderAddressResult);
- // this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
- this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationDistrict}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationDistrict}&SectionAndSubsection=${geoCoderAddressResult.sanitationDistrict}`)
- // this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
+
+  this.props.PickupLocations();
+ this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationRegularCollectionSchedule}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}&SectionAndSubsection=${geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection}`);
 }
 
 
@@ -60,7 +54,7 @@ updateValues(geoCoderAddressResult){
   }
 
   render() {
-    const { error, success, geoCoderAddressResult} = this.props;
+    const { error, success,unavailableDates, pickupLocations,  geoCoderAddressResult} = this.props;
 
 
         if(success !== undefined) {
@@ -75,7 +69,7 @@ updateValues(geoCoderAddressResult){
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -87,10 +81,10 @@ updateValues(geoCoderAddressResult){
 
 
 function mapStateToProps(state) {
-
-  return {FormObject: state.forms.formObject,success:state.forms.success, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
+console.log('varma',state.forms.pickupLocations);
+  return {FormObject: state.forms.formObject,pickupLocations:state.forms.pickupLocations,success:state.forms.success,unavailableDates:state.forms.unavailableDates, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
   error:state.error.type};
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFormObject,GetUnavailableDates})(CRFLRequestForm);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject,GetUnavailableDates, PickupLocations})(CRFLRequestForm);

@@ -26,23 +26,23 @@ const sanitationTruckSpillageFormElements = (props) => {
     
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
+    <FormAddressAutocomplete name="AddressAsEntered"  title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow={true} {...props} maxlength="100" />
 
     <FormSectionHeader title={Titles.sectionTwo} />
     <Field component={TextAreaInput} name="Description" {...props} maxlength="1500" required/>
     <Field component={DateTimePickerInput} name="IncidentDate" {...props} required onChange={setFieldValue}/>
     <Field component={DropdownInput} name="IncidentTime" {...props} timeField={true} required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.IncidentTimes} />
-    <Field component={TextInput} name="LicensePlateNumber" {...props} />
-    <Field component={TextInput} name="TruckNumber" {...props} />
+    <Field component={TextInput} name="LicensePlateNumber" {...props} maxlength="10"/>
+    <Field component={TextInput} name="TruckNumber" {...props} maxlength="10"/>
     
     
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={TextInput}  name="FirstName" {...props}/> 
-    <Field component={TextInput}  name="LastName" {...props}/> 
-    <Field component={TextInput}  name="Email" {...props} />
-    <Field component={TextInput} name="ConfirmEmail" {...props} />
-    <Field component={TextInput} name="Phone" {...props} />
+    <Field component={TextInput}  name="FirstName" {...props} maxlength="25"/> 
+    <Field component={TextInput}  name="LastName" {...props} maxlength="25"/> 
+    <Field component={TextInput}  name="Email" {...props} maxlength="50"/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50"/>
+    <Field component={TextInput} name="Phone" {...props} maxlength="21"/>
     
   
   </fieldset>)

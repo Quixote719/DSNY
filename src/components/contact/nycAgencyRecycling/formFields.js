@@ -31,13 +31,13 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="Phone" {...props} required maxlength={"21"}/>   
-    <Field component={DropdownInput} name="PhoneTypeId" {...props}  onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PhoneTypeId" {...props}  onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} required maxlength={"50"}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={FileDropZone} name="files1" {...props} value={values.files1} header='FILE #1' note='You can upload up to 3 files, but the total size of all files uploaded cannot exceed 10 MB.' onChange={setFieldValue}/>
     <Field component={FileDropZone} name="files2" {...props} value={values.files2} header='FILE #2' onChange={setFieldValue}/>
-    <Field component={FileDropZone} name="files3" {...props} value={values.files2} header='FILE #3' onChange={setFieldValue}/>
+    <Field component={FileDropZone} name="files3" {...props} value={values.files3} header='FILE #3' onChange={setFieldValue}/>
     <Field component={TextAreaInput} name="Message" maxlength={"2000"} {...props}/>
   </fieldset>)
 };
