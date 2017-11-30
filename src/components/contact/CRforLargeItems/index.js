@@ -62,7 +62,6 @@ updateValues(geoCoderAddressResult){
         }
 
         if (geoCoderAddressResult){
-          console.log(this.props);
           if (typeof unavailableDates === 'undefined')
           this.updateValues(geoCoderAddressResult)
         }
