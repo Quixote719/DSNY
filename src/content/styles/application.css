@@ -384,6 +384,10 @@ border-radius: 0;
   resize: none;
 }
 
+.form textarea:disabled{
+  cursor:not-allowed;
+}
+
 .form input, .form input.form-control {
   height: 36px;
   border: 1px solid #DFDFDF;
@@ -500,3 +504,4 @@ border-radius: 0;
     margin: 20px 15px 30px 0;
 }
 /* Common Form CSS -- End */
+

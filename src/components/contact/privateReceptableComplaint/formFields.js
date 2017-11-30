@@ -27,7 +27,7 @@ const PrivateReceptableComplaintFormElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
 
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>

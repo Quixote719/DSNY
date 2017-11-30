@@ -37,7 +37,7 @@ const masterComposerCertificateCourseElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional.'/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} required  value="" disabled={values.editMode}/>

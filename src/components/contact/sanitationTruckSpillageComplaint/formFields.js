@@ -24,7 +24,7 @@ const sanitationTruckSpillageFormElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered"  title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow={true} {...props} maxlength="100" disabled={values.editMode}/>

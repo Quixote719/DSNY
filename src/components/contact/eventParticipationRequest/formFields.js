@@ -30,7 +30,7 @@ const eventParticipationRequestFormElements = (props) => {
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
     <FormSectionHeader title={Titles.sectionOne} />
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     <Field component={TextInput} name="AdditionalLocationInfo" fullRow= {true} {...props} maxlength="100" disabled={values.editMode}/>
@@ -66,7 +66,7 @@ const eventParticipationRequestFormElements = (props) => {
 
     {/*<Field component={AddressInput} name="PFullAddress" {...props} onChange={setFieldValue}  disabled={values.editMode}/>*/}
     <Field component={TextInput} name="PPhone" {...props} maxlength="21" required disabled={values.editMode}/>
-    <Field component={DropdownInput} name="PPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PPhoneTypeId" {...props}  required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
     <Field component={TextInput}   name="PEmail" {...props} maxlength="50" required disabled={values.editMode}/>
     <Field component={TextInput}   name="PEmailConfirm" {...props} maxlength="50" required disabled={values.editMode}/>
 

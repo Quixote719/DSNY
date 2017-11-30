@@ -27,7 +27,7 @@ const adoptABasketElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='New Enrollment' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='New Enrollment' information='All fields are required unless indicated as optional.'/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
