@@ -26,36 +26,36 @@ const siteVisitRequestFormElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   value="" disabled={values.editMode} />
-    <Field component={TextInput} name="Apartment" fullRow= {true} {...props} maxlength="100"/>
+    <Field component={TextInput} name="Apartment" fullRow= {true} {...props} maxlength="100" disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionTwo} />
     <Field component={DropdownInput} name="CategorizeSiteTypeId" {...props}  required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CategorizeSiteTypes} disabled={values.editMode}/>
-    <Field component={TextInput} name="SpecifyOther" {...props} maxlength="100" isHidden={values.CategorizeSiteTypeId !== 7} required/>
-    <Field component={TextInput} name="NameOfSite" {...props} maxlength="100" required/>
-    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" required/>
-    <Field component={TextAreaInput} name="Notes" {...props}  required/>
-    <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required/>
+    <Field component={TextInput} name="SpecifyOther" {...props} maxlength="100" isHidden={values.CategorizeSiteTypeId !== 7} required disabled={values.editMode}/>
+    <Field component={TextInput} name="NameOfSite" {...props} maxlength="100" required disabled={values.editMode}/>
+    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" required disabled={values.editMode}/>
+    <Field component={TextAreaInput} name="Notes" {...props}  required disabled={values.editMode}/>
+    <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} />
-    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'}/>
+    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
 
     <FormSectionHeader title={Titles.sectionFour} />
-    <Field component={TextInput} name="PfirstName" {...props} maxlength="25" required/>
-    <Field component={TextInput} name="PLastName" {...props} maxlength="25" required/>
-    <Field component={TextInput} name="PTitle" {...props} maxlength="35" required/>
-    <Field component={TextInput} name="PEmail" {...props} maxlength="50" required/>
-    <Field component={TextInput} name="PPhone" {...props} maxlength="21" required/>
+    <Field component={TextInput} name="PfirstName" {...props} maxlength="25" required disabled={values.editMode}/>
+    <Field component={TextInput} name="PLastName" {...props} maxlength="25" required disabled={values.editMode}/>
+    <Field component={TextInput} name="PTitle" {...props} maxlength="35" required disabled={values.editMode}/>
+    <Field component={TextInput} name="PEmail" {...props} maxlength="50" required disabled={values.editMode}/>
+    <Field component={TextInput} name="PPhone" {...props} maxlength="21" required disabled={values.editMode}/>
     <Field component={DropdownInput} name="PhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
 
     <FormSectionHeader title={Titles.sectionFive} />
-    <Field component={TextInput} name="SfirstName" {...props} maxlength="25" required/>
-    <Field component={TextInput} name="SLastName" {...props} maxlength="25" required/>
-    <Field component={TextInput} name="STitle" {...props} maxlength="35" required/>
-    <Field component={TextInput} name="SEmail" {...props} maxlength="50" required/>
-    <Field component={TextInput} name="SPhone" {...props} maxlength="21" required/>
+    <Field component={TextInput} name="SfirstName" {...props} maxlength="25" required disabled={values.editMode}/>
+    <Field component={TextInput} name="SLastName" {...props} maxlength="25" required disabled={values.editMode}/>
+    <Field component={TextInput} name="STitle" {...props} maxlength="35" required disabled={values.editMode}/>
+    <Field component={TextInput} name="SEmail" {...props} maxlength="50" required disabled={values.editMode}/>
+    <Field component={TextInput} name="SPhone" {...props} maxlength="21" required disabled={values.editMode}/>
     <Field component={DropdownInput} name="SPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
 
   </fieldset>)

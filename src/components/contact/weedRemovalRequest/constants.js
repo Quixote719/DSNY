@@ -1,7 +1,7 @@
 export const Titles = {
   sectionOne: 'WHERE ARE THE WEEDS LOCATED',
   sectionTwo: 'CONTACT INFORMATION',
-  AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
+  Description: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
@@ -44,5 +44,4 @@ export const formObject = {
   "Longitude": 0,
   "AddressText": null,
   "AddressTextOneLine": null,
-  "AdditionalLocationInfo": null
 }

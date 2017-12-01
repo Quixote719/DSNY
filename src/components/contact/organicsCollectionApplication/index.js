@@ -7,9 +7,11 @@ import {
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
+import IDBox from './identityBox'
 import {Field} from 'formik'
 import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
+import IdentitySelector from './identitySelector'
 import FetchError from '../fetchError'
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject } from './constants'
@@ -17,17 +19,20 @@ import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
 
 const formTitles = Titles;
-
+let IDNum = 0;
+let showIDSelector = true;
 class OrganicsCollectionApplication extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.stepFunc = this.stepFunc.bind(this);
+    this.setFormType = this.setFormType.bind(this);
     this.state = {
     FormObject:{},
       editMode:true,
-      step: 1
+      step: false,
+      formType: 0
     }
   }
 
@@ -35,12 +40,24 @@ class OrganicsCollectionApplication extends Component {
   //   this.props.fetchFormObject();
   // }
 
-  stepFunc(){
-    let temp = this.state.step;
-    ++temp;
-    this.setState({
-      step: temp
-    });
+  stepFunc(step){
+    if(showIDSelector!=step){
+      showIDSelector = step;
+      this.forceUpdate();
+    }
+  }
+
+  setFormType(ID){
+
+      console.log("SetFormType");
+      console.log(IDNum);
+      if(ID!=IDNum){
+        IDNum = ID;
+        this.forceUpdate();
+      }
+
+      // console.log("SetFormType");
+      // console.log(ID+"^^^");
   }
 
   postForm(formObject){
@@ -60,7 +77,7 @@ class OrganicsCollectionApplication extends Component {
   }
 
    render() {
-
+     console.log("IDNUM "+IDNum);
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
@@ -70,15 +87,25 @@ class OrganicsCollectionApplication extends Component {
 
         if (FormObject && FormObject !== undefined) {
 
-        return (<div className='container'><div className='form compostForm'>
-                {  this.state.step==1 &&
-                  <div>
-                    <div>step 1</div>
-                  </div>
-                }
-
+        return (
+          <div>
+          {  showIDSelector &&
+              <div className='container'>
+                <div className='form compostForm'>
+                    <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
+                </div>
+              </div>
+          }
+          {
+            (IDNum==null || IDNum==0 || IDNum==1 || IDNum==2) &&
+            <div className='container'>
+              <div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
-                </div></div>);
+              </div>
+            </div>
+          }
+          </div>
+        );
         };
 
         if (error){

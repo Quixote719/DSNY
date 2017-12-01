@@ -34,11 +34,13 @@ class FormDropdown extends Component {
 
    searchKey(Key, myArray){
     if(myArray === undefined  && Key !== undefined){
-          return Key.DisplayName;
+          return Key.DisplayName ? Key.DisplayName : Key
     }
         for (var i=0; i < myArray.length; i++) {
             if (myArray[i].Id === Key) {
                 return myArray[i].DisplayName;
+            }else if (myArray[i] === Key){
+              return myArray[i]
             }
      }
   }
@@ -48,7 +50,6 @@ class FormDropdown extends Component {
   }
 
   handleChange(event){
-    //console.log("DINESH" + this.refs.myinput.value )
      this.props.value === 0 ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
   }
 

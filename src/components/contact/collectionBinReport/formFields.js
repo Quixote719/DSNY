@@ -34,10 +34,10 @@ class formFields extends Component {
     return(
       <div>
         <Col xs={12} md={12}></Col>
-        <Field component={TextInput} title={"DSNY ASSIGNED BIN ID "+i} name={"DsnyAssignedBinId" + i} maxlength={50} {...this.props} />
-        <Field component={TextInput} title={Titles.WeightInPounds1} name={"WeightInPounds" + i} maxlength={50} {...this.props} />
+        <Field component={TextInput} title={"DSNY ASSIGNED BIN ID "+i} name={"DsnyAssignedBinId" + i} maxlength={50} disabled={values.editMode} {...this.props} />
+        <Field component={TextInput} title={Titles.WeightInPounds1} name={"WeightInPounds" + i} maxlength={50} disabled={values.editMode} {...this.props} />
         <Field component={DropdownInput} title={Titles.Removed1} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
-        {values["Removed" + i] && <Field component={DateTimePickerInput} title={Titles.RemovalDate1} name={"RemovalDate" + i} {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>}
+        {values["Removed" + i] && <Field component={DateTimePickerInput} title={Titles.RemovalDate1} name={"RemovalDate" + i} {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  disabled={values.editMode} required/>}
       </div>
     )
   }
@@ -70,18 +70,18 @@ class formFields extends Component {
       <fieldset className='disabledContactForm' disabled={values.editMode}>
           <FormHeader title='Online Reporting Form'/>
           <FormSectionHeader title={Titles.sectionOne}/>
-            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Title" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Email" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="CompanyName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Title" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="FirstName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="LastName" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Email" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="Phone" maxlength={50} {...this.props} disabled={values.editMode} required/>
           <FormSectionHeader title={Titles.sectionTwo}/>
 
-            <Field component={TextInput} name="DsnyAssignedBinId1" maxlength={50} {...this.props} required/>
-            <Field component={TextInput} name="WeightInPounds1" maxlength={50} {...this.props} required/>
+            <Field component={TextInput} name="DsnyAssignedBinId1" maxlength={50} {...this.props} disabled={values.editMode} required/>
+            <Field component={TextInput} name="WeightInPounds1" maxlength={50} {...this.props} disabled={values.editMode} required/>
             <Field component={DropdownInput} name="Removed1" {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  required/>
-            {values.Removed1 && <Field component={DateTimePickerInput} name="RemovalDate1" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  required/>}
+            {values.Removed1 && <Field component={DateTimePickerInput} name="RemovalDate1" {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate} disabled={values.editMode} required/>}
 
             {MoreBins}
             <Col xs={12} md={12}>

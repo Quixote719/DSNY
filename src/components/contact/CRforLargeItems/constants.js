@@ -8,8 +8,10 @@ export const Titles = {
 	Email: 'E-MAIL',
 	ConfirmEmail: 'CONFIRM E-MAIL',
 	AppointmentDate: 'APPOINTMENT DATE',
-	PickUpStreet: 'PICKUP STREET',
-	PickUpLocation: 'PICKUP LOCATION',
+	PickUpLocation: 'PICKUP STREET',
+	 LocationId: 'PICKUP LOCATION',
+	 SuccessMessage: "Success! Your response No. is: ",
+	 FailureMessage:"Please make sure your message is correct.",
 }
 
 export const formObject = {
@@ -27,6 +29,7 @@ export const formObject = {
 	"District": "",
 	"DistrictName": "",
 	"PickUpLocation": "",
+	"LocationId":"",
 	"BBL": "",
 	"CrossStreets": "",
 	"AppointmentDate": "",
@@ -51,7 +54,7 @@ export const formObject = {
 									"hasSubCategory": [
 						  {
 						    "$id": "1",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 1,
@@ -64,7 +67,7 @@ export const formObject = {
 						  },
 						  {
 						    "$id": "2",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 2,
@@ -77,7 +80,7 @@ export const formObject = {
 						  },
 						  {
 						    "$id": "3",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 3,
@@ -90,7 +93,7 @@ export const formObject = {
 						  },
 						  {
 						    "$id": "4",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 4,
@@ -103,7 +106,7 @@ export const formObject = {
 						  },
 						  {
 						    "$id": "5",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 5,
@@ -116,7 +119,7 @@ export const formObject = {
 						  },
 						  {
 						    "$id": "6",
-						    "CategoryId": 0,
+						    "CategoryId": 2,
 						    "Category": null,
 						    "DashboardCategory": null,
 						    "SubCategoryId": 12,
@@ -142,7 +145,7 @@ export const formObject = {
 			"hasSubCategory": [
 									  {
 									    "$id": "1",
-									    "CategoryId": 0,
+									    "CategoryId": 3,
 									    "Category": null,
 									    "DashboardCategory": null,
 									    "SubCategoryId": 7,
@@ -155,7 +158,7 @@ export const formObject = {
 									  },
 									  {
 									    "$id": "2",
-									    "CategoryId": 0,
+									    "CategoryId": 3,
 									    "Category": null,
 									    "DashboardCategory": null,
 									    "SubCategoryId": 8,
@@ -168,7 +171,7 @@ export const formObject = {
 									  },
 									  {
 									    "$id": "3",
-									    "CategoryId": 0,
+									    "CategoryId": 3,
 									    "Category": null,
 									    "DashboardCategory": null,
 									    "SubCategoryId": 9,
@@ -181,7 +184,7 @@ export const formObject = {
 									  },
 									  {
 									    "$id": "4",
-									    "CategoryId": 0,
+									    "CategoryId": 3,
 									    "Category": null,
 									    "DashboardCategory": null,
 									    "SubCategoryId": 10,
@@ -194,7 +197,7 @@ export const formObject = {
 									  },
 									  {
 									    "$id": "5",
-									    "CategoryId": 0,
+									    "CategoryId": 3,
 									    "Category": null,
 									    "DashboardCategory": null,
 									    "SubCategoryId": 11,
