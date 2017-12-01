@@ -74,7 +74,7 @@ class About extends Component {
               About = this.props.AboutData.data;
       }
 
-      if(About !== undefined){
+      if(About !== undefined && About.sections != undefined){
         BannerText.title = About.header;
         BannerText.content = About.header_content;
 

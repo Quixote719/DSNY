@@ -2,9 +2,9 @@ export const Titles = {
   sectionOne: 'ENTER YOUR ADDRESS',
   sectionTwo: 'ORGANICS BIN INFORMATION',
   sectionThree: 'CONTACT INFORMATION',
-  BinsToReplace: 'NUMBER OF OUTDOOR BINS TO REPLACE',
+  NumberOfOutdoorBinsId: 'NUMBER OF OUTDOOR BINS TO REPLACE',
   BARCodeOrRFID: 'BARCODE OR RFID # OF REMAINING BINS (OPTIONAL)',
-  ReasonForReplacement: 'REASON FOR REPLACEMENT',
+  ReasonForReplacementListId: 'REASON FOR REPLACEMENT',
   Comments: 'COMMENTS (OPTIONAL)',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
@@ -22,8 +22,8 @@ export const formObject = {
   "ReasonForReplacementList": [
     {
       "Id": 0,
-      "Name": "Select One",
-      "DisplayName": "Select One",
+      "Name": "Select one",
+      "DisplayName": "Select one",
       "Selected": false
     },
     {

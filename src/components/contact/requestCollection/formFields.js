@@ -27,8 +27,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormTitleCheckBoxes title="FULL ADDRESS OF THE PREMISES" />
-      <FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={FileDropZone} name="files1" {...props} disabled={values.editMode} value={values.files1} header='A COPY OF THE CERTIFICATE OF OCCUPANCY' note='temporary one is acceptable; not required for nonprofit organizations that lease or rent their space'  onChange={setFieldValue}/>   
