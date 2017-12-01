@@ -34,9 +34,9 @@ class formFields extends Component {
     return(
       <div>
         <Col xs={12} md={12}></Col>
-        <Field component={TextInput} title={"DSNY ASSIGNED BIN ID "+i} name={"DsnyAssignedBinId" + i} maxlength={50} disabled={values.editMode} {...this.props} />
-        <Field component={TextInput} title={Titles.WeightInPounds1} name={"WeightInPounds" + i} maxlength={50} disabled={values.editMode} {...this.props} />
-        <Field component={DropdownInput} title={Titles.Removed1} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  />
+        <Field component={TextInput} title={"DSNY ASSIGNED BIN ID "+i} name={"DsnyAssignedBinId" + i} maxlength={50} disabled={values.editMode} {...this.props} required/>
+        <Field component={TextInput} title={Titles.WeightInPounds1} name={"WeightInPounds" + i} maxlength={50} disabled={values.editMode} {...this.props} required/>
+        <Field component={DropdownInput} title={Titles.Removed1} name={"Removed" + i} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.GreaseInterceptorTypes} disabled={values.editMode}  required/>
         {values["Removed" + i] && <Field component={DateTimePickerInput} title={Titles.RemovalDate1} name={"RemovalDate" + i} {...this.props} onChange={setFieldValue} defaultValue={values.InstallationDate}  disabled={values.editMode} required/>}
       </div>
     )
