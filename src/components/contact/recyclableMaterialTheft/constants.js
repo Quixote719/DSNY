@@ -1,10 +1,10 @@
   export const Titles = {
   "SuccessMessage": "Success! Your response No. is: ",
   "FailureMessage":"Please make sure your message is correct.",
-  "sectionOne": "BUSINESS LOCATION ADDRESS",
+  "sectionOne": "DESCRIBE SETOUT LOCATION OF RECYCLABLE MATERIAL",
   "sectionTwo": "SPECIFIC INFORMATION",
   "sectionThree": "CONTACT INFORMATION",
-  "Apartment": "ADDTIONAL LOCATION INFORMATION",
+  "Apartment": "ADDTIONAL LOCATION INFORMATION (OPTIONAL)",
   "RemovedMaterialsDescription": "DESCRIBE MATERIALS REMOVED (OPTIONAL)",
   "IncidentDate": "INCIDENT DATE (OPTIONAL)",
   "FromHourOfDayId": "INCIDENT TIME (OPTIONAL)",
