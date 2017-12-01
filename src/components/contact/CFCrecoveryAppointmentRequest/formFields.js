@@ -40,7 +40,7 @@ const EwastePickUpRequestFormElements = (props) => {
      values.Dates = Dates;
 		 values.AppointmentDate = moment(Dates[0].StartDate);
 		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
-		 values.Frequency = "Tuesday Thursday Saturday"
+		 values.RecyclingPickupDay = geoCoderAddressResult.sanitationRecyclingCollectionSchedule;
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>

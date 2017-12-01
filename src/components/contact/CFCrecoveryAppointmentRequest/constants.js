@@ -9,6 +9,8 @@ export const Titles = {
 	ConfirmEmail: 'CONFIRM E-MAIL',
 	AppointmentDate: 'APPOINTMENT DATE',
 	RecyclingLocation: 'RECYCLING LOCATION',
+	SuccessMessage: "Success! Your response No. is: ",
+	FailureMessage:"Please make sure your message is correct.",
 }
 
 export const formObject = {
@@ -32,37 +34,37 @@ export const formObject = {
 	"CreatedDate": "",
 	"LastUpdatedDate": "",
 	"UserName": "",
-	"Source": "",
+	"Source": "DSNY",
 	"StatusId": 0,
-	"PickupRequestItems": [],
+	"AppointmentItems": [],
 	 "categories": [
     {
       "$id": "1",
-      "Id": 1,
+      "AppliancesId": 1,
       "Category": "Air conditioner",
       "RequestedQty": 0,
     },
     {
       "$id": "2",
-      "Id": 17,
+      "AppliancesId": 2,
       "Category": "Dehumidifier",
     "RequestedQty": 0,
     },
     {
       "$id": "3",
-      "Id": 3,
+      "AppliancesId": 3,
       "Category": "Freezer",
       "RequestedQty": 0,
     },
     {
       "$id": "4",
-      "Id": 4,
+      "AppliancesId": 4,
       "Category": "Refrizirator",
       "RequestedQty": 0,
     },
     {
       "$id": "5",
-      "Id": 5,
+      "AppliancesId": 5,
       "Category": "Water cooler",
       "RequestedQty": 0,
     }

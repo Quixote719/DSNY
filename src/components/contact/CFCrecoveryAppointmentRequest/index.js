@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  POST_BULK_PICKUP_REQUEST
+  POST_CFC_RECOVERY_APP_REQ
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject,GetUnavailableDates, postFormObject} from "../../../actions/contact_forms";
@@ -35,11 +35,11 @@ class CFCRequestForm extends Component {
 }
 
 updateValues(geoCoderAddressResult){
- this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationRegularCollectionSchedule}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}&SectionAndSubsection=${geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection}`);
+ this.props.GetUnavailableDates(`https://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/cfcrecoveryappointment/CFCCalendar/${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}`);
 }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, POST_BULK_PICKUP_REQUEST);
+      this.props.postFormObject(formObject, POST_CFC_RECOVERY_APP_REQ);
   }
 
    validateForm(formObject, errors){
