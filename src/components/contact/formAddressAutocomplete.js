@@ -16,11 +16,7 @@ import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 let errorFlag = 0;
 let showflag = true;
 
-var errorMessage =  (
-        <div className = "pleaseEnterAddressForm">
-        Please enter / select a valid address in order to complete the appointment request.
-        </div>
-    );
+var errorMessage; 
 
 class FormAddressAutocomplete extends Component {
     constructor(props, context) {
@@ -31,20 +27,27 @@ class FormAddressAutocomplete extends Component {
             address: props.values[props.name] || "",
             hideToolTip: true,
           };
+          errorMessage =  (
+            <div className = "pleaseEnterAddressForm">
+            Please enter / select a valid address in order to complete the appointment request.
+            </div>
+        );
+    
     }
  
-
+    componentDidMount(){
+        console.log("Form address component")        
+        this.forceUpdate();
+    }
     handleChange = (address) =>{
         //this.props.checkAddressValidator(0);
         this.props.checkAddressValidator(address);
         showflag = true;
-        if(address.trim().length === 0 || address === ""){
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.
                 </div>
             );
-        }
         this.setState({
             address,
         })
@@ -103,19 +106,34 @@ class FormAddressAutocomplete extends Component {
                 address: this.props.noResultsError.FormattedAddress,
             });
         }
-        if(this.props.collectionScheduleInfo == null && this.props.suggestionAddress == null) {
+        if(this.props.collectionScheduleInfo === null && this.props.suggestionAddress === null) {
             this.props.commercialAddressFlag(0, null)            
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.forceUpdate();
-        } else if(
+        } 
+        else if (this.props.suggestionAddress != null){
+            errorMessage = (<div className = "errorUserAddressParent">
+            <div className = "addressNotFound">
+            The address entered can not be found.
+            </div>
+            <div className = "selectFromAddressBelow">
+            Please select from the possible addresses below
+            </div>
+                {this.correctAddressList()}
+            </div>);
+            this.forceUpdate();                        
+        }
+        else if(
           (this.props.noResultsError.RegularCollectionSchedule === null || this.props.noResultsError.RegularCollectionSchedule === "") &&
           (this.props.noResultsError.RecyclingCollectionSchedule === null || this.props.noResultsError.RecyclingCollectionSchedule === "") &&
           (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
           this.props.suggestionAddress === null){
             this.props.commercialAddressFlag(1, "I certify that this request is not for a commercial business or an apartment with more than 10 units.")
-            errorMessage = (<div className="errorMessageAddressForm">
+            errorMessage = (
+            <div className="errorMessageAddressForm">
             The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-            </div>);
+            </div>
+            );
             this.forceUpdate();
         } else {
             this.props.commercialAddressFlag(0, null)                        
@@ -134,6 +152,7 @@ class FormAddressAutocomplete extends Component {
         } );
     }
     render() {      
+    
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
@@ -174,11 +193,14 @@ class FormAddressAutocomplete extends Component {
                 {/* {console.log("DDD" + this.props.addressValidator)} */}
                 <FormTitleCheckBoxes title={this.props.title}/>
                 <Row className = "formPlacesAutosuggestRow">
-                    <Col xs={12} md={this.props.disabled ? 12 : 10}>
+                    <Col xs={12} sm={this.props.disabled ? 12 : 10} className = "addressAutosuggestCol">
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
                     {this.props.errors[this.props.name] && !this.state.hideToolTip && showflag?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
+
                     {errorMessage}
-                    {(this.props.DSNYGeoCoder != null || this.props.suggestionAddress != null)?<div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
+
+                    {/* {(this.props.DSNYGeoCoder != null || this.props.suggestionAddress != null)?
+                    <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
                     <div className = "addressNotFound">
                     The address entered can not be found.
                     </div>
@@ -186,12 +208,12 @@ class FormAddressAutocomplete extends Component {
                     Please select from the possible addresses below
                     </div>
                         {this.correctAddressList()}
-                    </div>:null}
+                    </div>:null} */}
+
                     {/* {this.correctAddressList()} */}
                     </Col>
-                    
-                    <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}} >
-                    <Col xs={12} md={2} className = "validateButtonCol">
+                    <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}}>
+                    <Col xs={12} sm={2} className = "validateButtonCol">
                     <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
                     </Col>
                     </div>
@@ -204,6 +226,7 @@ class FormAddressAutocomplete extends Component {
 }
 function mapStateToProps(state) {
     return {
+        collectionScheduleData: state.carouselDataReducer.collectionScheduleData,                        
         commercialAddress: state.carouselDataReducer.commercialAddress,                
         organicsCollectionScheduleForm: state.carouselDataReducer.organicsCollectionScheduleForm,        
         regularCollectionScheduleForm: state.carouselDataReducer.regularCollectionScheduleForm,        
