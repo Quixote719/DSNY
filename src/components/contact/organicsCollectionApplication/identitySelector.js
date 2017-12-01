@@ -23,19 +23,28 @@ class IdentitySelector extends Component {
           // BinCount: 1,
         }
     }
-    componentWillMount() {
-      const {
-        values,
-        handledropDown,
-        setFieldValue,
-        setFormType
-      } = this.props;
 
+    componentWillMount() {
     }
 
 
   // setFormType(values.Identity);
     render(){
+          const {
+            values,
+            handledropDown,
+            setFieldValue,
+            setFormType
+          } = this.props;
+
+          return (
+            <fieldset className='disabledContactForm' disabled={values.editMode}>
+              <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
+            </fieldset>
+          )
+    }
+
+    componentDidUpdate(){
       const {
         values,
         handledropDown,
@@ -43,12 +52,10 @@ class IdentitySelector extends Component {
         setFormType
       } = this.props;
       console.log(values.Identity+"!*!")
-            setFormType(values.Identity);
-      return (
-        <fieldset className='disabledContactForm' disabled={values.editMode}>
-          <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
-        </fieldset>)
+      setFormType(values.Identity);
     }
+
+
 }
 
 export default IdentitySelector;

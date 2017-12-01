@@ -119,7 +119,11 @@ const Step1 = (props) => {
     isSubmitting,
     nextStep,
   } = props;
-  return (<span>
+  if(props.stepFunc){
+        props.stepFunc(true);
+  }
+  return (
+    <span>
     {props.values.editMode = false}
     {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
@@ -135,6 +139,9 @@ const Step2 = (props) => {
   const {
     previousStep
   } = props;
+  if(props.stepFunc){
+        props.stepFunc(false);
+  }
   return (<span>
     {props.values.editMode = true}
     {/*{assignGeoCoderAddressValues(props.values, geoCoderAddressResultObject)}*/}
@@ -201,19 +208,19 @@ const FormSteps = compose(
     // if((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0))
     // {
     //     //console.log("Cannot proceed")
-       
+
     //    addressValidationMessage = "Please validate the Address";
     //    errors["AddressAsEntered"] = addressValidationMessage
     //    document.getElementById(`validateBtn`).focus();
-    // }    
+    // }
     // else
     // {
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
-    
+
       if(!initialPageLoad)
       {
           inputs.forEach(input => {
-            
+
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
             if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
@@ -298,13 +305,10 @@ const FormSteps = compose(
           if(isEmpty(errors))
             props.validateForm(values,errors);
       }
-    //}  
+    //}
     return errors
   },
   handleSubmit: (values, {props,setSubmitting, resetForm}) => {
-    if(props.stepFunc){
-          props.stepFunc();
-    }
 
     if(props.step > 1){
         if(captchaVerified)

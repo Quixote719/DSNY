@@ -13,7 +13,6 @@ export const Titles = {
   Email: "E-MAIL",
   Phone: "PHONE",
   PhoneType: "PHONE TYPE",
-
 }
 
 
