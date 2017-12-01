@@ -32,7 +32,8 @@ class CollectionScheduleTable extends Component {
         else if(index == 1){
             return(
                 <div>
-                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                <div className ="recyclingTypeTitle">
+                    <img src={require('../../../content/images/collectionschedule-recycling.svg')} className="recyclingIcon" alt="Recycling Icon"/>                
+                    <div className ="recyclingTypeTitle">
                     <div className ="recycleTitle">
                         RECYCLING
                     </div>
@@ -56,8 +57,8 @@ class CollectionScheduleTable extends Component {
         if(value !== ""){
             return _.map(days, (day,indexRows) => {
                 return(
-                    <td  key ={indexRows} id ={this.props.arrayLength == index ?"lastTableRow":""} className={evenRows.includes(indexRows)?"evenRowsSchedule":oddRows.includes(indexRows)?"oddRowsSchedule":""}>
-                    {value.includes(day.id)?this.garbageCollection(index):<div></div>}
+                    <td  key ={indexRows} id ={this.props.arrayLength == index ?"lastTableRow":""} className={(evenRows.indexOf(indexRows) > -1 )?"evenRowsSchedule":(oddRows.indexOf(indexRows) > -1)?"oddRowsSchedule":""}>
+                    {(value.indexOf(day.id) > -1)?this.garbageCollection(index):<div></div>}
                     </td>
                 );
             })
@@ -87,7 +88,7 @@ class CollectionScheduleTable extends Component {
         var oddRows = [1, 3, 5];  
         return _.map(days, (day,index) => {
             return(    
-            <tr className={evenRows.includes(index)?"evenRowsSchedule":oddRows.includes(index)?"oddRowsSchedule":""}>      
+            <tr className={(evenRows.indexOf(index) > -1)?"evenRowsSchedule":(oddRows.indexOf(index) > -1)?"oddRowsSchedule":""}>      
             <th className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
                 {day.alias}
             </th>
@@ -103,7 +104,7 @@ class CollectionScheduleTable extends Component {
             if(value !==""){
                 return(
                     <td className={this.props.arrayLength == 2?"mobileCollectionTableData":this.props.arrayLength == 1?"mobileCollectionTableDataTwo":"mobileCollectionTableDataOne"}>
-                    {value.includes(day.id)?this.garbageCollection(indexRows):""}
+                    {(value.indexOf(day.id) > -1)?this.garbageCollection(indexRows):""}
                     </td>
                 );
             }

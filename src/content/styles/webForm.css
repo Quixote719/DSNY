@@ -3,6 +3,12 @@ label.checkContainer{
   margin-left: 0!important;
   cursor: pointer;
 }
+
+#form{
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
  /* Hide the browser's default checkbox */
  .checkContainer input {
      position: absolute;
