@@ -8,6 +8,8 @@ import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 import isEmpty from 'lodash/isEmpty'
 
+let previousErrorMessage = "";
+
 class FormField extends Component {
 
   constructor(props) {
@@ -20,6 +22,7 @@ class FormField extends Component {
     
     this.handleChange = this.handleChange.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
+    this.handleOnFocus = this.handleOnFocus.bind(this);
     
   }
 
@@ -29,18 +32,25 @@ class FormField extends Component {
 
   handleChange(event){
     //console.log("DINESH" + this.refs.myinput.value )
-    (isEmpty(this.props.value) || this.props.value.trim() === "" || this.props.error) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+    console.log(this.props.name + " , " + previousErrorMessage  + " , " + this.props.error);
+    (isEmpty(this.props.value) || this.props.value.trim() === "" || (previousErrorMessage !== this.props.error)) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+    previousErrorMessage = this.props.error;
   }
 
   handleFocusOut(event){
     this.setState({hideToolTip: true});
   }
 
+  handleOnFocus(event){
+    previousErrorMessage ="";
+    this.setState({hideToolTip: false});
+  }
+
   renderField() {          
            return (<div>
-            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || this.props.error ==="Enter valid Email Address") && this.props.error)?"input error":'input'} error={this.props.error}
+                : ''} disabled={this.props.disabled} autocomplete="off" required={this.props.required} maxLength={this.props.maxlength} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || this.props.error ==="Enter valid Email Address") && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                 {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
             <div>{this.props.children}</div>

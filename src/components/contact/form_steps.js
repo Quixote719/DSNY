@@ -268,6 +268,10 @@ const FormSteps = compose(
                   nextbuttonClicked = false;
                 }
             }
+            else
+            {
+              props.validateForm(values,errors);
+            }
 
 
           });
@@ -295,8 +299,8 @@ const FormSteps = compose(
 
           //   errors.WillPostCompostRecipientSignage = 'please check this'
           // }
-          if(isEmpty(errors))
-            props.validateForm(values,errors);
+          //if(isEmpty(errors))
+            //props.validateForm(values,errors);
       }
     //}  
     return errors
