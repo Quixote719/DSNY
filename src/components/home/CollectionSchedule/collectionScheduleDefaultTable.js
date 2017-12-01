@@ -23,7 +23,7 @@ class CollectionScheduleDefaultTable extends Component {
         var oddRows = [1, 3, 5];  
         return _.map(days, (day,index) =>{
             return(
-                <td className = {evenRows.includes(index)?"defaultTableCell evenRowsSchedule":oddRows.includes(index)?"defaultTableCell oddRowsSchedule":""}>
+                <td className = {(evenRows.indexOf(index) > -1)?"defaultTableCell evenRowsSchedule":(oddRows.indexOf(index) > -1)?"defaultTableCell oddRowsSchedule":""}>
                 </td>
             );
         })
@@ -51,7 +51,7 @@ class CollectionScheduleDefaultTable extends Component {
         var oddRows = [1, 3, 5];  
         return _.map(days, (day,index) => {
             return(    
-            <tr className={evenRows.includes(index)?"evenRowsSchedule":oddRows.includes(index)?"oddRowsSchedule":""}>      
+            <tr className={(evenRows.indexOf(index) > -1)?"evenRowsSchedule":(oddRows.indexOf(index)> -1)?"oddRowsSchedule":""}>      
             <th className = {days[today] && days[today].alias == day.alias?"currentDay":"normalDay"}>
                 {day.alias}
             </th>
