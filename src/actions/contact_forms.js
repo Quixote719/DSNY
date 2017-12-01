@@ -123,7 +123,6 @@ export function postFileObject(fileObject, Url) {
 			formData.append(key, fileObject[key]);
 		});
 
-
 		if (fileObject.hasOwnProperty('files1') && fileObject.files1[0] !== undefined) {
 			formData.append("image", fileObject.files1[0][0]);
 		}

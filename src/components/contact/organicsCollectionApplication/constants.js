@@ -13,9 +13,7 @@ export const Titles = {
   Email: "E-MAIL",
   Phone: "PHONE",
   PhoneType: "PHONE TYPE",
-
 }
-
 
 export const formObject = {
   "SRNo": "",
@@ -95,4 +93,50 @@ export const formObject = {
       "Selected": false
     }
   ],
+}
+
+export const proper = {
+  "AdditionalLocationInfo": null,
+  "DebrisInsideLot": false,
+  "DebrisInFrontOfLot": false,
+  "VehiclesOnLot": false,
+  "MediaFiles": [
+    {
+      "Id": 0,
+      "DetailRecordId": 0,
+      "FileName": null,
+      "URI": null
+    }
+  ],
+  "IsAnonymous": false,
+  "Id": 0,
+  "SRNumberId": 0,
+  "SRNo": null,
+  "ServiceRequestStatusId": 0,
+  "Source": null,
+  "CreatedDate": "0001-01-01T00:00:00",
+  "FirstName": null,
+  "LastName": null,
+  "Phone": null,
+  "Email": null,
+  "FullName": null,
+  "FullNameLastFirst": null,
+  "AddressAsEntered": null,
+  "HouseNumber": null,
+  "Street": null,
+  "Apartment": null,
+  "Borough": null,
+  "City": null,
+  "State": null,
+  "Zip": null,
+  "District": null,
+  "Section": null,
+  "BBL": null,
+  "Latitude": 0,
+  "Longitude": 0,
+  "AddressText": null,
+  "AddressTextOneLine": null,
+  "files1": [],
+  "files2": [],
+  "files3": []
 }
