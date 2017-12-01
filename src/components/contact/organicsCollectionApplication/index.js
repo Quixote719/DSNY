@@ -86,11 +86,11 @@ class OrganicsCollectionApplication extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
-
+          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
         return (
           <div>
-          {  showIDSelector &&
-              <div className='container'>
+          { 
+              <div className='container' style={displayID}>
                 <div className='form compostForm'>
                     <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
                 </div>
