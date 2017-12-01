@@ -134,7 +134,7 @@ export const formObject = {
         "Selected": false
       }
     ],
-  "PhoneTypeId": null,
+  "PhoneTypeId": 0,
   "SelectedPhoneType": null,
   "FullName": null,
   "FullNameLastFirst": null,
@@ -164,7 +164,7 @@ export const formObject = {
         "Selected": false
       }
     ],
-  "SecondaryPhoneTypeId": null,  
+  "SecondaryPhoneTypeId": 0,  
   "Source": null,
   "CreatedDate": "0001-01-01T00:00:00",
   "District": null,
@@ -182,5 +182,5 @@ export const formObject = {
   "STitle": null,
   "SEmail": null,
   "SPhone": null,
-  "SPhoneTypeId":null,
+  "SPhoneTypeId":0,
 }

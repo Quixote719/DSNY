@@ -215,7 +215,7 @@ const FormSteps = compose(
     // }
     // else
     // {
-      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
+      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle,#form textarea'));
 
       if(!initialPageLoad)
       {
@@ -232,6 +232,14 @@ const FormSteps = compose(
                 else if(props.isAddressValidated !==1)
                   errors[input.name] = "Please enter NY address and click on Validate"
 
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            else if(input.type === "textarea" && input.required && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0)){
+                errors[input.name] = Titles.RequiredFieldMessage
                 if(nextbuttonClicked)
                 {
                   input.focus();

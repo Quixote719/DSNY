@@ -32,9 +32,16 @@ class EventParticipationRequestForm extends Component {
   }
 
    validateForm(formObject, errors){
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-    }
+      
+      if (formObject.PEmail !== formObject.PEmailConfirm) {
+                errors.PEmailConfirm = `The email addresses don't match`
+      }
+
+      if (formObject.SEmail != formObject.SEmailConfirm) {
+                errors.SEmailConfirm = `The email addresses don't match`
+      }
+
+
     return errors;
   }
 

@@ -6,6 +6,7 @@ import MultiSelectInput from '../multiselect_field';
 import * as action from '../../../actions/actions_home';
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
+import AddressInput from '../form_addressField';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
@@ -35,14 +36,14 @@ const adoptABasketElements = (props) => {
     
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100" disabled={values.editMode}/>
-    <Field component={TextInput} name="BusinessAddressAsEntered" {...props} fullRow={true} maxlength="100" disabled={values.editMode}/>
+    <Field component={AddressInput} name="BusinessAddressAsEntered" {...props} onChange={setFieldValue}  fullRow={true} maxlength="100" disabled={values.editMode}/>
     <Field component={TextInput} name="BusinessApartment" {...props} maxlength="100" disabled={values.editMode}/> 
 
     <FormSectionHeader title={Titles.sectionThree} />
     <Field component={TextInput} name="FirstName" {...props} maxlength="100" disabled={values.editMode}/>
-    <Field component={TextInput} name="LastName" {...props} maxlength="100" disabled={values.editMode}disabled={values.editMode}disabled={values.editMode}/>
-    <Field component={TextInput} name="Email" {...props} maxlength="100" disabled={values.editMode}disabled={values.editMode}/>
-    <Field component={TextInput} name="confirmEmail" {...props} maxlength="100" disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props} maxlength="100"  disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props} maxlength="100"  disabled={values.editMode}disabled={values.editMode}/>
+    <Field component={TextInput} name="confirmEmail" {...props} maxlength="100"  disabled={values.editMode}/>
     <Field component={TextInput} name="Phone" {...props} maxlength="100" disabled={values.editMode}/>
 
   </fieldset>)

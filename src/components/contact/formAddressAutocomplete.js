@@ -35,8 +35,7 @@ class FormAddressAutocomplete extends Component {
     
     }
  
-    componentDidMount(){
-        console.log("Form address component")        
+    componentDidMount(){     
         this.forceUpdate();
     }
     handleChange = (address) =>{
