@@ -210,7 +210,7 @@ export const propertyManagementForm = {
   "State": "NY",
   "Zip": null,
   "AddressText": ", NY",
-  "AddressTextOneLine": ", NY"
+  "AddressTextOneLine": ", NY",
   "SiteClassificationId": 0,
   "SelectedSiteClassification": null,
   "OtherSiteClassification": null,
