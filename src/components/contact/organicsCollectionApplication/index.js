@@ -92,10 +92,10 @@ class OrganicsCollectionApplication extends Component {
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
-  validateForm(formObject, errors){
+   validateForm(formObject, errors){
     //formObject & Values are same
-    if (formObject.Email !== formObject.ConfirmEmail) {
-      errors.ConfirmEmail = `The email addresses don't match`
+     if (formObject.OrganizationTaxIdNumber === "TEST") {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
@@ -113,8 +113,8 @@ class OrganicsCollectionApplication extends Component {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
         }
 
-        if (FormObject && FormObject !== undefined && propertyManagementForm && propertyManagementForm != undefined) {
-          
+        if (FormObject && FormObject !== undefined) {
+          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
           propertyManagementForm["CompanyName"] = null;
           propertyManagementForm["Title"] = null;
           propertyManagementForm["PhoneTypes2"] = [
@@ -155,12 +155,10 @@ class OrganicsCollectionApplication extends Component {
           propertyManagementForm["Zip2"];
           propertyManagementForm["AddressText2"] = null;
           propertyManagementForm["AddressTextOneLine2"] = null;
-      
-
         return (
           <div>
-          {  showIDSelector &&
-              <div className='container'>
+          {
+              <div className='container' style={displayID}>
                 <div className='form compostForm'>
                     <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
                 </div>
@@ -172,6 +170,18 @@ class OrganicsCollectionApplication extends Component {
               <div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
               </div>
+            </div>
+          }
+          {
+            (IDNum==3 || IDNum==4) &&
+            <div className='container'>
+              <div>I dream and the world trembles</div>
+            </div>
+          }
+          {
+            (IDNum==5 || IDNum==6) &&
+            <div className='container'>
+              <div>God bless America</div>
             </div>
           }
           </div>
