@@ -25,8 +25,6 @@ class formFields extends Component {
 
     componentWillMount() {
       const { values, setFieldValue} = this.props;
-      console.log(values);
-      console.log(setFieldValue);
     }
 
     render(){

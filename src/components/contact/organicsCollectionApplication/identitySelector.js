@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Component} from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
 import MultiSelectInput from '../multiselect_field'
@@ -15,17 +15,40 @@ import FormAddressAutocomplete from '../formAddressAutocomplete'
 
 
 // Our inner form component which receives our form's state and updater methods as props
-const IdentitySelector = (props) => {
-  const {
-    values,
-    handledropDown,
-    setFieldValue,
-  } = props;
 
-  return (
-    <fieldset className='disabledContactForm' disabled={values.editMode}>
-      <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.IdentityTypes} disabled={values.editMode}/>
-    </fieldset>)
-};
+class IdentitySelector extends Component {
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+          // BinCount: 1,
+        }
+    }
+    componentWillMount() {
+      const {
+        values,
+        handledropDown,
+        setFieldValue,
+        setFormType
+      } = this.props;
+
+    }
+
+
+  // setFormType(values.Identity);
+    render(){
+      const {
+        values,
+        handledropDown,
+        setFieldValue,
+        setFormType
+      } = this.props;
+      console.log(values.Identity+"!*!")
+            setFormType(values.Identity);
+      return (
+        <fieldset className='disabledContactForm' disabled={values.editMode}>
+          <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
+        </fieldset>)
+    }
+}
 
 export default IdentitySelector;

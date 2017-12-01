@@ -7,6 +7,7 @@ import {
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
+import IDBox from './identityBox'
 import {Field} from 'formik'
 import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
@@ -18,17 +19,19 @@ import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
 
 const formTitles = Titles;
-
+let AK="Fire in the hole"
 class OrganicsCollectionApplication extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.stepFunc = this.stepFunc.bind(this);
+    this.setFormType = this.setFormType.bind(this);
     this.state = {
     FormObject:{},
       editMode:true,
-      step: false
+      step: false,
+      formType: 0
     }
   }
 
@@ -37,10 +40,20 @@ class OrganicsCollectionApplication extends Component {
   // }
 
   stepFunc(){
-
     this.setState({
       step: true
     });
+  }
+
+  setFormType(ID){
+    // this.setState({
+    //   formType: 1
+    // },()=>{
+    //   console.log("SetFormType");
+    //   console.log(ID);
+    // });
+      console.log("SetFormType");
+      console.log(ID+"^^^");
   }
 
   postForm(formObject){
@@ -60,7 +73,7 @@ class OrganicsCollectionApplication extends Component {
   }
 
    render() {
-
+        alert(AK);
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
@@ -75,16 +88,20 @@ class OrganicsCollectionApplication extends Component {
           {  !this.state.step &&
               <div className='container'>
                 <div className='form compostForm'>
-                    <FormSteps formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm}/>
+                    <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
                 </div>
               </div>
           }
-          <div className='container'>
-            <div className='form compostForm'>
+          {
+            !this.state.formType==1 &&
+            <div className='container'>
+              <div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+              </div>
             </div>
+          }
           </div>
-        </div>);
+        );
         };
 
         if (error){
