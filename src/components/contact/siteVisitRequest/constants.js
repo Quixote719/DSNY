@@ -50,33 +50,9 @@ export const formObject = {
   "Zip": null,
   "CategorizeSiteTypes": [
     {
-      "Id": 4,
-      "Name": "College",
-      "DisplayName": "College / University",
-      "Selected": false
-    },
-    {
-      "Id": 2,
-      "Name": "CommercialBuilding",
-      "DisplayName": "Commercial Building",
-      "Selected": false
-    },
-    {
-      "Id": 6,
-      "Name": "NonprofitInstitution",
-      "DisplayName": "Nonprofit Institution",
-      "Selected": false
-    },
-    {
-      "Id": 5,
-      "Name": "GovernmentAgency",
-      "DisplayName": "NYC Government Agency",
-      "Selected": false
-    },
-    {
-      "Id": 7,
-      "Name": "Other",
-      "DisplayName": "Other",
+      "Id":0,
+      "Name":"Select One",
+      "DisplayName": "Select one",
       "Selected": false
     },
     {
@@ -86,11 +62,42 @@ export const formObject = {
       "Selected": false
     },
     {
+      "Id": 2,
+      "Name": "CommercialBuilding",
+      "DisplayName": "Commercial Building",
+      "Selected": false
+    },
+    {
       "Id": 3,
       "Name": "Schools",
       "DisplayName": "School (PreK-12)",
       "Selected": false
-    }
+    },
+    {
+      "Id": 4,
+      "Name": "College",
+      "DisplayName": "College / University",
+      "Selected": false
+    },
+    {
+      "Id": 5,
+      "Name": "GovernmentAgency",
+      "DisplayName": "NYC Government Agency",
+      "Selected": false
+    },
+    {
+      "Id": 6,
+      "Name": "NonprofitInstitution",
+      "DisplayName": "Nonprofit Institution",
+      "Selected": false
+    },
+    {
+      "Id": 7,
+      "Name": "Other",
+      "DisplayName": "Other",
+      "Selected": false
+    },
+    
   ],
   "CategorizeSiteTypeId": 0,
   "SelectedCategorizeSiteType": null,
@@ -102,6 +109,12 @@ export const formObject = {
   "Visit1PotentialDate": "0001-01-01T00:00:00",
   "Visit2PotentialDate": "0001-01-01T00:00:00",
   "PrimarySelectedPhoneType": [
+      {
+        "Id":0,
+        "Name":"Select One",
+        "DisplayName": "Select one",
+        "Selected": false
+      },
       {
         "Id": 1,
         "Name": "Work",
@@ -126,6 +139,12 @@ export const formObject = {
   "FullName": null,
   "FullNameLastFirst": null,
   "SecondaryPhoneType": [
+      {
+        "Id":0,
+        "Name":"Select One",
+        "DisplayName": "Select one",
+        "Selected": false
+      },
       {
         "Id": 1,
         "Name": "Work",

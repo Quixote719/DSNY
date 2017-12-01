@@ -27,7 +27,7 @@ const eeoComplaintElements = (props) => {
   console.log(values.editMode);
   return (<fieldset className='disabledContactForm' >
     
-    <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information='All fields are required unless indicated as optional.'/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <Field component={TextInput} name="FullNameLastFirstMi" {...props} maxlength="100" disabled={values.editMode}/>

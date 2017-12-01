@@ -140,11 +140,11 @@ export function postFileObject(fileObject, Url) {
 			'Content-Type': 'multipart/form-data'
 			}
 		})
-		.then(function (result) {
-				console.log(result);
-				}, function (error) {
-				console.log(error);
-	 		})
+		.then((data, headers) => {
+			dispatch({type: types.POST_FORM_REQUEST, payload: data,})
+		}).catch(function(error) {
+			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+		});
 		}
 }
 

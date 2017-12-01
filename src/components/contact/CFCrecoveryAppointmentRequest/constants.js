@@ -9,6 +9,8 @@ export const Titles = {
 	ConfirmEmail: 'CONFIRM E-MAIL',
 	AppointmentDate: 'APPOINTMENT DATE',
 	RecyclingLocation: 'RECYCLING LOCATION',
+	SuccessMessage: "Success! Your response No. is: ",
+	FailureMessage:"Please make sure your message is correct.",
 }
 
 export const formObject = {
@@ -32,74 +34,39 @@ export const formObject = {
 	"CreatedDate": "",
 	"LastUpdatedDate": "",
 	"UserName": "",
-	"Source": "",
+	"Source": "DSNY",
 	"StatusId": 0,
-	"PickupRequestItems": [],
+	"AppointmentItems": [],
 	 "categories": [
     {
       "$id": "1",
-      "CategoryId": 1,
+      "AppliancesId": 1,
       "Category": "Air conditioner",
-      "DashboardCategory": null,
-      "SubCategoryId": 0,
-      "SubCategory": null,
-      "DashboardSubCategory": null,
       "RequestedQty": 0,
-      "PickedUpQty": 0,
-      "PickupRequestSubItems": null,
-      "hasSubCategory":0
     },
     {
       "$id": "2",
-      "CategoryId": 17,
+      "AppliancesId": 2,
       "Category": "Dehumidifier",
-      "DashboardCategory": null,
-      "SubCategoryId": 0,
-      "SubCategory": null,
-      "DashboardSubCategory": null,
-      "RequestedQty": 0,
-      "PickedUpQty": 0,
-      "PickupRequestSubItems": null,
-      "hasSubCategory":0
+    "RequestedQty": 0,
     },
     {
       "$id": "3",
-      "CategoryId": 3,
+      "AppliancesId": 3,
       "Category": "Freezer",
-      "DashboardCategory": null,
-      "SubCategoryId": 0,
-      "SubCategory": null,
-      "DashboardSubCategory": null,
       "RequestedQty": 0,
-      "PickedUpQty": 0,
-      "PickupRequestSubItems": null,
-      "hasSubCategory": 0
     },
     {
       "$id": "4",
-      "CategoryId": 4,
+      "AppliancesId": 4,
       "Category": "Refrizirator",
-      "DashboardCategory": null,
-      "SubCategoryId": 0,
-      "SubCategory": null,
-      "DashboardSubCategory": null,
       "RequestedQty": 0,
-      "PickedUpQty": 0,
-      "PickupRequestSubItems": null,
-      "hasSubCategory": 0
     },
     {
       "$id": "5",
-      "CategoryId": 5,
+      "AppliancesId": 5,
       "Category": "Water cooler",
-      "DashboardCategory": null,
-      "SubCategoryId": 0,
-      "SubCategory": null,
-      "DashboardSubCategory": null,
       "RequestedQty": 0,
-      "PickedUpQty": 0,
-      "PickupRequestSubItems": null,
-      "hasSubCategory": 0
     }
   ],
 }

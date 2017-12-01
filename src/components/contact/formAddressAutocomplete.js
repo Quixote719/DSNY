@@ -63,10 +63,10 @@ class FormAddressAutocomplete extends Component {
         //   placeholder: " "
         // })
   
-        if(this.props.errors[this.props.name] === "This field is required")
-            isEmpty(this.state.address) || this.state.address.trim().trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
-        else
-            this.setState({hideToolTip: false});
+        //if(this.props.errors[this.props.name] === "This field is required")
+           // isEmpty(this.state.address) || this.state.address.trim().trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        //else
+        this.setState({hideToolTip: false});
 
     }
     suggestedAddressSelected = (value) =>{

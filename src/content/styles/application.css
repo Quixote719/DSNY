@@ -384,6 +384,10 @@ border-radius: 0;
   resize: none;
 }
 
+.form textarea:disabled{
+  cursor:not-allowed;
+}
+
 .form input, .form input.form-control {
   height: 36px;
   border: 1px solid #DFDFDF;
@@ -408,6 +412,7 @@ border-radius: 0;
   border: 1px solid #D8D8D8;
   border-radius: 3px;
   background-color: #F8F8F8;
+  cursor:not-allowed;
 }
 
 .dropdown.disabled .fa-caret-down {
@@ -434,6 +439,7 @@ border-radius: 0;
   border-radius: 3px;
   color: clear;
 }
+
 
 .form fieldset label {
   color: #333333;
@@ -498,3 +504,4 @@ border-radius: 0;
     margin: 20px 15px 30px 0;
 }
 /* Common Form CSS -- End */
+
