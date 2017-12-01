@@ -89,7 +89,7 @@ class OrganicsCollectionApplication extends Component {
           let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
         return (
           <div>
-          { 
+          {
               <div className='container' style={displayID}>
                 <div className='form compostForm'>
                     <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
@@ -102,6 +102,18 @@ class OrganicsCollectionApplication extends Component {
               <div className='form compostForm'>
                 <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
               </div>
+            </div>
+          }
+          {
+            (IDNum==3 || IDNum==4) &&
+            <div className='container'>
+              <div>I dream and the world trembles</div>
+            </div>
+          }
+          {
+            (IDNum==5 || IDNum==6) &&
+            <div className='container'>
+              <div>God bless America</div>
             </div>
           }
           </div>
