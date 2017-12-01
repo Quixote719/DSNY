@@ -3,10 +3,9 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import {withFormik, Formik, Field, Form} from 'formik'
 import { compose, withState, withHandlers } from 'recompose';
 import isEmpty from 'lodash/isEmpty'
-import { compostFormTitles as Titles} from './titles'
+// import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
-import FormButton from './form_button';
-import ThankYou from './thank_you';
+
 
 // import '../../content/styles/contactForm.css';
 
@@ -53,15 +52,7 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
-export function displayThankYouPage(success, successMessage, failureMessage)
-{
-  if(success != null && success.SRNo !== undefined) {
-      return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
-    } else {
-      return(<ThankYou>{failureMessage}</ThankYou>);
-    }
 
-}
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult){
 	if (values && geoCoderAddressResult){
@@ -119,53 +110,13 @@ const Step1 = (props) => {
     isSubmitting,
     nextStep,
   } = props;
-  if(props.stepFunc){
-        props.stepFunc(true);
-  }
-  return (
-    <span>
+  return (<span>
     {props.values.editMode = false}
     {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
     <props.formFields {...props} />
-
-    <Col xs={12}>
-      <button className="formSubmitBtn" id="nextbtn" onClick={() =>{handleNextClick(errors, dirty, isSubmitting, nextStep)}}>NEXT</button>
-    </Col>
-{/*<DisplayFormikState {...props}/>*/}
   </span>)
 };
 
-const Step2 = (props) => {
-  const {
-    previousStep
-  } = props;
-  if(props.stepFunc){
-        props.stepFunc(false);
-  }
-  return (<span>
-    {props.values.editMode = true}
-    {/*{assignGeoCoderAddressValues(props.values, geoCoderAddressResultObject)}*/}
-    <props.formFields {...props} />
-
-
-
-    <div id="recpatcha" className="FormField col-md-12 col-sm-12 col-xs-12">
-    <Recaptcha
-          sitekey={sitekey}
-          render="explicit"
-          verifyCallback={verifyCallback}
-          onloadCallback={callback}
-          expiredCallback={expiredCallback}
-        />
-     <Tooltip placement="bottom" id="recaptchaTooltip" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
-
-    </div>
-    <Col xs={12}>
-    <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
-    <button className="formEditBtn" onClick={previousStep}>EDIT</button>
-    </Col>
-  </span>)
-};
 
 const Steps = ({
   handleSubmit,
@@ -178,15 +129,13 @@ const Steps = ({
   <form id="form" noValidate onSubmit={handleSubmit}>
     {{
       1: <Step1 nextStep={nextStep} {...props} />,
-      2: <Step2 previousStep={previousStep} {...props} />,
-      3: <Step2 {...props} />
     }[step] || <div />}
   </form>
 )
 
 
 // Wrap our form with the using withFormik HoC
-const FormSteps = compose(
+const IDBox = compose(
   withState('step', 'setStep', 1),
   withHandlers({
     nextStep: ({ setStep, step }) =>
@@ -201,20 +150,7 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    // alert(props.geoCoderAddressResult);
-    // alert(props.isAddressValidated);
-    // //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
-    //     //console.log("Cannot proceed")
-    // if((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0))
-    // {
-    //     //console.log("Cannot proceed")
 
-    //    addressValidationMessage = "Please validate the Address";
-    //    errors["AddressAsEntered"] = addressValidationMessage
-    //    document.getElementById(`validateBtn`).focus();
-    // }
-    // else
-    // {
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
 
       if(!initialPageLoad)
@@ -223,48 +159,25 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
-            {
-                //errors[input.name] = "Please validate the above address"
-                if(props.isAddressValidated === undefined || props.isAddressValidated === "")
-                  errors[input.name] = Titles.RequiredFieldMessage
-                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
-                else if(props.isAddressValidated !==1)
-                  errors[input.name] = "Please enter NY address and click on Validate"
 
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
             {
-                errors[input.name] = Titles.RequiredFieldMessage
                 if(nextbuttonClicked)
                 {
                   input.focus();
                   nextbuttonClicked = false;
                 }
             }
-            else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+            else if (input.required && input.type === "text"  && (input.name ==="Email" && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
             {
-                errors[input.name] = "Enter valid Email Address"
+                errors[input.name] = "Please enter valid Email Address"
                 if(nextbuttonClicked)
                 {
                   input.focus();
                   nextbuttonClicked = false;
                 }
             }
-            else if (input.required && input.type === "checkbox"  && (!values[input.name]))
-            {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
+
             //Dropdown List Validation
             else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
             {
@@ -275,44 +188,20 @@ const FormSteps = compose(
                   nextbuttonClicked = false;
                 }
             }
-            else
-            {
-              props.validateForm(values,errors);
-            }
 
 
           });
 
 
-          //Get the required fields from the const schema defined above
-          // for (var value in schema.requiredFields) {
-          //     if (!values[schema.requiredFields[value]] ||  values[schema.requiredFields[value]] === 'Select one')
-          //     {
-          //       errors[schema.requiredFields[value]] = Titles.RequiredFieldMessage
-          //     }
-          // }
-
-
-          // if (!values.OrganizationTaxIdNumber) {
-          //   errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
-          // }
-          // if (!values.OrganizationWebsite) {
-          //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-          // }
-          // if (!values.CompostSiteApplicantTypeId || values.CompostSiteApplicantTypeId === 'Select one') {
-          //   errors.CompostSiteApplicantTypeId = 'Please enter a valid Organization Website'
-          // }
-          // if (!values.WillPostCompostRecipientSignage) {
-
-          //   errors.WillPostCompostRecipientSignage = 'please check this'
-          // }
-          //if(isEmpty(errors))
-            //props.validateForm(values,errors);
+          if(isEmpty(errors))
+            props.validateForm(values,errors);
       }
-    //}
     return errors
   },
   handleSubmit: (values, {props,setSubmitting, resetForm}) => {
+    if(props.stepFunc){
+          props.stepFunc();
+    }
 
     if(props.step > 1){
         if(captchaVerified)
@@ -346,4 +235,4 @@ const FormSteps = compose(
 })
 )(Steps);
 
-export default FormSteps;
+export default IDBox;
