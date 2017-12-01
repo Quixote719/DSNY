@@ -6,6 +6,7 @@ import FooterApp from './FooterApp.js';
 import FooterArchive from './FooterArchive.js';
 import '../../../content/styles/footer.css';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
+import DownloadApp from '../../home/download_dsny_app/index';
 
 class Footer extends Component{
 
@@ -21,29 +22,60 @@ class Footer extends Component{
                        {name:'Waste Characterization',link:'l5'},
                        {name:'Processing + Statistics',link:'l6'},
                        {name:'Private Carting Study',link:'l7'}]
-        return (
-          <div id="Footer">
-            <div className="FooterBox">
-              <div id="ServiceCol" className="FooterCol">
-                  <FooterService rows= {Service}/>
-                  <FooterApp rows={App}/>
+        if(window.location.pathname === "/assets/donate/development/react/home" || window.location.pathname.indexOf("collectionSchedule") > -1){
+            return (
+                <div>
+                <DownloadApp />                
+                <div id="Footer">
+                  <div className="FooterBox">
+                    <div id="ServiceCol" className="FooterCol">
+                        <FooterService rows= {Service}/>
+                        <FooterApp rows={App}/>
+                    </div>
+                    <div id="ArchiveCol" className="FooterCol">
+                        <FooterArchive rows={Archive}/>
+                    </div>
+                    <div id="SignupCol" className="FooterCol">
+                        <div className="FooterSubt">Sign up for Zero Waste Newsletter to learn about upcoming DSNY events.</div>
+                        <div className="FooterBtn">SUBSCRIBE</div>
+                        <div className="FooterSubt">Follow Us</div>
+                          <i className="fa fa-facebook" onClick={()=>{window.location.href="https://www.facebook.com/nycsanitation"}}></i>
+                          <i className="fa fa-twitter" onClick={()=>{window.location.href="https://twitter.com/nycsanitation"}}></i>
+                          <i className="fa fa-instagram" onClick={()=>{window.location.href="http://instagram.com/nycsanitation"}}></i>
+                          <i className="fa fa-youtube" onClick={()=>{window.location.href="https://www.youtube.com/user/NYCSanitation/feed"}}></i>
+                          <i className="fa fa-flickr" onClick={()=>{window.location.href="https://www.flickr.com/photos/nycsanitation/sets/"}}></i>
+                    </div>
+                 </div>
               </div>
-              <div id="ArchiveCol" className="FooterCol">
-                  <FooterArchive rows={Archive}/>
               </div>
-              <div id="SignupCol" className="FooterCol">
-                  <div className="FooterSubt">Sign up for Zero Waste Newsletter to learn about upcoming DSNY events.</div>
-                  <div className="FooterBtn">SUBSCRIBE</div>
-                  <div className="FooterSubt">Follow Us</div>
-                    <i className="fa fa-facebook" onClick={()=>{window.location.href="https://www.facebook.com/nycsanitation"}}></i>
-                    <i className="fa fa-twitter" onClick={()=>{window.location.href="https://twitter.com/nycsanitation"}}></i>
-                    <i className="fa fa-instagram" onClick={()=>{window.location.href="http://instagram.com/nycsanitation"}}></i>
-                    <i className="fa fa-youtube" onClick={()=>{window.location.href="https://www.youtube.com/user/NYCSanitation/feed"}}></i>
-                    <i className="fa fa-flickr" onClick={()=>{window.location.href="https://www.flickr.com/photos/nycsanitation/sets/"}}></i>
-              </div>
-           </div>
-        </div>
-        );
+              );
+        }
+        else{
+            return(
+                    <div id="Footer">
+                      <div className="FooterBox">
+                        <div id="ServiceCol" className="FooterCol">
+                            <FooterService rows= {Service}/>
+                            <FooterApp rows={App}/>
+                        </div>
+                        <div id="ArchiveCol" className="FooterCol">
+                            <FooterArchive rows={Archive}/>
+                        </div>
+                        <div id="SignupCol" className="FooterCol">
+                            <div className="FooterSubt">Sign up for Zero Waste Newsletter to learn about upcoming DSNY events.</div>
+                            <div className="FooterBtn">SUBSCRIBE</div>
+                            <div className="FooterSubt">Follow Us</div>
+                              <i className="fa fa-facebook" onClick={()=>{window.location.href="https://www.facebook.com/nycsanitation"}}></i>
+                              <i className="fa fa-twitter" onClick={()=>{window.location.href="https://twitter.com/nycsanitation"}}></i>
+                              <i className="fa fa-instagram" onClick={()=>{window.location.href="http://instagram.com/nycsanitation"}}></i>
+                              <i className="fa fa-youtube" onClick={()=>{window.location.href="https://www.youtube.com/user/NYCSanitation/feed"}}></i>
+                              <i className="fa fa-flickr" onClick={()=>{window.location.href="https://www.flickr.com/photos/nycsanitation/sets/"}}></i>
+                        </div>
+                     </div>
+                  </div>
+            );
+        }
+
     }
 };
 

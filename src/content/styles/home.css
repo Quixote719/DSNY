@@ -1256,3 +1256,34 @@ input.serviceRequestSearch:focus {
         min-height: 80px;
     }
 }
+/* New changes */
+@media (min-width: 959px) and (max-width: 991px) {
+    /* New changes */
+    #TextureSquare{
+        width:100%;
+    }
+    .ridOfSearch, .actual-edit-overlay{
+        width: 98%;
+    }
+    .searchCollectionParent {
+        margin-top: 11px;
+    }
+}
+@media (min-width: 737px) and (max-width: 958px) {
+    /* New changes */
+    .downloadInfoPart1, .downloadInfoPart2{
+        width: auto;
+    }
+    .downloadAppCol, .downloadAppCol1{
+        width: 50%;
+    }
+    #TextureSquare{
+        width:100%;
+    }
+    .ridOfSearch, .actual-edit-overlay{
+        width: 98%;
+    }
+    .searchCollectionParent {
+        margin-top: 11px;
+    }
+}

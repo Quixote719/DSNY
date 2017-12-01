@@ -141,7 +141,7 @@ class CollectionSchedule extends Component {
                 <div>
                     <div className="noOfSearchResultsCollectionSchedule">
                         No search results found for "{this.props.match.params.address}"
-                </div>
+                    </div>
                     <Row className="collectionTableDefaultRow">
                         <Col xs={12} md={8} className="collectionTableDefaultColumn">
                             <CollectionScheduleDefaultTable />
@@ -365,7 +365,7 @@ class CollectionSchedule extends Component {
                     </Row>
                     {this.contentHTML()}
                 </div>
-                <DownloadInfoApp />
+                {/* <DownloadInfoApp /> */}
             </div>
         )
     }
