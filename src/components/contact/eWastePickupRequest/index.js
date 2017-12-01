@@ -88,6 +88,8 @@ class EwasteRequestForm extends Component {
 
 
 function mapStateToProps(state) {
+  console.log('varma',state.carouselDataReducer.DSNYGeoCoder ? state.carouselDataReducer.commercialAddress :'' );
+
   return {
     FormObject: state.forms.formObject,
     success:state.forms.success,

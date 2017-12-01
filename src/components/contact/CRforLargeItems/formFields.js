@@ -36,13 +36,12 @@ const DisplayFormikState = props => <div style={{
 
 const EwastePickUpRequestFormElements = (props) => {
 	const { values, setFieldValue, pickupLocations, Dates,  geoCoderAddressResult } = props;
-
 	if (Dates && pickupLocations && geoCoderAddressResult){
      values.Dates = Dates;
 		 values.PickupLocations = pickupLocations;
 		 values.AppointmentDate = moment(Dates[0].StartDate);
 		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
-		 values.Frequency = "Tuesday Thursday Saturday"
+		 values.Frequency = geoCoderAddressResult.RegularCollectionSchedule
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>

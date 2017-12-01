@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React,{Component} from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
 import MultiSelectInput from '../multiselect_field'
@@ -7,15 +7,16 @@ import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
-import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
+import '../../../content/styles/webForm.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 
 
 // Our inner form component which receives our form's state and updater methods as props
-class formFields extends Component {
+
+class IdentitySelector extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -24,21 +25,37 @@ class formFields extends Component {
     }
 
     componentWillMount() {
-      const { values, setFieldValue} = this.props;
     }
 
+
+  // setFormType(values.Identity);
     render(){
-        const { values, setFieldValue, handledropDown} = this.props;
+          const {
+            values,
+            handledropDown,
+            setFieldValue,
+            setFormType
+          } = this.props;
 
-        return (
+          return (
             <fieldset className='disabledContactForm' disabled={values.editMode}>
-              <FormSectionHeader title={Titles.sectionTwo}/>
-              <div>
-                <FormAddressAutocomplete name="AddressAsEntered"  {...this.props}   value="" disabled={values.editMode}/>
-              </div>
+              <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
             </fieldset>
-        )
+          )
     }
-};
 
-export default formFields;
+    componentDidUpdate(){
+      const {
+        values,
+        handledropDown,
+        setFieldValue,
+        setFormType
+      } = this.props;
+      console.log(values.Identity+"!*!")
+      setFormType(values.Identity);
+    }
+
+
+}
+
+export default IdentitySelector;
