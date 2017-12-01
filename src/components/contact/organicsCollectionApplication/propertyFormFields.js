@@ -10,7 +10,7 @@ import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
 import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
-import {Titles} from './propertyConstants'
+import {TenPlusTitles, TenPlusTitles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
@@ -23,27 +23,26 @@ const CompostRequestFormElements = (props) => {
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormSectionHeader title={Titles.sectionOne}/>
+    <FormSectionHeader title={TenPlusTitles.sectionTwo}/>
     <div>
-      <FormAddressAutocomplete name="addressAsEntered" title={Titles.addressAsEntered} {...props} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={TenPlusTitles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="AdditionalLocationInfo" {...props} fullRow={true} maxlength={"100"} disabled={values.editMode}/>
-    <FormSectionHeader title={Titles.sectionTwo}/>
-    <FormTitleCheckBoxes title="SELECT ALL THAT APPLY" />
-    <Field component={CheckBoxInput} name="DebrisInsideLot" {...props} disabled={values.editMode}/>
-    <Field component={TextInput} name="PublicArea" {...props} fullRow={true} maxlength={"100"} isHidden={!values.DebrisInsideLot} required={values.DebrisInsideLot} disabled={values.editMode}/>
-    <Field component={CheckBoxInput} name="DebrisInFrontOfLot" {...props} disabled={values.editMode}/>
-    <Field component={CheckBoxInput} name="VehiclesOnLot" {...props} disabled={values.editMode}/>
-    <Field component={FileDropZone} name="files1" {...props} disabled={values.editMode} value={values.files1} header='VIDEO AND PICTURE UPLOAD' note='You can upload a total of 3 files, but the total size of all files uploaded cannot exceed 10 MB. By uploading images to 311 you agree that the City may use the images for whatever purposes it sees fit. The City cannot return or delete images that you did not intend to submit.'  onChange={setFieldValue}/>   
-    <Field component={FileDropZone} name="files2" {...props} value={values.files2} onChange={setFieldValue} disabled={values.editMode}/>   
-    <Field component={FileDropZone} name="files3" {...props} value={values.files3} onChange={setFieldValue} disabled={values.editMode}/>   
-    <FormSectionHeader title={Titles.sectionThree}/>
-    <Field component={CheckBoxInput} name={"IsAnonymous"} {...props} disabled={values.editMode}/>
-    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
-    <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
-    <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
-    <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"} disabled={values.editMode}/>   
+    <Field component={TextInput} name="PropertyName" {...props} maxlength={"100"} disabled={values.editMode}/>
+    <Field component={TextInput} name="PropertyUnitCount" {...props} maxlength={"100"} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="SiteClassificationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SiteClassifications} disabled={values.editMode} required/>
+    <FormSectionHeader title={TenPlusTitles.sectionThree}/>
+    <Field component={TextInput} name="FirstName" {...props}  maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="LastName" {...props}  maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Email" {...props}  maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode}/>  
+    <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
+    <FormSectionHeader title={TenPlusTitles.sectionFour}/>
+    <Field component={TextInput} title="MANAGEMENT COMPANY" name="CompanyName" {...props} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} title="CONTACT PERSON TITLE" name="Title" {...props} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} title="CONTACT PERSON FIRST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} title="CONTACT PERSON LAST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} title="ADDRESS" name="AddressAsEntered2" {...props} maxlength={"25"} disabled={values.editMode}/>  
   </fieldset>)
 };
 

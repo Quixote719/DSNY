@@ -31,6 +31,7 @@ class LitterBasketRequest extends Component {
   }
 
    validateForm(formObject, errors){
+     
     //formObject & Values are same
     if (formObject.Email !== formObject.ConfirmEmail) {
       errors.ConfirmEmail = `The email addresses don't match`

@@ -31,7 +31,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="OtherReason" {...props} isHidden={values.LitterBasketReasonId !== 6} required={values.LitterBasketReasonId == 6} maxlength={"25"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={CheckBoxInput} name={"IsAnonymous"} {...props} disabled={values.editMode}/>
-    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true}  required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
