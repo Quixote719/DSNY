@@ -31,8 +31,8 @@ class DisabilityServices extends Component {
 
   validateForm(formObject, errors){
     //formObject & Values are same
-    if (formObject.Email !== formObject.ConfirmEmail) {
-      errors.ConfirmEmail = `The email addresses don't match`
+     if (formObject.OrganizationTaxIdNumber === "TEST") {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'

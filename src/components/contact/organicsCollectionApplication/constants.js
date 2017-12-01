@@ -95,7 +95,7 @@ export const formObject = {
   ],
 }
 
-export const proper = {
+export const propertyManagementForm = {
   "AdditionalLocationInfo": null,
   "DebrisInsideLot": false,
   "DebrisInFrontOfLot": false,
@@ -110,6 +110,66 @@ export const proper = {
   ],
   "IsAnonymous": false,
   "Id": 0,
+  "organicsCollectionRequestId": 0,
+  "propertyName": null,
+  "propertyUnitCount": 0,
+  "siteClassifications": [
+    {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": false
+    },
+    {
+      "Id": 1,
+      "Name": "1-9 unit building on commercial block",
+      "DisplayName": "1-9 unit building on commercial block",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Condo",
+      "DisplayName": "Condo",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Coop",
+      "DisplayName": "Coop",
+      "Selected": false
+    },
+    {
+      "Id": 4,
+      "Name": "Rental",
+      "DisplayName": "Rental",
+      "Selected": false
+    },
+    {
+      "Id": 5,
+      "Name": "NYCHA",
+      "DisplayName": "NYCHA",
+      "Selected": false
+    },
+    {
+      "Id": 6,
+      "Name": "Student Housing",
+      "DisplayName": "Student Housing",
+      "Selected": false
+    },
+    {
+      "Id": 7,
+      "Name": "don't know",
+      "DisplayName": "don't know",
+      "Selected": false
+    },
+    {
+      "Id": 8,
+      "Name": "other",
+      "DisplayName": "other",
+      "Selected": false
+    },
+  ],
+  
   "SRNumberId": 0,
   "SRNo": null,
   "ServiceRequestStatusId": 0,

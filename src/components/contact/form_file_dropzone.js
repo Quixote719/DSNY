@@ -10,14 +10,11 @@ class FormFileDropZone extends Component {
      super()
      this.state = {
        file: [],
-       accepted: [],
-       rejected: []
       }
    }
 
   onDrop(file, rejected) {
     this.state = { file: [] };
-    this.state = { rejected: [] };
     var f = this.state.file;
     f = _.union(f, [file]);
     this.setState({file: f}, () => { this.props.onChange(this.props.name, this.state.file) });
