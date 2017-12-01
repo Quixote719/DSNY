@@ -82,15 +82,12 @@ class Contact extends Component {
     )
   }
 
-
-
-
   parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps, ReportingProps) {
     if(this.props.ContactPageData !== undefined){
         Contact = this.props.ContactPageData.data;
     }
 
-    if(this.props.ContactPageData !== undefined && Contact.sections.sections !== undefined) {
+    if(Contact !== undefined && Contact.sections != undefined) {
 
       BannerText.title = Contact.title;
       BannerText.content = Contact.header_content;
