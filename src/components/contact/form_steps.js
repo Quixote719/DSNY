@@ -32,7 +32,6 @@ let initialPageLoad = true;
 let nextbuttonClicked = false;
 let captchaVerified = false;
 let captchaMessage;
-export let addressValidationMessage = "";
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -63,7 +62,11 @@ export function displayThankYouPage(success, successMessage, failureMessage)
 
 }
 
-function assignGeoCoderAddressValues(values, geoCoderAddressResult){
+function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressValidated){
+  
+  if (values && isAddressValidated)
+      values.AddressAsEntered = isAddressValidated
+
 	if (values && geoCoderAddressResult){
 
     values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
@@ -125,7 +128,7 @@ const Step1 = (props) => {
   return (
     <span>
     {props.values.editMode = false}
-    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult, props.isAddressValidated)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -201,20 +204,7 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    // alert(props.geoCoderAddressResult);
-    // alert(props.isAddressValidated);
-    // //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
-    //     //console.log("Cannot proceed")
-    // if((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0))
-    // {
-    //     //console.log("Cannot proceed")
-
-    //    addressValidationMessage = "Please validate the Address";
-    //    errors["AddressAsEntered"] = addressValidationMessage
-    //    document.getElementById(`validateBtn`).focus();
-    // }
-    // else
-    // {
+    
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
 
       if(!initialPageLoad)
@@ -223,24 +213,25 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
+            if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
             {
-                //errors[input.name] = "Please validate the above address"
-                if(props.isAddressValidated === undefined || props.isAddressValidated === "")
-                  errors[input.name] = Titles.RequiredFieldMessage
-                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
-                else if(props.isAddressValidated !==1)
-                  errors[input.name] = "Please enter NY address and click on Validate"
-
+                errors[input.name] = Titles.RequiredFieldMessage
                 if(nextbuttonClicked)
                 {
                   input.focus();
                   nextbuttonClicked = false;
                 }
             }
-            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            else if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
             {
-                errors[input.name] = Titles.RequiredFieldMessage
+                //errors[input.name] = "Please validate the above address"
+                //if(props.isAddressValidated === undefined || props.isAddressValidated === "")
+                  //errors[input.name] = Titles.RequiredFieldMessage
+                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
+                //else 
+                if(props.isAddressValidated !==1)
+                  errors[input.name] = "Please enter NY address and click on Validate"
+
                 if(nextbuttonClicked)
                 {
                   input.focus();

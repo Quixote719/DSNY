@@ -13,23 +13,18 @@ import {Titles, formObject as FormObject } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
 
-const formTitles = Titles;
-
 class CompostRequestForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
+     
+
     this.state = {
     FormObject:{},
-      editMode:true
+      editMode:true,
     }
   }
-
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
-
 
   postForm(formObject){
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
@@ -51,6 +46,8 @@ class CompostRequestForm extends Component {
     
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
+
+        console.log(isAddressValidated)
        
         if(success !== undefined) {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
@@ -58,7 +55,7 @@ class CompostRequestForm extends Component {
     
         if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult}  isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
         };
 
