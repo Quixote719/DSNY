@@ -204,8 +204,21 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    
-      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
+    // alert(props.geoCoderAddressResult);
+    // alert(props.isAddressValidated);
+    // //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
+    //     //console.log("Cannot proceed")
+    // if((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0))
+    // {
+    //     //console.log("Cannot proceed")
+
+    //    addressValidationMessage = "Please validate the Address";
+    //    errors["AddressAsEntered"] = addressValidationMessage
+    //    document.getElementById(`validateBtn`).focus();
+    // }
+    // else
+    // {
+      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle,#form textarea'));
 
       if(!initialPageLoad)
       {
@@ -222,7 +235,15 @@ const FormSteps = compose(
                   nextbuttonClicked = false;
                 }
             }
-            else if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
+            else if(input.type === "textarea" && input.required && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0)){
+                errors[input.name] = Titles.RequiredFieldMessage
+                if(nextbuttonClicked)
+                {
+                  input.focus();
+                  nextbuttonClicked = false;
+                }
+            }
+            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
             {
                 //errors[input.name] = "Please validate the above address"
                 //if(props.isAddressValidated === undefined || props.isAddressValidated === "")

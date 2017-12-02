@@ -19,11 +19,11 @@ class FormField extends Component {
       hideToolTip: true
     }
 
-    
+
     this.handleChange = this.handleChange.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
     this.handleOnFocus = this.handleOnFocus.bind(this);
-    
+
   }
 
   onInputChange(e) {
@@ -31,7 +31,7 @@ class FormField extends Component {
   }
 
   handleChange(event){
-    //console.log("DINESH" + this.refs.myinput.value )
+
     console.log(this.props.name + " , " + previousErrorMessage  + " , " + this.props.error);
     (isEmpty(this.props.value) || this.props.value.trim() === "" || (previousErrorMessage !== this.props.error)) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
     previousErrorMessage = this.props.error;
@@ -46,7 +46,32 @@ class FormField extends Component {
     this.setState({hideToolTip: false});
   }
 
-  renderField() {          
+  renderField(type) {
+
+    if (type) {
+      var name = 'input[' + type + ']';
+      switch (type) {
+        case "phone":
+          return (<div>
+            <MaskedInput mask={[
+                '(',
+                /[1-9]/,
+                /\d/,
+                /\d/,
+                ')',
+                ' ',
+                /\d/,
+                /\d/,
+                /\d/,
+                '-',
+                /\d/,
+                /\d/,
+                /\d/,
+                /\d/
+              ]} name={this.props.name} onChange={this.props.onChange} onBlur={this.props.onBlur} value={this.props.value}/>
+          </div>);
+
+        default:
            return (<div>
             <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
@@ -56,10 +81,12 @@ class FormField extends Component {
             <div>{this.props.children}</div>
           </div>)
       }
-  
+    }
+  }
+
   render() {
 
-    
+
 
     return (<div >{
         !this.props.isHidden
@@ -89,7 +116,7 @@ const TextInput = ({
   return (
     <div >
       {<FormField disabled={props.editMode} title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
-      
+
     </div>
   )
 }

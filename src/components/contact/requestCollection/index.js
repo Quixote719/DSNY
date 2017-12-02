@@ -35,10 +35,10 @@ class RequestCollection extends Component {
       this.props.postFileObject(formObject, PSOT_REQUEST_COLLECTION_URL);
   }
 
-   validateForm(formObject, errors){
+  validateForm(formObject, errors){
     //formObject & Values are same
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    if (formObject.Email !== formObject.ConfirmEmail) {
+      errors.ConfirmEmail = `The email addresses don't match`
     }
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'

@@ -23,8 +23,8 @@ export const formObject = {
   "Reasons": [
     {
       "Id": 0,
-      "Name": "Select One",
-      "DisplayName": "Select One",
+      "Name": "Select one",
+      "DisplayName": "Select one",
       "Selected": false
     },
     {

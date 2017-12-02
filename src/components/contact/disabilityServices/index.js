@@ -29,7 +29,7 @@ class DisabilityServices extends Component {
       this.props.postFormObject(formObject, PSOT_FORM_DISABILITY_SERVICES_URL);
   }
 
-   validateForm(formObject, errors){
+  validateForm(formObject, errors){
     //formObject & Values are same
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'

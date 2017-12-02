@@ -17,6 +17,9 @@ export const Titles = {
 
 export const formObject = {
 	"RequestId": 0,
+	"buildingStatus":false,
+	"commercialAddress":false,
+	"overideAddressValidation":false,
 	"strRequestId": "",
 	"SRNumber": "",
 	"FirstName": "",

@@ -27,9 +27,9 @@ const CompostRequestFormElements = (props) => {
       <FormAddressAutocomplete name="AddressAsEntered" required {...props} title={Titles.AddressAsEntered}  value="" disabled={values.editMode}/>
     </div>
     <FormSectionHeader title={Titles.sectionTwo}/>
-    <Field component={DropdownInput} name="BinsToReplace" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.NumberOfOutdoorBins} disabled={values.editMode} {...props} required />
+    <Field component={DropdownInput} name="NumberOfOutdoorBinsId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.NumberOfOutdoorBins} disabled={values.editMode} required />
     <Field component={TextInput} name="BARCodeOrRFID" {...props} maxlength={"50"}/>
-    <Field component={DropdownInput} name="ReasonForReplacement" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ReasonForReplacementList} disabled={values.editMode} {...props} required />
+    <Field component={DropdownInput} name="ReasonForReplacementListId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ReasonForReplacementList} disabled={values.editMode} required />
     <Field component={TextInput} name="Comments" {...props} maxlength={"200"} disabled={values.editMode}/>
         
     <FormSectionHeader title={Titles.sectionThree}/>

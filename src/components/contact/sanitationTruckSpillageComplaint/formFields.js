@@ -39,11 +39,11 @@ const sanitationTruckSpillageFormElements = (props) => {
     
     
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={TextInput}  name="FirstName" {...props} maxlength="25" disabled={values.editMode}/> 
-    <Field component={TextInput}  name="LastName" {...props} maxlength="25" disabled={values.editMode}/> 
-    <Field component={TextInput}  name="Email" {...props} maxlength="50" disabled={values.editMode}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50" disabled={values.editMode}/>
-    <Field component={TextInput} name="Phone" {...props} maxlength="21" disabled={values.editMode}/>
+    <Field component={TextInput}  name="FirstName" {...props} maxlength="25" disabled={values.editMode} required/> 
+    <Field component={TextInput}  name="LastName" {...props} maxlength="25" disabled={values.editMode} required/> 
+    <Field component={TextInput}  name="Email" {...props} maxlength="50" disabled={values.editMode} required/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50" disabled={values.editMode} required/>
+    <Field component={TextInput} name="Phone" {...props} maxlength="21" disabled={values.editMode} required/>
     
   
   </fieldset>)
