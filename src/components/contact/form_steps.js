@@ -28,7 +28,7 @@ import ThankYou from './thank_you';
 //     </pre>
 //   </div>);
 let firsterror = true;
-let initialPageLoad = true;
+let initialPageLoad = false;
 let nextbuttonClicked = false;
 let captchaVerified = false;
 let captchaMessage;
@@ -202,7 +202,7 @@ const FormSteps = compose(
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult, isAddressValidated:props.isAddressValidated}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
-
+  
     let errors = {}
     // alert(props.geoCoderAddressResult);
     // alert(props.isAddressValidated);
@@ -226,24 +226,8 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
-            {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if(input.type === "textarea" && input.required && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0)){
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            if (input.type === "text" && input.name==="AddressAsEntered" && (!values[input.name] ||  values[input.name].trim() !== "") && props.isAddressValidated !== 1)
+            //else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
             {
                 //errors[input.name] = "Please validate the above address"
                 //if(props.isAddressValidated === undefined || props.isAddressValidated === "")
@@ -253,6 +237,15 @@ const FormSteps = compose(
                 if(props.isAddressValidated !==1)
                   errors[input.name] = "Please enter NY address and click on Validate"
 
+                //if(nextbuttonClicked)
+                //{
+                  input.focus();
+                  nextbuttonClicked = false;
+                //}
+            }
+            else if (input.required && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            {
+                errors[input.name] = Titles.RequiredFieldMessage
                 if(nextbuttonClicked)
                 {
                   input.focus();

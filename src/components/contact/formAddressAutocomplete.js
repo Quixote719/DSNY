@@ -16,6 +16,7 @@ import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 let errorFlag = 0;
 //let showflag = true;
 let previousErrorMessage = "";
+let addressValidated = false;
 
 var errorMessage; 
 
@@ -41,10 +42,11 @@ class FormAddressAutocomplete extends Component {
     }
     handleChange = (address) =>{
         //this.props.checkAddressValidator(0);
-        this.props.checkAddressValidator(address);
+        
         
         //this.props.handlerFromParant(address);
-
+console.log("this.props.addressValidator" + this.props.addressValidator);
+console.log("Errors" + this.props.errors[this.props.name]);
         //showflag = true;
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
@@ -55,8 +57,9 @@ class FormAddressAutocomplete extends Component {
             address,
         })
         
-        isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name] && (this.props.checkAddressValidator !== 1)) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name]) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         previousErrorMessage = this.props.errors[this.props.name];
+        this.props.checkAddressValidator(address);
 
     }
     resetPlaceHolder = () =>{
@@ -73,8 +76,10 @@ class FormAddressAutocomplete extends Component {
         //if(this.props.errors[this.props.name] === "This field is required")
            // isEmpty(this.state.address) || this.state.address.trim().trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         //else
-        previousErrorMessage ="";
-        this.setState({hideToolTip: false});
+        //previousErrorMessage ="";
+        //if((previousErrorMessage !== this.props.errors[this.props.name]) || (!addressValidated && this.props.addressValidator !==1))
+        if((this.props.errors[this.props.name] && !addressValidated ) || !addressValidated || (this.props.addressValidator !==1))
+            this.setState({hideToolTip: false});
 
     }
     suggestedAddressSelected = (value) =>{
@@ -86,7 +91,10 @@ class FormAddressAutocomplete extends Component {
         }
     handleSelect =(address)=>{
         //this.props.checkAddressValidator(1);
-        previousErrorMessage ="";
+        //previousErrorMessage ="";
+        //(isEmpty(address) || address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        this.setState({hideToolTip: true});
+        addressValidated = false;
         if(errorFlag == 0){
             this.setState({
                 address: address,
@@ -103,7 +111,9 @@ class FormAddressAutocomplete extends Component {
     
     validateButtonClicked =()=>{
          //this.props.checkAddressValidator(1);
-         previousErrorMessage ="";
+         //(isEmpty(this.state.address) || this.state.address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+         this.setState({hideToolTip: true});
+         addressValidated = false;
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
          //showflag = false;
     }
@@ -144,10 +154,11 @@ class FormAddressAutocomplete extends Component {
             this.forceUpdate();
         } else {
             this.props.commercialAddressFlag(0, null)                        
-            errorMessage = (
-            <div className ="validatedAddress">Address Validated</div>
-        );
+            errorMessage = (<div className ="validatedAddress">Address Validated</div>);
             this.props.checkAddressValidator(1);
+            addressValidated = true;
+            this.setState({hideToolTip: true});
+            previousErrorMessage ="";
             this.forceUpdate();
         }
     }
@@ -170,7 +181,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate"))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -179,7 +190,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate"))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -195,6 +206,7 @@ class FormAddressAutocomplete extends Component {
             onBlur: this.resetPlaceHolder,
             onFocus: this.setPlaceHolder,
             error: this.props.errors[this.props.name],
+            required: true,
         }
         return (
             <div>
