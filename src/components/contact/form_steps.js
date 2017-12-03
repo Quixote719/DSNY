@@ -28,7 +28,7 @@ import ThankYou from './thank_you';
 //     </pre>
 //   </div>);
 let firsterror = true;
-let initialPageLoad = false;
+let initialPageLoad = true;
 let nextbuttonClicked = false;
 let captchaVerified = false;
 let captchaMessage;
@@ -220,22 +220,17 @@ const FormSteps = compose(
     // {
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle,#form textarea'));
 
-      if(!initialPageLoad)
-      {
+      
           inputs.forEach(input => {
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && input.name==="AddressAsEntered" && (!values[input.name] ||  values[input.name].trim() !== "") && props.isAddressValidated !== 1)
-            //else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            if (input.type === "text" && input.name==="AddressAsEntered" && props.isAddressValidated !== 1)
             {
-                //errors[input.name] = "Please validate the above address"
-                //if(props.isAddressValidated === undefined || props.isAddressValidated === "")
-                  //errors[input.name] = Titles.RequiredFieldMessage
-                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
-                //else 
-                if(props.isAddressValidated !==1)
-                  errors[input.name] = "Please enter NY address and click on Validate"
+                if(values[input.name] && values[input.name].trim() === "")
+                  errors[input.name] = Titles.RequiredFieldMessage
+                else if(props.isAddressValidated !==1)
+                  errors[input.name] = "Please enter a valid NY address"
 
                 //if(nextbuttonClicked)
                 //{
@@ -243,46 +238,49 @@ const FormSteps = compose(
                   nextbuttonClicked = false;
                 //}
             }
-            else if (input.required && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            else if(!initialPageLoad)
             {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
-            {
-                errors[input.name] = "Enter valid Email Address"
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "checkbox"  && (!values[input.name]))
-            {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            //Dropdown List Validation
-            else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
-            {
-                errors[input.name] = "Please select from the list"
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else
-            {
-              props.validateForm(values,errors);
+              if (input.required  && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+              {
+                  errors[input.name] = Titles.RequiredFieldMessage
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+              {
+                  errors[input.name] = "Enter valid Email Address"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else if (input.required && input.type === "checkbox"  && (!values[input.name]))
+              {
+                  errors[input.name] = Titles.RequiredFieldMessage
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              //Dropdown List Validation
+              else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
+              {
+                  errors[input.name] = "Please select from the list"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else
+              {
+                props.validateForm(values,errors);
+              }
             }
 
 
@@ -313,7 +311,6 @@ const FormSteps = compose(
           // }
           //if(isEmpty(errors))
             //props.validateForm(values,errors);
-      }
     //}
     return errors
   },

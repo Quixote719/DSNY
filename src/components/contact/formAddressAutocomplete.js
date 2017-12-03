@@ -14,7 +14,6 @@ import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 
 
 let errorFlag = 0;
-//let showflag = true;
 let previousErrorMessage = "";
 let addressValidated = false;
 
@@ -40,14 +39,10 @@ class FormAddressAutocomplete extends Component {
     componentDidMount(){     
         this.forceUpdate();
     }
+
     handleChange = (address) =>{
         //this.props.checkAddressValidator(0);
         
-        
-        //this.props.handlerFromParant(address);
-console.log("this.props.addressValidator" + this.props.addressValidator);
-console.log("Errors" + this.props.errors[this.props.name]);
-        //showflag = true;
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.
@@ -56,12 +51,12 @@ console.log("Errors" + this.props.errors[this.props.name]);
         this.setState({
             address,
         })
-        
+
         isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name]) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         previousErrorMessage = this.props.errors[this.props.name];
         this.props.checkAddressValidator(address);
-
     }
+
     resetPlaceHolder = () =>{
         // this.setState({
         //   placeholder: "Enter the address"
@@ -78,7 +73,7 @@ console.log("Errors" + this.props.errors[this.props.name]);
         //else
         //previousErrorMessage ="";
         //if((previousErrorMessage !== this.props.errors[this.props.name]) || (!addressValidated && this.props.addressValidator !==1))
-        if((this.props.errors[this.props.name] && !addressValidated ) || !addressValidated || (this.props.addressValidator !==1))
+        if((this.props.errors[this.props.name] && !addressValidated ) || (!addressValidated) || (this.props.addressValidator !==1))
             this.setState({hideToolTip: false});
 
     }
@@ -93,16 +88,18 @@ console.log("Errors" + this.props.errors[this.props.name]);
         //this.props.checkAddressValidator(1);
         //previousErrorMessage ="";
         //(isEmpty(address) || address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
-        this.setState({hideToolTip: true});
+       /* this.setState({hideToolTip: true});
         addressValidated = false;
         if(errorFlag == 0){
             this.setState({
                 address: address,
              });
             // this.props.getCollectionSchedule(address);
-         this.props.getCollectionSchedule(address, this.successCallback);
+         this.props.getCollectionSchedule(address, this.successCallback);*/
+         document.getElementById("validateBtn").click();
+         //this.setState({hideToolTip: false});
          //showflag = false;
-        }
+        //}
     }
 
     handleVisiblity = (props) =>{
@@ -126,6 +123,7 @@ console.log("Errors" + this.props.errors[this.props.name]);
         if(this.props.collectionScheduleInfo === null && this.props.suggestionAddress === null) {
             this.props.commercialAddressFlag(0, null)            
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
+            this.setState({hideToolTip: false});
             this.forceUpdate();
         } 
         else if (this.props.suggestionAddress != null){
@@ -138,6 +136,7 @@ console.log("Errors" + this.props.errors[this.props.name]);
             </div>
                 {this.correctAddressList()}
             </div>);
+            this.setState({hideToolTip: false});
             this.forceUpdate();                        
         }
         else if(
@@ -234,7 +233,10 @@ console.log("Errors" + this.props.errors[this.props.name]);
                     </Col>
                     <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}}>
                     <Col xs={12} sm={2} className = "validateButtonCol">
-                    <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
+                    {/*<SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>*/}
+                    <button id="validateBtn" disabled ={this.props.disabled} onClick={this.validateButtonClicked} className='subSectionButton'>
+                        VALIDATE
+                    </button>
                     </Col>
                     </div>
 
