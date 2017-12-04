@@ -19,8 +19,9 @@ class FormDateTimePicker extends Component {
     }
   }
 
-  onInputChange(a,item) {
-   // console.log(a);
+  onInputChange(item) {
+    debugger;
+
     /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
     if(item._d !== undefined){
        item._d = moment(item._d).format(this.state.defaultDateFormat);
@@ -58,7 +59,7 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} defaultValue={this.props.defaultValue} isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}/>
+            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} defaultValue={this.props.defaultValue} isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(event)}/>
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
           </fieldset>
