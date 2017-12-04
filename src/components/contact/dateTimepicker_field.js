@@ -34,7 +34,7 @@ class FormDateTimePicker extends Component {
   }
 
    inputFocus() {
-     (isEmpty(this.props.value) || this.props.value.trim() === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
    }
 
   handleFocusOut(){
@@ -69,7 +69,7 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value.trim() === "") && this.props.error?"input error":'input'}} 
+            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}} 
               defaultValue={this.props.defaultValue}  isValidDate={ valid } timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
               className="date-picker"/>
             {/*<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} onChange={event => this.onInputChange(event)}  isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value === "0001-01-01T00:00:00" ? '' : this.props.value } />*/}
