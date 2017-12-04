@@ -49,7 +49,7 @@ class CollectionBinOnPublicProperty extends Component {
     
     if(success !== undefined) {
       if (success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage, false)
       }
     }
 
