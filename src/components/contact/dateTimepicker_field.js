@@ -20,25 +20,34 @@ class FormDateTimePicker extends Component {
     this.state={
       defaultDateFormat:'MM/DD/YYYY',
       hideToolTip: true,
+      open:false
     }
   }
 
   onInputChange(item) {
 
     /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
-    isEmpty(this.props.value) || this.props.value.trim() === "" ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+
     if(item._d !== undefined){
+
        item._d = moment(item._d).format(this.state.defaultDateFormat);
       this.props.onChange(this.props.name, item._d);
+      this.setState({open:false})
+      isEmpty(this.props.value) || this.props.value.trim() === "" ? this.setState({hideToolTip: false, open:false}) : this.setState({hideToolTip: true, open:false});
     }
   }
 
    inputFocus() {
-     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+
+     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false, open:true}) : this.setState({hideToolTip: true, open:true});
+     console.log(this.state);
    }
 
   handleFocusOut(){
-    this.setState({hideToolTip: true});
+    this.setState({hideToolTip: true });
+  }
+  open(){
+    console.log('sdsdsdsdsd');
   }
 
   render() {
@@ -69,11 +78,11 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}} 
-              defaultValue={this.props.defaultValue}  isValidDate={ valid } timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
+            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}}
+              defaultValue={this.props.defaultValue}  isValidDate={ valid } open={this.state.open}   timeFormat={false} dateFormat={true} closeOnSelect={true} value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
               className="date-picker"/>
             {/*<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} onChange={event => this.onInputChange(event)}  isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value === "0001-01-01T00:00:00" ? '' : this.props.value } />*/}
-            <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
+            <span onclick={event => this.open(event)}><i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i></span>
             </div>
             {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
           </fieldset>
