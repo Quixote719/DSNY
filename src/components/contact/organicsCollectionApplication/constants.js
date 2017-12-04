@@ -18,7 +18,8 @@ export const Titles = {
   ConfirmEmail: "CONFIRM E-MAIL",
   OtherAwarenessSource: "PLEASE DESCRIBE (OPTIONAL)",
   Comments: "PLEASE INDICATE ANY ADDITIONAL COMMENTS OR QUESTIONS YOU HAVE ABOUT THE PROGRAM. (OPTIONAL)",
-  OtherSiteClassification: "PLEASE BRIEFLY EXPLAIN"
+  OtherSiteClassification: "PLEASE BRIEFLY EXPLAIN",
+  CompanyName: "MANAGEMENT COMPANY",
   
 }
 
@@ -630,6 +631,7 @@ export const formObject = {
   "SelectedSiteClassification": null,
   "OtherSiteClassification": null,
   "HasInformedStaffAboutProgram": false,
+  "CompanyName": null,
 
   "NonprofitForm":{},
   "CityAgencyForm":{},

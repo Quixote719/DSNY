@@ -32,15 +32,16 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="PropertyName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="PropertyUnitCount" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="SiteClassificationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SiteClassifications} disabled={values.editMode} required/>
+    <Field component={TextInput} name="OtherSiteClassification" {...props}  maxlength={"25"} disabled={values.editMode} required isHidden={values.SiteClassificationId !== 8} required={values.SiteClassificationId ==8}/>
     <FormSectionHeader title={TenPlusTitles.sectionThree}/>
     <Field component={TextInput} name="FirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="LastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="Email" {...props}  maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="ConfirmEmail" {...props} maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode} required/>
-    <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
-    
+    <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>    
     <FormSectionHeader title={TenPlusTitles.sectionFour}/>
+    <Field component={TextInput} name="CompanyName" {...props}  maxlength={"50"} disabled={values.editMode} required/>
 
     <FormSectionHeader title={TenPlusTitles.sectionFive}/>
     <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode} required/>

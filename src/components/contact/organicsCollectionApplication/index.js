@@ -60,7 +60,13 @@ class OrganicsCollectionApplication extends Component {
       'PropertyName':formObject.PropertyName,
       'PropertyUnitCount': formObject.PropertyUnitCount,
       'SiteClassificationId': formObject.SiteClassificationId,
+      'OtherSiteClassification': formObject.OtherSiteClassification,
     }
+
+    formObject.PropertyManagementForm.ManagementContact = {
+      'CompanyName': formObject.CompanyName,
+    }
+
   }
 
   postForm(formObject){
