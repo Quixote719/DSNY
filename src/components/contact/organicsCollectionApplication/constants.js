@@ -5,16 +5,15 @@ export const Titles = {
   FailureMessage:"Please make sure your message is correct.",
   Identity: "WHO ARE YOU",
   Address: "ADDRESS",
-  BuildingName: "NAME OF BUILDING, COMPLEX OR SITE (OPTIONAL)",
-  Approximate: "APPROXIMATE # OF UNITS/APTS IN BUILDING",
-  ClassifySite: "HOW WOULD YOU CLASSIFY THIS SITE?",
+  PropertyName: "NAME OF BUILDING, COMPLEX OR SITE (OPTIONAL)",
+  PropertyUnitCount: "APPROXIMATE # OF UNITS/APTS IN BUILDING",
+  SiteClassificationId: "HOW WOULD YOU CLASSIFY THIS SITE?",
   FirstName: "FIRST NAME",
   LastName: "LAST NAME",
   Email: "E-MAIL",
   Phone: "PHONE",
   PhoneType: "PHONE TYPE",
   AwarenessSources: "HOW DID YOU HEAR ABOUT THE PROGRAM? (OPTIONAL)",
-  
 }
 
 export const TenPlusTitles = {
@@ -32,8 +31,6 @@ export const TenPlusTitles = {
   ConfirmEmail: "CONFIRM E-MAIL",
   PhoneTypeId: "PHONE TYPE",
   AddressAsEntered: "ADDRESS",
-  PropertyName: "NAME OF BUILDING, COMPLEX OR SITE (OPTIONAL)",
-  PropertyUnitCount: "APPROXIMATE # OF UNITS/APTS IN BUILDING",
   SiteClassificationId: "HOW WOULD YOU CLASSIFY THIS SITE",
   CompanyName: "MANAGEMENT COMPANY",
   HasInformedStaffAboutProgram: "HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM"
