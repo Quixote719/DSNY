@@ -14,6 +14,8 @@ import formFields from './formFields'
 import IdentitySelector from './identitySelector'
 import FetchError from '../fetchError'
 import CompostRequestFormElements from './propertyFormFields'
+import FormSectionHeader from '../form_section_header';
+import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject, propertyManagementForm } from './constants'
 import '../../../content/styles/compostRequest.css';
@@ -149,9 +151,13 @@ class OrganicsCollectionApplication extends Component {
           <div>
           {
               <div className='container' style={displayID}>
-                <div className='form compostForm'>
-                    <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
-                </div>
+              <div className="IDSelector">
+                  <div className="row">
+                    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+                    <FormSectionHeader title={Titles.sectionOne}/>
+                  </div>
+                  <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
+              </div>
               </div>
           }
           {
