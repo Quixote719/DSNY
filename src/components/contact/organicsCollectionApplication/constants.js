@@ -13,6 +13,8 @@ export const Titles = {
   Email: "E-MAIL",
   Phone: "PHONE",
   PhoneType: "PHONE TYPE",
+  AwarenessSources: "HOW DID YOU HEAR ABOUT THE PROGRAM? (OPTIONAL)",
+  
 }
 
 export const TenPlusTitles = {
@@ -33,7 +35,8 @@ export const TenPlusTitles = {
   PropertyName: "NAME OF BUILDING, COMPLEX OR SITE (OPTIONAL)",
   PropertyUnitCount: "APPROXIMATE # OF UNITS/APTS IN BUILDING",
   SiteClassificationId: "HOW WOULD YOU CLASSIFY THIS SITE",
-  CompanyName: "MANAGEMENT COMPANY"
+  CompanyName: "MANAGEMENT COMPANY",
+  HasInformedStaffAboutProgram: "HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM"
 
 }
 
@@ -113,7 +116,121 @@ export const formObject = {
       "Name": "Organization",
       "DisplayName": "Other",
       "Selected": false
-    }
+    },
+    "AwarenessSources": [
+      {
+        "Id": 1,
+        "Name": "311",
+        "DisplayName": "311",
+        "Selected": false
+      },
+      {
+        "Id": 2,
+        "Name": "Brochure",
+        "DisplayName": "Brochure",
+        "Selected": false
+      },
+      {
+        "Id": 3,
+        "Name": "CommunityBoard",
+        "DisplayName": "Community Board/Elected Official",
+        "Selected": false
+      },
+      {
+        "Id": 4,
+        "Name": "Mailer",
+        "DisplayName": "Mailer",
+        "Selected": false
+      },
+      {
+        "Id": 5,
+        "Name": "Meeting",
+        "DisplayName": "Meeting",
+        "Selected": false
+      },
+      {
+        "Id": 6,
+        "Name": "Newspaper",
+        "DisplayName": "Newspaper",
+        "Selected": false
+      },
+      {
+        "Id": 7,
+        "Name": "NYCZWWebsite",
+        "DisplayName": "NYC Zero Waste Website",
+        "Selected": false
+      },
+      {
+        "Id": 8,
+        "Name": "NYCZWNewsletter",
+        "DisplayName": "NYC Zero Waste Newsletter",
+        "Selected": false
+      },
+      {
+        "Id": 9,
+        "Name": "Online",
+        "DisplayName": "Online: other website",
+        "Selected": false
+      },
+      {
+        "Id": 10,
+        "Name": "PublicEvent",
+        "DisplayName": "Public Event",
+        "Selected": false
+      },
+      {
+        "Id": 11,
+        "Name": "Facebook",
+        "DisplayName": "Social Media: Facebook",
+        "Selected": false
+      },
+      {
+        "Id": 12,
+        "Name": "Instagram",
+        "DisplayName": "Social Media: Instagram",
+        "Selected": false
+      },
+      {
+        "Id": 13,
+        "Name": "Twitter",
+        "DisplayName": "Social Media: Twitter",
+        "Selected": false
+      },
+      {
+        "Id": 14,
+        "Name": "OtherSocialMedia",
+        "DisplayName": "Social Media: Other",
+        "Selected": false
+      },
+      {
+        "Id": 15,
+        "Name": "DSNYOutreach",
+        "DisplayName": "Word of Mouth: DSNY Outreach",
+        "Selected": false
+      },
+      {
+        "Id": 16,
+        "Name": "GrowNYC",
+        "DisplayName": "Word of Mouth: GrowNYC",
+        "Selected": false
+      },
+      {
+        "Id": 17,
+        "Name": "Friend",
+        "DisplayName": "Word of Mouth: Friend/Colleague",
+        "Selected": false
+      },
+      {
+        "Id": 18,
+        "Name": "Superintendent",
+        "DisplayName": "Word of Mouth: Superintendent Referral",
+        "Selected": false
+      }
+    ],
+    "AwarenessSourceId": null,
+    "SelectedAwarenessSource": null,
+    "OtherAwarenessSource": null,
+    "Comments": null,  
   ],
 }
 
@@ -214,7 +331,7 @@ export const propertyManagementForm = {
   "SiteClassificationId": 0,
   "SelectedSiteClassification": null,
   "OtherSiteClassification": null,
-  "HasInformedStaffAboutProgram": false,
+  "HasInformedStaffAboutProgram": null,
   "ManagementContact": [
   ],
   "CreatedDate": "0001-01-01T00:00:00" 

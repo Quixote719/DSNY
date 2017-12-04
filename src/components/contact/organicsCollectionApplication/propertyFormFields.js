@@ -41,8 +41,14 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} title="MANAGEMENT COMPANY" name="CompanyName" {...props} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} title="CONTACT PERSON TITLE" name="Title" {...props} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} title="CONTACT PERSON FIRST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
-    <Field component={TextInput} title="CONTACT PERSON LAST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
-    <Field component={TextInput} title="ADDRESS" name="AddressAsEntered2" {...props} maxlength={"25"} disabled={values.editMode}/>  
+    <Field component={TextInput} title="CONTACT PERSON LAST NAME" name="LastName2" {...props} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} title="ADDRESS (OPTIONAL)" name="AddressAsEntered2" {...props} fullRow={true} maxlength={"50"} disabled={values.editMode}/>  
+    <Field component={TextInput} title="FLOOR/SUITE/APT (OPTIONAL)" name="Apartment2" {...props}  maxlength={"25"} disabled={values.editMode}/>  
+    <Field component={TextInput} title="E-MAIL" name="Email2" {...props}  maxlength={"25"} disabled={values.editMode}/>  
+    <Field component={TextInput} title="PHONE" name="Phone2" {...props}  maxlength={"25"} disabled={values.editMode}/>  
+    <Field component={DropdownInput} title="PHONE TYPE" name="PhoneTypeId2" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes2} disabled={values.editMode} required/> 
+    <Field component={DropdownInput} name="HasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/> 
+    {/* <Field component={DropdownInput} name="HasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>  */}
   </fieldset>)
 };
 

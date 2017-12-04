@@ -140,6 +140,7 @@ class OrganicsCollectionApplication extends Component {
           propertyManagementForm["PhoneTypeId2"] = 0;
           propertyManagementForm["SelectedPhoneType2"] = null;
           propertyManagementForm["FirstName2"] = null;
+          propertyManagementForm["LastName2"] = null;
           propertyManagementForm["Phone2"] = null;
           propertyManagementForm["Email2"] = null;
           propertyManagementForm["FullName2"] = null;
