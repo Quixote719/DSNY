@@ -225,7 +225,7 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && input.name==="AddressAsEntered" && props.isAddressValidated !== 1)
+            if (input.type === "text" && (input.name==="AddressAsEntered" || input.name==="BinLocationAddressAsEntered") && props.isAddressValidated !== 1)
             {
                 if(values[input.name] && values[input.name].trim() === "")
                   errors[input.name] = Titles.RequiredFieldMessage
