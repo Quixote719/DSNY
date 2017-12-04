@@ -13,6 +13,9 @@ import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
 import IdentitySelector from './identitySelector'
 import FetchError from '../fetchError'
+import CompostRequestFormElements from './propertyFormFields'
+import FormSectionHeader from '../form_section_header';
+import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
 import {Titles, formObject as FormObject, propertyManagementForm } from './constants'
 import '../../../content/styles/compostRequest.css';
@@ -36,9 +39,6 @@ class OrganicsCollectionApplication extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
 
   stepFunc(step){
     if(showIDSelector!=step){
@@ -48,16 +48,10 @@ class OrganicsCollectionApplication extends Component {
   }
 
   setFormType(ID){
-
-      console.log("SetFormType");
-      console.log(IDNum);
       if(ID!=IDNum){
         IDNum = ID;
         this.forceUpdate();
       }
-
-      // console.log("SetFormType");
-      // console.log(ID+"^^^");
   }
 
   generateNewFormObject(obj){
@@ -84,7 +78,7 @@ class OrganicsCollectionApplication extends Component {
     ManagementData.Zip = obj["Zip2"];
     ManagementData.AddressText = obj["AddressText2"];
     ManagementData.AddressTextOneLine = obj["AddressTextOneLine2"];
-    obj.ManagementContact.push(ManagementData);    
+    obj.ManagementContact.push(ManagementData);
     return obj;
   }
 
@@ -97,16 +91,12 @@ class OrganicsCollectionApplication extends Component {
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
+
 
     return errors;
   }
 
    render() {
-     console.log("IDNUM "+IDNum);
-        //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
         if(success !== undefined) {
@@ -114,7 +104,6 @@ class OrganicsCollectionApplication extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
-          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
           propertyManagementForm["CompanyName"] = null;
           propertyManagementForm["Title"] = null;
           propertyManagementForm["PhoneTypes2"] = [
@@ -140,6 +129,7 @@ class OrganicsCollectionApplication extends Component {
           propertyManagementForm["PhoneTypeId2"] = 0;
           propertyManagementForm["SelectedPhoneType2"] = null;
           propertyManagementForm["FirstName2"] = null;
+          propertyManagementForm["LastName2"] = null;
           propertyManagementForm["Phone2"] = null;
           propertyManagementForm["Email2"] = null;
           propertyManagementForm["FullName2"] = null;
@@ -155,33 +145,57 @@ class OrganicsCollectionApplication extends Component {
           propertyManagementForm["Zip2"];
           propertyManagementForm["AddressText2"] = null;
           propertyManagementForm["AddressTextOneLine2"] = null;
+
+          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
         return (
           <div>
           {
               <div className='container' style={displayID}>
-                <div className='form compostForm'>
-                    <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
-                </div>
+              <div className="IDSelector">
+                  <div className="row">
+                    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+                    <FormSectionHeader title={Titles.sectionOne}/>
+                  </div>
+                  <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
+              </div>
               </div>
           }
           {
-            (IDNum==null || IDNum==0 || IDNum==1 || IDNum==2) &&
+            (IDNum==1) &&
+            <div className='container'>
+              Resident, 1-9 Unit Building
+            </div>
+          }
+          {
+            (IDNum==2 || IDNum==3 || IDNum==4|| IDNum==5) &&
             <div className='container'>
               <div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+                <FormSteps formFields={CompostRequestFormElements} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
               </div>
             </div>
           }
           {
-            (IDNum==3 || IDNum==4) &&
+            (IDNum==6 || IDNum==8 || IDNum==11) &&
             <div className='container'>
-              <div>I dream and the world trembles</div>
+                NonProfit, Community Group, Other
             </div>
           }
           {
-            (IDNum==5 || IDNum==6) &&
+            (IDNum==7) &&
             <div className='container'>
-              <div>God bless America</div>
+                City Agency
+            </div>
+          }
+          {
+            (IDNum==9) &&
+            <div className='container'>
+                School (pre-K-12)
+            </div>
+          }
+          {
+            (IDNum==10) &&
+            <div className='container'>
+                Business
             </div>
           }
           </div>

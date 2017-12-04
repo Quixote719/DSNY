@@ -118,6 +118,10 @@ label.checkContainer{
    box-shadow: none;
  }
 
+ .IDSelector fieldset{
+   width: 100%;
+ }
+
 
 @media only screen and (max-width: 767px){
   .tableHeaderStepper.QuantityTitle{
