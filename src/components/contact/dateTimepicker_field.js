@@ -20,7 +20,8 @@ class FormDateTimePicker extends Component {
     this.state={
       defaultDateFormat:'MM/DD/YYYY',
       hideToolTip: true,
-      open:false
+      open:false,
+      value:''
     }
   }
 
@@ -32,7 +33,8 @@ class FormDateTimePicker extends Component {
 
        item._d = moment(item._d).format(this.state.defaultDateFormat);
       this.props.onChange(this.props.name, item._d);
-      this.setState({open:false})
+      this.setState({open:false, value:item._d});
+      console.log(this.state);
       isEmpty(this.props.value) || this.props.value.trim() === "" ? this.setState({hideToolTip: false, open:false}) : this.setState({hideToolTip: true, open:false});
     }
   }
@@ -44,6 +46,12 @@ class FormDateTimePicker extends Component {
    }
 
   handleFocusOut(){
+    console.log(this.state);
+    if(this.props.value !== null){
+      console.log('zxzx',this.props.value);
+        this.setState({open:false})
+    }
+
     this.setState({hideToolTip: true });
   }
   open(){
