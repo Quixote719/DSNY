@@ -20,6 +20,7 @@ export const formObject = {
 	"buildingStatus":false,
 	"commercialAddress":false,
 	"overideAddressValidation":false,
+	"isDistrictActive":true,
 	"strRequestId": "",
 	"SRNumber": "",
 	"FirstName": "",
