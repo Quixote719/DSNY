@@ -23,8 +23,8 @@ class FormDateTimePicker extends Component {
     }
   }
 
-  onInputChange(a,item) {
-   // console.log(a);
+  onInputChange(item) {
+
     /* Code to modify the Selected Date in the Required Format, to be appended to JSON */
     isEmpty(this.props.value) || this.props.value.trim() === "" ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
     if(item._d !== undefined){
@@ -44,7 +44,6 @@ class FormDateTimePicker extends Component {
   render() {
 
     const{Dates} = this.props;
-
     function contains(a, obj) {
        var i = a.length;
        while (i--) {
@@ -73,6 +72,7 @@ class FormDateTimePicker extends Component {
             <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value.trim() === "") && this.props.error?"input error":'input'}} 
               defaultValue={this.props.defaultValue}  isValidDate={ valid } timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
               className="date-picker"/>
+            {/*<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} onChange={event => this.onInputChange(event)}  isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value === "0001-01-01T00:00:00" ? '' : this.props.value } />*/}
             <i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i>
             </div>
             {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}

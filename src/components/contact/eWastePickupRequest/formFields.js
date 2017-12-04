@@ -47,7 +47,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	if (Dates){
 
      values.Dates = Dates;
-		 values.AppointmentDate = moment(Dates[0].StartDate)
+		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate) : values.AppointmentDate
 	}
 
 	if (typeof isDistrictActive !== undefined){
