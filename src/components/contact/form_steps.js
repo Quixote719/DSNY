@@ -32,7 +32,6 @@ let initialPageLoad = true;
 let nextbuttonClicked = false;
 let captchaVerified = false;
 let captchaMessage;
-export let addressValidationMessage = "";
 
 // Captcha - site key
 const sitekey = '6LdiUjgUAAAAALwAtRNxH962XysQsTtWsIYLEcS4';
@@ -56,14 +55,18 @@ const expiredCallback = () => {
 export function displayThankYouPage(success, successMessage, failureMessage)
 {
   if(success != null && success.SRNo !== undefined) {
-      return(<ThankYou>{successMessage + success.SRNo}</ThankYou>);
+      return(<ThankYou message={successMessage + success.SRNo} displayPatternLine={false} />);
     } else {
-      return(<ThankYou>{failureMessage}</ThankYou>);
+      return(<ThankYou message={failureMessage} displayPatternLine={false}/>);
     }
 
 }
 
-function assignGeoCoderAddressValues(values, geoCoderAddressResult){
+function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressValidated){
+  
+  if (values && isAddressValidated)
+      values.AddressAsEntered = isAddressValidated
+
 	if (values && geoCoderAddressResult){
 
     values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
@@ -125,7 +128,7 @@ const Step1 = (props) => {
   return (
     <span>
     {props.values.editMode = false}
-    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult)}
+    {assignGeoCoderAddressValues(props.values, props.geoCoderAddressResult, props.isAddressValidated)}
     <props.formFields {...props} />
 
     <Col xs={12}>
@@ -160,7 +163,7 @@ const Step2 = (props) => {
      <Tooltip placement="bottom" id="recaptchaTooltip" className={captchaMessage && !captchaVerified?"in":''}>{captchaMessage}</Tooltip>
 
     </div>
-    <Col xs={12}>
+    <Col className="submitBtnMargin col-xs-12">
     <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
     </Col>
@@ -199,7 +202,7 @@ const FormSteps = compose(
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult, isAddressValidated:props.isAddressValidated}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
-
+  
     let errors = {}
     // alert(props.geoCoderAddressResult);
     // alert(props.isAddressValidated);
@@ -215,69 +218,69 @@ const FormSteps = compose(
     // }
     // else
     // {
-      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle'));
+      const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle,#form textarea'));
 
-      if(!initialPageLoad)
-      {
+      
           inputs.forEach(input => {
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated !== 1)))
+            if (input.type === "text" && input.name==="AddressAsEntered" && props.isAddressValidated !== 1)
             {
-                //errors[input.name] = "Please validate the above address"
-                if(props.isAddressValidated === undefined || props.isAddressValidated === "")
+                if(values[input.name] && values[input.name].trim() === "")
                   errors[input.name] = Titles.RequiredFieldMessage
-                //else if(props.geoCoderAddressResult !== null && props.geoCoderAddressResult !== undefined)
                 else if(props.isAddressValidated !==1)
-                  errors[input.name] = "Please enter NY address and click on Validate"
+                  errors[input.name] = "Please enter a valid NY address"
 
-                if(nextbuttonClicked)
-                {
+                //if(nextbuttonClicked)
+                //{
                   input.focus();
                   nextbuttonClicked = false;
-                }
+                //}
             }
-            else if (input.required && input.type === "text"  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+            else if(!initialPageLoad)
             {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
-            {
-                errors[input.name] = "Enter valid Email Address"
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else if (input.required && input.type === "checkbox"  && (!values[input.name]))
-            {
-                errors[input.name] = Titles.RequiredFieldMessage
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            //Dropdown List Validation
-            else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
-            {
-                errors[input.name] = "Please select from the list"
-                if(nextbuttonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
-            }
-            else
-            {
-              props.validateForm(values,errors);
+              if (input.required  && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
+              {
+                  errors[input.name] = Titles.RequiredFieldMessage
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+              {
+                  errors[input.name] = "Enter valid Email Address"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else if (input.required && input.type === "checkbox"  && (!values[input.name]))
+              {
+                  errors[input.name] = Titles.RequiredFieldMessage
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              //Dropdown List Validation
+              else if (input.type === "button" && input.hasAttribute("required") && (values[input.name] === 0 || values[input.name] === ""))
+              {
+                  errors[input.name] = "Please select from the list"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else
+              {
+                props.validateForm(values,errors);
+              }
             }
 
 
@@ -308,7 +311,6 @@ const FormSteps = compose(
           // }
           //if(isEmpty(errors))
             //props.validateForm(values,errors);
-      }
     //}
     return errors
   },

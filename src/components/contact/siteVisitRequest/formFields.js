@@ -34,7 +34,7 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={DropdownInput} name="CategorizeSiteTypeId" {...props}  required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CategorizeSiteTypes} disabled={values.editMode}/>
     <Field component={TextInput} name="SpecifyOther" {...props} maxlength="100" isHidden={values.CategorizeSiteTypeId !== 7} required disabled={values.editMode}/>
     <Field component={TextInput} name="NameOfSite" {...props} maxlength="100" required disabled={values.editMode}/>
-    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" required disabled={values.editMode}/>
+    <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Notes" {...props}  required disabled={values.editMode}/>
     <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required disabled={values.editMode}/>
     
@@ -48,7 +48,7 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={TextInput} name="PTitle" {...props} maxlength="35" required disabled={values.editMode}/>
     <Field component={TextInput} name="PEmail" {...props} maxlength="50" required disabled={values.editMode}/>
     <Field component={TextInput} name="PPhone" {...props} maxlength="21" required disabled={values.editMode}/>
-    <Field component={DropdownInput} name="PhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode} required/>
 
     <FormSectionHeader title={Titles.sectionFive} />
     <Field component={TextInput} name="SfirstName" {...props} maxlength="25" required disabled={values.editMode}/>
@@ -56,7 +56,7 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={TextInput} name="STitle" {...props} maxlength="35" required disabled={values.editMode}/>
     <Field component={TextInput} name="SEmail" {...props} maxlength="50" required disabled={values.editMode}/>
     <Field component={TextInput} name="SPhone" {...props} maxlength="21" required disabled={values.editMode}/>
-    <Field component={DropdownInput} name="SPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="SPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PrimarySelectedPhoneType} disabled={values.editMode} required/>
 
   </fieldset>)
 };

@@ -14,7 +14,8 @@ import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 
 
 let errorFlag = 0;
-let showflag = true;
+let previousErrorMessage = "";
+let addressValidated = false;
 
 var errorMessage; 
 
@@ -35,14 +36,13 @@ class FormAddressAutocomplete extends Component {
     
     }
  
-    componentDidMount(){
-        console.log("Form address component")        
+    componentDidMount(){     
         this.forceUpdate();
     }
+
     handleChange = (address) =>{
         //this.props.checkAddressValidator(0);
-        this.props.checkAddressValidator(address);
-        showflag = true;
+        
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
                 Please enter / select a valid address in order to complete the appointment request.
@@ -51,10 +51,12 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address,
         })
-        
-        isEmpty(address) || address.trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
 
+        isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name]) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+        previousErrorMessage = this.props.errors[this.props.name];
+        this.props.checkAddressValidator(address);
     }
+
     resetPlaceHolder = () =>{
         // this.setState({
         //   placeholder: "Enter the address"
@@ -69,7 +71,10 @@ class FormAddressAutocomplete extends Component {
         //if(this.props.errors[this.props.name] === "This field is required")
            // isEmpty(this.state.address) || this.state.address.trim().trim() === ""? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         //else
-        this.setState({hideToolTip: false});
+        //previousErrorMessage ="";
+        //if((previousErrorMessage !== this.props.errors[this.props.name]) || (!addressValidated && this.props.addressValidator !==1))
+        if((this.props.errors[this.props.name] && !addressValidated ) || (!addressValidated) || (this.props.addressValidator !==1))
+            this.setState({hideToolTip: false});
 
     }
     suggestedAddressSelected = (value) =>{
@@ -80,15 +85,21 @@ class FormAddressAutocomplete extends Component {
          this.props.getCollectionSchedule(value, this.successCallback);
         }
     handleSelect =(address)=>{
-        this.props.checkAddressValidator(1);
+        //this.props.checkAddressValidator(1);
+        //previousErrorMessage ="";
+        //(isEmpty(address) || address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+       /* this.setState({hideToolTip: true});
+        addressValidated = false;
         if(errorFlag == 0){
             this.setState({
                 address: address,
              });
             // this.props.getCollectionSchedule(address);
-         this.props.getCollectionSchedule(address, this.successCallback);
-         showflag = false;
-        }
+         this.props.getCollectionSchedule(address, this.successCallback);*/
+         document.getElementById("validateBtn").click();
+         //this.setState({hideToolTip: false});
+         //showflag = false;
+        //}
     }
 
     handleVisiblity = (props) =>{
@@ -96,9 +107,12 @@ class FormAddressAutocomplete extends Component {
     }
     
     validateButtonClicked =()=>{
-         this.props.checkAddressValidator(1);
+         //this.props.checkAddressValidator(1);
+         //(isEmpty(this.state.address) || this.state.address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+         this.setState({hideToolTip: true});
+         addressValidated = false;
          this.props.getCollectionSchedule(this.state.address, this.successCallback);
-         showflag = false;
+         //showflag = false;
     }
     successCallback = (success)=>{
         if (this.props.noResultsError.FormattedAddress) {
@@ -109,6 +123,7 @@ class FormAddressAutocomplete extends Component {
         if(this.props.collectionScheduleInfo === null && this.props.suggestionAddress === null) {
             this.props.commercialAddressFlag(0, null)            
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
+            this.setState({hideToolTip: false});
             this.forceUpdate();
         } 
         else if (this.props.suggestionAddress != null){
@@ -121,6 +136,7 @@ class FormAddressAutocomplete extends Component {
             </div>
                 {this.correctAddressList()}
             </div>);
+            this.setState({hideToolTip: false});
             this.forceUpdate();                        
         }
         else if(
@@ -137,9 +153,11 @@ class FormAddressAutocomplete extends Component {
             this.forceUpdate();
         } else {
             this.props.commercialAddressFlag(0, null)                        
-            errorMessage = (
-            <div className ="validatedAddress">Address Validated</div>
-        );
+            errorMessage = (<div className ="validatedAddress">Address Validated</div>);
+            this.props.checkAddressValidator(1);
+            addressValidated = true;
+            this.setState({hideToolTip: true});
+            previousErrorMessage ="";
             this.forceUpdate();
         }
     }
@@ -162,7 +180,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && showflag))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -171,7 +189,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] ==="Please enter NY address and click on Validate" && showflag))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -187,6 +205,7 @@ class FormAddressAutocomplete extends Component {
             onBlur: this.resetPlaceHolder,
             onFocus: this.setPlaceHolder,
             error: this.props.errors[this.props.name],
+            required: true,
         }
         return (
             <div>
@@ -195,7 +214,7 @@ class FormAddressAutocomplete extends Component {
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} sm={this.props.disabled ? 12 : 10} className = "addressAutosuggestCol">
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
-                    {this.props.errors[this.props.name] && !this.state.hideToolTip && showflag?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
+                    {this.props.errors[this.props.name] && !this.state.hideToolTip ?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
 
                     {errorMessage}
 
@@ -214,7 +233,10 @@ class FormAddressAutocomplete extends Component {
                     </Col>
                     <div style={this.props.disabled ? {display: 'none'}:{display: 'block'}}>
                     <Col xs={12} sm={2} className = "validateButtonCol">
-                    <SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>
+                    {/*<SubSectionButton title='VALIDATE' onClick = {this.validateButtonClicked}/>*/}
+                    <button id="validateBtn" disabled ={this.props.disabled} onClick={this.validateButtonClicked} className='subSectionButton'>
+                        VALIDATE
+                    </button>
                     </Col>
                     </div>
 

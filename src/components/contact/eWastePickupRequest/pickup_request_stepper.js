@@ -82,7 +82,7 @@ class RequestStepper extends Component {
 	}
 
 	renderCatg(ItemCatg) {
-    console.log(ItemCatg);
+
 		if (ItemCatg)
 			return _.map(ItemCatg, Item => {
 				const subCatg = Item.hasSubCategory !== 0

@@ -18,7 +18,6 @@ class FormBoolean extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleFocusOut = this.handleFocusOut.bind(this);
-    this.showToolTip = this.showToolTip.bind(this);
   }
 
   handleChange(event){
@@ -65,16 +64,7 @@ class FormBoolean extends Component {
              </div>);
   }
 
-  showToolTip(){
-
-    if(this.props.error && !this.state.hideToolTip)
-    {
-    return(
-      <Tooltip placement="top" id="tooltip-left" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
-      );
-    }
-  }
-
+  
   renderOptions() {
     return (<div>
       <label className="checkContainer">
@@ -84,8 +74,8 @@ class FormBoolean extends Component {
       <span className="checkmark"></span>
       <div className="checkBoxText">{this.props.title}</div>
       </label>
-      {this.showToolTip()}
-
+      {this.props.error && !this.state.hideToolTip?<Tooltip placement="top" id="tooltip-left" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>:null}
+  
     </div>)
   }
   render() {

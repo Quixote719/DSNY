@@ -40,9 +40,8 @@ class AdoptABasketForm extends Component {
 
 
    validateForm(formObject, errors){
-     
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    if (formObject.Email != formObject.confirmEmail) {
+        errors.confirmEmail = `The email addresses don't match`
     }
     return errors;
   }

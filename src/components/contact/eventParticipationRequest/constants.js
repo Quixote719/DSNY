@@ -66,8 +66,8 @@ export const formObject = {
   "AlternateName":null,
   "StartDate":null,
   "EndDate":null,
-  "StartTime":null,
-  "EndTime":null,
+  "StartTime":0,
+  "EndTime":0,
   "TargetAudiences":null,
   "AttendeeCountRanges": [
      {

@@ -12,6 +12,26 @@ import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
+import {Col} from 'react-bootstrap';
+
+const DisplayFormikState = props => <div style={{
+		margin: '1rem 0'
+	}}>
+	<h3 style={{
+			fontFamily: 'monospace'
+		}}/>
+	<pre
+      style={{
+        background: '#f6f8fa',
+        fontSize: '2rem',
+        padding: '.5rem',
+      }}
+    >
+      <strong>values</strong> ={' '}
+
+      {JSON.stringify(props.values, null, 2)}
+    </pre>
+  </div>;
 
 
 // Our inner form component which receives our form's state and updater methods as props
@@ -76,6 +96,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={DropdownInput} name="HasAlternateSideParking" {...props}  onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={MultiSelectInput} name="AlternateSideParkingDays" {...props} onMultiSelect={setFieldValue} options={values.AlternateSideParkingDays} isHidden={values.HasAlternateSideParking !== true}/>
     <Field component={TextInput} name="AlternateSideParkingTimes" {...props} isHidden={values.HasAlternateSideParking !== true}/>
+    <Col xs={12}><DisplayFormikState {...props} /></Col>
       
   </fieldset>)
 };
