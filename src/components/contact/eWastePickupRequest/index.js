@@ -48,9 +48,14 @@ class EwasteRequestForm extends Component {
 
    validateForm(formObject, errors){
     //formObject & Values are same
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    //if(formObject.buildingStatus && !formObject.overideAddressValidation)
+      //errors.overideAddressValidation = 'Please check to confirm this is not a 10+ building'
+    if(formObject.commercialAddress && !formObject.overideAddressValidation)
+      errors.overideAddressValidation = 'Please check to confirm this is not a Coomercial building'
+    else if (formObject.Email !== formObject.ConfirmEmail) {
+      errors.ConfirmEmail = `The email addresses don't match`
     }
+
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     // }

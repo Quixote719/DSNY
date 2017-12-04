@@ -73,7 +73,7 @@ const EwastePickUpRequestFormElements = (props) => {
 					'<p><span style="font-weight: 400;">The address you entered is currently not in the pilot program.</p>' 
 					:''}
 				</FormAddressValidatorError></div>
-    <div>{values.buildingStatus || values.commercialAddress ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props}/> : '' }</div>
+    <div>{values.buildingStatus || values.commercialAddress ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props} onChange={setFieldValue} required/> : '' }</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode} required/>
