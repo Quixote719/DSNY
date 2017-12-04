@@ -35,6 +35,7 @@ import Header from './components/shared/header';
 import Footer from './components/shared/footer/footer';
 import NYCFooter from './components/shared/footer/NYCfooter';
 import Howtogetridof from './components/home/howtogetridof';
+import SerialNoPage from './components/home/Serial_No_Request';
 
 import SiteSearch from './components/home/Site_Search';
 
@@ -134,6 +135,10 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/:address"} component={CollectionSchedule}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search"} component={SiteSearch}/>
+
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/serviceRequestStatus"} component={SerialNoPage}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/serviceRequestStatus/:keyword"} component={SerialNoPage}/>
+
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/eventDetail/:slug"} component={EventDetail}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/complaints"} component={Complaints}/>

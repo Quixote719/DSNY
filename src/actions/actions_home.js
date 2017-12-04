@@ -180,7 +180,7 @@ export function getRidOffKeywords() {
 
 export function getRidOfSearchResults(suggestion) {
     return function (dispatch) {
-        axios.get(RID_OF_SEARCH_RESULTS_URL + "=" + suggestion)
+        axios.get(RID_OF_SEARCH_RESULTS_URL + "=" + encodeURIComponent(suggestion))
             .then((data) => {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',
