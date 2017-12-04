@@ -7,6 +7,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import SubSectionButton from '../../shared/sub_section_button';
+import { Link } from 'react-router-dom';
 
 class ProgramCards extends Component {
   constructor(props, context) {
@@ -17,16 +18,33 @@ class ProgramCards extends Component {
       if(item.name == "home-services-section"){
         return _.map(item.cards, (item,index) =>{
           return (
+            item.linked_page.url
+            ?
+            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + item.linked_page.url}>
+              <div className="programMobileData" key={index}>
+                <div className="programMobileOuter">
+                  <span className="programMobileTitle">
+                    {item.title}
+                  </span>
+                  <span className="programMobileImageSpan">
+                    <img  alt = {item.title}  src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} className="programMobileImage" />
+                  </span>
+                </div>
+              </div>
+            </Link>
+            :
+            <Link to={item.linked_url} target="_blank">
             <div className="programMobileData" key={index}>
               <div className="programMobileOuter">
                 <span className="programMobileTitle">
                   {item.title}
                 </span>
                 <span className="programMobileImageSpan">
-                  <img alt = {item.title}  src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} className="programMobileImage" />
+                  <img  alt = {item.title}  src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} className="programMobileImage" />
                 </span>
               </div>
             </div>
+          </Link>
           );
         })          
       }        
@@ -36,20 +54,39 @@ class ProgramCards extends Component {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
         return _.map(item.cards, (item,index) =>{
-          return (
-            <Col className="programData" key={index}>
-              <Col xs={12} lg={2} id="programCol" className ="programCol">
-                <div>
-                  <div className="programImageDiv">
-                    <img alt = {item.title} src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
-                  </div>
-                  <div className="programTitleDiv">
-                    {item.title}
-                  </div>
-                </div>
-              </Col>
-            </Col>
-          );
+          if(item.linked_page.url !== false) {
+            return (
+              item.linked_page.url
+              ?<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + item.linked_page.url}>
+                <Col className="programData" key={index}>
+                  <Col xs={12} lg={2} id="programCol" className ="programCol">
+                    <div>
+                      <div className="programImageDiv">
+                        <img alt = {item.title} src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
+                      </div>
+                      <div className="programTitleDiv">
+                        {item.title}
+                      </div>
+                    </div>
+                  </Col>
+                </Col>
+              </Link>
+              :<Link to={item.linked_url} target="_blank">
+                  <Col className="programData" key={index}>
+                    <Col xs={12} lg={2} id="programCol" className ="programCol">
+                      <div>
+                        <div className="programImageDiv">
+                          <img alt = {item.title} src={item.featured_image? item.featured_image.base_path + item.featured_image.file: item.linked_file?item.linked_file.file:""} />
+                        </div>
+                        <div className="programTitleDiv">
+                          {item.title}
+                        </div>
+                      </div>
+                    </Col>
+                  </Col>
+                </Link>
+            );
+          }
         })          
       }
     });
