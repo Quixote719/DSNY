@@ -10,7 +10,7 @@ import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
 import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
-import {TenPlusTitles, TenPlusTitles} from './constants'
+import {TenPlusTitles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
@@ -20,6 +20,7 @@ const CompostRequestFormElements = (props) => {
   const {
     values,
     setFieldValue,
+    handledropDown
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
@@ -35,14 +36,14 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="LastName" {...props}  maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} name="Email" {...props}  maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} name="ConfirmEmail" {...props} maxlength={"50"} disabled={values.editMode}/>
-    <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode}/>  
+    <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode}/>
     <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
     <FormSectionHeader title={TenPlusTitles.sectionFour}/>
     <Field component={TextInput} title="MANAGEMENT COMPANY" name="CompanyName" {...props} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} title="CONTACT PERSON TITLE" name="Title" {...props} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} title="CONTACT PERSON FIRST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} title="CONTACT PERSON LAST NAME" name="FirstName2" {...props} maxlength={"25"} disabled={values.editMode}/>
-    <Field component={TextInput} title="ADDRESS" name="AddressAsEntered2" {...props} maxlength={"25"} disabled={values.editMode}/>  
+    <Field component={TextInput} title="ADDRESS" name="AddressAsEntered2" {...props} maxlength={"25"} disabled={values.editMode}/>
   </fieldset>)
 };
 
