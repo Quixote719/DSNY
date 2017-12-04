@@ -37,9 +37,6 @@ class OrganicsCollectionApplication extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
 
   stepFunc(step){
     if(showIDSelector!=step){
@@ -92,9 +89,7 @@ class OrganicsCollectionApplication extends Component {
      if (formObject.OrganizationTaxIdNumber === "TEST") {
       errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
-    // if (!values.OrganizationWebsite) {
-    //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
-    // }
+
 
     return errors;
   }
@@ -107,7 +102,6 @@ class OrganicsCollectionApplication extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
-          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
           propertyManagementForm["CompanyName"] = null;
           propertyManagementForm["Title"] = null;
           propertyManagementForm["PhoneTypes2"] = [
@@ -149,6 +143,8 @@ class OrganicsCollectionApplication extends Component {
           propertyManagementForm["Zip2"];
           propertyManagementForm["AddressText2"] = null;
           propertyManagementForm["AddressTextOneLine2"] = null;
+
+          let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
         return (
           <div>
           {
@@ -159,7 +155,13 @@ class OrganicsCollectionApplication extends Component {
               </div>
           }
           {
-            (IDNum==null || IDNum==0 || IDNum==1 || IDNum==2) &&
+            (IDNum==1) &&
+            <div className='container'>
+              Resident, 1-9 Unit Building
+            </div>
+          }
+          {
+            (IDNum==2 || IDNum==3 || IDNum==4|| IDNum==5) &&
             <div className='container'>
               <div className='form compostForm'>
                 <FormSteps formFields={CompostRequestFormElements} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
@@ -167,15 +169,27 @@ class OrganicsCollectionApplication extends Component {
             </div>
           }
           {
-            (IDNum==3 || IDNum==4) &&
+            (IDNum==6 || IDNum==8 || IDNum==11) &&
             <div className='container'>
-              <div>I dream and the world trembles</div>
+                NonProfit, Community Group, Other
             </div>
           }
           {
-            (IDNum==5 || IDNum==6) &&
+            (IDNum==7) &&
             <div className='container'>
-              <div>God bless America</div>
+                City Agency
+            </div>
+          }
+          {
+            (IDNum==9) &&
+            <div className='container'>
+                School (pre-K-12)
+            </div>
+          }
+          {
+            (IDNum==10) &&
+            <div className='container'>
+                Business
             </div>
           }
           </div>

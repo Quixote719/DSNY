@@ -50,70 +50,71 @@ export const formObject = {
   "IdentityTypes": [
     {
       "Id": 1,
-      "Name": "StreetTreeSteward",
+      "Name": "ResidentialUnder10Units",
       "DisplayName": "Resident, 1-9 Unit Building",
       "Selected": false
     },
     {
       "Id": 2,
-      "Name": "Organization",
+      "Name": "ResidentialOver10Units",
       "DisplayName": "Resident, 10+ Unit Building",
       "Selected": false
     },
     {
       "Id": 3,
-      "Name": "Organization",
-      "DisplayName": "Propety Manager",
+      "Name": "PropertyManager",
+      "DisplayName": "Property Manager",
       "Selected": false
     },
     {
       "Id": 4,
-      "Name": "Organization",
+      "Name": "Superintendent",
       "DisplayName": "Superintendent",
       "Selected": false
     },
     {
       "Id": 5,
-      "Name": "Organization",
+      "Name": "Condo",
       "DisplayName": "Co-op/Condo Board Member",
       "Selected": false
     },
     {
       "Id": 6,
-      "Name": "Organization",
+      "Name": "Nonprofit",
       "DisplayName": "Nonprofit",
       "Selected": false
     },
     {
       "Id": 7,
-      "Name": "Organization",
+      "Name": "CityAgency",
       "DisplayName": "City Agency",
       "Selected": false
     },
     {
       "Id": 8,
-      "Name": "Organization",
+      "Name": "CommunityGroup",
       "DisplayName": "Community Group",
       "Selected": false
     },
     {
-      "Id": 8,
-      "Name": "Organization",
+      "Id": 9,
+      "Name": "SchoolPreK12",
       "DisplayName": "School (pre-K-12)",
       "Selected": false
     },
     {
-      "Id": 8,
-      "Name": "Organization",
+      "Id": 10,
+      "Name": "Business",
       "DisplayName": "Business",
       "Selected": false
     },
     {
-      "Id": 8,
-      "Name": "Organization",
+      "Id": 11,
+      "Name": "Other",
       "DisplayName": "Other",
       "Selected": false
-    },
+    }
+  ],
     "AwarenessSources": [
       {
         "Id": 1,
@@ -227,8 +228,7 @@ export const formObject = {
     "AwarenessSourceId": null,
     "SelectedAwarenessSource": null,
     "OtherAwarenessSource": null,
-    "Comments": null,  
-  ],
+    "Comments": null,
 }
 
 export const propertyManagementForm = {
@@ -331,7 +331,7 @@ export const propertyManagementForm = {
   "HasInformedStaffAboutProgram": null,
   "ManagementContact": [
   ],
-  "CreatedDate": "0001-01-01T00:00:00" 
+  "CreatedDate": "0001-01-01T00:00:00"
 }
 
 // "CompanyName": null,
