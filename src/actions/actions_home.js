@@ -159,7 +159,6 @@ export function clearCollectionSchedule() {
             payload: undefined,
             routingData: undefined,
             collectionScheduleData: undefined,
-            routingData: undefined,
             arrayLength: 0,
             holidayData: undefined,
             noResultsError: undefined,
