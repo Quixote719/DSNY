@@ -26,7 +26,7 @@ export const formObject = {
   "AdditionalLocationInfo": null,
   "Description": null,
   "IncidentDate": null,
-  "IncidentTime": null,
+  "IncidentTime": 0,
   "LicensePlateNumber": null,
   "TruckNumber": null,
   "Id": 0,
