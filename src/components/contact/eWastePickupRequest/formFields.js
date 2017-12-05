@@ -43,26 +43,40 @@ const DisplayFormikState = props => <div style={{
 
 
 const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue, Dates, isDistrictActive, geoCoderAddressResult, buildingStatus} = props;
+	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus} = props;
+	if (Dates){
 
-	if (Dates  && typeof isDistrictActive !== undefined){
-     values.isDistrictActive = isDistrictActive;
      values.Dates = Dates;
-		 values.AppointmentDate = moment(Dates[0].StartDate)
+		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate) : values.AppointmentDate
 	}
 
-	if(buildingStatus){
+	if (typeof isDistrictActive !== undefined){
+		 values.isDistrictActive = isDistrictActive;
+	}
+
+	if(buildingStatus && buildingStatus.features){
 		let features = buildingStatus.features[0]
 		let unitNumber = features.attributes.UnitsTotal
 		values.buildingStatus = unitNumber >= 10 ? true : false;
+	}
+
+	if(commercialAddress){
+		let ca = commercialAddress.commercialFlag
+		values.commercialAddress = ca === 1 ? true : false;
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
-		<div><FormAddressValidatorError>{values.buildingStatus ? '<p><span style="font-weight: 400;">You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">nyc.gov/ecycle</a></p>' : ''}</FormAddressValidatorError></div>
-    <div>{values.buildingStatus ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props}/> : '' }</div>
+		<div><FormAddressValidatorError>
+			{values.isDistrictActive === false ?
+					'<p><span style="font-weight: 400;">The address you entered is currently not in the pilot program.</p>'
+					:values.buildingStatus ?
+						 '<p><span style="font-weight: 400;">You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">nyc.gov/ecycle</a></p>'
+						  :''}
+				</FormAddressValidatorError></div>
+    <div>{values.isDistrictActive && (values.buildingStatus || values.commercialAddress) ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props} onChange={setFieldValue} required/> : '' }</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode} required/>

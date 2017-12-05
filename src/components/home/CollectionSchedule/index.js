@@ -75,7 +75,6 @@ class CollectionSchedule extends Component {
         });
     }
     handleSelect = (address) => {
-        this.props.clearCollectionSchedule();        
         showTableFlag = 1;
         if (errorFlag == 0) {
             this.setState({
@@ -83,6 +82,7 @@ class CollectionSchedule extends Component {
                 checkInputresults: "clearBoxNotChecked"
             });
             if (this.state.address !== "" || this.state.address.trim().length !== 0) {
+                this.props.clearCollectionSchedule();        
                 document.activeElement.blur();                
                 this.props.getCollectionSchedule(address, null, this.successCallback);
                 this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + address)
@@ -90,13 +90,13 @@ class CollectionSchedule extends Component {
         }
     }
     searchIcon = () => {
-        this.props.clearCollectionSchedule();        
         showTableFlag = 1;
         if (errorFlag == 0) {
             this.setState({
                 checkInputresults: "clearBoxNotChecked"
             });
             if (this.state.address !== "" || this.state.address.trim().length !== 0) {
+                this.props.clearCollectionSchedule();        
                 this.props.getCollectionSchedule(this.state.address, null, this.successCallback);
                 this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/collectionSchedule/" + this.state.address)
             }
@@ -110,8 +110,8 @@ class CollectionSchedule extends Component {
         }
     }
     handleKeyPress = (event) => {
-        if (event.keyCode == 32) {
-            if (this.state.address.trim().length == 0)
+        if (event.keyCode === 32) {
+            if (this.state.address.trim().length === 0)
                 event.preventDefault();
         }
     }
@@ -303,13 +303,15 @@ class CollectionSchedule extends Component {
                 )
             }
             else{
-                return(                
-                <div className = "blankLoadingDivCollectionSchedule">
-                    <div className = "loadingIconDiv">
-                    <img src={require('../../../content/images/loading.svg')} alt="Loading Icon Collection" />
-                    </div>
-                </div>
-                );
+                if(this.state.address.trim().length !== 0){
+                    return(                
+                        <div className = "blankLoadingDivCollectionSchedule">
+                            <div className = "loadingIconDiv">
+                            <img src={require('../../../content/images/loading.svg')} alt="Loading Icon Collection" />
+                            </div>
+                        </div>
+                        );
+                }
             }
 
         }

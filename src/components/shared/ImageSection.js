@@ -7,13 +7,26 @@ import '../../content/styles/imageSection.css'
 class ImageSection extends Component {
 
     renderHeaderContent(){
-    const cardStyle={
+    const cardStyleLeft = {
                     'float': 'left',
                     'marginTop': '25px'
     }
-    if(this.props.ImageProps.content){
+    const cardStyleRight = {
+                    'float': 'right'
+    }
+    if(this.props.ImageProps.content && this.props.ImageProps.header){
       return(
-            <div style={cardStyle}>
+        <div>
+          <div className="BlackTitle">{this.props.ImageProps.header}</div>
+          <div style={cardStyleRight}>
+                <ContentCard type='2' content={this.props.ImageProps.content}/>
+          </div>
+        </div>
+      )
+    }
+    else if(this.props.ImageProps.content){
+      return(
+            <div style={cardStyleLeft}>
                   <ContentCard type='2' content={this.props.ImageProps.content}/>
             </div>
       )
@@ -31,11 +44,19 @@ class ImageSection extends Component {
       imageUrl = this.props.ImageProps.featured_image.base_path + this.props.ImageProps.featured_image.file;
     }
     const style = {
-                    'backgroundImage': `url(${imageUrl})`,
-                    'backgroundSize': '100% 900px',
+                    "small":{
+                      'backgroundImage': `url(${imageUrl})`,
+                      'backgroundSize': '100%'
+                    },
+                    "big":{
+                      'backgroundImage': `url(${imageUrl})`,
+                      'backgroundSize': '100%',
+                      'height': '350px'
+                    }
                   }
+    const secStyle = (this.props.ImageProps.content && this.props.ImageProps.header)? style.big: style.small;
     return (
-      <div className='ImageSection' style={style} >
+      <div className='ImageSection' style={secStyle} >
         <div className = 'SContainer'>
           {this.renderHeaderContent()}
         </div>

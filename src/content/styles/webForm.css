@@ -9,6 +9,11 @@ label.checkContainer{
   margin-left: -8px;
 }
 
+.formContent{
+  line-height: 28px;
+  color: #262626;
+}
+
  /* Hide the browser's default checkbox */
  .checkContainer input {
      position: absolute;
@@ -116,6 +121,10 @@ label.checkContainer{
  .FormField .dropdown-toggle:hover,.FormField .dropdown-toggle:focus{
    background-color: transparent!important;
    box-shadow: none;
+ }
+
+ .IDSelector fieldset{
+   width: 100%;
  }
 
 

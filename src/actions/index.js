@@ -16,7 +16,7 @@ import {
 /**
  * Deprecated - this needs to be converted use the new methodology of fetchPageData.
  * Once the changeover is made, remove this method, and remove FETCH_LANDING_PAGE_URL constant.
- * 
+ *
  * Used by Resources_container.js
  */
 export function fetchLandinPageDetails(slug) {
@@ -32,18 +32,25 @@ export function fetchPageData(slug) {
   console.log(slug);
   return function(dispatch) {
     dispatch({type: types.POST_FORM_REQUEST, payload: {}})
-
+    dispatch({type: types.GET_UNAVAILABLE_DATES, payload: {}})
+    dispatch({type: types.TEN_PLUS_BUILDINGS_STATUS, payload: {}})
+    dispatch({type: types.IS_DISTRICT_ACTIVE, payload: {}})
      dispatch({
-                        type: 'SET_COLLECTION_SCHEDULE_DATA',
-                        DSNYGeoCoder: null,
-                        collectionScheduleInfo: null,
-                        payload: null,
-                        routingData: null,
-                        arrayLength: null,
-                        holidayData: null,
-                        noResultsError: null,
-                        suggestionAddress: null,
-                    })
+                type: 'SET_COLLECTION_SCHEDULE_DATA',
+                DSNYGeoCoder: null,
+                collectionScheduleInfo: null,
+                payload: null,
+                routingData: null,
+                arrayLength: null,
+                holidayData: null,
+                noResultsError: null,
+                suggestionAddress: null,
+                })
+
+      dispatch({
+            type: 'SET_ADDRESS_VALIDATOR_FLAG',
+            payload: null,
+        })
     dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_PAGE_DATA_URL.replace(':slug', slug)).then((data) => {
       // debugger;

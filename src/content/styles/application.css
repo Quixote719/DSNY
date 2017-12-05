@@ -9,7 +9,6 @@ html body {
   font-size: 16px;
 }
 
-
 .row {
     margin-right: -8px;
     margin-left: -8px;
@@ -36,7 +35,7 @@ html body {
   opacity: 1;
 }
 
-#tooltip-bottom > .tooltip-inner, #tooltip-left > .tooltip-inner {
+#tooltip-bottom > .tooltip-inner, #tooltip-left > .tooltip-inner, #recaptchaTooltip > .tooltip-inner{
   padding: 4px;
   font-size: 1.2em;
   background-color: #D80035;
@@ -50,7 +49,7 @@ html body {
   right: 7px;
 }
 
-#tooltip-bottom > .tooltip-arrow{
+#tooltip-bottom > .tooltip-arrow, #recaptchaTooltip > .tooltip-arrow {
   border-bottom-color: #D80035;
 }
 
@@ -504,4 +503,6 @@ border-radius: 0;
     margin: 20px 15px 30px 0;
 }
 /* Common Form CSS -- End */
-
+.submitBtnMargin {
+  margin-top: 10px;
+}

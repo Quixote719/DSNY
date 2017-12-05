@@ -48,9 +48,14 @@ class EwasteRequestForm extends Component {
 
    validateForm(formObject, errors){
     //formObject & Values are same
-     if (formObject.OrganizationTaxIdNumber === "TEST") {
-      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
+    //if(formObject.buildingStatus && !formObject.overideAddressValidation)
+      //errors.overideAddressValidation = 'Please check to confirm this is not a 10+ building'
+    if(formObject.commercialAddress && !formObject.overideAddressValidation)
+      errors.overideAddressValidation = 'Please check to confirm this is not a Coomercial building'
+    else if (formObject.Email !== formObject.ConfirmEmail) {
+      errors.ConfirmEmail = `The email addresses don't match`
     }
+
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     // }
@@ -62,7 +67,7 @@ class EwasteRequestForm extends Component {
 
 
   render() {
-    const { error, success, isDistrictActive, buildingStatus, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
+    const { error, success, isDistrictActive, buildingStatus,commercialAddress, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
 
     if(success !== undefined) {
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
@@ -70,13 +75,13 @@ class EwasteRequestForm extends Component {
 
     if (geoCoderAddressResult){
       console.log(this.props);
-      if (typeof unavailableDates === 'undefined')
-      this.updateValues(geoCoderAddressResult)
+      //if (typeof unavailableDates === 'undefined')
+      //this.updateValues(geoCoderAddressResult)
     }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} buildingStatus={buildingStatus} isDistrictActive={isDistrictActive} Dates={unavailableDates} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} commercialAddress={commercialAddress} buildingStatus={buildingStatus} isDistrictActive={isDistrictActive} Dates={unavailableDates} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -98,6 +103,7 @@ function mapStateToProps(state) {
     buildingStatus:state.forms.buildingStatus,
     geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
     isAddressValidated: state.carouselDataReducer.addressValidator,
+    commercialAddress:state.carouselDataReducer.commercialAddress,
     error:state.error.type
     };
 }

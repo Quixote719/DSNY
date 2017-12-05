@@ -159,7 +159,6 @@ export function clearCollectionSchedule() {
             payload: undefined,
             routingData: undefined,
             collectionScheduleData: undefined,
-            routingData: undefined,
             arrayLength: 0,
             holidayData: undefined,
             noResultsError: undefined,
@@ -181,7 +180,7 @@ export function getRidOffKeywords() {
 
 export function getRidOfSearchResults(suggestion) {
     return function (dispatch) {
-        axios.get(RID_OF_SEARCH_RESULTS_URL + "=" + suggestion)
+        axios.get(RID_OF_SEARCH_RESULTS_URL + "=" + encodeURIComponent(suggestion))
             .then((data) => {
                 dispatch({
                     type: 'SET_RID_OFF_SEARCH_RESULTS',

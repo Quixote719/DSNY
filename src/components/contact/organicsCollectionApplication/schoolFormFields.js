@@ -30,30 +30,28 @@ const CompostRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete name="AddressAsEntered" title="ADDRESS" {...props} value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="PropertyName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="PropertyUnitCount" {...props}  maxlength={"25"} disabled={values.editMode} required/>
-    <Field component={DropdownInput} name="SiteClassificationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SiteClassifications} disabled={values.editMode} required/>
-    <Field component={TextInput} name="OtherSiteClassification" {...props}  maxlength={"25"} disabled={values.editMode} required isHidden={values.SiteClassificationId !== 8} required={values.SiteClassificationId ==8}/>
-    <FormSectionHeader title={Titles.PropertySectionThree}/>
+    <Field component={TextInput} name="SchoolName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <FormSectionHeader title={Titles.SchoolSectionThree}/>
     <Field component={TextInput} name="FirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="LastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolTitle1" {...props} maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="Email" {...props}  maxlength={"50"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>    
-    <FormSectionHeader title={Titles.PropertySectionFour}/>
-    <Field component={TextInput} name="CompanyName" {...props}  maxlength={"50"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyPersonTitle" {...props}  maxlength={"50"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyPersonFirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyPersonLastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
-    <Field component={AddressInput} name="CompanyAddressAsEntered" {...props} fullRow={true} maxlength={"50"} onChange={setFieldValue} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyApartment" {...props}  maxlength={"21"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyPersonEmail" {...props}  maxlength={"50"} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyPersonPhone" {...props}  maxlength={"21"} disabled={values.editMode} required/>
-    <Field component={DropdownInput} name="CompanyPhoneTypeId" title={Titles.PhoneType} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CompanyPhoneTypes} disabled={values.editMode} required/>
-    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM" />
-    <Field component={DropdownInput} name="PropertyHasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+    <FormSectionHeader title={Titles.SchoolSectionFour}/>
+    <Field component={TextInput} name="SchoolPersonFirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolPersonLastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolTitle2" {...props}  maxlength={"50"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolPersonEmail" {...props}  maxlength={"50"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolPersonPhone" {...props}  maxlength={"21"} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="SchoolPhoneTypeId" title={Titles.PhoneType} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
+    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH MEMBERS OF YOUR BUILDING'S FACILITIES/MAINTENANCE STAFF ABOUT THE PROGRAM" />   
+    <Field component={DropdownInput} name="SchoolHasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
     <FormSectionHeader title={Titles.sectionFive}/>
+    <Field component={DropdownInput} name="IsNonprofitSchool" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="ReceivesDsnyCollection" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="UsesPrivateFoodServiceVendor" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+    <Field component={TextInput} name="PrivateFoodServiceVendorDescription" {...props} maxlength={"50"} disabled={values.editMode} isHidden={values.UsesPrivateFoodServiceVendor == false} required={values.UsesPrivateFoodServiceVendor == true} />
     <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode} required/>
     <Field component={TextInput} name="OtherAwarenessSource" {...props} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Comments" {...props} disabled={values.editMode}/>
