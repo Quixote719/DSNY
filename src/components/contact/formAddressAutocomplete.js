@@ -11,11 +11,10 @@ import _ from "lodash";
 import isEmpty from 'lodash/isEmpty';
 import FormTitleCheckBoxes from './form_Title_CheckBoxes';
 
-
-
 let errorFlag = 0;
 let previousErrorMessage = "";
 let addressValidated = false;
+export let validateButtonClicked = false;
 
 var errorMessage; 
 
@@ -97,7 +96,7 @@ class FormAddressAutocomplete extends Component {
             // this.props.getCollectionSchedule(address);
          this.props.getCollectionSchedule(address, this.successCallback);*/
          document.getElementById("validateBtn").click();
-         //this.setState({hideToolTip: false});
+         this.setState({hideToolTip: false});
          //showflag = false;
         //}
     }
@@ -107,6 +106,7 @@ class FormAddressAutocomplete extends Component {
     }
     
     validateButtonClicked =()=>{
+         validateButtonClicked = true;
          //this.props.checkAddressValidator(1);
          //(isEmpty(this.state.address) || this.state.address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
          this.setState({hideToolTip: true});

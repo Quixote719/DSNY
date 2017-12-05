@@ -7,6 +7,7 @@ import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
 import FormButton from './form_button';
 import ThankYou from './thank_you';
+import {validateButtonClicked} from './formAddressAutocomplete';
 
 // import '../../content/styles/contactForm.css';
 
@@ -66,6 +67,14 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressVal
   
   if (values && isAddressValidated)
       values.AddressAsEntered = isAddressValidated
+  
+  if(values.IsAnonymous)
+  {
+    values.FirstName = "";
+    values.LastName = "";
+    values.Email = "";
+    values.ConfirmEmail = "";
+  }
 
 	if (values && geoCoderAddressResult){
 
@@ -232,11 +241,11 @@ const FormSteps = compose(
                 else if(props.isAddressValidated !==1)
                   errors[input.name] = "Please enter a valid NY address"
 
-                //if(nextbuttonClicked)
-                //{
+                if(nextbuttonClicked || validateButtonClicked)
+                {
                   input.focus();
                   nextbuttonClicked = false;
-                //}
+                }
             }
             else if(!initialPageLoad)
             {
