@@ -134,7 +134,8 @@ class OrganicsCollectionApplication extends Component {
   }
 
   postForm(formObject){
-      let modifyFormObject = this.modifyFormObject(formObject);
+      this.modifyFormObject(formObject);
+      console.log(formObject)
       this.props.postFormObject(formObject, PSOT_FORM_COLLECTION_BIN_REGISTRATION_URL);
   }
 
