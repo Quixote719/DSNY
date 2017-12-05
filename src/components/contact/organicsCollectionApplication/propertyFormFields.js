@@ -47,7 +47,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="CompanyPersonFirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="CompanyPersonLastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={AddressInput} name="CompanyAddressAsEntered" {...props} fullRow={true} maxlength={"50"} onChange={setFieldValue} disabled={values.editMode} required/>
-    <Field component={TextInput} name="CompanyApartment" {...props}  maxlength={"21"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="CompanyApartment" {...props}  maxlength={"21"} disabled={values.editMode} />
     <Field component={TextInput} name="CompanyPersonEmail" {...props}  maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="CompanyPersonPhone" {...props}  maxlength={"21"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="CompanyPhoneTypeId" title={Titles.PhoneType} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CompanyPhoneTypes} disabled={values.editMode} required/>

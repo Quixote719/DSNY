@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_FORM_COLLECTION_BIN_REGISTRATION_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -16,6 +16,7 @@ import FetchError from '../fetchError'
 import PropertyFormFields from './propertyFormFields'
 import NonprofitFormFields from './nonprofitFormFields'
 import CityAgencyFormFields from './cityAgencyFormFields'
+import SchoolFormFields from './schoolFormFields'
 import FormSectionHeader from '../form_section_header';
 import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
@@ -42,6 +43,9 @@ class OrganicsCollectionApplication extends Component {
     }
   }
 
+  componentWillMount(){
+    IDNum = 0;
+  }
 
   stepFunc(step){
     if(showIDSelector!=step){
@@ -104,7 +108,7 @@ class OrganicsCollectionApplication extends Component {
       'HasInformedStaffAboutProgram': formObject.AgencyHasInformedStaffAboutProgram,
     }
     formObject.CityAgencyForm.ManagementContact = {
-      'CompanyName': formObject.CompanyName,
+      'CompanyName': formObject.AgencyCompanyName,
       'Title': formObject.AgencyTitle2,
       'FirstName': formObject.AgencyPersonFirstName,
       'LastName': formObject.AgencyPersonLastName,
@@ -134,7 +138,7 @@ class OrganicsCollectionApplication extends Component {
 
   postForm(formObject){
       let modifyFormObject = this.modifyFormObject(formObject);
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_COLLECTION_BIN_REGISTRATION_URL);
   }
 
    validateForm(formObject, errors){
@@ -211,7 +215,9 @@ class OrganicsCollectionApplication extends Component {
           {
             (IDNum==9) &&
             <div className='container'>
-                School (pre-K-12)
+                <div className='form compostForm'>
+                  <FormSteps formFields={SchoolFormFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+                </div>
             </div>
           }
           {
