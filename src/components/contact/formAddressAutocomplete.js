@@ -160,6 +160,7 @@ class FormAddressAutocomplete extends Component {
             previousErrorMessage ="";
             this.forceUpdate();
         }
+        validateButtonClicked = false;
     }
     correctAddressList = () => {
         return _.map(this.props.suggestionAddress, (value,index)=> {

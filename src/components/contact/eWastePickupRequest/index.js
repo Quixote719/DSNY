@@ -75,8 +75,8 @@ class EwasteRequestForm extends Component {
 
     if (geoCoderAddressResult){
       console.log(this.props);
-      if (typeof unavailableDates === 'undefined')
-      this.updateValues(geoCoderAddressResult)
+      //if (typeof unavailableDates === 'undefined')
+      //this.updateValues(geoCoderAddressResult)
     }
 
     if (FormObject && FormObject !== undefined) {
