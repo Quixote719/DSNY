@@ -51,8 +51,9 @@ const CompostRequestFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionFive}/>
     <Field component={DropdownInput} name="IsNonprofitSchool" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
 
-    <div>
+    <div className="row">
       <Col xs={12} sm={12} md={12}>
+        <FormTitleCheckBoxes title="DOES YOUR SCHOOL CURRENTLY RECEIVE DEPARTMENT OF SANITATION COLLECTION?" />
         <Field component={DropdownInput} name="ReceivesDsnyCollection" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
       </Col>
     </div>

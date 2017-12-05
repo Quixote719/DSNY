@@ -69,7 +69,6 @@ export const Titles = {
   SchoolPersonEmail: 'E-MAIL',
   SchoolPersonPhone: 'PHONE',
   IsNonprofitSchool: "IS YOUR SCHOOL A NONPROFIT?",
-  ReceivesDsnyCollection: "DOES YOUR SCHOOL CURRENTLY RECEIVE DEPARTMENT OF SANITATION COLLECTION?",
   UsesPrivateFoodServiceVendor: "DOES YOUR SHCOOL UTILIZE A PRIVATE FOOD SERVICE VENDOR",
   PrivateFoodServiceVendorDescription: "PLEASE DESCRIBE SERVICE"
 }
