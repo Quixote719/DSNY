@@ -17,7 +17,7 @@ import CompostRequestFormElements from './propertyFormFields'
 import FormSectionHeader from '../form_section_header';
 import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
-import {Titles, formObject as FormObject, propertyManagementForm } from './constants'
+import {Titles, formObject as FormObject, PropertyManagementForm } from './constants'
 import '../../../content/styles/compostRequest.css';
 import ThankYou from '../thank_you';
 
@@ -27,6 +27,7 @@ let showIDSelector = true;
 class OrganicsCollectionApplication extends Component {
   constructor(props) {
     super(props);
+    this.modifyFormObject = this.modifyFormObject.bind(this);
     this.postForm = this.postForm.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.stepFunc = this.stepFunc.bind(this);
@@ -54,35 +55,65 @@ class OrganicsCollectionApplication extends Component {
       }
   }
 
-  generateNewFormObject(obj){
-    obj.ManagementContact = [];
-    let ManagementData = {};
-    ManagementData.CompanyName = obj["CompanyName"];
-    ManagementData.Title = obj["Title"];
-    ManagementData.PhoneTypes = obj["PhoneTypes2"];
-    ManagementData.PhoneTypeId = obj["PhoneTypeId2"];
-    ManagementData.SelectedPhoneType = obj["SelectedPhoneType2"];
-    ManagementData.FirstName = obj["FirstName2"];
-    ManagementData.Phone = obj["Phone2"];
-    ManagementData.Email = obj["Email2"];
-    ManagementData.FullName = obj["FullName2"];
-    ManagementData.FullNameLastFirst = obj["FullNameLastFirst2"];
-    ManagementData.AddressAsEntered = obj["AddressAsEntered2"];
-    ManagementData.HouseNumber = obj["HouseNumber2"];
-    ManagementData.Street = obj["Street2"];
-    ManagementData.HouseNumber = obj["HouseNumber2"];
-    ManagementData.Apartment = obj["Apartment2"];
-    ManagementData.Borough = obj["Borough2"];
-    ManagementData.City = obj["City2"];
-    ManagementData.State = obj["State2"];
-    ManagementData.Zip = obj["Zip2"];
-    ManagementData.AddressText = obj["AddressText2"];
-    ManagementData.AddressTextOneLine = obj["AddressTextOneLine2"];
-    obj.ManagementContact.push(ManagementData);
-    return obj;
+  modifyFormObject(formObject){
+    // Property Management Form
+    formObject.PropertyManagementForm  = {
+      'PropertyName':formObject.PropertyName,
+      'PropertyUnitCount': formObject.PropertyUnitCount,
+      'SiteClassificationId': formObject.SiteClassificationId,
+      'OtherSiteClassification': formObject.OtherSiteClassification,
+      'HasInformedStaffAboutProgram': formObject.PropertyHasInformedStaffAboutProgram,
+    }
+    formObject.PropertyManagementForm.ManagementContact = {
+      'CompanyName': formObject.CompanyName,
+      'Title': formObject.CompanyPersonTitle,
+      'FirstName': formObject.CompanyPersonFirstName,
+      'LastName': formObject.CompanyPersonLastName,
+      'Phone': formObject.CompanyPersonPhone,
+      'Email': formObject.CompanyPersonEmail,
+      'AddressAsEntered': formObject.CompanyAddressAsEntered,
+      'Apartment': formObject.CompanyApartment,
+      'PhoneTypeId': formObject.CompanyPhoneTypeId,
+    }
+    
+    // Non-profit Form
+    formObject.NonprofitForm  = {
+      'OrganizationName':formObject.OrganizationName,
+      'OrganizationTypeId': formObject.OrganizationTypeId,
+      'OtherOrganizationType': formObject.OtherOrganizationType,
+      'HasInformedStaffAboutProgram': formObject.NonProfitHasInformedStaffAboutProgram,
+      'Title': formObject.OrganizationTitle1,
+    }
+    formObject.NonprofitForm.SecondaryContact = {
+      'Title': formObject.OrganizationTitle2,
+      'FirstName': formObject.OrganizationPersonFirstName,
+      'LastName': formObject.OrganizationPersonLastName,
+      'Phone': formObject.OrganizationPersonPhone,
+      'Email': formObject.OrganizationPersonEmail,
+      'PhoneTypeId': formObject.OrganizationPhoneTypeId,
+    }
+
+    // City Agency Form
+    formObject.CityAgencyForm  = {
+      'AgencyName':formObject.AgencyName,
+      'OtherAgencyType': formObject.OtherAgencyType,
+      'Title': formObject.AgencyTitle1,
+      "ParticipatingFloorsCount": formObject.ParticipatingFloorsCount,
+      'HasInformedStaffAboutProgram': formObject.AgencyHasInformedStaffAboutProgram,
+    }
+    formObject.CityAgencyForm.ManagementContact = {
+      'CompanyName': formObject.CompanyName,
+      'Title': formObject.AgencyTitle2,
+      'FirstName': formObject.AgencyPersonFirstName,
+      'LastName': formObject.AgencyPersonLastName,
+      'Phone': formObject.AgencyPersonPhone,
+      'Email': formObject.AgencyPersonEmail,
+      'PhoneTypeId': formObject.AgencyPhoneTypeId,
+    }
   }
 
   postForm(formObject){
+      let modifyFormObject = this.modifyFormObject(formObject);
       this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
   }
 
@@ -104,48 +135,6 @@ class OrganicsCollectionApplication extends Component {
         }
 
         if (FormObject && FormObject !== undefined) {
-          propertyManagementForm["CompanyName"] = null;
-          propertyManagementForm["Title"] = null;
-          propertyManagementForm["PhoneTypes2"] = [
-            {
-              "Id": 1,
-              "Name": "Work",
-              "DisplayName": "Work",
-              "Selected": false
-            },
-            {
-              "Id": 2,
-              "Name": "Mobile",
-              "DisplayName": "Mobile",
-              "Selected": false
-            },
-            {
-              "Id": 3,
-              "Name": "Home",
-              "DisplayName": "Home",
-              "Selected": false
-            }
-          ];
-          propertyManagementForm["PhoneTypeId2"] = 0;
-          propertyManagementForm["SelectedPhoneType2"] = null;
-          propertyManagementForm["FirstName2"] = null;
-          propertyManagementForm["LastName2"] = null;
-          propertyManagementForm["Phone2"] = null;
-          propertyManagementForm["Email2"] = null;
-          propertyManagementForm["FullName2"] = null;
-          propertyManagementForm["FullNameLastFirst2"] = null;
-          propertyManagementForm["AddressAsEntered2"] = null;
-          propertyManagementForm["HouseNumber2"] = null;
-          propertyManagementForm["Street2"] = null;
-          propertyManagementForm["HouseNumber2"] = null;
-          propertyManagementForm["Apartment2"] = null;
-          propertyManagementForm["Borough2"] = null;
-          propertyManagementForm["City2"] = null;
-          propertyManagementForm["State2"] = null;
-          propertyManagementForm["Zip2"];
-          propertyManagementForm["AddressText2"] = null;
-          propertyManagementForm["AddressTextOneLine2"] = null;
-
           let displayID = showIDSelector?{"display":"block"}:{"display":"none"}
         return (
           <div>
