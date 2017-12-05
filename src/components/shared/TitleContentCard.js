@@ -15,26 +15,26 @@ class TitleContentCard extends Component {
         'width': '220px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'height': '200px'
+        'height': '220px'
       },
       narrow_border:{
         'width': '220px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'height': '200px',
+        'height': '220px',
         'border': '1px solid #7CC04B'
       },
       wide:{
         'width': '303px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'height': '200px'
+        'height': '220px'
       },
       wide_border:{
         'width': '303px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'height': '200px',
+        'height': '220px',
         'border': '1px solid #7CC04B'
       }
     }

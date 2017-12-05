@@ -43,13 +43,16 @@ class Services extends Component {
           )
 
           sections = _.map(ServicesData.sections.sections, sec => {
+            let bcgStyle = sec.background_color == "gray"?{backgroundColor:"#F2F2F2"}:{backgroundColor:"#FFFFFF"}
             if(sec.name == 'collection-under-widget'){
               return(
                 <div key={sec.id}>
-                  <div className='sectionHeader SContainer'>{sec.header}</div>
                   <SearchBoxCollection ridOffKeywords={this.props.ridOffKeywords} pushHistory ={this.props}/>
-                  <div className='SContainer'>
-                    <ContentCardRow dataObject = {sec}/>
+                  <div style={bcgStyle}>
+                    <div className='SContainer'>
+                      <SubSectionHeader title={sec.header}/>
+                      <ContentCardRow dataObject = {sec}/>
+                    </div>
                   </div>
                 </div>
 
@@ -68,9 +71,11 @@ class Services extends Component {
             }
             else if(sec.name == 'snow-response'){
               return(
-                <div className='SContainer bottomSection' key={sec.id}>
-                  <SubSectionHeader title={sec.header}/>
-                  <ContentCardRow dataObject = {sec}/>
+                <div style={bcgStyle}>
+                  <div className='SContainer bottomSection' key={sec.id}>
+                    <SubSectionHeader title={sec.header}/>
+                    <ContentCardRow dataObject = {sec}/>
+                  </div>
                 </div>
               )
             }
