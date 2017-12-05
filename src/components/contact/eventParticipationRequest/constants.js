@@ -120,7 +120,7 @@ export const formObject = {
       "Selected": false
     },
   ],
-  "AttendeeCountRangeId": null,
+  "AttendeeCountRangeId": 0,
   "SelectedAttendeeCountRange": null,
   "IsRecurrent":null,
   "ParticipatingOrganizationsDescription":null,

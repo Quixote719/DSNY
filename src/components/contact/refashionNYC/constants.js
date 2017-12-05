@@ -48,18 +48,67 @@ export const formObject = {
   "ClassifySiteType": [
     {
       "Id": 0,
-      "Name": "string",
-      "DisplayName": "string",
+      "Name": "Select one",
+      "DisplayName": "Select one",
       "Selected": true
+    },
+    {
+      "Id":1,
+      "Name":"co-op",
+      "DisplayName":"Co-op",
+      "Selected":false
+    },
+    {
+      "Id":2,
+      "Name":"Condo",
+      "DisplayName":"Condo",
+      "Selected":false
+    },
+    {
+      "Id":3,
+      "Name":"Rental",
+      "DisplayName":"Rental",
+      "Selected":false
+    },
+    {
+      "Id":4,
+      "Name":"commercial",
+      "DisplayName":"Commercial (refashionNYC only)",
+      "Selected":false
+    },
+    {
+      "Id":5,
+      "Name":"non-profit",
+      "DisplayName":"Non-profit (refashionNYC/organics only)",
+      "Selected":false
+    },
+    {
+      "Id":6,
+      "Name":"public school",
+      "DisplayName":"Public School (refashionNYC only)",
+      "Selected":false
+    },
+    {
+      "Id":7,
+      "Name":"private school",
+      "DisplayName":"Private School (refashionNYC/organics only)",
+      "Selected":false
+    },
+    {
+      "Id":8,
+      "Name":"government agency",
+      "DisplayName":" Government (refashionNYC/organics only)",
+      "Selected":false
+    },
+    {
+      "Id":9,
+      "Name":"other",
+      "DisplayName":"Other",
+      "Selected":false
     }
+
   ],
   "ClassifySiteTypeId": 0,
-  "SelectedClassifySiteType": {
-    "Id": 0,
-    "Name": "string",
-    "DisplayName": "string",
-    "Selected": true
-  },
   "ClassifySiteOther": null,
   "ContactFirstName": null,
   "ContactLastName": null,
@@ -67,36 +116,96 @@ export const formObject = {
   "ContactPhone": null,
   "ContactRoleInTheBuildingType": [
     {
-      "Id": 0,
-      "Name": "string",
-      "DisplayName": "string",
-      "Selected": true
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName":"Select one",
+      "Selected":true,
+    },
+    {
+      "Id":1,
+      "Name":"Board Member",
+      "DisplayName":"Board Member",
+      "Selected":false
+    },
+    {
+      "Id":2,
+      "Name":"Management Company Representative",
+      "DisplayName":"Management Company Representative",
+      "Selected":false,
+    },
+    {
+      "Id":2,
+      "Name":"Property Manager",
+      "DisplayName":"Property Manager",
+      "Selected":false,
+    },
+    {
+      "Id":3,
+      "Name":"Real Estate Broker",
+      "DisplayName":"Real Estate Broker",
+      "Selected":false,
+    },
+    {
+      "Id":4,
+      "Name":"Resident",
+      "DisplayName":"Resident",
+      "Selected":false,
+    },
+    {
+      "Id":5,
+      "Name":"Resident Property Manager",
+      "DisplayName":"Resident Property Manager",
+      "Selected":false,
+    },
+    {
+      "Id":6,
+      "Name":"Superintendent",
+      "DisplayName":"Superintendent",
+      "Selected":false,
+    },
+    {
+      "Id":7,
+      "Name":"Superintendent",
+      "DisplayName":"Superintendent",
+      "Selected":false,
+    },
+     {
+      "Id":8,
+      "Name":"Other",
+      "DisplayName":"Other",
+      "Selected":false,
     }
   ],
+
   "ContactRoleInTheBuildingTypesId": 0,
-  "SelectedContactRoleInTheBuilding": {
-    "Id": 0,
-    "Name": "string",
-    "DisplayName": "string",
-    "Selected": true
-  },
   "ContactRoleInTheBuildingOther": null,
-  
   "ContactPhoneType": [
     {
-      "Id": 0,
-      "Name": "string",
-      "DisplayName": "string",
-      "Selected": true
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName":"Select one",
+      "Selected":true,
+    },
+    {
+      "Id": 1,
+      "Name": "Work",
+      "DisplayName": "Work",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
     }
   ],
   "ContactPhoneTypeId": 0,
-  "SelectedContactPhoneType": {
-    "Id": 0,
-    "Name": "string",
-    "DisplayName": "string",
-    "Selected": true
-  },
   "BuildingManagementCompany": null,
   "BuildingManagementTitle": null,
   "BuildingManagementFirstName": null,
@@ -113,42 +222,131 @@ export const formObject = {
   "BuildingManagementPhone": null,
   "BuildingManagementPhoneType": [
     {
-      "Id": 0,
-      "Name": "string",
-      "DisplayName": "string",
-      "Selected": true
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName":"Select one",
+      "Selected":true,
+    },
+    {
+      "Id": 1,
+      "Name": "Work",
+      "DisplayName": "Work",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
     }
   ],
   "BuildingManagementPhoneTypeId": 0,
-  "SelectedBuildingManagementPhoneType": {
-    "Id": 0,
-    "Name": "string",
-    "DisplayName": "string",
-    "Selected": true
-  },
   "HaveYouSpokenWith": true,
   "HowDidYouHearType": [
     {
-      "Id": 0,
-      "Name": "string",
-      "DisplayName": "string",
-      "Selected": true
-    }
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName":"Select one",
+      "Selected":true,
+    },
+    {
+      "Id":1,
+      "Name":"311",
+      "DisplayName":"311",
+      "Selected":true,
+    },
+    {
+      "Id":2,
+      "Name":"Brochure",
+      "DisplayName":"Brochure",
+      "Selected":true,
+    },
+    {
+      "Id":3,
+      "Name":"Community Board/Elected Official",
+      "DisplayName":"Community Board/Elected Official",
+      "Selected":true,
+    },
+    {
+      "Id":4,
+      "Name":"Recycle More, Waste Less Newsletter",
+      "DisplayName":"Recycle More, Waste Less Newsletter",
+      "Selected":true,
+    },
+    {
+      "Id":5,
+      "Name":"Mailer",
+      "DisplayName":"Mailer",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Meeting",
+      "DisplayName":"Meeting",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Newspaper",
+      "DisplayName":"Newspaper",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"NYC WasteLess or NYC Recycles website",
+      "DisplayName":"NYC WasteLess or NYC Recycles website",
+      "Selected":true,
+    },
+    { 
+      "Id":6,
+      "Name":"Online: other website",
+      "DisplayName":"Online: other website",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Public Event",
+      "DisplayName":"Public Event",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Social Media: Facebook",
+      "DisplayName":"Social Media: Facebook",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Social Media: Twitter",
+      "DisplayName":"Social Media: Twitter",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Social Media: Other",
+      "DisplayName":"Social Media: Other",
+      "Selected":true,
+    },
+    {
+      "Id":6,
+      "Name":"Word of Mouth: DSNY Outreach",
+      "DisplayName":"Word of Mouth: DSNY Outreach",
+      "Selected":true,
+    },
   ],
   "HowDidYouHearTypeId": 0,
-  "SelectedHowDidYouHearTypes": {
-    "Id": 0,
-    "Name": "string",
-    "DisplayName": "string",
-    "Selected": true
-  },
   "Describe": null,
   "AdditionalComments": null,
   "CreatedDate": "2017-11-28T21:16:24.079Z",
   "Source": "string",
   "HouseNumber": "string",
   "Street": "string",
-  
   "Borough": "string",
   "City": "string",
   "State": "string",
