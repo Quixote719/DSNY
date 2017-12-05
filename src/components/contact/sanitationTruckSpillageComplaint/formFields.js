@@ -32,8 +32,8 @@ const sanitationTruckSpillageFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionTwo} />
     <Field component={TextAreaInput} name="Description" {...props} maxlength="1500" required disabled={values.editMode}/>
     <Field component={DateTimePickerInput} name="IncidentDate" {...props} required onChange={setFieldValue} disabled={values.editMode}/>
-    <Field component={DropdownInput} name="IncidentTime" {...props} timeField={true} required ondropDownChange={handledropDown} 
-    onChange={setFieldValue} options={values.IncidentTimes} disabled={values.editMode}/>
+    <Field component={DropdownInput} name="IncidentTime" {...props} timeField={true}  ondropDownChange={handledropDown} 
+    onChange={setFieldValue} options={values.IncidentTimes} disabled={values.editMode} required/>
     <Field component={TextInput} name="LicensePlateNumber" {...props} maxlength="10" disabled={values.editMode}/>
     <Field component={TextInput} name="TruckNumber" {...props} maxlength="10" disabled={values.editMode}/>
     
