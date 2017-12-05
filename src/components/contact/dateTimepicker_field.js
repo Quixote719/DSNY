@@ -4,9 +4,28 @@ import PropTypes from 'prop-types';
 import { Col, Tooltip} from 'react-bootstrap';
 import moment from 'moment';
 import Datetime from 'react-datetime';
+import DatePicker from 'react-datepicker';
 import '../../content/styles/subSectionHeader.css';
 import '../../content/styles/react-datetime.css';
 import isEmpty from 'lodash/isEmpty'
+import 'react-datepicker/dist/react-datepicker.css';
+import  {InputGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
+
+const InputWithButton = (props)=>{
+console.log(props.name);
+  return(
+    <div>
+    <InputGroup>
+      <FormControl  error={props.error} className={`react-datepicker-ignore-onclickoutside ${props.className}`} name={props.name} required={props.required} readOnly={true} placeholder={props.placeholder} onClick={props.onClick} value={props.value} onChange={props.onChange} disabled={props.disabled} />
+      <InputGroup.Button>
+        <Button  className="react-datepicker-ignore-onclickoutside" disabled={props.disabled} onClick={props.onClick}><Glyphicon glyph="calendar" /></Button>
+      </InputGroup.Button>
+
+    </InputGroup>
+      {props.error ?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{props.error}</Tooltip>:null}
+      </div>
+  );
+};
 
 class FormDateTimePicker extends Component {
 
@@ -24,6 +43,8 @@ class FormDateTimePicker extends Component {
       value:''
     }
   }
+
+
 
   onInputChange(item) {
 
@@ -84,13 +105,15 @@ class FormDateTimePicker extends Component {
       <div>
         <Col xs={12} sm={6} md={6}>
           <fieldset>
+
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-            <Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut, name: this.props.name,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}}
+              <DatePicker placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
+            {/*}<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}}
               defaultValue={this.props.defaultValue}  isValidDate={ valid } open={this.state.open}   timeFormat={false} dateFormat={true} closeOnSelect={true} value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
-              className="date-picker"/>
+              className="date-picker"/ >*/}
             {/*<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} onChange={event => this.onInputChange(event)}  isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value === "0001-01-01T00:00:00" ? '' : this.props.value } />*/}
-            <span onclick={event => this.open(event)}><i className="fa fa-calendar-minus-o form-control-feedback calendar-padding"></i></span>
+
             </div>
             {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
           </fieldset>
