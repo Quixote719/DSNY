@@ -41,7 +41,7 @@ class FormDateTimePicker extends Component {
 
    inputFocus() {
 
-     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false, open:true}) : this.setState({hideToolTip: true, open:true});
+     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false, open:true, value:this.props.value}) : this.setState({hideToolTip: true, open:true, value:this.props.value});
      console.log(this.state);
    }
 
