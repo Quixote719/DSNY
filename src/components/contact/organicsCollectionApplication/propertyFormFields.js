@@ -10,7 +10,7 @@ import DateTimePickerInput from '../dateTimepicker_field'
 import TextAreaInput from '../textarea_field';
 import FileDropZone from '../form_file_dropzone';
 import {Field} from 'formik'
-import {TenPlusTitles, Titles} from './constants'
+import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete';
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
@@ -28,7 +28,7 @@ const CompostRequestFormElements = (props) => {
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title="ADDRESS" {...props} value="" disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="PropertyName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="PropertyUnitCount" {...props}  maxlength={"25"} disabled={values.editMode} required/>
