@@ -31,11 +31,6 @@ class CarouselData extends Component {
                     return (
                         <Carousel.Item key={index}>
                             <img src={item.featured_image.base_path + item.featured_image.file} alt={item.featured_image.title}/>
-                            <div>
-                            <Carousel.Caption>
-                                {item.title}
-                            </Carousel.Caption>
-                            </div>
                         </Carousel.Item>
                     );
                 })
