@@ -82,6 +82,11 @@ html body {
   overflow: hidden;
 }
 
+.topBodyMargin{
+  padding-top:30px;
+}
+
+
 .paddingRight{
   padding-right: 10px;
 }
@@ -140,7 +145,7 @@ html body {
 }
 
 .bottomSection{
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 .whiteTitle{

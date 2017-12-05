@@ -315,7 +315,7 @@ class CardSec extends Component {
       <div className={bg}>
         <div className='SContainer'>
           <div>{header}</div>
-          <div>{body}</div>
+          <div className={header ? '' : 'topBodyMargin'}>{body}</div>
           <div> {viewAllButton} </div>
           {this.props.finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>}
         </div>

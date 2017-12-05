@@ -33,18 +33,18 @@ const RefashionNYCFormElements = (props) => {
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="NameOfBuilding" {...props} />
     <Field component={TextInput} name="NoOfUnitInBuilding" {...props} />
-    <Field component={DropdownInput} name="ClassifySiteTypeId" {...props} />
-    <Field component={TextInput} name="ClassifySiteOther" {...props} />
+    <Field component={DropdownInput} name="ClassifySiteTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ClassifySiteType}  required disabled={values.editMode}/>
+    <Field component={TextInput} name="ClassifySiteOther" {...props}  isHidden={values.ClassifySiteTypeId !== 9}/>
     
   
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
-    <Field component={DropdownInput} name="ContactRoleInTheBuildingTypesId" {...props} />
+    <Field component={DropdownInput} name="ContactRoleInTheBuildingTypesId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ContactRoleInTheBuildingType}  required disabled={values.editMode}/>
     <Field component={TextInput} name="ContactRoleInTheBuildingOther" {...props} />
     <Field component={TextInput} name="ContactEmail" {...props} />
     <Field component={TextInput} name="ContactPhone" {...props} />
-    <Field component={DropdownInput} name="ContactPhoneTypeId" {...props} />
+    <Field component={DropdownInput} name="ContactPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ContactPhoneType}  required disabled={values.editMode}/>
 
     <FormSectionHeader title={Titles.sectionFour} />
     <Field component={TextInput} name="BuildingManagementCompany" {...props} />
@@ -55,10 +55,10 @@ const RefashionNYCFormElements = (props) => {
     <Field component={TextInput} name="BuildingApartment" {...props} />
     <Field component={TextInput} name="BuildingManagementEmail" {...props} />
     <Field component={TextInput} name="BuildingManagementPhone" {...props} />
-    <Field component={TextInput} name="BuildingManagementPhoneTypeId" {...props} />
+    <Field component={DropdownInput} name="BuildingManagementPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.BuildingManagementPhoneType}  required disabled={values.editMode}/>
     <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM ?" {...props}
                subHeading="Note: Enrollment may be faster if tenants and building staff notify the building management of their request"/>
-    <Field component={DropdownInput} name="HaveYouSpokenWith" {...props} />
+    <Field component={DropdownInput} name="HaveYouSpokenWith" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} required disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionFive} />
     <Field component={DropdownInput} name="HowDidYouHearTypeId" {...props} />

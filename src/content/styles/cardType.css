@@ -14,7 +14,7 @@
     color: #333333;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
   }
 
   .NBsubSectioncardType {
@@ -22,6 +22,17 @@
     min-width: 300px;
     background-color: #FFFFFF;
     padding: 15px;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+
+  .InternalPageNBsubSectioncardType{
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom:15px;
+    padding-right:15px;
     cursor: pointer;
     margin: 10px 0;
   }
