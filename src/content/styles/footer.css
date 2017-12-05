@@ -7,7 +7,7 @@
 .FooterCol a, .FooterCol span{
     color: #FFFFFF;
 }
-.FooterCol a:hover, .FooterCol span:hover {
+.FooterCol a:hover,.FooterBtn:hover {
     color: #B8E986;
     text-decoration: none;
 }
