@@ -13,7 +13,9 @@ import DropdownInput from '../dropdown_field'
 import formFields from './formFields'
 import IdentitySelector from './identitySelector'
 import FetchError from '../fetchError'
-import CompostRequestFormElements from './propertyFormFields'
+import PropertyFormFields from './propertyFormFields'
+import NonprofitFormFields from './nonprofitFormFields'
+import CityAgencyFormFields from './cityAgencyFormFields'
 import FormSectionHeader from '../form_section_header';
 import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
@@ -75,7 +77,7 @@ class OrganicsCollectionApplication extends Component {
       'Apartment': formObject.CompanyApartment,
       'PhoneTypeId': formObject.CompanyPhoneTypeId,
     }
-    
+
     // Non-profit Form
     formObject.NonprofitForm  = {
       'OrganizationName':formObject.OrganizationName,
@@ -140,39 +142,52 @@ class OrganicsCollectionApplication extends Component {
           <div>
           {
               <div className='container' style={displayID}>
-              <div className="IDSelector">
-                  <div className="row">
-                    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
-                    <FormSectionHeader title={Titles.sectionOne}/>
-                  </div>
-                  <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
-              </div>
+                <div className="IDSelector">
+                    <div className="row">
+                      <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+                      <FormSectionHeader title={Titles.sectionOne}/>
+                    </div>
+                    <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
+                </div>
               </div>
           }
           {
             (IDNum==1) &&
             <div className='container'>
-              Resident, 1-9 Unit Building
+              <div className="formContent">
+                <div>Thank you for your interest in joining DSNY’s curbside organics program.</div>
+                <div className="topSpace">Most residents living in buildings with 1-9 units will automatically be enrolled in the program,
+                as we expand to all neighborhoods across New York City. To find out if your neighborhood is currently eligible to participate,
+                check our list of participating neighborhoods. If your neighborhood is currently eligible and you have not received a brown bin, you can request a bin here.</div>
+                <div className="smallTopSpace">Please note that 1-9 unit buildings in Manhattan or in certain Bronx neighborhoods are not eligible to join the curbside program.
+                We encourage you and the residents of your building to bring your food waste to a neighborhood-based food scrap drop off site, or learn how to compost at home at a NYC Compost Project workshop.</div>
+                <div className="smallTopSpace">If you live in a 1-9 unit building along a commercial block, your building must enroll to receive your free brown bins.
+                Submit your building's information, and DSNY will follow up with more information on how to join the program.</div>
+              </div>
             </div>
           }
           {
             (IDNum==2 || IDNum==3 || IDNum==4|| IDNum==5) &&
             <div className='container'>
               <div className='form compostForm'>
-                <FormSteps formFields={CompostRequestFormElements} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+                <FormSteps formFields={PropertyFormFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
               </div>
             </div>
           }
           {
             (IDNum==6 || IDNum==8 || IDNum==11) &&
             <div className='container'>
-                NonProfit, Community Group, Other
+              <div className='form compostForm'>
+                <FormSteps formFields={NonprofitFormFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+              </div>
             </div>
           }
           {
             (IDNum==7) &&
             <div className='container'>
-                City Agency
+              <div className='form compostForm'>
+                <FormSteps formFields={CityAgencyFormFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+              </div>
             </div>
           }
           {
@@ -184,8 +199,16 @@ class OrganicsCollectionApplication extends Component {
           {
             (IDNum==10) &&
             <div className='container'>
-                Business
+              <div className="formContent">
+                <div>  Organic waste — such as food waste, food-soiled paper and yard waste — makes up approximately one-third of the waste generated by businesses in New York City.</div>
+                <div className="smallTopSpace">Some New York City businesses are required by law to separate their organic waste, which can be processed to create soil-enhancing compost or used as an energy source in aerobic and anaerobic digesters.</div>
+                <div className="smallTopSpace">Learn more about organics rules and resources for businesses.</div>
+                <div className="smallTopSpace">Additionally, businesses may choose to donate certain food items, which can save on waste hauling costs.</div>
+              </div>
             </div>
+          }
+          {
+            <div style={{'marginTop':'140px'}}></div>
           }
           </div>
         );
