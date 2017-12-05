@@ -11,7 +11,7 @@ import DownloadApp from '../../home/download_dsny_app/index';
 class Footer extends Component{
 
     render() {
-      const Service = [{name:'Collection',link: process.env.REACT_APP_SITE_RELATIVE_URL + "/about/bureaus"},{name:'Cleaning',link:process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning"},{name:'Snow',link:'Spage'}];
+      const Service = [{name:'Collection',link: '#'},{name:'Cleaning',link:process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning"},{name:'Snow',link:'Spage'}];
       const App = [{name:'DSNY Info',link:'https://www.google.com/',AppStore:'https://itunes.apple.com/us/app/dsny-info/id1139303678?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.dsny&hl=en'},
       {name:'donateNYC',link:'https://www.google.com/',AppStore:'https://itunes.apple.com/us/app/donatenyc/id1112567037?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.donate&hl=en'},
       {name:'Zero Waste School',link:'https://medium.com/',AppStore:'',GooglePlay:''}];
@@ -37,7 +37,7 @@ class Footer extends Component{
                     </div>
                     <div id="SignupCol" className="FooterCol">
                         <div className="FooterSubt">Sign up for Zero Waste Newsletter to learn about upcoming DSNY events.</div>
-                        <div className="FooterBtn">SUBSCRIBE</div>
+                        <div className="FooterBtn" onClick={()=>{window.location.href="https://www.nyc.gov/portal/site/nycgov/menuitem.4f0ec5b97cc1a980e1aee9ed76a09da0/"}}>SUBSCRIBE</div>
                         <div className="FooterSubt">Follow Us</div>
                           <i className="fa fa-facebook" onClick={()=>{window.location.href="https://www.facebook.com/nycsanitation"}}></i>
                           <i className="fa fa-twitter" onClick={()=>{window.location.href="https://twitter.com/nycsanitation"}}></i>
@@ -63,7 +63,7 @@ class Footer extends Component{
                         </div>
                         <div id="SignupCol" className="FooterCol">
                             <div className="FooterSubt">Sign up for Zero Waste Newsletter to learn about upcoming DSNY events.</div>
-                            <div className="FooterBtn">SUBSCRIBE</div>
+                            <div className="FooterBtn" onClick={()=>{window.location.href="https://www.nyc.gov/portal/site/nycgov/menuitem.4f0ec5b97cc1a980e1aee9ed76a09da0/"}}>SUBSCRIBE</div>
                             <div className="FooterSubt">Follow Us</div>
                               <i className="fa fa-facebook" onClick={()=>{window.location.href="https://www.facebook.com/nycsanitation"}}></i>
                               <i className="fa fa-twitter" onClick={()=>{window.location.href="https://twitter.com/nycsanitation"}}></i>

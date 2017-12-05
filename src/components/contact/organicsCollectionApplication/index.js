@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  PSOT_FORM_COMPOST_REQUEST_URL
+  PSOT_FORM_COLLECTION_BIN_REGISTRATION_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
@@ -108,7 +108,7 @@ class OrganicsCollectionApplication extends Component {
       'HasInformedStaffAboutProgram': formObject.AgencyHasInformedStaffAboutProgram,
     }
     formObject.CityAgencyForm.ManagementContact = {
-      'CompanyName': formObject.CompanyName,
+      'CompanyName': formObject.AgencyCompanyName,
       'Title': formObject.AgencyTitle2,
       'FirstName': formObject.AgencyPersonFirstName,
       'LastName': formObject.AgencyPersonLastName,
@@ -138,7 +138,7 @@ class OrganicsCollectionApplication extends Component {
 
   postForm(formObject){
       let modifyFormObject = this.modifyFormObject(formObject);
-      this.props.postFormObject(formObject, PSOT_FORM_COMPOST_REQUEST_URL);
+      this.props.postFormObject(formObject, PSOT_FORM_COLLECTION_BIN_REGISTRATION_URL);
   }
 
    validateForm(formObject, errors){
