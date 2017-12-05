@@ -16,6 +16,7 @@ import FetchError from '../fetchError'
 import PropertyFormFields from './propertyFormFields'
 import NonprofitFormFields from './nonprofitFormFields'
 import CityAgencyFormFields from './cityAgencyFormFields'
+import SchoolFormFields from './schoolFormFields'
 import FormSectionHeader from '../form_section_header';
 import FormHeaderSmallSize from '../form_header_SmallSize';
 // import {IdentityTitles, IdentityValues} from './IdentityValues'
@@ -211,7 +212,9 @@ class OrganicsCollectionApplication extends Component {
           {
             (IDNum==9) &&
             <div className='container'>
-                School (pre-K-12)
+                <div className='form compostForm'>
+                  <FormSteps formFields={SchoolFormFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm} stepFunc={this.stepFunc}/>
+                </div>
             </div>
           }
           {
