@@ -43,7 +43,7 @@ const eventParticipationRequestFormElements = (props) => {
     <Field component={DropdownInput} name="EndTime" timeField={true} {...props} required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.EndDailyTimes} disabled={values.editMode} />
     <Field component={TextInput} fullRow={true} name="Theme" {...props} maxlength="35" required disabled={values.editMode}/>
     <Field component={TextInput} fullRow={true} name="TargetAudiences" {...props} maxlength="100" required disabled={values.editMode}/>
-    <Field component={DropdownInput} name="AttendeeCountRangeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AttendeeCountRanges}  {...props} required disabled={values.editMode}/>
+    <Field component={DropdownInput} name="AttendeeCountRangeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AttendeeCountRanges}  required disabled={values.editMode}/>
     
     <Field component={DropdownInput} name="IsRecurrent" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required disabled={values.editMode}/>
     <Field component={TextAreaInput} name="ParticipatingOrganizationsDescription" {...props} maxlength="100" required disabled={values.editMode}/>
