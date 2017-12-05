@@ -77,6 +77,7 @@ export const Titles = {
 export const formObject = {
   "SRNo": "",
   "RequestCode": "",
+  "CustomerTypeId": null,
   "RequestCodeObject": {
     "DisplayName": "",
     "RequestCode": ""

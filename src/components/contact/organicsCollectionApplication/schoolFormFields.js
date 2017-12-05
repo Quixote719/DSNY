@@ -30,7 +30,7 @@ const CompostRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete name="AddressAsEntered" title="ADDRESS" {...props} value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="SchoolName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="SchoolName" {...props}  maxlength={"25"} disabled={values.editMode} required fullRow={true}/>
     <FormSectionHeader title={Titles.SchoolSectionThree}/>
     <Field component={TextInput} name="FirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="LastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
