@@ -5,6 +5,8 @@ export const Titles = {
   PropertySectionFour: 'BUILDING MANAGEMENT INFORMATION',
   NonProfitsectionThree: 'CONTACT 1 INFORMATION',
   NonProfitsectionFour: 'CONTACT 2 INFORMATION',
+  SchoolsectionThree: 'CONTACT INFORMATION',
+  SchoolsectionFour: 'FACILITIES/MAINTENANCE INFORMATION',
   sectionFive: 'ADDITIONAL COMMENTS OR QUESTIONS',
 
   SuccessMessage: "Success! Your response No. is: ",
@@ -57,6 +59,19 @@ export const Titles = {
   AgencyPersonLastName: 'CONTACT PERSON LAST NAME',   
   AgencyPersonEmail: 'E-MAIL',  
   AgencyPersonPhone: 'PHONE',
+  // School Form
+  SchoolName: 'NAME OF SCHOOL',     
+  SchoolTitle1: 'WHAT IS YOUR TITLE/ROLE AT THE SCHOOL',   
+  SchoolTitle2: 'FACILITIES CONTACT PERSON TITLE',   
+  SchoolPhoneTypes: 'PHONE TYPE',  
+  SchoolPersonFirstName: 'FACILITIES CONTACT PERSON FIRST NAME',  
+  SchoolPersonLastName: 'FACILITIES CONTACT PERSON LAST NAME',   
+  SchoolPersonEmail: 'E-MAIL',  
+  SchoolPersonPhone: 'PHONE',
+  IsNonprofitSchool: "IS YOUR SCHOOL A NONPROFIT?",
+  ReceivesDsnyCollection: "DOES YOUR SCHOOL CURRENTLY RECEIVE DEPARTMENT OF SANITATION COLLECTION?",
+  UsesPrivateFoodServiceVendor: "DOES YOUR SHCOOL UTILIZE A PRIVATE FOOD SERVICE VENDOR",
+  PrivateFoodServiceVendorDescription: "PLEASE DESCRIBE SERVICE"
 }
 
 export const formObject = {
@@ -496,9 +511,38 @@ export const formObject = {
   "AgencyPersonEmail": null,
   "AgencyPersonPhone": null,
 
-  
-  
-
-
-  "SchoolForm":{},
+  // School form
+  "SchoolName": null,
+  "SchoolHasInformedStaffAboutProgram": null,
+  "SchoolTitle1": null,
+  "SchoolTitle2": null,
+  "SchoolPhoneTypes": [
+    {
+      "Id": 1,
+      "Name": "Work",
+      "DisplayName": "Work",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
+    }
+  ],
+  "SchoolPhoneTypeId": 0,
+  "SchoolPersonFirstName": null,
+  "SchoolPersonLastName": null,
+  "SchoolPersonEmail": null,
+  "SchoolPersonPhone": null,
+  "IsNonprofitSchool": null,
+  "ReceivesDsnyCollection": null,
+  "UsesPrivateFoodServiceVendor": null,
+  "PrivateFoodServiceVendorDescription": null
 }

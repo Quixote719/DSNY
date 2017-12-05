@@ -110,6 +110,24 @@ class OrganicsCollectionApplication extends Component {
       'Email': formObject.AgencyPersonEmail,
       'PhoneTypeId': formObject.AgencyPhoneTypeId,
     }
+
+    // School form
+    formObject.SchoolForm = {
+      'SchoolName':formObject.SchoolName,
+      'Title': formObject.SchoolTitle1,
+      'IsNonprofitSchool': formObject.IsNonprofitSchool,
+      'ReceivesDsnyCollection': formObject.ReceivesDsnyCollection,
+      'UsesPrivateFoodServiceVendor': formObject.UsesPrivateFoodServiceVendor,
+      'PrivateFoodServiceVendorDescription': formObject.PrivateFoodServiceVendorDescription,
+    }
+    formObject.SchoolForm.FacilitiesContact = {
+      'Title': formObject.SchoolTitle2,
+      'FirstName': formObject.SchoolPersonFirstName,
+      'LastName': formObject.SchoolPersonLastName,
+      'Phone': formObject.SchoolPersonPhone,
+      'Email': formObject.SchoolPersonEmail,
+      'PhoneTypeId': formObject.SchoolPhoneTypeId,
+    }
   }
 
   postForm(formObject){
