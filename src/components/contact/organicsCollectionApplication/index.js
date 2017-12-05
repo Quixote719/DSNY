@@ -56,17 +56,60 @@ class OrganicsCollectionApplication extends Component {
   }
 
   modifyFormObject(formObject){
+    // Property Management Form
     formObject.PropertyManagementForm  = {
       'PropertyName':formObject.PropertyName,
       'PropertyUnitCount': formObject.PropertyUnitCount,
       'SiteClassificationId': formObject.SiteClassificationId,
       'OtherSiteClassification': formObject.OtherSiteClassification,
+      'HasInformedStaffAboutProgram': formObject.PropertyHasInformedStaffAboutProgram,
     }
-
     formObject.PropertyManagementForm.ManagementContact = {
       'CompanyName': formObject.CompanyName,
+      'Title': formObject.CompanyPersonTitle,
+      'FirstName': formObject.CompanyPersonFirstName,
+      'LastName': formObject.CompanyPersonLastName,
+      'Phone': formObject.CompanyPersonPhone,
+      'Email': formObject.CompanyPersonEmail,
+      'AddressAsEntered': formObject.CompanyAddressAsEntered,
+      'Apartment': formObject.CompanyApartment,
+      'PhoneTypeId': formObject.CompanyPhoneTypeId,
+    }
+    
+    // Non-profit Form
+    formObject.NonprofitForm  = {
+      'OrganizationName':formObject.OrganizationName,
+      'OrganizationTypeId': formObject.OrganizationTypeId,
+      'OtherOrganizationType': formObject.OtherOrganizationType,
+      'HasInformedStaffAboutProgram': formObject.NonProfitHasInformedStaffAboutProgram,
+      'Title': formObject.OrganizationTitle1,
+    }
+    formObject.NonprofitForm.SecondaryContact = {
+      'Title': formObject.OrganizationTitle2,
+      'FirstName': formObject.OrganizationPersonFirstName,
+      'LastName': formObject.OrganizationPersonLastName,
+      'Phone': formObject.OrganizationPersonPhone,
+      'Email': formObject.OrganizationPersonEmail,
+      'PhoneTypeId': formObject.OrganizationPhoneTypeId,
     }
 
+    // City Agency Form
+    formObject.CityAgencyForm  = {
+      'AgencyName':formObject.AgencyName,
+      'OtherAgencyType': formObject.OtherAgencyType,
+      'Title': formObject.AgencyTitle1,
+      "ParticipatingFloorsCount": formObject.ParticipatingFloorsCount,
+      'HasInformedStaffAboutProgram': formObject.AgencyHasInformedStaffAboutProgram,
+    }
+    formObject.CityAgencyForm.ManagementContact = {
+      'CompanyName': formObject.CompanyName,
+      'Title': formObject.AgencyTitle2,
+      'FirstName': formObject.AgencyPersonFirstName,
+      'LastName': formObject.AgencyPersonLastName,
+      'Phone': formObject.AgencyPersonPhone,
+      'Email': formObject.AgencyPersonEmail,
+      'PhoneTypeId': formObject.AgencyPhoneTypeId,
+    }
   }
 
   postForm(formObject){

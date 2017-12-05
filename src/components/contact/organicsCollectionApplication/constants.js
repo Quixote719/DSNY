@@ -1,10 +1,17 @@
 export const Titles = {
   sectionOne: "PLEASE TELL US A LITTLE ABOUT YOURSELF",
   sectionTwo: "BUILDING / SITE INFORMATION",
+  PropertySectionThree: 'CONTACT INFORMATION',
+  PropertySectionFour: 'BUILDING MANAGEMENT INFORMATION',
+  NonProfitsectionThree: 'CONTACT 1 INFORMATION',
+  NonProfitsectionFour: 'CONTACT 2 INFORMATION',
+  sectionFive: 'ADDITIONAL COMMENTS OR QUESTIONS',
+
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
+  AddressAsEntered: "ADDRESS",
+  FailureMessage:"Please make sure your message is correct.",
   Identity: "WHO ARE YOU",
-  Address: "ADDRESS",
   PropertyName: "NAME OF BUILDING, COMPLEX OR SITE (OPTIONAL)",
   PhoneTypeId: "PHONE TYPE",
   PropertyUnitCount: "APPROXIMATE # OF UNITS/APTS IN BUILDING",
@@ -18,328 +25,39 @@ export const Titles = {
   ConfirmEmail: "CONFIRM E-MAIL",
   OtherAwarenessSource: "PLEASE DESCRIBE (OPTIONAL)",
   Comments: "PLEASE INDICATE ANY ADDITIONAL COMMENTS OR QUESTIONS YOU HAVE ABOUT THE PROGRAM. (OPTIONAL)",
+  // Property Management Form
+  CompanyName: "MANAGEMENT COMPANY",
+  CompanyPersonTitle: 'CONTACT PERSON TITLE',
+  CompanyPersonFirstName: 'CONTACT PERSON FIRST NAME',  
+  CompanyPersonLastName: 'CONTACT PERSON LAST NAME',  
+  CompanyAddressAsEntered: 'ADDRESS (OPTIONAL)',  
+  CompanyApartment: 'FLOOR/SUITE/APT (OPTIONAL)',  
+  CompanyPersonEmail: 'E-MAIL',  
+  CompanyPersonPhone: 'PHONE', 
   OtherSiteClassification: "PLEASE BRIEFLY EXPLAIN",
-  CompanyName: "MANAGEMENT COMPANY",
-  
+  // Non-profit Form
+  OrganizationName: 'NAME OF ORGANIZATION',   
+  OrganizationTypeId: 'HOW WOULD YOU CLASSIFY THIS SITE?',   
+  OtherOrganizationType: 'PLEASE BRIEFLY EXPLAIN',   
+  OrganizationTitle1: 'WHAT IS YOUR TITLE/ROLE IN THE ORGANIZATION',   
+  OrganizationTitle2: 'WHAT IS YOUR TITLE/ROLE IN THE ORGANIZATION',   
+  OrganizationPhoneTypes: 'PHONE TYPE',  
+  OrganizationPersonFirstName: 'FIRST NAME',  
+  OrganizationPersonLastName: 'LAST NAME',   
+  OrganizationPersonEmail: 'E-MAIL',  
+  OrganizationPersonPhone: 'PHONE',
+  // Agency Form
+  AgencyName: 'NAME OF AGENCY',  
+  ParticipatingFloorsCount: '# OF PARTICIPATING FLOORS (OPTIONAL)', 
+  AgencyCompanyName: 'MANAGING ORGANIZATION (E.G DCAS)',    
+  AgencyTitle1: 'WHAT IS YOUR TITLE/ROLE IN THE Agency',   
+  AgencyTitle2: 'CONTACT PERSON TITLE',   
+  AgencyPhoneTypes: 'PHONE TYPE',  
+  AgencyPersonFirstName: 'CONTACT PERSON FIRST NAME',  
+  AgencyPersonLastName: 'CONTACT PERSON LAST NAME',   
+  AgencyPersonEmail: 'E-MAIL',  
+  AgencyPersonPhone: 'PHONE',
 }
-
-export const TenPlusTitles = {
-  sectionOne: "PLEASE TELL US A LITTLE ABOUT YOURSELF",
-  sectionTwo: "BUILDING / SITE INFORMATION",
-  sectionThree: "CONTACT INFORMATION",
-  sectionFour: "BUILDING MANAGEMENT INFORMATION",
-  sectionFive: "ADDITIONAL COMMENTS OR QUESTIONS",
-  SuccessMessage: "Success! Your response No. is: ",
-  FailureMessage:"Please make sure your message is correct.",
-  Identity: "WHO ARE YOU",
-  FirstName: "FIRST NAME",
-  LastName: "LAST NAME",
-  Email: "E-MAIL",
-  Phone: "PHONE",
-  ConfirmEmail: "CONFIRM E-MAIL",
-  PhoneTypeId: "PHONE TYPE",
-  AddressAsEntered: "ADDRESS",
-  SiteClassificationId: "HOW WOULD YOU CLASSIFY THIS SITE",
-  CompanyName: "MANAGEMENT COMPANY",
-  HasInformedStaffAboutProgram: "HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM"
-
-}
-
-// export const formObject = {
-//   "SRNo": "",
-//   "RequestCode": "",
-//   "RequestCodeObject": {
-//     "DisplayName": "",
-//     "RequestCode": ""
-//   },
-//   "Id": 0,
-//   "URI": "",
-//   "Identity": null,
-//   "IdentityTypes": [
-//     {
-//       "Id": 1,
-//       "Name": "ResidentialUnder10Units",
-//       "DisplayName": "Resident, 1-9 Unit Building",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 2,
-//       "Name": "ResidentialOver10Units",
-//       "DisplayName": "Resident, 10+ Unit Building",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 3,
-//       "Name": "PropertyManager",
-//       "DisplayName": "Property Manager",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 4,
-//       "Name": "Superintendent",
-//       "DisplayName": "Superintendent",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 5,
-//       "Name": "Condo",
-//       "DisplayName": "Co-op/Condo Board Member",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 6,
-//       "Name": "Nonprofit",
-//       "DisplayName": "Nonprofit",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 7,
-//       "Name": "CityAgency",
-//       "DisplayName": "City Agency",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 8,
-//       "Name": "CommunityGroup",
-//       "DisplayName": "Community Group",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 9,
-//       "Name": "SchoolPreK12",
-//       "DisplayName": "School (pre-K-12)",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 10,
-//       "Name": "Business",
-//       "DisplayName": "Business",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 11,
-//       "Name": "Other",
-//       "DisplayName": "Other",
-//       "Selected": false
-//     }
-//   ],
-//   "propertyManagementForm": {
-//     "Id": 0,
-//     "OrganicsCollectionRequestId": 0,
-//     "PropertyName": null,
-//     "PropertyUnitCount": 0,
-//     "SiteClassifications": [
-//       {
-//         "Id": 1,
-//         "Name": "ResidentialUnder10Units",
-//         "DisplayName": "1-9 Unit Building on Commercial Block",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 2,
-//         "Name": "Condo",
-//         "DisplayName": "Condo",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 3,
-//         "Name": "Coop",
-//         "DisplayName": "Co-op",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 4,
-//         "Name": "Rental",
-//         "DisplayName": "Rental",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 5,
-//         "Name": "NYCHA",
-//         "DisplayName": "NYCHA",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 6,
-//         "Name": "StudentHousing",
-//         "DisplayName": "Student Housing",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 7,
-//         "Name": "Unknown",
-//         "DisplayName": "I Don't Know",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 8,
-//         "Name": "Other",
-//         "DisplayName": "Other",
-//         "Selected": false
-//       }
-//     ],
-//       "PhoneTypes": [
-//       {
-//         "Id": 1,
-//         "Name": "Work",
-//         "DisplayName": "Work",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 2,
-//         "Name": "Mobile",
-//         "DisplayName": "Mobile",
-//         "Selected": false
-//       },
-//       {
-//         "Id": 3,
-//         "Name": "Home",
-//         "DisplayName": "Home",
-//         "Selected": false
-//       }
-//     ],
-//     "PhoneTypeId": 0,
-//     "SelectedPhoneType": null,
-//     "FirstName": null,
-//     "LastName": null,
-//     "Phone": null,
-//     "Email": null,
-//     "FullName": null,
-//     "FullNameLastFirst": null,
-//     "AddressAsEntered": null,
-//     "HouseNumber": null,
-//     "Street": null,
-//     "Apartment": null,
-//     "Borough": null,
-//     "City": null,
-//     "State": "NY",
-//     "Zip": null,
-//     "AddressText": ", NY",
-//     "AddressTextOneLine": ", NY",
-//     "SiteClassificationId": 0,
-//     "SelectedSiteClassification": null,
-//     "OtherSiteClassification": null,
-//     "HasInformedStaffAboutProgram": null,
-//     "ManagementContact": [
-//     ],
-//     "CreatedDate": "0001-01-01T00:00:00",
-//   },
-//   "AwarenessSources": [
-//     {
-//       "Id": 1,
-//       "Name": "311",
-//       "DisplayName": "311",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 2,
-//       "Name": "Brochure",
-//       "DisplayName": "Brochure",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 3,
-//       "Name": "CommunityBoard",
-//       "DisplayName": "Community Board/Elected Official",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 4,
-//       "Name": "Mailer",
-//       "DisplayName": "Mailer",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 5,
-//       "Name": "Meeting",
-//       "DisplayName": "Meeting",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 6,
-//       "Name": "Newspaper",
-//       "DisplayName": "Newspaper",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 7,
-//       "Name": "NYCZWWebsite",
-//       "DisplayName": "NYC Zero Waste Website",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 8,
-//       "Name": "NYCZWNewsletter",
-//       "DisplayName": "NYC Zero Waste Newsletter",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 9,
-//       "Name": "Online",
-//       "DisplayName": "Online: other website",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 10,
-//       "Name": "PublicEvent",
-//       "DisplayName": "Public Event",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 11,
-//       "Name": "Facebook",
-//       "DisplayName": "Social Media: Facebook",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 12,
-//       "Name": "Instagram",
-//       "DisplayName": "Social Media: Instagram",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 13,
-//       "Name": "Twitter",
-//       "DisplayName": "Social Media: Twitter",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 14,
-//       "Name": "OtherSocialMedia",
-//       "DisplayName": "Social Media: Other",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 15,
-//       "Name": "DSNYOutreach",
-//       "DisplayName": "Word of Mouth: DSNY Outreach",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 16,
-//       "Name": "GrowNYC",
-//       "DisplayName": "Word of Mouth: GrowNYC",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 17,
-//       "Name": "Friend",
-//       "DisplayName": "Word of Mouth: Friend/Colleague",
-//       "Selected": false
-//     },
-//     {
-//       "Id": 18,
-//       "Name": "Superintendent",
-//       "DisplayName": "Word of Mouth: Superintendent Referral",
-//       "Selected": false
-//     }
-//   ],
-//   "AwarenessSourceId": null,
-//   "SelectedAwarenessSource": null,
-//   "OtherAwarenessSource": null,
-//   "Comments": null,
-// }
-
 
 export const formObject = {
   "SRNo": "",
@@ -630,60 +348,82 @@ export const formObject = {
   "SiteClassificationId": 0,
   "SelectedSiteClassification": null,
   "OtherSiteClassification": null,
-  "HasInformedStaffAboutProgram": false,
+  "PropertyHasInformedStaffAboutProgram": null,
   "CompanyName": null,
-
-  "NonprofitForm":{},
-  "CityAgencyForm":{},
-  "SchoolForm":{},
-}
-
-export const PropertyManagementForm = {
-  "Id": 0,
-  "OrganicsCollectionRequestId": 0,
-  "PropertyName": null,
-  "PropertyUnitCount": 0,
-  "SiteClassifications": [
+  "CompanyPersonTitle": null,
+  "CompanyPersonFirstName": null,
+  "CompanyPersonLastName": null,
+  "CompanyAddressAsEntered": null,
+  "CompanyApartment": null,
+  "CompanyPersonEmail": null,
+  "CompanyPersonPhone": null,
+  "CompanyPhoneTypeId": null,
+  "CompanyPhoneTypes": [
     {
       "Id": 1,
-      "Name": "ResidentialUnder10Units",
-      "DisplayName": "1-9 Unit Building on Commercial Block",
+      "Name": "Work",
+      "DisplayName": "Work",
       "Selected": false
     },
     {
       "Id": 2,
-      "Name": "Condo",
-      "DisplayName": "Condo",
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
       "Selected": false
     },
     {
       "Id": 3,
-      "Name": "Coop",
-      "DisplayName": "Co-op",
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
+    }
+  ],
+
+  // Non-profit Form
+  "OrganizationName": null,
+  "OrganizationTypeId": 0,
+  "OtherOrganizationType": null,
+  "OrganizationTypes": [
+    {
+      "Id": 1,
+      "Name": "Nonprofit",
+      "DisplayName": "Nonprofit",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "University",
+      "DisplayName": "University/College",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Religious",
+      "DisplayName": "Religious",
       "Selected": false
     },
     {
       "Id": 4,
-      "Name": "Rental",
-      "DisplayName": "Rental",
+      "Name": "Library",
+      "DisplayName": "Library",
       "Selected": false
     },
     {
       "Id": 5,
-      "Name": "NYCHA",
-      "DisplayName": "NYCHA",
+      "Name": "BotanicalGarden",
+      "DisplayName": "Botanical Garden",
       "Selected": false
     },
     {
       "Id": 6,
-      "Name": "StudentHousing",
-      "DisplayName": "Student Housing",
+      "Name": "CommunityGroup",
+      "DisplayName": "Community Group",
       "Selected": false
     },
     {
       "Id": 7,
       "Name": "Unknown",
-      "DisplayName": "I Don't Know",
+      "DisplayName": "I don't know",
       "Selected": false
     },
     {
@@ -693,51 +433,72 @@ export const PropertyManagementForm = {
       "Selected": false
     }
   ],
-  "SiteClassificationId": 0,
-  "SelectedSiteClassification": null,
-  "OtherSiteClassification": null,
-  "HasInformedStaffAboutProgram": false,
-  "ManagementContact": {
-    "CompanyName": null,
-    "Title": null,
-    "PhoneTypes": [
-      {
-        "Id": 1,
-        "Name": "Work",
-        "DisplayName": "Work",
-        "Selected": false
-      },
-      {
-        "Id": 2,
-        "Name": "Mobile",
-        "DisplayName": "Mobile",
-        "Selected": false
-      },
-      {
-        "Id": 3,
-        "Name": "Home",
-        "DisplayName": "Home",
-        "Selected": false
-      }
-    ],
-    "PhoneTypeId": 0,
-    "SelectedPhoneType": null,
-    "FirstName": null,
-    "LastName": null,
-    "Phone": null,
-    "Email": null,
-    "FullName": null,
-    "FullNameLastFirst": null,
-    "AddressAsEntered": null,
-    "HouseNumber": null,
-    "Street": null,
-    "Apartment": null,
-    "Borough": null,
-    "City": null,
-    "State": "NY",
-    "Zip": null,
-    "AddressText": ", NY",
-    "AddressTextOneLine": ", NY"
-  },
-  "CreatedDate": "0001-01-01T00:00:00"
+  "NonProfitHasInformedStaffAboutProgram": null,
+  "OrganizationTitle1": null,
+  "OrganizationTitle2": null,
+  "OrganizationPhoneTypes": [
+    {
+      "Id": 1,
+      "Name": "Work",
+      "DisplayName": "Work",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
+    }
+  ],
+  "OrganizationPhoneTypeId": 0,
+  "OrganizationPersonFirstName": null,
+  "OrganizationPersonLastName": null,
+  "OrganizationPersonEmail": null,
+  "OrganizationPersonPhone": null,
+
+  // City Agency Form
+
+  "AgencyName": null,
+  "ParticipatingFloorsCount": 0,
+  "AgencyHasInformedStaffAboutProgram": null,
+  "AgencyTitle1": null,
+  "AgencyTitle2": null,
+  "AgencyCompanyName": null,
+  "AgencyPhoneTypes": [
+    {
+      "Id": 1,
+      "Name": "Work",
+      "DisplayName": "Work",
+      "Selected": false
+    },
+    {
+      "Id": 2,
+      "Name": "Mobile",
+      "DisplayName": "Mobile",
+      "Selected": false
+    },
+    {
+      "Id": 3,
+      "Name": "Home",
+      "DisplayName": "Home",
+      "Selected": false
+    }
+  ],
+  "AgencyPhoneTypeId": 0,
+  "AgencyPersonFirstName": null,
+  "AgencyPersonLastName": null,
+  "AgencyPersonEmail": null,
+  "AgencyPersonPhone": null,
+
+  
+  
+
+
+  "SchoolForm":{},
 }
