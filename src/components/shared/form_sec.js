@@ -30,11 +30,13 @@ class FormSec extends Component {
     let url;
     let type;
     let ImageUrl;
-
+  
     /* A condition check to ensure featured Image exists, to fetch the url of the Image */
     if(Item.featured_image){
       ImageUrl  = this.getImageUrl(Item);
     }
+
+    
 
     if (Item.linked_url !== " ") {
       type = 'eUrl';
@@ -74,7 +76,9 @@ class FormSec extends Component {
     standard-card-no-border | Standard Card (no border)
     standard-card-with-border | Standard Card (with border)
      */
+    console.log(type);
     switch (cardType) {
+      
       case 'table-dictionary-card':
         return (<TableDictionary title={Item.title} body={Item.content} url = {Item.linked_page.url}  header ={Item.header}/> );
       case 'square-card-no-border':
@@ -90,6 +94,7 @@ class FormSec extends Component {
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
+     
         return (url
           ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
           : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
@@ -105,7 +110,7 @@ class FormSec extends Component {
         return (<CardReferenceDetails title={Item.title} body={Item.content} key={_.random(0, 200, true)}/>);
       case 'form-link-card':
         return (url
-          ? <Link to={url}><FormRow style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
+          ? <Link to={url}><FormRow style={style} className={type == 'iUrl' ? 'InternalPageNBsubSectioncardType' : 'NBsubSectioncardType'} type ={type} title={Item.title}/></Link>
           : <FormRow style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
       default:
         return (url

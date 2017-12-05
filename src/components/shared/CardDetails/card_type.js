@@ -41,7 +41,7 @@ class CardType extends Component {
             : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
-                <Col className='nopadding' xs={8}>
+                <Col className='nopadding' xs={12}>
                   <div className='cardTypeTitle'>
                     <Dotdotdot clamp={3}>
                       <div className='cardTitleText' dangerouslySetInnerHTML={{
@@ -63,9 +63,7 @@ class CardType extends Component {
             : 12}>
             <div className={this.props.className}>
               <Row className='nopadding'>
-                <Col className='nopadding' xs={this.props.type == 'iUrl'
-                  ? 12
-                  : 8}>
+                <Col className='nopadding' xs={this.props.type == 'iUrl'? 12: 11}>
                   <div className='cardTypeTitle'>
                     <Dotdotdot clamp={3}>
                       <div className='cardTitleText' dangerouslySetInnerHTML={{
@@ -74,7 +72,7 @@ class CardType extends Component {
                     </Dotdotdot>
                   </div>
                 </Col>
-                <Col className='nopadding' xs={4}>
+                <Col className='nopadding' xs={1}>
                   <div>
                     <i className={this.className(this.props.type)}></i>
                   </div>

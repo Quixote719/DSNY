@@ -39,7 +39,7 @@ class IdentitySelector extends Component {
 
           return (
             <fieldset className='disabledContactForm' disabled={values.editMode}>
-              <Field component={DropdownInput} name="Identity" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
+              <Field component={DropdownInput} name="CustomerTypeId" title="WHO ARE YOU" disabled={values.editMode} {...this.props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IdentityTypes} disabled={values.editMode}/>
             </fieldset>
           )
     }
@@ -51,8 +51,7 @@ class IdentitySelector extends Component {
         setFieldValue,
         setFormType
       } = this.props;
-      console.log(values.Identity+"!*!")
-      setFormType(values.Identity);
+      setFormType(values.CustomerTypeId);
     }
 
 

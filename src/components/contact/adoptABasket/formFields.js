@@ -32,7 +32,7 @@ const adoptABasketElements = (props) => {
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
-    <Field component={TextAreaInput} name="BasketAdditionalLocationInfo" {...props} disabled={values.editMode}/>
+    <Field component={TextInput} name="BasketAdditionalLocationInfo" fullRow={true} {...props} disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="BusinessName" {...props} fullRow={true} maxlength="100" disabled={values.editMode}/>
