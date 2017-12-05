@@ -1,3 +1,4 @@
+/* global google */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as actions from '../../../actions/actions_home';
@@ -91,6 +92,14 @@ class SearchCards extends Component {
             input: 'collectionSearchAutoComplete',
             autocompleteContainer: 'collectionSchedule-autocomplete-container'
           }
+          
+          const options = {
+            strictBounds: true,
+            location: new google.maps.LatLng(40.714, -74.005),
+            radius: 20,
+            componentRestrictions: { country: 'us' },
+            types: ['address']
+          }
         return (
             <div className="container searchContainerRidCollection">
                 <Row className="searchRow">
@@ -102,6 +111,7 @@ class SearchCards extends Component {
                             <div id="innersquare">
                                 <div className = "ridOfAutoCompleteParent">
                                 <PlacesAutocomplete inputProps={inputProps}
+                                    options = {options}
                                     onChange = {this.changeDetected}
                                     onSelect={this.handleSelect}
                                     onEnterKeyDown={this.handleSelect}

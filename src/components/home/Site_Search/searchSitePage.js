@@ -19,7 +19,7 @@ const renderSuggestion = suggestion => (
         </div>
     </Link>
   );
-let pageSize = 5;  
+// let pageSize = 5;  
 class SearchSitePage extends Component {
     constructor(props, context) {
         super(props, context);
@@ -130,12 +130,12 @@ class SearchSitePage extends Component {
         })
       }
     render() {
-        const activePage = this.props.paginationKeyValue;
-        let length = this.props.getRidOfSearchResultsData.length;
-        length = Math.ceil(length / pageSize);
-        const indexOfLast = activePage * pageSize;
-        const indexOfFirst = indexOfLast - pageSize;
-        const messageList = this.props.getRidOfSearchResultsData.slice(indexOfFirst, indexOfLast);
+        // const activePage = this.props.paginationKeyValue;
+        // let length = this.props.getRidOfSearchResultsData.length;
+        // length = Math.ceil(length / pageSize);
+        // const indexOfLast = activePage * pageSize;
+        // const indexOfFirst = indexOfLast - pageSize;
+        // const messageList = this.props.getRidOfSearchResultsData.slice(indexOfFirst, indexOfLast);
 
         return (
             <div className = "howToGetRidOfParent">
@@ -168,9 +168,9 @@ class SearchSitePage extends Component {
                 <div style={this.state.searchResult =="noSearchResults"?{display: 'none'}:{display: 'block'}} className ="noOfSearchResults">{this.props.noOfSearchResults >0 ? this.props.noOfSearchResults + " Search Results":"No search results found"} </div>                
 
                 <div>
-                    {this.ridOfSearchResults(messageList)}
+                    {this.ridOfSearchResults(this.props.getRidOfSearchResultsData)}
                 </div>
-                <Pagination className="searchBoxPaginate"
+                {/* <Pagination className="searchBoxPaginate"
                         style={this.props.noOfSearchResults <= 0 ? {display: 'none'}:{display: 'block'}}
                         prev={<img src={paginationleftArrow} alt="paginationleftArrow" />}
                         next={<img src={paginationrightArrow} alt="paginationrightArrow" />}
@@ -179,7 +179,7 @@ class SearchSitePage extends Component {
                         items={length}
                         maxButtons={3}
                         activePage={this.props.paginationKeyValue}
-                        onSelect={this.handleSelect} />
+                        onSelect={this.handleSelect} /> */}
             </div>
             </div>
         )

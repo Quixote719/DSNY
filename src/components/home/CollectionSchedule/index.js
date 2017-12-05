@@ -1,3 +1,4 @@
+/* global google */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as actions from '../../../actions/actions_home';
@@ -349,9 +350,11 @@ class CollectionSchedule extends Component {
         }
         const options = {
             strictBounds: true,
-            bounds: defaultBounds,
-            componentRestrictions: { country: 'us' }
-        }
+            location: new google.maps.LatLng(40.714, -74.005),
+            radius: 20,
+            componentRestrictions: { country: 'us' },
+            types: ['address']
+          }
         return (
             <div className="howToGetRidOfParent">
                 <Header title='Collection Schedule' breadCrumbList="" />

@@ -136,7 +136,6 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search/:keyword"} component={SiteSearch}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/site-search"} component={SiteSearch}/>
 
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/serviceRequestStatus"} component={SerialNoPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/serviceRequestStatus/:keyword"} component={SerialNoPage}/>
 
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyEvents"} component={DSNYEvents}/>
