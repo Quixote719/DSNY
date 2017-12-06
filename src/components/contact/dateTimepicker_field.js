@@ -10,6 +10,7 @@ import '../../content/styles/react-datetime.css';
 import isEmpty from 'lodash/isEmpty'
 import 'react-datepicker/dist/react-datepicker.css';
 import  {InputGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
+import MaskedInput from 'react-text-mask';
 
 class InputWithButton extends Component {
 
@@ -48,7 +49,7 @@ render() {
   return(
     <div>
     <InputGroup>
-      <FormControl  error={this.props.error} onFocus={this.inputFocus} onBlur={this.handleFocusOut} className={`react-datepicker-ignore-onclickoutside ${this.props.className}`} name={this.props.name} required={this.props.required} readOnly={true} placeholder={this.props.placeholder} onClick={this.props.onClick} value={this.props.value} onChange={this.props.onChange} disabled={this.props.disabled} />
+      <MaskedInput mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}  error={this.props.error} onFocus={this.inputFocus} onBlur={this.handleFocusOut} className={`react-datepicker-ignore-onclickoutside ${this.props.className}`} name={this.props.name} required={this.props.required} placeholder={this.props.placeholder} onClick={this.props.onClick} value={this.props.value} onChange={this.props.onChange} disabled={this.props.disabled} />
       {!this.props.disabled?<span  class="input-group-addon" onClick={this.props.onClick}><span class="glyphicon glyphicon-calendar"></span></span>:null}
 										
 
