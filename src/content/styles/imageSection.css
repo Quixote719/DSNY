@@ -3,9 +3,9 @@
   background-position: 50% 50%;
 }
 
-@media only screen and (max-width: 1900px) {
+@media only screen and (max-width: 2500px) {
   .ImageSection{
-    background-size: 1900px 900px!important;
+    background-size: 2500px 1200px!important;
     background-position: 50% 50%!important;
     overflow: hidden!important;
   }

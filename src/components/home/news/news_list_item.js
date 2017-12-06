@@ -84,8 +84,8 @@ class NewsListItem extends Component {
                     <Col xs={7} sm={7} md={7} className='newsMobileSection'>
                         <div className='newsSectioncardTI'>
                         <div className='newscardTitle'>
-                            {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
-                            <div className='newscardTitleText'>{this.props.title}</div>
+                            <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
+                            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + `${this.props.linkTo}`}><div className='newscardTitleText'>{this.props.title}</div></Link>
                         </div>
                        {this.getDescription(this.props.description)}
                         </div>
