@@ -8,11 +8,24 @@ import '../../../../node_modules/font-awesome/css/font-awesome.min.css';
 import _ from "lodash";
 import SubSectionButton from '../../shared/sub_section_button';
 import { Link } from 'react-router-dom';
+import ServiceRequestStatus from './serviceRequestStatus';
+import { withRouter } from 'react-router';
 
 class ProgramCards extends Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      serviceRequest: "",      
+    };
   }
+  handleChange = (value) =>{
+    this.setState({
+      serviceRequest: value,
+    })
+  }
+  handleSelect = () =>{
+      this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/serviceRequestStatus/"+ this.state.serviceRequest)
+}
   mobileProgramList() {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
@@ -90,6 +103,9 @@ class ProgramCards extends Component {
     });
   }
   render() {
+    console.log("this.state.serviceRequest")
+    console.log(this.state.serviceRequest)
+
         return (
           <div className="programContainerParent programContainerParentTablet">
             <div className="programContainer">
@@ -98,9 +114,10 @@ class ProgramCards extends Component {
                   Check Service Request Status
                 </div>
                 <div className="serviceRequestInputTablet">
-                  <input className="serviceRequestSearchTablet" type="text" placeholder="Service Request Number" >
-                  </input>
-                  <SubSectionButton title='SEARCH' />
+                {/* <input className="serviceRequestSearchTablet" type="text" placeholder="Service Request Number" >
+                </input>              */}
+                <ServiceRequestStatus classNameService = "serviceRequestSearchTablet" handleChange = {this.handleChange}/>
+                <SubSectionButton onClick = {this.handleSelect} title='SEARCH' />
                 </div>
               </div>
               {this.mobileProgramList()}
@@ -113,11 +130,10 @@ class ProgramCards extends Component {
                           Check Service Request Status
                         </div>
                         <div className="serviceRequestInput">
-                          <input className="serviceRequestSearch" type="text" placeholder="Service Request Number" >
-                          </input>
+                        <ServiceRequestStatus classNameService = {"serviceRequestSearch"} handleChange = {this.handleChange}/>
                         </div>
                         <div className="searchProgramBtnDiv">
-                          <SubSectionButton title='SEARCH' />
+                          <SubSectionButton onClick = {this.handleSelect}  title='SEARCH' />
                         </div>
                       </div>
                     </Col>
@@ -133,4 +149,4 @@ class ProgramCards extends Component {
   }
 }
 
-export default ProgramCards;
+export default withRouter(ProgramCards);
