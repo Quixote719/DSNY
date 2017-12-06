@@ -59,10 +59,6 @@ updateValues(geoCoderAddressResult){
           return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
     }
 
-    if (geoCoderAddressResult){
-      if (typeof unavailableDates === 'undefined')
-      this.updateValues(geoCoderAddressResult)
-    }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
@@ -78,9 +74,14 @@ updateValues(geoCoderAddressResult){
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,success:state.forms.success,unavailableDates:state.forms.unavailableDates, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
-  error:state.error.type};
-}
-
+  return {
+    FormObject: state.forms.formObject,
+    success:state.forms.success,
+    unavailableDates:state.forms.unavailableDates,
+    geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
+    isAddressValidated: state.carouselDataReducer.addressValidator,
+    error:state.error.type
+  };
+ }
 
 export default connect(mapStateToProps, {fetchFormObject, postFormObject,GetUnavailableDates})(CFCRequestForm);

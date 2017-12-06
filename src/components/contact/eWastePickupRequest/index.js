@@ -70,13 +70,7 @@ class EwasteRequestForm extends Component {
     const { error, success, isDistrictActive, buildingStatus,commercialAddress, unavailableDates, geoCoderAddressResult, isAddressValidated} = this.props;
 
     if(success !== undefined) {
-          return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p>${success}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p><p><b>Where to leave your E-Waste items?</b></p><p>Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB.</p></div></div>`,success, Titles.SuccessMessage, Titles.FailureMessage, '')
-    }
-
-    if (geoCoderAddressResult){
-      console.log(this.props);
-      //if (typeof unavailableDates === 'undefined')
-      //this.updateValues(geoCoderAddressResult)
+          return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p>${success}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p><p><b>Where to leave your E-Waste items?</b></p><p>Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB.</p></div></div>`)
     }
 
     if (FormObject && FormObject !== undefined) {
@@ -93,7 +87,6 @@ class EwasteRequestForm extends Component {
 
 
 function mapStateToProps(state) {
-  console.log('varma',state.carouselDataReducer.DSNYGeoCoder ? state.carouselDataReducer.commercialAddress :'' );
 
   return {
     FormObject: state.forms.formObject,

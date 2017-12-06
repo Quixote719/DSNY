@@ -61,11 +61,6 @@ updateValues(geoCoderAddressResult){
               return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
         }
 
-        if (geoCoderAddressResult){
-          if (typeof unavailableDates === 'undefined')
-          this.updateValues(geoCoderAddressResult)
-        }
-
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
                 <FormSteps formFields={formFields} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
@@ -80,8 +75,15 @@ updateValues(geoCoderAddressResult){
 
 
 function mapStateToProps(state) {
-  return {FormObject: state.forms.formObject,pickupLocations:state.forms.pickupLocations,success:state.forms.success,unavailableDates:state.forms.unavailableDates, geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,isAddressValidated: state.carouselDataReducer.addressValidator,
-  error:state.error.type};
+  return {
+    FormObject: state.forms.formObject,
+    pickupLocations:state.forms.pickupLocations,
+    success:state.forms.success,
+    unavailableDates:state.forms.unavailableDates,
+    geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
+    isAddressValidated: state.carouselDataReducer.addressValidator,
+    error:state.error.type
+  };
 }
 
 
