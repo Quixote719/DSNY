@@ -205,7 +205,7 @@ class OrganicsCollectionApplication extends Component {
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
         if(success !== undefined) {
-          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage, true)
+          return displayThankYouPage(`<div>Hello</div>`, success, Titles.SuccessMessage, Titles.FailureMessage, true)
         }
 
         if (FormObject && FormObject !== undefined) {

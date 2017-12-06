@@ -49,7 +49,8 @@ class Complaints extends Component {
             <div className="BreadcrumbList">
               <div className="container">
                 <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
-                  <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
+                  <span className='fa fa-angle-left'></span>
+                  <li className="homeBreadCrumbs"><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
                   <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>Contact</Link><span className='breadcrumbSymbol'>/</span></li>
                 </ol>
               </div>
