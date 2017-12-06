@@ -13,17 +13,14 @@ class LocationsSection extends Component {
     }
     const cardStyle = {
                         'float': 'right',
-                        'marginTop': '15px'
                       }
-
     return (
-      <div className='locations' style={style} >
+      <div className='locations' style={style}>
         <div className = 'SContainer'>
             <div className = 'whiteTitle'>Locations</div>
             <div style={cardStyle}>
                 <ContentCard type='1' content={this.props.LocationProps.content}/>
             </div>
-
         </div>
       </div>
     )

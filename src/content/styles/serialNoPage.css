@@ -1,0 +1,132 @@
+.serviceRequestContainerParent{
+    background-color: #F2F2F2;
+}
+.serviceRequestNo{
+    padding-top: 24px;
+    padding-bottom: 9px;
+    color: #262626;	
+    font-size: 36px;	
+    font-weight: bold;	
+    letter-spacing: -1px;	
+    line-height: 33px;
+}
+.serviceRequestStatusParent {
+    padding-left: 11px;
+    padding-right: 11px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    margin-bottom: 17px;
+    background-color: white;
+    display: block;
+}
+.serviceRequestContainer>.serviceRequestParentTablet{
+    display: block;
+}
+.serviceRequestParentTabletService {
+    height: 147px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.serviceRequestInputTabletService {
+    text-align: center;
+}
+.serviceRequestInputTabletService>.subSectionButton {
+    margin-left: 20px;
+    width: 126px;
+    margin-top: 21px;
+    margin-bottom: 37px;
+}
+.serviceRequestTitleTabletService {
+    padding-left: 26px;
+    color: #231F20;
+    font-size: 17.5px;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    color: #231F20;
+    padding-right: 26px;
+    padding-top: 28px;
+}
+.serviceRequestSearchTabletService {
+    padding-bottom: 11.2px;
+    padding-left: 20px;
+    border: 2px solid #EDEDEE;
+    width: 755px;
+    padding-top: 9px;
+}
+.serviceRequestInputTabletService{
+    text-align: center;
+}
+.serviceRequestSearchTabletService:focus, .serviceRequestSearchTablet:focus{
+    border: 1px solid #7CC04B!important;    
+    border-color: #7CC04B!important;
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+@media only screen and (max-width: 599px) {
+    .serviceRequestSearchTabletService {
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 100%;
+        padding-top: 9px;
+        margin-top: 19px;
+    }
+    .serviceRequestParentTabletService {
+        height: auto;        
+        padding-left: 11px;
+        padding-right: 11px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 3px;
+        margin-bottom: 17px;
+        background-color: white;
+        display: block;
+    }
+    .serviceRequestInputTabletService>.subSectionButton {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}    
+@media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .serviceRequestSearchTabletService {
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 520px;
+        padding-top: 9px;
+    }
+}    
+@media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .serviceRequestSearchTabletService {
+        border-radius: 3px;
+        padding-bottom: 11.2px;
+        padding-left: 20px;
+        border: 2px solid #EDEDEE;
+        width: 100%;
+        padding-top: 9px;
+        margin-top: 19px;
+    }
+    .serviceRequestParentTabletService {
+        height: auto;                
+        padding-left: 11px;
+        padding-right: 11px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+        border-radius: 3px;
+        margin-bottom: 17px;
+        background-color: white;
+        display: block;
+    }
+    .serviceRequestInputTabletService>.subSectionButton {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}    
