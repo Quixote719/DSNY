@@ -37,12 +37,12 @@ class LawsListItem extends Component {
     return (
       <div >
         <Col>
-          <Col xs={12} md={3}>
+          <Col xs={12} sm={3}>
               <div className = {this.renderLawsTitle(this.props.lawsIndex)}>
                  <Truncate lines={2}> {Parser(this.props.title)} </Truncate>
               </div>
           </Col>
-          <Col xs={12} md={9}>
+          <Col xs={12} sm={9}>
             <Row>
               <Col xs={12}>
                   <div className = {this.renderLawsDesc(this.props.lawsIndex)}>

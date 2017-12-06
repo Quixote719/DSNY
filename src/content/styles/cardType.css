@@ -26,6 +26,16 @@
     margin: 10px 0;
   }
 
+  .NBsubSectionCardTypeRightAlign{
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0px 0;
+  }
+  
+
   .InternalPageNBsubSectioncardType{
     min-height: 90px;
     min-width: 300px;
@@ -71,6 +81,14 @@
 
   .cardTypeCards {
     margin-top: 15px;
+  }
+
+  .marginBetwCards{
+    margin-top:15px;
+  }
+
+  .rightAlignedCardTypes{
+    margin-top: 0px;
   }
 
   .breadcrumb {

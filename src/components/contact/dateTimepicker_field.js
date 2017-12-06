@@ -11,21 +11,54 @@ import isEmpty from 'lodash/isEmpty'
 import 'react-datepicker/dist/react-datepicker.css';
 import  {InputGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
 
-const InputWithButton = (props)=>{
-console.log(props.name);
+class InputWithButton extends Component {
+
+
+  constructor(props){
+    super(props);
+    //this.onInputChange = this.onInputChange.bind(this);
+    this.inputFocus = this.inputFocus.bind(this);
+    this.handleFocusOut = this.handleFocusOut.bind(this);
+
+    this.state={
+      defaultDateFormat:'MM/DD/YYYY',
+      hideToolTip: true,
+      open:false,
+      value:''
+    }
+  }
+
+  inputFocus() {
+
+     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false, open:true, value:this.props.value}) : this.setState({hideToolTip: true, open:true, value:this.props.value});
+     console.log(this.state);
+   }
+
+  handleFocusOut(){
+    console.log(this.state);
+    if(this.props.value !== null){
+      console.log('zxzx',this.props.value);
+        this.setState({open:false})
+    }
+
+    this.setState({hideToolTip: true });
+  }
+
+render() {
   return(
     <div>
     <InputGroup>
-      <FormControl  error={props.error} className={`react-datepicker-ignore-onclickoutside ${props.className}`} name={props.name} required={props.required} readOnly={true} placeholder={props.placeholder} onClick={props.onClick} value={props.value} onChange={props.onChange} disabled={props.disabled} />
-      <InputGroup.Button>
-        <Button  className="react-datepicker-ignore-onclickoutside" disabled={props.disabled} onClick={props.onClick}><Glyphicon glyph="calendar" /></Button>
-      </InputGroup.Button>
+      <FormControl  error={this.props.error} onFocus={this.inputFocus} onBlur={this.handleFocusOut} className={`react-datepicker-ignore-onclickoutside ${this.props.className}`} name={this.props.name} required={this.props.required} readOnly={true} placeholder={this.props.placeholder} onClick={this.props.onClick} value={this.props.value} onChange={this.props.onChange} disabled={this.props.disabled} />
+      {!this.props.disabled?<span  class="input-group-addon" onClick={this.props.onClick}><span class="glyphicon glyphicon-calendar"></span></span>:null}
+										
 
     </InputGroup>
-      {props.error ?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{props.error}</Tooltip>:null}
+       {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
       </div>
   );
 };
+
+}
 
 class FormDateTimePicker extends Component {
 
@@ -33,12 +66,12 @@ class FormDateTimePicker extends Component {
   constructor(props){
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    this.inputFocus = this.inputFocus.bind(this);
-    this.handleFocusOut = this.handleFocusOut.bind(this);
+    // this.inputFocus = this.inputFocus.bind(this);
+    // this.handleFocusOut = this.handleFocusOut.bind(this);
 
     this.state={
       defaultDateFormat:'MM/DD/YYYY',
-      hideToolTip: true,
+      //hideToolTip: true,
       open:false,
       value:''
     }
@@ -60,21 +93,7 @@ class FormDateTimePicker extends Component {
     }
   }
 
-   inputFocus() {
-
-     (isEmpty(this.props.value) || this.props.value === "") ? this.setState({hideToolTip: false, open:true, value:this.props.value}) : this.setState({hideToolTip: true, open:true, value:this.props.value});
-     console.log(this.state);
-   }
-
-  handleFocusOut(){
-    console.log(this.state);
-    if(this.props.value !== null){
-      console.log('zxzx',this.props.value);
-        this.setState({open:false})
-    }
-
-    this.setState({hideToolTip: true });
-  }
+   
   open(){
     console.log('sdsdsdsdsd');
   }
@@ -121,7 +140,7 @@ class FormDateTimePicker extends Component {
             {/*<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true }} onChange={event => this.onInputChange(event)}  isValidDate={ valid } className="date-picker" timeFormat={false} dateFormat={true} closeOnSelect={true}  value={this.props.value === "0001-01-01T00:00:00" ? '' : this.props.value } />*/}
 
             </div>
-            {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
+           
           </fieldset>
 
         </Col>

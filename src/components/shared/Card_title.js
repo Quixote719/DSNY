@@ -19,9 +19,11 @@ class CardTitle extends Component {
 
 
   render() {
+    console.log(this.props.cardIndex == (0 || 1));
     return (
       <Col xs={12} sm={6} md={3}>
       <div className={this.props.className}>
+        <div className={this.props.cardIndex == 0 || this.props.cardIndex == 1 ? 'tabletIncrsdMargin' : ''}> </div>
         <div className='subSectioncardT' onClick={this.login}>
             <div className='CardTitleTextEmptyBody'>
               <Truncate lines={2}> {this.props.title} </Truncate> 
@@ -35,7 +37,8 @@ class CardTitle extends Component {
 
 CardTitle.propTypes = {
   onClick: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
+  cardIndex:PropTypes.string,
 };
 
 export default CardTitle;
