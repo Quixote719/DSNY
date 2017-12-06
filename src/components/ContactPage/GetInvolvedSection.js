@@ -32,8 +32,15 @@ class GetInvolvedSection extends Component {
       <div className='ImageSection' style={style} >
         <div className = 'SContainer'>
             <div className = 'whiteTitle'>Get Involved</div>
-            <div style={cardStyle}>
+            <div style={cardStyle} className="getInvolvedCardBelow">
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
+                <span>
+                  <div className="learnMoreGetInvolved">
+                    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/get-involved"}>
+                       Learn More
+                   </Link>
+                  </div>
+                </span>
             </div>
         </div>
       </div>

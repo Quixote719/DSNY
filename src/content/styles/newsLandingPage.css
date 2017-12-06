@@ -1,5 +1,5 @@
 .topNewsTitle {
-    padding: 0;
+    padding-left: 8;
     margin-top: 30px;
 }
 
@@ -31,7 +31,8 @@
 }
 
 .bottomNewsExplain{
-    margin-left: 32px;
+    margin-left: 22px;
+    margin-bottom: 30px;
 }
 
 .bottomCardTitle{
@@ -39,19 +40,19 @@
     font-size: 17.5px;
     font-weight: bold;
     line-height: 22px;
-    margin-top: 19px;
+    margin-top: 30px;
 }
 
 .bottomCardTitleText{
-    margin-top: 19px;
+    margin-top: 30px;
 }
 
 .bottomNewsExplaination{
-    margin-top: 15px;
     height: 44px;
     color: #333333;
     font-size: 16px;
     line-height: 22px;
+    margin-top: 8px;
 }
 
 .topNewsImageContainer {
@@ -63,16 +64,25 @@
 
 /*Mobile View*/
 @media only screen and (max-width: 499px) {
+    .topCardTitleText{
+        height: 21px;
+        font-size: 17.5px;
+        font-weight: bold;
+        line-height: 22px;
+    }
+    
     .bottomNewsExplain{
         margin-top: 15px;
         margin-left: 0;
         margin-right: 0;
         padding: 0px;
+        margin-bottom: 30px;
     }
 
     .topNewsTitle{
         padding-left: 15px;
         padding-right: 15px;
+        width: auto!important;
     }
 
     .restNews{
@@ -91,15 +101,16 @@
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
     .bottomNewsExplain{
-        margin-top: 11px;
         margin-left: 0;
         margin-right: 0;
+        padding: 0px;
         width: auto!important;
     }
 
     .topNewsTitle{
         padding-left: 15px;
         padding-right: 15px;
+        width: auto!important;
     }
 
     .restNews{
@@ -112,6 +123,10 @@
 
     .topNewsImageContainer{
         height: 420px;
+    }
+
+    .bottomCardTitleText{
+        margin-top: 10px;
     }
 
 }
@@ -119,15 +134,16 @@
 /*TABLET VIEW !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 500px) and (max-width: 959px) and (orientation: landscape){
     .bottomNewsExplain{
-        margin-top: 11px;
         margin-left: 0;
         margin-right: 0;
+        padding: 0px;
         width: auto!important;
     }
 
     .topNewsTitle{
         padding-left: 15px;
         padding-right: 15px;
+        width: auto!important;
     }
 
     .restNews{
@@ -142,12 +158,16 @@
         height: 420px;
     }
 
+    .bottomCardTitleText{
+        margin-top: 10px;
+    }
+
 }
 
 /*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
     .bottomNewsExplain{
-
+        margin-bottom: 30px;
         margin-left: 0;
         margin-right: 0;
         padding: 0px;
@@ -156,6 +176,7 @@
     .topNewsTitle{
         padding-left: 15px;
         padding-right: 15px;
+        width: auto!important;
     }
 
     .restNews{
@@ -170,14 +191,18 @@
         height: 300px;
     }
 
+    .bottomCardTitleText{
+        margin-top: 10px;
+    }
+
 }
 
 /*BETWEEN DESKTOP AND TABLET*/
 @media (min-width: 960px) and (max-width: 1284px) {
     .bottomNewsExplain{
-        margin-top: 15px;
         margin-left: 0;
         margin-right: 0;
+        padding: 0px;
         width: auto!important;
     }
 
@@ -192,6 +217,10 @@
 
     .newscardImage{
         width: auto!important;
+    }
+
+    .bottomCardTitleText{
+        margin-top: 10px;
     }
 
 }
