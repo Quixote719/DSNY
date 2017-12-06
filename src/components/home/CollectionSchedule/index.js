@@ -1,3 +1,4 @@
+/* global google */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as actions from '../../../actions/actions_home';
@@ -37,7 +38,7 @@ class CollectionSchedule extends Component {
             showTableFlag = 1;
             this.props.getCollectionSchedule(address, null, this.successCallback);
         }
-        if (this.props.match.path !== "/assets/donate/development/react/collectionSchedule") {
+        if (this.props.match.path !== "/assets/dsny/staging/collectionSchedule") {
             this.setState({
                 checkInputresults: ""
             });
@@ -349,9 +350,11 @@ class CollectionSchedule extends Component {
         }
         const options = {
             strictBounds: true,
-            bounds: defaultBounds,
-            componentRestrictions: { country: 'us' }
-        }
+            location: new google.maps.LatLng(40.714, -74.005),
+            radius: 20,
+            componentRestrictions: { country: 'us' },
+            types: ['address']
+          }
         return (
             <div className="howToGetRidOfParent">
                 <Header title='Collection Schedule' breadCrumbList="" />

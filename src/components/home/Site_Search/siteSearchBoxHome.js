@@ -74,10 +74,17 @@ class SiteSearchBox extends Component {
       //     checkInputresults: "clearBoxNotChecked",
       //     searchResult: ""
       //  });
-      this.props.setPaginationKey(1);      
       this.props.setSearchClearBoxValue("clearBoxNotChecked")      
       this.props.setSiteSearchValue(suggestion);
-      this.props.getSiteSearchResults(suggestion);                 
+      this.props.getSiteSearchResults(suggestion);   
+      this.props.setPaginationKey(1);            
+      this.setState({
+        value: "",
+        placeholder: "Search"          
+      });           
+      document.getElementById("siteSearch").blur();  
+      if(this.props.showModal)
+      this.props.showModal();
     }
     siteSearchIcon = () =>{
       if(this.state.value.trim().length !== 0){
@@ -90,6 +97,7 @@ class SiteSearchBox extends Component {
           value: "",
           placeholder: "Search"          
         });
+        console.log(document.activeElement)        
         document.activeElement.blur();
         if(this.props.showModal)
           this.props.showModal();
@@ -126,6 +134,7 @@ class SiteSearchBox extends Component {
                             inputProps={{
                                 value: this.state.value,
                                 onChange: this.onChange,
+                                id: "siteSearch",
                                 className: "siteSearch",
                                 placeholder: this.state.placeholder,
                                 onBlur: this.resetPlaceHolder,
