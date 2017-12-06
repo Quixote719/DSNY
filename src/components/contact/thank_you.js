@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 class SubmitThankYou extends Component {
   constructor(props) {
     super(props);
-   
+
     this.state = {
       editMode:true,
     }
@@ -21,7 +21,15 @@ class SubmitThankYou extends Component {
 }
 
 render() {
-  return (      
+  return(this.props.children ? <div className='SContainer'>
+    {this.demoDisplay()}
+    <div>{this.props.children}</div>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>
+          <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
+        </Link>
+    <div className='patternLineGreen'></div>
+  </div>
+  :
       <div>
         <Col>
          <div className='SContainer'>
@@ -31,7 +39,7 @@ render() {
               <div className='thankyoubody' >
                 {Parser(this.props.message)}
               </div>
-          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>
             <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
           </Link>
           {/*<div className='thankYoupatternLine'></div>*/}

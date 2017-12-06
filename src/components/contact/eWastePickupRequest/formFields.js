@@ -47,7 +47,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	if (Dates){
 
      values.Dates = Dates;
-		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate) : values.AppointmentDate
+		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate
 	}
 
 	if (typeof isDistrictActive !== undefined){
@@ -79,7 +79,7 @@ const EwastePickUpRequestFormElements = (props) => {
     <div>{values.isDistrictActive && (values.buildingStatus || values.commercialAddress) ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props} onChange={setFieldValue} required/> : '' }</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
-		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} disabled={values.editMode} required/>
+		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets ? geoCoderAddressResult.pickupStreets: [] : []} disabled={values.editMode} required/>
 		<Field component={DateTimePickerInput} required value={values.isDistrictActive ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} required name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
