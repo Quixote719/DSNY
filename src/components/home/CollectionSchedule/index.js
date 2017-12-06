@@ -38,7 +38,7 @@ class CollectionSchedule extends Component {
             showTableFlag = 1;
             this.props.getCollectionSchedule(address, null, this.successCallback);
         }
-        if (this.props.match.path !== "/assets/donate/development/react/collectionSchedule") {
+        if (this.props.match.path !== "/assets/dsny/staging/collectionSchedule") {
             this.setState({
                 checkInputresults: ""
             });
