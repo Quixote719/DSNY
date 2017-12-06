@@ -22,9 +22,9 @@ class EducationalMaterialsList extends Component {
   }
 
   renderPosts(cards) {
-    return _.map(this.firstN(cards, 4), Item => {
+    return _.map(this.firstN(cards, 4), (Item,Index) => {
       return (
-        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardTitle title={Item.title} key={Item.id}/></Link>
+        <Link key={Item.id} to={process.env.REACT_APP_SITE_RELATIVE_URL + Item.linked_page.url}><CardTitle title={Item.title} key={Item.id} cardIndex={Index}/></Link>
       );
     });
   }
@@ -42,7 +42,7 @@ class EducationalMaterialsList extends Component {
     return (
       <div>
         <EducationSectionHeader title={title} body={body} src={src}/>
-        <div className='container'>
+        <div className='SContainer'>
           <Row>
             {this.renderPosts(promotional)}
           </Row>

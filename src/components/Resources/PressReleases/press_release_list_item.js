@@ -30,7 +30,7 @@ class PressReleaseListItem extends Component {
     return (
       <div >
         <Row>
-          <Col xs={12} md={8}>
+          <Col xs={12} sm={8}>
             <div >
               <Link className='PressReleaseTitle' to={process.env.REACT_APP_SITE_RELATIVE_URL + `${this.props.slug}`}>
                 <div dangerouslySetInnerHTML={{
@@ -40,8 +40,8 @@ class PressReleaseListItem extends Component {
               </Link>
             </div>
           </Col>
-          <Col xs={12} md={4}>
-            <div className='PressReleaseDate'>{moment(this.props.date).format('dddd, MMMM Do, YYYY')}</div>
+          <Col xs={12} sm={4}>
+            <div className='PressReleaseDate'>{moment(this.props.date).format('dddd, MMMM D, YYYY')}</div>
             <div className='listItemTag'>Press Release #{this.props.prid}</div>
           </Col>
         </Row>

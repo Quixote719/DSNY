@@ -15,7 +15,7 @@ class TitleContentCard extends Component {
         'width': '220px',
         'backgroundColor':'#FFFFFF',
         'display':'inline-block',
-        'height': '200px'
+        'height': '200px',
       },
       narrow_border:{
         'width': '220px',
