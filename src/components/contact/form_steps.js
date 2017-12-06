@@ -54,7 +54,7 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
-export function displayThankYouPage(success, successMessage, failureMessage, displayPatternLine, displayMessage)
+export function displayThankYouPage(displayMessage, success, successMessage, failureMessage, displayPatternLine)
 {
   debugger;
   console.log(displayMessage);
