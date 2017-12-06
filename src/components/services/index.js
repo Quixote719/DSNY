@@ -51,7 +51,7 @@ class Services extends Component {
                 <div key={sec.id}>
                   <SearchCards ridOffKeywords={this.props.ridOffKeywords} pushHistory={this.props}/>
                   <div style={bcgStyle}>
-                    <div className='SContainer'>
+                    <div className='SContainer normalsection'>
                       <SubSectionHeader title={sec.header}/>
                       <ContentCardRow dataObject = {sec}/>
                     </div>

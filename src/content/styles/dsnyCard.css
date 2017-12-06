@@ -147,10 +147,13 @@
 
 @media only screen and (max-width: 991px) {
   .CardTitle{
-    width: 100%!important;
+    width: 100% !important;
   }
   .CardContent{
     width: 100% !important;
+  }
+  .locations .CardContent{
+    width: 303px !important;
   }
   .TitleContentCard{
     width: 49%!important;
@@ -170,6 +173,9 @@
 }
 
 @media only screen and (max-width: 599px) {
+  .locations .CardContent{
+    width: 100% !important;
+  }
   .CardTitle, .CardTitleBox, .TitleContentCard{
     width: 100%!important;
   }
