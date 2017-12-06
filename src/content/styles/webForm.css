@@ -129,9 +129,19 @@ label.checkContainer{
 
 /* date picker */
 .react-datepicker {
+  border: 1px solid #DFDFDF;
   font-size: 1em;
 }
+.react-datepicker-popper{
+  margin-top: -12px !important;
+  z-index: 5;
+}
+.react-datepicker__triangle{
+  display: none;
+}
 .react-datepicker__header {
+  background-color: transparent;
+  border-bottom: none;
   padding-top: 0.8em;
 }
 .react-datepicker__month {
