@@ -261,7 +261,7 @@ const FormSteps = compose(
                     nextbuttonClicked = false;
                   }
               }
-              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name]))))
               {
                   errors[input.name] = "Enter valid Email Address"
                   if(nextbuttonClicked)
