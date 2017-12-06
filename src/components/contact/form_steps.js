@@ -7,6 +7,7 @@ import { compostFormTitles as Titles} from './titles'
 import Recaptcha from 'react-recaptcha';
 import FormButton from './form_button';
 import ThankYou from './thank_you';
+import Parser from 'html-react-parser';
 import {validateButtonClicked} from './formAddressAutocomplete';
 
 // import '../../content/styles/contactForm.css';
@@ -53,21 +54,23 @@ const expiredCallback = () => {
   console.log(`Recaptcha expired`);
 };
 
-export function displayThankYouPage(success, successMessage, failureMessage, displayPatternLine)
+export function displayThankYouPage(displayMessage, success, successMessage, failureMessage, displayPatternLine)
 {
+  debugger;
+  console.log(displayMessage);
   if(success != null && success.SRNo !== undefined) {
-      return(<ThankYou message={successMessage + success.SRNo} displayPatternLine={displayPatternLine} />);
+      return(<ThankYou message={successMessage + success.SRNo} displayPatternLine={displayPatternLine} >{Parser(displayMessage)}</ThankYou>);
     } else {
-      return(<ThankYou message={failureMessage} displayPatternLine={displayPatternLine}/>);
+      return(<ThankYou message={failureMessage} displayPatternLine={displayPatternLine}>{Parser(displayMessage)}</ThankYou>);
     }
 
 }
 
 function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressValidated){
-  
+
   if (values && isAddressValidated)
       values.AddressAsEntered = isAddressValidated
-  
+
   if(values.IsAnonymous)
   {
     values.FirstName = "";
@@ -211,7 +214,7 @@ const FormSteps = compose(
   mapPropsToValues: props => ({...props.customFormData, editMode:props.disabled, formFields: props.formFields, formTitles: props.formTitles, geoCoderAddressResult:props.geoCoderAddressResult, isAddressValidated:props.isAddressValidated}),
   // Add a custom validation function (this can be async too!)
   validate: (values, props) => {
-  
+
     let errors = {}
     // alert(props.geoCoderAddressResult);
     // alert(props.isAddressValidated);
@@ -229,7 +232,7 @@ const FormSteps = compose(
     // {
       const inputs = Array.from(document.querySelectorAll('#form input, #form .dropdown-toggle,#form textarea'));
 
-      
+
           inputs.forEach(input => {
 
             //Text, Checkbox Input Validation
@@ -258,7 +261,7 @@ const FormSteps = compose(
                     nextbuttonClicked = false;
                   }
               }
-              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values[input.name]))))
+              else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name]))))
               {
                   errors[input.name] = "Enter valid Email Address"
                   if(nextbuttonClicked)
