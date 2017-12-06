@@ -158,6 +158,20 @@ label.checkContainer{
   border-left-color: #ccc;
   right: 1em;
 }
+.react-datepicker__day--keyboard-selected{
+  background-color: #7CC04B;
+}
+.input-group-addon{
+  border: none;
+  background-color: transparent!important;
+}
+.react-datepicker-wrapper .input-group .form-control{
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+   width: 108.5%;
+   cursor: pointer;
+   z-index: 0;
+}
 
 /* date picker */
 
