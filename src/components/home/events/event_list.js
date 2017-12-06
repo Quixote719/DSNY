@@ -18,7 +18,7 @@ class Event extends Component {
   }
 
   renderPosts(pr) {
-    return _.map(this.firstN(pr, 4), eventItem => {
+    return _.map(this.firstN(pr, 3), eventItem => {
       return (<EventListItem eventid={eventItem.EventID} description={eventItem.Description} title={eventItem.EventName} boro={eventItem.BoroughShortName} date={eventItem.EventDate} key={eventItem.EventID}/>);
     });
   }
@@ -31,15 +31,17 @@ class Event extends Component {
   }
 
   ViewAllButton(l) {
-    if (l >= 4) {
+    if (l >= 3) {
       // return (<SubSectionButton title='MORE EVENTS' onClick={this._reroute}/>);
       return (
 
-          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyevents"}>
+
               <div className="moreEventsBtnDiv">
-                <SubSectionButton title='MORE EVENTS'/>
+                <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnyevents"}>
+                  <SubSectionButton title='MORE EVENTS'/>
+                </Link>
               </div>
-          </Link>
+
       );
     } else {
       return null;

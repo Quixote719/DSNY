@@ -1,13 +1,14 @@
 .dictionaryCardTitle {
   color: #000000;
-  font-size: 24px;
+  font-size: 17.5px;
   font-weight: bold;
-  letter-spacing: -1px;
+  margin-top:25px;
 }
 
 .dictionaryCardDesc {
   color: #333333;
   font-size: 16px;
+  margin-top:25px;
 }
 
 .dictionaryBottomLink {
@@ -27,4 +28,15 @@
   height: 1px;
   background-color: #E3E3E3;
   margin-top: 2px;
+}
+
+.dictionaryFirstDesc{
+  color: #333333;
+  font-size: 16px;
+}
+
+.dictinaryFirstCardTitle{
+  color: #000000;
+  font-size: 17.5px;
+  font-weight: bold;
 }

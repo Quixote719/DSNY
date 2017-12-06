@@ -46,7 +46,7 @@ class ResourcesContainer extends Component {
 
         let pressReleaseSubList;
         if (sec.name == 'resources-press-releases' && sec.cards.length > 0) {
-          pressReleaseSubList = (<div className='container'>
+          pressReleaseSubList = (<div className='SContainer'>
             <PressRelease pr={sec.cards} n={sec.card_data.card_count} maxCards={sec.card_data.max_cards}/>
           </div>)
         }
@@ -54,7 +54,7 @@ class ResourcesContainer extends Component {
         let ReportsSubList;
         if (sec.name == 'resources-reports' && sec.cards.length > 0) {
           ReportsSubList = (<div className='greyBcg'>
-            <div className='container'>
+            <div className='SContainer'>
               <ReportCardList rc={sec.cards} n={sec.card_data.card_count}/>
             </div>
           </div>)
@@ -63,7 +63,7 @@ class ResourcesContainer extends Component {
         let StatisticsSubList;
         if (sec.name == 'resources-recycling-and-garbage-statistics' && sec.cards.length > 0) {
           StatisticsSubList = (<div className='greyBcg'>
-            <div className='container'>
+            <div className='SContainer'>
               <StatsCardList sc={sec.cards} n={sec.card_data.card_count}/>
             </div>
           </div>)
@@ -71,7 +71,7 @@ class ResourcesContainer extends Component {
 
         let Laws;
         if (sec.name == 'laws' && sec.cards.length > 0) {
-          Laws = (<div className='container'>
+          Laws = (<div className='SContainer'>
             <LawsList laws={sec.cards} n={sec.card_data.card_count}/>
           </div>)
         }

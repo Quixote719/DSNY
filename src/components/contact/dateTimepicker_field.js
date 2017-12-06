@@ -56,7 +56,7 @@ class FormDateTimePicker extends Component {
       this.props.onChange(this.props.name, item._d);
       this.setState({open:false, value:item._d});
       console.log(this.state);
-      isEmpty(this.props.value) || this.props.value.trim() === "" ? this.setState({hideToolTip: false, open:false}) : this.setState({hideToolTip: true, open:false});
+      isEmpty(this.props.value)  ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
     }
   }
 
@@ -79,26 +79,32 @@ class FormDateTimePicker extends Component {
     console.log('sdsdsdsdsd');
   }
 
-  render() {
+  isWeekday (date) {
+    const day = date.day()
+    return day !== 0 && day !== 6
+  }
 
+  render() {
     const{Dates} = this.props;
-    function contains(a, obj) {
-       var i = a.length;
-       while (i--) {
-          if (moment(a[i]).isSame(moment(obj))) {
-              return true;
-          }
-       }
-       return false;
-   }
+
+   //  function contains(a, obj) {
+   //     var i = a.length;
+   //     while (i--) {
+   //        if (moment(a[i]).isSame(moment(obj))) {
+   //            return true;
+   //        }
+   //     }
+   //     return false;
+   // }
 
     if(Dates){
       var dd = _.map(Dates,function(o) { return moment(o.UnavailableDate)._d });
-      var d = Dates[0];
-      if (d)
-     var valid = function( current ){
-      return (!contains(dd, current._d) ) && (current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 ) ;
-    }
+      var d = Dates[0] ? Dates[0] : null;
+      // if (d){
+      //   var valid = function( current ){
+      //    return (!contains(dd, current._d) ) && (current.isBetween(moment(d.StartDate).subtract(1, 'day'),  moment(d.EndDate).add(1, 'day')) && current.day() !== 0 && current.day() !== 6 ) ;
+      //  }
+      //}
 };
 
     return (
@@ -108,7 +114,7 @@ class FormDateTimePicker extends Component {
 
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-              <DatePicker placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
+              <DatePicker minDate = {d ? moment(d.StartDate) : null}  filterDate={d ? this.isWeekday : null} excludeDates={dd} maxDate = { d ? moment(d.EndDate): null} placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
             {/*}<Datetime  inputProps={{disabled: this.props.disabled, readOnly :true, onFocus: this.inputFocus,  onBlur:this.handleFocusOut,  error:this.props.error, required: this.props.required, className:(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'}}
               defaultValue={this.props.defaultValue}  isValidDate={ valid } open={this.state.open}   timeFormat={false} dateFormat={true} closeOnSelect={true} value={this.props.value == "0001-01-01T00:00:00" ? '': this.props.value} onChange={event => this.onInputChange(this,event)}
               className="date-picker"/ >*/}

@@ -132,6 +132,9 @@ class OrganicsCollectionApplication extends Component {
     // City Agency Form
     if(formObject.CustomerTypeId === 7) {
       formObject.CityAgencyForm  = {
+        "Id": formObject.CityAgencyFormId,
+        "OrganicsCollectionRequestId": formObject.CityAgencyFormOrganicsCollectionRequestId,
+        "CreatedDate": formObject.AgencyCreatedDate,
         'AgencyName':formObject.AgencyName,
         'OtherAgencyType': formObject.OtherAgencyType,
         'Title': formObject.AgencyTitle1,
@@ -145,19 +148,28 @@ class OrganicsCollectionApplication extends Component {
         'LastName': formObject.AgencyPersonLastName,
         'Phone': formObject.AgencyPersonPhone,
         'Email': formObject.AgencyPersonEmail,
+        "PhoneTypes": formObject.AgencyPhoneTypes,
         'PhoneTypeId': formObject.AgencyPhoneTypeId,
+        'SelectedPhoneType': formObject.AgencySelectedPhoneType,
+        "FullName": formObject.AgencyFullName,
+        "FullNameLastFirst": formObject.AgencyFullNameLastFirst
       }
     }
 
     // School form
     if(formObject.CustomerTypeId === 9){
       formObject.SchoolForm = {
+        "Id": formObject.SchoolFormId,
+        "OrganicsCollectionRequestId": formObject.SchoolFormIdOrganicsCollectionRequestId,
+        'HasInformedStaffAboutProgram': formObject.SchoolHasInformedStaffAboutProgram,
+        "CreatedDate": formObject.SchoolCreatedDate,
         'SchoolName':formObject.SchoolName,
         'Title': formObject.SchoolTitle1,
         'IsNonprofitSchool': formObject.IsNonprofitSchool,
         'ReceivesDsnyCollection': formObject.ReceivesDsnyCollection,
         'UsesPrivateFoodServiceVendor': formObject.UsesPrivateFoodServiceVendor,
         'PrivateFoodServiceVendorDescription': formObject.PrivateFoodServiceVendorDescription,
+
       }
       formObject.SchoolForm.FacilitiesContact = {
         'Title': formObject.SchoolTitle2,
@@ -165,7 +177,11 @@ class OrganicsCollectionApplication extends Component {
         'LastName': formObject.SchoolPersonLastName,
         'Phone': formObject.SchoolPersonPhone,
         'Email': formObject.SchoolPersonEmail,
+        "PhoneTypes": formObject.SchoolPhoneTypes,
         'PhoneTypeId': formObject.SchoolPhoneTypeId,
+        'SelectedPhoneType': formObject.SchoolSelectedPhoneType,
+        "FullName": formObject.SchoolFullName,
+        "FullNameLastFirst": formObject.SchoolFullNameLastFirst
       }
     }
   }

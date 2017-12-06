@@ -19,12 +19,14 @@ class EducationSectionHeader extends Component {
             backgroundImage: `url(${src})`
             
           }}>
-            <div className='container'>
+            <div className='SContainer'>
               <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                   <div className='subSectionHeaderImageTitle'>
                     <div className='subSectionHeaderImageTitleText'>{title}</div>
                   </div>
+                </Col>
+                <Col xs={12} sm={6}>  
                   <div className='subSectionHeaderImagetitleBody_EduMaterials subSectionHeaderImagetitleBodyText'>
                     <Dotdotdot clamp={6}>
                       <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{

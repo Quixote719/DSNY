@@ -52,11 +52,14 @@ class News extends Component {
       if(item.name == "news-and-updates-section"){
           if (item.cards.length >= 5) {
             return (
-            <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>
+
                 <div className="moreNewsBtnDiv">
+                  <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/dsnynews"}>
                     <SubSectionButton title='MORE NEWS' />
+                  </Link>
                 </div>
-            </Link>);
+
+            );
         } else {
         return null;
         }

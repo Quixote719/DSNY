@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import { SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
+import { SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL, WORDPRESS_ROOT_URL, FETCH_LOCATION_LIST_URL} from "../constants/ApiConstants";
 
 export function carouselData() {
     return function (dispatch) {
@@ -43,7 +43,7 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
         axios.get(COLLECTION_SCHEDULE_URL + address)
             .then((data) => {
                 axios.get(HOLIDAY_DATA_URL).then((holidayData) => {
-                    var DSNYGeoCoder = {};                    
+                    var DSNYGeoCoder = {};
                     if (callback) {
                         if (data.data.Goat !== null) {
                             DSNYGeoCoder['addressAsEntered'] = data.data.FormattedAddress;
@@ -62,23 +62,23 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                             if (data.data.Goat.houseNumber) {
                                 // Address
                                 DSNYGeoCoder['address'] = data.data.Goat.houseNumber + " " + data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
-                            } 
+                            }
                             else {
                                 // Place name
                                 DSNYGeoCoder['address'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             }
                             DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
                             DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                            DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule; 
+                            DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
 
-                            DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;     
+                            DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
-                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
+                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;
 
                             // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
                             //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
                             //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                            //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;                               
+                            //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
                             // }
                             // else{
                                 // if(data.data.Goat.sanitationRegularCollectionSchedule === null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
@@ -97,13 +97,13 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                                 //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = null;
                                 // }
                             // }
-                            console.log(DSNYGeoCoder)                            
+                            console.log(DSNYGeoCoder)
                         }
                         else {
                             DSNYGeoCoder = null;
-                            console.log(DSNYGeoCoder)                                                        
+                            console.log(DSNYGeoCoder)
                         }
-                    }                    
+                    }
                     if (data.data.Goat !== null && data.data.RegularCollectionSchedule !== null) {
                         var sanitationRegularCollectionSchedule = data.data.RegularCollectionSchedule;
                     }
@@ -338,12 +338,19 @@ export function setPaginationKey(value) {
 }
 export function commercialAddressFlag(flag, message) {
     return function (dispatch) {
-        var commercialAddress = {}; 
+        var commercialAddress = {};
         commercialAddress['commercialFlag'] = flag;
-        commercialAddress['commercialMessage'] = message              
+        commercialAddress['commercialMessage'] = message
         dispatch({
             type: 'SET_COMMERICIAL_FLAG',
-            commercialAddress: commercialAddress,            
+            commercialAddress: commercialAddress,
         });
     }
 }
+
+export function Services() {
+    return function (dispatch) {
+      axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=services`).then((request) => {
+          dispatch({type: 'SET_SERVICES',payload: request.data})
+      })
+}}

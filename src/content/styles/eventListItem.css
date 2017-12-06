@@ -5,7 +5,7 @@
 }
 
 .EventTCDiv{
-  margin: 5px 0 0 -28px;
+  margin: 5px 0 0 -30px;
 }
 
 .eventTitle {
@@ -27,7 +27,7 @@
 
 .eventBoro {
   margin-bottom: -7px;
-  padding-top: 10px;
+  padding-top: 6px;
   color: #00764D;
   font-size: 24px;
   font-weight: bold;

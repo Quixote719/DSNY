@@ -475,6 +475,13 @@ input.serviceRequestSearch:focus {
     color: #767676!important;
     font-size: 16px;
 }
+.moreEventsBtnDiv>a>.subSectionButton {
+    margin-bottom: 20px;
+    margin-bottom: 100px;
+}
+.moreNewsBtnDiv>a>.subSectionButton {
+    margin-bottom: 30px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (max-width: 599px) {
@@ -568,8 +575,11 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
+    .moreEventsBtnDiv>a>.subSectionButton {
         margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
     }
     .serviceRequestParentTablet {
         padding-left: 11px;
@@ -732,17 +742,17 @@ input.serviceRequestSearch:focus {
     .PlaystoreIcon, .AppstoreIcon{
         width: 138px;
     }
-    .moreNewsBtnDiv>.subSectionButton {
+    .moreNewsBtnDiv>a>.subSectionButton {
         margin-left: 0px;
         width: 100%;
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
+    .moreEventsBtnDiv>a>.subSectionButton {
         margin-left: 0px;
         width: 100%;
         margin-top: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 100px;
     }
 }
 
@@ -811,13 +821,12 @@ input.serviceRequestSearch:focus {
         margin-top: 21px;
         margin-bottom: 37px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
+    .moreEventsBtnDiv>a>.subSectionButton {
         margin-bottom: 100px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
-        margin-bottom: 100px;
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
     }
-    
     .serviceRequestParentTablet {
         height: 147px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -1019,8 +1028,11 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
         margin-bottom: 30px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
+    .moreEventsBtnDiv>a>.subSectionButton {
         margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
     }
     .serviceRequestParentTablet {
         height: auto!important;
@@ -1251,8 +1263,11 @@ input.serviceRequestSearch:focus {
         margin-top: 21px;
         margin-bottom: 37px;
     }
-    .moreEventsBtnDiv>.subSectionButton {
+    .moreEventsBtnDiv>a>.subSectionButton {
         margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
     }
     .serviceRequestParentTablet {
         height: 147px;

@@ -39,7 +39,7 @@ class Home extends Component {
       <div className="container eventSection">
         <EventList/>
       </div>
-      {/* <DownloadApp/> */}
+      <DownloadApp/>
     </div>)
   }
 }
