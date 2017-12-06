@@ -30,7 +30,7 @@ const CompostRequestFormElements = (props) => {
     <div>
       <FormAddressAutocomplete name="AddressAsEntered" title="ADDRESS" {...props} value="" disabled={values.editMode}/>
     </div>
-    <Field component={TextInput} name="PropertyName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
+    <Field component={TextInput} name="PropertyName" {...props}  maxlength={"25"} disabled={values.editMode} />
     <Field component={TextInput} name="PropertyUnitCount" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="SiteClassificationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.SiteClassifications} disabled={values.editMode} required/>
     <Field component={TextInput} name="OtherSiteClassification" {...props}  maxlength={"25"} disabled={values.editMode} required isHidden={values.SiteClassificationId !== 8} required={values.SiteClassificationId ==8}/>
