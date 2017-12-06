@@ -36,6 +36,18 @@
   display: inline-block;
 }
 
+.learnMoreGetInvolved{
+  font-weight: bold;
+  color: #00764E;
+  padding-left: 20px;
+  background-color: #FFFFFF;
+  padding-bottom: 30px;
+}
+
+.getInvolvedCardBelow>.CardContent{
+  margin-bottom: 0;
+}
+
 /*Mobile View*/
 @media only screen and (max-width: 499px) {
   .contactUsDetails> .contactUsRight{
