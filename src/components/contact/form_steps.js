@@ -235,20 +235,25 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            if (input.type === "text" && (input.name==="AddressAsEntered" || input.name==="BinLocationAddressAsEntered") && props.isAddressValidated !== 1)
+            
+            if(!initialPageLoad || validateButtonClicked)
             {
-                if(values[input.name] && values[input.name].trim() === "")
-                  errors[input.name] = Titles.RequiredFieldMessage
-                else if(props.isAddressValidated !==1)
-                  errors[input.name] = "Please enter a valid NY address"
+              if (input.type === "text" && (input.name==="AddressAsEntered" || input.name==="BinLocationAddressAsEntered") && props.isAddressValidated !== 1)
+              {
+                  if(values[input.name] && values[input.name].trim() === "")
+                    errors[input.name] = Titles.RequiredFieldMessage
+                  else if(props.isAddressValidated !==1)
+                    errors[input.name] = "Please enter a valid NY address"
 
-                if(nextbuttonClicked || validateButtonClicked)
-                {
-                  input.focus();
-                  nextbuttonClicked = false;
-                }
+                  if(nextbuttonClicked || validateButtonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
             }
-            else if(!initialPageLoad)
+            
+            if(!initialPageLoad)
             {
               if (input.required  && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
               {
@@ -262,6 +267,15 @@ const FormSteps = compose(
               else if (input.required && input.type === "text"  && (input.name.indexOf("Email") > -1 && !(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name]))))
               {
                   errors[input.name] = "Enter valid Email Address"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+               else if (input.required && input.name ==="ConfirmEmail" && values[input.name].trim() !== "" && (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name])) && values.Email !== values.ConfirmEmail)
+              {
+                  errors[input.name] = "The email addresses don't match"
                   if(nextbuttonClicked)
                   {
                     input.focus();

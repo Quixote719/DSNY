@@ -33,11 +33,11 @@ class LitterBasketRequest extends Component {
    validateForm(formObject, errors){
      
     //formObject & Values are same
-    if(formObject.IsAnonymous === false){
-      if (formObject.Email !== formObject.ConfirmEmail) {
-        errors.ConfirmEmail = `The email addresses don't match`
-      }
-    }
+    // if(formObject.IsAnonymous === false){
+    //   if (formObject.Email !== formObject.ConfirmEmail) {
+    //     errors.ConfirmEmail = `The email addresses don't match`
+    //   }
+    // }
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
     // }

@@ -11,7 +11,7 @@
   float: right;
 }
 
-.LeadershipRight a{
+.LeadershipRight a,.locations a{
   color: #00764E;
   font-size: 16px;
   font-weight: bold;
@@ -79,9 +79,21 @@
   display: inline-block;
 }
 
+.locations p, .Operations p{
+  margin: 0;
+}
+
 .locations{
   height: 400px;
   background-position: 50% 50%;
+}
+
+.locations em{
+  margin: 10px 0;
+  font-style: normal;
+  font-size: 14px;
+  color: #9B9B9B;
+  display: block;
 }
 
 .location_bcgimage{
@@ -107,7 +119,7 @@
 
 @media only screen and (max-width: 2500px) {
   .locations{
-    background-size: 2500px 1200px!important;
+    background-size: 2200px 200%!important;
     background-position: 50% 50%!important;
     overflow: hidden!important;
   }
