@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import { SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
+import { SERVICE_REQUEST_URL, SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
 
 export function carouselData() {
     return function (dispatch) {
@@ -74,29 +74,6 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                             DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;     
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
                             DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
-
-                            // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                            //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                            //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                            //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;                               
-                            // }
-                            // else{
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule === null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = null;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
-                                // }
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule === null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = null;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
-                                // }
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule === null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = null;
-                                // }
-                            // }
                             console.log(DSNYGeoCoder)                            
                         }
                         else {
@@ -345,5 +322,21 @@ export function commercialAddressFlag(flag, message) {
             type: 'SET_COMMERICIAL_FLAG',
             commercialAddress: commercialAddress,            
         });
+    }
+}
+export function setServiceRequestStatus(value, callback = null) {
+    return function (dispatch) {
+        axios.get(SERVICE_REQUEST_URL + value + "/status")
+        .then((data) => {
+            console.log(data.data)
+            dispatch({
+                type: 'SET_SERVICE_REQUEST_STATUS',
+                payload: data.data
+            });
+            if (callback){
+                callback();                
+            }
+        })
+
     }
 }

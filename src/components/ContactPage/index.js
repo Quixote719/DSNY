@@ -52,7 +52,7 @@ class Contact extends Component {
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>
           <div className='sectionHeader SContainer'>{this.renderRequest()}</div>
-          <div className='largeSearchBox'><SearchBoxCollection /></div>
+          <div className='largeSearchBox'><SearchBoxCollection pushHistory ={this.props}/></div>
         </div>
         <div className = 'container'>
           <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>

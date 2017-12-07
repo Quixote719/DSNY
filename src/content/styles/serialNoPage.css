@@ -66,7 +66,96 @@
     box-shadow: none !important;
     outline: 0 !important;
 }
+.currentStatusParent{
+    padding-left: 50px;
+    padding-right: 43px;
+    padding-top: 30px;
+    padding-bottom: 21px;
+}
+.serviceRequestDetailsParent{
+    margin-bottom: 30px;
+    background-color: white;
+}
+.currentStatusTitle{
+    color: #000000;	
+    font-size: 17.5px;	
+    font-weight: bold;	
+    line-height: 24px;	
+    text-align: center;
+}
+.currentStatusDetails{
+    color: #000000;
+    font-size: 16px;	
+    line-height: 24px;	
+    text-align: center;
+}
+.requestTypeCreatedParent{
+    border-bottom: 1px solid #E3E3E3;
+    border-top: 1px solid #E3E3E3;
+}
+.requestTypeCol{
+    border-right: 1px solid #E3E3E3;    
+    padding-right: 0px;
+}
+.requestTypeCreatedRow{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.requestTypeTitle, .createdOnTitle{
+    padding-top: 10px;
+    color: #000000;
+    font-size: 17.5px;	
+    font-weight: bold;	
+    line-height: 24px;	
+}
+.requestTypeData, .createdOnData{
+    padding-bottom: 14px;
+    padding-top: 8px;
+    color: #000000;	
+    font-size: 16px;	
+    line-height: 24px;	
+}
+.questionsCall{
+    padding-top: 23px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #262626;	
+    font-size: 14px;	
+    line-height: 16px;
+}
+.contactServiceRequest{
+    outline: none;
+    margin-left: 13px;
+    border-bottom: 2px solid #7CC04B;
+    padding-bottom: 0px;
+    padding-right: 65px;
+    line-height: 24px;
+    padding-top: 5px;
+    font-weight: 700;
+    color: #000;
+    font-size: 24px;
+    border-top: none;
+    margin-right: 8px;
+    width: 97%;
+    margin-top: 30px;
+    border-left: none;
+    border-right: none;
+    -webkit-text-fill-color: #231F20 !important;
+}
+#serviceRequestClear{
+    cursor: pointer;
+    position: absolute;
+    top: 43px;
+    right: 69px;
+    color: #7CC04B!important;
+    font-size: 24px;
+}
 @media only screen and (max-width: 599px) {
+    .questionsCall{
+        padding-left: 14px;
+        padding-right: 15px;
+    }
     .serviceRequestSearchTabletService {
         border-radius: 3px;
         padding-bottom: 11.2px;
@@ -93,6 +182,7 @@
         margin-bottom: 30px;
     }
 }    
+
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
     .serviceRequestSearchTabletService {
         border-radius: 3px;
