@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import Dotdotdot from 'react-dotdotdot';
-import Truncate from 'react-truncate';
-import Parser from 'html-react-parser';
 
 class ProfileCard extends Component {
   render() {

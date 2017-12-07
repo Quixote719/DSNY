@@ -71,7 +71,8 @@ class EventDetail extends Component {
                <div className="BreadcrumbList">
                  <div className="container">
                    <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
-                     <li className=""><a href = {process.env.REACT_APP_SITE_RELATIVE_URL}>Home</a></li>
+                    <span className='fa fa-angle-left'></span>
+                     <li className="PreviousPath"><a href = {process.env.REACT_APP_SITE_RELATIVE_URL}>Home</a></li>
                      <li className=""><a href= {process.env.REACT_APP_SITE_RELATIVE_URL + '/dsnyevents'}>Events</a></li>
                      <span className='breadcrumbSymbol'>/</span>
                     </ol>

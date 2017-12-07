@@ -376,10 +376,10 @@ input::-ms-clear {
     margin-top: 30px;
     width: 663.88px;
 }
-.BreadcrumbHeaderTitleSection>.container{
+/* .BreadcrumbHeaderTitleSection>.container{
     font-size: 38px;
     margin-left: 25px;
-}    
+}     */
 .searchContainerRidOfCollection{
     padding-left: 25px;
     padding-right: 32px;
