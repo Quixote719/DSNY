@@ -754,6 +754,9 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
         margin-bottom: 100px;
     }
+    .BreadcrumbHeaderTitleSection> .container{
+        padding: 0;
+    }
 }
 
 
@@ -941,6 +944,7 @@ input.serviceRequestSearch:focus {
     .downloadAppIcon{
         padding-top: 29px;
     }
+
 }
 
 
