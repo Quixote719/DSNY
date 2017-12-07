@@ -77,7 +77,7 @@ class FormDateTimePicker extends Component {
        date._d = moment(date._d).format(this.state.defaultDateFormat);
       this.props.onChange(this.props.name, date._d);
       this.setState({open:false, startDate:date._d});
-      isEmpty(this.props.value)  ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+      isEmpty(this.props.startDate)  ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
     }
   }
 
