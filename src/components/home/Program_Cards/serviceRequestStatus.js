@@ -1,42 +1,95 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
+import * as actions from '../../../actions/actions_home';
+import { connect } from 'react-redux';
 
 class ServiceRequestStatus extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
+        placeholder: "Service Request Number",      
         serviceRequest: "",      
       };
   }
   componentWillMount(){
-    if(this.props.match.params.keyword !==""){
-        this.setState({
-          serviceRequest: this.props.match.params.keyword
-        });
+    // if(this.props.match.params.keyword !==""){
+    //     this.setState({
+    //       serviceRequest: this.props.match.params.keyword
+    //     });
+    // }
+    // else{
+    //   this.setState({
+    //     serviceRequest: ""
+    //   });
+    // }
+}
+  handleSelect = (event) =>{
+      if(event.key === 'Enter'){
+        if(this.state.serviceRequest && this.state.serviceRequest.trim().length !== 0){
+          this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/serviceRequestStatus/"+ this.state.serviceRequest)        
+        }
+        this.props.setServiceRequestStatus(this.state.serviceRequest);
+      }
+}
+  handleChange = (event) =>{
+    if(event.target.value.trim().length !== 0){
+      this.setState({
+        serviceRequest: event.target.value,
+      })
+      this.props.handleChange(event.target.value);      
     }
     else{
       this.setState({
-        serviceRequest: ""
-      });
+        serviceRequest: "",
+      })
+      this.props.handleChange(event.target.value);            
     }
-}
-  handleSelect = (event) =>{
-    if(event.key === 'Enter'){
-      this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/serviceRequestStatus/"+ this.state.serviceRequest)
-    }
-}
-  handleChange = (value) =>{
-    this.setState({
-      serviceRequest: value,
-    })
-    this.props.handleChange(value);
   }
+  resetPlaceHolder = () =>{
+    this.setState({
+      placeholder: "Service Request Number"
+    })
+  }
+  setPlaceHolder = () =>{
+    this.setState({
+      placeholder: ""
+    })
+  }
+  clearSearchBox() {
+    this.setState({
+        serviceRequest: "",
+    });
+    this.props.handleChange("");                
+}
   render() {
+    // console.log("this.state.placeholder")
+    // console.log(this.state.placeholder)
+    if(window.location.pathname.indexOf("contact") > -1){
       return (
-            <input value = {this.state.serviceRequest} className= {this.props.classNameService} type="text" onChange = {e => this.handleChange(e.target.value)} onKeyDown={this.handleSelect} placeholder="Service Request Number">
-            </input>
-        )
+        <div>
+        <input value = {this.state.serviceRequest} onBlur = {this.resetPlaceHolder} onFocus = {this.setPlaceHolder} className= {this.props.classNameService} type="text" onChange = {this.handleChange} onKeyDown={this.handleSelect} placeholder={this.state.placeholder}>
+        </input>
+        <i className="fa fa-times collectionSearch" onClick={() => { this.clearSearchBox() }} style={this.state.serviceRequest !== "" && this.state.serviceRequest !== undefined ? { display: 'block' } : { display: 'none' }} id="serviceRequestClear"></i>
+        </div>
+    )
+    }
+    else{
+      return (
+        <input value = {this.state.serviceRequest} onBlur = {this.resetPlaceHolder} onFocus = {this.setPlaceHolder} className= {this.props.classNameService} type="text" onChange = {this.handleChange} onKeyDown={this.handleSelect} placeholder={this.state.placeholder}>
+        </input>
+    )
+    }
+  }
+}
+function mapStateToProps(state) {
+  return {
+    serviceRequestData: state.carouselDataReducer.serviceRequestData,
   }
 }
 
+let actionList = {
+  setServiceRequestStatus: actions.setServiceRequestStatus,
+};
+
+ServiceRequestStatus = connect(mapStateToProps, actionList)(ServiceRequestStatus);
 export default withRouter(ServiceRequestStatus);

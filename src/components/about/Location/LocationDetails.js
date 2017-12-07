@@ -146,7 +146,7 @@ class LocationDetails extends Component {
         <div className='SContainer'>
             <SubSectionHeader title='Planned Garages'/>
             <span>Learn more about the
-                <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about'}>
+                <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + '/about/dsny-garage-locations/planned-garage'}>
                     <span className='plannedGarages'> proposed Garage for Manhattan Districts 6 & 8</span>
                 </Link>
             </span>
