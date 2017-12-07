@@ -75,9 +75,11 @@ class Contact extends Component {
             <ReportingSection ReportingProps = {ReportingProps}/>
           </div>
         </div>
-        <div className = 'SContainer'>
-          <ContactUs ContactUsProps = {ContactUsProps}/>
-        </div>
+        <Row>
+          <div className = 'SContainer'>
+            <ContactUs ContactUsProps = {ContactUsProps}/>
+          </div>
+        </Row>
       </div>
     )
   }
