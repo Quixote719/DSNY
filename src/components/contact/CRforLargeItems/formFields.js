@@ -13,7 +13,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import {Col} from 'react-bootstrap';
-import TextdisplayField from '../form_display_field'
+import TextdisplayField from '../form_display_field';
 import moment from 'moment';
 const DisplayFormikState = props => <div style={{
 		margin: '1rem 0'
@@ -50,8 +50,7 @@ const CRforLargeItemsFormElements = (props) => {
 		let ca = commercialAddress.commercialFlag
 		values.commercialAddress = ca === 1 ? true : false;
 	}
-	console.log( values.Dates, values.editMode);
-	console.log(  values.Dates === undefined ? true : false );
+
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>

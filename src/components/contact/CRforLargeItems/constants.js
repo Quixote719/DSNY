@@ -9,7 +9,7 @@ export const Titles = {
 	Email: 'E-MAIL',
 	ConfirmEmail: 'CONFIRM E-MAIL',
 	AppointmentDate: 'APPOINTMENT DATE',
-		overideAddressValidation:'I certify that this request is not for a commercial business',
+	overideAddressValidation:'I certify that this request is not for a commercial business',
 	PickUpLocation: 'PICKUP STREET',
 	 LocationId: 'PICKUP LOCATION',
 	 SuccessMessage: "Success! Your response No. is: ",

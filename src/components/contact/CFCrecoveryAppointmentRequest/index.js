@@ -53,16 +53,16 @@ updateValues(geoCoderAddressResult){
   }
 
   render() {
-    const { error, success,unavailableDates,  geoCoderAddressResult, isAddressValidated} = this.props;
+    const { error, success,unavailableDates, commercialAddress,  geoCoderAddressResult, isAddressValidated} = this.props;
 
-    if(success !== undefined) {
-          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+    if(success !== undefined && success.SRNo) {
+          return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your CFC Recovery Appointment Request form has been submitted succefully.</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
     }
 
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} commercialAddress={commercialAddress} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -80,6 +80,7 @@ function mapStateToProps(state) {
     unavailableDates:state.forms.unavailableDates,
     geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
     isAddressValidated: state.carouselDataReducer.addressValidator,
+    commercialAddress:state.carouselDataReducer.commercialAddress,
     error:state.error.type
   };
  }
