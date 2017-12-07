@@ -54,7 +54,7 @@ class Contact extends Component {
           <div className='sectionHeader SContainer'>{this.renderRequest()}</div>
           <div className='largeSearchBox'><SearchBoxCollection /></div>
         </div>
-        <div className = 'container'>
+        <div className = 'SContainer'>
           <ServiceRequestsSection ServiceRequestsProps = {ServiceRequestsProps}/>
         </div>
         <Row className='greyBcg'>
@@ -67,11 +67,11 @@ class Contact extends Component {
             <Complaints ComplaintsProps = {ComplaintsProps} />
           </div>
         </div>
-        <div className = 'container'>
+        <div className = 'SContainer'>
           <RegistrationsSection RegistrationsProps = {RegistrationsProps}/>
         </div>
         <div className = 'greyBcg'>
-          <div className = 'container'>
+          <div className = 'SContainer'>
             <ReportingSection ReportingProps = {ReportingProps}/>
           </div>
         </div>
