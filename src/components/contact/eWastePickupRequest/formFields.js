@@ -64,6 +64,12 @@ const EwastePickUpRequestFormElements = (props) => {
 		values.commercialAddress = ca === 1 ? true : false;
 	}
 
+	if(!values.isDistrictActive && document.getElementsByClassName("validatedAddress")[0] !== undefined){
+		document.getElementsByClassName("validatedAddress")[0].style.display = "none"
+	} else if(document.getElementsByClassName("validatedAddress")[0] !== undefined){
+		document.getElementsByClassName("validatedAddress")[0].style.display = "block"
+	}
+
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
