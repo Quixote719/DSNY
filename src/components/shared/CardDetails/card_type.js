@@ -65,7 +65,7 @@ class CardType extends Component {
               <Row className='nopadding'>
                 <Col className='nopadding' xs={this.props.type == 'iUrl'? 12: 11}>
                   <div className='cardTypeTitle'>
-                    <Dotdotdot clamp={3}>
+                    <Dotdotdot clamp={2}>
                       <div className='cardTitleText' dangerouslySetInnerHTML={{
                         __html: this.props.title
                       }}/>
