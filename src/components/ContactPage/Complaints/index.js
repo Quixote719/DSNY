@@ -14,6 +14,7 @@ import { connect } from 'react-redux';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import PageText from '../../shared/PageText';
+import Header from '../../shared/Breadcrumb/breadcrumb_container';
 
 
 
@@ -30,7 +31,7 @@ class Complaints extends Component {
   render() {
 
     let Complaints = {};
-    let BannerText = {};
+    let Banner;
     let AnimalsProps = {};
     let EqualOpportunityProps = {};
     let GraffitiProps = {};
@@ -41,21 +42,20 @@ class Complaints extends Component {
     let StreetSideProps = {};
     let PageExplanation = {};
 
-    this.parseComplaintsData(Complaints, BannerText, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps);
+    if (this.props.ComplaintsPageData !== undefined) {
+      let data = this.props.ComplaintsPageData.data;
+      Banner = (
+        <div key={data.id}>
+          <Header title={data.title} breadCrumbList={data.breadcrumb} body={data.header_content}/>
+        </div>
+      )
+    }
+
+    this.parseComplaintsData(Complaints, Banner, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps);
 
     return (
       <div>
-        <div className="GBanner">
-            <div className="BreadcrumbList">
-              <div className="container">
-                <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
-                  <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
-                  <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>Contact</Link><span className='breadcrumbSymbol'>/</span></li>
-                </ol>
-              </div>
-            </div>
-            <div><div className="BreadcrumbHeaderTitleSection"><div className="container">Complaints</div></div></div>
-        </div>
+        {Banner}
         <div className = 'SContainer'>
             <PageText PageExplanation = {PageExplanation} />
         </div>
@@ -94,11 +94,10 @@ class Complaints extends Component {
   }
 
 
-  parseComplaintsData(Complaints, BannerText, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps) {
+  parseComplaintsData(Complaints, Banner, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps) {
     if(this.props.ComplaintsPageData !== undefined){
         Complaints = this.props.ComplaintsPageData.data;
     }
-
     if(Complaints !== undefined && Complaints.sections != undefined) {
       _.map(Complaints.sections.sections, item =>{
         switch (item.name){

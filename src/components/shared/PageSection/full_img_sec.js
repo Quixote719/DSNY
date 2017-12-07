@@ -14,7 +14,7 @@ class FullImageSec extends Component{
        switch(cardType){
             case 'content-left':
                return(
-                   <Col className = 'ContentLeft' xs={12}>
+                   <Col className = 'ContentLeft' sm={6} xs={12}>
                         <ContentCard type='4' content={this.props.dataObject.content}/>   
                     </Col>
                 );
@@ -22,8 +22,8 @@ class FullImageSec extends Component{
             case 'content-right':
                 return(
                    <div>
-                   <Col xs={0} sm={0} md={6}></Col>
-                   <Col xs={12} sm={12} md={6}><ContentCard type='4' content={this.props.dataObject.content}/>
+                   <Col xs={0} sm={6} ></Col>
+                   <Col xs={12} sm={6} ><ContentCard type='4' content={this.props.dataObject.content}/>
                    </Col>
                    </div>
                 ); 
@@ -53,7 +53,7 @@ class FullImageSec extends Component{
                     </Row>
                     </div>
                     </div>
-                    <div className="greyBcgHeight"></div>
+                    {/*<div className="greyBcgHeight"></div>*/}
                     </div>
     )
 

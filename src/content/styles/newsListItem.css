@@ -58,6 +58,9 @@
   font-weight: bold;
   margin-top: 8px;
 }
+.newsSectioncardTI .newsDefaultcardTitleText:hover{
+  color: #7CC04B;
+}
 
 .newsSectioncardTI .newscardDescription{
   font-size: 16px;

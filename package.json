@@ -61,7 +61,7 @@
   "devDependencies": {
     "react-scripts": "1.0.7"
   },
-  "homepage": "https://nyc-csg-web.csc.nycnet/assets/donate/development/react/",
+  "homepage": "http://nyc-csg-web.csc.nycnet/assets/dsny/staging/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

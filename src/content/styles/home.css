@@ -119,9 +119,9 @@
     border: none;
 }
 
-.panelButton:hover {
+/* .panelButton:hover {
     background-color: #096543;
-}
+} */
 
 .searchContainerRidCollection {
     padding-top: 24px;
@@ -265,6 +265,9 @@ input.ridOfSearch:focus {
     line-height: 20px;
     margin-top: 16.7px;
 }
+.programTitleDiv:hover {
+    color: #7CC04B;    
+}
 
 .searchProgramBtnDiv>button {
     font-family: inherit;
@@ -347,7 +350,7 @@ input.serviceRequestSearch:focus {
     padding: 0;
     color: white;
     height: 142px;
-    border-left: 1px solid white;
+    border-left: 1px solid rgba(255, 255, 255, .5);
     width: 294px;
 }
 
@@ -355,8 +358,8 @@ input.serviceRequestSearch:focus {
     padding: 0;
     color: white;
     height: 142px;
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-left: 1px solid rgba(255, 255, 255, .5);
+    border-right: 1px solid rgba(255, 255, 255, .5);
     width: 294px;
 }
 
@@ -378,10 +381,14 @@ input.serviceRequestSearch:focus {
     line-height: 33px;
     text-align: center;
 }
+.initiativesTitleDiv:hover {
+    color: #7CC04B;
+}
 
 .initiativesContentDiv {
     margin-top: 50px;
     font-size: 16px;
+    font-weight: 300px;
     line-height: 20px;
     text-align: center;
 }
@@ -467,6 +474,7 @@ input.serviceRequestSearch:focus {
     color: #767676!important;
     font-size: 16px;
 }
+<<<<<<< HEAD
 .searchRidParent>div>div>div>div>.ridOfSearch{
     width: 96%;
 }
@@ -475,6 +483,14 @@ input.serviceRequestSearch:focus {
 }
 .howToGetRidOfParent>div>div>.BreadcrumbHeaderTitleSection{
     padding-bottom: 0;
+=======
+.moreEventsBtnDiv>a>.subSectionButton {
+    margin-bottom: 20px;
+    margin-bottom: 100px;
+}
+.moreNewsBtnDiv>a>.subSectionButton {
+    margin-bottom: 30px;
+>>>>>>> dev
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
@@ -569,6 +585,12 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
         margin-bottom: 30px;
     }
+    .moreEventsBtnDiv>a>.subSectionButton {
+        margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
+    }
     .serviceRequestParentTablet {
         padding-left: 11px;
         padding-right: 11px;
@@ -645,7 +667,7 @@ input.serviceRequestSearch:focus {
         padding-bottom: 20px;
         color: white;
         height: 118px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
         border-right: 0px solid transparent;
         border-left: 0px solid transparent;
         width: 100%;
@@ -730,6 +752,21 @@ input.serviceRequestSearch:focus {
     .PlaystoreIcon, .AppstoreIcon{
         width: 138px;
     }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .moreEventsBtnDiv>a>.subSectionButton {
+        margin-left: 0px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+    .BreadcrumbHeaderTitleSection> .container{
+        padding: 0;
+    }
 }
 
 
@@ -797,6 +834,12 @@ input.serviceRequestSearch:focus {
         margin-top: 21px;
         margin-bottom: 37px;
     }
+    .moreEventsBtnDiv>a>.subSectionButton {
+        margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
+    }
     .serviceRequestParentTablet {
         height: 147px;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -849,7 +892,7 @@ input.serviceRequestSearch:focus {
         padding-bottom: 19px;
         color: white;
         height: 118px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
         border-right: 0px solid transparent;
         border-left: 0px solid transparent;
         width: 100%;
@@ -911,6 +954,7 @@ input.serviceRequestSearch:focus {
     .downloadAppIcon{
         padding-top: 29px;
     }
+
 }
 
 
@@ -998,6 +1042,12 @@ input.serviceRequestSearch:focus {
         margin-top: 10px;
         margin-bottom: 30px;
     }
+    .moreEventsBtnDiv>a>.subSectionButton {
+        margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
+    }
     .serviceRequestParentTablet {
         height: auto!important;
         padding-left: 11px;
@@ -1061,7 +1111,7 @@ input.serviceRequestSearch:focus {
         padding-bottom: 20px;
         color: white;
         height: 118px;
-        border-bottom: 1px solid white;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
         border-right: 0px solid transparent;
         border-left: 0px solid transparent;
         width: 100%;
@@ -1226,6 +1276,12 @@ input.serviceRequestSearch:focus {
         width: 126px;
         margin-top: 21px;
         margin-bottom: 37px;
+    }
+    .moreEventsBtnDiv>a>.subSectionButton {
+        margin-bottom: 100px;
+    }
+    .moreNewsBtnDiv>a>.subSectionButton {
+        margin-bottom: 30px;
     }
     .serviceRequestParentTablet {
         height: 147px;

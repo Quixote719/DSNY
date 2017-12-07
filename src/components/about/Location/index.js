@@ -4,6 +4,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
 import { connect } from 'react-redux'
 import _ from "lodash"
 import * as actions from '../../../actions/actions_about'
+import Header from '../../shared/Breadcrumb/breadcrumb_container'
 import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel"
 import LocationDetails from './LocationDetails'
 import '../../../content/styles/About.css'
@@ -83,6 +84,7 @@ class Location extends Component {
   }
 
   componentWillMount() {
+    this.props.LocationPage();
     this.props.Location().then((response)=>{
       this.setState({Locations : this.props.LocationList});
     });
@@ -109,8 +111,14 @@ class Location extends Component {
   }
 
   render() {
+    let locBanner = null;
+    if(this.props.LocationPageData !== undefined){
+      let locPage = this.props.LocationPageData.data;
+      locBanner = <Header title={locPage.header} breadCrumbList={locPage.breadcrumb} body={locPage.header_content}/>
+    }
     return (
       <div>
+        {locBanner}
         <div className='ReactGoogleMap'>
             <MyMapComponent
               isMarkerShown = {this.state.isMarkerShown}
@@ -129,11 +137,13 @@ class Location extends Component {
 function mapStateToProps(state) {
   return {
     LocationList: state.AboutDataReducer.LocationList,
+    LocationPageData: state.AboutDataReducer.LocationPageData
   }
 }
 
 let actionList = {
-  Location: actions.fetchLocationList,
+  LocationPage: actions.LocationsPage,
+  Location: actions.fetchLocationList
 };
 
 Location = connect(mapStateToProps, actionList)(Location);

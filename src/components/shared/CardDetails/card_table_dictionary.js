@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Link from './link'
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/dictionaryTableCard.css';
-import Dotdotdot from 'react-dotdotdot'
 import '../../../content/styles/cardType.css';
 import moment from 'moment';
 import Truncate from 'react-truncate';
@@ -16,16 +15,16 @@ class TableDictionary extends Component{
     return(
     <div >
         <Col>
-          <Col xs={12} md={3}>           
-              <div className='dictionaryCardTitle' >
+          <Col xs={12} sm={3}>           
+              <div className={this.props.cardIndex == 0  ? 'dictinaryFirstCardTitle': 'dictionaryCardTitle'} >
                     <Truncate lines={3}>{Parser(this.props.title)}</Truncate>    
               </div>
               
           </Col>
-          <Col xs={12} md={9}>
+          <Col xs={12} sm={9}>
             <Row>
               <Col xs={12}>
-                  <div className='dictionaryCardDesc'>
+                  <div className={this.props.cardIndex == 0 ? 'dictionaryFirstDesc' :'dictionaryCardDesc' }>
                    <Truncate lines={3}>  {Parser(this.props.body)} </Truncate>
                   </div>
                  

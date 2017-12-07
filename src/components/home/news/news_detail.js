@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/newsLandingPage.css';
-import Dotdotdot from 'react-dotdotdot'
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 
 class NewsPageList extends Component {
 
@@ -31,11 +32,9 @@ class NewsPageList extends Component {
                             __html: this.props.title
                             }}/>
                         </Link>
-                        <Dotdotdot clamp={3}>
-                            <div className='topNewsExplaination' dangerouslySetInnerHTML={{
-                                __html: this.props.NewsExplaination
-                            }}/>
-                        </Dotdotdot>
+                            <div className='topNewsExplaination'>
+                                <Truncate lines={3}> {Parser(this.props.NewsExplaination)} </Truncate>
+                             </div>
                     </Col>
                 </Row>
             );
@@ -60,11 +59,9 @@ class NewsPageList extends Component {
                                 __html: this.props.title
                                 }}/>
                             </Link>
-                            <Dotdotdot clamp={3}>
-                                <div className='bottomNewsExplaination' dangerouslySetInnerHTML={{
-                                __html: this.props.NewsExplaination
-                                }}/>
-                            </Dotdotdot>
+                                <div className='bottomNewsExplaination'>
+                                        <Truncate lines={3}> {Parser(this.props.NewsExplaination)} </Truncate>
+                                </div>
                         </div>
                     </Col>
                   </div>

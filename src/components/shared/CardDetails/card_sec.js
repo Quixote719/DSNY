@@ -18,7 +18,7 @@ import $ from 'jquery';
 
 class CardSec extends Component {
 
-  CardType(cardType, Item, style) {
+  CardType(cardType, Item, style,cardsRightAligned,islastRightAlignedCard,cardIndex,lastCardIndex) {
 
     let url;
     let type;
@@ -90,7 +90,7 @@ class CardSec extends Component {
         return;
 
       case 'full-width-card':
-        return (<CardFullWidth link={url} dataObject={Item} />);
+        return (<CardFullWidth link={url} dataObject={Item} lastCardIndex={lastCardIndex} cardIndex={cardIndex}/>);
 
       case 'header-title-blurb-card':
         //TODO
@@ -136,19 +136,20 @@ class CardSec extends Component {
       case 'staff-card':
         //TODO
         return;
-
+        
       case 'standard-card-no-border':
         return (url
-          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type={type} title={Item.title} /></Link>
-          : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
+          ? <Link to={url}><CardType style={style} 
+          className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards NBsubSectionCardTypeRightAlign' : 'NBsubSectionCardTypeRightAlign' : 'NBsubSectioncardType' } type={type} title={Item.title} /></Link>
+          : <CardType style={style} className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards BsubSectionCardTypeRightAlign' : 'BsubSectionCardTypeRightAlign' : 'BsubSectioncardType' } type={type} title={Item.title} />);
 
       case 'standard-card-with-border':
         return (url
-          ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} /></Link>
+          ? <Link to={url}><CardType style={style} className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards BsubSectionCardTypeRightAlign' : 'BsubSectionCardTypeRightAlign' : 'BsubSectioncardType' }  type={type} title={Item.title} /></Link>
           : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
 
       case 'table-dictionary-card':
-        return (<TableDictionary title={Item.title} body={Item.content} url={Item.linked_page.url} header={Item.header} />);
+        return (<TableDictionary title={Item.title} body={Item.content} cardIndex={cardIndex} url={Item.linked_page.url} header={Item.header} />);
 
       case 'form-link-card':
         //TODO
@@ -161,11 +162,13 @@ class CardSec extends Component {
     }
   }
 
-  renderCards(cards, type, style) {
-    return _.map(cards, Item => {
+  renderCards(cards, type, style, cardsRightAligned,cardThreshold) {
+    let lastCardIndex = cards.length - 1;
+    return _.map(cards, (Item,Index) => {
+      let islastRightAlignedCard = cardThreshold-1 == Index && cardsRightAligned;
       return (
         <div key={Item.id}>
-          {this.CardType(type, Item, style)}
+                 {this.CardType(type, Item, style, cardsRightAligned,islastRightAlignedCard,Index,lastCardIndex)}
         </div>
       );
     });
@@ -280,9 +283,9 @@ class CardSec extends Component {
               <Col className='nopadding' xs={layoutTrigger ? 12 : 12}
                 sm={layoutTrigger ? 12 : cType ? 6 : 3}
                 md={layoutTrigger ? 12 : cType ? 4 : 3}>
-                <div className='cardTypeCards'>
+                <div className={l <= cardThreshold ? 'rightAlignedCardTypes' : 'cardTypeCards'}>
                   <Row className='nopadding'>
-                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
+                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style, l <= cardThreshold,cardThreshold)}
                   </Row>
                 </div>
               </Col>
@@ -297,7 +300,7 @@ class CardSec extends Component {
 
     } else {
       body = (
-        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
+        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type, style,false)}
         </Row>
       )
     }

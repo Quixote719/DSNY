@@ -15,8 +15,8 @@
   min-width: 220px;
   background-color: #FFFFFF;
   padding: 25px 15px;
-  margin-top: 10px;
-  margin-bottom:15px;
+  margin-top: 8px;
+  margin-bottom:8px;
   cursor: pointer;
 }
 
@@ -106,10 +106,13 @@
   overflow: hidden;
 }
 
+.cardBodyText > span {
+  white-space: nowrap;
+}
 
 /*hover*/
 
-.subSectioncardTB:hover .cardTitleText, .subSectioncardTI:hover .cardTitleText, .subSectioncardT:hover .cardTitleText, .NBsubSectioncardTB:hover .cardTitleText {
+.subSectioncardTB:hover .cardTitleText, .subSectioncardTI:hover .cardTitleText, .subSectioncardT:hover .cardTitleText, .subSectioncardT:hover .CardTitleTextEmptyBody, .NBsubSectioncardTB:hover .cardTitleText {
   color: #7CC04B;
 }
 
@@ -192,8 +195,10 @@
   background-color: #FFFFFF;
   border: 1px solid #7CC04B;
   padding: 14px;
-  margin-top: 30px;
-  margin-bottom:15px;
+  margin-top:8px;
+  margin-bottom:8px;
+  /*margin-top: 30px;
+  margin-bottom:15px;*/
   cursor: pointer;
 }
 
@@ -205,7 +210,8 @@
   max-height: 80px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
+  
   .NsubSectioncardTI{
     min-height: 250px;
     min-width: 250px;
@@ -224,5 +230,41 @@
   background-position: center;
 }
 
+  .subSectioncardT {
+  min-height: 90px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  padding: 14px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  cursor: pointer;
+  }
+
+  .NBsubSectioncardTB{
+     margin-top: 8px;
+     margin-bottom:8px;
+  }
 
 }
+
+
+@media only screen and (min-width:641px) and (max-width: 768px) {
+ .subSectioncardT {
+  min-height: 90px;
+  min-width: 220px;
+  background-color: #FFFFFF;
+  border: 1px solid #7CC04B;
+  padding: 14px;
+  margin-top: 8px;
+  margin-bottom:8px;
+  cursor: pointer;
+  }
+
+  .tabletIncrsdMargin{
+    margin-top: 6px;
+  }
+
+
+}
+

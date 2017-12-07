@@ -7,26 +7,26 @@ class ContentCard extends Component {
     const styles={
       small:{
         'width': '303px',
-        'minHeight': '200px',
-        'padding': '15px 20px',
+        'minHeight': '220px',
+        'padding': '20px',
         'display':'inline-block'
       },
       normal:{
         'width': '460px',
-        'minHeight': '200px',
-        'padding': '15px 20px',
+        'minHeight': '220px',
+        'padding': '20px',
         'display':'inline-block'
       },
       large:{
         'width': '610px',
-        'minHeight': '200px',
+        'minHeight': '220px',
         'padding': '20px',
         'display':'inline-block'
       },
       ourWorkCard:{
         'width':'450px',
         'minHeight': '280px',
-        'padding': '15px 20px',
+        'padding': '20px',
         'display':'inline-block'
       }
     }

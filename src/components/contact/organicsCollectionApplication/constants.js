@@ -52,7 +52,7 @@ export const Titles = {
   AgencyName: 'NAME OF AGENCY',
   ParticipatingFloorsCount: '# OF PARTICIPATING FLOORS (OPTIONAL)',
   AgencyCompanyName: 'MANAGING ORGANIZATION (E.G DCAS)',
-  AgencyTitle1: 'WHAT IS YOUR TITLE/ROLE IN THE Agency',
+  AgencyTitle1: 'WHAT IS YOUR TITLE/ROLE IN THE AGENCY',
   AgencyTitle2: 'CONTACT PERSON TITLE',
   AgencyPhoneTypes: 'PHONE TYPE',
   AgencyPersonFirstName: 'CONTACT PERSON FIRST NAME',
@@ -306,7 +306,10 @@ export const formObject = {
   "Zip": null,
   "AddressText": ", NY",
   "AddressTextOneLine": ", NY",
-  "PropertyManagementForm":{},
+
+  // Property Form
+  "PropertyFormId": 0,
+  "PropertyFormOrganicsCollectionRequestId": 0,
   "PropertyName": null,
   "PropertyUnitCount": 0,
   "SiteClassifications": [
@@ -365,13 +368,24 @@ export const formObject = {
   "PropertyHasInformedStaffAboutProgram": null,
   "CompanyName": null,
   "CompanyPersonTitle": null,
+  "CompanyPhoneTypeId": null,
+  "CompanySelectedPhoneType": null,
   "CompanyPersonFirstName": null,
   "CompanyPersonLastName": null,
-  "CompanyAddressAsEntered": null,
-  "CompanyApartment": null,
-  "CompanyPersonEmail": null,
   "CompanyPersonPhone": null,
-  "CompanyPhoneTypeId": null,
+  "CompanyPersonEmail": null,
+  "CompanyFullName": null,
+  "CompanyFullNameLastFirst": null,
+  "CompanyAddressAsEntered": null,
+  "CompanyHouseNumber": null, 
+  "CompanyStreet": null,
+  "CompanyBorough": null,
+  "CompanyCity": null,
+  "CompanyState": "NY",
+  "CompanyZip": null,
+  "CompanyAddressText": ", NY",
+  "CompanyAddressTextOneLine": ", NY",
+  "CompanyApartment": null,
   "CompanyPhoneTypes": [
     {
       "Id": 1,
@@ -392,9 +406,14 @@ export const formObject = {
       "Selected": false
     }
   ],
+  "CompanyCreatedDate": "0001-01-01T00:00:00",
 
   // Non-profit Form
+  "NonprofitFormId": 0,
+  "NonprofitFormIdOrganicsCollectionRequestId": 0,
+  "OrganizationCreatedDate": "0001-01-01T00:00:00",
   "OrganizationName": null,
+  "SelectedOrganizationType": null,
   "OrganizationTypeId": 0,
   "OtherOrganizationType": null,
   "OrganizationTypes": [
@@ -471,13 +490,18 @@ export const formObject = {
     }
   ],
   "OrganizationPhoneTypeId": 0,
+  "OrganizationSelectedPhoneType": null,
   "OrganizationPersonFirstName": null,
   "OrganizationPersonLastName": null,
   "OrganizationPersonEmail": null,
   "OrganizationPersonPhone": null,
+  "OrganizationPersonFullName": null,
+  "OrganizationPersonFullNameLastFirst": null,
 
   // City Agency Form
-
+  "CityAgencyFormId": 0,
+  "CityAgencyFormOrganicsCollectionRequestId": 0,
+  "AgencyCreatedDate": "0001-01-01T00:00:00", 
   "AgencyName": null,
   "ParticipatingFloorsCount": 0,
   "AgencyHasInformedStaffAboutProgram": null,
@@ -505,12 +529,18 @@ export const formObject = {
     }
   ],
   "AgencyPhoneTypeId": 0,
+  "AgencySelectedPhoneType": null,
   "AgencyPersonFirstName": null,
   "AgencyPersonLastName": null,
   "AgencyPersonEmail": null,
   "AgencyPersonPhone": null,
+  "AgencyFullName": null,
+  "AgencyFullNameLastFirst": null,
 
   // School form
+  "SchoolFormId": 0,
+  "SchoolFormIdOrganicsCollectionRequestId": 0,
+  "SchoolCreatedDate": "0001-01-01T00:00:00",
   "SchoolName": null,
   "SchoolHasInformedStaffAboutProgram": null,
   "SchoolTitle1": null,
@@ -536,6 +566,7 @@ export const formObject = {
     }
   ],
   "SchoolPhoneTypeId": 0,
+  "SchoolSelectedPhoneType": null,
   "SchoolPersonFirstName": null,
   "SchoolPersonLastName": null,
   "SchoolPersonEmail": null,
@@ -543,5 +574,7 @@ export const formObject = {
   "IsNonprofitSchool": null,
   "ReceivesDsnyCollection": null,
   "UsesPrivateFoodServiceVendor": null,
-  "PrivateFoodServiceVendorDescription": null
+  "PrivateFoodServiceVendorDescription": null,
+  "SchoolFullName": null,
+  "SchoolFullNameLastFirst": null,
 }

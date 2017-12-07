@@ -17,6 +17,15 @@
     /*margin-top: 15px;*/
   }
 
+  .cardTypeBody > h2{
+    font-size:24px;
+    margin-top:0px;
+    line-height:29px;
+    color: #333333;
+    font-weight: bold;
+  }
+
+
   .NBsubSectioncardType {
     min-height: 90px;
     min-width: 300px;
@@ -25,6 +34,16 @@
     cursor: pointer;
     margin: 10px 0;
   }
+
+  .NBsubSectionCardTypeRightAlign{
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0px 0;
+  }
+  
 
   .InternalPageNBsubSectioncardType{
     min-height: 90px;
@@ -54,6 +73,17 @@
     margin-left: 0px;
   }
 
+  .BsubSectionCardTypeRightAlign{
+    min-height: 90px;
+    min-width: 300px;
+    background-color: #FFFFFF;
+    border: 1px solid #7CC04B;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0px 0;
+  }
+
+
   .NBsubSectioncardType:hover .cardTitleText, .BsubSectioncardType:hover .cardTitleText, .fullwidthcardtitle:hover {
     color: #7CC04B;
   }
@@ -63,6 +93,7 @@
     font-size: 17.5px;
     font-weight: bold;
     line-height: 19px;
+    padding:10px 0px;
   }
 
   .FormRow .cardTitleTextHavingURL{
@@ -70,7 +101,16 @@
   }
 
   .cardTypeCards {
-    margin-top: 15px;
+    margin-top: 0px;
+    /*margin-top: 15px;*/
+  }
+
+  .marginBetwCards{
+    margin-top:15px;
+  }
+
+  .rightAlignedCardTypes{
+    margin-top: 0px;
   }
 
   .breadcrumb {
@@ -97,6 +137,10 @@
     cursor: pointer;
   }
 
+  .fWC-Cntnt{
+    margin-top:16px;
+  }
+
   .FormRow .patternLineGreen{
     margin-top: -40px;
   }
@@ -110,6 +154,8 @@
 
   .FormRow .cardTypeTitle{
     padding-right: 15px;
+    padding-top:0px;
+    padding-bottom:0px;
   }
 
   .FormRow .cardTitleText{

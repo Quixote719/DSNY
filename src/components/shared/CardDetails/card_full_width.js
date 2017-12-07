@@ -29,28 +29,42 @@ class cardFullWidth extends Component {
         </div>)
       }
 
+
       let body;
-      if (cardDetails.content != '') {
-        body = (<div key={cardDetails.id}>
-          <Col xs={12}>
-            <div >
-              <div dangerouslySetInnerHTML={{
-                  __html: cardDetails.content
-                }}/>
-            </div>
-          </Col>
-        </div>)
-      }
+      body = (<div key={cardDetails.id}>
+              <Col xs={12}>
+                  {this.getContentTobeRendered(cardDetails)}
+              </Col>
+              </div>
+              )
 
       return (<div>
         <Row>
           <div>{title}</div>
           <div>{body}</div>
         </Row>
-        <div className='PRLIhairline'></div>
+        <div className={this.props.lastCardIndex == this.props.cardIndex ? 'PRLIhairlineLast-FWC' : 'PRLIhairline-FWC'}></div>
       </div>);
 
     }
+  }
+
+
+  getContentTobeRendered(cardDetails){
+     
+      if(cardDetails.content){
+           return(
+                <div className= "fWC-Cntnt">
+                      <div dangerouslySetInnerHTML={{ __html: cardDetails.content}}/>
+                </div>
+              )
+         }else{
+              return(
+                <div>
+                     <p>  </p>
+                </div>
+              )
+      }
   }
 
   render() {

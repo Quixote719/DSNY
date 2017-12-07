@@ -15,8 +15,13 @@
   overflow: hidden;
 }
 
+.subSectionHeaderImagetitleBodyText > span{
+  white-space: nowrap;
+}
+
 .subSectionHeaderImage {
   margin-top: 35px;
+  margin-bottom:25px;
   min-height: 65px;
   min-width: 190px;
   overflow: hidden;
@@ -36,3 +41,4 @@
   height: 226px;
   margin-bottom: 35px;
 }
+

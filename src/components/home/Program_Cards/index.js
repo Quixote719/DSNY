@@ -70,7 +70,6 @@ class ProgramCards extends Component {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
         return _.map(item.cards, (item,index) =>{
-          if(item.linked_page.url !== false) {
             return (
               item.linked_page.url
               ?<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + item.linked_page.url}>
@@ -101,8 +100,7 @@ class ProgramCards extends Component {
                     </Col>
                   </Col>
                 </Link>
-            );
-          }
+            );         
         })          
       }
     });
@@ -129,11 +127,11 @@ class ProgramCards extends Component {
               <Row>
                 <div>
                   <Col className="programData serviceRequestCol"  >
-                    <Col xs={12} lg={2} id="programCol" className ="programCol">
+                    <Col xs={12} lg={2} id="programCol" className ="programColSearch">
                       <div className="serviceRequestParent">
                         <div className="serviceRequestTitle">
                           Check Service Request Status
-                      </div>
+                        </div>
                         <div className="serviceRequestInput">
                         <ServiceRequestStatus classNameService = {"serviceRequestSearch"} handleChange = {this.handleChange}/>
                         </div>
