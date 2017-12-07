@@ -3,7 +3,8 @@ import {Link} from "react-router-dom";
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import styles from '../../../content/styles/newsListItem.css';
 import moment from 'moment';
-import Dotdotdot from 'react-dotdotdot'
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 
 class NewsListItem extends Component {
 
@@ -40,9 +41,9 @@ class NewsListItem extends Component {
                 <div className='defaultcardImage newscardTitle'>
                     <div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>
                    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + `${this.props.linkTo}`}> <div className='newsDefaultcardTitleText'>{this.props.title}</div></Link>
-                    <Dotdotdot clamp={3}>
-                        <div className='newscardDescription'>{this.props.description}</div>
-                     </Dotdotdot>
+                    <div className='newscardDescription'>
+                        <Truncate lines={3}>{this.props.description} </Truncate>
+                    </div>   
                 </div>
                 </div>
             </Col>
@@ -103,9 +104,9 @@ class NewsListItem extends Component {
             return(
                 <div className='newscardDescription'>
                     {/*<div className='newscardTitleDate'>{moment(this.props.date).format('MMMM D, YYYY')}</div>*/}
-                    <Dotdotdot clamp={3}>
-                        <div className='newscardDescriptionText'>{this.props.description}</div>
-                    </Dotdotdot>
+                    <div className='newscardDescriptionText'>
+                        <Truncate lines={3}>{this.props.description}</Truncate>
+                    </div>
                 </div>
             );
         }

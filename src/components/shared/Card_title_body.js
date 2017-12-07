@@ -17,7 +17,7 @@ class CardTitleBody extends Component {
           </div>
           <div className='cardBody'>
               <div className='cardBodyText' >
-                  <Truncate lines={2}> {Parser(this.props.body)} </Truncate>
+                  <Truncate lines={3}> {Parser(this.props.body)} </Truncate>
               </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
-import Dotdotdot from 'react-dotdotdot';
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 import Link from './link'
 import MultifileDropdown from './card_multifile_dropdown';
 
@@ -66,18 +67,14 @@ class CardMultifile extends Component {
       <Col xs={12} sm={6} md={3}>
         <div className='subSectioncardMFTB'>
           <div className='cardTitle'>
-            <Dotdotdot clamp={3}>
-              <div className='cardTitleTextMF' dangerouslySetInnerHTML={{
-                __html: dataObject.title
-              }}/>
-            </Dotdotdot>
+            <div className='cardTitleTextMF'>
+              <Truncate lines={3}> {Parser(dataObject.title)}</Truncate>
+            </div>
           </div>
           <div className='cardBodyMF'>
-            <Dotdotdot clamp={3}>
-              <div className='cardBodyTextMF' dangerouslySetInnerHTML={{
-                __html: dataObject.content
-              }}/>
-            </Dotdotdot>
+            <div className='cardBodyTextMF'>
+              <Truncate lines={3}>{Parser(dataObject.content)}</Truncate>
+            </div>
             <div>{this.renderDropDown(dataObject)}</div>
             <div>{this.renderDownload(dataObject)}</div>
           </div>
