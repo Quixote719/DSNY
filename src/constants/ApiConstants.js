@@ -1,7 +1,7 @@
 const ROOT_WORDPRESS_URL = 'http://dsnydev.wpengine.com/wp-json/';
 
-const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
-const REST_WEBAPI_EPICKUP_URL = 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/';
+ export const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
+export const REST_WEBAPI_EPICKUP_URL = 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/';
 const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') === -1
   ? '?'
   : ''}`;

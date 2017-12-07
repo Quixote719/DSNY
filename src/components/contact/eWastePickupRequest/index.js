@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  POST_E_WASTE_PICKUP_REQUEST
+  POST_E_WASTE_PICKUP_REQUEST, REST_WEBAPI_EPICKUP_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, IsDistrictActive,GetBulidingUnits, GetUnavailableDates} from "../../../actions/contact_forms";
@@ -35,7 +35,7 @@ class EwasteRequestForm extends Component {
 
   updateValues(geoCoderAddressResult){
    this.props.IsDistrictActive(geoCoderAddressResult.sanitationDistrict)
-   this.props.GetUnavailableDates(`http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/PickupRequest/GetUnavailableDates?District=${geoCoderAddressResult.sanitationDistrict}&IsInsert=true`)
+   this.props.GetUnavailableDates(`${REST_WEBAPI_EPICKUP_URL}PickupRequest/GetUnavailableDates?District=${geoCoderAddressResult.sanitationDistrict}&IsInsert=true`)
    this.props.GetBulidingUnits(geoCoderAddressResult.bbl)
   }
 
