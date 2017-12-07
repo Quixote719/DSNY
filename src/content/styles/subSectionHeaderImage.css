@@ -15,6 +15,10 @@
   overflow: hidden;
 }
 
+.subSectionHeaderImagetitleBodyText > span{
+  white-space: nowrap;
+}
+
 .subSectionHeaderImage {
   margin-top: 35px;
   margin-bottom:25px;

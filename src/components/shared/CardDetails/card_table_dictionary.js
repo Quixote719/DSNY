@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Link from './link'
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
 import '../../../content/styles/dictionaryTableCard.css';
-import Dotdotdot from 'react-dotdotdot'
 import '../../../content/styles/cardType.css';
 import moment from 'moment';
 import Truncate from 'react-truncate';
