@@ -308,7 +308,7 @@ input.searchMessagesInput:focus {
     width: auto;
 }
 .newsEventsCarousel>.carousel-inner>.item>img{
-    height: 500px;
+    height: 502px;
     width: 820px;;
 }
 .carousel-control.left {
@@ -1063,6 +1063,7 @@ input.searchMessagesInput:focus {
     display: block;
 }
 .newsEventsCarousel>.carousel-inner>.item>img{
+    height: 502px;
     width: 942px;
 }
 .carouselContainer{

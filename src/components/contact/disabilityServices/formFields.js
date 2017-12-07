@@ -20,7 +20,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Contact Form' information='All fields are required unless indicated as optional.'/>
+    <FormHeaderSmallSize title='Online Contact Form' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <Field component={TextInput} name="Name" {...props} required maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} name="Email" {...props} required maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} name="Subject" {...props} required fullRow={true} maxlength={"200"} disabled={values.editMode}/>

@@ -54,7 +54,11 @@ class FormStepper extends Component {
       var i = count += 1
       console.log(this.props);
       object.RequestedQty = i
-      if(fieldTotal < this.props.total && i <= this.props.maxValue)
+      if(this.props.subCat){
+        if(subCategoryTotal < this.props.maxValue){
+       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+     }
+      }else if(fieldTotal < this.props.total && i <= this.props.maxValue)
       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
@@ -66,7 +70,11 @@ class FormStepper extends Component {
       var {count, object} = this.state
       var i = count > 0 ? count -= 1 : 0
       object.RequestedQty = i
-        if(fieldTotal < this.props.total && i <= this.props.maxValue)
+      if(this.props.subCat){
+        if(subCategoryTotal <= this.props.maxValue){
+       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+     }
+   }else if(fieldTotal <= this.props.total && i <= this.props.maxValue)
       this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
     }
 
@@ -145,7 +153,7 @@ class FormStepper extends Component {
           <div className='MarnageIncDec'>
             <div className='decrement' onClick={this.decrement}></div>
             <input className={this.props.subCat ? 'incDecSubField':'incDecField'} onChange={event => this.onInputChange(event.target.value)}  value={this.state.count} onBlur={event => this.onBlur(event.target.value)} />
-            {!this.state.hideToolTip && fieldTotal > this.props.maxValue && <Tooltip placement="bottom" id="tooltip-bottom" className={"in"}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} televisions`:`You can not enter more than ${this.props.maxValue} items (including televisions)`}</Tooltip>}
+            {!this.state.hideToolTip && fieldTotal > this.props.maxValue && <Tooltip placement="bottom" id="tooltip-bottom" className={"in"}>{this.props.subCat ? `You can not enter more than ${this.props.maxValue} Items`:`You can not enter more than ${this.props.maxValue} Items `}</Tooltip>}
             <div className='increment' onClick={this.increment}></div>
           </div>
           </Col>

@@ -155,6 +155,9 @@
   .locations .CardContent{
     width: 303px !important;
   }
+  .ImageSection .CardContent{
+    width: 460px !important;
+  }
   .TitleContentCard{
     width: 49%!important;
   }
@@ -174,6 +177,9 @@
 
 @media only screen and (max-width: 599px) {
   .locations .CardContent{
+    width: 100% !important;
+  }
+  .ImageSection .CardContent{
     width: 100% !important;
   }
   .CardTitle, .CardTitleBox, .TitleContentCard{
