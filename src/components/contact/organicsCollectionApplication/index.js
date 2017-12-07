@@ -45,6 +45,10 @@ class OrganicsCollectionApplication extends Component {
 
   componentWillMount(){
     IDNum = 0;
+    showIDSelector = true;
+  }
+
+  componentWillUpdate(){
   }
 
   stepFunc(step){

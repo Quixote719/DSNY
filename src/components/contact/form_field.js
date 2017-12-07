@@ -107,7 +107,7 @@ class FormField extends Component {
         !this.props.isHidden
           ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
-                <div className='FormMultiSelectTitle'>{this.props.title}</div>
+                <div className='FormMultiSelectTitle'>{this.props.title}{this.props.required?<span class="requiredAsterik"> *</span>:<span></span>}</div>
                 <div>{this.renderField(this.props.name)}</div>
               </fieldset>
             </Col>
