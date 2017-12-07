@@ -150,7 +150,6 @@
     height: 100%;
     background-color: #FFFFFF;
 }
-
 .ridOfSearch,
 .actual-edit-overlay {
     padding-bottom: 0px;
@@ -169,7 +168,7 @@
     border-bottom: 2px solid #7CC04B;
     border-left: none;
     border-right: none;
-    -webkit-text-fill-color: #231F20 !important;
+    -webkit-text-fill-color: black !important;
 }
 /* .ridOfAutoCompleteParent{
     margin-left: 13px;
@@ -475,12 +474,23 @@ input.serviceRequestSearch:focus {
     color: #767676!important;
     font-size: 16px;
 }
+<<<<<<< HEAD
+.searchRidParent>div>div>div>div>.ridOfSearch{
+    width: 96%;
+}
+.searchCollectionParent>div>div>.ridOfAutoCompleteParent>div>.ridOfSearch{
+    width: 96%;
+}
+.howToGetRidOfParent>div>div>.BreadcrumbHeaderTitleSection{
+    padding-bottom: 0;
+=======
 .moreEventsBtnDiv>a>.subSectionButton {
     margin-bottom: 20px;
     margin-bottom: 100px;
 }
 .moreNewsBtnDiv>a>.subSectionButton {
     margin-bottom: 30px;
+>>>>>>> dev
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 

@@ -15,11 +15,6 @@ class SerialNoRequest extends Component {
     constructor(props, context) {
         super(props, context);
     }
-    componentWillMount(){
-        this.props.getRidOffKeywords();            
-        const keyword = this.props.match.params.keyword;
-        this.props.getRidOfSearchResults(keyword);
-    }
     render() {
         // const BannerText = {
         //     title: 'How to Get Rid of ...'
@@ -32,20 +27,4 @@ class SerialNoRequest extends Component {
         )
     }
 }
-function mapStateToProps(state) {
-    return {
-        noOfSearchResults: state.carouselDataReducer.noOfSearchResults,        
-        getRidOfSearchResultsData: state.carouselDataReducer.getRidOfSearchResultsData,
-        ridOffKeywords: state.carouselDataReducer.ridOffKeywords,
-        paginationKeyValue: state.carouselDataReducer.paginationKeyValue,        
-    }
-  }
-  
-let actionList = {
-    getRidOffKeywords: actions.getRidOffKeywords,    
-    getRidOfSearchResults: actions.getRidOfSearchResults,
-    setPaginationKey: actions.setPaginationKey,    
-  };
-
-  SerialNoRequest = connect(mapStateToProps, actionList)(SerialNoRequest);
 export default SerialNoRequest;

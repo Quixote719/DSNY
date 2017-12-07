@@ -16,31 +16,26 @@ class GetInvolvedSection extends Component {
   //   });
   // }
   render() {
+    const bcgImage = this.props.GetInvolvedProps.image||''    
     const style = {
-                    'backgroundImage': `url(${this.props.GetInvolvedProps.image})`,
-                    'backgroundSize': '100% 900px',
-                    'height': '500px',
-                    'backgroundPosition': '50% 50%',
+                    backgroundImage: `url(${bcgImage})`,
+                    // backgroundSize: '100% 900px',
+                    // height: '500px',
+                    // backgroundPosition: '50% 50%',
                   }
 
     const cardStyle = {
                         'float': 'left',
                         'marginTop': '25px'
                       }
-
+    let link = `<a href=${process.env.REACT_APP_SITE_RELATIVE_URL}/contact/get-involved>Learn More</a>`
+    this.props.GetInvolvedProps.content += link;
     return (
-      <div className='ImageSection' style={style} >
+      <div className='locations' style={style} >
         <div className = 'SContainer'>
             <div className = 'whiteTitle'>Get Involved</div>
-            <div style={cardStyle} className="getInvolvedCardBelow">
+            <div style={cardStyle}>
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
-                <span>
-                  <div className="learnMoreGetInvolved">
-                    <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact/get-involved"}>
-                       Learn More
-                   </Link>
-                  </div>
-                </span>
             </div>
         </div>
       </div>
