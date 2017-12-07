@@ -154,6 +154,8 @@
 
   .FormRow .cardTypeTitle{
     padding-right: 15px;
+    padding-top:0px;
+    padding-bottom:0px;
   }
 
   .FormRow .cardTitleText{
