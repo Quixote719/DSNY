@@ -25,7 +25,7 @@ class FormSec extends Component {
     super(props);
   }
 
-  CardType(cardType, Item, style) {
+  CardType(cardType, Item, style, cardsRightAligned,islastRightAlignedCard,cardIndex,lastCardIndex) {
 
     let url;
     let type;
@@ -94,10 +94,10 @@ class FormSec extends Component {
           ? <Link to={url}><CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content}/></Link>
           : <CardTitleBody className='subSectioncardTB' title={Item.title} body={Item.content} />);
       case 'standard-card-no-border':
-     
         return (url
-          ? <Link to={url}><CardType style={style} className='NBsubSectioncardType' type ={type} title={Item.title}/></Link>
-          : <CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/>);
+          ? <Link to={url}><CardType style={style} 
+          className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards NBsubSectionCardTypeRightAlign' : 'NBsubSectionCardTypeRightAlign' : 'NBsubSectioncardType' } type={type} title={Item.title} /></Link>
+          : <CardType style={style} className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards BsubSectionCardTypeRightAlign' : 'BsubSectionCardTypeRightAlign' : 'BsubSectioncardType' } type={type} title={Item.title} />);
       case 'standard-card-with-border':
         return (url
           ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type ={type} title={Item.title}/></Link>
@@ -119,11 +119,13 @@ class FormSec extends Component {
     }
   }
 
-  renderCards(cards, type, style) {
-    return _.map(cards, Item => {
+  renderCards(cards, type, style, cardsRightAligned,cardThreshold) {
+    let lastCardIndex = cards.length - 1;
+    return _.map(cards, (Item,Index) => {
+      let islastRightAlignedCard = cardThreshold-1 == Index && cardsRightAligned;
       return (
         <div key={Item.id}>
-          {this.CardType(type, Item, style)}
+          {this.CardType(type, Item, style, cardsRightAligned,islastRightAlignedCard,Index,lastCardIndex)}
         </div>
       );
     });
@@ -269,7 +271,7 @@ class FormSec extends Component {
                   : 3}>
                 <div className='cardTypeCards'>
                   <Row className='nopadding'>
-                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
+                    {this.renderCards(dataObject.cards, dataObject.card_data.card_type, style,l <= cardThreshold,cardThreshold)}
                   </Row>
                 </div>
               </Col>
@@ -284,7 +286,7 @@ class FormSec extends Component {
 
     } else {
       body = (
-        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type, style)}
+        <Row>{this.renderCards(dataObject.cards, dataObject.card_data.card_type, style,false)}
         </Row>
       )
     }
@@ -297,20 +299,25 @@ class FormSec extends Component {
     let cardCount = dataObject.card_data.card_count;
 
 
-    function checkforGreenPatternLine(section,header,content,cards){
-    
+    function checkforGreenPatternLine(section,header,content,cards,finalSec,sectionType){
+    console.log(finalSec);
+    console.log(section);
     /*The green line appears in the form introduction, only when it has both Header & Content & There are no cards & if the section
-       Type is form-introduction */
-      switch(section){
-        case 'form-introduction':
-            return(
+       Style is form-introduction */
+    if(section == 'form-introduction'){
+        return(
                     <div>     
                     {header &&  content && !cards && <div className='patternLineGreen'></div>}
                     </div>
             );
-        default:
-            break;    
-      }    
+    }
+    /* If the sectionType is a normal Page such as the 'get-involved' page, then depending on if the page section is last section or
+    not, we give proper padding */
+    else if (sectionType == 'pagesection' ){
+            return(
+                     finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>
+            );
+    } 
       
     }
 
@@ -319,7 +326,7 @@ class FormSec extends Component {
         <div className='SContainer'>
           {header && <div>{header}</div>}
           {body && <div id="contactPageBody">{body}</div> }
-          {checkforGreenPatternLine(dataObject.section_style,header,dataObject.content,dataObject.card_data)}
+          {checkforGreenPatternLine(dataObject.section_style,header,dataObject.content,dataObject.card_data,this.props.finalSec,dataObject.type)}
         </div>
        </div> 
     );
