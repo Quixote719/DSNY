@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  POST_CFC_RECOVERY_APP_REQ
+  POST_CFC_RECOVERY_APP_REQ, REST_WEBAPI_URL
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject,GetUnavailableDates, postFormObject} from "../../../actions/contact_forms";
@@ -35,7 +35,7 @@ class CFCRequestForm extends Component {
 }
 
 updateValues(geoCoderAddressResult){
- this.props.GetUnavailableDates(`https://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/cfcrecoveryappointment/CFCCalendar/${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}`);
+ this.props.GetUnavailableDates(`${REST_WEBAPI_URL}cfcrecoveryappointment/CFCCalendar/${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}`);
 }
 
   postForm(formObject){

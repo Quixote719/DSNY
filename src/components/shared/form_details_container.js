@@ -155,9 +155,9 @@ class WebformPage extends Component {
   }
 
   /*Returns any section other than image section  */
-  getSection(sec){
+  getSection(sec,finalSec){
     return (<div key={sec.id}>
-      <div><FormSec dataObject={sec}/></div>
+      <div><FormSec dataObject={sec} finalSec={finalSec}/></div>
     </div>);
   }
 
@@ -169,17 +169,29 @@ class WebformPage extends Component {
     </div>);
   }
 
+  getTitleBreadCrumb(breadCrumbTitle){
+      switch(breadCrumbTitle){
+        case 'Get Involved':
+          return 'Get Involved';
+        default:
+          break;  
+      }
+  }
+
+
   renderPage(pageData) {
     console.log(pageData);
     if (pageData) {
 
       return _.map(pageData, item => {
-
+        let breadCrumbTitle;
         let banner;
+        let finalSec = false;
         if (item !== undefined) {
+         breadCrumbTitle = this.getTitleBreadCrumb(item.title);
           if (item.name !== '') {
             banner = (<div key={item.id}>
-              <Header breadCrumbList={item.breadcrumb} />
+              <Header breadCrumbList={item.breadcrumb} title={breadCrumbTitle}/>
             </div>)
           }
 
@@ -189,7 +201,8 @@ class WebformPage extends Component {
               if(sec.featured_image != ''){
                   return this.getBackGroundImageContent(sec);
               }else{
-                  return this.getSection(sec);
+                  finalSec= (index == item.sections.sections.length - 1);
+                  return this.getSection(sec,finalSec);
               }
             })
           }

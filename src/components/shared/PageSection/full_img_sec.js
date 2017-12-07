@@ -14,7 +14,7 @@ class FullImageSec extends Component{
        switch(cardType){
             case 'content-left':
                return(
-                   <Col className = 'ContentLeft' xs={12}>
+                   <Col className = 'ContentLeft' sm={6} xs={12}>
                         <ContentCard type='4' content={this.props.dataObject.content}/>   
                     </Col>
                 );
@@ -53,7 +53,7 @@ class FullImageSec extends Component{
                     </Row>
                     </div>
                     </div>
-                    <div className="greyBcgHeight"></div>
+                    {/*<div className="greyBcgHeight"></div>*/}
                     </div>
     )
 

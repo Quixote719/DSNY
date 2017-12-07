@@ -15,8 +15,8 @@
   min-width: 220px;
   background-color: #FFFFFF;
   padding: 25px 15px;
-  margin-top: 10px;
-  margin-bottom:15px;
+  margin-top: 8px;
+  margin-bottom:8px;
   cursor: pointer;
 }
 
@@ -192,8 +192,10 @@
   background-color: #FFFFFF;
   border: 1px solid #7CC04B;
   padding: 14px;
-  margin-top: 30px;
-  margin-bottom:15px;
+  margin-top:8px;
+  margin-bottom:8px;
+  /*margin-top: 30px;
+  margin-bottom:15px;*/
   cursor: pointer;
 }
 
@@ -251,8 +253,8 @@
   background-color: #FFFFFF;
   border: 1px solid #7CC04B;
   padding: 14px;
-  margin-top: 24px;
-  margin-bottom:0px;
+  margin-top: 8px;
+  margin-bottom:8px;
   cursor: pointer;
   }
 

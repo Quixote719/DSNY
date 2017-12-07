@@ -136,16 +136,16 @@ class CardSec extends Component {
       case 'staff-card':
         //TODO
         return;
-
+        
       case 'standard-card-no-border':
         return (url
           ? <Link to={url}><CardType style={style} 
           className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards NBsubSectionCardTypeRightAlign' : 'NBsubSectionCardTypeRightAlign' : 'NBsubSectioncardType' } type={type} title={Item.title} /></Link>
-          : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
+          : <CardType style={style} className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards BsubSectionCardTypeRightAlign' : 'BsubSectionCardTypeRightAlign' : 'BsubSectioncardType' } type={type} title={Item.title} />);
 
       case 'standard-card-with-border':
         return (url
-          ? <Link to={url}><CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} /></Link>
+          ? <Link to={url}><CardType style={style} className={cardsRightAligned ? islastRightAlignedCard  ? 'marginBetwCards BsubSectionCardTypeRightAlign' : 'BsubSectionCardTypeRightAlign' : 'BsubSectioncardType' }  type={type} title={Item.title} /></Link>
           : <CardType style={style} className='BsubSectioncardType' type={type} title={Item.title} />);
 
       case 'table-dictionary-card':
