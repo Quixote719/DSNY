@@ -56,8 +56,6 @@ const expiredCallback = () => {
 
 export function displayThankYouPage(displayMessage, success, successMessage, failureMessage, displayPatternLine)
 {
-  debugger;
-  console.log(displayMessage);
   if(success != null && success.SRNo !== undefined) {
       return(<ThankYou message={successMessage + success.SRNo} displayPatternLine={displayPatternLine} >{Parser(displayMessage)}</ThankYou>);
     } else {

@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import SubSectionHeader from '../../shared/sub_section_header';
 import SubSectionButton from '../../shared/sub_section_button';
 import PressReleaseListItem from './press_release_list_item';
+import {Row, Col} from 'react-bootstrap';
 class PressRelease extends Component {
 
   constructor(props, context) {
@@ -54,7 +55,6 @@ class PressRelease extends Component {
     return (<div>
       <SubSectionHeader title="Press Release" />
       <div>{this.renderPosts(pr,maxCards)}</div>
-
       {this.ViewAllButton(n,maxCards)}
     </div>);
   }

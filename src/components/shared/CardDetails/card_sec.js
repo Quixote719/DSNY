@@ -18,7 +18,7 @@ import $ from 'jquery';
 
 class CardSec extends Component {
 
-  CardType(cardType, Item, style,cardsRightAligned,islastRightAlignedCard,cardIndex) {
+  CardType(cardType, Item, style,cardsRightAligned,islastRightAlignedCard,cardIndex,lastCardIndex) {
 
     let url;
     let type;
@@ -90,7 +90,7 @@ class CardSec extends Component {
         return;
 
       case 'full-width-card':
-        return (<CardFullWidth link={url} dataObject={Item} />);
+        return (<CardFullWidth link={url} dataObject={Item} lastCardIndex={lastCardIndex} cardIndex={cardIndex}/>);
 
       case 'header-title-blurb-card':
         //TODO
@@ -163,12 +163,12 @@ class CardSec extends Component {
   }
 
   renderCards(cards, type, style, cardsRightAligned,cardThreshold) {
-    
+    let lastCardIndex = cards.length - 1;
     return _.map(cards, (Item,Index) => {
       let islastRightAlignedCard = cardThreshold-1 == Index && cardsRightAligned;
       return (
         <div key={Item.id}>
-                 {this.CardType(type, Item, style, cardsRightAligned,islastRightAlignedCard,Index)}
+                 {this.CardType(type, Item, style, cardsRightAligned,islastRightAlignedCard,Index,lastCardIndex)}
         </div>
       );
     });

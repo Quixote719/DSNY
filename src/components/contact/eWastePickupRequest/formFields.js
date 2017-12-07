@@ -45,7 +45,6 @@ const DisplayFormikState = props => <div style={{
 const EwastePickUpRequestFormElements = (props) => {
 	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus} = props;
 	if (Dates){
-
      values.Dates = Dates;
 		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate
 	}
