@@ -54,7 +54,7 @@ class DSNYNews extends Component {
     if (cardDetails) {
 
       return _.map(cardDetails, Items => {
-        
+        console.log(Items)
         var newsSections;
         var cardsSections;
         var image;
@@ -84,7 +84,7 @@ class DSNYNews extends Component {
                       </ol>
                   </div>
                 </div>
-                <div><div className="BreadcrumbHeaderTitleSection"><div className="container">News</div></div></div>
+                <div><div className="BreadcrumbHeaderTitleSection BreadcrumbTitleContainer"><div className="container">News</div></div></div>
                 </div>
             </div>
             <div className='container'><NewsMonthList category='news-updates' selectedOption={this.state.year} ondropDownChange={this.getNewsData}/></div>

@@ -43,8 +43,29 @@ class DSNYEvents extends Component {
     PressReleaseListstate = this.state;
   }
 
+  // checkExceedLimit (props) {
+  //   exceedLimit = 0;
+  //   props.items.map((item) => {
+  //       var dateLimit = moment(item.limit)
+  //       var now = moment()
+  //       if (item.limit != null || item != ' ' && now.isAfter(dateLimit) ) {
+  //           exceedLimit++;
+  //           console.log(now)
+  //           console.log(dateLimit)
+  //       }
+  //   })
+  // }
+
   renderPosts(eventData) {
     return _.map(eventData, eventItem => {
+      // let exceedLimit = 0;
+      // var dateLimit = moment(eventItem.ToDateTime)
+      // var now = moment();
+      // if (eventItem.ToDateTime != null || eventItem != ' ' && now.isAfter(dateLimit) ) {
+      //   exceedLimit++;
+      //   console.log(now)
+      //   console.log(dateLimit)
+      // }
       return (
         /* Lazyload - The component will be loaded when it's top edge is 150px from viewport. It's useful to make user ignorant about lazy load effect. */
         <LazyLoad height={140} once={true} offset={0} debounce={100} key={eventItem.EventID}>
@@ -77,7 +98,9 @@ class DSNYEvents extends Component {
                   </ol>
               </div>
             </div>
-            <div><div className="BreadcrumbHeaderTitleSection"><div className="container">DSNY Events</div></div></div>
+            <div className="BreadcrumbHeaderTitleSection BreadcrumbTitleContainer">
+              <div className="container">DSNY Events</div>
+            </div>
         </div>
       </div>
 
