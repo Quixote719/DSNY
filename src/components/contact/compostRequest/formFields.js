@@ -96,8 +96,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={DropdownInput} name="HasAlternateSideParking" {...props}  onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={MultiSelectInput} name="AlternateSideParkingDays" {...props} onMultiSelect={setFieldValue} options={values.AlternateSideParkingDays} isHidden={values.HasAlternateSideParking !== true}/>
     <Field component={TextInput} name="AlternateSideParkingTimes" {...props} isHidden={values.HasAlternateSideParking !== true}/>
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
-      
+    
   </fieldset>)
 };
 

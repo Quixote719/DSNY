@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ContentCard from '../shared/ContentCard'
-
+import { Link } from 'react-router-dom';
 
 class LocationsSection extends Component {
 
@@ -9,11 +9,12 @@ class LocationsSection extends Component {
     const bcgImage = this.props.LocationProps.image||''
     const style = {
       backgroundImage: `url(${bcgImage})`,
-      backgroundSize: '100% 900px'
     }
     const cardStyle = {
                         'float': 'right',
                       }
+    let link = `<a href=${process.env.REACT_APP_SITE_RELATIVE_URL}/about/location>See All Locations</a>`
+    this.props.LocationProps.content += link;
     return (
       <div className='locations' style={style}>
         <div className = 'SContainer'>

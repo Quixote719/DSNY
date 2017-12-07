@@ -136,6 +136,9 @@ label.checkContainer{
   margin-top: -12px !important;
   z-index: 5;
 }
+.react-datepicker-wrapper, .react-datepicker__input-container{
+  width: 100%;
+}
 .react-datepicker__triangle{
   display: none;
 }
@@ -168,14 +171,19 @@ label.checkContainer{
   border-left-color: #ccc;
   right: 1em;
 }
-.react-datepicker__day--keyboard-selected{
+.react-datepicker__day--keyboard-selected, .react-datepicker__day--selected{
   background-color: #7CC04B;
 }
 .react-datepicker__day--keyboard-selected:hover{
   background-color: #7CC04B;
 }
 .react-datepicker-wrapper .input-group{
+  width: 100%;
   display: inline-block;
+}
+.react-datepicker-popper[data-placement^="top"]{
+  position:absolute!important;
+  top:15px!important;
 }
 .input-group-addon{
   border: none;

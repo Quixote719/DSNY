@@ -45,7 +45,6 @@ const DisplayFormikState = props => <div style={{
 const EwastePickUpRequestFormElements = (props) => {
 	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus} = props;
 	if (Dates){
-
      values.Dates = Dates;
 		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate
 	}
@@ -63,6 +62,12 @@ const EwastePickUpRequestFormElements = (props) => {
 	if(commercialAddress){
 		let ca = commercialAddress.commercialFlag
 		values.commercialAddress = ca === 1 ? true : false;
+	}
+
+	if(!values.isDistrictActive && document.getElementsByClassName("validatedAddress")[0] !== undefined){
+		document.getElementsByClassName("validatedAddress")[0].style.display = "none"
+	} else if(document.getElementsByClassName("validatedAddress")[0] !== undefined){
+		document.getElementsByClassName("validatedAddress")[0].style.display = "block"
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
@@ -88,6 +93,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
+			<Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 

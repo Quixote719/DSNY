@@ -49,7 +49,14 @@
 .PressReleaseBodycontact a {
   color: #00764D;
   font-weight: bold;
+  
 }
+
+.PressReleaseBodycontact a:hover,.PressReleaseBodycontact a:focus{
+  color:#7CC04B;
+}
+
+
 
 @media screen and (max-width: 767px){
   .PressReleaseContactBlock .patternLineGreen{

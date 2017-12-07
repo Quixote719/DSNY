@@ -13,6 +13,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import moment from 'moment';
+import TextdisplayField from '../form_display_field';
 import {Col} from 'react-bootstrap';
 const DisplayFormikState = props => <div style={{
 		margin: '1rem 0'
@@ -33,23 +34,29 @@ const DisplayFormikState = props => <div style={{
     </pre>
   </div>;
 
-const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue, Dates,  geoCoderAddressResult } = props;
+const CFCRecoveryRequestFormElements = (props) => {
+	const { values, setFieldValue, Dates,commercialAddress, geoCoderAddressResult } = props;
 
 	if (Dates && geoCoderAddressResult){
      values.Dates = Dates;
-		 values.AppointmentDate = moment(Dates[0].StartDate);
+		 values.AppointmentDate =  values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate;
 		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
 		 values.RecyclingPickupDay = geoCoderAddressResult.sanitationRecyclingCollectionSchedule;
+	}
+	if(commercialAddress){
+		let ca = commercialAddress.commercialFlag
+		values.commercialAddress = ca === 1 ? true : false;
 	}
 
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
+		<div>{values.commercialAddress ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props} onChange={setFieldValue} required/> : '' }</div>
+		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
-		<Field component={DropdownInput} required name="RecyclingLocation" options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets :[]} {...props} onChange={setFieldValue} disabled={values.editMode}/>
-		<Field component={DateTimePickerInput} value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} required name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={DropdownInput} required name="RecyclingLocation" options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets? geoCoderAddressResult.pickupStreets:[]:[]} {...props} onChange={setFieldValue} disabled={values.editMode}/>
+		<Field component={DateTimePickerInput} value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} required name="AppointmentDate" {...props} disabled={ values.Dates === undefined ? true : values.editMode }  onChange={setFieldValue}/>
 		<Field component={Nstepper} name="Appliances" header='APPLIANCES' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
@@ -57,8 +64,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-    <Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 
-export default EwastePickUpRequestFormElements;
+export default CFCRecoveryRequestFormElements;
