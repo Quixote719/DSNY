@@ -24,8 +24,11 @@ class ProgramCards extends Component {
     })
   }
   handleSelect = () =>{
+    if(this.state.serviceRequest.trim().length !== 0){
       this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/serviceRequestStatus/"+ this.state.serviceRequest)
-}
+      this.props.setServiceRequestStatus(this.state.serviceRequest);      
+    }
+  }
   mobileProgramList() {
     return _.map(this.props.carouselItems, item => {
       if(item.name == "home-services-section"){
@@ -148,5 +151,15 @@ class ProgramCards extends Component {
 
   }
 }
+function mapStateToProps(state) {
+  return {
+    serviceRequestData: state.carouselDataReducer.serviceRequestData,
+  }
+}
 
+let actionList = {
+  setServiceRequestStatus: actions.setServiceRequestStatus,
+};
+
+ProgramCards = connect(mapStateToProps, actionList)(ProgramCards);
 export default withRouter(ProgramCards);

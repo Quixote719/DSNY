@@ -16,6 +16,8 @@ export const RID_OF_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchDis
 export const SITE_SEARCH_KEYWORDS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getSiteSearchKeywordList`
 export const SITE_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchSite?s`
 
+export const SERVICE_REQUEST_URL = `${REST_WEBAPI_URL}servicerequests/`
+
 export const RID_OF_ITEM_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name`
 export const COLLECTION_SCHEDULE_URL = "http://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYCollection/CollectionSchedule/"
 export const HOLIDAY_DATA_URL = `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
