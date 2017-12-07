@@ -8,6 +8,16 @@
 }
 
 .greenSectionHeader{
+    color: #015949;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 48px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.greenSectionHeaderForm{
   min-height: 33px;
   color: #00764D;
   font-size: 36px;
@@ -15,8 +25,6 @@
   letter-spacing: -1px;
   margin-top: 20px;
 }
-
-
 
 .sectionHeaderFormSmallSize{
   min-height: 26px;

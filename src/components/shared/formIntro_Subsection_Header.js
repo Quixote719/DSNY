@@ -11,7 +11,7 @@ import '../../content/styles/subSectionHeader.css';
 const FormIntroSubSectionHeaderGreen = props => {
       return (
          <div>
-            <div className='greenSectionHeader'>
+            <div className='greenSectionHeaderForm'>
             {props.title}
             </div>
          </div>
