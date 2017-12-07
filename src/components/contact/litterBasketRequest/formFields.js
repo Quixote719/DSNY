@@ -34,7 +34,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="FirstName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} name="LastName" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"25"} disabled={values.editMode}/>
     <Field component={TextInput} name="Email" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
+    <Field component={TextInput} autocomplete="off" name="ConfirmEmail" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextInput} name="Phone" {...props} isHidden={values.IsAnonymous == true} required={values.IsAnonymous !== true} maxlength={"21"} disabled={values.editMode}/>   
   </fieldset>)
 };
