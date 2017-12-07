@@ -171,7 +171,7 @@ label.checkContainer{
   border-left-color: #ccc;
   right: 1em;
 }
-.react-datepicker__day--keyboard-selected{
+.react-datepicker__day--keyboard-selected, .react-datepicker__day--selected{
   background-color: #7CC04B;
 }
 .react-datepicker__day--keyboard-selected:hover{
