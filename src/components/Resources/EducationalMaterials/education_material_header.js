@@ -1,6 +1,7 @@
 import _ from "lodash";
 import React, {Component} from "react";
-import Dotdotdot from 'react-dotdotdot'
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 import PropTypes from 'prop-types';
 import '../../../content/styles/subSectionHeaderImage.css';
 import {Grid, Row, Col, Clearfix} from 'react-bootstrap';
@@ -28,11 +29,9 @@ class EducationSectionHeader extends Component {
                 </Col>
                 <Col xs={12} sm={6}>  
                   <div className='subSectionHeaderImagetitleBody_EduMaterials subSectionHeaderImagetitleBodyText'>
-                    <Dotdotdot clamp={6}>
-                      <div className='subSectionHeaderImagetitleBodyText' dangerouslySetInnerHTML={{
-                        __html: body
-                      }}/>
-                    </Dotdotdot>
+                    <div className='subSectionHeaderImagetitleBodyText'>
+                        <Truncate lines={6}>{Parser(body)}</Truncate>
+                    </div>
                   </div>
                 </Col>
               </Row>

@@ -1,7 +1,8 @@
 import React, {Component} from "react";
 import PropTypes from 'prop-types';
 import {Row, Col} from 'react-bootstrap';
-import Dotdotdot from 'react-dotdotdot'
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 import '../../../content/styles/cardType.css';
 
 class CardType extends Component {
@@ -43,11 +44,9 @@ class CardType extends Component {
               <Row className='nopadding'>
                 <Col className='nopadding' xs={12}>
                   <div className='cardTypeTitle'>
-                    <Dotdotdot clamp={3}>
-                      <div className='cardTitleText' dangerouslySetInnerHTML={{
-                        __html: this.props.title
-                      }}/>
-                    </Dotdotdot>
+                      <div className='cardTitleText'>
+                        <Truncate lines={3}>{Parser(this.props.title)}</Truncate>
+                      </div>
                   </div>
                 </Col>
               </Row>
@@ -65,11 +64,9 @@ class CardType extends Component {
               <Row className='nopadding'>
                 <Col className='nopadding' xs={this.props.type == 'iUrl'? 12: 11}>
                   <div className='cardTypeTitle'>
-                    <Dotdotdot clamp={2}>
-                      <div className='cardTitleText' dangerouslySetInnerHTML={{
-                        __html: this.props.title
-                      }}/>
-                    </Dotdotdot>
+                    <div className='cardTitleText'>
+                        <Truncate lines={2}>{Parser(this.props.title)}</Truncate>
+                    </div>
                   </div>
                 </Col>
                 <Col className='nopadding' xs={1}>

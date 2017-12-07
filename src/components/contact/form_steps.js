@@ -174,8 +174,8 @@ const Step2 = (props) => {
 
     </div>
     <Col className="submitBtnMargin col-xs-12">
-    <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     <button className="formEditBtn" onClick={previousStep}>EDIT</button>
+    <button id="submitbtn" className="formSubmitBtn" type="submit">SUBMIT</button>
     </Col>
   </span>)
 };
@@ -235,7 +235,7 @@ const FormSteps = compose(
 
             //Text, Checkbox Input Validation
             //if (input.type === "text" && input.name==="AddressAsEntered" && ((props.geoCoderAddressResult === null || props.geoCoderAddressResult === undefined) || (props.isAddressValidated === undefined || props.isAddressValidated === 0)))
-            
+
             if(!initialPageLoad || validateButtonClicked)
             {
               if (input.type === "text" && (input.name==="AddressAsEntered" || input.name==="BinLocationAddressAsEntered") && props.isAddressValidated !== 1)
@@ -252,7 +252,7 @@ const FormSteps = compose(
                   }
               }
             }
-            
+
             if(!initialPageLoad)
             {
               if (input.required  && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))

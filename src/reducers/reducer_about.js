@@ -11,6 +11,8 @@ export default function AboutDataReducer(state = { bureaus: {} }, action) {
       return { ...state, BureausData: action.payload};
     case 'SET_STRATEGICPLAN':
       return { ...state, StrategicPlanData: action.payload};
+    case 'SET_GARAGE_LOCATIONS':
+      return { ...state, LocationPageData: action.payload};
     case 'SET_COMMISSIONER':
       return { ...state, CommissionerData: action.payload};
     case types.FETCH_LOCATION_LIST:

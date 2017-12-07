@@ -3,7 +3,8 @@ import {Link} from "react-router-dom";
 import {Row, Col} from 'react-bootstrap';
 import styles from '../../../content/styles/eventListItem.css';
 import moment from 'moment';
-import Dotdotdot from 'react-dotdotdot'
+import Truncate from 'react-truncate';
+import Parser from 'html-react-parser';
 
 class EventListItem extends Component {
 
@@ -29,9 +30,9 @@ class EventListItem extends Component {
                   {this.props.title}
                 </Link>
               </div>
-              <Dotdotdot clamp={2}>
-                <div className='eventDescription'>{this.props.description}</div>
-              </Dotdotdot>
+                <div className='eventDescription'> 
+                  <Truncate lines={2}>  {Parser(this.props.description)}</Truncate>
+                </div>
             </div>
           </Col>
 

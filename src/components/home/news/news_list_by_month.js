@@ -54,7 +54,7 @@ class DSNYNews extends Component {
     if (cardDetails) {
 
       return _.map(cardDetails, Items => {
-        
+        console.log(Items)
         var newsSections;
         var cardsSections;
         var image;
@@ -78,12 +78,13 @@ class DSNYNews extends Component {
                 <div className="BreadcrumbList">
                   <div className="container">
                       <ol role="navigation" aria-label="breadcrumbs" className="breadcrumb">
+                        <span className='fa fa-angle-left'></span>
                         <li className=""><Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>Home</Link></li>
                         <li className=""></li>
                       </ol>
                   </div>
                 </div>
-                <div><div className="BreadcrumbHeaderTitleSection"><div className="container">News</div></div></div>
+                <div><div className="BreadcrumbHeaderTitleSection BreadcrumbTitleContainer"><div className="container">News</div></div></div>
                 </div>
             </div>
             <div className='container'><NewsMonthList category='news-updates' selectedOption={this.state.year} ondropDownChange={this.getNewsData}/></div>
