@@ -54,16 +54,16 @@ updateValues(geoCoderAddressResult){
   }
 
   render() {
-    const { error, success,unavailableDates, pickupLocations,  geoCoderAddressResult, isAddressValidated} = this.props;
+    const { error, success,unavailableDates, pickupLocations,commercialAddress,  geoCoderAddressResult, isAddressValidated} = this.props;
 
 
         if(success !== undefined) {
-              return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+              return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your collection request for large items form has been submitted succefully.</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success}</p><p>Use this number when you check the status of your request.</p><p><b>Where to leave your Bulk items?</b></p><p>Place your Bulk items at the curb or alley (if that is where your collection occurs) for DSNY collection after 4PM the day before your appointment date. DSNY will not come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB/ALLEY.</p></div></div>`)
         }
 
     if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
-                <FormSteps formFields={formFields} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
+                <FormSteps formFields={formFields} commercialAddress={commercialAddress} pickupLocations={pickupLocations} geoCoderAddressResult={geoCoderAddressResult} Dates={unavailableDates} success={success} customFormData={FormObject} isAddressValidated={isAddressValidated} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
                 </div></div>);
     };
     if (error){
@@ -82,6 +82,7 @@ function mapStateToProps(state) {
     unavailableDates:state.forms.unavailableDates,
     geoCoderAddressResult:state.carouselDataReducer.DSNYGeoCoder,
     isAddressValidated: state.carouselDataReducer.addressValidator,
+    commercialAddress:state.carouselDataReducer.commercialAddress,
     error:state.error.type
   };
 }
