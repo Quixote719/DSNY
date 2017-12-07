@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ from 'jquery';
 import data from './panelData.json';
 import * as types from '../constants/ActionTypes';
-import { SERVICE_REQUEST_URL, SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
+import { WORDPRESS_ROOT_URL, SERVICE_REQUEST_URL, SITE_SEARCH_RESULTS_URL, SITE_SEARCH_KEYWORDS_URL, HOLIDAY_DATA_URL, COLLECTION_SCHEDULE_URL, RID_OF_ITEM_DETAILS_URL, HOME_PAGE_DATA_URL, RID_OF_KEYWORDS_URL, RID_OF_SEARCH_RESULTS_URL, FETCH_EVENTS_SUB_LIST_URL, FETCH_EVENT_DETAILS_URL, NEWS_PAGE_DATA_URL, FETCH_NEWS_DETAILS_URL } from "../constants/ApiConstants";
 
 export function carouselData() {
     return function (dispatch) {
@@ -73,10 +73,6 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
 
                             DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
-<<<<<<< HEAD
-                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
-                            console.log(DSNYGeoCoder)                            
-=======
                             DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;
 
                             // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
@@ -102,7 +98,6 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                                 // }
                             // }
                             console.log(DSNYGeoCoder)
->>>>>>> dev
                         }
                         else {
                             DSNYGeoCoder = null;

@@ -474,7 +474,6 @@ input.serviceRequestSearch:focus {
     color: #767676!important;
     font-size: 16px;
 }
-<<<<<<< HEAD
 .searchRidParent>div>div>div>div>.ridOfSearch{
     width: 96%;
 }
@@ -483,14 +482,13 @@ input.serviceRequestSearch:focus {
 }
 .howToGetRidOfParent>div>div>.BreadcrumbHeaderTitleSection{
     padding-bottom: 0;
-=======
+}    
 .moreEventsBtnDiv>a>.subSectionButton {
     margin-bottom: 20px;
     margin-bottom: 100px;
 }
 .moreNewsBtnDiv>a>.subSectionButton {
     margin-bottom: 30px;
->>>>>>> dev
 }
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
