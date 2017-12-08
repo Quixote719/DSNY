@@ -78,7 +78,7 @@ class SerialNoPage extends Component {
           }
           else{
               return(
-                <div>Helooooo wrong status number</div>                
+                <div className ="errorServiceRequest">The Department of Sanitation has investigated the complaint and addressed the issue. If the problem persists, call 311 to enter a new complaint. If you are outside of New York City, please call (212) NEW-YORK (212-639-9675).</div>                
               );
           }
 
