@@ -11,9 +11,7 @@ const FormIntroSubSectionHeaderGreen = props => {
       return (
          <div>
             <div className='PressReleaseHeadertitle'>
-            <div className='greenSectionHeaderForm'>
-            {props.title}
-            </div>
+              {props.title}
             </div>
          </div>
          );

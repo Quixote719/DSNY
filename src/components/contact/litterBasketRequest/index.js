@@ -50,9 +50,7 @@ class LitterBasketRequest extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      if (success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage, false)
-      }
+      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Litter Basket Request form has been submitted succeffuly.</p><p>&nbsp;</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>&nbsp;<p><p>This serves as the office confirmation that we received your request. Your request will be acted on promptly. If it has not been resolved within 10 business days. you may call New York City Citizen Service Center at 311. Please NOTE: If we need additional information we may contact you, provided your supplied valid name, phone number and/or E-mail address.</p></div></div>`)
     }
 
     if (FormObject && FormObject !== undefined) {

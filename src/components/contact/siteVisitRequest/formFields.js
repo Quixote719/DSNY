@@ -14,7 +14,7 @@ import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import FormTitleCheckBoxes from '../form_Title_CheckBoxes';
- 
+
 
 // Our inner form component which receives our form's state and updater methods as props
 const siteVisitRequestFormElements = (props) => {
@@ -23,9 +23,9 @@ const siteVisitRequestFormElements = (props) => {
     handledropDown,
     setFieldValue,
   } = props;
-  
+
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    
+
     <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   value="" disabled={values.editMode} required/>
@@ -37,7 +37,7 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={TextInput} name="AlternateSiteName" {...props} maxlength="100" disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Notes" {...props}  required disabled={values.editMode}/>
     <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required disabled={values.editMode}/>
-    
+
     <FormSectionHeader title={Titles.sectionThree} />
     <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
     <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
