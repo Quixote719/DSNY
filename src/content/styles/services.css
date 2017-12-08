@@ -64,6 +64,10 @@
     background-color: #FFFFFF;
 }
 
+.ServicePage p{
+  margin-top: 8px;
+}
+
 /* #collectionSearch{
   font-size: 24px;
   position: absolute;

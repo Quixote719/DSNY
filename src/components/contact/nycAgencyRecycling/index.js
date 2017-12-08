@@ -51,8 +51,8 @@ class NycAgencyRecycling extends Component {
 
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
-    if(success !== undefined && success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
+    if(success !== undefined) {
+      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Collection Bin on Public Property Removal Request form has been submitted succeffuly.</p><p>An email confirmation has been sent to your contact email address</p></div></div>`)
     }
 
     if (FormObject && FormObject !== undefined) {

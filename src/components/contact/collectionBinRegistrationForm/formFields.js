@@ -50,8 +50,8 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="PropertyOwnerEmail" {...props} required maxlength={"50"} disabled={values.editMode}/>  
     <FormSectionHeader title={Titles.sectionFour}/>
     <Field component={TextAreaInput} name="DescribeBinAppearances" {...props}  disabled={values.editMode}/>   
-    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED ON THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" />
-    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} required />
+    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED ON THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" redAstreix={true}/>
+    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} required hideAsterix={true}/>
     <FormTitleCheckBoxes title="TYPE(S) OF MATERIAL COLLECTED (CHECK ALL THAT APPLY)" />
     <Field component={CheckBoxInput} name="ClothingCollected" {...props} disabled={values.editMode} />
     <Field component={CheckBoxInput} name="ShoesCollected" {...props} disabled={values.editMode}/>
