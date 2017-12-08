@@ -7,7 +7,7 @@ export const Titles = {
   ConfirmEmail: 'CONFIRM E-MAIL',
   Phone: 'PHONE',
   IsAnonymous: 'I would like to remain anonymous',
-  AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
+  AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION',
   Message: "MESSAGE",
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",

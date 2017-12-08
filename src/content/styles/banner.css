@@ -33,6 +33,10 @@
   background: url('../images/Darkgreen.png');
 }
 
+.breadcrumb>li a {
+  color: white;
+}
+
 .BreadcrumbList .fa-angle-left{
   margin-right: 7px;
   color: #FFFFFF;
@@ -113,7 +117,7 @@
   }
 
   .BreadcrumbHeaderTitleSection{
-    font-size: 40px;  
+    font-size: 40px;
   }
 
   .GBannerContent{
