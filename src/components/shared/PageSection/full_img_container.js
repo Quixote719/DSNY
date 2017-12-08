@@ -45,9 +45,9 @@ class fullImageContainer extends Component {
   };
 
   /* Return card details, corresponding to an Empty Card Section */
-  getCard(sec) {
+  getCard(sec,finalSec) {
     return (<div key={sec.id}>
-      <div><CardSec dataObject={sec}/></div>
+      <div><CardSec dataObject={sec}  finalSec={finalSec}/></div>
     </div>);
   }
 
@@ -77,12 +77,14 @@ class fullImageContainer extends Component {
   
   
           var sections;
+          let finalSec =false;
           if (cItems.sections) {
-            sections = _.map(cItems.sections.sections, sec => {
+            sections = _.map(cItems.sections.sections, (sec,Index) => {
+            finalSec = (Index == cItems.sections.sections.length - 1);
              if(sec.featured_image != ''){
                   return this.getBackGroundImageContent(sec);
              }else{
-                  return this.getCard(sec);
+                  return this.getCard(sec,finalSec);
              }   
    
             })
