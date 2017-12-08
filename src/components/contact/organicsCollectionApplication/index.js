@@ -208,18 +208,16 @@ class OrganicsCollectionApplication extends Component {
    render() {
 
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
-        console.log('success?');
-        console.log(error);
-        if(error){
 
-        }
         if(success!==undefined) {
-          if(success){
 
+          if(success.SRNo){
+              return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
           }
-          console.log('Thank you');
-          console.log(success);
-          return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
+          else{
+            return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
+          }
+
         }
 
         if (FormObject && FormObject !== undefined) {

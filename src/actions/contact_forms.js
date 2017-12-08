@@ -110,7 +110,7 @@ export function postFormObject(formObject, Url) {
 		axios.post(Url, formObject).then((data, headers) => {
 			dispatch({type: types.POST_FORM_REQUEST, payload: data,})
 		}).catch(function(error) {
-			dispatch({type: types.ERROR_LOADING_REQUEST, payload: error,})
+			dispatch({type: types.POST_FORM_REQUEST, payload: {data:error},})
 		});
 	}
 }
