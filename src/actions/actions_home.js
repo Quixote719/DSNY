@@ -336,6 +336,11 @@ export function setServiceRequestStatus(value, callback = null) {
             if (callback){
                 callback();                
             }
+        }).catch(()=>{
+            dispatch({
+                type: 'SET_SERVICE_REQUEST_STATUS',
+                payload: "errorServiceRequest"
+            });
         })
 
     }
