@@ -491,10 +491,6 @@ input.serviceRequestSearch:focus {
 .moreNewsBtnDiv>a>.subSectionButton {
     margin-bottom: 30px;
 }
-.errorServiceRequest{
-    padding-top: 30px;
-    text-align: center;
-}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 @media only screen and (max-width: 599px) {
