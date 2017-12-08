@@ -41,6 +41,7 @@ import SanitationTruckSpillageForm from '../contact/sanitationTruckSpillageCompl
 import PrivateReceptableComplaintForm from '../contact/privateReceptableComplaint';
 import RefashionNYCForm from '../contact/refashionNYC';
 import OrganicsCollectionApplication from '../contact/organicsCollectionApplication';
+import EcycleNYCForm from '../contact/ecycleNYC';
 
 class WebformPage extends Component {
 
@@ -145,6 +146,8 @@ class WebformPage extends Component {
               // The big form
               case 'organics-collection-application':
                 return <OrganicsCollectionApplication />
+              case 'ecycle-nyc':
+                return <EcycleNYCForm/>
               default:
                 break;
             }
