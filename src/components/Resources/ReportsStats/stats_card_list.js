@@ -35,8 +35,10 @@ class StatsCardList extends Component {
     if (l > 4) {
       return (<Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/resources/statistics"}><SubSectionButton title='VIEW ALL'/></Link>);
     } else {
-      return null;
-    }
+      return (
+        <div style={{marginBottom: '25px'}}>
+        </div>
+      )};
 
   }
 

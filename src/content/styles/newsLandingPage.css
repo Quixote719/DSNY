@@ -44,7 +44,7 @@
 }
 
 .bottomCardTitleText{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .bottomNewsExplaination{
@@ -95,6 +95,12 @@
 
     .topNewsImageContainer{
         height: 162px;
+    }
+    .newsImageSection{
+        margin-top: 30px;
+    }
+    .bottomCardTitleText{
+        margin-top: 30px;
     }
 }
 

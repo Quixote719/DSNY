@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
-import Truncate from 'react-truncate';
+import TruncateMarkup from 'react-truncate-markup';
 import Parser from 'html-react-parser';
 import '../../content/styles/dsnyCard.css';
 
@@ -46,9 +46,11 @@ class TitleContentCard extends Component {
             <div className="TitleContentLink">
              <div className="CardTitle">{dataObject.title}</div>
              <div className="CardContent" >
-             <Truncate lines={3}>
+             <TruncateMarkup lines={3}>
+               <div>
                  {Parser(content)}
-             </Truncate>
+               </div>
+             </TruncateMarkup>
              </div>
             </div>
           </Link>
@@ -56,7 +58,5 @@ class TitleContentCard extends Component {
     );
   };
 };
-
-
 
 export default TitleContentCard;

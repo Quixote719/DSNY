@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import { Link } from 'react-router-dom';
+import TruncateMarkup from 'react-truncate-markup';
+import Parser from 'html-react-parser';
 import '../../content/styles/dsnyCard.css';
 
 class TitleCard extends Component {
@@ -14,15 +16,6 @@ class TitleCard extends Component {
         'display':'inline-block',
         'border': '1px solid #7CC04B'
       }
-      // wide:{
-      //   'height': '90px',
-      //   'display': 'inline-block',
-      // },
-      // wide_border:{
-      //   'height': '90px',
-      //   'display': 'inline-block',
-      //   'border': '1px solid #7CC04B'
-      // }
     }
     let CardType = styles.without_border;
     switch(this.props.type){
@@ -43,7 +36,11 @@ class TitleCard extends Component {
     return (
           <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + this.props.link}>
               <div style = {CardType} className='CardTitle'>
-                      {this.props.title}
+              <TruncateMarkup lines={2}>
+                <div>
+                  {Parser(this.props.title)}
+                </div>
+              </TruncateMarkup>
               </div>
           </Link>
     );
