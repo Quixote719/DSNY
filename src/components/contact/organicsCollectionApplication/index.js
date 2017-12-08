@@ -115,15 +115,15 @@ class OrganicsCollectionApplication extends Component {
         "OrganizationTypes": formObject.OrganizationTypes,
         'OrganizationTypeId': formObject.OrganizationTypeId,
         "SelectedOrganizationType": formObject.SelectedOrganizationType,
-        'OtherOrganizationType': formObject.OtherOrganizationType,        
+        'OtherOrganizationType': formObject.OtherOrganizationType,
         'OrganizationName':formObject.OrganizationName,
         'Title': formObject.OrganizationTitle1,
       }
       formObject.NonprofitForm.SecondaryContact = {
         'Title': formObject.OrganizationTitle2,
         "PhoneTypes": formObject.OrganizationPhoneTypes,
-        'PhoneTypeId': formObject.OrganizationPhoneTypeId,        
-        'SelectedPhoneType': formObject.OrganizationSelectedPhoneType,        
+        'PhoneTypeId': formObject.OrganizationPhoneTypeId,
+        'SelectedPhoneType': formObject.OrganizationSelectedPhoneType,
         'FirstName': formObject.OrganizationPersonFirstName,
         'LastName': formObject.OrganizationPersonLastName,
         'Phone': formObject.OrganizationPersonPhone,
@@ -209,7 +209,7 @@ class OrganicsCollectionApplication extends Component {
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
         if(success !== undefined) {
-          return displayThankYouPage(`<div>Hello</div>`, success, Titles.SuccessMessage, Titles.FailureMessage, true)
+          return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p><p><b>Where to leave your E-Waste items?</b></p><p>Place your E-Waste items at the curb for DSNY collection after 4 PM the day before your appointment date. DSNY will NOT come inside your house or ring your bell; items to be picked up MUST BE AT THE CURB.</p></div></div>`)
         }
 
         if (FormObject && FormObject !== undefined) {
