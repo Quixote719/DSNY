@@ -36,6 +36,13 @@ class AdoptABasketForm extends Component {
   /* BasketAddressAsEntered is a required field for the JSON */
   modifyFormObject(formObject){
      formObject.BasketAddressAsEntered = formObject.AddressAsEntered;
+     formObject.BasketHouseNumber = formObject.HouseNumber;
+     formObject.BasketStreet = formObject.Street;
+     formObject.BasketApartment = formObject.Apartment;
+     formObject.BasketBorough = formObject.Borough;
+     formObject.BasketCity = formObject.City;
+     formObject.BasketState = formObject.State;
+     formObject.BasketZip = formObject.Zip;
   }
 
 
@@ -49,9 +56,10 @@ class AdoptABasketForm extends Component {
 render() {
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
        
-        if(success !== undefined && success !== null) {
-            return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage);
-        }
+        
+    if(success !== undefined) {
+          return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
+    }
     
         if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>

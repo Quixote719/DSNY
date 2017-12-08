@@ -10,9 +10,10 @@ import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
+import isEmpty from 'lodash/isEmpty'
 import '../../../content/styles/compostRequest.css';
 
-
+export let requestedQtyMessage =  false;
 class EwasteRequestForm extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,7 @@ class EwasteRequestForm extends Component {
     this.updateValues = this.updateValues.bind(this);
     this.state = {
     FormObject:{},
-      editMode:true
+      editMode:true,
     }
   }
   componentWillReceiveProps(nextProps) {
@@ -46,15 +47,46 @@ class EwasteRequestForm extends Component {
       this.props.postFormObject(formObject, POST_E_WASTE_PICKUP_REQUEST);
   }
 
+  findTotal(){
+
+    const arr = Array.from(document.querySelectorAll('.incDecSubField, .incDecField'));
+    var tot=0;
+    for(var i=0;i<arr.length;i++){
+        if(parseInt((arr[i].value),10) && parseInt((arr[i].value),10) > 0)
+        {
+            tot += parseInt((arr[i].value),10);
+        }
+
+    }
+    console.log("Total" + tot)
+    return tot;
+  }
+
    validateForm(formObject, errors){
+     //requestedQtyMessage = false;
     //formObject & Values are same
     //if(formObject.buildingStatus && !formObject.overideAddressValidation)
       //errors.overideAddressValidation = 'Please check to confirm this is not a 10+ building'
-    if(formObject.commercialAddress && !formObject.overideAddressValidation)
-      errors.overideAddressValidation = 'Please check to confirm this is not a Coomercial building'
-    else if (formObject.Email !== formObject.ConfirmEmail) {
-      errors.ConfirmEmail = `The email addresses don't match`
+    if(!formObject.isDistrictActive){
+        errors.AddressAsEntered = 'The address you entered is currently not in the pilot program'
+        document.getElementsByName("AddressAsEntered")[0].focus();
     }
+    if((formObject.commercialAddress || formObject.buildingStatus)  && !formObject.overideAddressValidation)
+      errors.overideAddressValidation = 'Please check to confirm this is not a Coomercial building'
+    else if(this.findTotal() > 0)
+    {
+      requestedQtyMessage = false;
+      //document.getElementsByClassName("incDecSubField")[0].focus();
+    }  
+    else if(this.findTotal() === 0)
+    {
+      errors.ConfirmEmail = 'Error'
+      requestedQtyMessage = true;
+      //document.getElementsByClassName("incDecSubField")[0].focus();
+    }
+    // else if (formObject.Email !== formObject.ConfirmEmail) {
+    //   errors.ConfirmEmail = `The email addresses don't match`
+    // }
 
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'

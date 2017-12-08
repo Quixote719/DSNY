@@ -11,18 +11,6 @@ class ServiceRequestStatus extends Component {
         serviceRequest: "",      
       };
   }
-  componentWillMount(){
-    // if(this.props.match.params.keyword !==""){
-    //     this.setState({
-    //       serviceRequest: this.props.match.params.keyword
-    //     });
-    // }
-    // else{
-    //   this.setState({
-    //     serviceRequest: ""
-    //   });
-    // }
-}
   handleSelect = (event) =>{
       if(event.key === 'Enter'){
         if(this.state.serviceRequest && this.state.serviceRequest.trim().length !== 0){
@@ -62,8 +50,6 @@ class ServiceRequestStatus extends Component {
     this.props.handleChange("");                
 }
   render() {
-    // console.log("this.state.placeholder")
-    // console.log(this.state.placeholder)
     if(window.location.pathname.indexOf("contact") > -1){
       return (
         <div>

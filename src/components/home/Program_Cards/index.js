@@ -106,9 +106,6 @@ class ProgramCards extends Component {
     });
   }
   render() {
-    console.log("this.state.serviceRequest")
-    console.log(this.state.serviceRequest)
-
         return (
           <div className="programContainerParent programContainerParentTablet">
             <div className="programContainer">

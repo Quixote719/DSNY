@@ -23,7 +23,7 @@ class BreadcrumbSec extends Component {
     }
 
       return (
-        <Breadcrumb.Item key={Item.page_slug}>
+        <Breadcrumb.Item componentClass="span" key={Item.page_slug}>
           {linkUrl}
         </Breadcrumb.Item>
       )
@@ -34,7 +34,7 @@ class BreadcrumbSec extends Component {
     return (
       <div className="BreadcrumbList">
         <div className='SContainer'>
-          <Breadcrumb>
+          <Breadcrumb >
             <span className='fa fa-angle-left'></span>{this.renderBreadcrumbSec(this.props.breadcrumbList)}<span className='breadcrumbSymbol'>/</span>
           </Breadcrumb>
         </div>

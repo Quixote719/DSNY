@@ -1,8 +1,9 @@
 import _ from "lodash";
 import React, {Component} from "react";
-import {Col} from 'react-bootstrap';
+import {Col, Tooltip} from 'react-bootstrap';
 import FormStepper from '../form_stepper'
 import SnStepper from './pickup_request_sub_stepper'
+import {requestedQtyMessage} from './index';
 
 class RequestStepper extends Component {
 
@@ -46,7 +47,9 @@ class RequestStepper extends Component {
         <Col className='headerStepper' xs={12}>{this.props.header}</Col>
         <Col className='tableHeaderStepper' xs={7} sm={10} md={10}>{this.props.tableHeader}</Col>
         <Col className='tableHeaderStepper QuantityTitle' xs={5} sm={2} md={2}>
-          {`Quantity`}</Col>
+          {`Quantity`}
+					{requestedQtyMessage?<Tooltip placement="top" id="recaptchaTooltip" className={requestedQtyMessage?"in":""}>Requested Qty should be greater than Zero</Tooltip>:""}
+					</Col>
         <Col className='hairline' xs={12}></Col>
         {this.renderCatg(this.props.categories)}
       </div>
