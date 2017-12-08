@@ -27,7 +27,7 @@ const eeoComplaintElements = (props) => {
   console.log(values.editMode);
   return (<fieldset className='disabledContactForm' >
     
-    <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information='All fields are required unless indicated as optional.'/>
+    <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <Field component={TextInput} name="FullNameLastFirstMi" {...props} maxlength="100" disabled={values.editMode}/>
@@ -74,7 +74,7 @@ const eeoComplaintElements = (props) => {
     <FormSectionHeader title={Titles.SectionThree} />
     <Field component={CheckBoxInput} name="Affirmation" {...props} required={values.editMode} onChange={setFieldValue} />
     <Field component={TextInput} name="Signature" {...props} required={values.editMode}/>
-    <Field component={DateTimePickerInput} name="SignatureDate" {...props} onChange={setFieldValue} />
+    <Field component={DateTimePickerInput} name="SignatureDate" {...props} onChange={setFieldValue} required={values.editMode}/>
     </div>
 
   </fieldset>)

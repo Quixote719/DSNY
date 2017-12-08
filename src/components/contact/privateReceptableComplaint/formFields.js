@@ -27,7 +27,7 @@ const PrivateReceptableComplaintFormElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
+    <FormHeaderSmallSize title='Online Complaint Form' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
 
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
@@ -36,11 +36,11 @@ const PrivateReceptableComplaintFormElements = (props) => {
 
     <FormSectionHeader title={Titles.sectionTwo} />
     <Field component={CheckBoxInput} name="IsAnonymous" {...props}/>
-    <Field component={TextInput}  name="FirstName" {...props} maxlength="25" required={!props.values['IsAnonymous']} disabled={values.editMode}/> 
-    <Field component={TextInput}  name="LastName" {...props} maxlength="25" required={!props.values['IsAnonymous']} disabled={values.editMode}/> 
-    <Field component={TextInput}  name="Email" {...props} maxlength="50" required={!props.values['IsAnonymous']} disabled={values.editMode}/>
-    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50" required={!props.values['IsAnonymous']} disabled={values.editMode}/>
-    <Field component={TextInput} name="Phone" {...props} maxlength="21" required={!props.values['IsAnonymous']} disabled={values.editMode}/>
+    <Field component={TextInput}  name="FirstName" {...props} maxlength="25" required={!props.values['IsAnonymous']} isHidden={props.values['IsAnonymous']} disabled={values.editMode}/> 
+    <Field component={TextInput}  name="LastName" {...props} maxlength="25" required={!props.values['IsAnonymous']} isHidden={props.values['IsAnonymous']} disabled={values.editMode}/> 
+    <Field component={TextInput}  name="Email" {...props} maxlength="50" required={!props.values['IsAnonymous']} isHidden={props.values['IsAnonymous']} disabled={values.editMode}/>
+    <Field component={TextInput} name="ConfirmEmail" {...props} maxlength="50" required={!props.values['IsAnonymous']} isHidden={props.values['IsAnonymous']} disabled={values.editMode}/>
+    <Field component={TextInput} name="Phone" {...props} maxlength="21" required={!props.values['IsAnonymous']} isHidden={props.values['IsAnonymous']} disabled={values.editMode}/>
 
   </fieldset>)
 };
