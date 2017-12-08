@@ -93,10 +93,10 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               {<Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/news/:slug"} component={NewsDetails}/>}
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Location"} component={Location}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/dsny-garage-locations/:slug"} component={StandardPage}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Leadership"} component={Leadership}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Bureaus"} component={Bureaus}/>
               <Route exac path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan"} component={StrategicPlan}/>
-              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/Locations"} component={LocationDetails}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/fleet"} component={ViewOurFleet}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about"} component={About}/>
@@ -114,6 +114,7 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL  + "/services"} component={Services}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL +"/services/donate-goods/:slug"} component={WebformPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning/:slug"} component={StandardPage}/>
+              <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/recycling/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/:slug"} component={StandardPage}/>
 
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} component={Contact}/>

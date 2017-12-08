@@ -9,6 +9,10 @@ label.checkContainer{
   margin-left: -8px;
 }
 
+.form-group.has-feedback{
+  margin-bottom: 0;
+}
+
 .formContent{
   line-height: 28px;
   color: #262626;

@@ -29,7 +29,7 @@ const formFields = (props) => {
     <div>
       <FormAddressAutocomplete name="ViolatorAddressAsEntered" title={Titles.AddressAsEntered} {...props}  value="" disabled={values.editMode} required/>
     </div>
-    <Field component={TextInput} name="Apartment" fullRow={true} maxlength={50} disabled={values.editMode} {...props} required/>
+    <Field component={TextInput} name="Apartment" fullRow={true} maxlength={50} disabled={values.editMode} {...props}/>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <Field component={TextInput} name="ViolatorName" fullRow={true} maxlength={20} disabled={values.editMode} {...props} required/>
     <Field component={TextInput} name="ViolatorAddressAsEntered" fullRow={true} maxlength={50} disabled={values.editMode} {...props} required/>
