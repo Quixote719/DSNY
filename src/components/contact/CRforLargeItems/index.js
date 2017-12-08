@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {
-  POST_BULK_PICKUP_REQUEST, REST_WEBAPI_EPICKUP_URL
+  POST_BULK_PICKUP_REQUEST, REST_WEBAPI_EPICKUP_URL, Env
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, GetUnavailableDates, PickupLocations} from "../../../actions/contact_forms";
@@ -37,7 +37,7 @@ class CRFLRequestForm extends Component {
 updateValues(geoCoderAddressResult){
 
   this.props.PickupLocations();
- this.props.GetUnavailableDates(`${REST_WEBAPI_EPICKUP_URL}BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationRegularCollectionSchedule}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}&SectionAndSubsection=${geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection}`);
+ this.props.GetUnavailableDates(`${REST_WEBAPI_EPICKUP_URL(Env)}BulkPickups/GetUnavailableDates?GarbageSchedule=${geoCoderAddressResult.sanitationRegularCollectionSchedule}d&DistrictCode=${geoCoderAddressResult.sanitationDistrict}&RecyclingSchedule=${geoCoderAddressResult.sanitationRecyclingCollectionSchedule}&SectionAndSubsection=${geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection}`);
 }
 
 

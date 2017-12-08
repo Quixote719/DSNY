@@ -169,7 +169,35 @@
     font-size: 15px;
     line-height: 17px;
 }
+.errorServiceRequestTitle{
+    padding-top: 110px;
+    color: #000000;
+    font-size: 17.5px;	
+    font-weight: bold;	
+    line-height: 24px;	
+    text-align: center;
+}
+.errorServiceRequest{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 8px;
+    padding-bottom: 95px;
+    border-bottom: 1px solid #E3E3E3;
+    color: #000000;
+    font-size: 16px;	
+    line-height: 24px;	
+    text-align: center;
+}
 @media only screen and (max-width: 599px) {
+    .requestTypeCol{
+        border-right: none;    
+    }
+    .errorServiceRequestTitle{
+        padding-top: 80px;
+    }
+    .errorServiceRequest{
+        padding-bottom: 75px;
+    }
     .exampleRidSearchService{
         font-size: 13px;
     }
@@ -243,6 +271,12 @@
 }    
 
 @media (min-width: 500px) and (max-width: 959px) and (orientation: portrait){
+    .errorServiceRequestTitle{
+        padding-top: 80px;
+    }
+    .errorServiceRequest{
+        padding-bottom: 75px;
+    }
     .contactFormServiceRequest {
         padding-right: 70px;
     }
@@ -256,6 +290,15 @@
     }
 }    
 @media (min-width: 600px) and (max-width: 736px) and (orientation: landscape) {
+    .requestTypeCol{
+        border-right: none;    
+    }
+    .errorServiceRequestTitle{
+        padding-top: 80px;
+    }
+    .errorServiceRequest{
+        padding-bottom: 75px;
+    }
     .exampleRidSearchService{
         font-size: 13px;
     }
@@ -286,5 +329,13 @@
         width: 100%;
         margin-top: 10px;
         margin-bottom: 30px;
+    }
+}    
+@media (min-width: 960px) and (max-width: 1284px){
+    .errorServiceRequestTitle{
+        padding-top: 80px;
+    }
+    .errorServiceRequest{
+        padding-bottom: 75px;
     }
 }    

@@ -5,9 +5,9 @@ import '../../content/styles/subSectionHeader.css';
 const FormTitleCheckBoxes = props => {
   return (<div>
     <Col xs={12}>
-      <div className='FormMultiSelectTitle'>
-        {props.title}<span class="requiredAsterik"> *</span>
-      </div>      
+      <div className='FormMultiSelectTitle '>
+        { props.title } {props.redAstreix  && <span className="requiredAsterik">*</span> }
+      </div>
     </Col>
     <Col xs={12}>
     { props.subHeading && <div> {props.subHeading} </div>}
