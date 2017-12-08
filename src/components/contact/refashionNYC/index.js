@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {
-  PSOT_FORM_ORGANICS_BIN_URL
-} from '../../../constants/ApiConstants';
+import {POST_FORM_REFASHION_REQ_URL} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
@@ -27,7 +25,7 @@ class RefashionNYCForm extends Component {
   }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_ORGANICS_BIN_URL);
+      this.props.postFormObject(formObject, POST_FORM_REFASHION_REQ_URL);
   }
 
    validateForm(formObject, errors){

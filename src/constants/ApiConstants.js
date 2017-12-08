@@ -64,6 +64,7 @@ export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL}failur
 export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL}eventparticipationrequests`;
 export const POST_FORM_TRUCK_SPILLAGE_URL= `${REST_WEBAPI_URL}truckspillages`;
 export const POST_FORM_PRVT_RCPTBLE_CMPLNTS_URL= `${REST_WEBAPI_URL}privatereceptaclecomplaints`;
+export const POST_FORM_REFASHION_REQ_URL = `${REST_WEBAPI_URL}refashionNYC`;
 
 //10+ units pluto call
 export const POST_FORM_COLLECTION_BIN_REPORT = `${REST_WEBAPI_URL}collectionBinAnnualReports`;
