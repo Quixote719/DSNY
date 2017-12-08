@@ -62,7 +62,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={CheckBoxInput} name="RugsCollected" {...props} disabled={values.editMode}/>
     <Field component={CheckBoxInput} name="OtherCollected" {...props} disabled={values.editMode}/>
     <Field component={TextInput} name="OtherCollecdtedMaterialDescribe" {...props} fullRow={true} isHidden={!values.OtherCollected} required={values.OtherCollected} maxlength={"100"} disabled={values.editMode}/>
-    <FormTitleCheckBoxes title="IS THIS BIN MANAGED BY A NON-PROFIT AGENCY OR ORGNIZATION (OPTIONAL)"/>
+    <FormTitleCheckBoxes title="IS THIS BIN MANAGED BY A NON-PROFIT AGENCY OR ORGNIZATION"/>
     <Field component={DropdownInput} name="IsManagedByANonProfit" {...props}  onChange={setFieldValue} disabled={values.editMode} />
     <FormTitleCheckBoxes title="THE BIN OWNER RECEIVED WRITTEN PERMISSION FROM PROPERTY OWNER"/>
     <Field component={DropdownInput} name="ReceivedWrittenPermission" {...props}  onChange={setFieldValue} disabled={values.editMode} required/>

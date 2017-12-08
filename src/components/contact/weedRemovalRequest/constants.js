@@ -1,7 +1,7 @@
 export const Titles = {
   sectionOne: 'WHERE ARE THE WEEDS LOCATED',
   sectionTwo: 'CONTACT INFORMATION',
-  Description: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
+  Description: 'ADDITIONAL LOCATION INFORMATION',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',

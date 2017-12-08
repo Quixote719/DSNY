@@ -83,8 +83,8 @@ class FormDropdown extends Component {
     <div>
       <Col className='FormField' xs={12} sm={6} md={6}>
         <fieldset>
-          <div className='FormMultiSelectTitle'>{this.props.title}</div>
-          <DropdownButton aria-label={this.props.title} required={this.props.required} onFocus={this.handleChange} onClick={this.handleFocusOut} onBlur={this.handleFocusOut} disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} aria-label={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
+          <div className='FormMultiSelectTitle'>{this.props.title}{this.props.required?<span class="requiredAsterik"> *</span>:<span></span>}</div>
+          <DropdownButton required={this.props.required} onFocus={this.handleChange} onClick={this.handleFocusOut} onBlur={this.handleFocusOut} disabled={this.props.disabled ? this.props.disabled : false}  className={this.props.error?"formDropDownButtonText error":'formDropDownButtonText'} bsStyle="default" name={this.props.name} onChange={this.props.onChange} title={<div className = "dropDownTitle" > <div className="col-xs-10 dropDownSubTitle">
               {this.state.option }
             </div> < div className = "col-xs-2 downArrow" > <i className={this.checkIfTimeField()} ></i> < /div> </div>} noCaret id="dropdown-no-caret">
             {
