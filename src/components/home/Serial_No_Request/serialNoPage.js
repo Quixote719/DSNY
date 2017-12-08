@@ -38,7 +38,7 @@ class SerialNoPage extends Component {
         }
       }
       successCallback = (success)=>{
-        this.forceUpdate();
+            this.forceUpdate();
     }        
       contentServiceRequest = () =>{
           if(this.props.serviceRequestData){
@@ -74,7 +74,8 @@ class SerialNoPage extends Component {
                         </Col>
                     </Row>
                 </div>
-            </div>);
+            </div>
+            );
           }
           else{
               return(

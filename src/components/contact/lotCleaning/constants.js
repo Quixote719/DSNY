@@ -2,7 +2,7 @@ export const Titles = {
   sectionOne: 'DESCRIBE SETOUT LOCATION OF RECYCLABLE MATERIAL',
   sectionTwo: 'SPECIFIC INFORMATION',
   sectionThree: 'CONTACT INFORMATION',
-  AdditionalLocationInfo: "ADDITIONAL LOCATION INFORMATION (OPTIONAL)",
+  AdditionalLocationInfo: "ADDITIONAL LOCATION INFORMATION",
   DebrisInsideLot: 'Yes, debris inside the lot',
   DebrisInFrontOfLot: 'Yes, debris in front of the lot',
   VehiclesOnLot: 'Yes, vehicles on the lot',
