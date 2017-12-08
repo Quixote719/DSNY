@@ -28,7 +28,7 @@ const CompostRequestFormElements = (props) => {
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode} redAstreix={true}/>
     </div>
     <Field component={TextInput} name="OrganizationName" {...props}  maxlength={"50"} disabled={values.editMode} required fullRow={true}/>
     <Field component={DropdownInput} name="OrganizationTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.OrganizationTypes} disabled={values.editMode} required/>
