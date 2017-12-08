@@ -14,7 +14,8 @@ class FormStepper extends Component {
       this.state =  {
         count: props.obj.RequestedQty,
         object:props.obj,
-        hideToolTip: true
+        hideToolTip: true,
+        showToolTip: props.showToolTip,
       }
       this.increment = this.increment.bind(this);
       this.decrement = this.decrement.bind(this);
@@ -84,7 +85,7 @@ class FormStepper extends Component {
     }
 
     onInputChange(e) {
-
+        //this.setState({qtyMessage:false});
         categoryTotal = this.getCategoryTotal();
         subCategoryTotal = this.getSubCategoryTotal();
         fieldTotal = categoryTotal + subCategoryTotal;
@@ -108,7 +109,8 @@ class FormStepper extends Component {
     }
 
     renderItem(){
-
+      
+      
       if (this.props.disabled && this.props.header){
 
         if (this.props.hasSubCategory){
@@ -138,6 +140,7 @@ class FormStepper extends Component {
       }
 
       if (this.props.header){
+
         return (
         <div className='FormStepper'>
           <Col xs={12}><div className='incDecFieldtext'>{this.props.title}</div></Col>
@@ -147,6 +150,7 @@ class FormStepper extends Component {
         );
       }
       return (
+        
         <div className='FormStepper'>
           <Col xs={6} sm={8} md={8}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
