@@ -211,7 +211,7 @@ class FormAddressAutocomplete extends Component {
         return (
             <div>
                 {/* {console.log("DDD" + this.props.addressValidator)} */}
-                <FormTitleCheckBoxes title={this.props.title}/>
+                <FormTitleCheckBoxes title={this.props.title} />
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} sm={this.props.disabled ? 12 : 10} className = "addressAutosuggestCol">
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />

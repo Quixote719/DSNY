@@ -6,8 +6,8 @@ const FormTitleCheckBoxes = props => {
   return (<div>
     <Col xs={12}>
       <div className='FormMultiSelectTitle'>
-        {props.title}
-      </div>
+        {props.title}<span class="requiredAsterik"> *</span>
+      </div>      
     </Col>
     <Col xs={12}>
     { props.subHeading && <div> {props.subHeading} </div>}
