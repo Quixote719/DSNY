@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {
-  PSOT_FORM_ORGANICS_BIN_URL
-} from '../../../constants/ApiConstants';
+import {POST_FORM_REFASHION_REQ_URL} from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
@@ -27,7 +25,7 @@ class RefashionNYCForm extends Component {
   }
 
   postForm(formObject){
-      this.props.postFormObject(formObject, PSOT_FORM_ORGANICS_BIN_URL);
+      this.props.postFormObject(formObject, POST_FORM_REFASHION_REQ_URL);
   }
 
    validateForm(formObject, errors){
@@ -47,10 +45,8 @@ class RefashionNYCForm extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      if (success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessage)
-      }
-    }
+      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your ${Titles.formTitle} form has submitted successfully. </p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
+}
 
     if (FormObject && FormObject !== undefined) {
       return (<div className='container'><div className='form compostForm'>

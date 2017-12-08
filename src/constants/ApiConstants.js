@@ -25,11 +25,11 @@ export const REST_WEBAPI_URL  = (Env)  =>{
     case 0:
     return 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
     case 1:
-    return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
+    return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
     case 2:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
       default:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYApi/api/';
   }
 };
 
@@ -38,11 +38,11 @@ export const REST_WEBAPI_EPICKUP_URL = (Env) => {
     case 0:
     return 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/';
     case 1:
-    return 'https://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
+    return 'http://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
     case 2:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
       default:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/ePickupsAPI/api/';
   }
 };
 
@@ -53,11 +53,11 @@ export const REST_WEBAPI_GEOCODER_URL  = (Env) => {
     case 0:
     return 'http://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/';
     case 1:
-    return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
+    return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
     case 2:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
       default:
-      return 'https://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
+      return 'http://msswvw-dnsdnyvp.csc.nycnet/DSNYGeoCoder/api/';
   }
 };
 
@@ -123,10 +123,10 @@ export const POST_FORM_FAILURE_STORE_RECEPTACLES_URL = `${REST_WEBAPI_URL(Env)}f
 export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL(Env)}eventparticipationrequests`;
 export const POST_FORM_TRUCK_SPILLAGE_URL= `${REST_WEBAPI_URL(Env)}truckspillages`;
 export const POST_FORM_PRVT_RCPTBLE_CMPLNTS_URL= `${REST_WEBAPI_URL(Env)}privatereceptaclecomplaints`;
-
+export const POST_FORM_REFASHION_REQ_URL = `${REST_WEBAPI_URL(Env)}refashionNYC`;
 //10+ units pluto call
 export const POST_FORM_COLLECTION_BIN_REPORT = `${REST_WEBAPI_URL(Env)}collectionBinAnnualReports`;
-export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `https://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`
+export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `http://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`
 
 //Forms - Bulk Pickup Request
 export const FETCH_PICKUP_LOCATIONS_URL = `${REST_WEBAPI_EPICKUP_URL(Env)}BulkPickups/GetPickupLocations`;

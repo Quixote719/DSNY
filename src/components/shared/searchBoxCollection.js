@@ -88,9 +88,9 @@ class SearchBoxCollection extends Component {
                         <Col xs={12} md={12} className="searchCollectionParent">
                             <div id="TextureSquare">
                                 <div id="innersquare">
-                                    <ServiceRequestStatus classNameService = "contactServiceRequest" handleChange = {this.handleChangeService}/>
-                                    <i className="fa fa-search collectionSearch" id="collectionSearch" onClick ={()=> {this.handleSelectService()}}></i>
-                                    <div style={this.state.serviceRequest.trim().length === 0 ||this.state.serviceRequest ==="" ? {display: 'block'}:{display:'none'}} className="exampleRidSearch"> Search by the service request number you got when you submit the online request form. </div>
+                                    <ServiceRequestStatus classNameService = "contactFormServiceRequest" handleChange = {this.handleChangeService}/>
+                                    <i className="fa fa-search collectionSearch" id="collectionSearchService" onClick ={()=> {this.handleSelectService()}}></i>
+                                    <div style={this.state.serviceRequest.trim().length === 0 ||this.state.serviceRequest ==="" ? {display: 'block'}:{display:'none'}} className="exampleRidSearchService"> Search by the service request number you got when you submit the online request form. </div>
                                 </div>
                             </div>
                         </Col>
