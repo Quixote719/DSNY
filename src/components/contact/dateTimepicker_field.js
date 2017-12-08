@@ -46,7 +46,7 @@ render() {
   return(
     <div>
     <InputGroup>
-      <MaskedInput mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}  error={this.props.error} onFocus={this.inputFocus} onBlur={this.handleFocusOut} className={`react-datepicker-ignore-onclickoutside ${this.props.className}`} name={this.props.name} required={this.props.required} placeholder={this.props.placeholder} onClick={this.props.onClick} value={this.props.value} onChange={this.props.onChange} disabled={this.props.disabled} />
+      <MaskedInput mask={[/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]}  error={this.props.error} onFocus={this.inputFocus} onBlur={this.handleFocusOut} className={`react-datepicker-ignore-onclickoutside ${this.props.className}`} name={this.props.name} aria-label={this.props.name} required={this.props.required} placeholder={this.props.placeholder} onClick={this.props.onClick} value={this.props.value} onChange={this.props.onChange} disabled={this.props.disabled} />
       {!this.props.disabled?<span  class="input-group-addon" onClick={this.props.onClick}><span class="glyphicon glyphicon-calendar"></span></span>:null}
 
 
@@ -101,7 +101,7 @@ class FormDateTimePicker extends Component {
           <fieldset>
             <div className='FormMultiSelectTitle input-group'>{this.props.title}</div>
             <div className="form-group has-feedback">
-              <DatePicker  selected={this.state.startDate ? moment(this.state.startDate) : ''}  minDate = {d ? moment(d.StartDate) : null}  filterDate={d ? this.isWeekday : null} excludeDates={dd} maxDate = { d ? moment(d.EndDate): null} placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
+              <DatePicker  selected={this.state.startDate ? moment(this.state.startDate) : ''}  minDate = {d ? moment(d.StartDate) : null}  filterDate={d ? this.isWeekday : null} excludeDates={dd} maxDate = { d ? moment(d.EndDate): null} placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name} aria-label={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
             </div>
           </fieldset>
         </Col>

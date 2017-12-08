@@ -2,6 +2,7 @@
     margin: 0;
 }
 .siteSearchBoxParent{
+    padding-left: 8px;
     padding-top: 7px;
     display: inline-block;
     position: absolute;

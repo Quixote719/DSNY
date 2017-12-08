@@ -1,6 +1,6 @@
 const ROOT_WORDPRESS_URL = 'http://dsnydev.wpengine.com/wp-json/';
-
- export const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
+export const REST_WEBAPI_COLLECTION_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/';
+export const REST_WEBAPI_URL = 'http://msdwvw-dsndny01.csc.nycnet/DSNYApi/api/';
 export const REST_WEBAPI_EPICKUP_URL = 'http://msdwvw-dsndny01.csc.nycnet/ePickupsAPI/api/';
 const constructWpUrl = url => `${ROOT_WORDPRESS_URL}${url}${url.indexOf('?') === -1
   ? '?'
@@ -19,7 +19,7 @@ export const SITE_SEARCH_RESULTS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/searchSite?
 export const SERVICE_REQUEST_URL = `${REST_WEBAPI_URL}servicerequests/`
 
 export const RID_OF_ITEM_DETAILS_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getDisposalItemPage?name`
-export const COLLECTION_SCHEDULE_URL = "http://msdwvw-dsndny01.csc.nycnet/DSNYGeoCoder/api/DSNYCollection/CollectionSchedule/"
+export const COLLECTION_SCHEDULE_URL = `${REST_WEBAPI_COLLECTION_URL}DSNYCollection/CollectionSchedule/`
 export const HOLIDAY_DATA_URL = `${REST_WEBAPI_URL}Holidays/CheckSanitationHolidayToday`
 export const CONTACT_PAGE_DATA_URL = `${ROOT_WORDPRESS_URL}dsny/v1/getPageData?name=contact-page`
 
