@@ -73,31 +73,8 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
 
                             DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
-                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;
-
-                            // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                            //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                            //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                            //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
-                            // }
-                            // else{
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule === null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = null;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
-                                // }
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule === null && data.data.Goat.sanitationOrganicsCollectionSchedule !== null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = null;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
-                                // }
-                                // if(data.data.Goat.sanitationRegularCollectionSchedule !== null && data.data.Goat.sanitationRecyclingCollectionSchedule !== null && data.data.Goat.sanitationOrganicsCollectionSchedule === null){
-                                //     DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
-                                //     DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = null;
-                                // }
-                            // }
-                            console.log(DSNYGeoCoder)
+                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
+                            console.log(DSNYGeoCoder)                            
                         }
                         else {
                             DSNYGeoCoder = null;
