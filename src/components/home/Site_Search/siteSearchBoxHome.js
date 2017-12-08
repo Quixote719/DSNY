@@ -97,7 +97,6 @@ class SiteSearchBox extends Component {
           value: "",
           placeholder: "Search"          
         });
-        console.log(document.activeElement)        
         document.activeElement.blur();
         if(this.props.showModal)
           this.props.showModal();
