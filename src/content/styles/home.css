@@ -382,6 +382,7 @@ input.serviceRequestSearch:focus {
     text-align: center;
 }
 .initiativesTitleDiv:hover {
+    cursor: pointer;
     color: #7CC04B;
 }
 
