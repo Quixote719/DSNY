@@ -209,6 +209,9 @@ label.checkContainer{
   margin-top: 20px !important;
 }
 @media only screen and (max-width: 575px){
+    .subSectionButton{
+      width: 100%!important;
+    }
     .formSubmitBtn{
       margin: 20px 0;
       width: 100%;
