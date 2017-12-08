@@ -59,7 +59,7 @@ class FormField extends Component {
       switch (name) {
         case "phone":
           return (<div>
-            <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                   ? this.props.value
                   : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                   />
@@ -68,7 +68,7 @@ class FormField extends Component {
             </div>);
         case "zip":
           return (<div>
-            <MaskedInput mask={[/\d/, /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <MaskedInput mask={[/\d/, /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                   ? this.props.value
                   : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                   />
@@ -78,7 +78,7 @@ class FormField extends Component {
 
         default:
            return (<div>
-            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+            <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
                 : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
@@ -89,7 +89,7 @@ class FormField extends Component {
     }
 
     return (<div>
-     <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+     <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name} aria-label={this.props.name}  onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
          ? this.props.value
          : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
          />

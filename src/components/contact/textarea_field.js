@@ -33,7 +33,7 @@ class FormTextarea extends Component {
   renderField() {    
     console.log(isEmpty(this.props.value) , this.props.value , this.props.error);      
     return (<div>
-     <textarea ref={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
+     <textarea ref={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} type="text" name={this.props.name} aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
          ? this.props.value
          : ''} disabled={this.props.disabled} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "") && this.props.error) ? "formTextarea error":'formTextarea'} error={this.props.error}
          />
@@ -44,7 +44,7 @@ class FormTextarea extends Component {
 
 //   renderField() {          
 //     return (<div>
-//      <textarea type="text" ref={this.props.name} name={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value 
+//      <textarea type="text" ref={this.props.name} name={this.props.name} aria-label={this.props.name} onFocus={this.handleChange} onKeyUp={this.handleChange} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value 
 //             ? this.props.value 
 //             : ''} disabled={this.props.disabled ? this.props.disabled : false} required={this.props.required} className={this.props.error ? 'formTextarea error' : 'formTextarea'} error={this.props.error}></textarea>
 

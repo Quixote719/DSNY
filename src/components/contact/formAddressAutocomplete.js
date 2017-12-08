@@ -72,7 +72,7 @@ class FormAddressAutocomplete extends Component {
         //else
         //previousErrorMessage ="";
         //if((previousErrorMessage !== this.props.errors[this.props.name]) || (!addressValidated && this.props.addressValidator !==1))
-        if((this.props.errors[this.props.name] && !addressValidated ) || (!addressValidated) || (this.props.addressValidator !==1))
+        if((this.props.errors[this.props.name] && !addressValidated ) || (!addressValidated) || (this.props.addressValidator !==1) || (this.props.errors[this.props.name] === "The address you entered is currently not in the pilot program"))
             this.setState({hideToolTip: false});
 
     }
@@ -181,7 +181,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]) || (this.props.errors[this.props.name] === "The address you entered is currently not in the pilot program"))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const cssClassesSelected = {
@@ -190,7 +190,7 @@ class FormAddressAutocomplete extends Component {
             googleLogoImage: 'googleLogoImage',
             autocompleteItem: 'collectionScheduleItem',
             autocompleteItemActive: 'collectionScheduleActiveItem',
-            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]))?'collectionSearchInput error':'collectionSearchInput',
+            input: ((this.props.errors[this.props.name] && this.state.address.trim() === "") || (this.props.errors[this.props.name] && !addressValidated) || (this.props.errors[this.props.name] && this.props.addressValidator !==1) || (!addressValidated && (this.props.addressValidator !==1) && this.props.errors[this.props.name]) || (this.props.errors[this.props.name] === "The address you entered is currently not in the pilot program"))?'collectionSearchInput error':'collectionSearchInput',
             autocompleteContainer: 'collectionScheduleLanding-autocomplete-container'
           }
           const options = {
@@ -215,7 +215,7 @@ class FormAddressAutocomplete extends Component {
                 <Row className = "formPlacesAutosuggestRow">
                     <Col xs={12} sm={this.props.disabled ? 12 : 10} className = "addressAutosuggestCol">
                     <AddressAutocomplete inputProps = {inputProps} options = {options} onSelect={this.handleSelect} onEnterKeyDown={this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
-                    {this.props.errors[this.props.name] && !this.state.hideToolTip ?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
+                    {(this.props.errors[this.props.name] && !this.state.hideToolTip) || this.props.errors[this.props.name] === "The address you entered is currently not in the pilot program" ?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.state.address.trim() !== ""?this.props.errors[this.props.name]:"This field is required"}</Tooltip>:null}
 
                     {errorMessage}
 
