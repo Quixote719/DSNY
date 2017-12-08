@@ -2,7 +2,7 @@ export const Titles = {
   sectionOne: 'WHERE IS THE STREET OBSTRUCTION LOCATED',
   sectionTwo: 'CONTACT INFORMATION',
   Description: 'PLEASE DESCRIBE THE OBSTRUCTION',
-  AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION (OPTIONAL)',
+  AdditionalLocationInfo: 'ADDITIONAL LOCATION INFORMATION',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
   Email: 'E-MAIL',
