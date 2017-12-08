@@ -10,7 +10,7 @@ export const Titles = {
   sectionThree: 'CONTACT INFORMATION',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
-  ContactRoleInTheBuildingTypesId:'WHAT US YOUR ROLE IN THE BUILDING ?',
+  ContactRoleInTheBuildingTypesId:'WHAT IS YOUR ROLE IN THE BUILDING ?',
   ContactRoleInTheBuildingOther:'SPECIFY OTHER ROLE',
   ContactEmail: 'E-MAIL',
   ContactPhone: 'PHONE',
@@ -31,7 +31,7 @@ export const Titles = {
   Describe:'PLEASE DESCRIBE (OPTIONAL)',
   AdditionalComments:'PLEASE INDICATE ANY ADDITIONAL COMMENTS OR QUESTIONS YOU HAVE ABOUT THE PROGRAM(S). (OPTIONAL)',
   HaveYouSpokenWith:'',
-
+  formTitle:'refashionNYC',
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
   RequiredFieldMessage: 'This field is required',

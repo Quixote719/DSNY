@@ -41,7 +41,7 @@ const RefashionNYCFormElements = (props) => {
     <Field component={TextInput} name="FirstName" {...props} required maxlength={"25"}/>
     <Field component={TextInput} name="LastName" {...props} required maxlength={"25"}/>
     <Field component={DropdownInput} name="ContactRoleInTheBuildingTypesId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ContactRoleInTheBuildingType}  required disabled={values.editMode}/>
-    <Field component={TextInput} name="ContactRoleInTheBuildingOther" {...props} />
+    <Field component={TextInput} name="ContactRoleInTheBuildingOther" {...props} isHidden={values.ContactRoleInTheBuildingTypesId !== 8}/>
     <Field component={TextInput} name="ContactEmail" {...props} required/>
     <Field component={TextInput} name="ContactPhone" {...props} required/>
     <Field component={DropdownInput} name="ContactPhoneTypeId" {...props}  ondropDownChange={handledropDown} onChange={setFieldValue} options={values.ContactPhoneType}  required disabled={values.editMode}/>
@@ -56,9 +56,9 @@ const RefashionNYCFormElements = (props) => {
     <Field component={TextInput} name="BuildingManagementEmail" {...props} required/>
     <Field component={TextInput} name="BuildingManagementPhone" {...props} required/>
     <Field component={DropdownInput} name="BuildingManagementPhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.BuildingManagementPhoneType}  required disabled={values.editMode}/>
-    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM ?" {...props}
+    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH YOUR BUILDING MANAGEMENT ABOUT THE PROGRAM ?" redAstreix={true} {...props} 
                subHeading="Note: Enrollment may be faster if tenants and building staff notify the building management of their request"/>
-    <Field component={DropdownInput} name="HaveYouSpokenWith" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} required disabled={values.editMode}/>
+    <Field component={DropdownInput} name="HaveYouSpokenWith" {...props} hideAsterix={true} ondropDownChange={handledropDown} onChange={setFieldValue} required disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionFive} />
     <Field component={DropdownInput} name="HowDidYouHearTypeId" {...props} onChange={setFieldValue} options={values.HowDidYouHearType} required disabled={values.editMode}/>
