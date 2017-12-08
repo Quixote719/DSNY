@@ -1,6 +1,6 @@
 export const Titles = {
   sectionOne: 'WHERE IS THE EVENT',
-  Apartment:'FLOOR/SUITE/APT (OPTIONAL)',
+  Apartment:'FLOOR/SUITE/APT',
   AddressAsEntered:'ADDRESS',
   sectionTwo: 'MORE INFORMATION ABOUT YOUR SITE',
   sectionThree: 'POTENTIAL DATES FOR SITE VISIT',
@@ -11,7 +11,7 @@ export const Titles = {
   CategorizeSiteTypeId: 'CATEGORIZE YOUR SITE',
   SpecifyOther:'SPECIFY OTHER',
   NameOfSite:'NAME OF SITE',
-  AlternateSiteName:'ALTERNATE SITE NAME (OPTIONAL)',
+  AlternateSiteName:'ALTERNATE SITE NAME',
   Notes:'NOTES ABOUT YOUR SITE',
   CurrentRecyclingSetup:'CURRENT RECYCLING SETUP',
   PfirstName:'FIRST NAME',
@@ -30,6 +30,7 @@ export const Titles = {
   Visit2PotentialDate:'DATE FOR POTENTIAL VISIT 2',
   RequiredFieldMessage: 'This field is required',
   Message: "MESSAGE",
+  formTitle:'Site Visit Request',
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
 }

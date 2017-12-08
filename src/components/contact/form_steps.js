@@ -77,6 +77,11 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressVal
     values.ConfirmEmail = "";
   }
 
+  if(!values.DebrisInsideLot)
+  {
+    values.PublicArea = "";
+  }
+
 	if (values && geoCoderAddressResult){
 
     values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
