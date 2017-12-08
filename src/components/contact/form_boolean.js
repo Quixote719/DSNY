@@ -68,7 +68,7 @@ class FormBoolean extends Component {
   renderOptions() {
     return (<div>
       <label className="checkContainer">
-      <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)}
+      <input ref="checkboxinput" type="checkbox" disabled={this.props.disabled} onFocus={this.handleChange} onKeyUp={this.handleChange} name={this.props.name} aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value ? this.props.value : ''} checked={this.props.value} onClick={event => this.onInputChange(event)}
       className={this.props.error?"input error":'input'} required={this.props.required} error={this.props.error}/>
 
       <span className="checkmark"></span>
