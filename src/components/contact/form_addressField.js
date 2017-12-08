@@ -38,7 +38,7 @@ class FormField extends Component {
 
   renderField() {          
            return (<div>
-            <FormAddressAutocompleteNoValidation ref={this.props.name}  maxLength = {this.props.maxlength}  type="text" name={this.props.name} onChange = {event => this.onInputChange(event)}
+            <FormAddressAutocompleteNoValidation ref={this.props.name}  maxLength = {this.props.maxlength}  type="text" name={this.props.name} aria-label={this.props.name} onChange = {event => this.onInputChange(event)}
                value={this.props.value ? this.props.value : ''} onBlur =  {event => this.onInputChange(event)} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                   <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
