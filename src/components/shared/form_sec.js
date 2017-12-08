@@ -299,9 +299,12 @@ class FormSec extends Component {
     let cardCount = dataObject.card_data.card_count;
 
 
+
+
+
+
+
     function checkforGreenPatternLine(section,header,content,cards,finalSec,sectionType){
-    console.log(finalSec);
-    console.log(section);
     /*The green line appears in the form introduction, only when it has both Header & Content & There are no cards & if the section
        Style is form-introduction */
     if(section == 'form-introduction'){
@@ -311,12 +314,9 @@ class FormSec extends Component {
                     </div>
             );
     }
-    /* If the sectionType is a normal Page such as the 'get-involved' page, then depending on if the page section is last section or
-    not, we give proper padding */
-    else if (sectionType == 'pagesection' ){
-            return(
-                     finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>
-            );
+    /* If the sectionType is a normal Page such as the 'get-involved' page, then depending on if the page secti*/
+    else if (sectionType != ''){
+        return section.includes('-form') ? '' :  ( finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>);
     } 
       
     }

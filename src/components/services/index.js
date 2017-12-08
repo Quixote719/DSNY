@@ -62,7 +62,7 @@ class Services extends Component {
             }
             else if(sec.name == 'cleaning'){
               return(
-                <div className='SContainer' key={sec.id}>
+                <div className='SContainer normalsection' key={sec.id}>
                   <SubSectionHeader title={sec.header}/>
                   <ContentCardRow dataObject = {sec}/>
                   <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning"}>
