@@ -25,10 +25,10 @@ const eeoComplaintElements = (props) => {
     setFieldValue,
   } = props;
   console.log(values.editMode);
-  return (<fieldset className='disabledContactForm' >
-    
+  return (<fieldset className='disabledContactForm eeoComplaint' >
+
     <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
-    
+
     <FormSectionHeader title={Titles.sectionOne}/>
     <Field component={TextInput} name="FullNameLastFirstMi" {...props} maxlength="100" disabled={values.editMode}/>
     <Field component={TextInput} name="EmployeeId" {...props} maxlength="100" disabled={values.editMode}/>
@@ -36,7 +36,7 @@ const eeoComplaintElements = (props) => {
     <Field component={TextInput} name="WorkLocation" {...props} maxlength="100"disabled={values.editMode} />
     <Field component={TextInput} name="Supervisor" {...props} maxlength="100" disabled={values.editMode}/>
     <Field component={TextInput} name="Phone" {...props} maxlength="100" disabled={values.editMode}/>
-    
+
     <FormSectionHeader title={Titles.SectionTwo} />
     <Field component={DateTimePickerInput} name="IncidentYear" {...props} onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={DropdownInput}  name="IncidentTime" timeField={true} {...props} ondropDownChange={handledropDown} onChange={setFieldValue}  options={values.IncidentTimesArray} disabled={values.editMode}/>

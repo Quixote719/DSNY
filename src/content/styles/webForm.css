@@ -13,6 +13,10 @@ label.checkContainer{
   margin-bottom: 0;
 }
 
+.eeoComplaint .checkContainer ~ #tooltip-left{
+  margin-top: -115px;
+}
+
 .formContent{
   line-height: 28px;
   color: #262626;
