@@ -217,9 +217,12 @@ class FormSec extends Component {
     /* Get Form Introduction Header OR Default Header OR Green header, depending on word-press conditions 
        The Form Introduction Header is the same as the Equal Employment Opportunity Complaint Form Header */
     if (dataObject.header !== '') {
-        if(dataObject.section_style == 'form-introduction' || 'equal-employment-opportunity-complaint-form'){
+        if(dataObject.section_style == 'form-introduction'){
             header = this.getFormIntroductionHeader(dataObject);
-        }else{
+        }else if(dataObject.section_style == 'equal-employment-opportunity-complaint-form'){
+            header = this.getFormIntroductionHeader(dataObject);
+        }
+        else{
             header = this.getHeader(dataObject,header);
         }
     }
