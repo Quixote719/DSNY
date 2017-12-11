@@ -1,11 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
-import {
-  PSOT_NYC_AGENCY_RECYCLING_URL
-} from '../../../constants/ApiConstants';
+import {POST_FORM_ECYCLE_NYC_REQ_URL} from '../../../constants/ApiConstants';
 //Actions
-import {fetchFormObject, postFileObject} from "../../../actions/contact_forms";
+import {fetchFormObject, postFormObject} from "../../../actions/contact_forms";
 import FormSteps, {displayThankYouPage} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
@@ -15,7 +13,7 @@ import ThankYou from '../thank_you';
 
 const formTitles = Titles;
 
-class NycAgencyRecycling extends Component {
+class EcycleNYCForm extends Component {
   constructor(props) {
     super(props);
     this.postForm = this.postForm.bind(this);
@@ -26,19 +24,14 @@ class NycAgencyRecycling extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.props.fetchFormObject();
-  // }
-
-
   postForm(formObject){
-      this.props.postFileObject(formObject, PSOT_NYC_AGENCY_RECYCLING_URL);
+      this.props.postFormObject(formObject, POST_FORM_ECYCLE_NYC_REQ_URL);
   }
 
-  validateForm(formObject, errors){
+   validateForm(formObject, errors){
     //formObject & Values are same
-    if (formObject.Email !== formObject.ConfirmEmail) {
-      errors.ConfirmEmail = `The email addresses don't match`
+     if (formObject.OrganizationTaxIdNumber === "TEST") {
+      errors.OrganizationTaxIdNumber = 'Please enter a valid Organization TaxId Number'
     }
     // if (!values.OrganizationWebsite) {
     //   errors.OrganizationWebsite = 'Please enter a valid Organization Website'
@@ -52,7 +45,7 @@ class NycAgencyRecycling extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Collection Bin on Public Property Removal Request form has been submitted succeffuly.</p><p>An email confirmation has been sent to your contact email address</p></div></div>`)
+      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your ${Titles.formTitle} form has submitted successfully. </p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
     }
 
     if (FormObject && FormObject !== undefined) {
@@ -60,6 +53,9 @@ class NycAgencyRecycling extends Component {
               <FormSteps formFields={formFields} geoCoderAddressResult={geoCoderAddressResult} isAddressValidated={isAddressValidated} success={success} customFormData={FormObject} validateForm={this.validateForm} formTitles={Titles} onSubmit={this.postForm}/>
               </div></div>);
     };
+    // if (error){
+    //     return (<FetchError onRetry={ () => this.props.fetchOrganicsBinForm()}/>);
+    // }
     return(<div className='loader container'></div>)
  };
 };
@@ -70,4 +66,4 @@ function mapStateToProps(state) {
 }
 
 
-export default connect(mapStateToProps, {fetchFormObject, postFileObject})(NycAgencyRecycling);
+export default connect(mapStateToProps, {fetchFormObject, postFormObject})(EcycleNYCForm);

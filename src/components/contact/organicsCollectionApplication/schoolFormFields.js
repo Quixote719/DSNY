@@ -46,15 +46,15 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="SchoolPersonEmail" {...props}  maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="SchoolPersonPhone" {...props}  maxlength={"21"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="SchoolPhoneTypeId" title={Titles.PhoneType} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/>
-    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH MEMBERS OF YOUR BUILDING'S FACILITIES/MAINTENANCE STAFF ABOUT THE PROGRAM" />
-    <Field component={DropdownInput} name="SchoolHasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH MEMBERS OF YOUR BUILDING'S FACILITIES/MAINTENANCE STAFF ABOUT THE PROGRAM" redAstreix={true}/>
+    <Field component={DropdownInput} name="SchoolHasInformedStaffAboutProgram" {...props} hideAsterix={true} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
     <FormSectionHeader title={Titles.sectionFive}/>
     <Field component={DropdownInput} name="IsNonprofitSchool" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
 
     <div className="row">
       <Col xs={12} sm={12} md={12}>
-        <FormTitleCheckBoxes title="DOES YOUR SCHOOL CURRENTLY RECEIVE DEPARTMENT OF SANITATION COLLECTION?" />
-        <Field component={DropdownInput} name="ReceivesDsnyCollection" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
+        <FormTitleCheckBoxes title="DOES YOUR SCHOOL CURRENTLY RECEIVE DEPARTMENT OF SANITATION COLLECTION?" redAstreix={true}/>
+        <Field component={DropdownInput} name="ReceivesDsnyCollection" {...props} hideAsterix={true} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>
       </Col>
     </div>
     <div className="row">
@@ -63,7 +63,7 @@ const CompostRequestFormElements = (props) => {
       </Col>
     </div>
     <Field component={TextInput} name="PrivateFoodServiceVendorDescription" {...props} fullRow={true} maxlength={"50"} disabled={values.editMode} isHidden={values.UsesPrivateFoodServiceVendor == false || values.UsesPrivateFoodServiceVendor == null} required={values.UsesPrivateFoodServiceVendor == true} />
-    <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode}/>
     <Field component={TextInput} name="OtherAwarenessSource" {...props} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Comments" {...props} disabled={values.editMode}/>
   </fieldset>)

@@ -36,7 +36,7 @@ export const formObject = {
   "BinLocationZip": null,
   "BinLocationAdditionalLocationInfo": null,
   "BinColor": null,
-  "ObservationDate": "0001-01-01T00:00:00",
+  "ObservationDate": null,
   "BinTypeList": [
     {
       "Id": 0,

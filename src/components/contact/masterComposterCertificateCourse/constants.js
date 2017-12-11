@@ -4,9 +4,9 @@ export const Titles = {
   SectionThree: 'APPLICATION QUESTIONS (MAXIMUM 1500 CHARACTERS FOR EACH)',
   SectionFour:'CONTACT INFORMATION',
   PrefferedLocation:'PREFERED LOCATION',
-  Apartment:'FLOOR/SUITE/APT (OPTIONAL)',
+  Apartment:'FLOOR/SUITE/APT',
   AddressAsEntered:'ADDRESS',
-  AppliedToProgramBefore:'HAVE YOU APPLIED TO THIS PROGRAM BEFORE (OPTIONAL) ',
+  AppliedToProgramBefore:'HAVE YOU APPLIED TO THIS PROGRAM BEFORE',
   DescribeExperience:'DESCRIBE YOUR COMPOSTING EXPERIENCE',
   WhyYouWantToBecome:'WHY DO YOU WANT TO BECOME A MASTER COMPOSTER',
   HowWouldYouUse:'HOW WOULD YOU USE YOUR MASTER COMPOSTER TRAINING',
@@ -14,6 +14,7 @@ export const Titles = {
   FirstName:'FIRST NAME',
   LastName:'LAST NAME',
   Email:'E-MAIL',
+  formTitle:'Master Composter Certificate Course',
   ConfirmEmail:'CONFIRM E-MAIL',
   Phone:'PHONE',
   Message: "MESSAGE",
@@ -30,6 +31,13 @@ export const formObject = {
   "PrefferedLocation": null,
   "Address":null,
   "PrefferedLocationType": [
+    {
+      "Id":0,
+      "Name":'Select one',
+      "DisplayName": "Select one",
+      "Selected": true,
+
+    },
     {
       "Id": 1,
       "Name": "Brooklyn",

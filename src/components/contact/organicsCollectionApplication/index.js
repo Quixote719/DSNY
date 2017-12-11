@@ -226,7 +226,7 @@ class OrganicsCollectionApplication extends Component {
               <div className='container' style={displayID}>
                 <div className="IDSelector">
                     <div className="row">
-                      <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+                      <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
                       <FormSectionHeader title={Titles.sectionOne}/>
                     </div>
                     <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>

@@ -17,7 +17,7 @@ import {Col} from 'react-bootstrap';
 
 
 // Our inner form component which receives our form's state and updater methods as props
-const RefashionNYCFormElements = (props) => {
+const ecycleNYCFormElements = (props) => {
   const {
     values,
     handledropDown,
@@ -70,4 +70,4 @@ const RefashionNYCFormElements = (props) => {
   </fieldset>)
 };
 
-export default RefashionNYCFormElements;
+export default ecycleNYCFormElements;

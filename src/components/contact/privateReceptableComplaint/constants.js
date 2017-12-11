@@ -2,8 +2,8 @@ export const Titles = {
   sectionOne: 'WHAT IS THE ADRESS OF THE VIOLATOR ?',
   sectionTwo: 'CONTACT INFORMATION',
   AddressAsEntered:'NEAREST ADDRESS',
-  AdditionalLocationInfo:'ADDITIONAL LOCATION INFORMATION (OPTIONAL)', // This Field Not in JSON, confirm with Kenyatta
-  ViolatorName:'NAME OF VIOLATOR OR BUSINESS (OPTIONAL)',
+  AdditionalLocationInfo:'ADDITIONAL LOCATION INFORMATION', // This Field Not in JSON, confirm with Kenyatta
+  ViolatorName:'NAME OF VIOLATOR OR BUSINESS',
   IsAnonymous:'I would like to remain anonymous',
   FirstName:'FIRST NAME',
   LastName:'LAST NAME',
@@ -11,6 +11,7 @@ export const Titles = {
   ConfirmEmail:'CONFIRM EMAIL',
   Phone:'PHONE',
   RequiredFieldMessage: 'This field is required',
+  formTitle:'Private Receptacle Complaint',
   Message: "MESSAGE",
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
