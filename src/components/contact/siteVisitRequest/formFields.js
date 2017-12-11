@@ -39,8 +39,8 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required disabled={values.editMode}/>
 
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
-    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} required onChange={setFieldValue} disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} required onChange={setFieldValue} disabled={values.editMode}/>
     <FormTitleCheckBoxes subHeading="Please provide at least 10 days of advance notice." />
 
     <FormSectionHeader title={Titles.sectionFour} />

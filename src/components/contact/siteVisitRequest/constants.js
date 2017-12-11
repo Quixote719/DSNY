@@ -107,8 +107,8 @@ export const formObject = {
   "AlternateSiteName": null,
   "Notes": null,
   "CurrentRecyclingSetup": null,
-  "Visit1PotentialDate": "0001-01-01T00:00:00",
-  "Visit2PotentialDate": "0001-01-01T00:00:00",
+  "Visit1PotentialDate": null,
+  "Visit2PotentialDate": null,
   "PrimarySelectedPhoneType": [
       {
         "Id":0,
