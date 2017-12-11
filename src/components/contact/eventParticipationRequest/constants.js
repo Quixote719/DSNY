@@ -123,7 +123,7 @@ export const formObject = {
   ],
   "AttendeeCountRangeId": 0,
   "SelectedAttendeeCountRange": null,
-  "IsRecurrent":null,
+  "IsRecurrent":0,
   "ParticipatingOrganizationsDescription":null,
   "AdditionalEventInfo":null,
   "ProvidedEquipmentDescription":null,
