@@ -67,7 +67,10 @@ export function displayThankYouPage(displayMessage, success, successMessage, fai
 function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressValidated){
 
   if (values && isAddressValidated)
+  {
       values.AddressAsEntered = isAddressValidated
+      values.BinLocationAddressAsEntered = isAddressValidated
+  }
 
   if(values.IsAnonymous)
   {
@@ -84,7 +87,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressVal
 
 	if (values && geoCoderAddressResult){
 
-    values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
+    values.BinLocationAddressAsEntered = geoCoderAddressResult.addressAsEntered
 
     values.AddressAsEntered = geoCoderAddressResult.addressAsEntered
 
