@@ -86,13 +86,10 @@ class FormStepper extends Component {
     }
 
     onInputChange(e) {
-        //this.setState({qtyMessage:false});
-        categoryTotal = this.getCategoryTotal();
-        subCategoryTotal = this.getSubCategoryTotal();
-        fieldTotal = categoryTotal + subCategoryTotal;
-        var {count, object} = this.state
 
-        if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat? subCategoryTotal: categoryTotal)> this.props.maxValue) || fieldTotal > this.props.total))
+        var {object} = this.state
+
+        if(!isNaN(e) && parseInt(e,10)  && (parseInt(e, 10) > this.props.maxValue || ((this.props.subCat?  this.getSubCategoryTotal(): this.getCategoryTotal())> this.props.maxValue) || this.getCategoryTotal() + this.getSubCategoryTotal() > this.props.total))
         {
           object.RequestedQty = 0
           this.setState({count:0,hideToolTip: false},()=>{this.props.onIncDec(this.state.object)});
@@ -111,9 +108,7 @@ class FormStepper extends Component {
 
     renderItem(){
 
-
       if (this.props.disabled && this.props.header){
-
         if (this.props.hasSubCategory){
           return (
           <div className='FormStepper'>
