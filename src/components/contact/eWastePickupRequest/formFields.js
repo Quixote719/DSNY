@@ -18,6 +18,8 @@ import FormAddressAutocomplete from '../formAddressAutocomplete'
 import {IsDistrictActive, GetUnavailableDates} from "../../../actions/contact_forms";
 import {Col} from 'react-bootstrap';
 import moment from 'moment';
+import isEmpty from 'lodash/isEmpty'
+
 const DisplayFormikState = props => <div style={{
 		margin: '1rem 0'
 	}}>
@@ -43,7 +45,21 @@ const DisplayFormikState = props => <div style={{
 
 
 const EwastePickUpRequestFormElements = (props) => {
-	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus} = props;
+	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus,isAddressValidated} = props;
+
+	if(!values.AddresAsEntered && isEmpty(values.PickupRequestItems))
+	{
+		values.categories.map((category, Item)=>{
+			if (category.hasSubCategory) {
+				category.hasSubCategory.map((subcategory, SubItem)=>{
+					subcategory.RequestedQty = 0
+				})
+			}
+			else
+				category.RequestedQty = 0
+		});		
+	}
+
 	if (Dates){
      values.Dates = Dates;
 		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate
@@ -93,7 +109,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-		
+		<Col xs={12}><DisplayFormikState {...props} /></Col>
 	</fieldset>)
 };
 
