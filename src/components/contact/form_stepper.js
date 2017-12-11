@@ -48,35 +48,36 @@ class FormStepper extends Component {
 
 
     increment(){
-      categoryTotal = this.getCategoryTotal();
-      subCategoryTotal = this.getSubCategoryTotal();
-      fieldTotal = categoryTotal + subCategoryTotal;
       var {count, object} = this.state
-      var i = count += 1
-      console.log(this.props);
-      object.RequestedQty = i
+      var i = count;
       if(this.props.subCat){
-        if(subCategoryTotal < this.props.maxValue){
-       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
-     }
-      }else if(fieldTotal < this.props.total && i <= this.props.maxValue)
-      this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+        if(this.getSubCategoryTotal() < this.props.maxValue){
+          i = count += 1
+          object.RequestedQty = i
+       this.setState({count:i , object:object},()=>{this.props.onIncDec(object)});
+    }
+  } else if(this.getCategoryTotal() + this.getSubCategoryTotal() < this.props.total && i <= this.props.maxValue){
+     i = count += 1
+     object.RequestedQty = i
+     this.setState({count:i , object:object},()=>{this.props.onIncDec(object)});
+   }
+
     }
 
     decrement() {
-      categoryTotal = this.getCategoryTotal();
-      subCategoryTotal = this.getSubCategoryTotal();
-      fieldTotal = categoryTotal + subCategoryTotal;
-      console.log(fieldTotal);
       var {count, object} = this.state
-      var i = count > 0 ? count -= 1 : 0
-      object.RequestedQty = i
+      var i = count;
       if(this.props.subCat){
-        if(subCategoryTotal <= this.props.maxValue){
-       this.setState({count:i , object:object},()=>{this.props.onIncDec(this.state.object)});
+        i = count > 0 ? count -= 1 : 0
+        object.RequestedQty = i
+        if(this.getSubCategoryTotal() <= this.props.maxValue){
+       this.setState({count:i , object:object},()=>{this.props.onIncDec(object)});
      }
-   }else if(fieldTotal <= this.props.total && i <= this.props.maxValue)
-      this.setState({count:i, object:object},()=>{this.props.onIncDec(this.state.object)});
+   }else if(this.getCategoryTotal() + this.getSubCategoryTotal() <= this.props.total && i <= this.props.maxValue){
+      i = count > 0 ? count -= 1 : 0
+     object.RequestedQty = i
+       this.setState({count:i, object:object},()=>{this.props.onIncDec(object)});
+   }
     }
 
     onBlur(e) {
@@ -109,8 +110,8 @@ class FormStepper extends Component {
     }
 
     renderItem(){
-      
-      
+
+
       if (this.props.disabled && this.props.header){
 
         if (this.props.hasSubCategory){
@@ -150,7 +151,7 @@ class FormStepper extends Component {
         );
       }
       return (
-        
+
         <div className='FormStepper'>
           <Col xs={6} sm={8} md={8}><div className={this.props.subCat ? 'incDecSubFieldtext':'incDecFieldtext'}>{this.props.subCat ? `\u2022 ${this.props.title}`:`${this.props.title}`}</div></Col>
           <Col className='FormFieldIncDec' xs={6} sm={4} md={4}>
