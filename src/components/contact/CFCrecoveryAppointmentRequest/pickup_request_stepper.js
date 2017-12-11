@@ -1,7 +1,6 @@
 import _ from "lodash";
 import React, {Component} from "react";
 import {Col} from 'react-bootstrap';
-import {connect} from "react-redux";
 import FormStepper from '../form_stepper'
 
 class RequestStepper extends Component {
@@ -10,7 +9,7 @@ class RequestStepper extends Component {
 		super(props);
 
 		this.state = {
-			AppointmentItems: []
+			AppointmentItems: props.AppointmentItems ? props.AppointmentItems :[]
 		}
 		this.renderCatg = this.renderCatg.bind(this);
 		this.updateState = this.updateState.bind(this);
