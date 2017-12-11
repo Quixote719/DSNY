@@ -52,7 +52,12 @@ class NycAgencyRecycling extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Collection Bin on Public Property Removal Request form has been submitted succeffuly.</p><p>An email confirmation has been sent to your contact email address</p></div></div>`)
+      if(success && success.SRNo){
+        return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Collection Bin on Public Property Removal Request form has been submitted succeffuly.</p><p>An email confirmation has been sent to your contact email address</p></div></div>`)        
+      }
+      else{
+        return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
+      }
     }
 
     if (FormObject && FormObject !== undefined) {

@@ -19,10 +19,12 @@ class RequestStepper extends Component {
 	updateState(obj) {
 		var p = this.state.PickupRequestItems
 		p = _.union(p, [obj]);
+	
 		this.setState({
 			PickupRequestItems: p
 		}, () => {
 			this.props.onAppend('PickupRequestItems', this.state.PickupRequestItems)
+
 		});
 	}
 

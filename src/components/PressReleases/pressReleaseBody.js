@@ -15,6 +15,7 @@ class PressReleaseBody extends Component {
 
   render() {
     const {data} = this.props
+    console.log(data.content)
     return (
       <div className='PressReleaseBody'>
         <Row>
