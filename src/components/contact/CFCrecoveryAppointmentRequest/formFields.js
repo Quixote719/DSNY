@@ -14,7 +14,8 @@ import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
 import moment from 'moment';
 import TextdisplayField from '../form_display_field';
-import {Col} from 'react-bootstrap';
+import isEmpty from 'lodash/isEmpty';
+
 const DisplayFormikState = props => <div style={{
 		margin: '1rem 0'
 	}}>
@@ -36,6 +37,20 @@ const DisplayFormikState = props => <div style={{
 
 const CFCRecoveryRequestFormElements = (props) => {
 	const { values, setFieldValue, Dates,commercialAddress, geoCoderAddressResult } = props;
+
+
+	if(!values.AddresAsEntered && isEmpty(values.AppointmentItems))
+	{
+		values.categories.map((category, Item)=>{
+			if (category.hasSubCategory) {
+				category.hasSubCategory.map((subcategory, SubItem)=>{
+					subcategory.RequestedQty = 0
+				})
+			}
+			else
+				category.RequestedQty = 0
+		});
+	}
 
 	if (Dates && geoCoderAddressResult){
      values.Dates = Dates;
