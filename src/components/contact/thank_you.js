@@ -14,6 +14,10 @@ class SubmitThankYou extends Component {
     }
   }
 
+  componentDidMount () {
+    window.scrollTo(0, 0)
+  }
+
  demoDisplay()  {
     if(document.getElementById("contactPageBody") !== null && document.getElementById('contactPageBody') !== undefined) {
       document.getElementById("contactPageBody").style.display = "none";
