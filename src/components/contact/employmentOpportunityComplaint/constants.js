@@ -45,6 +45,7 @@ export const Titles = {
   Message: "MESSAGE",
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
+  formTitle:"Equal Employment Opportunity Complaint",
 }
 
 

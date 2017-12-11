@@ -214,9 +214,10 @@ class FormSec extends Component {
 
     let header;
 
-    /* Get Form Introduction Header OR Default Header OR Green header, depending on word-press conditions */
+    /* Get Form Introduction Header OR Default Header OR Green header, depending on word-press conditions 
+       The Form Introduction Header is the same as the Equal Employment Opportunity Complaint Form Header */
     if (dataObject.header !== '') {
-        if(dataObject.section_style == 'form-introduction'){
+        if(dataObject.section_style == 'form-introduction' || 'equal-employment-opportunity-complaint-form'){
             header = this.getFormIntroductionHeader(dataObject);
         }else{
             header = this.getHeader(dataObject,header);
@@ -306,7 +307,8 @@ class FormSec extends Component {
 
     function checkforGreenPatternLine(section,header,content,cards,finalSec,sectionType){
     /*The green line appears in the form introduction, only when it has both Header & Content & There are no cards & if the section
-       Style is form-introduction */
+       Style is form-introduction. 
+       */
     if(section == 'form-introduction'){
         return(
                     <div>     

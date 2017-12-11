@@ -99,9 +99,9 @@ class FormDateTimePicker extends Component {
       <div>
         <Col xs={12} sm={6} md={6}>
           <fieldset>
-            <div className='FormMultiSelectTitle input-group'>{this.props.title}{this.props.required?<span class="requiredAsterik"> *</span>:<span></span>}</div>
+            <div className='FormMultiSelectTitle input-group'>{this.props.title}{this.props.required?<span className="requiredAsterik"> *</span>:<span></span>}</div>
             <div className="form-group has-feedback">
-              <DatePicker  selected={this.state.startDate ? moment(this.state.startDate) : ''}  minDate = {d ? moment(d.StartDate) : null}  filterDate={d ? this.isWeekday : null} excludeDates={dd} maxDate = { d ? moment(d.EndDate): null} placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name} aria-label={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
+              <DatePicker  selected={this.state.startDate ? moment(this.state.startDate) : null}  minDate = {d ? moment(d.StartDate) : null}  filterDate={d ? this.isWeekday : null} excludeDates={dd} maxDate = { d ? moment(d.EndDate): null} placeholderText="MM/DD/YYYY" error={this.props.error} className={(isEmpty(this.props.value) || this.props.value === "") && this.props.error?"input error":'input'} required={this.props.required} name={this.props.name} aria-label={this.props.name}   disabled={this.props.disabled} onChange={event => this.onInputChange(event)} value={this.props.value === "0001-01-01T00:00:00" ? '': this.props.value} customInput={<InputWithButton {...this.props}/>}/>
             </div>
           </fieldset>
         </Col>
@@ -110,10 +110,7 @@ class FormDateTimePicker extends Component {
   };
 };
 
-FormDateTimePicker.propTypes = {
-  title: PropTypes.string,
-  type: PropTypes.string
-};
+
 
 const DateTimePickerInput = ({
   field: { name, ...field }, // { name, value, onChange, onBlur }

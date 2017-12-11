@@ -9,6 +9,8 @@ import TextSizeModal from './TextSizeModal';
 import SearchBoxHome from "../home/Site_Search/siteSearchBoxHome";
 import * as actions from '../../actions/actions_home';
 import { withRouter } from 'react-router'
+import { Link } from 'react-router-dom';
+
 
 class Header extends React.Component {
     constructor(props, context) {
@@ -75,14 +77,14 @@ class Header extends React.Component {
                 </Modal>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
-                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/>
+                        <a className='NYCheader' href='http://www1.nyc.gov'><img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/></a>
                         <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" 
                         alt="Page Upper Header Divider"/>
                         <span className="upperHeaderTitle">Keeping NYC healthy, safe and clean since 1881</span>
-                        <span className="upperHeaderTitle2">Search all NYC.gov websites</span>
+                        <span className="upperHeaderTitle2"><a href='http://www1.nyc.gov/home/search/index.page' className='searchAllNYC'>Search all NYC.gov websites</a></span>
                         <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" 
                         alt="Page Second Upper Header Divider"/>
-                        <span className="upperHeaderTitle1">311</span>
+                        <span className="upperHeaderTitle1"><a href='http://www1.nyc.gov/311/index.page' className='searchAllNYC'>311</a></span>
                     </div>
                 </div>
                 <div className="middleHeaderContainerParent">
@@ -130,14 +132,14 @@ class Header extends React.Component {
                 <Modal show={this.state.showModal} onHide={this.close} id="menu" backdrop={false}>
                 <div className="upperHeader">
                     <div className="container upperHeaderContainer">
-                        <img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/>
+                        <a href='http://www1.nyc.gov'><img src={require('../../content/images/nyc_white.png')} className="NYCUpperHeaderLogo" alt="NYC Logo"/></a>
                         <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider" 
                          alt="Page Upper Header Divider"/>
                         <span className="upperHeaderTitle">Keeping NYC healthy, safe and clean since 1881</span>
-                        <span className="upperHeaderTitle2">Search all NYC.gov websites</span>
+                        <span className="upperHeaderTitle2"><a href='http://www1.nyc.gov/home/search/index.page' className='searchAllNYC'>Search all NYC.gov websites</a></span>
                         <img src={require('../../content/images/upper-header-divider.gif')} className="NYCUpperHeaderDivider2" 
                         alt="Page Second Upper Header Divider"/>
-                        <span className="upperHeaderTitle1">311</span>
+                        <span className="upperHeaderTitle1"><a href='http://www1.nyc.gov/311/index.page' className='searchAllNYC'>311</a></span>
                     </div>
                 </div>
 
