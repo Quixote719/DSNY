@@ -396,6 +396,10 @@ input.searchMessagesInput:focus {
 .middleHeader>a:hover{
     color: #83BF48;
 }
+.searchAllNYC{
+    cursor: pointer;
+    color: #ffffff;
+}
 .textSizeTranslate{
     float: right;
     padding-top: 34px;
