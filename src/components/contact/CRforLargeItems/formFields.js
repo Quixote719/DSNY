@@ -62,7 +62,7 @@ const CRforLargeItemsFormElements = (props) => {
 		<Field component={DropdownInput} required name="LocationId" {...props} options={values.PickupLocations ? values.PickupLocations ? values.PickupLocations : [] :[]} onChange={setFieldValue} disabled={values.editMode} />
 		<Field component={DropdownInput} required name="PickUpLocation" {...props} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets ? geoCoderAddressResult.pickupStreets :[] :[]} onChange={setFieldValue} disabled={values.editMode}/>
 		<Field component={DateTimePickerInput} required value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ values.Dates === undefined ? true : values.editMode }  name="AppointmentDate" {...props} onChange={setFieldValue}/>
-		<Field component={Nstepper} name="ElectronicCategory" header='BULK ITEM CATEGORY' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode}  onAppend={setFieldValue}/>
+		<Field component={Nstepper}  PickupRequestItems={values.PickupRequestItems}  name="ElectronicCategory" header='BULK ITEM CATEGORY' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode}  onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required/>
 		<Field component={TextInput} name="LastName" {...props} required/>
