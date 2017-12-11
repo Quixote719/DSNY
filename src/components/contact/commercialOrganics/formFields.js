@@ -37,7 +37,7 @@ const formFields = (props) => {
     <Field component={TextInput} name="RegistrantTitle" maxlength={30} disabled={values.editMode} {...props} required/>
     <Field component={TextInput} name="RegistrantEmail" maxlength={30} disabled={values.editMode} {...props} required/>
     <Field component={TextInput} name="RegistrantPhone" maxlength={21} disabled={values.editMode} {...props} required/>
-    <Field component={DropdownInput} name="RegistrantPhoneTypeId" disabled={values.editMode} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.RegistrantPhoneTypes} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="RegistrantPhoneTypeId" disabled={values.editMode} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.RegistrantPhoneTypes} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
 
     <Field component={TextInput} name="AddressAsEntered" fullRow={true} maxlength={200} disabled={values.editMode} {...props} />
