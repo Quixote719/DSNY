@@ -25,7 +25,7 @@ const eeoComplaintElements = (props) => {
     setFieldValue,
   } = props;
   console.log(values.editMode);
-  return (<fieldset className='disabledContactForm eeoComplaint' >
+  return (<fieldset className='disabledContactForm' >
 
     <FormHeaderSmallSize title='Equal Employment Opportunity Complaint' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
 
