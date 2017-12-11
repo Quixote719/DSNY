@@ -26,7 +26,7 @@ const siteVisitRequestFormElements = (props) => {
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 
-    <FormHeaderSmallSize title='Online Service Request Form' information='All fields are required unless indicated as optional.'/>
+    <FormHeaderSmallSize title='Online Service Request Form'  information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   value="" disabled={values.editMode} required/>
     <Field component={TextInput} name="Apartment" fullRow= {true} {...props} maxlength="100" disabled={values.editMode}/>
@@ -39,8 +39,8 @@ const siteVisitRequestFormElements = (props) => {
     <Field component={TextAreaInput} name="CurrentRecyclingSetup" {...props}  required disabled={values.editMode}/>
 
     <FormSectionHeader title={Titles.sectionThree} />
-    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
-    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} onChange={setFieldValue} defaultValue={'__/__/____'} disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="Visit1PotentialDate" {...props} required onChange={setFieldValue} disabled={values.editMode}/>
+    <Field component={DateTimePickerInput} name="Visit2PotentialDate" {...props} required onChange={setFieldValue} disabled={values.editMode}/>
     <FormTitleCheckBoxes subHeading="Please provide at least 10 days of advance notice." />
 
     <FormSectionHeader title={Titles.sectionFour} />

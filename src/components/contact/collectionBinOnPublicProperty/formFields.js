@@ -25,7 +25,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete name="BinLocationAddressAsEntered" title={Titles.BinLocationAddressAsEntered} {...props}   value="" disabled={values.editMode}/>

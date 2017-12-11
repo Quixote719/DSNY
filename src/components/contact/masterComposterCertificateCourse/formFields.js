@@ -37,15 +37,15 @@ const masterComposerCertificateCourseElements = (props) => {
   
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     
-    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional.'/>
+    <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
     <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} required  value="" disabled={values.editMode}/>
     <Field component={TextInput} name="Apartment" {...props} maxlength="35"  disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.SectionTwo} />
-    <Field component={DropdownInput} name="PrefferedLocation" {...props} ondropDownChange={handledropDown} onChange={setFieldValue}  
-    options={values.PrefferedLocationType} disabled={values.editMode} required  disabled={values.editMode}/>
+    <Field component={DropdownInput} name="PrefferedLocation" {...props} ondropDownChange={handledropDown} required onChange={setFieldValue}  
+    options={values.PrefferedLocationType} disabled={values.editMode}   disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.SectionThree} />
     <Field component={DropdownInput} name="AppliedToProgramBefore" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode}  disabled={values.editMode}/> 

@@ -10,7 +10,7 @@ class RequestStepper extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			PickupRequestItems: []
+			PickupRequestItems: props.PickupRequestItems ? props.PickupRequestItems : []
 		}
 		this.renderCatg = this.renderCatg.bind(this);
 		this.updateState = this.updateState.bind(this);

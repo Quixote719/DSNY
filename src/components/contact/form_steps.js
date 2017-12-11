@@ -67,7 +67,10 @@ export function displayThankYouPage(displayMessage, success, successMessage, fai
 function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressValidated){
 
   if (values && isAddressValidated)
+  {
       values.AddressAsEntered = isAddressValidated
+      values.BinLocationAddressAsEntered = isAddressValidated
+  }
 
   if(values.IsAnonymous)
   {
@@ -84,7 +87,7 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressVal
 
 	if (values && geoCoderAddressResult){
 
-    values.BinLocationAddressAsEntered = geoCoderAddressResult.BinLocationAddressAsEntered
+    values.BinLocationAddressAsEntered = geoCoderAddressResult.addressAsEntered
 
     values.AddressAsEntered = geoCoderAddressResult.addressAsEntered
 
@@ -278,9 +281,18 @@ const FormSteps = compose(
                     nextbuttonClicked = false;
                   }
               }
-               else if (input.required && input.name ==="ConfirmEmail" && values[input.name].trim() !== "" && (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name])) && values.Email !== values.ConfirmEmail)
+              else if (input.required && input.name ==="ConfirmEmail" && values[input.name].trim() !== "" && (/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(values[input.name])) && values.Email !== values.ConfirmEmail)
               {
                   errors[input.name] = "The email addresses don't match"
+                  if(nextbuttonClicked)
+                  {
+                    input.focus();
+                    nextbuttonClicked = false;
+                  }
+              }
+              else if (input.required && input.name.toUpperCase().indexOf('PHONE') >  -1 && values[input.name].trim() !== "" && (!(/^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}$/.test(values[input.name]))))
+              {
+                  errors[input.name] = "Please enter a valid Phone Number"
                   if(nextbuttonClicked)
                   {
                     input.focus();
