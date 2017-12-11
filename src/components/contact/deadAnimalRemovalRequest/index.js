@@ -49,7 +49,12 @@ class DeadAnimalRemovalRequest extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Dead Animal Removal Request form has been submitted succeffuly.</p><p>&nbsp;</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>&nbsp;</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
+      if(success && success.SRNo){
+        return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Dead Animal Removal Request form has been submitted succeffuly.</p><p>&nbsp;</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>&nbsp;</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)        
+      }
+      else{
+        return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
+      }
     }
 
     if (FormObject && FormObject !== undefined) {
