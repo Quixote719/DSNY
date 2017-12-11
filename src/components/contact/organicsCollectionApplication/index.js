@@ -246,6 +246,7 @@ class OrganicsCollectionApplication extends Component {
                 <div className="smallTopSpace">If you live in a 1-9 unit building along a commercial block, your building must enroll to receive your free brown bins.
                 Submit your building's information, and DSNY will follow up with more information on how to join the program.</div>
               </div>
+              <div style={{'marginTop':'100px'}}></div>
             </div>
           }
           {
@@ -289,10 +290,8 @@ class OrganicsCollectionApplication extends Component {
                 <div className="smallTopSpace">Learn more about organics rules and resources for businesses.</div>
                 <div className="smallTopSpace">Additionally, businesses may choose to donate certain food items, which can save on waste hauling costs.</div>
               </div>
+              <div style={{'marginTop':'100px'}}></div>
             </div>
-          }
-          {
-            <div style={{'marginTop':'140px'}}></div>
           }
           </div>
         );
