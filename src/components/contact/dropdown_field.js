@@ -8,10 +8,10 @@ import isEmpty from 'lodash/isEmpty'
 
 const booleanOptions = [
   {
-    "Id": false,
+    "Id": 0,
     "Name": "Select one",
     "DisplayName": "Select one",
-    "Selected": false
+    "Selected": true
   },
   {
     "Id": true,
