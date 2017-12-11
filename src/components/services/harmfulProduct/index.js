@@ -68,14 +68,14 @@ const MyMapComponent = compose(
       )
 })
 
-class FoodScrapMap extends Component {
+class HarmfulProductMap extends Component {
 
   constructor(props, context) {
       super(props, context);
       this.state = {
         isMarkerShown: true,
         Center: { lat: 40.72390127, lng: -73.88979419 },
-        Locations: this.props.FoodScrapList
+        Locations: this.props.HarmfulProductList
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
       this.onMapClick = this.onMapClick.bind(this);
@@ -83,7 +83,7 @@ class FoodScrapMap extends Component {
 
   componentWillMount() {
     this.props.Location().then((response)=>{
-      this.setState({Locations : this.props.FoodScrapList},()=>{
+      this.setState({Locations : this.props.HarmfulProductList},()=>{
       });
     });
   }
@@ -133,14 +133,14 @@ class FoodScrapMap extends Component {
 
 function mapStateToProps(state) {
   return {
-    FoodScrapList: state.ServicesDataReducer.FoodScrapList,
+    HarmfulProductList: state.ServicesDataReducer.HarmfulProductList,
   }
 }
 
 let actionList = {
-  Location: actions.fetchFoodScrapList
+  Location: actions.fetchHarmfulProductList
 };
 
-FoodScrapMap = connect(mapStateToProps, actionList)(FoodScrapMap);
+HarmfulProductMap = connect(mapStateToProps, actionList)(HarmfulProductMap);
 
-export default FoodScrapMap
+export default HarmfulProductMap

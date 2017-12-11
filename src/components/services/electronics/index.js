@@ -20,7 +20,7 @@ const MyMapComponent = compose(
   withScriptjs,
   withGoogleMap
 )((props) =>{
-
+      console.log(props.Locations);
       return(
         <GoogleMap
           onClick = { () => {props.onMapClick()} }
