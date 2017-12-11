@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { WORDPRESS_ROOT_URL, FETCH_LOCATION_LIST_URL } from '../constants/ApiConstants';
+import { WORDPRESS_ROOT_URL, FETCH_ELECTRONICS_LOCATION_LIST_URL } from '../constants/ApiConstants';
 import * as types from '../constants/ActionTypes';
 
 export function Services() {
@@ -8,3 +8,8 @@ export function Services() {
           dispatch({type: 'SET_SERVICES',payload: request.data})
       })
 }}
+
+export function fetchELocationList() {
+    const request = axios.get(FETCH_ELECTRONICS_LOCATION_LIST_URL);
+    return {type: 'SET_ELECTRONICS_LOCATIONS', payload: request};
+}

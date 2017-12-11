@@ -96,7 +96,7 @@ export const FETCH_BUREAUS_DETAILS_URL = constructWpUrl('dsny/v1/getPressRelease
 export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL(Env)}Events/GetAllByBorough?borough=:borough`;
 export const FETCH_EVENT_DETAILS_URL = `${REST_WEBAPI_URL(Env)}Events/GetEventByID?eventID=:eventID`;
 export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}garages`;
-
+export const FETCH_ELECTRONICS_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}DSNYDropOff/GetDropOffLocation?category=1`;
 
 //Forms
 export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL(Env)}compostrequests/1`;
