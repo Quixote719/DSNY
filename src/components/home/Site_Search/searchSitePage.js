@@ -61,7 +61,13 @@ class SearchSitePage extends Component {
         });
       };
     onChange = (event, { newValue, method }) => {
-        this.props.setSiteSearchValue(newValue);
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(reg.test(newValue)){
+            event.preventDefault();            
+        }
+        else{
+            this.props.setSiteSearchValue(newValue);            
+        }
       }
     ridOfSearchResults = (messageList) =>{
         return _.map(messageList, (item,index) => {
