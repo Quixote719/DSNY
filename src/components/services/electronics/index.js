@@ -111,7 +111,7 @@ class ElectronicsMap extends Component {
   }
 
   renderSection(content){
-    return <div className="SContainer" dangerouslySetInnerHTML={{__html: content}}></div>
+    return <div className="SContainer boxPadding" dangerouslySetInnerHTML={{__html: content}}></div>
   }
 
   render() {
