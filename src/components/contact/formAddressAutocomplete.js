@@ -47,10 +47,12 @@ class FormAddressAutocomplete extends Component {
                 Please enter / select a valid address in order to complete the appointment request.
                 </div>
             );
-        this.setState({
-            address,
-        })
-
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(!reg.test(address)){
+            this.setState({
+                address: address,
+            })       
+        }
         isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name]) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         previousErrorMessage = this.props.errors[this.props.name];
         this.props.checkAddressValidator(address);
@@ -80,7 +82,6 @@ class FormAddressAutocomplete extends Component {
         this.setState({
             address: value,
          });
-        //  this.props.getCollectionSchedule(value);
          this.props.getCollectionSchedule(value, this.successCallback);
         }
     handleSelect =(address)=>{
@@ -148,12 +149,12 @@ class FormAddressAutocomplete extends Component {
           (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
           this.props.suggestionAddress === null){
             this.props.commercialAddressFlag(1)
-            errorMessage = (
-            <div className="errorMessageAddressForm">
-            The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-            </div>
-            );
-            this.forceUpdate();
+            // errorMessage = (
+            // <div className="errorMessageAddressForm">
+            // The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
+            // </div>
+            // );
+            // this.forceUpdate();
         } else {
             this.props.commercialAddressFlag(0)                        
             errorMessage = (<div className ="validatedAddress">Address Validated</div>);

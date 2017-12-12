@@ -25,9 +25,12 @@ class SearchCards extends Component {
           };
     }
     handleChange = (address) =>{
-        this.setState({
-            address,
-        })
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(!reg.test(address)){
+            this.setState({
+                address: address,
+            })       
+        }
     }
     resetPlaceHolder = () =>{
         this.setState({

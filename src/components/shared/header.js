@@ -43,6 +43,9 @@ class Header extends React.Component {
     textSizeModal() {
         this.setState({textSizePopUp: !this.state.textSizePopUp});
     }
+    homeRedirection() {
+        this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/home");
+    }
     componentWillMount() {
         this.props.history.listen((location, action) => {
             this.forceUpdate();
@@ -89,7 +92,7 @@ class Header extends React.Component {
                 </div>
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
-                        <img src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" alt="Sanitation Logo"/>
+                        <img onClick = {()=>{this.homeRedirection()}} src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" alt="Sanitation Logo"/>
                         <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
 
                         <span className="textSizeTranslate">&#8203;</span>

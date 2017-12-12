@@ -103,6 +103,7 @@ cursor: text !important;
     line-height: 17px;
 }
 .middleHeaderLogo{
+    cursor: pointer;
     margin-left: -3px;
     padding-top: 9px;
     padding-bottom: 8px;
