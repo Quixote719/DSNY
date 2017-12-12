@@ -14,12 +14,13 @@ class Footer extends Component{
       const Service = [{name:'Collection',link: process.env.REACT_APP_SITE_RELATIVE_URL +'/services'},{name:'Cleaning',link:process.env.REACT_APP_SITE_RELATIVE_URL + '/services/cleaning'},{name:'Snow',link:process.env.REACT_APP_SITE_RELATIVE_URL +'/services/snow-response'}];
       const App = [{name:'DSNY Info',AppStore:'https://itunes.apple.com/us/app/dsny-info/id1139303678?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.dsny&hl=en'},
       {name:'donateNYC',AppStore:'https://itunes.apple.com/us/app/donatenyc/id1112567037?mt=8',GooglePlay:'https://play.google.com/store/apps/details?id=gov.nyc.dsny.donate&hl=en'}];
-      const Archive = [{name:'Newsletters',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/dsnynews'},
-                       {name:'Memoranda of Understanding',link: process.env.REACT_APP_SITE_RELATIVE_URL + 'l2'},
-                       {name:'Language Access Plan',link: process.env.REACT_APP_SITE_RELATIVE_URL + 'l3'},
-                       {name:'Recycling Diversion Goals',link: process.env.REACT_APP_SITE_RELATIVE_URL + 'l4'},
+      const Archive = [{name:'Press Releases',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/resources/press-releases'},
+                       {name:'Newsletters',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/dsnynews'},
+                       {name:'Employment Opportunities',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/employment-opportunities'},
                        {name:'Waste Characterization',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/resources/reports/waste-characterization'},
-                       {name:'Private Carting Study',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/resources/reports/private-carter-study'}]
+                       {name:'Recycling Diversion Goals',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/recycling-diversion-goals'}, 
+                       {name:'Memoranda of Understanding',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/memoranda-of-understanding'},                                              
+                       {name:'Language Access Plan',link: process.env.REACT_APP_SITE_RELATIVE_URL + '/language-access-plan'}]
         if(window.location.pathname === process.env.REACT_APP_SITE_RELATIVE_URL || window.location.pathname.indexOf("collectionSchedule") > -1){
             return (
                 <div>
