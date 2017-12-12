@@ -21,16 +21,28 @@ class ServiceRequestStatus extends Component {
 }
   handleChange = (event) =>{
     if(event.target.value.trim().length !== 0){
-      this.setState({
-        serviceRequest: event.target.value,
-      })
-      this.props.handleChange(event.target.value);      
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(reg.test(event.target.value)){
+            event.preventDefault();            
+        }
+        else{
+          this.setState({
+            serviceRequest: event.target.value,
+          })
+          this.props.handleChange(event.target.value);      
+        }
     }
     else{
-      this.setState({
-        serviceRequest: "",
-      })
-      this.props.handleChange(event.target.value);            
+      var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+      if(reg.test(event.target.value)){
+          event.preventDefault();            
+      }
+      else{
+        this.setState({
+          serviceRequest: "",
+        })
+        this.props.handleChange(event.target.value);      
+      }
     }
   }
   resetPlaceHolder = () =>{

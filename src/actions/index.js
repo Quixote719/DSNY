@@ -37,6 +37,7 @@ export function fetchPageData(slug) {
     dispatch({type: types.IS_DISTRICT_ACTIVE, payload: {}})
      dispatch({
                 type: 'SET_COLLECTION_SCHEDULE_DATA',
+                commercialAddress: null,
                 DSNYGeoCoder: null,
                 collectionScheduleInfo: null,
                 payload: null,

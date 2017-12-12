@@ -113,6 +113,11 @@ class CollectionSchedule extends Component {
         }
     }
     handleKeyPress = (event) => {
+        // event.bind('keydown', function (evt) {
+        //     if(evt.which===40){
+        //     alert("Hi")
+        //     }
+        // });
         if (event.keyCode === 32) {
             if (this.state.address.trim().length === 0)
                 event.preventDefault();

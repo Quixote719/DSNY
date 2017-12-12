@@ -55,9 +55,15 @@ class SiteSearchBox extends Component {
         });
       };
       onChange = (event, { newValue }) => {
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(reg.test(newValue)){
+            event.preventDefault();            
+        }
+        else{
         this.setState({
-          value: newValue
+            value: newValue,
         });
+        }
       };
     resetPlaceHolder = () =>{
       this.setState({
