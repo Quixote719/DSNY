@@ -97,7 +97,11 @@ class PressReleaseList extends Component {
       });
     } else {
       return (
-        <div className='loader container'></div>
+        <div className = "blankLoadingDivCollectionSchedule">
+            <div className = "loadingIconDiv">
+            <img src={require('../../content/images/loading.svg')} alt="Loading Icon Collection" />
+            </div>
+        </div>
       )
     }
   }
