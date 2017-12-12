@@ -100,9 +100,13 @@ class SearchPage extends Component {
          });
     }
     handleKeyPress = (event) => {
-        if(this.state.value.trim().length == 0 && event.keyCode == 32){
-            event.preventDefault();
-          }   
+        var reg=/[^\!\@\#\$\%\^\*\_\|]+/;
+        if(reg.test(this.state.value)){
+            event.preventDefault();            
+        }
+        // if(this.state.value.trim().length == 0 && event.keyCode == 32){
+        //     event.preventDefault();
+        //   }   
         if(event.key == 'Enter'){
             this.props.setPaginationKey(1);  
             if(this.state.value.trim().length !== 0){

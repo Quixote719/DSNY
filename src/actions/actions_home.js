@@ -74,11 +74,9 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                             DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
                             DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
-                            console.log(DSNYGeoCoder)                            
                         }
                         else {
                             DSNYGeoCoder = null;
-                            console.log(DSNYGeoCoder)
                         }
                     }
                     if (data.data.Goat !== null && data.data.RegularCollectionSchedule !== null) {
@@ -328,7 +326,6 @@ export function setServiceRequestStatus(value, callback = null) {
     return function (dispatch) {
         axios.get(SERVICE_REQUEST_URL + value + "/status")
         .then((data) => {
-            console.log(data.data)
             dispatch({
                 type: 'SET_SERVICE_REQUEST_STATUS',
                 payload: data.data

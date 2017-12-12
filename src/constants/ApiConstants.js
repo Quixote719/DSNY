@@ -4,7 +4,7 @@ Dev - 0
 Staging - 1
 Prod - 2
  */
-export const Env = 1;
+export const Env = 0;
 
 const ROOT_WORDPRESS_URL = (Env) =>  {
   switch (Env){

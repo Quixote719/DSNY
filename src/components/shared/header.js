@@ -121,8 +121,6 @@ class Header extends React.Component {
                             <LinkContainer to= {process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"} className={url.indexOf(process.env.REACT_APP_SITE_RELATIVE_URL + '/contact')  > -1 ? 'bottomHeaderTitles selectedParent' : 'bottomHeaderTitles'} onClick={() => this.handleClickHeader()}>
                                 <NavItem eventKey={"contact"}>Contact</NavItem>
                             </LinkContainer>
-                            {/* <NavItem eventKey = {7} className="search-box-header">
-                            </NavItem> */}
                             <SearchBoxHome getRidOfSearchResults={this.props.getSiteSearchResults?this.props.getSiteSearchResults:""} ridOffKeywords = {this.props.siteSearchKeywords} test ={this.props}/>
                         </Nav>
                     </Navbar.Collapse>

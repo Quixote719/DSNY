@@ -51,7 +51,6 @@ class CollectionSchedule extends Component {
 
     }
     componentWillUnmount() {
-        // console.log("UNMOUNTING!!!")
         this.props.clearCollectionSchedule();
     }
     handleChange = (address) => {
