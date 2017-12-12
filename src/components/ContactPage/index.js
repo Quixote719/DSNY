@@ -47,7 +47,11 @@ class Contact extends Component {
 
     this.parseContactData(Contact, BannerText, ServiceRequestsProps, ComplaintsProps, RegistrationsProps, GetInvolvedProps, ContactUsProps, ReportingProps);
 
+    let Contactcontent = _.isEmpty(BannerText) || _.isEmpty(ServiceRequestsProps) || _.isEmpty(ComplaintsProps) || _.isEmpty(RegistrationsProps) || _.isEmpty(GetInvolvedProps)
+    || _.isEmpty(ContactUsProps) || _.isEmpty(ReportingProps);
+
     return (
+      !Contactcontent &&
       <div>
         {<Banner text = {BannerText} />}
         <div className = 'SContainer'>

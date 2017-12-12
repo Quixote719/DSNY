@@ -89,12 +89,15 @@ class FormAddressAutocomplete extends Component {
         //(isEmpty(address) || address.trim() === "")?this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
        /* this.setState({hideToolTip: true});
         addressValidated = false;
-        if(errorFlag == 0){
+
+            // this.props.getCollectionSchedule(address);
+         this.props.getCollectionSchedule(address, this.successCallback);*/
+         if(errorFlag == 0){
             this.setState({
                 address: address,
              });
-            // this.props.getCollectionSchedule(address);
-         this.props.getCollectionSchedule(address, this.successCallback);*/
+        }
+        
          document.getElementById("validateBtn").click();
          this.setState({hideToolTip: false});
          //showflag = false;
@@ -121,7 +124,7 @@ class FormAddressAutocomplete extends Component {
             });
         }
         if(this.props.collectionScheduleInfo === null && this.props.suggestionAddress === null) {
-            this.props.commercialAddressFlag(0, null)            
+            this.props.commercialAddressFlag(0)            
             errorMessage = (<div className = "noOfSearchResults"> No search results found </div>);
             this.setState({hideToolTip: false});
             this.forceUpdate();
@@ -144,7 +147,7 @@ class FormAddressAutocomplete extends Component {
           (this.props.noResultsError.RecyclingCollectionSchedule === null || this.props.noResultsError.RecyclingCollectionSchedule === "") &&
           (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
           this.props.suggestionAddress === null){
-            this.props.commercialAddressFlag(1, "I certify that this request is not for a commercial business or an apartment with more than 10 units.")
+            this.props.commercialAddressFlag(1)
             errorMessage = (
             <div className="errorMessageAddressForm">
             The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
@@ -152,7 +155,7 @@ class FormAddressAutocomplete extends Component {
             );
             this.forceUpdate();
         } else {
-            this.props.commercialAddressFlag(0, null)                        
+            this.props.commercialAddressFlag(0)                        
             errorMessage = (<div className ="validatedAddress">Address Validated</div>);
             this.props.checkAddressValidator(1);
             addressValidated = true;

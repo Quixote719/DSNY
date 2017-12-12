@@ -38,7 +38,10 @@ class About extends Component {
     this.parseAboutData(About, BannerText, PageExplanation, LeadershipProps, BureausProps, StrategicPlanProps,
      FoundationProps, LocationProps, OperationProps);
 
+     let Aboutcontent = _.isEmpty(BannerText) || _.isEmpty(PageExplanation) || _.isEmpty(LeadershipProps) || _.isEmpty(BureausProps) || _.isEmpty(StrategicPlanProps)
+     || _.isEmpty(FoundationProps) || _.isEmpty(LocationProps) || _.isEmpty(OperationProps);
       return (
+        !Aboutcontent &&
         <div className = 'aboutPage'>
           <Banner text = {BannerText}/>
           <div className = 'SContainer'>

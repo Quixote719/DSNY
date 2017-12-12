@@ -21,7 +21,7 @@ class PressReleaseDetail extends Component {
   }
 
   renderimg(sec) {
-    if (sec.featured_image) {
+    if (sec.featured_image && sec.featured_image.name) {
       return (<img alt={sec.featured_image.name} style={{
         width: '100%',
         margin: '5px 0px'
