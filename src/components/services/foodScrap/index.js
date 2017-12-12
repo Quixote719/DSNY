@@ -86,6 +86,7 @@ class FoodScrapMap extends Component {
       this.setState({Locations : this.props.FoodScrapList},()=>{
       });
     });
+    this.props.FoodScrapContent();
   }
 
   componentDidMount() {
@@ -110,8 +111,8 @@ class FoodScrapMap extends Component {
 
   render() {
     let locBanner = null;
-    if(this.props.LocationPageData !== undefined){
-      let locPage = this.props.LocationPageData.data;
+    if(this.props.FoodScrapData !== undefined){
+      let locPage = this.props.FoodScrapData;
       locBanner = <Header title={locPage.header} breadCrumbList={locPage.breadcrumb} body={locPage.header_content}/>
     }
     return (
@@ -134,11 +135,13 @@ class FoodScrapMap extends Component {
 function mapStateToProps(state) {
   return {
     FoodScrapList: state.ServicesDataReducer.FoodScrapList,
+    FoodScrapData: state.ServicesDataReducer.FoodScrapData
   }
 }
 
 let actionList = {
-  Location: actions.fetchFoodScrapList
+  Location: actions.fetchFoodScrapList,
+  FoodScrapContent: actions.foodScrapMapPage
 };
 
 FoodScrapMap = connect(mapStateToProps, actionList)(FoodScrapMap);

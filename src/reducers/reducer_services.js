@@ -11,6 +11,12 @@ export default function ServicesDataReducer(state = { bureaus: {} }, action) {
       return { ...state, FoodScrapList: action.payload.data};
     case 'SET_HARMFUL_PRODUCT_LOCATIONS':
       return { ...state, HarmfulProductList: action.payload.data};
+    case 'SET_ELECTRONICS_CONTENT':
+      return { ...state, ElectronicsData: action.payload.data};
+    case 'SET_FOODSCRAP_CONTENT':
+      return { ...state, FoodScrapData: action.payload.data};
+    case 'SET_HARMFUL_PRODUCT_CONTENT':
+      return { ...state, HarmfulProductData: action.payload.data};
     default:
       return state;
   }
