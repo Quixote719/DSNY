@@ -98,7 +98,7 @@ class FormAddressAutocomplete extends Component {
                 address: address,
              });
         }
-        
+        this.props.getCollectionSchedule(address, this.successCallback);        
          document.getElementById("validateBtn").click();
          this.setState({hideToolTip: false});
          //showflag = false;
