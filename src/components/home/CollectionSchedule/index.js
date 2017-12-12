@@ -54,9 +54,12 @@ class CollectionSchedule extends Component {
         this.props.clearCollectionSchedule();
     }
     handleChange = (address) => {
-        this.setState({
-            address: address,
-        })
+        var reg=/[\~\+\&\!\@\$\%\^\*\_\|]+/;
+        if(!reg.test(address)){
+            this.setState({
+                address: address,
+            })       
+        }
     }
     resetPlaceHolder = () => {
         this.setState({
@@ -318,9 +321,10 @@ class CollectionSchedule extends Component {
     }
     render() {
         const defaultBounds = new window.google.maps.LatLngBounds(
-            new window.google.maps.LatLng(40.915568, -73.699215),
-            new window.google.maps.LatLng(40.495992, -74.257159));
-
+            // new window.google.maps.LatLng(40.917577, -74.25909),
+            // new window.google.maps.LatLng(40.477399, -73.700009));
+            new window.google.maps.LatLng(40.477399, -73.700009),
+            new window.google.maps.LatLng(40.917577, -74.25909));
         const inputProps = {
             onKeyDown: this.handleKeyPress,
             value: this.state.address,

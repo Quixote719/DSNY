@@ -56,7 +56,7 @@ class SerialNoPage extends Component {
                     <Row className = "requestTypeCreatedRow">
                         <Col xs = {12} sm = {6} className ="requestTypeCol">
                             <div className ="requestTypeTitle">
-                                Request Title
+                                Request Type
                             </div>
                             <div className ="requestTypeData">
                                 {this.props.serviceRequestData?this.props.serviceRequestData.ServiceRequestTypeName:""}

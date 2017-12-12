@@ -103,6 +103,7 @@ cursor: text !important;
     line-height: 17px;
 }
 .middleHeaderLogo{
+    cursor: pointer;
     margin-left: -3px;
     padding-top: 9px;
     padding-bottom: 8px;
@@ -633,7 +634,7 @@ input.searchMessagesInput:focus {
         display: none;
     }
     .mobileSanitationLogo{
-        margin-top: 8px;
+        margin-top: 5px;
         padding-left: 16px;
         padding-top: 3px;
         display: inline;

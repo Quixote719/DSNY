@@ -31,7 +31,7 @@ render() {
         <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
           <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
         </Link>
-    <div className='patternLineGreen'></div>
+    <div className="thankyouLineGreen"><div className='patternLineGreen'></div></div>
   </div>
   :
       <div>
@@ -47,7 +47,7 @@ render() {
             <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
           </Link>
           {/*<div className='thankYoupatternLine'></div>*/}
-          <div className='patternLineGreen'></div>
+          <div className="thankyouLineGreen"><div className='patternLineGreen'></div></div>
           </div>
         </Col>
       </div>

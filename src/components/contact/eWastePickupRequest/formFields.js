@@ -78,7 +78,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<div><FormAddressValidatorError>
 			{values.isDistrictActive === false ?
 					'<p><span style="font-weight: 400;">The address you entered is currently not in the pilot program.</p>'
-					:values.buildingStatus ?
+					:values.buildingStatus || values.commercialAddress ?
 						 '<p><span style="font-weight: 400;">You live in a building with 10 or more units. Your building is eligible for the City’s free ecycleNYC program which provides convenient in-building electronics collection. Please contact your building’s management to enroll. To learn more, visit <a href="http://www1.nyc.gov/assets/dsny/zerowaste/residents/e-cyclenyc.shtml">nyc.gov/ecycle</a></p>'
 						  :''}
 				</FormAddressValidatorError></div>
@@ -94,7 +94,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-		
+
 	</fieldset>)
 };
 

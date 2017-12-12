@@ -1,18 +1,16 @@
 import React from "react";
 import FormSectionHeader from '../form_section_header';
 import FormHeader from '../form_header';
-import MultiSelectInput from '../multiselect_field'
 import CheckBoxInput from '../form_boolean';
 import TextInput from '../form_field';
 import DropdownInput from '../dropdown_field'
 import DateTimePickerInput from '../dateTimepicker_field'
-import TextAreaInput from '../textarea_field';
 import Nstepper from './pickup_request_stepper'
+import FormAddressValidatorError from '../form_address_validator_error';
 import {Field} from 'formik'
 import {Titles} from './constants'
 import '../../../content/styles/compostRequest.css';
 import FormAddressAutocomplete from '../formAddressAutocomplete'
-import {Col} from 'react-bootstrap';
 import TextdisplayField from '../form_display_field';
 import moment from 'moment';
 import isEmpty from 'lodash/isEmpty';
@@ -71,6 +69,11 @@ const CRforLargeItemsFormElements = (props) => {
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" required disabled={values.editMode}/></div>
+			<div><FormAddressValidatorError>
+				{values.commercialAddress ?
+							 '<p><span style="font-weight: 400;">The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.</span></p>'
+							  :''}
+					</FormAddressValidatorError></div>
 		<div>{values.commercialAddress ? <Field component={CheckBoxInput} name="overideAddressValidation" {...props} onChange={setFieldValue} required/> : '' }</div>
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
