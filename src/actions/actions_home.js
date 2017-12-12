@@ -67,13 +67,23 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                                 // Place name
                                 DSNYGeoCoder['address'] = data.data.Goat.firstStreetNameNormalized + "(" + data.data.Goat.firstBoroughName + ")";
                             }
+                            DSNYGeoCoder['boroughCode1In'] = data.data.Goat.boroughCode1In;
+                            DSNYGeoCoder['bblTaxBlock'] = data.data.Goat.bblTaxBlock;
+                            DSNYGeoCoder['bblTaxLot'] = data.data.Goat.bblTaxLot;
+                            DSNYGeoCoder['segmentIdentifier'] = data.data.Goat.segmentIdentifier;
+                            DSNYGeoCoder['geosupportReturnCode'] = data.data.Goat.geosupportReturnCode;
+                            DSNYGeoCoder['xCoordinate'] = data.data.Goat.xCoordinate;
+                            DSNYGeoCoder['yCoordinate'] = data.data.Goat.yCoordinate;
+                            DSNYGeoCoder['gi5DigitStreetCode'] = data.data.Goat.giDetail[0].gi5DigitStreetCode;
+                            
                             DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
                             DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
                             DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;
 
                             DSNYGeoCoder['RegularCollectionSchedule'] = data.data.RegularCollectionSchedule;
                             DSNYGeoCoder['RecyclingCollectionSchedule'] = data.data.RecyclingCollectionSchedule;
-                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;       
+                            DSNYGeoCoder['OrganicsCollectionSchedule'] = data.data.OrganicsCollectionSchedule;      
+                            console.log(DSNYGeoCoder) 
                         }
                         else {
                             DSNYGeoCoder = null;
@@ -311,11 +321,10 @@ export function setPaginationKey(value) {
         });
     }
 }
-export function commercialAddressFlag(flag, message) {
+export function commercialAddressFlag(flag) {
     return function (dispatch) {
         var commercialAddress = {};
         commercialAddress['commercialFlag'] = flag;
-        commercialAddress['commercialMessage'] = message
         dispatch({
             type: 'SET_COMMERICIAL_FLAG',
             commercialAddress: commercialAddress,

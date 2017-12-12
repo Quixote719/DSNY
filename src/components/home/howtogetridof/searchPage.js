@@ -100,10 +100,11 @@ class SearchPage extends Component {
          });
     }
     handleKeyPress = (event) => {
-        var reg=/[^\!\@\#\$\%\^\*\_\|]+/;
-        if(reg.test(this.state.value)){
-            event.preventDefault();            
-        }
+        // var reg=/[^\!\@\#\$\%\^\*\_\|]+/;
+        console.log(this.state.value)
+        // if(reg.test(this.state.value)){
+        //     event.preventDefault();            
+        // }
         // if(this.state.value.trim().length == 0 && event.keyCode == 32){
         //     event.preventDefault();
         //   }   
