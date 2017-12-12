@@ -4,7 +4,7 @@
  We SHOULD be styling specific types of items that come out of Wordpress.
  **/
 
-.viewAllComplaints> .subSectionButton{
+ .viewAllComplaints> .subSectionButton{
   width: 192px;
 }
 
@@ -39,6 +39,10 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 19px;
+}
+
+.getInvolvedLink a{
+  margin-top: 15px;
 }
 
 /*Mobile View*/

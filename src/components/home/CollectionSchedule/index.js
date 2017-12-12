@@ -15,6 +15,7 @@ import CollectionScheduleTable from './collectionScheduleTable';
 import RoutingTimes from './routingTimes';
 import AddressAutocomplete from './addressAutocomplete'
 import CollectionScheduleDefaultTable from './collectionScheduleDefaultTable'
+import "babel-polyfill";
 
 let errorFlag = 0;
 var showTableFlag;
@@ -113,6 +114,11 @@ class CollectionSchedule extends Component {
         }
     }
     handleKeyPress = (event) => {
+        // event.bind('keydown', function (evt) {
+        //     if(evt.which===40){
+        //     alert("Hi")
+        //     }
+        // });
         if (event.keyCode === 32) {
             if (this.state.address.trim().length === 0)
                 event.preventDefault();

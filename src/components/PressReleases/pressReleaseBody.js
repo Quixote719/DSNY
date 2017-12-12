@@ -15,8 +15,10 @@ class PressReleaseBody extends Component {
 
   render() {
     const {data} = this.props
-    console.log(data.content)
+    let pressReleaseImg = data.featured_image;
     return (
+      pressReleaseImg
+      ?
       <div className='PressReleaseBody'>
         <Row>
           <Col xs={12} sm={8} md={9}>
@@ -29,6 +31,19 @@ class PressReleaseBody extends Component {
           </Col>
         </Row>
       </div>
+      :
+      <div className='PressReleaseBodyNoImg'>
+      <Row>
+        <Col xs={12} sm={8} md={9}>
+          <div className='PressReleaseBodytext' dangerouslySetInnerHTML={{
+            __html: data.content
+          }}/>
+        </Col>
+        <Col xs={12} sm={4} md={3}>
+          <Row>{this.renderCards(data.cards)}</Row>
+        </Col>
+      </Row>
+    </div>
     );
   };
 };

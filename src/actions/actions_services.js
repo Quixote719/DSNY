@@ -25,7 +25,7 @@ export function fetchFoodScrapList() {
 }
 
 export function foodScrapMapPage() {
-  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=food-scraps-and-yard-waste-page`);
+  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=nyc-food-scrap-drop-off-locations`);
   return {type: 'SET_FOODSCRAP_CONTENT', payload: request};
 }
 
@@ -35,6 +35,6 @@ export function fetchHarmfulProductList() {
 }
 
 export function harmfulProductMapPage() {
-  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=harmful-products`);
+  const request = axios.get(`${WORDPRESS_ROOT_URL}dsny/v1/getPageData?name=special-waste-drop-offs`);
   return {type: 'SET_HARMFUL_PRODUCT_CONTENT', payload: request};
 }

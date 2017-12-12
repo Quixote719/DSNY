@@ -439,6 +439,9 @@ input.searchMessagesInput:focus {
 #navBar>div>.react-autosuggest__container>.react-autosuggest__suggestions-container{
     width: 80px;
 }
+.navbar-toggle{
+    border-radius: 0px;
+}
 /*MOBILE VIEW!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media only screen and (max-width: 499px) {
     .siteSearchBoxParent {

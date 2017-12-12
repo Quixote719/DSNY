@@ -6,7 +6,7 @@ import {
 } from '../../../constants/ApiConstants';
 //Actions
 import {fetchFormObject, postFormObject, IsDistrictActive,GetBulidingUnits, GetUnavailableDates} from "../../../actions/contact_forms";
-import FormSteps, {displayThankYouPage} from '../form_steps'
+import FormSteps, {displayThankYouPage, allfieldsValidated} from '../form_steps'
 import formFields from './formFields'
 import FetchError from '../fetchError'
 import {Titles, formObject as FormObject } from './constants'
@@ -79,11 +79,11 @@ class EwasteRequestForm extends Component {
       requestedQtyMessage = false;
       //document.getElementsByClassName("incDecSubField")[0].focus();
     }
-    else if(this.findTotal() === 0)
+    else if(this.findTotal() === 0 && allfieldsValidated)
     {
       errors.ConfirmEmail = 'Error'
       requestedQtyMessage = true;
-      //document.getElementsByClassName("incDecSubField")[0].focus();
+      document.getElementsByClassName("incDecSubField")[0].focus();
     }
     // else if (formObject.Email !== formObject.ConfirmEmail) {
     //   errors.ConfirmEmail = `The email addresses don't match`

@@ -9,6 +9,7 @@ import moment from 'moment';
 import PressReleaseListItem from '../Resources/PressReleases/press_release_list_item';
 import SubSectionDropdown from '../shared/Sub_section_dropdown'
 import Header from '../shared/Breadcrumb/breadcrumb_container'
+import LazyLoad from 'react-lazyload';
 
 // Set initial state
 let PressReleaseListstate = {
@@ -79,9 +80,13 @@ class PressReleaseList extends Component {
         if (cItems.sections) {
           sections = _.map(cItems.sections.sections, sec => {
             const maxCards = sec.card_data.max_cards;
+
             return _.map(sec.cards, prItem => {
-              return (<PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} 
-              date={prItem.date} key={prItem.id} maxCards={maxCards}/>);
+              return (
+                <LazyLoad height={95} once={true} offset={0} debounce={100} key={prItem.id}>
+                  <PressReleaseListItem prid={prItem.pr_number} slug={prItem.linked_page.url} title={prItem.title} 
+                  date={prItem.date} key={prItem.id} maxCards={maxCards}/>
+                </LazyLoad>);
             });
 
           })
