@@ -15,6 +15,7 @@ import CollectionScheduleTable from './collectionScheduleTable';
 import RoutingTimes from './routingTimes';
 import AddressAutocomplete from './addressAutocomplete'
 import CollectionScheduleDefaultTable from './collectionScheduleDefaultTable'
+import "babel-polyfill";
 
 let errorFlag = 0;
 var showTableFlag;
