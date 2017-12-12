@@ -52,7 +52,7 @@ class SearchCards extends Component {
         this.props.pushHistory.history.push(process.env.REACT_APP_SITE_RELATIVE_URL+"/collectionSchedule/"+this.state.address)
     }
     }
-    handleKeyPress = (event) => {
+    handleKeyPress = (event) => {       
         if(this.state.address.trim().length == 0 && event.keyCode == 32){
           event.preventDefault();
         }   
