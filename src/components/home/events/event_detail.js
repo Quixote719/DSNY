@@ -96,7 +96,7 @@ class EventDetail extends Component {
                 Center = {{ lat: this.state.lat, lng: this.state.lng }}
                 Locations = {{ lat:this.state.lat, lng:this.state.lng }}/>
             </div>
-             <div className='container EventBodyContent'>
+             <div className='container PressReleaseBody'>
               <Row>
                 <Col xs={12} sm={8} md={9}>
                   <div className='PressReleaseBodySubHeaders' dangerouslySetInnerHTML={{

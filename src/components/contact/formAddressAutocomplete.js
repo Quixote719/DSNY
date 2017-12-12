@@ -149,12 +149,11 @@ class FormAddressAutocomplete extends Component {
           (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
           this.props.suggestionAddress === null){
             this.props.commercialAddressFlag(1)
-            // errorMessage = (
-            // <div className="errorMessageAddressForm">
-            // The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.
-            // </div>
-            // );
-            // this.forceUpdate();
+            errorMessage = (
+            <div>
+            </div>
+            );
+            this.forceUpdate();
         } else {
             this.props.commercialAddressFlag(0)                        
             errorMessage = (<div className ="validatedAddress">Address Validated</div>);
