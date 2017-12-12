@@ -53,7 +53,7 @@ const CFCRecoveryRequestFormElements = (props) => {
 	}
 
 	if (Dates && geoCoderAddressResult){
-		console.log(geoCoderAddressResult);
+		
      values.Dates = Dates;
 		 values.AppointmentDate =  values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate;
 		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
