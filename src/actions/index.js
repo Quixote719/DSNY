@@ -45,6 +45,7 @@ export function fetchPageData(slug) {
                 holidayData: null,
                 noResultsError: null,
                 suggestionAddress: null,
+                commercialAddress:null
                 })
 
       dispatch({
