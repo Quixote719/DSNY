@@ -24,7 +24,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Complaint Form' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" {...props} title={Titles.AddressAsEntered} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" {...props} title={Titles.AddressAsEntered} onChange={setFieldValue} disabled={values.editMode}/>
     </div>
     <Field component={TextInput} name="AdditionalLocationInfo"  {...props} fullRow={true} maxlength={"100"} disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Description" {...props} required maxlength={"100"} disabled={values.editMode}/>
