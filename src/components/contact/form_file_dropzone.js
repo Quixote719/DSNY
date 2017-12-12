@@ -26,11 +26,11 @@ class FormFileDropZone extends Component {
         <div className='fileDropZoneHeader'>{this.props.header}</div>
         <div className='fileDropZoneNote'>{this.props.note}</div>
         {/* <Dropzone onDrop={this.onDrop.bind(this)} className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' accept="image/jpeg, image/png, .pdf, video/*"> */}
-        <Dropzone onDrop={this.onDrop.bind(this)} className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' >
+        <Dropzone onDrop={this.onDrop.bind(this)} className='fileDropzone' activeClassName='fileDropzoneAcpt' acceptClassName='fileDropzoneAcpt' rejectClassName='fileDropzoneRej' multiple={false}>
 
           {({ isDragActive, isDragReject, acceptedFiles, rejectedFiles }) => {
             if (this.props.value[0]){
-              console.log(this.props.value[0]);
+              console.log(this.props.value);
               return (this.body('Success', this.props.value[0][0].name));             
             }
             if (isDragActive) {

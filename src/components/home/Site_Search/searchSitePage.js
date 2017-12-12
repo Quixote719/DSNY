@@ -42,9 +42,6 @@ class SearchSitePage extends Component {
         }
         
     }
-    // componentMount(){
-    //     console.log("search site page DID MOUNT rerendered......");        
-    // }
     getSuggestions = value => {
         const inputValue = value.trim().toLowerCase();
         const inputLength = inputValue.length;

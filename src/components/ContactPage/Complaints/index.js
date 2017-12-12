@@ -53,7 +53,11 @@ class Complaints extends Component {
 
     this.parseComplaintsData(Complaints, Banner, PageExplanation, AnimalsProps, EqualOpportunityProps, GraffitiProps, IllegalDumpingProps, LitterProps, LitterBasketsProps, RecyclingGarbageProps, StreetSideProps);
 
+    let Complaintscontent = _.isEmpty(Banner) || _.isEmpty(PageExplanation) || _.isEmpty(AnimalsProps) || _.isEmpty(EqualOpportunityProps) || _.isEmpty(GraffitiProps)
+    || _.isEmpty(IllegalDumpingProps) || _.isEmpty(LitterProps) || _.isEmpty(LitterBasketsProps) || _.isEmpty(RecyclingGarbageProps) || _.isEmpty(StreetSideProps);
+    
     return (
+      !Complaintscontent &&
       <div>
         {Banner}
         <div className = 'SContainer'>
