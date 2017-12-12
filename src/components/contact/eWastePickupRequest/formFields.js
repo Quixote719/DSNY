@@ -20,24 +20,7 @@ import {Col} from 'react-bootstrap';
 import moment from 'moment';
 import isEmpty from 'lodash/isEmpty'
 
-const DisplayFormikState = props => <div style={{
-		margin: '1rem 0'
-	}}>
-	<h3 style={{
-			fontFamily: 'monospace'
-		}}/>
-	<pre
-      style={{
-        background: '#f6f8fa',
-        fontSize: '2rem',
-        padding: '.5rem',
-      }}
-    >
-      <strong>values</strong> ={' '}
 
-      {JSON.stringify(props.values, null, 2)}
-    </pre>
-  </div>;
 //  <Nstepper disabled={values.editMode} header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' onChange={setFieldValue} required/>
 // Our inner form component which receives our form's state and updater methods as props
 //   <Col xs={12}><DisplayFormikState {...props} /></Col>
@@ -46,7 +29,7 @@ const DisplayFormikState = props => <div style={{
 
 const EwastePickUpRequestFormElements = (props) => {
 	const {values, setFieldValue, Dates, isDistrictActive,commercialAddress, geoCoderAddressResult, buildingStatus,isAddressValidated} = props;
-
+	console.log("## :",values.isDistrictActive);
 	if(!values.AddresAsEntered && isEmpty(values.PickupRequestItems))
 	{
 		values.categories.map((category, Item)=>{
@@ -64,6 +47,8 @@ const EwastePickUpRequestFormElements = (props) => {
      values.Dates = Dates;
 		 values.AppointmentDate = values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate
 	}
+
+
 
 	if (typeof isDistrictActive !== undefined){
 		 values.isDistrictActive = isDistrictActive;
@@ -101,7 +86,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextdisplayField} title={Titles.crossStreet} body={geoCoderAddressResult ? geoCoderAddressResult.crossStreet :null}/>
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} name="PickUpLocation" {...props} onChange={setFieldValue} options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets ? geoCoderAddressResult.pickupStreets: [] : []} disabled={values.editMode} required/>
-		<Field component={DateTimePickerInput} required value={values.isDistrictActive ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ typeof values.isDistrictActive !== undefined ? !values.isDistrictActive : true } name="AppointmentDate" {...props} onChange={setFieldValue}/>
+		<Field component={DateTimePickerInput} required value={values.isDistrictActive ? values.AppointmentDate : ''} Dates={values.Dates} disabled={ values.Dates === undefined ? true : values.editMode } name="AppointmentDate" {...props} onChange={setFieldValue}/>
 		<Field component={Nstepper} required name="ElectronicCategory" header='ELECTRONIC CATEGORY (Maximum of 20 items including no more than 5 TVs per request)' tableHeader='Electronic Category' {...props} PickupRequestItems={values.PickupRequestItems} categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
 		<Field component={TextInput} name="FirstName" {...props} required="required"/>
@@ -109,7 +94,7 @@ const EwastePickUpRequestFormElements = (props) => {
 		<Field component={TextInput} name="Email" {...props} required="required"/>
 		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
 		<Field component={TextInput} name="Phone" {...props} required="required"/>
-		<Col xs={12}><DisplayFormikState {...props} /></Col>
+		
 	</fieldset>)
 };
 
