@@ -58,8 +58,12 @@ render() {
        
         
     if(success !== undefined) {
+      if(success && success.SRNo){
           return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your ${Titles.formTitle} form has submitted successfully. </p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
-    }
+        }else{
+          return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`);
+        }
+      }
     
         if (FormObject && FormObject !== undefined) {
         return (<div className='container'><div className='form compostForm'>
