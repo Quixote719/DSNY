@@ -31,7 +31,7 @@ const adoptABasketElements = (props) => {
     <FormHeaderSmallSize title='New Enrollment' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
+    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={TextInput} name="BasketAdditionalLocationInfo" fullRow={true} {...props} disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.sectionTwo}/>

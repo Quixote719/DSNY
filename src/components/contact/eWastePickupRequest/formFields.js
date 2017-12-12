@@ -74,7 +74,7 @@ const EwastePickUpRequestFormElements = (props) => {
 	return (<fieldset className='disabledContactForm' disabled={values.editMode}>
 		<FormHeader title='Online Service Request Form'/>
 		<FormSectionHeader title={Titles.sectionOne}/>
-		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
+		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   onChange={setFieldValue} disabled={values.editMode}/></div>
 		<div><FormAddressValidatorError>
 			{values.isDistrictActive === false ?
 					'<p><span style="font-weight: 400;">The address you entered is currently not in the pilot program.</p>'

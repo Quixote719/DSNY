@@ -27,7 +27,7 @@ const RefashionNYCFormElements = (props) => {
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormHeaderSmallSize title='Online Service Request Form' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete title={Titles.AddressAsEntered} name="AddressAsEntered"  {...props}   value="" disabled={values.editMode} required/>
+    <FormAddressAutocomplete title={Titles.AddressAsEntered} name="AddressAsEntered"  {...props}   onChange={setFieldValue} disabled={values.editMode} required/>
     <Field component={TextInput} name="Apartment" {...props} maxlength={"50"}/>
 
     <FormSectionHeader title={Titles.sectionTwo}/>

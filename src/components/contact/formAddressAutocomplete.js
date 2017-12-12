@@ -40,7 +40,7 @@ class FormAddressAutocomplete extends Component {
     }
 
     handleChange = (address) =>{
-        //this.props.checkAddressValidator(0);
+        this.props.checkAddressValidator(0);
         
             errorMessage = (
                 <div className = "pleaseEnterAddressForm">
@@ -55,7 +55,8 @@ class FormAddressAutocomplete extends Component {
         }
         isEmpty(address) || address.trim() === "" || (previousErrorMessage !== this.props.errors[this.props.name]) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
         previousErrorMessage = this.props.errors[this.props.name];
-        this.props.checkAddressValidator(address);
+        //this.props.checkAddressValidator(address);
+        this.props.onChange(this.props.name, address);
     }
 
     resetPlaceHolder = () =>{
@@ -98,7 +99,7 @@ class FormAddressAutocomplete extends Component {
                 address: address,
              });
         }
-        
+        this.props.getCollectionSchedule(address, this.successCallback);        
          document.getElementById("validateBtn").click();
          this.setState({hideToolTip: false});
          //showflag = false;

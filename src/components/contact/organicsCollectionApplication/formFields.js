@@ -34,7 +34,7 @@ class formFields extends Component {
             <fieldset className='disabledContactForm' disabled={values.editMode}>
               <FormSectionHeader title={Titles.sectionTwo}/>
               <div>
-                <FormAddressAutocomplete name="AddressAsEntered"  {...this.props}   value="" disabled={values.editMode}/>
+                <FormAddressAutocomplete name="AddressAsEntered"  {...this.props}   onChange={setFieldValue} disabled={values.editMode}/>
               </div>
             </fieldset>
         )

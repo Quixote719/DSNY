@@ -40,7 +40,7 @@ const masterComposerCertificateCourseElements = (props) => {
     <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} required  value="" disabled={values.editMode}/>
+    <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} required  onChange={setFieldValue} disabled={values.editMode}/>
     <Field component={TextInput} name="Apartment" {...props} maxlength="35"  disabled={values.editMode}/>
     
     <FormSectionHeader title={Titles.SectionTwo} />

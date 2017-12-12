@@ -28,7 +28,7 @@ const siteVisitRequestFormElements = (props) => {
 
     <FormHeaderSmallSize title='Online Service Request Form'  information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
-    <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   value="" disabled={values.editMode} required/>
+    <FormAddressAutocomplete title={Titles.AddressAsEntered}  name="AddressAsEntered" {...props}   onChange={setFieldValue} disabled={values.editMode} required/>
     <Field component={TextInput} name="Apartment" fullRow= {true} {...props} maxlength="100" disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionTwo} />
     <Field component={DropdownInput} name="CategorizeSiteTypeId" {...props}  required ondropDownChange={handledropDown} onChange={setFieldValue} options={values.CategorizeSiteTypes} disabled={values.editMode}/>

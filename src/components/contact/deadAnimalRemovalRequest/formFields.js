@@ -23,7 +23,7 @@ const CompostRequestFormElements = (props) => {
     <FormHeaderSmallSize title='Online Complaint Form' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props}   onChange={setFieldValue} disabled={values.editMode}/>
     </div>
     <Field component={DropdownInput} name="DeadAnimalLocationId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.DeadAnimalLocations} disabled={values.editMode} {...props} required/>
     <Field component={TextInput} name="OtherDeadAnimalLocation" {...props} isHidden={values.DeadAnimalLocationId !== 4} required={values.DeadAnimalLocationId == 4} maxlength={"25"} disabled={values.editMode}/>
