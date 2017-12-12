@@ -41,6 +41,10 @@
   line-height: 19px;
 }
 
+.getInvolvedLink a{
+  margin-top: 15px;
+}
+
 /*Mobile View*/
 @media only screen and (max-width: 499px) {
   .complaintsTitleContainer{

@@ -29,8 +29,7 @@ import {validateButtonClicked} from './formAddressAutocomplete';
 //       {JSON.stringify(props.values, null, 2)}
 //     </pre>
 //   </div>);
-
-export let allfieldsValidated = false;
+let firsterror = true;
 let initialPageLoad = true;
 let nextbuttonClicked = false;
 let captchaVerified = false;
@@ -79,7 +78,6 @@ function assignGeoCoderAddressValues(values, geoCoderAddressResult, isAddressVal
     values.LastName = "";
     values.Email = "";
     values.ConfirmEmail = "";
-    values.Phone = "";
   }
 
   if(!values.DebrisInsideLot)
@@ -125,6 +123,7 @@ function handleNextClick(errors, dirty, isSubmitting, nextStep)
   console.log(isSubmitting);
 
   if(((isSubmitting  || !isEmpty(errors) || !dirty))) {
+      firsterror = true;
       return;
    }
    else {
@@ -223,7 +222,6 @@ const FormSteps = compose(
   validate: (values, props) => {
 
     let errors = {}
-    allfieldsValidated = false;
     // alert(props.geoCoderAddressResult);
     // alert(props.isAddressValidated);
     // //if(props.isAddressValidated === undefined || props.isAddressValidated === 0);
@@ -263,7 +261,7 @@ const FormSteps = compose(
               }
             }
 
-            if(nextbuttonClicked)
+            if(!initialPageLoad)
             {
               if (input.required  && (input.type === "text" || input.type === "textarea")  && (!values[input.name] ||  values[input.name].trim() === "" ||  values[input.name] === 0))
               {
@@ -352,11 +350,8 @@ const FormSteps = compose(
 
           //   errors.WillPostCompostRecipientSignage = 'please check this'
           // }
-          if(isEmpty(errors) && nextbuttonClicked)
-          {
-            allfieldsValidated = true;
-            props.validateForm(values,errors);
-          }
+          //if(isEmpty(errors))
+            //props.validateForm(values,errors);
     //}
     return errors
   },

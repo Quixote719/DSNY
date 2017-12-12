@@ -321,7 +321,7 @@ class FormSec extends Component {
     }
     /* If the sectionType is a normal Page such as the 'get-involved' page, then depending on if the page secti*/
     else if (sectionType != ''){
-        return section.indexOf('-form') > -1 ? '' :  ( finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>);
+        return section.includes('-form') ? '' :  ( finalSec == true ? <div className='bottomSection'></div> : <div className='normalsection'></div>);
     } 
       
     }

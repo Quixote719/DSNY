@@ -37,7 +37,6 @@ const DisplayFormikState = props => <div style={{
 const CFCRecoveryRequestFormElements = (props) => {
 	const { values, setFieldValue, Dates,commercialAddress, geoCoderAddressResult } = props;
 
-console.log(values.commercialAddress,'zxcvbnm');
 
 	if(!values.AddresAsEntered && isEmpty(values.AppointmentItems))
 	{
@@ -78,7 +77,7 @@ console.log(values.commercialAddress,'zxcvbnm');
 		<FormSectionHeader title={Titles.sectionOne}/>
 		<div><FormAddressAutocomplete name="AddressAsEntered"  {...props}   value="" disabled={values.editMode}/></div>
 			<div><FormAddressValidatorError>
-				{ values.commercialAddress ?
+				{values.commercialAddress ?
 							 '<p><span style="font-weight: 400;">The address entered may be a commercial address. Please check again or select the checkbox to continue with the form.</span></p>'
 							  :''}
 					</FormAddressValidatorError></div>

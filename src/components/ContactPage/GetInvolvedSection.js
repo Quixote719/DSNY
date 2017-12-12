@@ -34,7 +34,7 @@ class GetInvolvedSection extends Component {
       <div className='locations' style={style} >
         <div className = 'SContainer'>
             <div className = 'whiteTitle'>Get Involved</div>
-            <div style={cardStyle}>
+            <div style={cardStyle} className="getInvolvedLink">
                 <ContentCard type='2' content={this.props.GetInvolvedProps.content}/>
             </div>
         </div>

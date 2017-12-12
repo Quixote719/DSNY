@@ -1,6 +1,12 @@
 .PressReleaseBody{
   margin: 30px auto 70px auto;
 }
+.PressReleaseBodyNoImg{
+  margin: 0px auto 70px auto;
+}
+.EventBodyContent{
+  margin: 30px auto 70px auto;
+}
 
 .patternLineGreen {
   height: 10px;

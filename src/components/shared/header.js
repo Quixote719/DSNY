@@ -43,7 +43,7 @@ class Header extends React.Component {
     textSizeModal() {
         this.setState({textSizePopUp: !this.state.textSizePopUp});
     }
-    homeRedirection = () =>{
+    homeRedirection() {
         this.props.history.push(process.env.REACT_APP_SITE_RELATIVE_URL + "/home");
     }
     componentWillMount() {
@@ -92,9 +92,7 @@ class Header extends React.Component {
                 </div>
                 <div className="middleHeaderContainerParent">
                     <div className="container middleHeader">
-                        <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
-                        <img src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" alt="Sanitation Logo"/>
-                        </Link>
+                        <img onClick = {()=>{this.homeRedirection()}} src={require('../../content/images/sanitation_logo.svg')} className="middleHeaderLogo" alt="Sanitation Logo"/>
                         <a className="textSizeHeader" onClick = {()=>{this.textSizeModal()}}>Text Size</a>
 
                         <span className="textSizeTranslate">&#8203;</span>
@@ -105,9 +103,7 @@ class Header extends React.Component {
                 </div>
                 <Navbar collapseOnSelect id="slideNav">
                     <Navbar.Brand className="mobileSanitationLogo" >
-                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
                     <img src={require('../../content/images/sanitation_logo.svg')} id="sanitationMobileLogo" alt="Sanitation Logo"/>
-                    </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle className="navbarToggle" onClick={this.showNavModal} />
                     <Navbar.Collapse id="navBar">
@@ -149,9 +145,8 @@ class Header extends React.Component {
                 </div>
 
                     <Modal.Header closeButton onClick={this.close}>
-                    <Link to = {process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
+
                     <img src={require('../../content/images/sanitation_logo.svg')} className="sanitationMobileLogo" alt="Sanitation Logo"/>
-                    </Link>
                     </Modal.Header>
                     <Modal.Body>
                         <div className = "searchMessagesMobileDiv">

@@ -183,3 +183,10 @@
         margin-bottom: 30px;
     }
 }
+
+/*PHONE LANDSCAPE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 567px) and (max-width: 736px) and (orientation: landscape) {
+  .newscardTitle {
+    margin-left: 15px;
+  }
+}
