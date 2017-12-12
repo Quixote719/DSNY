@@ -74,8 +74,12 @@ export function getCollectionSchedule(address, callback = null, callbackSuccess 
                             DSNYGeoCoder['geosupportReturnCode'] = data.data.Goat.geosupportReturnCode;
                             DSNYGeoCoder['xCoordinate'] = data.data.Goat.xCoordinate;
                             DSNYGeoCoder['yCoordinate'] = data.data.Goat.yCoordinate;
-                            DSNYGeoCoder['gi5DigitStreetCode'] = data.data.Goat.giDetail[0].gi5DigitStreetCode;
-                            
+                            if(data.data.Goat.giDetail.length !== 0){
+                                DSNYGeoCoder['gi5DigitStreetCode'] = data.data.Goat.giDetail[0].gi5DigitStreetCode;                                
+                            }
+                            else{
+                                DSNYGeoCoder['gi5DigitStreetCode'] = null;                                
+                            }
                             DSNYGeoCoder['sanitationRegularCollectionSchedule'] = data.data.Goat.sanitationRegularCollectionSchedule;
                             DSNYGeoCoder['sanitationRecyclingCollectionSchedule'] = data.data.Goat.sanitationRecyclingCollectionSchedule;
                             DSNYGeoCoder['sanitationOrganicsCollectionSchedule'] = data.data.Goat.sanitationOrganicsCollectionSchedule;

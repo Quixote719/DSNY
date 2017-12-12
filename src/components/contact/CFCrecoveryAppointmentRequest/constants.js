@@ -17,6 +17,7 @@ export const Titles = {
 
 export const formObject = {
 	"RequestId": 0,
+	"commercialAddress":false,
 	"strRequestId": "",
 	"SRNumber": "",
 	"FirstName": "",
