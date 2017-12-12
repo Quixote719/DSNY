@@ -79,6 +79,7 @@ class HarmfulProductMap extends Component {
       }
       this.onMarkerClick = this.onMarkerClick.bind(this);
       this.onMapClick = this.onMapClick.bind(this);
+      this.renderSection = this.renderSection.bind(this);
   }
 
   componentWillMount() {
@@ -109,11 +110,19 @@ class HarmfulProductMap extends Component {
     this.setState({Locations : tempLoc});
   }
 
+  renderSection(content){
+    return <div className="SContainer boxPadding" dangerouslySetInnerHTML={{__html: content}}></div>
+  }
+
   render() {
     let locBanner = null;
+    let locContent = [];
     if(this.props.HarmfulProductData !== undefined){
       let locPage = this.props.HarmfulProductData;
       locBanner = <Header title={locPage.header} breadCrumbList={locPage.breadcrumb} body={locPage.header_content}/>
+      _.map(locPage.sections.sections, (SecContent, index)=>{
+          locContent.push(this.renderSection(SecContent.content));
+      })
     }
     return (
       <div>
@@ -126,6 +135,7 @@ class HarmfulProductMap extends Component {
               onMarkerClick = {this.onMarkerClick}
               onMapClick = {this.onMapClick}/>
         </div>
+        {locContent}
       </div>
 
     )
