@@ -72,13 +72,13 @@ const CFCRecoveryRequestFormElements = (props) => {
 		<FormSectionHeader title={Titles.sectionTwo}/>
 		<Field component={DropdownInput} required name="RecyclingLocation" options={geoCoderAddressResult ? geoCoderAddressResult.pickupStreets? geoCoderAddressResult.pickupStreets:[]:[]} {...props} onChange={setFieldValue} disabled={values.editMode}/>
 		<Field component={DateTimePickerInput} value={values.AppointmentDate ? values.AppointmentDate : ''} Dates={values.Dates} required name="AppointmentDate" {...props} disabled={ values.Dates === undefined ? true : values.editMode }  onChange={setFieldValue}/>
-		<Field component={Nstepper}  AppointmentItems={values.AppointmentItems}  name="Appliances" header='APPLIANCES' tableHeader='Electronic Category' {...props} required="required" categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
+		<Field component={Nstepper}  AppointmentItems={values.AppointmentItems}  name="Appliances" header='APPLIANCES' tableHeader='Electronic Category' {...props} required categories={values.categories} disabled={values.editMode} onAppend={setFieldValue}/>
 		<FormSectionHeader title={Titles.sectionThree}/>
-		<Field component={TextInput} name="FirstName" {...props} required="required"/>
-		<Field component={TextInput} name="LastName" {...props} required="required"/>
-		<Field component={TextInput} name="Email" {...props} required="required"/>
-		<Field component={TextInput} name="ConfirmEmail" {...props} required="required"/>
-		<Field component={TextInput} name="Phone" {...props} required="required"/>
+		<Field component={TextInput} name="FirstName" {...props} required/>
+		<Field component={TextInput} name="LastName" {...props} required/>
+		<Field component={TextInput} name="Email" {...props} required/>
+		<Field component={TextInput} name="ConfirmEmail" {...props} required/>
+		<Field component={TextInput} name="Phone" {...props} required/>
 	</fieldset>)
 };
 
