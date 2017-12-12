@@ -56,7 +56,7 @@ class FormTextarea extends Component {
     return (<div>
       <Col xs={12}>
         <fieldset>
-          <div className='FormMultiSelectTitle'>{this.props.title}</div>
+          <div className='FormMultiSelectTitle'>{this.props.title}{this.props.required?<span class="requiredAsterik"> *</span>:<span></span>}</div>
           <div>{this.renderField()}</div>
         </fieldset>
       </Col>

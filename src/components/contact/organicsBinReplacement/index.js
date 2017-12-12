@@ -47,8 +47,11 @@ class OrganicsBinReplacement extends Component {
     const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
     
     if(success !== undefined) {
-      if (success != null) {
-        return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessagem, false)
+      if(success && success.SRNo){
+        return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Organics Bin Replacement Request form has been submitted succeffuly.</p><p>&nbsp;</p><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>&nbsp;<p><p><b>Organics Bin Replacement Request Acknowledgment:</b></p><p>We're happy that you're participating in the DSNY organics collection program! We aim to fulfill requests within 6-8 weeks.</p><p>You may be contacted for additional information.</p><p>NOTE: If your bin is missing. please check with your neighbors. If you find your bin, please submit another bin request form and tell us in the COMMENTS</p></div></div>`)        
+      }
+      else{
+        return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
       }
     }
 

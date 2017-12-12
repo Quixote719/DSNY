@@ -46,8 +46,13 @@ class DisabilityServices extends Component {
         //const {FormObject, error, success} = this.props;
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
        
-        if(success !== undefined && success != null) {
-          return displayThankYouPage(success, Titles.SuccessMessage, Titles.FailureMessagem, false)
+        if(success !== undefined) {
+          if(success && success.SRNo){
+            return displayThankYouPage( `<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>Your Disability Services form has been submitted succeffuly.</p><p>An email confirmation has been sent to your contact email address</p></div></div>`)            
+          }
+          else{
+            return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
+          }
         }
     
         if (FormObject && FormObject !== undefined) {

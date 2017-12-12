@@ -7,55 +7,113 @@ import {Row, Col, Tooltip} from 'react-bootstrap';
 import '../../content/styles/subSectionHeader.css';
 import {Formik, Field} from 'formik';
 import isEmpty from 'lodash/isEmpty'
-import FormAddressAutocompleteNoValidation from '../../components/contact/formAdressAutoCmpleteNoValidation';
+import AddressAutocomplete from '../home/CollectionSchedule/addressAutocomplete'
 
 class FormField extends Component {
 
-  constructor(props) {
-    super(props);
-    console.log(props);
-    this.state = {
-      hideToolTip: true
+ constructor(props, context) {
+        super(props, context);
+        console.log(this.props);
+            this.state = {
+                address: this.props.value || '',
+                hideToolTip: true,                        
+            };
+    }
+    
+    handleChange = (address) =>{
+        this.setState({
+            address,
+        });
+
+         isEmpty(address) || address.trim() === "" ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+         //this.props.onChange(address);
+         this.props.onChange(this.props.name, address);
+    }
+  
+    suggestedAddressSelected = (value) =>{
+         this.setState(prevState => ({
+            address: value,
+        }));   
     }
 
-    this.onInputChange = this.onInputChange.bind(this);
+     setPlaceHolder = () =>{
+         (isEmpty(this.props.value) || this.props.value.trim() === "") ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
+    }
+
+
+    /* When Proper address is selected from the drop down list, the address state is modified & passed to parents method*/
+    handleSelect = (address)=>{ 
+        this.setState(prevState => ({
+             address: address,
+         }));
+        this.props.onChange(this.props.name, address);
+        //this.props.onChange(address);
+    }
+
+    /* If the address is entered and no value is selected from the drop down list, the address state is passed to the parents method */
+    handleBlur = (event) => {
+       //this.props.onChange(this.state.address);
+       //this.props.onChange(this.props.name, this.state.address);
+       this.setState({hideToolTip: true});
+    }
     
-  }
 
-  /* Mapping of address value with the Prop name to create the JSON object */
-  onInputChange(address) {
-    this.props.onChange(this.props.name, address);
-    this.props.setFieldValue(this.props.name, address);
-  }
+    correctAddressList = () => {
+        return _.map(this.props.suggestionAddress, (value,index)=> {
+                return(
+                <div className = "suggestedAddressListItem" key ={index} onClick = {()=>{this.suggestedAddressSelected(value)}}>
+                    {value}
+                </div>);
+        } );
+    }
+    render() {
+        const defaultBounds = new window.google.maps.LatLngBounds(
+            new window.google.maps.LatLng(40.915568,-73.699215),
+            new window.google.maps.LatLng(40.495992,-74.257159));
+        const cssClasses = {
+            root: "placesCollectionSchedule",
+            googleLogoContainer: 'googleLogoContainer',
+            googleLogoImage: 'googleLogoImage',
+            autocompleteItem: 'collectionScheduleItem',
+            autocompleteItemActive: 'collectionScheduleActiveItem',
+            autocompleteContainer: 'collectionScheduleLanding-autocomplete-container',
+            input: ((this.props.error && this.state.address.trim() === ""))?'error':'',
+          }
+          const cssClassesSelected = {
+            root: "placesCollectionSchedule",            
+            googleLogoContainer: 'googleLogoContainer',
+            googleLogoImage: 'googleLogoImage',
+            autocompleteItem: 'collectionScheduleItem',
+            autocompleteItemActive: 'collectionScheduleActiveItem',
+            autocompleteContainer: 'collectionScheduleLanding-autocomplete-container',
+            input: ((this.props.error && this.state.address.trim() === ""))?'error':'',
+          }
+          const options = {
+            strictBounds: true,
+            bounds: defaultBounds,
+            componentRestrictions: {country: 'us'}
+          }
+        const inputProps = {
+            name:this.props.name,
+            value: this.state.address,
+            onChange: this.handleChange,
+            onBlur:this.handleBlur,
+            error: this.props.error,
+            required: this.props.required,
+            onFocus: this.setPlaceHolder,
+        }
 
-  handleChange(event){
-    (isEmpty(this.props.value)) ? this.setState({hideToolTip: false}) : this.setState({hideToolTip: true});
-  }
-
-  handleFocusOut(event){
-    this.setState({hideToolTip: true});
-  }
-
-  renderField() {          
-           return (<div>
-            <FormAddressAutocompleteNoValidation ref={this.props.name}  maxLength = {this.props.maxlength}  type="text" name={this.props.name} aria-label={this.props.name} onChange = {event => this.onInputChange(event)}
-               value={this.props.value ? this.props.value : ''} onBlur =  {event => this.onInputChange(event)} disabled={this.props.disabled} required={this.props.required} maxLength={this.props.maxlength} className={(isEmpty(this.props.value) && this.props.error)?"input error":'input'} error={this.props.error}
-                />
-                  <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
-            <div>{this.props.children}</div>
-                  </div>)
-      }
   
-  render() {
-
-    
-
     return (<div >{
         !this.props.isHidden
           ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
                 <div className='FormMultiSelectTitle'>{this.props.title}</div>
-                <div>{this.renderField()}</div>
+                <AddressAutocomplete inputProps = {inputProps}  options = {options} onSelect={event =>this.handleSelect(event)}  onEnterKeyDown={event => this.handleSelect} classNames = {this.state.address !== "" ?cssClassesSelected:cssClasses} />
+                    <div style= {this.props.suggestionAddress == null || this.props.suggestionAddress.length <=0 ?{display:'none'}:{display: 'block'}} className = "errorUserAddressParent">
+                        {this.correctAddressList()}
+                    </div>
+                    <Tooltip placement="bottom" id="tooltip-bottom" className={this.props.error && !this.state.hideToolTip?"in":''}>{this.props.error}</Tooltip>
               </fieldset>
             </Col>
           : null
@@ -67,7 +125,7 @@ class FormField extends Component {
 
 
 const AdressInput = ({
-  field: { name,value,...field }, // { name, value, onChange, onBlur }
+  field: { name, ...field }, // { name, value, onChange, onBlur }
   form: { touched, errors }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
   className,
   label,
@@ -77,7 +135,7 @@ const AdressInput = ({
   const touch = touched[name]
   return (
     <div >
-      {<FormField disabled={props.editMode} title={props.formTitles[name]} value={props.values[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
+      {<FormField disabled={props.editMode} title={props.formTitles[name]} name={name} {...field}  {...props}  touch={touch} error={error}/>}
       
     </div>
   )

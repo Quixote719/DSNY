@@ -16,6 +16,9 @@ import Services from './components/services'
 import Contact from './components/ContactPage';
 import Complaints from './components/ContactPage/Complaints';
 import Location from './components/about/Location';
+import ElectronicsMap from './components/services/electronics'
+import FoodScrapMap from './components/services/foodScrap'
+import HarmfulProductMap from './components/services/harmfulProduct'
 import Leadership from './components/about/Leadership';
 import Bureaus from './components/about/Bureaus';
 import StrategicPlan from './components/about/StrategicPlan';
@@ -112,7 +115,11 @@ ReactDOM.render(<Provider store={createStore(reducers, middleware)}>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/strategic-plan/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/about/:slug"} component={StandardPage}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL  + "/services"} component={Services}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/electronics/ElectronicsMap"} component={ElectronicsMap}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/foodScrap/FoodScrapMap"} component={FoodScrapMap}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/harmfulProduct/HarmfulProductMap"} component={HarmfulProductMap}/>
               <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL +"/services/donate-goods/:slug"} component={WebformPage}/>
+              <Route exact path={process.env.REACT_APP_SITE_RELATIVE_URL +"/services/electronics/:slug"} component={WebformPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/cleaning/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/recycling/:slug"} component={StandardPage}/>
               <Route path={process.env.REACT_APP_SITE_RELATIVE_URL + "/services/:slug"} component={StandardPage}/>

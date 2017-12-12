@@ -25,7 +25,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete name="BinLocationAddressAsEntered" title={Titles.BinLocationAddressAsEntered} {...props}   value="" disabled={values.editMode}/>
@@ -35,7 +35,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="BinColor" {...props} maxlength={"20"} required disabled={values.editMode}/>
     <Field component={DateTimePickerInput} name="ObservationDate" {...props} onChange={setFieldValue} required disabled={values.editMode}/>
     <Field component={DropdownInput} name="BinTypeId" {...props} onChange={setFieldValue} options={values.BinTypeList} disabled={values.editMode} {...props} required/>
-    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} required={values.BinTypeId !== 3} maxlength={"25"} disabled={values.editMode}/>
+    <Field component={TextInput} name="OtherCollectionDescribe" {...props} isHidden={values.BinTypeId !== 3} required={values.BinTypeId == 3} maxlength={"25"} disabled={values.editMode}/>
     <FormSectionHeader title={Titles.sectionThree}/>
     <Field component={TextInput} name="OrganizationName" {...props} fullRow={true} maxlength={"25"} required disabled={values.editMode}/>
     <Field component={AddressInput} name="OrganizationAddressAsEntered" {...props} fullRow={true} maxlength={"50"} onChange={setFieldValue} disabled={values.editMode} required/>

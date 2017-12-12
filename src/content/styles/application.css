@@ -66,8 +66,9 @@ html body {
   margin: 40px 0 0 100px;
 }
 
-.checkContainer ~ #tooltip-left{
-  margin-top: -70px;
+.checkBoxDiv #tooltip-left{
+  position:absolute;
+  top: -30px;
 }
 
 .gm-svpc{
@@ -474,6 +475,7 @@ border-radius: 0;
     font-size: 14px;
     height: 36px;
     width: 126px;
+    float: left;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 118, 77);
     border-radius: 0.188em;

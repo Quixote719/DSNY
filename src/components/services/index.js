@@ -61,6 +61,7 @@ class Services extends Component {
               )
             }
             else if(sec.name == 'cleaning'){
+              sec.cards = sec.cards.slice(0,3);
               return(
                 <div className='SContainer normalsection' key={sec.id}>
                   <SubSectionHeader title={sec.header}/>

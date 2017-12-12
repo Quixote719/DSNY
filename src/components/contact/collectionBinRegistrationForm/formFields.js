@@ -24,7 +24,7 @@ const CompostRequestFormElements = (props) => {
   } = props;
 
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
-    <FormHeaderSmallSize title='Online Registration' information='All fields are required unless indicated as optional'/>
+    <FormHeaderSmallSize title='Online Registration' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
     <FormSectionHeader title={Titles.sectionOne}/>
     <div>
       <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
@@ -50,8 +50,8 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="PropertyOwnerEmail" {...props} required maxlength={"50"} disabled={values.editMode}/>  
     <FormSectionHeader title={Titles.sectionFour}/>
     <Field component={TextAreaInput} name="DescribeBinAppearances" {...props}  disabled={values.editMode}/>   
-    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED ON THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" />
-    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} required />
+    <FormTitleCheckBoxes title="BIN OWNER CONTACT INFO (NAME, ADDRESS, PHONE, NUMBER) DISPLAYED ON THE FRONT AND AT LEAST ONE OTHER SIDE OF THE BIN?" redAstreix={true}/>
+    <Field component={DropdownInput} name="BinOwnerContactInfoDisplayed" {...props}  onChange={setFieldValue} disabled={values.editMode} required hideAsterix={true}/>
     <FormTitleCheckBoxes title="TYPE(S) OF MATERIAL COLLECTED (CHECK ALL THAT APPLY)" />
     <Field component={CheckBoxInput} name="ClothingCollected" {...props} disabled={values.editMode} />
     <Field component={CheckBoxInput} name="ShoesCollected" {...props} disabled={values.editMode}/>
@@ -64,8 +64,8 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="OtherCollecdtedMaterialDescribe" {...props} fullRow={true} isHidden={!values.OtherCollected} required={values.OtherCollected} maxlength={"100"} disabled={values.editMode}/>
     <FormTitleCheckBoxes title="IS THIS BIN MANAGED BY A NON-PROFIT AGENCY OR ORGNIZATION"/>
     <Field component={DropdownInput} name="IsManagedByANonProfit" {...props}  onChange={setFieldValue} disabled={values.editMode} />
-    <FormTitleCheckBoxes title="THE BIN OWNER RECEIVED WRITTEN PERMISSION FROM PROPERTY OWNER"/>
-    <Field component={DropdownInput} name="ReceivedWrittenPermission" {...props}  onChange={setFieldValue} disabled={values.editMode} required/>
+    <FormTitleCheckBoxes title="THE BIN OWNER RECEIVED WRITTEN PERMISSION FROM PROPERTY OWNER" redAstreix={true}/>
+    <Field component={DropdownInput} name="ReceivedWrittenPermission" {...props} hideAsterix={true} onChange={setFieldValue} disabled={values.editMode} required/>
   </fieldset>)
 };
 

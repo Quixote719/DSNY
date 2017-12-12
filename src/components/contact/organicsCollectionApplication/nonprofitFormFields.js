@@ -28,7 +28,7 @@ const CompostRequestFormElements = (props) => {
   return (<fieldset className='disabledContactForm' disabled={values.editMode}>
     <FormSectionHeader title={Titles.sectionTwo}/>
     <div>
-      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode}/>
+      <FormAddressAutocomplete name="AddressAsEntered" title={Titles.AddressAsEntered} {...props} value="" disabled={values.editMode} redAstreix={true}/>
     </div>
     <Field component={TextInput} name="OrganizationName" {...props}  maxlength={"50"} disabled={values.editMode} required fullRow={true}/>
     <Field component={DropdownInput} name="OrganizationTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.OrganizationTypes} disabled={values.editMode} required/>
@@ -40,8 +40,8 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="Email" {...props}  maxlength={"50"} disabled={values.editMode} required/>
     <Field component={TextInput} name="Phone" {...props} maxlength={"21"} disabled={values.editMode} required/>
     <Field component={DropdownInput} name="PhoneTypeId" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.PhoneTypes} disabled={values.editMode} required/> 
-    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH MEMBERS OF YOUR BUILDING'S FACILITIES/MAINTENANCE STAFF ABOUT THE PROGRAM" />
-    <Field component={DropdownInput} name="NonProfitHasInformedStaffAboutProgram" {...props} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>    
+    <FormTitleCheckBoxes title="HAVE YOU SPOKEN WITH MEMBERS OF YOUR BUILDING'S FACILITIES/MAINTENANCE STAFF ABOUT THE PROGRAM" redAstreix={true}/>
+    <Field component={DropdownInput} name="NonProfitHasInformedStaffAboutProgram" {...props} hideAsterix={true} ondropDownChange={handledropDown} onChange={setFieldValue} disabled={values.editMode} required/>    
     <FormSectionHeader title={Titles.NonProfitsectionFour}/>
     <Field component={TextInput} name="OrganizationPersonFirstName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
     <Field component={TextInput} name="OrganizationPersonLastName" {...props}  maxlength={"25"} disabled={values.editMode} required/>
@@ -50,7 +50,7 @@ const CompostRequestFormElements = (props) => {
     <Field component={TextInput} name="OrganizationPersonPhone" {...props}  maxlength={"21"} disabled={values.editMode} required/>    
     <Field component={DropdownInput} name="OrganizationPhoneTypeId" title={Titles.PhoneType} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.OrganizationPhoneTypes} disabled={values.editMode} required/>
     <FormSectionHeader title={Titles.sectionFive}/>
-    <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode} required/>
+    <Field component={DropdownInput} name="AwarenessSourceId" title={Titles.AwarenessSources} {...props} ondropDownChange={handledropDown} onChange={setFieldValue} options={values.AwarenessSources} disabled={values.editMode}/>
     <Field component={TextInput} name="OtherAwarenessSource" {...props} maxlength={"50"} disabled={values.editMode}/>
     <Field component={TextAreaInput} name="Comments" {...props} disabled={values.editMode}/>
   </fieldset>)

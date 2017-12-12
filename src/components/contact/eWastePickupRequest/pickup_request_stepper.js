@@ -10,7 +10,7 @@ class RequestStepper extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			PickupRequestItems: []
+			PickupRequestItems: props.PickupRequestItems ? props.PickupRequestItems : []
 		}
 		this.renderCatg = this.renderCatg.bind(this);
 		this.updateState = this.updateState.bind(this);
@@ -19,10 +19,12 @@ class RequestStepper extends Component {
 	updateState(obj) {
 		var p = this.state.PickupRequestItems
 		p = _.union(p, [obj]);
+	
 		this.setState({
 			PickupRequestItems: p
 		}, () => {
 			this.props.onAppend('PickupRequestItems', this.state.PickupRequestItems)
+
 		});
 	}
 

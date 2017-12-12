@@ -52,7 +52,7 @@ export const Titles = {
   AgencyName: 'NAME OF AGENCY',
   ParticipatingFloorsCount: '# OF PARTICIPATING FLOORS ',
   AgencyCompanyName: 'MANAGING ORGANIZATION (E.G DCAS)',
-  AgencyTitle1: 'WHAT IS YOUR TITLE/ROLE IN THE AGENCY',
+  AgencyTitle1: 'WHAT IS YOUR AGENCY ROLE/TITLE?',
   AgencyTitle2: 'CONTACT PERSON TITLE',
   AgencyPhoneTypes: 'PHONE TYPE',
   AgencyPersonFirstName: 'CONTACT PERSON FIRST NAME',
@@ -270,6 +270,12 @@ export const formObject = {
   "CreatedDate": "0001-01-01T00:00:00",
   "PhoneTypes": [
     {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": false
+    },
+    {
       "Id": 1,
       "Name": "Work",
       "DisplayName": "Work",
@@ -368,7 +374,7 @@ export const formObject = {
   "PropertyHasInformedStaffAboutProgram": null,
   "CompanyName": null,
   "CompanyPersonTitle": null,
-  "CompanyPhoneTypeId": null,
+  "CompanyPhoneTypeId": 0,
   "CompanySelectedPhoneType": null,
   "CompanyPersonFirstName": null,
   "CompanyPersonLastName": null,
@@ -387,6 +393,12 @@ export const formObject = {
   "CompanyAddressTextOneLine": ", NY",
   "CompanyApartment": null,
   "CompanyPhoneTypes": [
+    {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Work",
@@ -471,6 +483,12 @@ export const formObject = {
   "OrganizationTitle2": null,
   "OrganizationPhoneTypes": [
     {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": false
+    },
+    {
       "Id": 1,
       "Name": "Work",
       "DisplayName": "Work",
@@ -510,6 +528,12 @@ export const formObject = {
   "AgencyCompanyName": null,
   "AgencyPhoneTypes": [
     {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
+    {
       "Id": 1,
       "Name": "Work",
       "DisplayName": "Work",
@@ -546,6 +570,12 @@ export const formObject = {
   "SchoolTitle1": null,
   "SchoolTitle2": null,
   "SchoolPhoneTypes": [
+    {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": false
+    },
     {
       "Id": 1,
       "Name": "Work",

@@ -115,15 +115,15 @@ class OrganicsCollectionApplication extends Component {
         "OrganizationTypes": formObject.OrganizationTypes,
         'OrganizationTypeId': formObject.OrganizationTypeId,
         "SelectedOrganizationType": formObject.SelectedOrganizationType,
-        'OtherOrganizationType': formObject.OtherOrganizationType,        
+        'OtherOrganizationType': formObject.OtherOrganizationType,
         'OrganizationName':formObject.OrganizationName,
         'Title': formObject.OrganizationTitle1,
       }
       formObject.NonprofitForm.SecondaryContact = {
         'Title': formObject.OrganizationTitle2,
         "PhoneTypes": formObject.OrganizationPhoneTypes,
-        'PhoneTypeId': formObject.OrganizationPhoneTypeId,        
-        'SelectedPhoneType': formObject.OrganizationSelectedPhoneType,        
+        'PhoneTypeId': formObject.OrganizationPhoneTypeId,
+        'SelectedPhoneType': formObject.OrganizationSelectedPhoneType,
         'FirstName': formObject.OrganizationPersonFirstName,
         'LastName': formObject.OrganizationPersonLastName,
         'Phone': formObject.OrganizationPersonPhone,
@@ -206,10 +206,16 @@ class OrganicsCollectionApplication extends Component {
   }
 
    render() {
+
         const { error, success, geoCoderAddressResult, isAddressValidated} = this.props;
 
-        if(success !== undefined) {
-          return displayThankYouPage(`<div>Hello</div>`, success, Titles.SuccessMessage, Titles.FailureMessage, true)
+        if(success!==undefined) {
+          if(success && success.SRNo){
+              return displayThankYouPage(`<div><div class='thankyoulable'>THANK YOU</div><div class='thankyoubody'><p>The Service Request number is</p><p class='SRNumberThankYou'>${success.SRNo}</p><p>Use this number when you check the status of your request.</p><p>You will also receive an email with this information. To check the status of this request please visit the DSNY Website Contact page. To reschedule or cancel your request please call 311.</p></div></div>`)
+          }
+          else{
+            return displayThankYouPage(`<div><div class='thankyoubody'><p>Sorry we are not able to process your request at this time.</p></div></div>`)
+          }
         }
 
         if (FormObject && FormObject !== undefined) {
@@ -220,7 +226,7 @@ class OrganicsCollectionApplication extends Component {
               <div className='container' style={displayID}>
                 <div className="IDSelector">
                     <div className="row">
-                      <FormHeaderSmallSize title='Online Application' information='All fields are required unless indicated as optional'/>
+                      <FormHeaderSmallSize title='Online Application' information={`<span class="requiredAsterik"> * </span>Denotes required field`}/>
                       <FormSectionHeader title={Titles.sectionOne}/>
                     </div>
                     <IDBox formFields={IdentitySelector} success={success} validateForm={this.validateForm} formTitles={Titles} customFormData={FormObject} onSubmit={this.postForm} setFormType={this.setFormType}/>
@@ -240,6 +246,7 @@ class OrganicsCollectionApplication extends Component {
                 <div className="smallTopSpace">If you live in a 1-9 unit building along a commercial block, your building must enroll to receive your free brown bins.
                 Submit your building's information, and DSNY will follow up with more information on how to join the program.</div>
               </div>
+              <div style={{'marginTop':'100px'}}></div>
             </div>
           }
           {
@@ -283,10 +290,8 @@ class OrganicsCollectionApplication extends Component {
                 <div className="smallTopSpace">Learn more about organics rules and resources for businesses.</div>
                 <div className="smallTopSpace">Additionally, businesses may choose to donate certain food items, which can save on waste hauling costs.</div>
               </div>
+              <div style={{'marginTop':'100px'}}></div>
             </div>
-          }
-          {
-            <div style={{'marginTop':'140px'}}></div>
           }
           </div>
         );

@@ -96,7 +96,9 @@ export const FETCH_BUREAUS_DETAILS_URL = constructWpUrl('dsny/v1/getPressRelease
 export const FETCH_EVENTS_SUB_LIST_URL = `${REST_WEBAPI_URL(Env)}Events/GetAllByBorough?borough=:borough`;
 export const FETCH_EVENT_DETAILS_URL = `${REST_WEBAPI_URL(Env)}Events/GetEventByID?eventID=:eventID`;
 export const FETCH_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}garages`;
-
+export const FETCH_ELECTRONICS_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}DSNYDropOff/GetDropOffLocation?category=1`;
+export const FETCH_FOODSCRAP_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}DSNYDropOff/GetDropOffLocation?category=2`;
+export const FETCH_HARMFULPRODUCT_LOCATION_LIST_URL = `${REST_WEBAPI_URL(Env)}DSNYDropOff/GetDropOffLocation?category=3`;
 
 //Forms
 export const FETCH_FORM_GET_COMPOST_REQUEST_URL = `${REST_WEBAPI_URL(Env)}compostrequests/1`;
@@ -124,6 +126,8 @@ export const POST_FORM_EVNT_PARTICIP_REQ_URL=`${REST_WEBAPI_URL(Env)}eventpartic
 export const POST_FORM_TRUCK_SPILLAGE_URL= `${REST_WEBAPI_URL(Env)}truckspillages`;
 export const POST_FORM_PRVT_RCPTBLE_CMPLNTS_URL= `${REST_WEBAPI_URL(Env)}privatereceptaclecomplaints`;
 export const POST_FORM_REFASHION_REQ_URL = `${REST_WEBAPI_URL(Env)}refashionNYC`;
+export const POST_FORM_ECYCLE_NYC_REQ_URL= `${REST_WEBAPI_URL(Env)}ecycleNYC`;
+
 //10+ units pluto call
 export const POST_FORM_COLLECTION_BIN_REPORT = `${REST_WEBAPI_URL(Env)}collectionBinAnnualReports`;
 export const FETCH_TEN_PLUS_BUILDINGS_STATUS = `http://services5.arcgis.com/GfwWNkhOj9bNBqoJ/arcgis/rest/services/MAPPLUTO/FeatureServer/0/query?where=bbl=:BBL&outFields=UnitsRes,UnitsTotal&returnGeometry=false&f=json`

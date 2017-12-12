@@ -61,7 +61,7 @@ class FormField extends Component {
           return (<div>
             <MaskedInput mask={['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                   ? this.props.value
-                  : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
+                  : ''} disabled={this.props.disabled} autoComplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                   />
                   {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
               <div>{this.props.children}</div>
@@ -70,7 +70,7 @@ class FormField extends Component {
           return (<div>
             <MaskedInput mask={[/\d/, /\d/, /\d/, /\d/, /\d/]} ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                   ? this.props.value
-                  : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
+                  : ''} disabled={this.props.disabled} autoComplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                   />
                   {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
               <div>{this.props.children}</div>
@@ -80,7 +80,7 @@ class FormField extends Component {
            return (<div>
             <input ref={this.props.name}  maxLength = {this.props.maxlength} onFocus={this.handleOnFocus} onKeyUp={this.handleChange} type="text" name={this.props.name}  aria-label={this.props.name} onChange={this.props.onChange} onBlur={this.handleFocusOut} value={this.props.value
                 ? this.props.value
-                : ''} disabled={this.props.disabled} autocomplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
+                : ''} disabled={this.props.disabled} autoComplete={this.props.autocomplete?"off":""} required={this.props.required} className={((isEmpty(this.props.value) || this.props.value.trim() === "" || (this.props.error && this.props.error.toUpperCase().indexOf("EMAIL")> -1)) && this.props.error)?"input error":'input'} error={this.props.error}
                 />
                 {this.props.error && !this.state.hideToolTip?<Tooltip placement="bottom" id="tooltip-bottom" className="in">{this.props.error}</Tooltip>:null}
             <div>{this.props.children}</div>
@@ -107,7 +107,7 @@ class FormField extends Component {
         !this.props.isHidden
           ? <Col className={!this.props.fullRow?'FormField col-xs-12 col-sm-6 col-md-6': 'FormField col-xs-12 col-sm-12 col-md-12'}>
               <fieldset>
-                <div className='FormMultiSelectTitle'>{this.props.title}{this.props.required?<span class="requiredAsterik"> *</span>:<span></span>}</div>
+                <div className='FormMultiSelectTitle'>{this.props.title}{this.props.required?<span className="requiredAsterik"> *</span>:<span></span>}</div>
                 <div>{this.renderField(this.props.name)}</div>
               </fieldset>
             </Col>
