@@ -11,19 +11,19 @@ export const Titles = {
   ConsentToDsnyUseOfPhotos: 'Yes, photos submitted may be used for DSNY program promotion.',
   CompostSiteApplicantTypeId: 'APPLYING AS',
   OrganizationName: 'ORGANIZATION NAME',
-  OrganizationTaxIdNumber: 'ORGANIZATION TAX IDENTIFICATION NUMBER NAME',
-  OrganizationWebsite: 'ORGANIZATION OR PROJECT WEBSITE (optional)',
-  OrganizationFacebookPage: 'ORGANIZATION OR PROJECT FACEBOOK PAGE (optional)',
-  OrganizationTwitterHandle: 'ORGANIZATION OR PROJECT TWITTER HANDLE (Optional)',
-  OrganizationInstagramHandle: 'ORGANIZATION OR PROJECT instagram ID (optional)',
+  OrganizationTaxIdNumber: 'ORGANIZATION TAX IDENTIFICATION NUMBER',
+  OrganizationWebsite: 'ORGANIZATION OR PROJECT WEBSITE',
+  OrganizationFacebookPage: 'ORGANIZATION OR PROJECT FACEBOOK PAGE',
+  OrganizationTwitterHandle: 'ORGANIZATION OR PROJECT TWITTER HANDLE',
+  OrganizationInstagramHandle: 'ORGANIZATION OR PROJECT INSTAGRAM ID',
   FirstName: 'FIRST NAME',
   LastName: 'LAST NAME',
-  Title: 'YOUR TITLE OR AFFILIATION WITH ORGANIZATION (optional)',
+  Title: 'YOUR TITLE OR AFFILIATION WITH ORGANIZATION',
   IsCertifiedNycMasterComposter: 'ARE YOU A CERTIFIED NYC MASTER COMPOSTER?',
   PrimaryPhone: 'PRIMARY PHONE NUMBER',
-  PrimaryPhoneTypeId: 'Phone Type (optional)',
-  SecondaryPhone: 'SECONDARY PHONE NUMBER (Optional)',
-  SecondaryPhoneTypeId: 'Phone Type (optional)',
+  PrimaryPhoneTypeId: 'PHONE TYPE',
+  SecondaryPhone: 'SECONDARY PHONE NUMBER',
+  SecondaryPhoneTypeId: 'PHONE TYPE',
   Email: 'E-MAIL',
   ConfirmEmail: 'CONFIRM E-MAIL',
   CompostSiteTypeId: 'WHAT TYPE OF SITE IS THIS?',
@@ -34,19 +34,21 @@ export const Titles = {
   IsGreenThumbGarden: 'IS THIS A GREENTHUMB GARDEN?',
   HasReceivedDsnyCompostBefore: 'HAVE YOU RECEIVED DSNY COMPOST IN THE PAST?',
   CompostUseDescription: 'DESCRIBE HOW WILL YOU USE DSNY COMPOST? (INCLUDE SPECIFIC DATES IF KNOWN)',
-  FromHourOfDayId: 'PREFERRED DELIVERY TIMES From',
-  ToHourOfDayId: 'To',
-  DeliveryNotes: 'DELIVERY NOTES AND INSTRUCTIONS (Optional)',
-  EntranceHeightWidth: 'HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE (Optional)',
+  FromHourOfDayId: 'PREFERRED DELIVERY TIMES FROM',
+  ToHourOfDayId: 'TO',
+  DeliveryNotes: 'DELIVERY NOTES AND INSTRUCTIONS',
+  EntranceHeightWidth: 'HEIGHT AND WIDTH OF YOUR SITE’S ENTRANCE',
   HasAlternateSideParking: 'ALTERNATE SIDE PARKING AT SITE?',
   Pallets: 'NUMBER OF PALLETS OF COMPOST',
   DeliveryDeadline: 'WHEN IS THE LATEST DATE YOUR COMPOST IS NEEDED BY?',
   DeliveryOn: 'THE SIGN WILL BE INSTALLED WITHIN TWO WEEKS OF RECEIVING THE MATERIAL.',
   AlternateSideParking: 'ALTERNATE SIDE PARKING DAYS? (Select ALL that apply)',
-  AlternateSideParkingTimes: 'PREFERRED DELIVERY TIMES From',
+  AlternateSideParkingTimes: 'ALTERNATE SIDE PARKING TIMES',
   RequiredFieldMessage: 'This field is required',
   SuccessMessage: "Success! Your response No. is: ",
   FailureMessage:"Please make sure your message is correct.",
+  DeliveryDays:'PREFERRED DELIVERY DAYS (SELECT ALL THAT APPLY)',
+  AlternateSideParkingDays:'ALTERNATE SIDE PARKING DAYS (SELECT ALL THAT APPLY)',
 }
 
 
@@ -81,9 +83,15 @@ export const formObject = {
   "OrganizationTwitterHandle": null,
   "OrganizationInstagramHandle": null,
   "Title": null,
-  "IsCertifiedNycMasterComposter": false,
+  "IsCertifiedNycMasterComposter": 0,
   "PrimaryPhone": null,
   "PrimaryPhoneTypes": [
+    {
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
     {
       "Id": 1,
       "Name": "Work",
@@ -108,6 +116,12 @@ export const formObject = {
   "SecondaryPhone": null,
   "SecondaryPhoneTypes": [
     {
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
+    {
       "Id": 1,
       "Name": "Work",
       "DisplayName": "Work",
@@ -129,6 +143,12 @@ export const formObject = {
   "SecondaryPhoneTypeId": null,
   "SecondarySelectedPhoneType": null,
   "CompostSiteTypes": [
+    {
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
     {
       "Id": 1,
       "Name": "CommunityCompostSite",
@@ -189,6 +209,12 @@ export const formObject = {
   "OtherCompostSiteType": null,
   "CompostSitePermittingOrganizations": [
     {
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName":"Select one",
+      "Selected":true
+    },
+    {
       "Id": 1,
       "Name": "GreenThumb",
       "DisplayName": "GreenThumb",
@@ -229,11 +255,11 @@ export const formObject = {
   "SelectedCompostSitePermittingOrganization": null,
   "OtherCompostSitePermittingOrganization": null,
   "SiteSize": 0,
-  "IsGreenThumbGarden": false,
-  "HasReceivedDsnyCompostBefore": false,
+  "IsGreenThumbGarden": 0,
+  "HasReceivedDsnyCompostBefore": 0,
   "CompostUseDescription": null,
   "Pallets": 0,
-  "DeliveryDeadline": "0001-01-01T00:00:00",
+  "DeliveryDeadline": null,
   "DeliveryDays": {
     "Values": [
       {
@@ -289,303 +315,135 @@ export const formObject = {
   "DeliverOnSaturday": false,
   "FromHoursOfDay": [
     {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
+    {
       "Id": 1,
-      "Name": "OneAm",
-      "DisplayName": "01:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 13,
-      "Name": "OnePm",
-      "DisplayName": "01:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 2,
-      "Name": "TwoAm",
-      "DisplayName": "02:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 14,
-      "Name": "TwoPm",
-      "DisplayName": "02:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 3,
-      "Name": "ThreeAm",
-      "DisplayName": "03:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 15,
-      "Name": "ThreePm",
-      "DisplayName": "03:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 4,
-      "Name": "FourAm",
-      "DisplayName": "04:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 16,
-      "Name": "FourPm",
-      "DisplayName": "04:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 5,
-      "Name": "FiveAm",
-      "DisplayName": "05:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 17,
-      "Name": "FivePm",
-      "DisplayName": "05:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 6,
-      "Name": "SixAm",
-      "DisplayName": "06:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 18,
-      "Name": "SixPm",
-      "DisplayName": "06:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
       "Selected": false
     },
     {
-      "Id": 19,
-      "Name": "SevenPm",
-      "DisplayName": "07:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 8,
+      "Id": 2,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
       "Selected": false
     },
     {
-      "Id": 20,
-      "Name": "EightPm",
-      "DisplayName": "08:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 9,
+      "Id": 3,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
       "Selected": false
     },
     {
-      "Id": 21,
-      "Name": "NinePm",
-      "DisplayName": "09:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 10,
+      "Id": 4,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
       "Selected": false
     },
     {
-      "Id": 22,
-      "Name": "TenPm",
-      "DisplayName": "10:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 11,
+      "Id": 5,
       "Name": "ElevenAm",
       "DisplayName": "11:00 AM",
       "Selected": false
     },
     {
-      "Id": 23,
-      "Name": "ElevenPm",
-      "DisplayName": "11:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 0,
-      "Name": "TwelveAm",
-      "DisplayName": "12:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 12,
+      "Id": 6,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
       "Selected": false
-    }
+    },
+    {
+      "Id": 7,
+      "Name": "OnePm",
+      "DisplayName": "01:00 PM",
+      "Selected": false
+    },
+    {
+      "Id": 8,
+      "Name": "TwoPm",
+      "DisplayName": "02:00 PM",
+      "Selected": false
+    },
+    {
+      "Id": 9,
+      "Name": "ThreePm",
+      "DisplayName": "03:00 PM",
+      "Selected": false
+    },
   ],
   "FromHourOfDayId": 0,
   "SelectedFromHourOfDay": null,
   "ToHoursOfDay": [
     {
+      "Id": 0,
+      "Name": "Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
+    {
       "Id": 1,
-      "Name": "OneAm",
-      "DisplayName": "01:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 13,
-      "Name": "OnePm",
-      "DisplayName": "01:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 2,
-      "Name": "TwoAm",
-      "DisplayName": "02:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 14,
-      "Name": "TwoPm",
-      "DisplayName": "02:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 3,
-      "Name": "ThreeAm",
-      "DisplayName": "03:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 15,
-      "Name": "ThreePm",
-      "DisplayName": "03:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 4,
-      "Name": "FourAm",
-      "DisplayName": "04:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 16,
-      "Name": "FourPm",
-      "DisplayName": "04:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 5,
-      "Name": "FiveAm",
-      "DisplayName": "05:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 17,
-      "Name": "FivePm",
-      "DisplayName": "05:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 6,
-      "Name": "SixAm",
-      "DisplayName": "06:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 18,
-      "Name": "SixPm",
-      "DisplayName": "06:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 7,
       "Name": "SevenAm",
       "DisplayName": "07:00 AM",
       "Selected": false
     },
     {
-      "Id": 19,
-      "Name": "SevenPm",
-      "DisplayName": "07:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 8,
+      "Id": 2,
       "Name": "EightAm",
       "DisplayName": "08:00 AM",
       "Selected": false
     },
     {
-      "Id": 20,
-      "Name": "EightPm",
-      "DisplayName": "08:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 9,
+      "Id": 3,
       "Name": "NineAm",
       "DisplayName": "09:00 AM",
       "Selected": false
     },
     {
-      "Id": 21,
-      "Name": "NinePm",
-      "DisplayName": "09:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 10,
+      "Id": 4,
       "Name": "TenAm",
       "DisplayName": "10:00 AM",
       "Selected": false
     },
     {
-      "Id": 22,
-      "Name": "TenPm",
-      "DisplayName": "10:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 11,
+      "Id": 5,
       "Name": "ElevenAm",
       "DisplayName": "11:00 AM",
       "Selected": false
     },
     {
-      "Id": 23,
-      "Name": "ElevenPm",
-      "DisplayName": "11:00 PM",
-      "Selected": false
-    },
-    {
-      "Id": 0,
-      "Name": "TwelveAm",
-      "DisplayName": "12:00 AM",
-      "Selected": false
-    },
-    {
-      "Id": 12,
+      "Id": 6,
       "Name": "TwelvePm",
       "DisplayName": "12:00 PM",
       "Selected": false
-    }
+    },
+    {
+      "Id": 7,
+      "Name": "OnePm",
+      "DisplayName": "01:00 PM",
+      "Selected": false
+    },
+    {
+      "Id": 8,
+      "Name": "TwoPm",
+      "DisplayName": "02:00 PM",
+      "Selected": false
+    },
+    {
+      "Id": 9,
+      "Name": "ThreePm",
+      "DisplayName": "03:00 PM",
+      "Selected": false
+    },
   ],
   "ToHourOfDayId": 0,
   "SelectedToHourOfDay": null,
   "DeliveryNotes": null,
   "EntranceHeightWidth": null,
-  "HasAlternateSideParking": false,
+  "HasAlternateSideParking": 0,
   "AlternateSideParkingDays": {
     "Values": [
       {
@@ -641,6 +499,12 @@ export const formObject = {
   "AlternateSideParkingSaturday": false,
   "AlternateSideParkingTimes": null,
   "CompostSiteApplicantTypes": [
+    {
+      "Id":0,
+      "Name":"Select one",
+      "DisplayName": "Select one",
+      "Selected": true
+    },
     {
       "Id": 1,
       "Name": "StreetTreeSteward",
