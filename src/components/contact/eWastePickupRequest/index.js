@@ -50,7 +50,8 @@ class EwasteRequestForm extends Component {
   findTotal(){
 
     const arr = Array.from(document.querySelectorAll('.incDecSubField, .incDecField'));
-    var tot=0;
+    //For Step 2 sending counter as 1
+    var tot = arr.length > 0? 0: 1;
     for(var i=0;i<arr.length;i++){
         if(parseInt((arr[i].value),10) && parseInt((arr[i].value),10) > 0)
         {
