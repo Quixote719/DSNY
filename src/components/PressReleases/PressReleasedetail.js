@@ -55,9 +55,9 @@ class PressReleaseDetail extends Component {
     if (cardDetails) {
 
       return _.map(cardDetails, cItems => {
-
+      if(cItems){
         let banner;
-        if (cItems.name != '') {
+        if ( cItems.name != '') {
           banner = (
             <div key={_.random(0, 200, true)}>
               <Header breadCrumbList={cItems.breadcrumb}/>
@@ -86,7 +86,7 @@ class PressReleaseDetail extends Component {
             <div className='container'>{sections}</div>
           </div>
         )
-      });
+      }});
     } else {
       return (
         <div className='loader container'></div>

@@ -53,7 +53,6 @@ export function fetchPageData(slug) {
         })
     dispatch({type: types.CARD_DETAILS, payload: {}})
     axios.get(FETCH_PAGE_DATA_URL.replace(':slug', slug)).then((data) => {
-      // debugger;
       dispatch({type: types.CARD_DETAILS, payload: data})
     })
   }
@@ -69,6 +68,7 @@ export function dropDownList(category) {
 
 export function fetchPressReleaseDetails(slug) {
   return function(dispatch) {
+    dispatch({type: types.FETCH_PRESS_RELEASE_DETAILS, payload: {}})
     axios.get(FETCH_PRESS_RELEASE_DETAILS_URL.replace('id', slug)).then((data) => {
       dispatch({type: types.FETCH_PRESS_RELEASE_DETAILS, payload: data})
     })
