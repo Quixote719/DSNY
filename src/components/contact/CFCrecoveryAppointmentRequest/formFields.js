@@ -53,10 +53,20 @@ const CFCRecoveryRequestFormElements = (props) => {
 	}
 
 	if (Dates && geoCoderAddressResult){
+		
      values.Dates = Dates;
 		 values.AppointmentDate =  values.AppointmentDate === '' ? moment(Dates[0].StartDate).format('MM/DD/YYYY') : values.AppointmentDate;
 		 values.SectionAndSubsection = geoCoderAddressResult.sanitationCollectionSchedulingSectionAndSubsection;
 		 values.RecyclingPickupDay = geoCoderAddressResult.sanitationRecyclingCollectionSchedule;
+		 values.xCoordinate = geoCoderAddressResult.xCoordinate;
+		 values.yCoordinate = geoCoderAddressResult.yCoordinate;
+		 values.gi5DigitStreetCode1 = geoCoderAddressResult.gi5DigitStreetCode1;
+		 values.geosupportReturnCode = geoCoderAddressResult.geosupportReturnCode;
+		 values.bblTaxBlock = geoCoderAddressResult.bblTaxBlock;
+		 values.bblTaxLot = geoCoderAddressResult.bblTaxLot;
+		 values.sanitationRegularCollectionSchedule = geoCoderAddressResult.sanitationRegularCollectionSchedule;
+		 values.boroughCode1In = geoCoderAddressResult.boroughCode1In;
+		  values.segmentIdentifier = geoCoderAddressResult.segmentIdentifier;
 	}
 	if(commercialAddress){
 		let ca = commercialAddress.commercialFlag
