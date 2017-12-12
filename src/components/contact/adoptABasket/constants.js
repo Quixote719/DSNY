@@ -5,7 +5,7 @@ export const Titles = {
   BasketAdditionalLocationInfo:'ADDITIONAL LOCATION INFORMATION',
   BusinessName:'BUSINESS/ORGANIZATION NAME',
   BusinessAddressAsEntered:'ADDRESS',
-  AddressAsEntered:'NEARST ADDRESS',
+  AddressAsEntered:'NEAREST ADDRESS',
   BusinessApartment:'FLOOR/APT/SUITE',
   FirstName:'FIRST NAME',
   LastName:'LAST NAME',

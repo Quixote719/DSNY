@@ -39,6 +39,7 @@
   text-align: center;
   margin-top: 20px;
   font-weight: 600;
+  font-stretch: condensed;
 }
 
 .SRNumberThankYou{
@@ -50,14 +51,19 @@
 
 .alignCenter{
   text-align: center;
+  margin-bottom: 49px;
 }
 
 .thankyoubody{
   color: #333333;
   font-size: 16px;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 44px;
   margin-top: 10px;
+}
+
+.thankyouLineGreen> .patternLineGreen{
+  margin-bottom: 100px;
 }
 
 .filedropZoneinfo{

@@ -86,6 +86,7 @@ class HarmfulProductMap extends Component {
       this.setState({Locations : this.props.HarmfulProductList},()=>{
       });
     });
+    this.props.HarmfulProductContent();
   }
 
   componentDidMount() {
@@ -110,8 +111,8 @@ class HarmfulProductMap extends Component {
 
   render() {
     let locBanner = null;
-    if(this.props.LocationPageData !== undefined){
-      let locPage = this.props.LocationPageData.data;
+    if(this.props.HarmfulProductData !== undefined){
+      let locPage = this.props.HarmfulProductData;
       locBanner = <Header title={locPage.header} breadCrumbList={locPage.breadcrumb} body={locPage.header_content}/>
     }
     return (
@@ -134,11 +135,13 @@ class HarmfulProductMap extends Component {
 function mapStateToProps(state) {
   return {
     HarmfulProductList: state.ServicesDataReducer.HarmfulProductList,
+    HarmfulProductData: state.ServicesDataReducer.HarmfulProductData
   }
 }
 
 let actionList = {
-  Location: actions.fetchHarmfulProductList
+  Location: actions.fetchHarmfulProductList,
+  HarmfulProductContent: actions.harmfulProductMapPage
 };
 
 HarmfulProductMap = connect(mapStateToProps, actionList)(HarmfulProductMap);

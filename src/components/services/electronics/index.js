@@ -86,6 +86,7 @@ class ElectronicsMap extends Component {
       this.setState({Locations : this.props.ELocationList},()=>{
       });
     });
+    this.props.ElectronicsContent();
   }
 
   componentDidMount() {
@@ -110,8 +111,8 @@ class ElectronicsMap extends Component {
 
   render() {
     let locBanner = null;
-    if(this.props.LocationPageData !== undefined){
-      let locPage = this.props.LocationPageData.data;
+    if(this.props.ElectronicsData !== undefined){
+      let locPage = this.props.ElectronicsData;
       locBanner = <Header title={locPage.header} breadCrumbList={locPage.breadcrumb} body={locPage.header_content}/>
     }
     return (
@@ -134,11 +135,13 @@ class ElectronicsMap extends Component {
 function mapStateToProps(state) {
   return {
     ELocationList: state.ServicesDataReducer.ELocationList,
+    ElectronicsData: state.ServicesDataReducer.ElectronicsData,
   }
 }
 
 let actionList = {
-  Location: actions.fetchELocationList
+  Location: actions.fetchElectronicsList,
+  ElectronicsContent: actions.electronicsMapPage
 };
 
 ElectronicsMap = connect(mapStateToProps, actionList)(ElectronicsMap);

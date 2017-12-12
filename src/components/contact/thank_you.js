@@ -28,10 +28,10 @@ render() {
   return(this.props.children ? <div className='SContainer'>
     {this.demoDisplay()}
     <div>{this.props.children}</div>
-        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>
+        <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
           <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
         </Link>
-    <div className='patternLineGreen'></div>
+    <div className="thankyouLineGreen"><div className='patternLineGreen'></div></div>
   </div>
   :
       <div>
@@ -43,11 +43,11 @@ render() {
               <div className='thankyoubody' >
                 {Parser(this.props.message)}
               </div>
-          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/contact"}>
+          <Link to={process.env.REACT_APP_SITE_RELATIVE_URL + "/home"}>
             <div className='alignCenter'><SubSectionButton title='BACK TO HOMEPAGE'></SubSectionButton></div>
           </Link>
           {/*<div className='thankYoupatternLine'></div>*/}
-          <div className='patternLineGreen'></div>
+          <div className="thankyouLineGreen"><div className='patternLineGreen'></div></div>
           </div>
         </Col>
       </div>
