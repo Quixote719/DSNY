@@ -147,7 +147,8 @@ class FormAddressAutocomplete extends Component {
           (this.props.noResultsError.RegularCollectionSchedule === null || this.props.noResultsError.RegularCollectionSchedule === "") &&
           (this.props.noResultsError.RecyclingCollectionSchedule === null || this.props.noResultsError.RecyclingCollectionSchedule === "") &&
           (this.props.noResultsError.OrganicsCollectionSchedule === null || this.props.noResultsError.OrganicsCollectionSchedule === "") &&
-          this.props.suggestionAddress === null){
+          this.props.suggestionAddress === null && this.props.collectionScheduleInfo !== null){
+            this.props.checkAddressValidator(1);            
             this.props.commercialAddressFlag(1)
             errorMessage = (
             <div>
@@ -173,8 +174,9 @@ class FormAddressAutocomplete extends Component {
                 </div>);
         } );
     }
-    render() {      
-    
+    render() {  
+        console.log("this.props.addressValidator")        
+    console.log(this.props.addressValidator)
         const defaultBounds = new window.google.maps.LatLngBounds(
             new window.google.maps.LatLng(40.915568,-73.699215),
             new window.google.maps.LatLng(40.495992,-74.257159));
